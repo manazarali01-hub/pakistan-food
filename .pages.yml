@@ -1,0 +1,57 @@
+media:
+  - name: images
+    label: Images
+    path: images
+
+content:
+  - name: recipes
+    label: Recipes
+    type: collection
+    path: recipes
+    format: json
+    filename: "{primary}.json"
+    view:
+      fields: [name, category, time]
+      primary: name
+
+    fields:
+      - name: name
+        label: Recipe Name
+        type: string
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        options:
+          - Rice
+          - Chicken
+          - Beef
+          - BBQ
+          - Snacks
+          - Breakfast
+          - Desserts
+
+      - name: time
+        label: Cooking Time
+        type: string
+
+      - name: rating
+        label: Rating
+        type: string
+
+      - name: image
+        label: Image
+        type: image
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: ingredients
+        label: Ingredients
+        type: list
+
+      - name: method
+        label: Method
+        type: list
