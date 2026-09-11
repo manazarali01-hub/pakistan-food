@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: manazarali01-hub/pakistan-food
   branch: main
 
 media_folder: "images/uploads"
