@@ -8,7 +8,7 @@
    RECIPE DATA
 ===================================== */
 
-const recipes = [
+const defaultRecipes = [
 
     {
         id: 1,
@@ -436,6 +436,32 @@ const recipes = [
 ];
 
 
+const cmsRecipes = Array.isArray(window.PAKISTAN_FOOD_RECIPES)
+    ? window.PAKISTAN_FOOD_RECIPES
+    : [];
+
+function stableRecipeId(recipe, index) {
+    if (Number.isFinite(Number(recipe.id))) return Number(recipe.id);
+
+    const text = String(recipe.name || `recipe-${index}`);
+    let hash = 0;
+
+    for (const character of text) {
+        hash = ((hash << 5) - hash + character.charCodeAt(0)) | 0;
+    }
+
+    return Math.abs(hash) + 1000;
+}
+
+const recipes = (cmsRecipes.length ? cmsRecipes : defaultRecipes).map((recipe, index) => ({
+    ...recipe,
+    id: stableRecipeId(recipe, index),
+    serves: Number(recipe.serves) || 4,
+    image: String(recipe.image || "assets/chicken-biryani.webp").replace(/^\//, ""),
+    ingredients: Array.isArray(recipe.ingredients) ? recipe.ingredients : [],
+    method: Array.isArray(recipe.method) ? recipe.method : []
+}));
+
 /* =====================================
    ELEMENTS
 ===================================== */
@@ -553,7 +579,7 @@ function renderRecipes() {
                 <img
                     src="${recipe.image}"
                     alt="${recipe.name} ready to serve"
-                    loading="${index < 6 ? "eager" : "lazy"}"
+                    loading="${index < 3 ? "eager" : "lazy"}" decoding="async"
                     fetchpriority="${index === 0 ? "high" : "auto"}"
                     width="900"
                     height="675"
