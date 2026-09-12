@@ -5,27 +5,8 @@
   "time": "75 min",
   "rating": "4.9",
   "serves": 4,
-  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pizza_with_tomatoes_and_chicken.jpg?width=800",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/PizzaMargherita.jpg?width=800",
   "description": "Homemade chicken pizza with a soft crust, seasoned chicken, vegetables, pizza sauce and melted cheese.",
-  "ingredients": [
-    "2 cups plain flour",
-    "1 tsp instant yeast",
-    "1 tsp sugar",
-    "0.75 cup warm water",
-    "250 g boneless chicken, cooked and seasoned",
-    "0.5 cup pizza sauce",
-    "1.5 cups mozzarella cheese",
-    "1 small capsicum, sliced",
-    "1 small onion, sliced",
-    "Oregano, salt and cooking oil"
-  ],
-  "method": [
-    "Mix flour, yeast, sugar, salt, warm water and a little oil to make a soft dough.",
-    "Cover the dough and let it rise until nearly doubled.",
-    "Roll the dough and place it on a pizza tray.",
-    "Spread pizza sauce and add chicken, capsicum and onion.",
-    "Top generously with mozzarella and oregano.",
-    "Bake in a preheated oven at 220°C until the crust is golden and cheese is bubbling.",
-    "Slice and serve hot."
-  ]
+  "ingredients": ["2 cups plain flour", "1 tsp instant yeast", "1 tsp sugar", "0.75 cup warm water", "250 g boneless chicken, cooked and seasoned", "0.5 cup pizza sauce", "1.5 cups mozzarella cheese", "1 small capsicum, sliced", "1 small onion, sliced", "Oregano, salt and cooking oil"],
+  "method": ["Mix flour, yeast, sugar, salt, warm water and a little oil to make a soft dough.", "Cover the dough and let it rise until nearly doubled.", "Roll the dough and place it on a pizza tray.", "Spread pizza sauce and add chicken, capsicum and onion.", "Top generously with mozzarella and oregano.", "Bake in a preheated oven at 220°C until the crust is golden and cheese is bubbling.", "Slice and serve hot."]
 }
