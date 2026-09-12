@@ -16,17 +16,20 @@ const recipes = [
         category: "Rice",
         time: "60 min",
         rating: "4.9",
-        image: "https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/pakistani_bhiriyani_rice.jpg",
+        serves: 6,
+        image: "assets/chicken-biryani.jpg",
         description: "Aromatic basmati rice layered with spicy chicken, fried onions and traditional Pakistani spices.",
         ingredients: [
-            "Chicken",
-            "Basmati rice",
-            "Onions",
-            "Tomatoes",
-            "Yogurt",
-            "Biryani masala",
-            "Ginger & garlic",
-            "Green chilies"
+            "750 g bone-in chicken",
+            "3 cups basmati rice",
+            "3 onions, thinly sliced",
+            "3 tomatoes, chopped",
+            "1 cup plain yogurt",
+            "2 tbsp biryani masala",
+            "2 tbsp ginger-garlic paste",
+            "4 green chilies",
+            "½ cup mint and coriander",
+            "Salt and cooking oil"
         ],
         method: [
             "Wash and soak the basmati rice.",
@@ -43,15 +46,18 @@ const recipes = [
         category: "Rice",
         time: "50 min",
         rating: "4.8",
-        image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85",
+        serves: 5,
+        image: "assets/chicken-pulao.jpg",
         description: "Fragrant Pakistani pulao prepared with tender chicken and aromatic whole spices.",
         ingredients: [
-            "Chicken",
-            "Basmati rice",
-            "Onions",
-            "Whole spices",
-            "Yogurt",
-            "Ginger garlic"
+            "750 g bone-in chicken",
+            "3 cups basmati rice",
+            "2 onions, sliced",
+            "1 tbsp mixed whole spices",
+            "½ cup plain yogurt",
+            "2 tbsp ginger-garlic paste",
+            "5 cups water for stock",
+            "Salt and green chilies"
         ],
         method: [
             "Fry onions until golden.",
@@ -68,16 +74,18 @@ const recipes = [
         category: "Chicken",
         time: "45 min",
         rating: "4.9",
-        image: "https://images.unsplash.com/photo-1716535232842-d10da4eb33d5?auto=format&fit=crop&w=900&q=85",
+        serves: 4,
+        image: "assets/chicken-karahi.jpg",
         description: "Classic Pakistani chicken karahi cooked with tomatoes, green chilies and fresh ginger.",
         ingredients: [
-            "Chicken",
-            "Tomatoes",
-            "Green chilies",
-            "Ginger",
-            "Garlic",
-            "Red chili",
-            "Coriander"
+            "1 kg chicken, karahi cut",
+            "6 ripe tomatoes, chopped",
+            "5 green chilies",
+            "2 tbsp fresh ginger, julienned",
+            "1 tbsp garlic paste",
+            "1 tsp red chili powder",
+            "1 tsp crushed coriander",
+            "½ cup cooking oil and salt"
         ],
         method: [
             "Heat oil in a karahi.",
@@ -94,16 +102,19 @@ const recipes = [
         category: "Chicken",
         time: "45 min",
         rating: "4.7",
-        image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85",
+        serves: 4,
+        image: "assets/chicken-handi.jpg",
         description: "Creamy and rich chicken handi with a delicious blend of Pakistani spices.",
         ingredients: [
-            "Chicken",
-            "Cream",
-            "Yogurt",
-            "Tomatoes",
-            "Onions",
-            "Ginger garlic",
-            "Spices"
+            "750 g boneless chicken",
+            "½ cup cooking cream",
+            "½ cup plain yogurt",
+            "4 tomatoes, blended",
+            "1 onion, finely chopped",
+            "1½ tbsp ginger-garlic paste",
+            "1 tsp red chili powder",
+            "½ tsp garam masala",
+            "Salt and cooking oil"
         ],
         method: [
             "Cook onions and chicken.",
@@ -120,16 +131,18 @@ const recipes = [
         category: "Beef",
         time: "4 hrs",
         rating: "4.9",
-        image: "https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/nihari_pakistani_stew.jpg",
+        serves: 6,
+        image: "assets/nihari.jpg",
         description: "Slow-cooked Pakistani beef stew with deep spices and rich traditional flavour.",
         ingredients: [
-            "Beef",
-            "Nihari masala",
-            "Ginger garlic",
-            "Flour",
-            "Oil",
-            "Fresh ginger",
-            "Green chilies"
+            "1 kg beef shank",
+            "3 tbsp nihari masala",
+            "2 tbsp ginger-garlic paste",
+            "⅓ cup wheat flour",
+            "½ cup cooking oil",
+            "7 cups water",
+            "Fresh ginger and coriander",
+            "Green chilies, lemon and salt"
         ],
         method: [
             "Fry beef with ginger garlic.",
@@ -146,15 +159,18 @@ const recipes = [
         category: "BBQ",
         time: "40 min",
         rating: "4.8",
-        image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85",
+        serves: 5,
+        image: "assets/seekh-kebab.jpg",
         description: "Juicy minced-meat seekh kababs seasoned with traditional Pakistani spices.",
         ingredients: [
-            "Minced beef",
-            "Onion",
-            "Green chilies",
-            "Coriander",
-            "Ginger garlic",
-            "Kabab spices"
+            "750 g beef mince with some fat",
+            "1 small onion, very finely chopped",
+            "3 green chilies, chopped",
+            "½ cup fresh coriander",
+            "1 tbsp ginger-garlic paste",
+            "1½ tbsp seekh kabab masala",
+            "1 tbsp lemon juice",
+            "Salt and oil for brushing"
         ],
         method: [
             "Mix all ingredients with minced meat.",
@@ -171,15 +187,18 @@ const recipes = [
         category: "BBQ",
         time: "35 min",
         rating: "4.8",
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85",
+        serves: 5,
+        image: "assets/chapli-kebab.jpg",
         description: "Famous Pashtun-style flat kababs packed with spices, herbs and rich flavour.",
         ingredients: [
-            "Minced beef",
-            "Tomato",
-            "Onion",
-            "Green chilies",
-            "Coriander",
-            "Crushed spices"
+            "750 g beef mince with some fat",
+            "1 tomato, finely chopped",
+            "1 onion, finely chopped",
+            "3 green chilies",
+            "½ cup fresh coriander",
+            "2 tbsp crushed coriander and cumin",
+            "3 tbsp maize flour",
+            "1 egg, salt and frying oil"
         ],
         method: [
             "Combine minced meat with all ingredients.",
@@ -196,15 +215,18 @@ const recipes = [
         category: "Snacks",
         time: "45 min",
         rating: "4.8",
-        image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85",
+        serves: 6,
+        image: "assets/samosa.jpg",
         description: "Crispy golden samosas filled with a delicious spicy potato mixture.",
         ingredients: [
-            "Flour",
-            "Potatoes",
-            "Green chilies",
-            "Coriander",
-            "Cumin",
-            "Red chili"
+            "2 cups plain flour",
+            "4 medium potatoes, boiled",
+            "3 green chilies, chopped",
+            "½ cup fresh coriander",
+            "1 tsp cumin seeds",
+            "1 tsp crushed red chili",
+            "½ tsp ajwain",
+            "Salt, water and frying oil"
         ],
         method: [
             "Prepare dough with flour.",
@@ -221,15 +243,18 @@ const recipes = [
         category: "Snacks",
         time: "25 min",
         rating: "4.7",
-     image: "https://img.ananinja.com/media/ninja-catalog-42/restaurants/rzjwuc0nhdzizlksufzkihtutg7z/pakora.jpg",
+        serves: 6,
+        image: "assets/pakora.jpg",
         description: "Crispy Pakistani pakoras perfect for rainy evenings and Ramadan iftar.",
         ingredients: [
-            "Gram flour",
-            "Potatoes",
-            "Onion",
-            "Green chilies",
-            "Coriander",
-            "Spices"
+            "2 cups gram flour",
+            "1 potato, thinly sliced",
+            "2 onions, sliced",
+            "3 green chilies, chopped",
+            "½ cup fresh coriander",
+            "1 tsp cumin and ½ tsp ajwain",
+            "¾ cup water, approximately",
+            "Salt and frying oil"
         ],
         method: [
             "Prepare gram flour batter.",
@@ -246,15 +271,18 @@ const recipes = [
         category: "Breakfast",
         time: "30 min",
         rating: "4.9",
-        image: "https://images.unsplash.com/photo-1668357530437-72a12c660f94?auto=format&fit=crop&w=900&q=85",
+        serves: 4,
+        image: "assets/aloo-paratha.jpg",
         description: "Crispy stuffed potato paratha served with yogurt, pickle or chai.",
         ingredients: [
-            "Wheat flour",
-            "Potatoes",
-            "Green chilies",
-            "Coriander",
-            "Red chili",
-            "Cumin"
+            "2 cups whole-wheat flour",
+            "3 medium potatoes, boiled",
+            "2 green chilies, chopped",
+            "½ cup fresh coriander",
+            "½ tsp red chili powder",
+            "1 tsp roasted cumin",
+            "Water and salt for dough",
+            "Ghee or oil for cooking"
         ],
         method: [
             "Prepare soft dough.",
@@ -271,15 +299,18 @@ const recipes = [
         category: "Breakfast",
         time: "45 min",
         rating: "4.9",
-        image: "https://www.restonnow.com/files/2021/07/halwah-puti.jpeg",
+        serves: 5,
+        image: "assets/halwa-puri.jpg",
         description: "Traditional Pakistani breakfast of fluffy puris served with sweet halwa and chickpea curry.",
         ingredients: [
-            "Semolina",
-            "Sugar",
-            "Flour",
-            "Oil",
-            "Chickpeas",
-            "Spices"
+            "1 cup semolina",
+            "¾ cup sugar",
+            "2 cups whole-wheat flour",
+            "½ cup ghee for halwa",
+            "2 cups cooked chickpeas",
+            "1 tbsp chana masala",
+            "4 green cardamoms",
+            "Water, salt and frying oil"
         ],
         method: [
             "Prepare semolina halwa with sugar.",
@@ -297,15 +328,17 @@ const recipes = [
         category: "Desserts",
         time: "60 min",
         rating: "4.8",
-        image: "https://irepo.primecp.com/2023/03/550444/1677704667_399942_Large500_ID-5117465.jpg?v=5117465",
+        serves: 6,
+        image: "assets/kheer.jpg",
         description: "Traditional creamy Pakistani rice pudding flavored with cardamom and nuts.",
         ingredients: [
-            "Milk",
-            "Rice",
-            "Sugar",
-            "Cardamom",
-            "Almonds",
-            "Pistachios"
+            "1 litre full-fat milk",
+            "¼ cup basmati rice",
+            "½ cup sugar",
+            "4 green cardamoms",
+            "2 tbsp sliced almonds",
+            "2 tbsp sliced pistachios",
+            "1 tsp rose water, optional"
         ],
         method: [
             "Wash and soak rice.",
@@ -322,15 +355,18 @@ const recipes = [
         category: "Desserts",
         time: "40 min",
         rating: "4.9",
-        image: "https://images.unsplash.com/photo-1666190092159-3171cf0fbb12?auto=format&fit=crop&w=900&q=85",
+        serves: 8,
+        image: "assets/gulab-jamun.jpg",
         description: "Soft golden milk-solid dumplings soaked in sweet fragrant sugar syrup.",
         ingredients: [
-            "Milk powder",
-            "Flour",
-            "Baking powder",
-            "Milk",
-            "Sugar",
-            "Cardamom"
+            "1 cup milk powder",
+            "¼ cup plain flour",
+            "½ tsp baking powder",
+            "¼ cup milk, approximately",
+            "1½ cups sugar",
+            "1½ cups water",
+            "4 green cardamoms",
+            "2 tbsp ghee and frying oil"
         ],
         method: [
             "Prepare a soft dough.",
@@ -347,16 +383,18 @@ const recipes = [
         category: "Rice",
         time: "45 min",
         rating: "4.7",
-         image: "https://images.deliveryhero.io/image/fd-pk/LH/w0fr-listing.jpg",
+        serves: 4,
+        image: "assets/daal-chawal.jpg",
         description: "Simple and comforting Pakistani daal served with steamed rice and achaar.",
         ingredients: [
-            "Lentils",
-            "Rice",
-            "Onion",
-            "Tomato",
-            "Garlic",
-            "Cumin",
-            "Red chili"
+            "1 cup moong or masoor lentils",
+            "2 cups basmati rice",
+            "1 onion, sliced",
+            "1 tomato, chopped",
+            "4 garlic cloves, sliced",
+            "1 tsp cumin seeds",
+            "½ tsp red chili powder",
+            "Salt, turmeric and ghee"
         ],
         method: [
             "Wash and boil lentils.",
@@ -373,15 +411,18 @@ const recipes = [
         category: "Rice",
         time: "75 min",
         rating: "4.8",
-        image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85",
+        serves: 6,
+        image: "assets/beef-pulao.jpg",
         description: "Aromatic beef pulao prepared with fragrant rice and traditional whole spices.",
         ingredients: [
-            "Beef",
-            "Basmati rice",
-            "Onions",
-            "Whole spices",
-            "Ginger garlic",
-            "Green chilies"
+            "1 kg beef with bones",
+            "4 cups basmati rice",
+            "3 onions, sliced",
+            "1½ tbsp mixed whole spices",
+            "2 tbsp ginger-garlic paste",
+            "5 green chilies",
+            "7 cups water for stock",
+            "Salt and cooking oil"
         ],
         method: [
             "Cook beef with whole spices.",
@@ -402,6 +443,10 @@ const recipes = [
 const recipeGrid = document.getElementById("recipeGrid");
 const searchInput = document.getElementById("searchInput");
 const noResults = document.getElementById("noResults");
+const recipeResults = document.getElementById("recipeResults");
+const favoritesFilter = document.getElementById("favoritesFilter");
+const favoriteCount = document.getElementById("favoriteCount");
+const clearResults = document.getElementById("clearResults");
 
 const recipeModal = document.getElementById("recipeModal");
 const modalContent = document.getElementById("modalContent");
@@ -420,6 +465,8 @@ const mobileMenu = document.getElementById("mobileMenu");
 const backTop = document.getElementById("backTop");
 
 let currentCategory = "All";
+let showFavoritesOnly = false;
+let lastFocusedElement = null;
 
 
 /* =====================================
@@ -428,7 +475,7 @@ let currentCategory = "All";
 
 let favorites = JSON.parse(
     localStorage.getItem("pakistanFoodFavorites") || "[]"
-);
+).map(Number).filter(Number.isFinite);
 
 
 /* =====================================
@@ -445,17 +492,39 @@ function renderRecipes() {
             currentCategory === "All" ||
             recipe.category === currentCategory;
 
-        const searchMatch =
-            recipe.name.toLowerCase().includes(searchTerm) ||
-            recipe.category.toLowerCase().includes(searchTerm) ||
-            recipe.description.toLowerCase().includes(searchTerm);
+        const searchableText = [
+            recipe.name,
+            recipe.category,
+            recipe.description,
+            ...recipe.ingredients,
+            ...recipe.method
+        ].join(" ").toLowerCase();
 
-        return categoryMatch && searchMatch;
+        const searchMatch = searchableText.includes(searchTerm);
+
+        const favoriteMatch =
+            !showFavoritesOnly || favorites.includes(recipe.id);
+
+        return categoryMatch && searchMatch && favoriteMatch;
 
     });
 
 
     recipeGrid.innerHTML = "";
+
+    favoriteCount.textContent = favorites.length;
+
+    const scope = showFavoritesOnly
+        ? "saved recipes"
+        : currentCategory === "All"
+            ? "recipes"
+            : `${currentCategory.toLowerCase()} recipes`;
+
+    const resultLabel = filtered.length === 1
+        ? scope.replace(/recipes$/, "recipe")
+        : scope;
+
+    recipeResults.textContent = `Showing ${filtered.length} ${resultLabel}`;
 
 
     if (filtered.length === 0) {
@@ -483,9 +552,10 @@ function renderRecipes() {
 
                 <img
                     src="${recipe.image}"
-                    alt="${recipe.name}"
+                    alt="${recipe.name} ready to serve"
                     loading="lazy"
-                    onerror="this.src='https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80'"
+                    width="900"
+                    height="675"
                 >
 
                 <span class="recipe-badge">
@@ -493,9 +563,11 @@ function renderRecipes() {
                 </span>
 
                 <button
+                    type="button"
                     class="favorite-btn ${isFavorite ? "active" : ""}"
                     data-favorite="${recipe.id}"
-                    aria-label="Favorite recipe"
+                    aria-label="${isFavorite ? "Remove" : "Save"} ${recipe.name} ${isFavorite ? "from" : "to"} favorites"
+                    aria-pressed="${isFavorite}"
                 >
                     ${isFavorite ? "♥" : "♡"}
                 </button>
@@ -509,6 +581,10 @@ function renderRecipes() {
 
                     <span class="recipe-time">
                         ⏱ ${recipe.time}
+                    </span>
+
+                    <span class="recipe-serves">
+                        👥 ${recipe.serves}
                     </span>
 
                     <span class="recipe-rating">
@@ -526,6 +602,7 @@ function renderRecipes() {
                 <div class="recipe-bottom">
 
                     <button
+                        type="button"
                         class="view-recipe"
                         data-recipe="${recipe.id}"
                     >
@@ -551,6 +628,9 @@ function renderRecipes() {
 function setCategory(category) {
 
     currentCategory = category;
+    showFavoritesOnly = false;
+    favoritesFilter.classList.remove("active");
+    favoritesFilter.setAttribute("aria-pressed", "false");
 
     document.querySelectorAll(".filter-btn").forEach(btn => {
 
@@ -622,6 +702,32 @@ document.querySelectorAll("[data-category-link]").forEach(link => {
 searchInput.addEventListener("input", () => {
 
     renderRecipes();
+
+});
+
+
+favoritesFilter.addEventListener("click", () => {
+
+    showFavoritesOnly = !showFavoritesOnly;
+    currentCategory = "All";
+
+    favoritesFilter.classList.toggle("active", showFavoritesOnly);
+    favoritesFilter.setAttribute("aria-pressed", String(showFavoritesOnly));
+
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.filter === "All" && !showFavoritesOnly);
+    });
+
+    renderRecipes();
+
+});
+
+
+clearResults.addEventListener("click", () => {
+
+    searchInput.value = "";
+    setCategory("All");
+    searchInput.focus();
 
 });
 
@@ -705,26 +811,36 @@ function openRecipe(id) {
 
     if (!recipe) return;
 
+    lastFocusedElement = document.activeElement;
+
+    const isFavorite = favorites.includes(recipe.id);
+
 
     modalContent.innerHTML = `
 
         <img
             class="modal-image"
             src="${recipe.image}"
-            alt="${recipe.name}"
+            alt="${recipe.name} ready to serve"
+            width="900"
+            height="675"
         >
 
         <div class="modal-body">
 
             <span class="section-label">
-                ${recipe.category} • ${recipe.time}
+                ${recipe.category} • ${recipe.time} • Serves ${recipe.serves} • ★ ${recipe.rating}
             </span>
 
-            <h2>${recipe.name}</h2>
+            <h2 id="modalRecipeTitle">${recipe.name}</h2>
 
             <p class="modal-description">
                 ${recipe.description}
             </p>
+
+            <button type="button" class="modal-favorite ${isFavorite ? "active" : ""}" data-modal-favorite="${recipe.id}" aria-pressed="${isFavorite}">
+                ${isFavorite ? "♥ Saved recipe" : "♡ Save recipe"}
+            </button>
 
             <div class="modal-columns">
 
@@ -761,8 +877,13 @@ function openRecipe(id) {
 
 
     recipeModal.classList.add("active");
+    recipeModal.setAttribute("aria-hidden", "false");
 
     document.body.classList.add("no-scroll");
+
+    history.replaceState(null, "", `#recipe-${recipe.id}`);
+
+    modalClose.focus();
 
 }
 
@@ -773,9 +894,20 @@ function openRecipe(id) {
 
 function closeRecipe() {
 
+    if (!recipeModal.classList.contains("active")) return;
+
     recipeModal.classList.remove("active");
+    recipeModal.setAttribute("aria-hidden", "true");
 
     document.body.classList.remove("no-scroll");
+
+    if (window.location.hash.startsWith("#recipe-")) {
+        history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    }
+
+    if (lastFocusedElement instanceof HTMLElement) {
+        lastFocusedElement.focus();
+    }
 
 }
 
@@ -784,12 +916,30 @@ modalClose.addEventListener("click", closeRecipe);
 
 modalOverlay.addEventListener("click", closeRecipe);
 
+modalContent.addEventListener("click", event => {
+
+    const favoriteButton = event.target.closest("[data-modal-favorite]");
+
+    if (!favoriteButton) return;
+
+    const id = Number(favoriteButton.dataset.modalFavorite);
+
+    toggleFavorite(id);
+    openRecipe(id);
+
+});
+
 
 document.addEventListener("keydown", event => {
 
     if (event.key === "Escape") {
 
         closeRecipe();
+
+        if (mobileMenu.classList.contains("active")) {
+            closeMobileMenu();
+            menuBtn.focus();
+        }
 
     }
 
@@ -809,6 +959,8 @@ if (savedTheme === "dark") {
     document.body.classList.add("dark");
 
     themeBtn.textContent = "☀️";
+    themeBtn.setAttribute("aria-pressed", "true");
+    themeBtn.setAttribute("aria-label", "Use light theme");
 
 }
 
@@ -823,6 +975,9 @@ themeBtn.addEventListener("click", () => {
 
     themeBtn.textContent =
         dark ? "☀️" : "🌙";
+
+    themeBtn.setAttribute("aria-pressed", String(dark));
+    themeBtn.setAttribute("aria-label", dark ? "Use light theme" : "Use dark theme");
 
 
     localStorage.setItem(
@@ -840,8 +995,13 @@ themeBtn.addEventListener("click", () => {
 function openMobileMenu() {
 
     mobileMenu.classList.add("active");
+    mobileMenu.setAttribute("aria-hidden", "false");
+    mobileMenu.removeAttribute("inert");
+    menuBtn.setAttribute("aria-expanded", "true");
 
     document.body.classList.add("no-scroll");
+
+    closeMenu.focus();
 
 }
 
@@ -849,6 +1009,9 @@ function openMobileMenu() {
 function closeMobileMenu() {
 
     mobileMenu.classList.remove("active");
+    mobileMenu.setAttribute("aria-hidden", "true");
+    mobileMenu.setAttribute("inert", "");
+    menuBtn.setAttribute("aria-expanded", "false");
 
     document.body.classList.remove("no-scroll");
 
@@ -879,11 +1042,16 @@ contactForm.addEventListener("submit", event => {
 
     event.preventDefault();
 
-    showToast(
-        "Thank you! Your message has been received."
-    );
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    contactForm.reset();
+    const emailSubject = encodeURIComponent(`[Pakistan Food] ${subject}`);
+    const emailBody = encodeURIComponent(`${message}\n\nFrom: ${name}\nReply email: ${email}`);
+
+    showToast("Opening your email app…");
+    window.location.href = `mailto:manazarali01@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 
 });
 
@@ -973,3 +1141,17 @@ document.getElementById("year").textContent =
 ===================================== */
 
 renderRecipes();
+
+function openRecipeFromHash() {
+
+    const match = window.location.hash.match(/^#recipe-(\d+)$/);
+
+    if (!match) return;
+
+    openRecipe(Number(match[1]));
+
+}
+
+openRecipeFromHash();
+
+window.addEventListener("hashchange", openRecipeFromHash);

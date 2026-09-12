@@ -12,6 +12,15 @@
     <meta name="google-site-verification"
         content="J_db4ItdxSORgiIpSwsSmy7-CdqQlV7o0eN1pVifXSo">
 
+    <meta name="theme-color" content="#b21f2d">
+    <meta property="og:title" content="Pakistan Food | Traditional Pakistani Recipes">
+    <meta property="og:description" content="Cook authentic Pakistani favourites with clear ingredients and simple step-by-step methods.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pakistanfoodcom.netlify.app/">
+    <link rel="canonical" href="https://pakistanfoodcom.netlify.app/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍛</text></svg>">
+    <link rel="preload" as="image" href="assets/chicken-biryani.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,6 +31,8 @@
 </head>
 
 <body>
+
+    <a class="skip-link" href="#recipes">Skip to recipes</a>
 
     <!-- ================= HEADER ================= -->
 
@@ -63,11 +74,11 @@
 
             <div class="nav-actions">
 
-                <button class="icon-btn" id="themeBtn" aria-label="Change theme">
+                <button type="button" class="icon-btn" id="themeBtn" aria-label="Use dark theme" aria-pressed="false">
                     🌙
                 </button>
 
-                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
                     ☰
                 </button>
 
@@ -80,9 +91,9 @@
 
     <!-- ================= MOBILE MENU ================= -->
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
 
-        <button class="close-menu" id="closeMenu">×</button>
+        <button type="button" class="close-menu" id="closeMenu" aria-label="Close menu">×</button>
 
         <div class="mobile-logo">
             🍛 Pakistan Food
@@ -257,6 +268,7 @@
                             type="search"
                             id="searchInput"
                             placeholder="Search recipes..."
+                            aria-label="Search recipes by name, category or ingredient"
                             autocomplete="off">
 
                     </div>
@@ -297,6 +309,13 @@
 
                     </div>
 
+                    <div class="recipe-results-bar">
+                        <p id="recipeResults" aria-live="polite">Showing all 15 recipes</p>
+                        <button type="button" class="saved-filter" id="favoritesFilter" aria-pressed="false">
+                            ♥ Saved recipes <span id="favoriteCount">0</span>
+                        </button>
+                    </div>
+
                 </div>
 
 
@@ -313,6 +332,10 @@
                     <p>
                         Try another recipe name or category.
                     </p>
+
+                    <button type="button" class="btn btn-primary" id="clearResults">
+                        Show all recipes
+                    </button>
 
                 </div>
 
@@ -514,12 +537,14 @@
                                 type="text"
                                 id="name"
                                 placeholder="Your Name"
+                                aria-label="Your name"
                                 required>
 
                             <input
                                 type="email"
                                 id="email"
                                 placeholder="Your Email"
+                                aria-label="Your email"
                                 required>
 
                         </div>
@@ -528,17 +553,21 @@
                             type="text"
                             id="subject"
                             placeholder="Subject"
+                            aria-label="Email subject"
                             required>
 
                         <textarea
                             id="message"
                             rows="6"
                             placeholder="Your Message"
+                            aria-label="Your message"
                             required></textarea>
 
                         <button type="submit" class="btn btn-primary">
-                            Send Message →
+                            Write Email →
                         </button>
+
+                        <small class="form-note">This opens your email app; the website does not store your message.</small>
 
                     </form>
 
@@ -553,13 +582,13 @@
 
     <!-- ================= RECIPE MODAL ================= -->
 
-    <div class="modal" id="recipeModal">
+    <div class="modal" id="recipeModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalRecipeTitle">
 
         <div class="modal-overlay" id="modalOverlay"></div>
 
         <div class="modal-box">
 
-            <button class="modal-close" id="modalClose">
+            <button type="button" class="modal-close" id="modalClose" aria-label="Close recipe">
                 ×
             </button>
 
@@ -580,7 +609,7 @@
 
     <!-- ================= BACK TO TOP ================= -->
 
-    <button class="back-top" id="backTop">
+    <button type="button" class="back-top" id="backTop" aria-label="Back to top">
         ↑
     </button>
 
@@ -640,6 +669,10 @@
 
             <p>
                 Made with ❤️ in Pakistan
+            </p>
+
+            <p>
+                <a href="image-credits.html">Image credits</a>
             </p>
 
         </div>

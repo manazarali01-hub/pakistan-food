@@ -47,6 +47,28 @@ body.no-scroll {
     overflow: hidden;
 }
 
+.skip-link {
+    position: fixed;
+    top: -80px;
+    left: 20px;
+    z-index: 6000;
+    background: white;
+    color: #202020;
+    padding: 10px 16px;
+    border-radius: 7px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+
+.skip-link:focus {
+    top: 14px;
+}
+
+:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 3px;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -179,7 +201,8 @@ button {
     transition: 0.25s;
 }
 
-.nav-dropdown:hover .dropdown-menu {
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -281,7 +304,7 @@ button {
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.25)
         ),
-        url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1800&q=90")
+        url("assets/chicken-biryani.jpg")
         center/cover no-repeat;
     color: white;
     padding-top: 76px;
@@ -490,6 +513,51 @@ button {
     border-color: var(--primary);
 }
 
+.recipe-results-bar {
+    max-width: 960px;
+    margin: 22px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.recipe-results-bar p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.saved-filter {
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 9px 15px;
+    background: var(--surface);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.saved-filter:hover,
+.saved-filter.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.saved-filter span {
+    min-width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(178, 31, 45, 0.12);
+}
+
+.saved-filter.active span {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 .recipe-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -578,7 +646,8 @@ button {
     margin-bottom: 8px;
 }
 
-.recipe-time {
+.recipe-time,
+.recipe-serves {
     color: var(--muted);
     font-size: 11px;
 }
@@ -630,6 +699,7 @@ button {
 
 .no-results p {
     color: var(--muted);
+    margin-bottom: 18px;
 }
 
 
@@ -664,19 +734,19 @@ button {
 }
 
 .punjab {
-    background-image: url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=700&q=80");
+    background-image: url("assets/chicken-karahi.jpg");
 }
 
 .sindh {
-    background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80");
+    background-image: url("assets/chicken-biryani.jpg");
 }
 
 .kp {
-    background-image: url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80");
+    background-image: url("assets/chapli-kebab.jpg");
 }
 
 .balochistan {
-    background-image: url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80");
+    background-image: url("assets/beef-pulao.jpg");
 }
 
 .region-overlay {
@@ -737,7 +807,7 @@ button {
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.35)
         ),
-        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85")
+        url("assets/halwa-puri.jpg")
         center/cover;
     font-size: 0;
 }
@@ -905,6 +975,14 @@ button {
     border-color: var(--primary);
 }
 
+.form-note {
+    display: block;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
 
 /* =========================
    MODAL
@@ -972,6 +1050,23 @@ button {
 .modal-description {
     color: var(--muted);
     margin: 10px 0 25px;
+}
+
+.modal-favorite {
+    margin-bottom: 28px;
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    padding: 9px 15px;
+    background: transparent;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.modal-favorite:hover,
+.modal-favorite.active {
+    background: var(--primary);
+    color: white;
 }
 
 .modal-columns {
@@ -1109,6 +1204,54 @@ button {
     font-size: 11px;
 }
 
+.footer-bottom a {
+    color: #d8b56c;
+}
+
+.credits-page {
+    min-height: 100vh;
+    padding: 120px 0 80px;
+    background: var(--surface-2);
+}
+
+.credits-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: clamp(24px, 5vw, 48px);
+    box-shadow: var(--shadow);
+}
+
+.credits-card h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(38px, 6vw, 58px);
+    line-height: 1.05;
+    margin-bottom: 12px;
+}
+
+.credits-card > p {
+    color: var(--muted);
+    margin-bottom: 26px;
+}
+
+.credits-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 28px;
+    list-style: none;
+}
+
+.credits-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.credits-list a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
 
 /* =========================
    RESPONSIVE
@@ -1172,6 +1315,11 @@ button {
         grid-template-columns: 1fr;
     }
 
+    .recipe-results-bar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
     .region-grid {
         grid-template-columns: 1fr;
     }
@@ -1219,6 +1367,10 @@ button {
         text-align: center;
     }
 
+    .credits-list {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width: 420px) {
@@ -1243,4 +1395,17 @@ button {
         padding: 18px 7px;
     }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
 }
