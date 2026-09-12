@@ -1,0 +1,27 @@
+{
+  "id": 15,
+  "name": "Beef Pulao",
+  "category": "Rice",
+  "time": "75 min",
+  "rating": "4.8",
+  "serves": 6,
+  "image": "assets/beef-pulao.webp",
+  "description": "Aromatic beef pulao prepared with fragrant rice and traditional whole spices.",
+  "ingredients": [
+    "1 kg beef with bones",
+    "4 cups basmati rice",
+    "3 onions, sliced",
+    "1½ tbsp mixed whole spices",
+    "2 tbsp ginger-garlic paste",
+    "5 green chilies",
+    "7 cups water for stock",
+    "Salt and cooking oil"
+  ],
+  "method": [
+    "Cook beef with whole spices.",
+    "Prepare flavorful stock.",
+    "Add soaked basmati rice.",
+    "Cook until rice is tender.",
+    "Rest before serving."
+  ]
+}
