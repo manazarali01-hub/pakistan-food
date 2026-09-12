@@ -1,0 +1,27 @@
+{
+  "id": 5,
+  "name": "Beef Nihari",
+  "category": "Beef",
+  "time": "4 hrs",
+  "rating": "4.9",
+  "serves": 6,
+  "image": "assets/nihari.webp",
+  "description": "Slow-cooked Pakistani beef stew with deep spices and rich traditional flavour.",
+  "ingredients": [
+    "1 kg beef shank",
+    "3 tbsp nihari masala",
+    "2 tbsp ginger-garlic paste",
+    "⅓ cup wheat flour",
+    "½ cup cooking oil",
+    "7 cups water",
+    "Fresh ginger and coriander",
+    "Green chilies, lemon and salt"
+  ],
+  "method": [
+    "Fry beef with ginger garlic.",
+    "Add nihari spices.",
+    "Add plenty of water.",
+    "Slow cook until beef is tender.",
+    "Add flour slurry to thicken."
+  ]
+}
