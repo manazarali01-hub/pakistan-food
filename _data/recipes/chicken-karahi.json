@@ -1,0 +1,27 @@
+{
+  "id": 3,
+  "name": "Chicken Karahi",
+  "category": "Chicken",
+  "time": "45 min",
+  "rating": "4.9",
+  "serves": 4,
+  "image": "assets/chicken-karahi.webp",
+  "description": "Classic Pakistani chicken karahi cooked with tomatoes, green chilies and fresh ginger.",
+  "ingredients": [
+    "1 kg chicken, karahi cut",
+    "6 ripe tomatoes, chopped",
+    "5 green chilies",
+    "2 tbsp fresh ginger, julienned",
+    "1 tbsp garlic paste",
+    "1 tsp red chili powder",
+    "1 tsp crushed coriander",
+    "½ cup cooking oil and salt"
+  ],
+  "method": [
+    "Heat oil in a karahi.",
+    "Add chicken and fry well.",
+    "Add tomatoes and spices.",
+    "Cook until oil separates.",
+    "Finish with ginger, chilies and coriander."
+  ]
+}
