@@ -3,21 +3,22 @@ backend:
   repo: manazarali01-hub/pakistan-food
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "assets"
+public_folder: "/pakistan-food/assets"
 
 collections:
   - name: "recipes"
     label: "Recipes"
-    folder: "recipes"
+    folder: "_data/recipes"
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
 
     fields:
       - label: "Recipe Name"
         name: "name"
         widget: "string"
-
       - label: "Category"
         name: "category"
         widget: "select"
@@ -29,28 +30,27 @@ collections:
           - "Snacks"
           - "Breakfast"
           - "Desserts"
-
+          - "Drinks"
       - label: "Cooking Time"
         name: "time"
         widget: "string"
-
       - label: "Rating"
         name: "rating"
         widget: "string"
         default: "4.5"
-
+      - label: "Servings"
+        name: "serves"
+        widget: "number"
+        default: 4
       - label: "Image"
         name: "image"
         widget: "image"
-
       - label: "Description"
         name: "description"
         widget: "text"
-
       - label: "Ingredients"
         name: "ingredients"
         widget: "list"
-
       - label: "Method"
         name: "method"
         widget: "list"
