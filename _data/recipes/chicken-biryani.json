@@ -1,0 +1,29 @@
+{
+  "id": 1,
+  "name": "Chicken Biryani",
+  "category": "Rice",
+  "time": "60 min",
+  "rating": "4.9",
+  "serves": 6,
+  "image": "assets/chicken-biryani.webp",
+  "description": "Aromatic basmati rice layered with spicy chicken, fried onions and traditional Pakistani spices.",
+  "ingredients": [
+    "750 g bone-in chicken",
+    "3 cups basmati rice",
+    "3 onions, thinly sliced",
+    "3 tomatoes, chopped",
+    "1 cup plain yogurt",
+    "2 tbsp biryani masala",
+    "2 tbsp ginger-garlic paste",
+    "4 green chilies",
+    "½ cup mint and coriander",
+    "Salt and cooking oil"
+  ],
+  "method": [
+    "Wash and soak the basmati rice.",
+    "Cook chicken with onions, tomatoes, yogurt and spices.",
+    "Boil rice separately until nearly cooked.",
+    "Layer rice and chicken masala.",
+    "Cover and cook on low heat for 15–20 minutes."
+  ]
+}

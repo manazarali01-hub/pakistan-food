@@ -1,0 +1,27 @@
+{
+  "id": 13,
+  "name": "Gulab Jamun",
+  "category": "Desserts",
+  "time": "40 min",
+  "rating": "4.9",
+  "serves": 8,
+  "image": "assets/gulab-jamun.webp",
+  "description": "Soft golden milk-solid dumplings soaked in sweet fragrant sugar syrup.",
+  "ingredients": [
+    "1 cup milk powder",
+    "¼ cup plain flour",
+    "½ tsp baking powder",
+    "¼ cup milk, approximately",
+    "1½ cups sugar",
+    "1½ cups water",
+    "4 green cardamoms",
+    "2 tbsp ghee and frying oil"
+  ],
+  "method": [
+    "Prepare a soft dough.",
+    "Shape into small balls.",
+    "Deep fry on low heat.",
+    "Prepare sugar syrup.",
+    "Soak fried gulab jamun in syrup."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": 14,
+  "name": "Daal Chawal",
+  "category": "Rice",
+  "time": "45 min",
+  "rating": "4.7",
+  "serves": 4,
+  "image": "assets/daal-chawal.webp",
+  "description": "Simple and comforting Pakistani daal served with steamed rice and achaar.",
+  "ingredients": [
+    "1 cup moong or masoor lentils",
+    "2 cups basmati rice",
+    "1 onion, sliced",
+    "1 tomato, chopped",
+    "4 garlic cloves, sliced",
+    "1 tsp cumin seeds",
+    "½ tsp red chili powder",
+    "Salt, turmeric and ghee"
+  ],
+  "method": [
+    "Wash and boil lentils.",
+    "Cook rice separately.",
+    "Prepare garlic and onion tempering.",
+    "Add tempering to daal.",
+    "Serve hot with rice."
+  ]
+}

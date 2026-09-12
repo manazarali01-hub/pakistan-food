@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "name": "Rice Kheer",
+  "category": "Desserts",
+  "time": "60 min",
+  "rating": "4.8",
+  "serves": 6,
+  "image": "assets/kheer.webp",
+  "description": "Traditional creamy Pakistani rice pudding flavored with cardamom and nuts.",
+  "ingredients": [
+    "1 litre full-fat milk",
+    "¼ cup basmati rice",
+    "½ cup sugar",
+    "4 green cardamoms",
+    "2 tbsp sliced almonds",
+    "2 tbsp sliced pistachios",
+    "1 tsp rose water, optional"
+  ],
+  "method": [
+    "Wash and soak rice.",
+    "Cook rice in milk.",
+    "Add sugar.",
+    "Cook until thick and creamy.",
+    "Add cardamom and nuts."
+  ]
+}

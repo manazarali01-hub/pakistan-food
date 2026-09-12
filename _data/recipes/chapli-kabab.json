@@ -1,0 +1,27 @@
+{
+  "id": 7,
+  "name": "Chapli Kabab",
+  "category": "BBQ",
+  "time": "35 min",
+  "rating": "4.8",
+  "serves": 5,
+  "image": "assets/chapli-kebab.webp",
+  "description": "Famous Pashtun-style flat kababs packed with spices, herbs and rich flavour.",
+  "ingredients": [
+    "750 g beef mince with some fat",
+    "1 tomato, finely chopped",
+    "1 onion, finely chopped",
+    "3 green chilies",
+    "½ cup fresh coriander",
+    "2 tbsp crushed coriander and cumin",
+    "3 tbsp maize flour",
+    "1 egg, salt and frying oil"
+  ],
+  "method": [
+    "Combine minced meat with all ingredients.",
+    "Shape into flat kababs.",
+    "Heat oil in a pan.",
+    "Fry both sides until cooked.",
+    "Serve with chutney."
+  ]
+}

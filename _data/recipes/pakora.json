@@ -1,0 +1,27 @@
+{
+  "id": 9,
+  "name": "Pakora",
+  "category": "Snacks",
+  "time": "25 min",
+  "rating": "4.7",
+  "serves": 6,
+  "image": "assets/pakora.webp",
+  "description": "Crispy Pakistani pakoras perfect for rainy evenings and Ramadan iftar.",
+  "ingredients": [
+    "2 cups gram flour",
+    "1 potato, thinly sliced",
+    "2 onions, sliced",
+    "3 green chilies, chopped",
+    "½ cup fresh coriander",
+    "1 tsp cumin and ½ tsp ajwain",
+    "¾ cup water, approximately",
+    "Salt and frying oil"
+  ],
+  "method": [
+    "Prepare gram flour batter.",
+    "Add vegetables and spices.",
+    "Heat oil.",
+    "Drop spoonfuls into hot oil.",
+    "Fry until crisp and golden."
+  ]
+}
