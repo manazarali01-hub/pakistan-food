@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -108,7 +108,7 @@ button {
 }
 
 .section-heading h2 {
-    font-family: "DM Serif Display", serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(35px, 5vw, 50px);
     line-height: 1.15;
     margin: 12px 0;
@@ -326,7 +326,7 @@ button {
 }
 
 .hero h1 {
-    font-family: "DM Serif Display", serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(48px, 7vw, 85px);
     line-height: 1.05;
     margin-bottom: 25px;
@@ -658,7 +658,7 @@ button {
 }
 
 .recipe-body h3 {
-    font-family: "DM Serif Display", serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 25px;
     margin-bottom: 7px;
 }
@@ -734,19 +734,19 @@ button {
 }
 
 .punjab {
-    background-image: url("assets/chicken-karahi.jpg?v=20260912-fast");
+    background-image: url("assets/chicken-karahi.webp?v=20260912-fast2");
 }
 
 .sindh {
-    background-image: url("assets/chicken-biryani.jpg?v=20260912-fast");
+    background-image: url("assets/chicken-biryani.webp?v=20260912-fast2");
 }
 
 .kp {
-    background-image: url("assets/chapli-kebab.jpg?v=20260912-fast");
+    background-image: url("assets/chapli-kebab.webp?v=20260912-fast2");
 }
 
 .balochistan {
-    background-image: url("assets/beef-pulao.jpg?v=20260912-fast");
+    background-image: url("assets/beef-pulao.webp?v=20260912-fast2");
 }
 
 .region-overlay {
@@ -768,7 +768,7 @@ button {
 }
 
 .region-content h3 {
-    font-family: "DM Serif Display", serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 30px;
 }
 
@@ -838,7 +838,7 @@ button {
 }
 
 .about-content h2 {
-    font-family: "DM Serif Display", serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(35px, 4vw, 52px);
     line-height: 1.1;
     margin: 12px 0 22px;
@@ -1043,7 +1043,7 @@ button {
 }
 
 .modal-body h2 {
-    font-family: "DM Serif Display", serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 38px;
 }
 
@@ -1223,7 +1223,7 @@ button {
 }
 
 .credits-card h1 {
-    font-family: "DM Serif Display", serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(38px, 6vw, 58px);
     line-height: 1.05;
     margin-bottom: 12px;
