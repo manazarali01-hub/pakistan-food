@@ -1,0 +1,28 @@
+{
+  "id": 11,
+  "name": "Halwa Puri",
+  "category": "Breakfast",
+  "time": "45 min",
+  "rating": "4.9",
+  "serves": 5,
+  "image": "assets/halwa-puri.webp",
+  "description": "Traditional Pakistani breakfast of fluffy puris served with sweet halwa and chickpea curry.",
+  "ingredients": [
+    "1 cup semolina",
+    "¾ cup sugar",
+    "2 cups whole-wheat flour",
+    "½ cup ghee for halwa",
+    "2 cups cooked chickpeas",
+    "1 tbsp chana masala",
+    "4 green cardamoms",
+    "Water, salt and frying oil"
+  ],
+  "method": [
+    "Prepare semolina halwa with sugar.",
+    "Prepare chickpea curry.",
+    "Make soft puri dough.",
+    "Roll small puris.",
+    "Deep fry until puffed and golden.",
+    "Serve everything hot."
+  ]
+}
