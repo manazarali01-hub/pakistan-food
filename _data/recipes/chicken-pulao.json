@@ -1,0 +1,27 @@
+{
+  "id": 2,
+  "name": "Chicken Pulao",
+  "category": "Rice",
+  "time": "50 min",
+  "rating": "4.8",
+  "serves": 5,
+  "image": "assets/chicken-pulao.webp",
+  "description": "Fragrant Pakistani pulao prepared with tender chicken and aromatic whole spices.",
+  "ingredients": [
+    "750 g bone-in chicken",
+    "3 cups basmati rice",
+    "2 onions, sliced",
+    "1 tbsp mixed whole spices",
+    "½ cup plain yogurt",
+    "2 tbsp ginger-garlic paste",
+    "5 cups water for stock",
+    "Salt and green chilies"
+  ],
+  "method": [
+    "Fry onions until golden.",
+    "Add chicken and spices.",
+    "Add water and cook chicken.",
+    "Add soaked rice.",
+    "Cook until rice becomes fluffy."
+  ]
+}
