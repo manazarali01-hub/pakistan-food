@@ -1,0 +1,27 @@
+{
+  "id": 10,
+  "name": "Aloo Paratha",
+  "category": "Breakfast",
+  "time": "30 min",
+  "rating": "4.9",
+  "serves": 4,
+  "image": "assets/aloo-paratha.webp",
+  "description": "Crispy stuffed potato paratha served with yogurt, pickle or chai.",
+  "ingredients": [
+    "2 cups whole-wheat flour",
+    "3 medium potatoes, boiled",
+    "2 green chilies, chopped",
+    "½ cup fresh coriander",
+    "½ tsp red chili powder",
+    "1 tsp roasted cumin",
+    "Water and salt for dough",
+    "Ghee or oil for cooking"
+  ],
+  "method": [
+    "Prepare soft dough.",
+    "Make spiced potato filling.",
+    "Stuff filling inside dough.",
+    "Roll carefully.",
+    "Cook on tawa with oil or ghee."
+  ]
+}
