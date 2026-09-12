@@ -1,28 +1,27 @@
 media:
-  - name: images
-    label: Images
-    path: images
+  - name: recipe_images
+    label: Recipe Images
+    path: assets
 
 content:
   - name: recipes
     label: Recipes
     type: collection
-    path: recipes
+    path: _data/recipes
     format: json
     filename: "{primary}.json"
     view:
       fields: [name, category, time]
       primary: name
-
     fields:
       - name: name
         label: Recipe Name
         type: string
         required: true
-
       - name: category
         label: Category
         type: select
+        required: true
         options:
           - Rice
           - Chicken
@@ -31,27 +30,31 @@ content:
           - Snacks
           - Breakfast
           - Desserts
-
       - name: time
         label: Cooking Time
         type: string
-
+        required: true
       - name: rating
         label: Rating
         type: string
-
+        default: "4.5"
+      - name: serves
+        label: Servings
+        type: number
+        default: 4
       - name: image
-        label: Image
+        label: Recipe Image
         type: image
-
+        required: true
       - name: description
         label: Description
         type: text
-
+        required: true
       - name: ingredients
         label: Ingredients
-        type: list
-
+        type: string
+        list: true
       - name: method
-        label: Method
-        type: list
+        label: Cooking Method
+        type: string
+        list: true
