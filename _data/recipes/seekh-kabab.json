@@ -1,0 +1,27 @@
+{
+  "id": 6,
+  "name": "Seekh Kabab",
+  "category": "BBQ",
+  "time": "40 min",
+  "rating": "4.8",
+  "serves": 5,
+  "image": "assets/seekh-kebab.webp",
+  "description": "Juicy minced-meat seekh kababs seasoned with traditional Pakistani spices.",
+  "ingredients": [
+    "750 g beef mince with some fat",
+    "1 small onion, very finely chopped",
+    "3 green chilies, chopped",
+    "½ cup fresh coriander",
+    "1 tbsp ginger-garlic paste",
+    "1½ tbsp seekh kabab masala",
+    "1 tbsp lemon juice",
+    "Salt and oil for brushing"
+  ],
+  "method": [
+    "Mix all ingredients with minced meat.",
+    "Shape mixture around skewers.",
+    "Chill for better shape.",
+    "Grill or barbecue.",
+    "Serve hot with chutney."
+  ]
+}
