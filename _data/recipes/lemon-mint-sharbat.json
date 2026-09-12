@@ -5,7 +5,7 @@
   "time": "10 min",
   "rating": "4.8",
   "serves": 4,
-  "image": "assets/drinks-placeholder.svg",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mint_lemonade.jpg?width=800",
   "description": "A bright and cooling lemon-mint sharbat that is refreshing for summer afternoons and iftar.",
   "ingredients": ["4 cups chilled water", "0.5 cup fresh lemon juice", "0.5 cup mint leaves", "5 tbsp sugar or to taste", "1 pinch black salt", "Ice cubes"],
   "method": ["Blend mint with a little water.", "Add lemon juice and sugar.", "Mix with the remaining chilled water.", "Add black salt and ice.", "Serve cold."]
