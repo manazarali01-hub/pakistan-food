@@ -1,0 +1,12 @@
+{
+  "id": 20,
+  "name": "Rooh Afza Milk",
+  "category": "Drinks",
+  "time": "5 min",
+  "rating": "4.8",
+  "serves": 2,
+  "image": "assets/drinks-placeholder.svg",
+  "description": "A chilled rose-flavoured milk drink popular in Pakistani homes, especially during warm weather and Ramadan.",
+  "ingredients": ["2 cups chilled milk", "3 tbsp rose sharbat syrup", "1 tsp sugar, optional", "4 ice cubes", "Chopped almonds, optional"],
+  "method": ["Pour chilled milk into a jug.", "Add rose sharbat syrup.", "Stir or blend until evenly mixed.", "Add ice cubes.", "Garnish with almonds and serve cold."]
+}
