@@ -734,19 +734,19 @@ button {
 }
 
 .punjab {
-    background-image: url("assets/chicken-karahi.jpg");
+    background-image: url("assets/chicken-karahi.jpg?v=20260912");
 }
 
 .sindh {
-    background-image: url("assets/chicken-biryani.jpg");
+    background-image: url("assets/chicken-biryani.jpg?v=20260912");
 }
 
 .kp {
-    background-image: url("assets/chapli-kebab.jpg");
+    background-image: url("assets/chapli-kebab.jpg?v=20260912");
 }
 
 .balochistan {
-    background-image: url("assets/beef-pulao.jpg");
+    background-image: url("assets/beef-pulao.jpg?v=20260912");
 }
 
 .region-overlay {

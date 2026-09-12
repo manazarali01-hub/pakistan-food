@@ -17,7 +17,7 @@ const recipes = [
         time: "60 min",
         rating: "4.9",
         serves: 6,
-        image: "assets/chicken-biryani.jpg",
+        image: "assets/chicken-biryani.jpg?v=20260912",
         description: "Aromatic basmati rice layered with spicy chicken, fried onions and traditional Pakistani spices.",
         ingredients: [
             "750 g bone-in chicken",
@@ -47,7 +47,7 @@ const recipes = [
         time: "50 min",
         rating: "4.8",
         serves: 5,
-        image: "assets/chicken-pulao.jpg",
+        image: "assets/chicken-pulao.jpg?v=20260912",
         description: "Fragrant Pakistani pulao prepared with tender chicken and aromatic whole spices.",
         ingredients: [
             "750 g bone-in chicken",
@@ -75,7 +75,7 @@ const recipes = [
         time: "45 min",
         rating: "4.9",
         serves: 4,
-        image: "assets/chicken-karahi.jpg",
+        image: "assets/chicken-karahi.jpg?v=20260912",
         description: "Classic Pakistani chicken karahi cooked with tomatoes, green chilies and fresh ginger.",
         ingredients: [
             "1 kg chicken, karahi cut",
@@ -103,7 +103,7 @@ const recipes = [
         time: "45 min",
         rating: "4.7",
         serves: 4,
-        image: "assets/chicken-handi.jpg",
+        image: "assets/chicken-handi.jpg?v=20260912",
         description: "Creamy and rich chicken handi with a delicious blend of Pakistani spices.",
         ingredients: [
             "750 g boneless chicken",
@@ -132,7 +132,7 @@ const recipes = [
         time: "4 hrs",
         rating: "4.9",
         serves: 6,
-        image: "assets/nihari.jpg",
+        image: "assets/nihari.jpg?v=20260912",
         description: "Slow-cooked Pakistani beef stew with deep spices and rich traditional flavour.",
         ingredients: [
             "1 kg beef shank",
@@ -160,7 +160,7 @@ const recipes = [
         time: "40 min",
         rating: "4.8",
         serves: 5,
-        image: "assets/seekh-kebab.jpg",
+        image: "assets/seekh-kebab.jpg?v=20260912",
         description: "Juicy minced-meat seekh kababs seasoned with traditional Pakistani spices.",
         ingredients: [
             "750 g beef mince with some fat",
@@ -188,7 +188,7 @@ const recipes = [
         time: "35 min",
         rating: "4.8",
         serves: 5,
-        image: "assets/chapli-kebab.jpg",
+        image: "assets/chapli-kebab.jpg?v=20260912",
         description: "Famous Pashtun-style flat kababs packed with spices, herbs and rich flavour.",
         ingredients: [
             "750 g beef mince with some fat",
@@ -216,7 +216,7 @@ const recipes = [
         time: "45 min",
         rating: "4.8",
         serves: 6,
-        image: "assets/samosa.jpg",
+        image: "assets/samosa.jpg?v=20260912",
         description: "Crispy golden samosas filled with a delicious spicy potato mixture.",
         ingredients: [
             "2 cups plain flour",
@@ -244,7 +244,7 @@ const recipes = [
         time: "25 min",
         rating: "4.7",
         serves: 6,
-        image: "assets/pakora.jpg",
+        image: "assets/pakora.jpg?v=20260912",
         description: "Crispy Pakistani pakoras perfect for rainy evenings and Ramadan iftar.",
         ingredients: [
             "2 cups gram flour",
@@ -272,7 +272,7 @@ const recipes = [
         time: "30 min",
         rating: "4.9",
         serves: 4,
-        image: "assets/aloo-paratha.jpg",
+        image: "assets/aloo-paratha.jpg?v=20260912",
         description: "Crispy stuffed potato paratha served with yogurt, pickle or chai.",
         ingredients: [
             "2 cups whole-wheat flour",
@@ -300,7 +300,7 @@ const recipes = [
         time: "45 min",
         rating: "4.9",
         serves: 5,
-        image: "assets/halwa-puri.jpg",
+        image: "assets/halwa-puri.jpg?v=20260912",
         description: "Traditional Pakistani breakfast of fluffy puris served with sweet halwa and chickpea curry.",
         ingredients: [
             "1 cup semolina",
@@ -329,7 +329,7 @@ const recipes = [
         time: "60 min",
         rating: "4.8",
         serves: 6,
-        image: "assets/kheer.jpg",
+        image: "assets/kheer.jpg?v=20260912",
         description: "Traditional creamy Pakistani rice pudding flavored with cardamom and nuts.",
         ingredients: [
             "1 litre full-fat milk",
@@ -356,7 +356,7 @@ const recipes = [
         time: "40 min",
         rating: "4.9",
         serves: 8,
-        image: "assets/gulab-jamun.jpg",
+        image: "assets/gulab-jamun.jpg?v=20260912",
         description: "Soft golden milk-solid dumplings soaked in sweet fragrant sugar syrup.",
         ingredients: [
             "1 cup milk powder",
@@ -384,7 +384,7 @@ const recipes = [
         time: "45 min",
         rating: "4.7",
         serves: 4,
-        image: "assets/daal-chawal.jpg",
+        image: "assets/daal-chawal.jpg?v=20260912",
         description: "Simple and comforting Pakistani daal served with steamed rice and achaar.",
         ingredients: [
             "1 cup moong or masoor lentils",
@@ -412,7 +412,7 @@ const recipes = [
         time: "75 min",
         rating: "4.8",
         serves: 6,
-        image: "assets/beef-pulao.jpg",
+        image: "assets/beef-pulao.jpg?v=20260912",
         description: "Aromatic beef pulao prepared with fragrant rice and traditional whole spices.",
         ingredients: [
             "1 kg beef with bones",
