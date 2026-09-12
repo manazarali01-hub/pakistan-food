@@ -1,0 +1,27 @@
+{
+  "id": 8,
+  "name": "Pakistani Samosa",
+  "category": "Snacks",
+  "time": "45 min",
+  "rating": "4.8",
+  "serves": 6,
+  "image": "assets/samosa.webp",
+  "description": "Crispy golden samosas filled with a delicious spicy potato mixture.",
+  "ingredients": [
+    "2 cups plain flour",
+    "4 medium potatoes, boiled",
+    "3 green chilies, chopped",
+    "½ cup fresh coriander",
+    "1 tsp cumin seeds",
+    "1 tsp crushed red chili",
+    "½ tsp ajwain",
+    "Salt, water and frying oil"
+  ],
+  "method": [
+    "Prepare dough with flour.",
+    "Make spicy potato filling.",
+    "Shape samosa wrappers.",
+    "Fill and seal.",
+    "Deep fry until golden."
+  ]
+}
