@@ -1,0 +1,30 @@
+{
+  "id": 21,
+  "name": "Bhindi Gosht",
+  "category": "Beef",
+  "time": "60 min",
+  "rating": "4.8",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bhindi_Gosht.JPG?width=800",
+  "description": "A classic Pakistani curry combining tender beef with bhindi in a rich onion-tomato masala.",
+  "ingredients": [
+    "750 g beef, small pieces",
+    "500 g bhindi (okra), trimmed",
+    "2 onions, sliced",
+    "3 tomatoes, chopped",
+    "1 tbsp ginger-garlic paste",
+    "1 tsp red chili powder",
+    "0.5 tsp turmeric",
+    "1 tsp coriander powder",
+    "3 green chilies",
+    "Salt and cooking oil"
+  ],
+  "method": [
+    "Lightly fry the bhindi until it loses excess moisture, then set aside.",
+    "Cook onions until golden and add ginger-garlic paste.",
+    "Add beef, tomatoes and spices and cook until the masala thickens.",
+    "Add a little water, cover and cook until the beef is tender.",
+    "Fold in the fried bhindi and green chilies and simmer for 8 to 10 minutes.",
+    "Serve hot with roti or naan."
+  ]
+}
