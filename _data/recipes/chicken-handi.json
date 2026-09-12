@@ -1,0 +1,28 @@
+{
+  "id": 4,
+  "name": "Chicken Handi",
+  "category": "Chicken",
+  "time": "45 min",
+  "rating": "4.7",
+  "serves": 4,
+  "image": "assets/chicken-handi.webp",
+  "description": "Creamy and rich chicken handi with a delicious blend of Pakistani spices.",
+  "ingredients": [
+    "750 g boneless chicken",
+    "½ cup cooking cream",
+    "½ cup plain yogurt",
+    "4 tomatoes, blended",
+    "1 onion, finely chopped",
+    "1½ tbsp ginger-garlic paste",
+    "1 tsp red chili powder",
+    "½ tsp garam masala",
+    "Salt and cooking oil"
+  ],
+  "method": [
+    "Cook onions and chicken.",
+    "Add tomatoes and spices.",
+    "Add yogurt and cook well.",
+    "Add cream.",
+    "Simmer for 10 minutes."
+  ]
+}
