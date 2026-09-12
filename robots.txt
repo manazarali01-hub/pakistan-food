@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pakistanfoodcom.netlify.app/sitemap.xml
+Sitemap: https://manazarali01-hub.github.io/pakistan-food/sitemap.xml
