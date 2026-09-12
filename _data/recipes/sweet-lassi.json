@@ -5,7 +5,7 @@
   "time": "10 min",
   "rating": "4.9",
   "serves": 2,
-  "image": "assets/drinks-placeholder.svg",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sweet_Lassi.JPG?width=800",
   "description": "A cool and creamy traditional Pakistani yogurt drink, lightly sweetened and perfect for hot days.",
   "ingredients": ["2 cups chilled yogurt", "1 cup chilled water or milk", "3 tbsp sugar", "4 ice cubes", "1 pinch cardamom powder"],
   "method": ["Add yogurt, water or milk and sugar to a blender.", "Blend until smooth and frothy.", "Add ice and cardamom.", "Blend briefly again.", "Serve chilled."]
