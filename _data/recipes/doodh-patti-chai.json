@@ -1,0 +1,12 @@
+{
+  "id": 18,
+  "name": "Doodh Patti Chai",
+  "category": "Drinks",
+  "time": "12 min",
+  "rating": "4.9",
+  "serves": 2,
+  "image": "assets/drinks-placeholder.svg",
+  "description": "Rich Pakistani milk tea brewed with tea leaves for a strong, comforting cup of chai.",
+  "ingredients": ["2 cups milk", "2 tsp black tea leaves", "2 to 3 tsp sugar", "2 green cardamoms, optional", "0.25 cup water, optional"],
+  "method": ["Heat milk in a saucepan.", "Add tea leaves, sugar and cardamom.", "Bring gently to a boil.", "Simmer until the colour deepens.", "Strain into cups and serve hot."]
+}
