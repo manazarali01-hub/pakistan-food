@@ -1,0 +1,29 @@
+{
+  "id": 52,
+  "name": "Chicken Tikka",
+  "category": "BBQ",
+  "time": "45 min",
+  "rating": "4.9",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Tikka.jpg?width=900",
+  "description": "Smoky Pakistani chicken tikka marinated in yogurt, lemon, ginger-garlic and spices, then grilled until charred and juicy.",
+  "ingredients": [
+    "800 g boneless chicken pieces",
+    "1 cup plain yogurt",
+    "2 tbsp lemon juice",
+    "1.5 tbsp ginger-garlic paste",
+    "1 tsp red chili powder",
+    "1 tsp roasted cumin powder",
+    "1 tsp coriander powder",
+    "0.5 tsp garam masala",
+    "1 tbsp oil",
+    "Salt to taste"
+  ],
+  "method": [
+    "Mix yogurt, lemon juice, ginger-garlic paste, spices, oil and salt.",
+    "Coat the chicken thoroughly and marinate for at least 2 hours.",
+    "Thread the chicken onto skewers or place on a grill rack.",
+    "Grill over high heat, turning regularly, until cooked through with lightly charred edges.",
+    "Rest for a few minutes and serve with mint chutney, onion and lemon."
+  ]
+}
