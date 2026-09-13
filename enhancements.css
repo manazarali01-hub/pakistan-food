@@ -1,4 +1,28 @@
 /* Pakistan Food progressive enhancement styles */
+
+/* Performance: use the same lightweight WebP hero that is preloaded in index.html. */
+.hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("assets/chicken-biryani.webp?v=20260913-perf1");
+}
+
+/* Performance: let the browser skip rendering content that is still far below the viewport. */
+.categories,
+.recipes,
+.regions,
+.about,
+.contact,
+.footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
+}
+
 .recipe-quick-actions {
     display: flex;
     align-items: center;
@@ -59,6 +83,17 @@
     .saved-filter {
         flex: 1 1 auto;
         text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
 
