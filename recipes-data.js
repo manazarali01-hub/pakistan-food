@@ -67,22 +67,35 @@ window.PAKISTAN_FOOD_RECIPES = [
   const results = document.getElementById("recipeResults");
   if (results) results.textContent = `Showing all ${recipes.length} recipes`;
 
+  const exactFallbacks = {
+    "chicken biryani": "assets/chicken-biryani.webp",
+    "chicken pulao": "assets/chicken-pulao.webp",
+    "chicken karahi": "assets/chicken-karahi.webp",
+    "chicken handi": "assets/chicken-handi.webp",
+    "beef nihari": "assets/nihari.webp",
+    "seekh kabab": "assets/seekh-kebab.webp",
+    "chapli kabab": "assets/chapli-kebab.webp",
+    "pakistani samosa": "assets/samosa.webp",
+    "pakora": "assets/pakora.webp",
+    "aloo paratha": "assets/aloo-paratha.webp",
+    "halwa puri": "assets/halwa-puri.webp",
+    "rice kheer": "assets/kheer.webp",
+    "gulab jamun": "assets/gulab-jamun.webp",
+    "daal chawal": "assets/daal-chawal.webp",
+    "beef pulao": "assets/beef-pulao.webp",
+    "sarson ka saag": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarson-Ka-Saag.jpg"
+  };
+
+  function neutralPlaceholder(label) {
+    const safeLabel = String(label || "Pakistani Recipe").replace(/[<>&"']/g, "").slice(0, 42);
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 900 675"><rect width="900" height="675" fill="#f3f3f3"/><text x="450" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" fill="#333">Pakistan Food</text><text x="450" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#666">${safeLabel}</text></svg>`;
+    return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+  }
+
   function finalFallbackFor(img) {
-    const alt = (img.alt || "").toLowerCase();
-
-    if (alt.includes("sarson") || alt.includes("saag")) return "https://commons.wikimedia.org/wiki/Special:FilePath/Sarson-Ka-Saag.jpg";
-    if (alt.includes("paratha")) return "assets/aloo-paratha.webp";
-    if (alt.includes("biryani")) return "assets/chicken-biryani.webp";
-    if (alt.includes("pulao") || alt.includes("rice")) return "assets/beef-pulao.webp";
-    if (alt.includes("karahi") || alt.includes("chicken") || alt.includes("jalfrezi") || alt.includes("qorma") || alt.includes("handi") || alt.includes("tikka") || alt.includes("sajji")) return "assets/chicken-karahi.webp";
-    if (alt.includes("kabab") || alt.includes("kebab")) return "assets/chapli-kebab.webp";
-    if (alt.includes("samosa") || alt.includes("pakora") || alt.includes("chaat") || alt.includes("pizza")) return "assets/samosa.webp";
-    if (alt.includes("nihari") || alt.includes("beef") || alt.includes("mutton") || alt.includes("gosht") || alt.includes("keema")) return "assets/nihari.webp";
-    if (alt.includes("chana") || alt.includes("vegetable") || alt.includes("palak")) return "assets/daal-chawal.webp";
-    if (alt.includes("kheer") || alt.includes("halwa") || alt.includes("jalebi") || alt.includes("gulab") || alt.includes("ras malai")) return "assets/gulab-jamun.webp";
-    if (alt.includes("chai") || alt.includes("lassi") || alt.includes("sharbat") || alt.includes("falooda") || alt.includes("milk")) return "assets/kheer.webp";
-
-    return "assets/chicken-biryani.webp";
+    const label = (img.alt || "").replace(/ Pakistani recipe$/i, "").trim();
+    const key = label.toLowerCase();
+    return exactFallbacks[key] || neutralPlaceholder(label);
   }
 
   document.addEventListener("error", (event) => {
@@ -106,7 +119,7 @@ window.PAKISTAN_FOOD_RECIPES = [
       return;
     }
 
+    img.src = neutralPlaceholder(img.alt || "Pakistani Recipe");
     img.style.objectFit = "cover";
-    img.style.background = "var(--surface-2)";
   }, true);
 })();
