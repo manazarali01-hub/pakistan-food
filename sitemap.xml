@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://manazarali01-hub.github.io/pakistan-food/</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://manazarali01-hub.github.io/pakistan-food/image-credits.html</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/chicken-biryani.html</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/chicken-karahi.html</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/beef-nihari.html</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/image-credits.html</loc><lastmod>2026-09-13</lastmod></url>
 </urlset>
