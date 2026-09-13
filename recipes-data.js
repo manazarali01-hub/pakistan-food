@@ -70,6 +70,7 @@ window.PAKISTAN_FOOD_RECIPES = [
   function finalFallbackFor(img) {
     const alt = (img.alt || "").toLowerCase();
 
+    if (alt.includes("sarson") || alt.includes("saag")) return "https://commons.wikimedia.org/wiki/Special:FilePath/Sarson-Ka-Saag.jpg";
     if (alt.includes("paratha")) return "assets/aloo-paratha.webp";
     if (alt.includes("biryani")) return "assets/chicken-biryani.webp";
     if (alt.includes("pulao") || alt.includes("rice")) return "assets/beef-pulao.webp";
@@ -77,7 +78,7 @@ window.PAKISTAN_FOOD_RECIPES = [
     if (alt.includes("kabab") || alt.includes("kebab")) return "assets/chapli-kebab.webp";
     if (alt.includes("samosa") || alt.includes("pakora") || alt.includes("chaat") || alt.includes("pizza")) return "assets/samosa.webp";
     if (alt.includes("nihari") || alt.includes("beef") || alt.includes("mutton") || alt.includes("gosht") || alt.includes("keema")) return "assets/nihari.webp";
-    if (alt.includes("saag") || alt.includes("chana") || alt.includes("vegetable") || alt.includes("palak")) return "assets/daal-chawal.webp";
+    if (alt.includes("chana") || alt.includes("vegetable") || alt.includes("palak")) return "assets/daal-chawal.webp";
     if (alt.includes("kheer") || alt.includes("halwa") || alt.includes("jalebi") || alt.includes("gulab") || alt.includes("ras malai")) return "assets/gulab-jamun.webp";
     if (alt.includes("chai") || alt.includes("lassi") || alt.includes("sharbat") || alt.includes("falooda") || alt.includes("milk")) return "assets/kheer.webp";
 
