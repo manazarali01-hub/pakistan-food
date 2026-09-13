@@ -1,10 +1,10 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://manazarali01-hub.github.io/pakistan-food/</loc><lastmod>2026-09-13</lastmod></url>
   <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/chicken-biryani.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/chicken-karahi.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/chicken-handi.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/beef-nihari.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/image-credits.html</loc><lastmod>2026-09-13</lastmod></url>
+{% for recipe_pair in site.data.recipes %}  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html</loc><lastmod>2026-09-13</lastmod></url>
+{% endfor %}  <url><loc>https://manazarali01-hub.github.io/pakistan-food/image-credits.html</loc><lastmod>2026-09-13</lastmod></url>
 </urlset>
