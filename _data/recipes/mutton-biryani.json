@@ -1,0 +1,32 @@
+{
+  "id": 55,
+  "name": "Mutton Biryani",
+  "category": "Rice",
+  "time": "100 min",
+  "rating": "4.9",
+  "serves": 6,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mutton_Biryani.jpg?width=900",
+  "description": "Fragrant basmati rice layered with tender spiced mutton, yogurt, tomatoes, fried onions, mint and whole spices.",
+  "ingredients": [
+    "1 kg mutton, bone-in pieces",
+    "4 cups basmati rice",
+    "1 cup plain yogurt",
+    "3 onions, thinly sliced",
+    "3 tomatoes, chopped",
+    "2 tbsp ginger-garlic paste",
+    "3 tbsp biryani masala",
+    "Fresh mint and coriander",
+    "4 green chilies",
+    "1 lemon",
+    "Whole garam masala",
+    "Salt and cooking oil"
+  ],
+  "method": [
+    "Wash and soak the basmati rice for 30 minutes.",
+    "Brown the onions, then cook mutton with ginger-garlic paste, tomatoes, yogurt and biryani spices until tender.",
+    "Boil the rice with salt and whole spices until about three-quarters cooked, then drain.",
+    "Layer rice and mutton masala with mint, coriander, green chilies and lemon.",
+    "Cover tightly and cook on low heat for 20 minutes to finish on dum.",
+    "Rest briefly, fluff gently and serve with raita and salad."
+  ]
+}
