@@ -20,8 +20,7 @@ window.PAKISTAN_FOOD_RECIPES = [
       "commons.wikimedia.org/wiki/Special:FilePath/"
     );
 
-    /* The original JPG assets are visually better than the later heavily
-       compressed WebP copies. Prefer JPG for local recipe photography. */
+    /* Prefer the original JPG photography for local assets. */
     if (/^assets\/.*\.webp(?:\?|$)/i.test(image)) {
       image = image.replace(/\.webp(?=\?|$)/i, ".jpg");
     }
@@ -58,6 +57,22 @@ window.PAKISTAN_FOOD_RECIPES = [
   const results = document.getElementById("recipeResults");
   if (results) results.textContent = `Showing all ${recipes.length} recipes`;
 
+  function finalFallbackFor(img) {
+    const alt = (img.alt || "").toLowerCase();
+
+    if (alt.includes("paratha")) return "assets/aloo-paratha.jpg";
+    if (alt.includes("biryani")) return "assets/chicken-biryani.jpg";
+    if (alt.includes("pulao") || alt.includes("rice")) return "assets/beef-pulao.jpg";
+    if (alt.includes("karahi") || alt.includes("chicken") || alt.includes("jalfrezi") || alt.includes("qorma") || alt.includes("handi")) return "assets/chicken-karahi.jpg";
+    if (alt.includes("kabab") || alt.includes("kebab") || alt.includes("burger") || alt.includes("shawarma")) return "assets/chapli-kebab.jpg";
+    if (alt.includes("samosa") || alt.includes("pakora") || alt.includes("chaat") || alt.includes("pizza")) return "assets/samosa.jpg";
+    if (alt.includes("nihari") || alt.includes("beef") || alt.includes("mutton") || alt.includes("gosht") || alt.includes("keema")) return "assets/nihari.jpg";
+    if (alt.includes("kheer") || alt.includes("halwa") || alt.includes("jalebi") || alt.includes("gulab") || alt.includes("ras malai")) return "assets/gulab-jamun.jpg";
+    if (alt.includes("chai") || alt.includes("lassi") || alt.includes("sharbat") || alt.includes("falooda") || alt.includes("milk")) return "assets/kheer.jpg";
+
+    return "assets/chicken-biryani.jpg";
+  }
+
   document.addEventListener("error", (event) => {
     const img = event.target;
     if (!(img instanceof HTMLImageElement)) return;
@@ -66,19 +81,30 @@ window.PAKISTAN_FOOD_RECIPES = [
     const current = img.currentSrc || img.src || "";
     const attempt = Number(img.dataset.fallbackAttempt || "0");
 
+    /* Local JPG failed: try its WebP copy. */
     if (attempt === 0 && /\.jpg(?:\?|$)/i.test(current) && current.includes("/assets/")) {
       img.dataset.fallbackAttempt = "1";
       img.src = current.replace(/\.jpg(?=\?|$)/i, ".webp");
       return;
     }
 
+    /* Wikimedia thumbnail/redirect failed: retry the same file without query params. */
     if (attempt <= 1 && current.includes("commons.wikimedia.org/wiki/Special:FilePath/") && current.includes("?")) {
       img.dataset.fallbackAttempt = "2";
       img.src = current.split("?")[0];
       return;
     }
 
-    img.style.objectFit = "contain";
+    /* Never leave an empty image card. If the real linked image is unavailable,
+       show the closest existing high-quality local food photo instead. */
+    if (attempt < 3) {
+      img.dataset.fallbackAttempt = "3";
+      img.src = finalFallbackFor(img);
+      img.style.objectFit = "cover";
+      return;
+    }
+
+    img.style.objectFit = "cover";
     img.style.background = "var(--surface-2)";
   }, true);
 })();
