@@ -51,8 +51,25 @@ window.PAKISTAN_FOOD_RECIPES = [
     "keema matar": "assets/keema-matar.webp",
     "mango lassi": "assets/mango-lassi.webp",
     "matar pulao": "assets/matar-pulao.webp",
-    "shami kabab": "assets/shami-kabab.webp",
-    "zinger burger": "assets/zinger-burger.webp"
+    "shami kabab": "assets/shami-kabab.webp"
+  };
+
+  const jpgFallbacks = {
+    "chicken biryani": "assets/chicken-biryani.jpg",
+    "chicken pulao": "assets/chicken-pulao.jpg",
+    "chicken karahi": "assets/chicken-karahi.jpg",
+    "chicken handi": "assets/chicken-handi.jpg",
+    "beef nihari": "assets/nihari.jpg",
+    "seekh kabab": "assets/seekh-kebab.jpg",
+    "chapli kabab": "assets/chapli-kebab.jpg",
+    "pakistani samosa": "assets/samosa.jpg",
+    "pakora": "assets/pakora.jpg",
+    "aloo paratha": "assets/aloo-paratha.jpg",
+    "halwa puri": "assets/halwa-puri.jpg",
+    "rice kheer": "assets/kheer.jpg",
+    "gulab jamun": "assets/gulab-jamun.jpg",
+    "daal chawal": "assets/daal-chawal.jpg",
+    "beef pulao": "assets/beef-pulao.jpg"
   };
 
   recipes.forEach((recipe) => {
@@ -76,8 +93,8 @@ window.PAKISTAN_FOOD_RECIPES = [
   });
 
   const categories = [
-    { name: "Drinks", icon: "🥤", subtitle: "Lassi, Chai & Sharbat" },
-    { name: "Vegetarian", icon: "🥬", subtitle: "Saag, Chana & Vegetables" }
+    { name: "Drinks", slug: "drinks", icon: "🥤", subtitle: "Lassi, Chai & Sharbat" },
+    { name: "Vegetarian", slug: "vegetarian", icon: "🥬", subtitle: "Saag, Chana & Vegetables" }
   ];
 
   const dropdown = document.querySelector(".dropdown-menu");
@@ -85,9 +102,11 @@ window.PAKISTAN_FOOD_RECIPES = [
   const filterButtons = document.querySelector(".filter-buttons");
   const footerCategories = document.querySelector(".footer-links:nth-of-type(3)");
 
-  categories.forEach(({ name, icon, subtitle }) => {
-    if (dropdown && !dropdown.querySelector(`[data-category-link="${name}"]`)) {
-      dropdown.insertAdjacentHTML("beforeend", `<a href="recipes/${name.toLowerCase()}/" data-category-link="${name}">${icon} ${name}${name === "Vegetarian" ? " Recipes" : ""}</a>`);
+  categories.forEach(({ name, slug, icon, subtitle }) => {
+    const href = `recipes/${slug}/`;
+
+    if (dropdown && !dropdown.querySelector(`a[href="${href}"]`)) {
+      dropdown.insertAdjacentHTML("beforeend", `<a href="${href}">${icon} ${name}${name === "Vegetarian" ? " Recipes" : ""}</a>`);
     }
     if (categoryGrid && !categoryGrid.querySelector(`[data-category="${name}"]`)) {
       categoryGrid.insertAdjacentHTML("beforeend", `<button type="button" class="category-box" data-category="${name}"><div>${icon}</div><h3>${name}</h3><p>${subtitle}</p></button>`);
@@ -95,8 +114,8 @@ window.PAKISTAN_FOOD_RECIPES = [
     if (filterButtons && !filterButtons.querySelector(`[data-filter="${name}"]`)) {
       filterButtons.insertAdjacentHTML("beforeend", `<button type="button" class="filter-btn" data-filter="${name}">${name}</button>`);
     }
-    if (footerCategories && !footerCategories.querySelector(`[data-category-link="${name}"]`)) {
-      footerCategories.insertAdjacentHTML("beforeend", `<a href="recipes/${name.toLowerCase()}/" data-category-link="${name}">${name}${name === "Vegetarian" ? " Recipes" : ""}</a>`);
+    if (footerCategories && !footerCategories.querySelector(`a[href="${href}"]`)) {
+      footerCategories.insertAdjacentHTML("beforeend", `<a href="${href}">${name}${name === "Vegetarian" ? " Recipes" : ""}</a>`);
     }
   });
 
@@ -120,9 +139,9 @@ window.PAKISTAN_FOOD_RECIPES = [
       .trim()
       .toLowerCase();
 
-    if (attempt === 0 && /\.webp(?:\?|$)/i.test(current) && current.includes("/assets/")) {
+    if (attempt === 0 && jpgFallbacks[label] && !current.includes(jpgFallbacks[label])) {
       img.dataset.fallbackAttempt = "1";
-      img.src = current.replace(/\.webp(?=\?|$)/i, ".jpg");
+      img.src = jpgFallbacks[label];
       return;
     }
 
