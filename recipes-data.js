@@ -6,8 +6,20 @@ window.PAKISTAN_FOOD_RECIPES = [
 {% endfor %}
 ];
 
-/* Keep the Drinks controls in sync with the CMS recipe category. */
 (() => {
+  const recipes = Array.isArray(window.PAKISTAN_FOOD_RECIPES)
+    ? window.PAKISTAN_FOOD_RECIPES
+    : [];
+
+  recipes.forEach((recipe) => {
+    if (!recipe || !recipe.image) return;
+    const image = String(recipe.image).trim();
+    recipe.image = image.replace(
+      "commons.wikimedia.org/wiki/Special:Redirect/file/",
+      "commons.wikimedia.org/wiki/Special:FilePath/"
+    );
+  });
+
   const dropdown = document.querySelector(".dropdown-menu");
   if (dropdown && !dropdown.querySelector('[data-category-link="Drinks"]')) {
     dropdown.insertAdjacentHTML("beforeend", '<a href="#recipes" data-category-link="Drinks">🥤 Drinks</a>');
@@ -30,20 +42,34 @@ window.PAKISTAN_FOOD_RECIPES = [
 
   const stats = document.querySelectorAll(".hero-stats strong");
   if (stats.length >= 2) {
-    stats[0].textContent = `${window.PAKISTAN_FOOD_RECIPES.length}+`;
+    stats[0].textContent = `${recipes.length}+`;
     stats[1].textContent = "8";
   }
 
   const results = document.getElementById("recipeResults");
-  if (results) results.textContent = `Showing all ${window.PAKISTAN_FOOD_RECIPES.length} recipes`;
-})();
+  if (results) results.textContent = `Showing all ${recipes.length} recipes`;
 
-/* Never replace a failed recipe photo with another recipe's photo.
-   This prevents misleading duplicate images. */
-document.addEventListener("error", (event) => {
-  const img = event.target;
-  if (!(img instanceof HTMLImageElement) || !img.closest(".recipe-card, .modal")) return;
-  if (img.dataset.imageErrorHandled === "1") return;
-  img.dataset.imageErrorHandled = "1";
-  img.style.display = "none";
-}, true);
+  document.addEventListener("error", (event) => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    if (!img.closest(".recipe-card, .modal")) return;
+
+    const current = img.currentSrc || img.src || "";
+    const attempt = Number(img.dataset.fallbackAttempt || "0");
+
+    if (attempt === 0 && /\.webp(?:\?|$)/i.test(current)) {
+      img.dataset.fallbackAttempt = "1";
+      img.src = current.replace(/\.webp(?=\?|$)/i, ".jpg");
+      return;
+    }
+
+    if (attempt <= 1 && current.includes("commons.wikimedia.org/wiki/Special:FilePath/") && current.includes("?")) {
+      img.dataset.fallbackAttempt = "2";
+      img.src = current.split("?")[0];
+      return;
+    }
+
+    img.style.objectFit = "contain";
+    img.style.background = "var(--surface-2)";
+  }, true);
+})();
