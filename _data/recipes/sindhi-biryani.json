@@ -1,0 +1,32 @@
+{
+  "id": 49,
+  "name": "Sindhi Biryani",
+  "category": "Rice",
+  "time": "75 min",
+  "rating": "4.9",
+  "serves": 6,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sindhi_Biryani.JPG?width=900",
+  "description": "A bold Sindhi-style biryani layered with basmati rice, spiced chicken, potatoes, tomatoes, yogurt and fragrant whole spices.",
+  "ingredients": [
+    "1 kg chicken, biryani cut",
+    "4 cups basmati rice",
+    "3 medium potatoes, halved",
+    "4 tomatoes, chopped",
+    "2 large onions, sliced",
+    "1 cup plain yogurt",
+    "3 tbsp Sindhi biryani masala",
+    "2 tbsp ginger-garlic paste",
+    "4 green chilies",
+    "Fresh mint and coriander",
+    "1 lemon",
+    "Salt and cooking oil"
+  ],
+  "method": [
+    "Wash and soak the basmati rice for 30 minutes.",
+    "Fry the onions until golden, then add chicken, ginger-garlic paste and biryani masala.",
+    "Add tomatoes, yogurt and potatoes and cook until the chicken is tender and the masala thickens.",
+    "Boil the soaked rice in salted water until about three-quarters cooked, then drain.",
+    "Layer rice over the chicken masala with mint, coriander, green chilies and lemon.",
+    "Cover tightly and cook on low heat for 15 to 20 minutes before gently mixing and serving."
+  ]
+}
