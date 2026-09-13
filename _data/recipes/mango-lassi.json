@@ -5,7 +5,7 @@
   "time": "10 min",
   "rating": "4.9",
   "serves": 2,
-  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mango_lassi.jpg?width=800",
+  "image": "assets/mango-lassi.webp",
   "description": "A thick, refreshing mango and yogurt drink with a naturally fruity Pakistani summer flavour.",
   "ingredients": ["1 cup ripe mango pieces", "1.5 cups chilled yogurt", "0.5 cup chilled milk", "2 tbsp sugar or to taste", "4 ice cubes"],
   "method": ["Place mango and yogurt in a blender.", "Add milk and sugar.", "Blend until creamy.", "Add ice and blend again.", "Serve immediately."]

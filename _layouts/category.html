@@ -1,1 +1,152 @@
-{% assign category_name = page.category_name %}{% assign category_slug = page.category_slug %}{% assign category_count = 0 %}{% for recipe_pair in site.data.recipes %}{% assign r = recipe_pair[1] %}{% if r.category == category_name %}{% assign category_count = category_count | plus: 1 %}{% endif %}{% endfor %}{% assign meta_description = page.meta_description | default: 'Explore authentic Pakistani recipes with ingredients and easy step-by-step cooking methods.' %}{% assign intro = page.intro | default: 'Discover authentic Pakistani recipes with simple ingredients and clear cooking instructions.' %}<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ category_name }} Recipes | Pakistani {{ category_name }} Recipes | Pakistan Food</title><meta name="description" content="{{ meta_description | escape }}"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1"><link rel="canonical" href="https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/"><meta property="og:type" content="website"><meta property="og:title" content="Pakistani {{ category_name }} Recipes | Pakistan Food"><meta property="og:description" content="{{ meta_description | escape }}"><meta property="og:url" content="https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/"><meta property="og:site_name" content="Pakistan Food"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Pakistani {{ category_name }} Recipes | Pakistan Food"><meta name="twitter:description" content="{{ meta_description | escape }}"><link rel="stylesheet" href="../../style.css"><style>.cat{max-width:1050px;margin:90px auto 50px;padding:24px}.cat h1{font-size:clamp(2rem,5vw,3.3rem)}.cat p{line-height:1.8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:28px 0}.card{display:block;padding:18px;border-radius:14px;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.08);text-decoration:none;color:#222}.card strong{display:block;font-size:1.08rem;margin-bottom:6px}.card span{font-size:.92rem;opacity:.75}.category-nav{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0}.category-nav a{padding:7px 11px;border-radius:999px;background:#f5f5f5;color:#222;text-decoration:none;font-size:.9rem}.cat-guide{margin:30px 0;padding:20px;border-radius:14px;background:#f8f8f8}.cat-guide h2{margin-top:0}.cat-guide ul{padding-left:20px}.cat-guide li{margin:8px 0;line-height:1.6}</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/#collection","name":"Pakistani {{ category_name }} Recipes","url":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/","description":{{ meta_description | jsonify }},"isPartOf":{"@id":"https://manazarali01-hub.github.io/pakistan-food/#website"},"mainEntity":{"@id":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/#list"}},{"@type":"ItemList","@id":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/#list","name":"Pakistani {{ category_name }} Recipes","numberOfItems":{{ category_count }},"itemListElement":[{% assign pos = 0 %}{% for recipe_pair in site.data.recipes %}{% assign r = recipe_pair[1] %}{% if r.category == category_name %}{% assign pos = pos | plus: 1 %}{"@type":"ListItem","position":{{ pos }},"name":{{ r.name | jsonify }},"url":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html"}{% assign remaining = category_count | minus: pos %}{% if remaining > 0 %},{% endif %}{% endif %}{% endfor %}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://manazarali01-hub.github.io/pakistan-food/"},{"@type":"ListItem","position":2,"name":"Recipes","item":"https://manazarali01-hub.github.io/pakistan-food/recipes/"},{"@type":"ListItem","position":3,"name":"{{ category_name }} Recipes","item":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/"}]}]}</script></head><body><main class="cat"><nav aria-label="Breadcrumb"><a href="../../index.html">Home</a> › <a href="../index.html">Recipes</a> › {{ category_name }} Recipes</nav><h1>Pakistani {{ category_name }} Recipes</h1><p>{{ intro }}</p><p><strong>{{ category_count }} recipes</strong> are currently available in this category. Open any recipe for its ingredient list, cooking time and step-by-step method.</p><div class="grid">{% for recipe_pair in site.data.recipes %}{% assign r = recipe_pair[1] %}{% if r.category == category_name %}<a class="card" href="../{{ recipe_pair[0] }}.html"><strong>{{ r.name }} Recipe</strong><span>{{ r.time }}{% if r.serves %} · Serves {{ r.serves }}{% endif %}</span></a>{% endif %}{% endfor %}</div><section class="cat-guide"><h2>Cooking Pakistani {{ category_name }} Recipes</h2><p>These recipes are designed for home cooking with familiar ingredients and straightforward methods. Read the complete recipe before starting, prepare ingredients in advance, and adjust chilli, salt and cooking time according to your taste and equipment.</p><ul><li>Choose a recipe above to see the full ingredients and method.</li><li>Use fresh ingredients and measure spices before cooking.</li><li>Follow cooking times as a guide and check doneness before serving.</li><li>Explore related categories below for more Pakistani meal ideas.</li></ul></section><nav class="category-nav" aria-label="Other recipe categories"><a href="../rice/">Rice</a><a href="../chicken/">Chicken</a><a href="../beef/">Beef</a><a href="../bbq/">BBQ</a><a href="../snacks/">Snacks</a><a href="../breakfast/">Breakfast</a><a href="../desserts/">Desserts</a><a href="../drinks/">Drinks</a><a href="../vegetarian/">Vegetarian</a></nav><p><a href="../index.html">← Browse all Pakistani recipes</a></p></main></body></html>
+{% assign category_name = page.category_name %}
+{% assign category_slug = page.category_slug %}
+{% assign category_count = 0 %}
+{% for recipe_pair in site.data.recipes %}
+  {% assign r = recipe_pair[1] %}
+  {% if r.category == category_name %}
+    {% assign category_count = category_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+{% case category_slug %}
+  {% when 'rice' %}{% assign category_image = 'assets/chicken-biryani.webp' %}
+  {% when 'chicken' %}{% assign category_image = 'assets/chicken-karahi.webp' %}
+  {% when 'beef' %}{% assign category_image = 'assets/nihari.webp' %}
+  {% when 'bbq' %}{% assign category_image = 'assets/chapli-kebab.webp' %}
+  {% when 'snacks' %}{% assign category_image = 'assets/samosa.webp' %}
+  {% when 'breakfast' %}{% assign category_image = 'assets/aloo-paratha.webp' %}
+  {% when 'desserts' %}{% assign category_image = 'assets/kheer.webp' %}
+  {% when 'drinks' %}{% assign category_image = 'assets/mango-lassi.webp' %}
+  {% when 'vegetarian' %}{% assign category_image = 'assets/chana-masala.webp' %}
+  {% else %}{% assign category_image = 'assets/chicken-biryani.webp' %}
+{% endcase %}
+{% assign category_seo_image = 'https://manazarali01-hub.github.io/pakistan-food/' | append: category_image %}
+{% assign meta_description = page.meta_description | default: 'Explore authentic Pakistani recipes with ingredients and easy step-by-step cooking methods.' %}
+{% assign intro = page.intro | default: 'Discover authentic Pakistani recipes with simple ingredients and clear cooking instructions.' %}
+{% capture canonical_url %}https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/{% endcapture %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ category_name }} Recipes | Authentic Pakistani Food</title>
+  <meta name="description" content="{{ meta_description | escape }}">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="theme-color" content="#b21f2d">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍛</text></svg>">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_PK">
+  <meta property="og:title" content="Pakistani {{ category_name }} Recipes | Pakistan Food">
+  <meta property="og:description" content="{{ meta_description | escape }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ category_seo_image }}">
+  <meta property="og:image:alt" content="Pakistani {{ category_name | downcase }} recipes">
+  <meta property="og:site_name" content="Pakistan Food">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pakistani {{ category_name }} Recipes | Pakistan Food">
+  <meta name="twitter:description" content="{{ meta_description | escape }}">
+  <meta name="twitter:image" content="{{ category_seo_image }}">
+  <meta name="twitter:image:alt" content="Pakistani {{ category_name | downcase }} recipes">
+  <link rel="stylesheet" href="../../style.css?v=20260913-seo9">
+  <style>
+    .cat-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.cat-site-nav{max-width:1100px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.cat-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.cat-site-links{display:flex;flex-wrap:wrap;gap:14px}.cat-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.cat{max-width:1050px;margin:36px auto 50px;padding:24px}.cat h1{font-size:clamp(2rem,5vw,3.3rem)}.cat p{line-height:1.8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:28px 0}.card{display:block;padding:18px;border-radius:14px;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.08);text-decoration:none;color:#222}.card strong{display:block;font-size:1.08rem;margin-bottom:7px}.card span{display:block;font-size:.92rem;opacity:.78;line-height:1.55}.card .card-description{margin-top:9px}.category-nav{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0}.category-nav a{padding:7px 11px;border-radius:999px;background:#f5f5f5;color:#222;text-decoration:none;font-size:.9rem}.cat-guide{margin:30px 0;padding:20px;border-radius:14px;background:#f8f8f8}.cat-guide h2{margin-top:0}.cat-guide ul{padding-left:20px}.cat-guide li{margin:8px 0;line-height:1.6}.cat-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.cat-site-footer a{color:#fff}@media(max-width:620px){.cat-site-nav{align-items:flex-start;flex-direction:column}.cat-site-links{gap:10px}.cat{margin-top:16px;padding:18px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/#organization",
+        "name": "Pakistan Food",
+        "url": "https://manazarali01-hub.github.io/pakistan-food/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/#website",
+        "url": "https://manazarali01-hub.github.io/pakistan-food/",
+        "name": "Pakistan Food",
+        "publisher": {"@id":"https://manazarali01-hub.github.io/pakistan-food/#organization"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "{{ canonical_url }}#webpage",
+        "name": "Pakistani {{ category_name }} Recipes",
+        "url": "{{ canonical_url }}",
+        "description": {{ meta_description | jsonify }},
+        "isPartOf": {"@id":"https://manazarali01-hub.github.io/pakistan-food/#website"},
+        "mainEntity": {"@id":"{{ canonical_url }}#list"},
+        "breadcrumb": {"@id":"{{ canonical_url }}#breadcrumb"},
+        "primaryImageOfPage": {"@type":"ImageObject","url":{{ category_seo_image | jsonify }}},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "{{ canonical_url }}#list",
+        "name": "Pakistani {{ category_name }} Recipes",
+        "numberOfItems": {{ category_count }},
+        "itemListElement": [
+          {% assign pos = 0 %}
+          {% for recipe_pair in site.data.recipes %}
+            {% assign r = recipe_pair[1] %}
+            {% if r.category == category_name %}
+              {% assign pos = pos | plus: 1 %}
+              {"@type":"ListItem","position":{{ pos }},"name":{{ r.name | jsonify }},"url":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html"}{% assign remaining = category_count | minus: pos %}{% if remaining > 0 %},{% endif %}
+            {% endif %}
+          {% endfor %}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ canonical_url }}#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://manazarali01-hub.github.io/pakistan-food/"},
+          {"@type":"ListItem","position":2,"name":"Recipes","item":"https://manazarali01-hub.github.io/pakistan-food/recipes/"},
+          {"@type":"ListItem","position":3,"name":"{{ category_name }} Recipes","item":"{{ canonical_url }}"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="cat-site-header">
+    <nav class="cat-site-nav" aria-label="Main navigation">
+      <a class="cat-site-brand" href="../../index.html">🍛 Pakistan Food</a>
+      <div class="cat-site-links"><a href="../index.html">All Recipes</a><a href="../../index.html#about">About</a><a href="../../index.html#contact">Contact</a></div>
+    </nav>
+  </header>
+  <main class="cat">
+    <nav aria-label="Breadcrumb"><a href="../../index.html">Home</a> › <a href="../index.html">Recipes</a> › {{ category_name }} Recipes</nav>
+    <h1>Pakistani {{ category_name }} Recipes</h1>
+    <p>{{ intro }}</p>
+    <p><strong>{{ category_count }} recipes</strong> are currently available in this category. Open any recipe for its ingredient list, cooking time and step-by-step method.</p>
+    <div class="grid">
+      {% for recipe_pair in site.data.recipes %}
+        {% assign r = recipe_pair[1] %}
+        {% if r.category == category_name %}
+        <a class="card" href="../{{ recipe_pair[0] }}.html">
+          <strong>{{ r.name }} Recipe</strong>
+          <span>{{ r.time }}{% if r.serves %} · Serves {{ r.serves }}{% endif %}</span>
+          <span class="card-description">{{ r.description }}</span>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <section class="cat-guide">
+      <h2>Cooking Pakistani {{ category_name }} Recipes</h2>
+      <p>These recipes are designed for home cooking with familiar ingredients and straightforward methods. Read the complete recipe before starting, prepare ingredients in advance, and adjust chilli, salt and cooking time according to your taste and equipment.</p>
+      <ul>
+        <li>Choose a recipe above to see the full ingredients and method.</li>
+        <li>Use fresh ingredients and measure spices before cooking.</li>
+        <li>Follow cooking times as a guide and check doneness before serving.</li>
+        <li>Explore related categories below for more Pakistani meal ideas.</li>
+      </ul>
+    </section>
+    <nav class="category-nav" aria-label="Other recipe categories"><a href="../rice/">Rice</a><a href="../chicken/">Chicken</a><a href="../beef/">Beef</a><a href="../bbq/">BBQ</a><a href="../snacks/">Snacks</a><a href="../breakfast/">Breakfast</a><a href="../desserts/">Desserts</a><a href="../drinks/">Drinks</a><a href="../vegetarian/">Vegetarian</a></nav>
+    <p><a href="../index.html">← Browse all Pakistani recipes</a></p>
+  </main>
+  <footer class="cat-site-footer"><p>© 2026 Pakistan Food · <a href="../../image-credits.html">Image credits</a></p></footer>
+</body>
+</html>

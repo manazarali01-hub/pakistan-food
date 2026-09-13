@@ -36,7 +36,10 @@
         return list.find((recipe, index) => recipeId(recipe, index) === id) || null;
     }
 
-    function recipeUrl() {
+    function recipeUrl(recipe) {
+        if (recipe && recipe.slug) {
+            return new URL(`recipes/${encodeURIComponent(recipe.slug)}.html`, document.baseURI).href;
+        }
         return window.location.href;
     }
 
@@ -72,29 +75,31 @@
             }
 
             if (event.target.closest("[data-recipe-copy]")) {
+                const permanentUrl = recipeUrl(recipe);
                 try {
-                    await navigator.clipboard.writeText(recipeUrl());
+                    await navigator.clipboard.writeText(permanentUrl);
                     if (typeof window.showToast === "function") window.showToast("Recipe link copied ✓");
                 } catch {
-                    window.prompt("Copy this recipe link:", recipeUrl());
+                    window.prompt("Copy this recipe link:", permanentUrl);
                 }
                 return;
             }
 
             if (event.target.closest("[data-recipe-share]")) {
+                const permanentUrl = recipeUrl(recipe);
                 const data = {
                     title: `${recipe.name} | Pakistan Food`,
                     text: `Try this ${recipe.name} recipe from Pakistan Food.`,
-                    url: recipeUrl()
+                    url: permanentUrl
                 };
                 if (navigator.share) {
                     try { await navigator.share(data); } catch (_) {}
                 } else {
                     try {
-                        await navigator.clipboard.writeText(recipeUrl());
+                        await navigator.clipboard.writeText(permanentUrl);
                         if (typeof window.showToast === "function") window.showToast("Recipe link copied for sharing ✓");
                     } catch {
-                        window.prompt("Copy this recipe link:", recipeUrl());
+                        window.prompt("Copy this recipe link:", permanentUrl);
                     }
                 }
             }

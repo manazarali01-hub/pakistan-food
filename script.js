@@ -453,9 +453,24 @@ function stableRecipeId(recipe, index) {
     return Math.abs(hash) + 1000;
 }
 
+function stableRecipeSlug(recipe, index) {
+    const slug = String(recipe.slug || recipe.name || `recipe-${index}`)
+        .normalize("NFKD")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+
+    return slug || `recipe-${stableRecipeId(recipe, index)}`;
+}
+
+function recipePagePath(recipe) {
+    return `recipes/${encodeURIComponent(recipe.slug)}.html`;
+}
+
 const recipes = (cmsRecipes.length ? cmsRecipes : defaultRecipes).map((recipe, index) => ({
     ...recipe,
     id: stableRecipeId(recipe, index),
+    slug: stableRecipeSlug(recipe, index),
     serves: Number(recipe.serves) || 4,
     image: String(recipe.image || "assets/chicken-biryani.webp").replace(/^\//, ""),
     ingredients: Array.isArray(recipe.ingredients) ? recipe.ingredients : [],
@@ -620,7 +635,7 @@ function renderRecipes() {
 
                 </div>
 
-                <h3>${recipe.name}</h3>
+                <h3><a class="recipe-title-link" href="${recipePagePath(recipe)}">${recipe.name}</a></h3>
 
                 <p>
                     ${recipe.description}
@@ -633,8 +648,12 @@ function renderRecipes() {
                         class="view-recipe"
                         data-recipe="${recipe.id}"
                     >
-                        View Recipe →
+                        Quick View →
                     </button>
+
+                    <a class="full-recipe" href="${recipePagePath(recipe)}">
+                        Full Recipe ↗
+                    </a>
 
                 </div>
 
@@ -860,6 +879,10 @@ function openRecipe(id) {
             </span>
 
             <h2 id="modalRecipeTitle">${recipe.name}</h2>
+
+            <a class="modal-full-recipe" href="${recipePagePath(recipe)}">
+                Open the permanent recipe page →
+            </a>
 
             <p class="modal-description">
                 ${recipe.description}

@@ -4,11 +4,113 @@ layout: null
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pakistani Recipes | Easy Authentic Food Recipes | Pakistan Food</title>
-<meta name="description" content="Discover easy authentic Pakistani recipes including chicken biryani, karahi, nihari, pulao, BBQ, snacks, breakfast, desserts, drinks and vegetarian dishes with step-by-step methods.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1"><link rel="canonical" href="https://manazarali01-hub.github.io/pakistan-food/recipes/">
-<meta property="og:type" content="website"><meta property="og:title" content="Authentic Pakistani Recipes | Pakistan Food"><meta property="og:description" content="Explore traditional Pakistani recipes with ingredients and easy step-by-step cooking methods."><meta property="og:url" content="https://manazarali01-hub.github.io/pakistan-food/recipes/"><meta property="og:image" content="https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp"><meta property="og:image:alt" content="Authentic Pakistani chicken biryani"><meta property="og:site_name" content="Pakistan Food"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Authentic Pakistani Recipes | Pakistan Food"><meta name="twitter:description" content="Browse Pakistani biryani, karahi, BBQ, snacks, desserts, drinks and more."><meta name="twitter:image" content="https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp"><link rel="stylesheet" href="../style.css">
-<style>.hub{max-width:1100px;margin:90px auto 50px;padding:24px}.hub h1{font-size:clamp(2rem,5vw,3.4rem)}.hub h2{margin-top:32px}.hub p{line-height:1.8}.hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:30px}.hub-card{display:block;padding:18px;border-radius:14px;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.08);text-decoration:none;color:#222}.hub-card strong{display:block;font-size:1.08rem;margin-bottom:5px}.hub-card span{font-size:.92rem;opacity:.75}.hub-categories,.popular-links{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}.hub-categories a,.popular-links a{padding:8px 12px;border-radius:999px;background:#f5f5f5;color:#222;text-decoration:none;font-size:.9rem;font-weight:600}</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://manazarali01-hub.github.io/pakistan-food/recipes/#collection","name":"Authentic Pakistani Recipes","url":"https://manazarali01-hub.github.io/pakistan-food/recipes/","description":"Easy authentic Pakistani recipe collection with ingredients and step-by-step cooking methods","isPartOf":{"@id":"https://manazarali01-hub.github.io/pakistan-food/#website"}},{"@type":"ItemList","name":"Pakistani Recipes","numberOfItems":{{ site.data.recipes | size }},"itemListElement":[{% for recipe_pair in site.data.recipes %}{"@type":"ListItem","position":{{ forloop.index }},"name":{{ recipe_pair[1].name | jsonify }},"url":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html"}{% unless forloop.last %},{% endunless %}{% endfor %}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://manazarali01-hub.github.io/pakistan-food/"},{"@type":"ListItem","position":2,"name":"Recipes","item":"https://manazarali01-hub.github.io/pakistan-food/recipes/"}]}]}</script>
-</head><body><main class="hub"><nav aria-label="Breadcrumb"><a href="../index.html">Pakistan Food home</a> › Recipes</nav><h1>Easy Authentic Pakistani Recipes</h1><p>Cook popular Pakistani food at home with clear ingredients and simple step-by-step methods. Browse biryani, karahi, nihari, pulao, BBQ, snacks, breakfast, desserts, drinks and vegetarian recipes inspired by everyday Pakistani cooking.</p><h2>Browse Pakistani Recipes by Category</h2><div class="hub-categories" aria-label="Recipe categories"><a href="rice/">Pakistani Rice Recipes</a><a href="chicken/">Pakistani Chicken Recipes</a><a href="beef/">Pakistani Beef Recipes</a><a href="bbq/">Pakistani BBQ Recipes</a><a href="snacks/">Pakistani Snack Recipes</a><a href="breakfast/">Pakistani Breakfast Recipes</a><a href="desserts/">Pakistani Dessert Recipes</a><a href="drinks/">Pakistani Drinks</a><a href="vegetarian/">Pakistani Vegetarian Recipes</a></div><h2>Popular Pakistani Recipes</h2><div class="popular-links"><a href="chicken-biryani.html">Chicken Biryani Recipe</a><a href="chicken-karahi.html">Chicken Karahi Recipe</a><a href="beef-nihari.html">Beef Nihari Recipe</a><a href="chicken-pulao.html">Chicken Pulao Recipe</a><a href="chapli-kabab.html">Chapli Kabab Recipe</a><a href="pakistani-samosa.html">Pakistani Samosa Recipe</a><a href="halwa-puri.html">Halwa Puri Recipe</a><a href="rice-kheer.html">Rice Kheer Recipe</a></div><h2>All Pakistani Recipes</h2><div class="hub-grid">{% for recipe_pair in site.data.recipes %}{% assign r = recipe_pair[1] %}<a class="hub-card" href="{{ recipe_pair[0] }}.html"><strong>{{ r.name }} Recipe</strong><span>{{ r.category }} · {{ r.time }}{% if r.serves %} · Serves {{ r.serves }}{% endif %}</span></a>{% endfor %}</div></main></body></html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pakistani Recipes | Easy Authentic Food | Pakistan Food</title>
+  <meta name="description" content="Explore {{ site.data.recipes | size }} authentic Pakistani recipes including biryani, karahi, BBQ, snacks, breakfast, desserts, drinks and vegetarian dishes with easy methods.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="theme-color" content="#b21f2d">
+  <link rel="canonical" href="https://manazarali01-hub.github.io/pakistan-food/recipes/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍛</text></svg>">
+  <link rel="preload" as="image" href="../assets/chicken-biryani.webp" type="image/webp">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_PK">
+  <meta property="og:title" content="Authentic Pakistani Recipes | Pakistan Food">
+  <meta property="og:description" content="Explore traditional Pakistani recipes with ingredients and easy step-by-step cooking methods.">
+  <meta property="og:url" content="https://manazarali01-hub.github.io/pakistan-food/recipes/">
+  <meta property="og:image" content="https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp">
+  <meta property="og:image:alt" content="Authentic Pakistani chicken biryani">
+  <meta property="og:site_name" content="Pakistan Food">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Authentic Pakistani Recipes | Pakistan Food">
+  <meta name="twitter:description" content="Browse Pakistani biryani, karahi, BBQ, snacks, desserts, drinks and more.">
+  <meta name="twitter:image" content="https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp">
+  <meta name="twitter:image:alt" content="Authentic Pakistani chicken biryani">
+  <link rel="stylesheet" href="../style.css?v=20260913-seo9">
+  <style>
+    .hub-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.hub-site-nav{max-width:1100px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.hub-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.hub-site-links{display:flex;flex-wrap:wrap;gap:14px}.hub-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.hub{max-width:1100px;margin:36px auto 50px;padding:24px}.hub h1{font-size:clamp(2rem,5vw,3.4rem)}.hub h2{margin-top:32px}.hub p{line-height:1.8}.hub-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:28px;align-items:center;margin:26px 0 34px}.hub-hero figure{margin:0}.hub-hero img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:18px}.hub-hero figcaption{font-size:.88rem;color:#666;text-align:center;margin-top:7px}.hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:30px}.hub-card{display:block;padding:18px;border-radius:14px;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.08);text-decoration:none;color:#222}.hub-card strong{display:block;font-size:1.08rem;margin-bottom:5px}.hub-card span{font-size:.92rem;opacity:.75}.hub-categories,.popular-links{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}.hub-categories a,.popular-links a{padding:8px 12px;border-radius:999px;background:#f5f5f5;color:#222;text-decoration:none;font-size:.9rem;font-weight:600}.hub-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.hub-site-footer a{color:#fff}@media(max-width:760px){.hub-hero{grid-template-columns:1fr}.hub-site-nav{align-items:flex-start;flex-direction:column}.hub-site-links{gap:10px}.hub{margin-top:16px;padding:18px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/#organization",
+        "name": "Pakistan Food",
+        "url": "https://manazarali01-hub.github.io/pakistan-food/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/#website",
+        "url": "https://manazarali01-hub.github.io/pakistan-food/",
+        "name": "Pakistan Food",
+        "publisher": {"@id":"https://manazarali01-hub.github.io/pakistan-food/#organization"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/recipes/#webpage",
+        "name": "Authentic Pakistani Recipes",
+        "url": "https://manazarali01-hub.github.io/pakistan-food/recipes/",
+        "description": "Easy authentic Pakistani recipe collection with ingredients and step-by-step cooking methods.",
+        "isPartOf": {"@id":"https://manazarali01-hub.github.io/pakistan-food/#website"},
+        "mainEntity": {"@id":"https://manazarali01-hub.github.io/pakistan-food/recipes/#list"},
+        "primaryImageOfPage": {"@type":"ImageObject","url":"https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp"},
+        "breadcrumb": {"@id":"https://manazarali01-hub.github.io/pakistan-food/recipes/#breadcrumb"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/recipes/#list",
+        "name": "Pakistani Recipes",
+        "numberOfItems": {{ site.data.recipes | size }},
+        "itemListElement": [
+          {% for recipe_pair in site.data.recipes %}
+          {"@type":"ListItem","position":{{ forloop.index }},"name":{{ recipe_pair[1].name | jsonify }},"url":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html"}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/recipes/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://manazarali01-hub.github.io/pakistan-food/"},
+          {"@type":"ListItem","position":2,"name":"Recipes","item":"https://manazarali01-hub.github.io/pakistan-food/recipes/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="hub-site-header">
+    <nav class="hub-site-nav" aria-label="Main navigation">
+      <a class="hub-site-brand" href="../index.html">🍛 Pakistan Food</a>
+      <div class="hub-site-links"><a href="../index.html">Home</a><a href="#categories">Categories</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div>
+    </nav>
+  </header>
+  <main class="hub">
+    <nav aria-label="Breadcrumb"><a href="../index.html">Pakistan Food home</a> › Recipes</nav>
+    <div class="hub-hero">
+      <div>
+        <h1>Easy Authentic Pakistani Recipes</h1>
+        <p>Cook popular Pakistani food at home with clear ingredients and simple step-by-step methods. Browse biryani, karahi, nihari, pulao, BBQ, snacks, breakfast, desserts, drinks and vegetarian recipes inspired by everyday Pakistani cooking.</p>
+      </div>
+      <figure><img src="../assets/chicken-biryani.webp" alt="Pakistani chicken biryani ready to serve" width="640" height="480" loading="eager" fetchpriority="high" decoding="async"><figcaption>Chicken biryani, one of Pakistan's best-known rice dishes.</figcaption></figure>
+    </div>
+    <h2 id="categories">Browse Pakistani Recipes by Category</h2>
+    <div class="hub-categories" aria-label="Recipe categories"><a href="rice/">Pakistani Rice Recipes</a><a href="chicken/">Pakistani Chicken Recipes</a><a href="beef/">Pakistani Beef Recipes</a><a href="bbq/">Pakistani BBQ Recipes</a><a href="snacks/">Pakistani Snack Recipes</a><a href="breakfast/">Pakistani Breakfast Recipes</a><a href="desserts/">Pakistani Dessert Recipes</a><a href="drinks/">Pakistani Drinks</a><a href="vegetarian/">Pakistani Vegetarian Recipes</a></div>
+    <h2>Popular Pakistani Recipes</h2>
+    <div class="popular-links"><a href="chicken-biryani.html">Chicken Biryani Recipe</a><a href="chicken-karahi.html">Chicken Karahi Recipe</a><a href="beef-nihari.html">Beef Nihari Recipe</a><a href="chicken-pulao.html">Chicken Pulao Recipe</a><a href="chapli-kabab.html">Chapli Kabab Recipe</a><a href="pakistani-samosa.html">Pakistani Samosa Recipe</a><a href="halwa-puri.html">Halwa Puri Recipe</a><a href="rice-kheer.html">Rice Kheer Recipe</a></div>
+    <h2>All Pakistani Recipes</h2>
+    <div class="hub-grid">
+      {% for recipe_pair in site.data.recipes %}
+      {% assign r = recipe_pair[1] %}
+      <a class="hub-card" href="{{ recipe_pair[0] }}.html"><strong>{{ r.name }} Recipe</strong><span>{{ r.category }} · {{ r.time }}{% if r.serves %} · Serves {{ r.serves }}{% endif %}</span></a>
+      {% endfor %}
+    </div>
+  </main>
+  <footer class="hub-site-footer"><p>© 2026 Pakistan Food · <a href="../image-credits.html">Image credits</a></p></footer>
+</body>
+</html>

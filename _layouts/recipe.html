@@ -1,6 +1,265 @@
 {% assign recipe = site.data.recipes[page.recipe_key] %}
-{% if recipe.image contains 'http://' or recipe.image contains 'https://' %}{% assign display_image = recipe.image %}{% assign seo_image = recipe.image %}{% else %}{% assign display_image = '../' | append: recipe.image %}{% assign seo_image = 'https://manazarali01-hub.github.io/pakistan-food/' | append: recipe.image %}{% endif %}
+{% capture canonical_url %}https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html{% endcapture %}
+{% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
+  {% assign display_image = recipe.image %}
+  {% assign seo_image = recipe.image | replace: 'Special:Redirect/file/', 'Special:FilePath/' %}
+{% else %}
+  {% assign display_image = '../' | append: recipe.image %}
+  {% assign seo_image = 'https://manazarali01-hub.github.io/pakistan-food/' | append: recipe.image %}
+{% endif %}
 {% assign category_slug = recipe.category | downcase %}
+{% assign time_number = recipe.time | split: ' ' | first %}
+{% capture total_duration %}PT{{ time_number }}{% if recipe.time contains 'hr' %}H{% else %}M{% endif %}{% endcapture %}
 {% assign fallback = '' %}
-{% case page.recipe_key %}{% when 'chicken-biryani' %}{% assign fallback = '../assets/chicken-biryani.webp' %}{% when 'chicken-pulao' %}{% assign fallback = '../assets/chicken-pulao.webp' %}{% when 'chicken-karahi' %}{% assign fallback = '../assets/chicken-karahi.webp' %}{% when 'chicken-handi' %}{% assign fallback = '../assets/chicken-handi.webp' %}{% when 'beef-nihari' %}{% assign fallback = '../assets/nihari.webp' %}{% when 'seekh-kabab' %}{% assign fallback = '../assets/seekh-kebab.webp' %}{% when 'chapli-kabab' %}{% assign fallback = '../assets/chapli-kebab.webp' %}{% when 'pakistani-samosa' %}{% assign fallback = '../assets/samosa.webp' %}{% when 'pakora' %}{% assign fallback = '../assets/pakora.webp' %}{% when 'aloo-paratha' %}{% assign fallback = '../assets/aloo-paratha.webp' %}{% when 'halwa-puri' %}{% assign fallback = '../assets/halwa-puri.webp' %}{% when 'rice-kheer' %}{% assign fallback = '../assets/kheer.webp' %}{% when 'gulab-jamun' %}{% assign fallback = '../assets/gulab-jamun.webp' %}{% when 'daal-chawal' %}{% assign fallback = '../assets/daal-chawal.webp' %}{% when 'beef-pulao' %}{% assign fallback = '../assets/beef-pulao.webp' %}{% when 'sarson-ka-saag' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarson-Ka-Saag.jpg' %}{% when 'zinger-burger' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crispy_chicken_burger.jpg?width=900' %}{% endcase %}
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ recipe.name }} Recipe | Authentic Pakistani Food</title><meta name="description" content="{{ recipe.description | strip_html | truncate: 145 | escape }}"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><link rel="canonical" href="https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html"><meta property="og:type" content="article"><meta property="og:title" content="{{ recipe.name }} Recipe | Pakistan Food"><meta property="og:description" content="{{ recipe.description | escape }}"><meta property="og:url" content="https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html"><meta property="og:image" content="{{ seo_image }}"><meta property="og:image:alt" content="{{ recipe.name | escape }} Pakistani recipe"><meta property="og:site_name" content="Pakistan Food"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{{ recipe.name }} Recipe | Pakistan Food"><meta name="twitter:description" content="{{ recipe.description | escape }}"><meta name="twitter:image" content="{{ seo_image }}"><link rel="stylesheet" href="../style.css"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Recipe","@id":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html#recipe","name":{{ recipe.name | jsonify }},"description":{{ recipe.description | jsonify }},"image":{{ seo_image | jsonify }},"url":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html","mainEntityOfPage":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html","author":{"@type":"Organization","name":"Pakistan Food","url":"https://manazarali01-hub.github.io/pakistan-food/","logo":{"@type":"ImageObject","url":"https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp"}},"recipeCuisine":"Pakistani","recipeCategory":{{ recipe.category | jsonify }},{% if recipe.serves %}"recipeYield":"{{ recipe.serves }} servings",{% endif %}"keywords":{{ recipe.name | append: ', authentic Pakistani recipe, Pakistani food, homemade' | jsonify }},"recipeIngredient":{{ recipe.ingredients | jsonify }},"recipeInstructions":[{% for step in recipe.method %}{"@type":"HowToStep","position":{{ forloop.index }},"text":{{ step | jsonify }},"url":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html#step-{{ forloop.index }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://manazarali01-hub.github.io/pakistan-food/"},{"@type":"ListItem","position":2,"name":"Recipes","item":"https://manazarali01-hub.github.io/pakistan-food/recipes/"},{"@type":"ListItem","position":3,"name":{{ recipe.category | append: ' Recipes' | jsonify }},"item":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/"},{"@type":"ListItem","position":4,"name":{{ recipe.name | jsonify }},"item":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html"}]}]}</script><style>.seo-recipe{max-width:900px;margin:90px auto 50px;padding:24px}.seo-recipe img{width:100%;max-height:540px;object-fit:cover;border-radius:18px;background:#f3f3f3}.seo-recipe h1{font-size:clamp(2rem,5vw,3.4rem);margin:22px 0 10px}.seo-recipe h2{margin-top:30px}.seo-recipe li{margin:10px 0;line-height:1.7}.seo-meta{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0}.seo-back{display:inline-block;margin:15px 0}.seo-desc{font-size:1.08rem;line-height:1.8}.seo-breadcrumb{font-size:.95rem;margin-bottom:10px}.seo-breadcrumb a{text-decoration:none}.related-recipes,.popular-recipes{margin-top:36px;padding-top:20px;border-top:1px solid #ddd}.related-recipes ul,.popular-recipes ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;padding:0;list-style:none}.related-recipes a,.popular-recipes a{display:block;padding:12px;border-radius:10px;background:#f5f5f5;text-decoration:none;color:inherit}.recipe-note{margin-top:28px;padding:18px;border-radius:14px;background:#f8f8f8;line-height:1.8}</style></head><body><main class="seo-recipe"><nav class="seo-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="index.html">Recipes</a> › <a href="{{ category_slug }}/">{{ recipe.category }} Recipes</a> › <span>{{ recipe.name }}</span></nav><h1>{{ recipe.name }} Recipe</h1><p class="seo-desc">{{ recipe.description }}</p>{% if fallback != '' %}<img src="{{ display_image }}" alt="{{ recipe.name }} Pakistani recipe" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='{{ fallback }}';">{% else %}<img src="{{ display_image }}" alt="{{ recipe.name }} Pakistani recipe" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.style.display='none';">{% endif %}<div class="seo-meta"><strong>⏱ {{ recipe.time }}</strong>{% if recipe.serves %}<strong>👥 Serves {{ recipe.serves }}</strong>{% endif %}<strong>★ {{ recipe.rating }}</strong><strong><a href="{{ category_slug }}/">{{ recipe.category }} Recipes</a></strong></div><h2>Ingredients for {{ recipe.name }}</h2><ul>{% for item in recipe.ingredients %}<li>{{ item }}</li>{% endfor %}</ul><h2>How to Make {{ recipe.name }}</h2><ol>{% for step in recipe.method %}<li id="step-{{ forloop.index }}">{{ step }}</li>{% endfor %}</ol><div class="recipe-note"><strong>Serving note:</strong> Prepare the ingredients before you start, follow the steps in order, and adjust salt, spice and cooking time to suit your taste and stove. Serve freshly cooked for the best texture and flavour.</div><section class="related-recipes"><h2>More {{ recipe.category }} Recipes</h2><ul>{% assign related_count = 0 %}{% for recipe_pair in site.data.recipes %}{% assign related = recipe_pair[1] %}{% if related.category == recipe.category and recipe_pair[0] != page.recipe_key and related_count < 6 %}<li><a href="{{ recipe_pair[0] }}.html">{{ related.name }} Recipe</a></li>{% assign related_count = related_count | plus: 1 %}{% endif %}{% endfor %}</ul><p><a href="{{ category_slug }}/">View all Pakistani {{ recipe.category }} recipes →</a></p></section><section class="popular-recipes"><h2>Popular Pakistani Recipes</h2><ul><li><a href="chicken-biryani.html">Chicken Biryani Recipe</a></li><li><a href="chicken-karahi.html">Chicken Karahi Recipe</a></li><li><a href="beef-nihari.html">Beef Nihari Recipe</a></li><li><a href="chicken-pulao.html">Chicken Pulao Recipe</a></li><li><a href="chapli-kabab.html">Chapli Kabab Recipe</a></li><li><a href="pakistani-samosa.html">Pakistani Samosa Recipe</a></li></ul></section><p><a class="seo-back" href="index.html">← All Pakistani recipes</a></p></main></body></html>
+{% case page.recipe_key %}
+  {% when 'chicken-biryani' %}{% assign fallback = '../assets/chicken-biryani.jpg' %}
+  {% when 'chicken-pulao' %}{% assign fallback = '../assets/chicken-pulao.jpg' %}
+  {% when 'chicken-karahi' %}{% assign fallback = '../assets/chicken-karahi.jpg' %}
+  {% when 'chicken-handi' %}{% assign fallback = '../assets/chicken-handi.jpg' %}
+  {% when 'beef-nihari' %}{% assign fallback = '../assets/nihari.jpg' %}
+  {% when 'seekh-kabab' %}{% assign fallback = '../assets/seekh-kebab.jpg' %}
+  {% when 'chapli-kabab' %}{% assign fallback = '../assets/chapli-kebab.jpg' %}
+  {% when 'pakistani-samosa' %}{% assign fallback = '../assets/samosa.jpg' %}
+  {% when 'pakora' %}{% assign fallback = '../assets/pakora.jpg' %}
+  {% when 'aloo-paratha' %}{% assign fallback = '../assets/aloo-paratha.jpg' %}
+  {% when 'halwa-puri' %}{% assign fallback = '../assets/halwa-puri.jpg' %}
+  {% when 'rice-kheer' %}{% assign fallback = '../assets/kheer.jpg' %}
+  {% when 'gulab-jamun' %}{% assign fallback = '../assets/gulab-jamun.jpg' %}
+  {% when 'daal-chawal' %}{% assign fallback = '../assets/daal-chawal.jpg' %}
+  {% when 'beef-pulao' %}{% assign fallback = '../assets/beef-pulao.jpg' %}
+  {% when 'aloo-gosht' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aaloo_Gosht.JPG?width=900' %}
+  {% when 'bun-kabab' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bun_Kabab.JPG?width=900' %}
+  {% when 'chana-masala' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chana_masala.jpg?width=900' %}
+  {% when 'chicken-jalfrezi' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Jalfrezi_(2103956162).jpg?width=900' %}
+  {% when 'chicken-sajji' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sajji.JPG?width=900' %}
+  {% when 'keema-matar' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Spicy_Matar_Keema1.jpg?width=900' %}
+  {% when 'mango-lassi' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mango_lassi.jpg?width=900' %}
+  {% when 'matar-pulao' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Matar_Pulao_-_Mohali_2016-08-06_8222.JPG?width=900' %}
+  {% when 'shami-kabab' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Finger_licking_Shami_Kababs.jpg?width=900' %}
+  {% when 'sarson-ka-saag' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarson-Ka-Saag.jpg?width=900' %}
+  {% when 'zinger-burger' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crispy_chicken_burger.jpg?width=900' %}
+{% endcase %}
+{% case recipe.category %}
+  {% when 'Rice' %}
+    {% assign tip_one = 'Rinse the rice until the water is nearly clear so the cooked grains stay separate.' %}
+    {% assign tip_two = 'Measure the cooking liquid carefully and keep the lid closed while the rice steams.' %}
+    {% assign tip_three = 'Rest the finished dish briefly, then fluff it gently instead of stirring hard.' %}
+  {% when 'Chicken' %}
+    {% assign tip_one = 'Cut the chicken into even pieces so every portion cooks at the same rate.' %}
+    {% assign tip_two = 'Cook the masala until it looks glossy before the final simmer for a fuller flavour.' %}
+    {% assign tip_three = 'Add fresh ginger, coriander or green chilli near the end to keep the garnish bright.' %}
+  {% when 'Beef' %}
+    {% assign tip_one = 'Brown the meat in batches so it develops flavour instead of steaming in the pan.' %}
+    {% assign tip_two = 'Use gentle heat and allow enough time for tougher cuts to become tender.' %}
+    {% assign tip_three = 'Add extra water only when needed so the finished gravy stays rich rather than thin.' %}
+  {% when 'BBQ' %}
+    {% assign tip_one = 'Keep the pieces similar in size so they cook evenly on the grill or in the pan.' %}
+    {% assign tip_two = 'Let excess marinade drip away before cooking to help the surface brown well.' %}
+    {% assign tip_three = 'Turn the food only as needed and serve it soon after cooking for the best texture.' %}
+  {% when 'Snacks' %}
+    {% assign tip_one = 'Prepare fillings and chutneys before heating the oil or assembling the snack.' %}
+    {% assign tip_two = 'Keep the cooking temperature steady so the outside crisps without burning.' %}
+    {% assign tip_three = 'Drain fried snacks briefly and serve them fresh for the best crunch.' %}
+  {% when 'Breakfast' %}
+    {% assign tip_one = 'Prepare the dough, filling or accompaniments first so everything reaches the table warm.' %}
+    {% assign tip_two = 'Use moderate heat to cook the centre properly without darkening the outside too quickly.' %}
+    {% assign tip_three = 'Serve with chai, yogurt, pickle or chutney to balance the flavours.' %}
+  {% when 'Desserts' %}
+    {% assign tip_one = 'Measure the main ingredients before starting because small changes can affect texture.' %}
+    {% assign tip_two = 'Use gentle heat when reducing milk or syrup and stir regularly to prevent sticking.' %}
+    {% assign tip_three = 'Add nuts and fragrant spices near the end so their flavour remains fresh.' %}
+  {% when 'Drinks' %}
+    {% assign tip_one = 'Chill the ingredients in advance when the drink is meant to be served cold.' %}
+    {% assign tip_two = 'Add sugar gradually, taste, and adjust before serving rather than sweetening all at once.' %}
+    {% assign tip_three = 'Blend or whisk just before serving for the freshest flavour and texture.' %}
+  {% when 'Vegetarian' %}
+    {% assign tip_one = 'Wash and prepare the vegetables before heating the pan so they cook evenly.' %}
+    {% assign tip_two = 'Toast whole spices briefly in oil to release their aroma before adding other ingredients.' %}
+    {% assign tip_three = 'Avoid overcooking fresh vegetables so their colour and texture remain appealing.' %}
+{% endcase %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ recipe.name }} Recipe | Authentic Pakistani Food</title>
+  <meta name="description" content="{{ recipe.description | strip_html | truncate: 145 | escape }}">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#b21f2d">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍛</text></svg>">
+  <link rel="preload" as="image" href="{{ display_image }}">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_PK">
+  <meta property="og:title" content="{{ recipe.name }} Recipe | Pakistan Food">
+  <meta property="og:description" content="{{ recipe.description | escape }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ seo_image }}">
+  <meta property="og:image:alt" content="{{ recipe.name | escape }} Pakistani recipe">
+  <meta property="og:site_name" content="Pakistan Food">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ recipe.name }} Recipe | Pakistan Food">
+  <meta name="twitter:description" content="{{ recipe.description | escape }}">
+  <meta name="twitter:image" content="{{ seo_image }}">
+  <meta name="twitter:image:alt" content="{{ recipe.name | escape }} Pakistani recipe">
+  <link rel="stylesheet" href="../style.css?v=20260913-seo9">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/#organization",
+        "name": "Pakistan Food",
+        "url": "https://manazarali01-hub.github.io/pakistan-food/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/#website",
+        "url": "https://manazarali01-hub.github.io/pakistan-food/",
+        "name": "Pakistan Food",
+        "description": "Authentic Pakistani recipes with ingredients and easy step-by-step cooking methods.",
+        "publisher": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#organization"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "{{ canonical_url }}#webpage",
+        "url": "{{ canonical_url }}",
+        "name": {{ recipe.name | append: ' Recipe | Authentic Pakistani Food' | jsonify }},
+        "description": {{ recipe.description | jsonify }},
+        "isPartOf": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#website"},
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "@id": "{{ canonical_url }}#primaryimage",
+          "url": {{ seo_image | jsonify }},
+          "contentUrl": {{ seo_image | jsonify }},
+          "caption": {{ recipe.name | append: ' Pakistani recipe' | jsonify }}
+        },
+        "breadcrumb": {"@id": "{{ canonical_url }}#breadcrumb"},
+        "mainEntity": {"@id": "{{ canonical_url }}#recipe"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Recipe",
+        "@id": "{{ canonical_url }}#recipe",
+        "name": {{ recipe.name | jsonify }},
+        "description": {{ recipe.description | jsonify }},
+        "image": {"@id": "{{ canonical_url }}#primaryimage"},
+        "url": "{{ canonical_url }}",
+        "mainEntityOfPage": {"@id": "{{ canonical_url }}#webpage"},
+        "author": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#organization"},
+        "recipeCuisine": "Pakistani",
+        "recipeCategory": {{ recipe.category | jsonify }},
+        "totalTime": "{{ total_duration }}",
+        {% if recipe.serves %}"recipeYield": {{ recipe.serves | append: ' servings' | jsonify }},{% endif %}
+        "keywords": {{ recipe.name | append: ', homemade, traditional, easy' | jsonify }},
+        "recipeIngredient": {{ recipe.ingredients | jsonify }},
+        "recipeInstructions": [
+          {% for step in recipe.method %}
+          {
+            "@type": "HowToStep",
+            "position": {{ forloop.index }},
+            "text": {{ step | jsonify }},
+            "url": "{{ canonical_url }}#step-{{ forloop.index }}"
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ canonical_url }}#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://manazarali01-hub.github.io/pakistan-food/"},
+          {"@type":"ListItem","position":2,"name":"Recipes","item":"https://manazarali01-hub.github.io/pakistan-food/recipes/"},
+          {"@type":"ListItem","position":3,"name":{{ recipe.category | append: ' Recipes' | jsonify }},"item":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/"},
+          {"@type":"ListItem","position":4,"name":{{ recipe.name | jsonify }},"item":"{{ canonical_url }}"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    .seo-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.seo-site-nav{max-width:1000px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.seo-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.seo-site-links{display:flex;flex-wrap:wrap;gap:14px}.seo-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.seo-recipe{max-width:900px;margin:36px auto 50px;padding:24px}.seo-recipe figure{margin:24px 0}.seo-recipe img{display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:540px;object-fit:cover;border-radius:18px;background:#f3f3f3}.seo-recipe figcaption{margin-top:8px;color:#666;font-size:.9rem;text-align:center}.seo-recipe h1{font-size:clamp(2rem,5vw,3.4rem);margin:22px 0 10px}.seo-recipe h2{margin-top:30px}.seo-recipe li{margin:10px 0;line-height:1.7}.seo-meta{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0}.seo-meta time{font-weight:700}.seo-back{display:inline-block;margin:15px 0}.seo-desc{font-size:1.08rem;line-height:1.8}.seo-breadcrumb{font-size:.95rem;margin-bottom:10px}.seo-breadcrumb a{text-decoration:none}.related-recipes,.popular-recipes,.cooking-tips,.recipe-faq{margin-top:36px;padding-top:20px;border-top:1px solid #ddd}.related-recipes ul,.popular-recipes ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;padding:0;list-style:none}.related-recipes a,.popular-recipes a{display:block;padding:12px;border-radius:10px;background:#f5f5f5;text-decoration:none;color:inherit}.recipe-note{margin-top:28px;padding:18px;border-radius:14px;background:#f8f8f8;line-height:1.8}.recipe-faq h3{font-size:1.05rem;margin:20px 0 6px}.recipe-faq p{line-height:1.75}.seo-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.seo-site-footer a{color:#fff}@media(max-width:620px){.seo-site-nav{align-items:flex-start;flex-direction:column}.seo-site-links{gap:10px}.seo-recipe{margin-top:16px;padding:18px}}
+  </style>
+</head>
+<body>
+  <header class="seo-site-header">
+    <nav class="seo-site-nav" aria-label="Main navigation">
+      <a class="seo-site-brand" href="../index.html">🍛 Pakistan Food</a>
+      <div class="seo-site-links">
+        <a href="index.html">All Recipes</a>
+        <a href="{{ category_slug }}/">{{ recipe.category }}</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="seo-recipe">
+    <nav class="seo-breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a> › <a href="index.html">Recipes</a> › <a href="{{ category_slug }}/">{{ recipe.category }} Recipes</a> › <span>{{ recipe.name }}</span>
+    </nav>
+    <article>
+      <h1>{{ recipe.name }} Recipe</h1>
+      <p class="seo-desc">{{ recipe.description }}</p>
+      <figure>
+        {% if fallback != '' %}
+        <img src="{{ display_image }}" alt="{{ recipe.name }} ready to serve" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='{{ fallback }}';">
+        {% else %}
+        <img src="{{ display_image }}" alt="{{ recipe.name }} ready to serve" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.style.display='none';">
+        {% endif %}
+        <figcaption>{{ recipe.name }} prepared with Pakistani flavours.</figcaption>
+      </figure>
+      <div class="seo-meta">
+        <span>⏱ <time datetime="{{ total_duration }}">{{ recipe.time }}</time></span>
+        {% if recipe.serves %}<strong>👥 Serves {{ recipe.serves }}</strong>{% endif %}
+        <strong>★ {{ recipe.rating }}</strong>
+        <strong><a href="{{ category_slug }}/">{{ recipe.category }} Recipes</a></strong>
+      </div>
+      <h2>Ingredients for {{ recipe.name }}</h2>
+      <ul>{% for item in recipe.ingredients %}<li>{{ item }}</li>{% endfor %}</ul>
+      <h2>How to Make {{ recipe.name }}</h2>
+      <ol>{% for step in recipe.method %}<li id="step-{{ forloop.index }}">{{ step }}</li>{% endfor %}</ol>
+      <section class="cooking-tips">
+        <h2>{{ recipe.name }} Cooking Tips</h2>
+        <ul><li>{{ tip_one }}</li><li>{{ tip_two }}</li><li>{{ tip_three }}</li></ul>
+      </section>
+      <div class="recipe-note"><strong>Serving idea:</strong> Serve {{ recipe.name }} freshly prepared with a simple salad, chutney, yogurt or another accompaniment that suits this {{ recipe.category | downcase }} dish.</div>
+      <section class="recipe-faq">
+        <h2>Questions About {{ recipe.name }}</h2>
+        <h3>Can I adjust the spice level?</h3>
+        <p>Yes. Reduce or increase the chilli to suit your household, while keeping the other spices in balance so the dish remains aromatic.</p>
+        <h3>What should I do before I start cooking?</h3>
+        <p>Read the full method once, measure the ingredients, and prepare any chopped items first. This makes the steps easier to follow and helps the dish cook evenly.</p>
+      </section>
+      <section class="related-recipes">
+        <h2>More {{ recipe.category }} Recipes</h2>
+        <ul>
+          {% assign related_count = 0 %}
+          {% for recipe_pair in site.data.recipes %}
+            {% assign related = recipe_pair[1] %}
+            {% if related.category == recipe.category and recipe_pair[0] != page.recipe_key and related_count < 6 %}
+            <li><a href="{{ recipe_pair[0] }}.html">{{ related.name }} Recipe</a></li>
+            {% assign related_count = related_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <p><a href="{{ category_slug }}/">View all Pakistani {{ recipe.category }} recipes →</a></p>
+      </section>
+      <section class="popular-recipes">
+        <h2>Popular Pakistani Recipes</h2>
+        <ul>
+          <li><a href="chicken-biryani.html">Chicken Biryani Recipe</a></li>
+          <li><a href="chicken-karahi.html">Chicken Karahi Recipe</a></li>
+          <li><a href="beef-nihari.html">Beef Nihari Recipe</a></li>
+          <li><a href="chicken-pulao.html">Chicken Pulao Recipe</a></li>
+          <li><a href="chapli-kabab.html">Chapli Kabab Recipe</a></li>
+          <li><a href="pakistani-samosa.html">Pakistani Samosa Recipe</a></li>
+        </ul>
+      </section>
+      <p><a class="seo-back" href="index.html">← All Pakistani recipes</a></p>
+    </article>
+  </main>
+  <footer class="seo-site-footer"><p>© 2026 Pakistan Food · <a href="../image-credits.html">Image credits</a></p></footer>
+</body>
+</html>
