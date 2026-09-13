@@ -11,6 +11,8 @@ window.PAKISTAN_FOOD_RECIPES = [
     ? window.PAKISTAN_FOOD_RECIPES
     : [];
 
+  const isMobile = window.matchMedia("(max-width: 900px)").matches;
+
   recipes.forEach((recipe) => {
     if (!recipe || !recipe.image) return;
     let image = String(recipe.image).trim();
@@ -20,9 +22,16 @@ window.PAKISTAN_FOOD_RECIPES = [
       "commons.wikimedia.org/wiki/Special:FilePath/"
     );
 
-    /* Prefer the original JPG photography for local assets. */
+    /* Prefer original JPG photography for local assets. */
     if (/^assets\/.*\.webp(?:\?|$)/i.test(image)) {
       image = image.replace(/\.webp(?=\?|$)/i, ".jpg");
+    }
+
+    /* On phones, route Wikimedia photos through a resizing/cache proxy.
+       This keeps the same linked photo but avoids unreliable direct mobile loads. */
+    if (isMobile && image.includes("commons.wikimedia.org/wiki/Special:FilePath/")) {
+      const cleanSource = image.split("?")[0].replace(/^https?:\/\//i, "");
+      image = `https://images.weserv.nl/?url=${encodeURIComponent(cleanSource)}&w=900&h=675&fit=cover&output=jpg&q=86`;
     }
 
     recipe.image = image;
@@ -81,22 +90,13 @@ window.PAKISTAN_FOOD_RECIPES = [
     const current = img.currentSrc || img.src || "";
     const attempt = Number(img.dataset.fallbackAttempt || "0");
 
-    /* Local JPG failed: try its WebP copy. */
     if (attempt === 0 && /\.jpg(?:\?|$)/i.test(current) && current.includes("/assets/")) {
       img.dataset.fallbackAttempt = "1";
       img.src = current.replace(/\.jpg(?=\?|$)/i, ".webp");
       return;
     }
 
-    /* Wikimedia thumbnail/redirect failed: retry the same file without query params. */
-    if (attempt <= 1 && current.includes("commons.wikimedia.org/wiki/Special:FilePath/") && current.includes("?")) {
-      img.dataset.fallbackAttempt = "2";
-      img.src = current.split("?")[0];
-      return;
-    }
-
-    /* Never leave an empty image card. If the real linked image is unavailable,
-       show the closest existing high-quality local food photo instead. */
+    /* If the proxy itself fails, do not leave a blank card. */
     if (attempt < 3) {
       img.dataset.fallbackAttempt = "3";
       img.src = finalFallbackFor(img);
