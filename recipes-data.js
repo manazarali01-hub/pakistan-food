@@ -13,11 +13,20 @@ window.PAKISTAN_FOOD_RECIPES = [
 
   recipes.forEach((recipe) => {
     if (!recipe || !recipe.image) return;
-    const image = String(recipe.image).trim();
-    recipe.image = image.replace(
+    let image = String(recipe.image).trim();
+
+    image = image.replace(
       "commons.wikimedia.org/wiki/Special:Redirect/file/",
       "commons.wikimedia.org/wiki/Special:FilePath/"
     );
+
+    /* The original JPG assets are visually better than the later heavily
+       compressed WebP copies. Prefer JPG for local recipe photography. */
+    if (/^assets\/.*\.webp(?:\?|$)/i.test(image)) {
+      image = image.replace(/\.webp(?=\?|$)/i, ".jpg");
+    }
+
+    recipe.image = image;
   });
 
   const dropdown = document.querySelector(".dropdown-menu");
@@ -57,9 +66,9 @@ window.PAKISTAN_FOOD_RECIPES = [
     const current = img.currentSrc || img.src || "";
     const attempt = Number(img.dataset.fallbackAttempt || "0");
 
-    if (attempt === 0 && /\.webp(?:\?|$)/i.test(current)) {
+    if (attempt === 0 && /\.jpg(?:\?|$)/i.test(current) && current.includes("/assets/")) {
       img.dataset.fallbackAttempt = "1";
-      img.src = current.replace(/\.webp(?=\?|$)/i, ".jpg");
+      img.src = current.replace(/\.jpg(?=\?|$)/i, ".webp");
       return;
     }
 
