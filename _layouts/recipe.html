@@ -1,0 +1,48 @@
+{% assign recipe = site.data.recipes[page.recipe_key] %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ recipe.name }} Recipe | Authentic Pakistani Food</title>
+  <meta name="description" content="{{ recipe.description | escape }} Learn ingredients and an easy step-by-step method for this Pakistani {{ recipe.category | downcase }} recipe.">
+  <link rel="canonical" href="https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ recipe.name }} Recipe | Pakistan Food">
+  <meta property="og:description" content="{{ recipe.description | escape }}">
+  <meta property="og:url" content="https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html">
+  <meta property="og:image" content="{{ recipe.image }}">
+  <meta property="og:site_name" content="Pakistan Food">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Recipe",
+    "name":{{ recipe.name | jsonify }},
+    "description":{{ recipe.description | jsonify }},
+    "image":{{ recipe.image | jsonify }},
+    "recipeCuisine":"Pakistani",
+    "recipeCategory":{{ recipe.category | jsonify }},
+    "recipeYield":"{{ recipe.serves }} servings",
+    "recipeIngredient":{{ recipe.ingredients | jsonify }},
+    "recipeInstructions":[{% for step in recipe.method %}{"@type":"HowToStep","text":{{ step | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+  }
+  </script>
+  <style>.seo-recipe{max-width:900px;margin:90px auto 50px;padding:24px}.seo-recipe img{width:100%;max-height:540px;object-fit:cover;border-radius:18px;background:#f3f3f3}.seo-recipe h1{font-size:clamp(2rem,5vw,3.4rem);margin:22px 0 10px}.seo-recipe h2{margin-top:30px}.seo-recipe li{margin:10px 0;line-height:1.7}.seo-meta{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0}.seo-back{display:inline-block;margin:15px 0}.seo-desc{font-size:1.08rem;line-height:1.8}</style>
+</head>
+<body>
+<main class="seo-recipe">
+  <a class="seo-back" href="index.html">← All Pakistani recipes</a>
+  <h1>{{ recipe.name }} Recipe</h1>
+  <p class="seo-desc">{{ recipe.description }}</p>
+  <img src="{{ recipe.image }}" alt="{{ recipe.name }} Pakistani recipe" width="900" height="675" loading="eager" decoding="async">
+  <div class="seo-meta"><strong>⏱ {{ recipe.time }}</strong><strong>👥 Serves {{ recipe.serves }}</strong><strong>★ {{ recipe.rating }}</strong><strong>{{ recipe.category }}</strong></div>
+  <h2>Ingredients</h2>
+  <ul>{% for item in recipe.ingredients %}<li>{{ item }}</li>{% endfor %}</ul>
+  <h2>How to Make {{ recipe.name }}</h2>
+  <ol>{% for step in recipe.method %}<li>{{ step }}</li>{% endfor %}</ol>
+  <p><a class="seo-back" href="../index.html#recipes">Explore more authentic Pakistani recipes →</a></p>
+</main>
+</body>
+</html>
