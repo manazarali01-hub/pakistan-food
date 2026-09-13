@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Pakistan Food logo</title>
+  <desc id="description">A warm red and gold badge with a steaming serving bowl and the initials PF.</desc>
+  <rect width="512" height="512" rx="112" fill="#fffaf2"/>
+  <circle cx="256" cy="256" r="214" fill="#b21f2d"/>
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#f0b44d" stroke-width="12"/>
+  <g fill="none" stroke="#fffaf2" stroke-linecap="round">
+    <path d="M195 204c-20-20 22-33 0-58" stroke-width="16"/>
+    <path d="M256 199c-20-22 23-36 0-64" stroke-width="16"/>
+    <path d="M317 204c-20-20 22-33 0-58" stroke-width="16"/>
+  </g>
+  <path d="M151 235h210c-5 75-44 111-105 111s-100-36-105-111Z" fill="#fffaf2"/>
+  <path d="M171 255h170c-12 45-42 68-85 68s-73-23-85-68Z" fill="#f0b44d"/>
+  <path d="M191 360h130" fill="none" stroke="#fffaf2" stroke-width="18" stroke-linecap="round"/>
+  <text x="256" y="434" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" text-anchor="middle" letter-spacing="3">PF</text>
+</svg>
