@@ -5,6 +5,15 @@ layout: null
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://manazarali01-hub.github.io/pakistan-food/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
   <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/rice/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/chicken/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/beef/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/bbq/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/snacks/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/breakfast/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/desserts/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/drinks/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/vegetarian/</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
 {% for recipe_pair in site.data.recipes %}  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
 {% endfor %}  <url><loc>https://manazarali01-hub.github.io/pakistan-food/image-credits.html</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
 </urlset>
