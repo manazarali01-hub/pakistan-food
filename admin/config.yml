@@ -31,6 +31,7 @@ collections:
           - "Breakfast"
           - "Desserts"
           - "Drinks"
+          - "Vegetarian"
       - label: "Cooking Time"
         name: "time"
         widget: "string"
