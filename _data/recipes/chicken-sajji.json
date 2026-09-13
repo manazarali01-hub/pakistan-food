@@ -1,0 +1,29 @@
+{
+  "id": 50,
+  "name": "Chicken Sajji",
+  "category": "BBQ",
+  "time": "2 hrs",
+  "rating": "4.9",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sajji_at_Bolan_Sajji_House.jpg?width=900",
+  "description": "Balochistan-inspired whole roasted chicken with a simple salt-and-spice seasoning, cooked until juicy inside and beautifully roasted outside.",
+  "ingredients": [
+    "1 whole chicken, about 1.5 kg",
+    "2 tbsp lemon juice",
+    "1 tbsp ginger-garlic paste",
+    "1.5 tsp salt",
+    "1 tsp black pepper",
+    "1 tsp roasted cumin powder",
+    "1 tsp crushed coriander",
+    "2 tbsp cooking oil or melted butter",
+    "Lemon wedges for serving"
+  ],
+  "method": [
+    "Pat the chicken dry and make a few shallow cuts in the thickest parts.",
+    "Mix lemon juice, ginger-garlic paste, salt, pepper, cumin and coriander and rub over the chicken.",
+    "Marinate for at least 45 minutes.",
+    "Roast on a grill, rotisserie or in a hot oven until the chicken is fully cooked and browned.",
+    "Brush lightly with oil or butter during the final stage of roasting.",
+    "Rest for 10 minutes, then serve hot with lemon wedges and rice or naan."
+  ]
+}
