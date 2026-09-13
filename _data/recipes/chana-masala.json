@@ -1,0 +1,32 @@
+{
+  "id": 54,
+  "name": "Chana Masala",
+  "category": "Vegetarian",
+  "time": "50 min",
+  "rating": "4.8",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chana_masala.jpg?width=900",
+  "description": "Comforting chickpeas simmered in a tangy tomato-onion masala with ginger, green chilies and warm Pakistani spices.",
+  "ingredients": [
+    "3 cups cooked chickpeas",
+    "2 medium onions, finely chopped",
+    "3 tomatoes, chopped",
+    "1 tbsp ginger-garlic paste",
+    "2 green chilies",
+    "1 tsp cumin seeds",
+    "1 tsp coriander powder",
+    "1 tsp red chili powder",
+    "0.5 tsp turmeric",
+    "0.5 tsp garam masala",
+    "2 tbsp cooking oil",
+    "Salt and fresh coriander"
+  ],
+  "method": [
+    "Heat oil and fry cumin seeds and onions until golden.",
+    "Add ginger-garlic paste, tomatoes, green chilies and powdered spices.",
+    "Cook until the tomatoes break down and oil begins to separate.",
+    "Add chickpeas with a little cooking water and simmer for 15 to 20 minutes.",
+    "Lightly mash a few chickpeas to thicken the gravy.",
+    "Finish with garam masala and fresh coriander and serve with roti, naan or rice."
+  ]
+}
