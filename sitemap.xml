@@ -1,81 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://manazarali01-hub.github.io/pakistan-food/</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.jpg</image:loc>
-      <image:title>Chicken Biryani</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chicken-pulao.jpg</image:loc>
-      <image:title>Chicken Pulao</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chicken-karahi.jpg</image:loc>
-      <image:title>Chicken Karahi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chicken-handi.jpg</image:loc>
-      <image:title>Chicken Handi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/nihari.jpg</image:loc>
-      <image:title>Beef Nihari</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/seekh-kebab.jpg</image:loc>
-      <image:title>Seekh Kebab</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chapli-kebab.jpg</image:loc>
-      <image:title>Chapli Kabab</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/samosa.jpg</image:loc>
-      <image:title>Pakistani Samosa</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/pakora.jpg</image:loc>
-      <image:title>Pakora</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/aloo-paratha.jpg</image:loc>
-      <image:title>Aloo Paratha</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/halwa-puri.jpg</image:loc>
-      <image:title>Halwa Puri</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/kheer.jpg</image:loc>
-      <image:title>Rice Kheer</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/gulab-jamun.jpg</image:loc>
-      <image:title>Gulab Jamun</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/daal-chawal.jpg</image:loc>
-      <image:title>Daal Chawal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/beef-pulao.jpg</image:loc>
-      <image:title>Beef Pulao</image:title>
-    </image:image>
   </url>
-
   <url>
     <loc>https://manazarali01-hub.github.io/pakistan-food/image-credits.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
   </url>
-
 </urlset>
