@@ -1,5 +1,11 @@
 {% assign recipe = site.data.recipes[page.recipe_key] %}
-{% assign minutes = recipe.time | split: ' ' | first %}
+{% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
+  {% assign display_image = recipe.image %}
+  {% assign seo_image = recipe.image %}
+{% else %}
+  {% assign display_image = '../' | append: recipe.image %}
+  {% assign seo_image = 'https://manazarali01-hub.github.io/pakistan-food/' | append: recipe.image %}
+{% endif %}
 {% case recipe.category %}
   {% when 'Rice' %}{% assign fallback = '../assets/beef-pulao.webp' %}
   {% when 'Chicken' %}{% assign fallback = '../assets/chicken-karahi.webp' %}
@@ -24,12 +30,13 @@
   <meta property="og:title" content="{{ recipe.name }} Recipe | Pakistan Food">
   <meta property="og:description" content="{{ recipe.description | escape }}">
   <meta property="og:url" content="https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html">
-  <meta property="og:image" content="{{ recipe.image }}">
+  <meta property="og:image" content="{{ seo_image }}">
+  <meta property="og:image:alt" content="{{ recipe.name | escape }} Pakistani recipe">
   <meta property="og:site_name" content="Pakistan Food">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ recipe.name }} Recipe | Pakistan Food">
   <meta name="twitter:description" content="{{ recipe.description | escape }}">
-  <meta name="twitter:image" content="{{ recipe.image }}">
+  <meta name="twitter:image" content="{{ seo_image }}">
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
   {
@@ -40,14 +47,13 @@
         "@id":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html#recipe",
         "name":{{ recipe.name | jsonify }},
         "description":{{ recipe.description | jsonify }},
-        "image":{{ recipe.image | jsonify }},
+        "image":{{ seo_image | jsonify }},
         "url":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html",
         "mainEntityOfPage":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html",
         "author":{"@type":"Organization","name":"Pakistan Food","url":"https://manazarali01-hub.github.io/pakistan-food/"},
         "recipeCuisine":"Pakistani",
         "recipeCategory":{{ recipe.category | jsonify }},
-        "recipeYield":"{{ recipe.serves }} servings",
-        "totalTime":"PT{{ minutes }}M",
+        {% if recipe.serves %}"recipeYield":"{{ recipe.serves }} servings",{% endif %}
         "recipeIngredient":{{ recipe.ingredients | jsonify }},
         "recipeInstructions":[{% for step in recipe.method %}{"@type":"HowToStep","position":{{ forloop.index }},"text":{{ step | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
       },
@@ -69,8 +75,8 @@
   <nav class="seo-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="index.html">Recipes</a> › <span>{{ recipe.name }}</span></nav>
   <h1>{{ recipe.name }} Recipe</h1>
   <p class="seo-desc">{{ recipe.description }}</p>
-  <img src="{{ recipe.image }}" alt="{{ recipe.name }} Pakistani recipe" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='{{ fallback }}';">
-  <div class="seo-meta"><strong>⏱ {{ recipe.time }}</strong><strong>👥 Serves {{ recipe.serves }}</strong><strong>★ {{ recipe.rating }}</strong><strong>{{ recipe.category }}</strong></div>
+  <img src="{{ display_image }}" alt="{{ recipe.name }} Pakistani recipe" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='{{ fallback }}';">
+  <div class="seo-meta"><strong>⏱ {{ recipe.time }}</strong>{% if recipe.serves %}<strong>👥 Serves {{ recipe.serves }}</strong>{% endif %}<strong>★ {{ recipe.rating }}</strong><strong>{{ recipe.category }}</strong></div>
   <h2>Ingredients</h2>
   <ul>{% for item in recipe.ingredients %}<li>{{ item }}</li>{% endfor %}</ul>
   <h2>How to Make {{ recipe.name }}</h2>
