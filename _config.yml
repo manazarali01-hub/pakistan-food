@@ -1,0 +1,10 @@
+title: Pakistan Food
+description: Authentic Pakistani recipes with ingredients and easy step-by-step cooking methods.
+url: "https://manazarali01-hub.github.io"
+baseurl: "/pakistan-food"
+lang: en
+locale: en_PK
+encoding: utf-8
+markdown: kramdown
+exclude:
+  - README.md
