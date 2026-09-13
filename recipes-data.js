@@ -22,16 +22,14 @@ window.PAKISTAN_FOOD_RECIPES = [
       "commons.wikimedia.org/wiki/Special:FilePath/"
     );
 
-    /* Prefer original JPG photography for local assets. */
-    if (/^assets\/.*\.webp(?:\?|$)/i.test(image)) {
-      image = image.replace(/\.webp(?=\?|$)/i, ".jpg");
-    }
+    /* Keep optimized local WebP assets as the primary source.
+       JPG is used only if the browser cannot load the WebP file. */
 
     /* On phones, route Wikimedia photos through a resizing/cache proxy.
        This keeps the same linked photo but avoids unreliable direct mobile loads. */
     if (isMobile && image.includes("commons.wikimedia.org/wiki/Special:FilePath/")) {
       const cleanSource = image.split("?")[0].replace(/^https?:\/\//i, "");
-      image = `https://images.weserv.nl/?url=${encodeURIComponent(cleanSource)}&w=900&h=675&fit=cover&output=jpg&q=86`;
+      image = `https://images.weserv.nl/?url=${encodeURIComponent(cleanSource)}&w=900&h=675&fit=cover&output=webp&q=82`;
     }
 
     recipe.image = image;
@@ -69,17 +67,17 @@ window.PAKISTAN_FOOD_RECIPES = [
   function finalFallbackFor(img) {
     const alt = (img.alt || "").toLowerCase();
 
-    if (alt.includes("paratha")) return "assets/aloo-paratha.jpg";
-    if (alt.includes("biryani")) return "assets/chicken-biryani.jpg";
-    if (alt.includes("pulao") || alt.includes("rice")) return "assets/beef-pulao.jpg";
-    if (alt.includes("karahi") || alt.includes("chicken") || alt.includes("jalfrezi") || alt.includes("qorma") || alt.includes("handi")) return "assets/chicken-karahi.jpg";
-    if (alt.includes("kabab") || alt.includes("kebab") || alt.includes("burger") || alt.includes("shawarma")) return "assets/chapli-kebab.jpg";
-    if (alt.includes("samosa") || alt.includes("pakora") || alt.includes("chaat") || alt.includes("pizza")) return "assets/samosa.jpg";
-    if (alt.includes("nihari") || alt.includes("beef") || alt.includes("mutton") || alt.includes("gosht") || alt.includes("keema")) return "assets/nihari.jpg";
-    if (alt.includes("kheer") || alt.includes("halwa") || alt.includes("jalebi") || alt.includes("gulab") || alt.includes("ras malai")) return "assets/gulab-jamun.jpg";
-    if (alt.includes("chai") || alt.includes("lassi") || alt.includes("sharbat") || alt.includes("falooda") || alt.includes("milk")) return "assets/kheer.jpg";
+    if (alt.includes("paratha")) return "assets/aloo-paratha.webp";
+    if (alt.includes("biryani")) return "assets/chicken-biryani.webp";
+    if (alt.includes("pulao") || alt.includes("rice")) return "assets/beef-pulao.webp";
+    if (alt.includes("karahi") || alt.includes("chicken") || alt.includes("jalfrezi") || alt.includes("qorma") || alt.includes("handi")) return "assets/chicken-karahi.webp";
+    if (alt.includes("kabab") || alt.includes("kebab")) return "assets/chapli-kebab.webp";
+    if (alt.includes("samosa") || alt.includes("pakora") || alt.includes("chaat") || alt.includes("pizza")) return "assets/samosa.webp";
+    if (alt.includes("nihari") || alt.includes("beef") || alt.includes("mutton") || alt.includes("gosht") || alt.includes("keema")) return "assets/nihari.webp";
+    if (alt.includes("kheer") || alt.includes("halwa") || alt.includes("jalebi") || alt.includes("gulab") || alt.includes("ras malai")) return "assets/gulab-jamun.webp";
+    if (alt.includes("chai") || alt.includes("lassi") || alt.includes("sharbat") || alt.includes("falooda") || alt.includes("milk")) return "assets/kheer.webp";
 
-    return "assets/chicken-biryani.jpg";
+    return "assets/chicken-biryani.webp";
   }
 
   document.addEventListener("error", (event) => {
@@ -90,13 +88,14 @@ window.PAKISTAN_FOOD_RECIPES = [
     const current = img.currentSrc || img.src || "";
     const attempt = Number(img.dataset.fallbackAttempt || "0");
 
-    if (attempt === 0 && /\.jpg(?:\?|$)/i.test(current) && current.includes("/assets/")) {
+    /* Local WebP first, JPG only as a compatibility fallback. */
+    if (attempt === 0 && /\.webp(?:\?|$)/i.test(current) && current.includes("/assets/")) {
       img.dataset.fallbackAttempt = "1";
-      img.src = current.replace(/\.jpg(?=\?|$)/i, ".webp");
+      img.src = current.replace(/\.webp(?=\?|$)/i, ".jpg");
       return;
     }
 
-    /* If the proxy itself fails, do not leave a blank card. */
+    /* If an external/proxy image fails, do not leave a blank card. */
     if (attempt < 3) {
       img.dataset.fallbackAttempt = "3";
       img.src = finalFallbackFor(img);
