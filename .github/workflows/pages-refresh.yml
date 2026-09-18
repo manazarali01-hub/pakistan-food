@@ -10,6 +10,9 @@ on:
       - 'recipes/**'
       - 'index.html'
       - 'sitemap.xml'
+      - 'sitemap.html'
+      - 'robots.txt'
+      - '_config.yml'
       - 'style.css'
       - 'script.js'
 

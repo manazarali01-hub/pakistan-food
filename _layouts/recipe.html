@@ -1,5 +1,10 @@
 {% assign recipe = site.data.recipes[page.recipe_key] %}
 {% capture canonical_url %}https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html{% endcapture %}
+{% assign meta_description = recipe.description | strip_html | strip %}
+{% assign meta_description_length = meta_description | size %}
+{% if meta_description_length < 80 %}
+  {% capture meta_description %}{{ meta_description }} Get the ingredients, cooking time and easy step-by-step method.{% endcapture %}
+{% endif %}
 {% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
   {% assign display_image = recipe.image %}
   {% assign seo_image = recipe.image | replace: 'Special:Redirect/file/', 'Special:FilePath/' %}
@@ -44,38 +49,56 @@
     {% assign tip_one = 'Rinse the rice until the water is nearly clear so the cooked grains stay separate.' %}
     {% assign tip_two = 'Measure the cooking liquid carefully and keep the lid closed while the rice steams.' %}
     {% assign tip_three = 'Rest the finished dish briefly, then fluff it gently instead of stirring hard.' %}
+    {% assign technique_note = 'For rice dishes, rinse the grains until the water is nearly clear and soak only when the recipe asks for it. Measure the cooking liquid carefully, keep the lid closed during steaming, and fluff gently after resting so the grains stay separate.' %}
+    {% assign storage_note = 'Cool leftover rice promptly, refrigerate it in a covered container, and reheat only the portion you need until piping hot. Add a small splash of water before reheating if the rice looks dry.' %}
   {% when 'Chicken' %}
     {% assign tip_one = 'Cut the chicken into even pieces so every portion cooks at the same rate.' %}
     {% assign tip_two = 'Cook the masala until it looks glossy before the final simmer for a fuller flavour.' %}
     {% assign tip_three = 'Add fresh ginger, coriander or green chilli near the end to keep the garnish bright.' %}
+    {% assign technique_note = 'Cut chicken into even pieces so they cook at the same rate. Let the masala become glossy before the final simmer, then check the thickest pieces carefully so the chicken is cooked through without becoming dry.' %}
+    {% assign storage_note = 'Cool leftovers promptly and keep them covered in the refrigerator. Reheat gently with a spoonful of water if needed, stirring the gravy so the chicken warms evenly before serving.' %}
   {% when 'Beef' %}
     {% assign tip_one = 'Brown the meat in batches so it develops flavour instead of steaming in the pan.' %}
     {% assign tip_two = 'Use gentle heat and allow enough time for tougher cuts to become tender.' %}
     {% assign tip_three = 'Add extra water only when needed so the finished gravy stays rich rather than thin.' %}
+    {% assign technique_note = 'Brown the beef in batches and give it enough gentle cooking time to become tender. Add extra water only when needed, and reduce the gravy at the end so the finished dish stays rich and full-flavoured.' %}
+    {% assign storage_note = 'Beef dishes often taste even better after resting. Refrigerate cooled leftovers in a covered container, then reheat slowly with a little water until the meat and gravy are evenly hot.' %}
   {% when 'BBQ' %}
     {% assign tip_one = 'Keep the pieces similar in size so they cook evenly on the grill or in the pan.' %}
     {% assign tip_two = 'Let excess marinade drip away before cooking to help the surface brown well.' %}
     {% assign tip_three = 'Turn the food only as needed and serve it soon after cooking for the best texture.' %}
+    {% assign technique_note = 'Keep pieces similar in size, let excess marinade drip away, and cook over steady heat so the outside browns before the centre dries out. Rest cooked meat briefly before serving to keep it juicy.' %}
+    {% assign storage_note = 'Store cooked BBQ separately from fresh salad and chutney. Refrigerate leftovers promptly and reheat them gently in a covered pan or oven so they stay moist.' %}
   {% when 'Snacks' %}
     {% assign tip_one = 'Prepare fillings and chutneys before heating the oil or assembling the snack.' %}
     {% assign tip_two = 'Keep the cooking temperature steady so the outside crisps without burning.' %}
     {% assign tip_three = 'Drain fried snacks briefly and serve them fresh for the best crunch.' %}
+    {% assign technique_note = 'Prepare fillings, wrappers and chutneys before heating the oil or assembling the snack. Maintain steady heat so the outside turns crisp while the filling cooks through, then drain briefly before serving.' %}
+    {% assign storage_note = 'Most fried snacks are best fresh. If you have leftovers, cool and refrigerate them, then reheat in an oven or dry pan rather than a microwave to bring back some crispness.' %}
   {% when 'Breakfast' %}
     {% assign tip_one = 'Prepare the dough, filling or accompaniments first so everything reaches the table warm.' %}
     {% assign tip_two = 'Use moderate heat to cook the centre properly without darkening the outside too quickly.' %}
     {% assign tip_three = 'Serve with chai, yogurt, pickle or chutney to balance the flavours.' %}
+    {% assign technique_note = 'Prepare dough, fillings and accompaniments first so everything reaches the table warm. Use moderate heat to cook the centre properly without darkening the outside too quickly, and serve straight from the pan when possible.' %}
+    {% assign storage_note = 'Keep leftovers covered in the refrigerator. Reheat breads and cooked breakfast items in a dry pan over gentle heat so their texture stays pleasant.' %}
   {% when 'Desserts' %}
     {% assign tip_one = 'Measure the main ingredients before starting because small changes can affect texture.' %}
     {% assign tip_two = 'Use gentle heat when reducing milk or syrup and stir regularly to prevent sticking.' %}
     {% assign tip_three = 'Add nuts and fragrant spices near the end so their flavour remains fresh.' %}
+    {% assign technique_note = 'Measure the main ingredients before starting because small changes can affect texture. Use gentle heat when reducing milk or syrup, stir regularly to prevent sticking, and add nuts or fragrant spices near the end.' %}
+    {% assign storage_note = 'Cool the dessert as directed before covering it. Refrigerate milk-based sweets and serve them within a sensible time, bringing them to the preferred serving temperature just before eating.' %}
   {% when 'Drinks' %}
     {% assign tip_one = 'Chill the ingredients in advance when the drink is meant to be served cold.' %}
     {% assign tip_two = 'Add sugar gradually, taste, and adjust before serving rather than sweetening all at once.' %}
     {% assign tip_three = 'Blend or whisk just before serving for the freshest flavour and texture.' %}
+    {% assign technique_note = 'Use chilled ingredients when the drink is meant to be served cold, and add sugar gradually so the flavour stays balanced. Blend or whisk shortly before serving for the freshest texture.' %}
+    {% assign storage_note = 'Fresh drinks are best served immediately. If a recipe can be stored, keep it covered in the refrigerator and stir well before serving because ingredients may settle.' %}
   {% when 'Vegetarian' %}
     {% assign tip_one = 'Wash and prepare the vegetables before heating the pan so they cook evenly.' %}
     {% assign tip_two = 'Toast whole spices briefly in oil to release their aroma before adding other ingredients.' %}
     {% assign tip_three = 'Avoid overcooking fresh vegetables so their colour and texture remain appealing.' %}
+    {% assign technique_note = 'Wash, cut and measure the vegetables before heating the pan so they cook evenly. Toast whole spices briefly in oil, add delicate vegetables later, and avoid overcooking so colour and texture remain appealing.' %}
+    {% assign storage_note = 'Cool leftovers promptly and refrigerate them in a covered container. Reheat gently, adding only a small splash of water so the vegetables do not become watery.' %}
 {% endcase %}
 <!doctype html>
 <html lang="en">
@@ -83,23 +106,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ recipe.name }} Recipe | Authentic Pakistani Food</title>
-  <meta name="description" content="{{ recipe.description | strip_html | truncate: 145 | escape }}">
+  <meta name="description" content="{{ meta_description | strip_html | truncate: 155 | escape }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#b21f2d">
   <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="sitemap" type="application/xml" href="https://manazarali01-hub.github.io/pakistan-food/sitemap.xml">
   <link rel="icon" href="../assets/pakistan-food-logo.png" type="image/png">
   <link rel="preload" as="image" href="{{ display_image }}">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="en_PK">
   <meta property="og:title" content="{{ recipe.name }} Recipe | Pakistan Food">
-  <meta property="og:description" content="{{ recipe.description | escape }}">
+  <meta property="og:description" content="{{ meta_description | escape }}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:image" content="{{ seo_image }}">
   <meta property="og:image:alt" content="{{ recipe.name | escape }} Pakistani recipe">
   <meta property="og:site_name" content="Pakistan Food">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ recipe.name }} Recipe | Pakistan Food">
-  <meta name="twitter:description" content="{{ recipe.description | escape }}">
+  <meta name="twitter:description" content="{{ meta_description | escape }}">
   <meta name="twitter:image" content="{{ seo_image }}">
   <meta name="twitter:image:alt" content="{{ recipe.name | escape }} Pakistani recipe">
   <link rel="stylesheet" href="../style.css?v=20260913-seo9">
@@ -135,6 +159,8 @@
         "url": "{{ canonical_url }}",
         "name": {{ recipe.name | append: ' Recipe | Authentic Pakistani Food' | jsonify }},
         "description": {{ recipe.description | jsonify }},
+        "datePublished": "2026-09-13",
+        "dateModified": "2026-09-18",
         "isPartOf": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#website"},
         "primaryImageOfPage": {
           "@type": "ImageObject",
@@ -152,6 +178,8 @@
         "@id": "{{ canonical_url }}#recipe",
         "name": {{ recipe.name | jsonify }},
         "description": {{ recipe.description | jsonify }},
+        "datePublished": "2026-09-13",
+        "dateModified": "2026-09-18",
         "image": {"@id": "{{ canonical_url }}#primaryimage"},
         "url": "{{ canonical_url }}",
         "mainEntityOfPage": {"@id": "{{ canonical_url }}#webpage"},
@@ -187,7 +215,7 @@
   }
   </script>
   <style>
-    .seo-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.seo-site-nav{max-width:1000px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.seo-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.seo-site-links{display:flex;flex-wrap:wrap;gap:14px}.seo-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.seo-recipe{max-width:900px;margin:36px auto 50px;padding:24px}.seo-recipe figure{margin:24px 0}.seo-recipe img{display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:540px;object-fit:cover;border-radius:18px;background:#f3f3f3}.seo-recipe figcaption{margin-top:8px;color:#666;font-size:.9rem;text-align:center}.seo-recipe h1{font-size:clamp(2rem,5vw,3.4rem);margin:22px 0 10px}.seo-recipe h2{margin-top:30px}.seo-recipe li{margin:10px 0;line-height:1.7}.seo-meta{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0}.seo-meta time{font-weight:700}.seo-back{display:inline-block;margin:15px 0}.seo-desc{font-size:1.08rem;line-height:1.8}.seo-breadcrumb{font-size:.95rem;margin-bottom:10px}.seo-breadcrumb a{text-decoration:none}.related-recipes,.popular-recipes,.cooking-tips,.recipe-faq{margin-top:36px;padding-top:20px;border-top:1px solid #ddd}.related-recipes ul,.popular-recipes ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;padding:0;list-style:none}.related-recipes a,.popular-recipes a{display:block;padding:12px;border-radius:10px;background:#f5f5f5;text-decoration:none;color:inherit}.recipe-note{margin-top:28px;padding:18px;border-radius:14px;background:#f8f8f8;line-height:1.8}.recipe-faq h3{font-size:1.05rem;margin:20px 0 6px}.recipe-faq p{line-height:1.75}.seo-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.seo-site-footer a{color:#fff}@media(max-width:620px){.seo-site-nav{align-items:flex-start;flex-direction:column}.seo-site-links{gap:10px}.seo-recipe{margin-top:16px;padding:18px}}
+    .seo-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.seo-site-nav{max-width:1000px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.seo-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.seo-site-links{display:flex;flex-wrap:wrap;gap:14px}.seo-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.seo-recipe{max-width:900px;margin:36px auto 50px;padding:24px}.seo-recipe figure{margin:24px 0}.seo-recipe img{display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:540px;object-fit:cover;border-radius:18px;background:#f3f3f3}.seo-recipe figcaption{margin-top:8px;color:#666;font-size:.9rem;text-align:center}.seo-recipe h1{font-size:clamp(2rem,5vw,3.4rem);margin:22px 0 10px}.seo-recipe h2{margin-top:30px}.seo-recipe li{margin:10px 0;line-height:1.7}.seo-meta{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0}.seo-meta time{font-weight:700}.seo-back{display:inline-block;margin:15px 0}.seo-desc{font-size:1.08rem;line-height:1.8}.seo-breadcrumb{font-size:.95rem;margin-bottom:10px}.seo-breadcrumb a{text-decoration:none}.related-recipes,.popular-recipes,.cooking-tips,.recipe-guide,.recipe-faq{margin-top:36px;padding-top:20px;border-top:1px solid #ddd}.related-recipes ul,.popular-recipes ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;padding:0;list-style:none}.related-recipes a,.popular-recipes a{display:block;padding:12px;border-radius:10px;background:#f5f5f5;text-decoration:none;color:inherit}.recipe-note{margin-top:28px;padding:18px;border-radius:14px;background:#f8f8f8;line-height:1.8}.recipe-faq h3{font-size:1.05rem;margin:20px 0 6px}.recipe-faq p,.recipe-guide p{line-height:1.75}.seo-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.seo-site-footer a{color:#fff}@media(max-width:620px){.seo-site-nav{align-items:flex-start;flex-direction:column}.seo-site-links{gap:10px}.seo-recipe{margin-top:16px;padding:18px}}
   </style>
 </head>
 <body>
@@ -221,12 +249,19 @@
         <span>⏱ <time datetime="{{ total_duration }}">{{ recipe.time }}</time></span>
         {% if recipe.serves %}<strong>👥 Serves {{ recipe.serves }}</strong>{% endif %}
         <strong>★ {{ recipe.rating }}</strong>
+        <span>Updated <time datetime="2026-09-18">18 September 2026</time></span>
         <strong><a href="{{ category_slug }}/">{{ recipe.category }} Recipes</a></strong>
       </div>
       <h2>Ingredients for {{ recipe.name }}</h2>
       <ul>{% for item in recipe.ingredients %}<li>{{ item }}</li>{% endfor %}</ul>
       <h2>How to Make {{ recipe.name }}</h2>
       <ol>{% for step in recipe.method %}<li id="step-{{ forloop.index }}">{{ step }}</li>{% endfor %}</ol>
+      <section class="recipe-guide">
+        <h2>Helpful Notes for {{ recipe.name }}</h2>
+        <p>Read the full method before starting, measure the ingredients, and complete any chopping, soaking or marinating first. This makes {{ recipe.name }} easier to cook and helps every stage finish at the right time.</p>
+        <p>{{ technique_note }}</p>
+        <p>{{ storage_note }}</p>
+      </section>
       <section class="cooking-tips">
         <h2>{{ recipe.name }} Cooking Tips</h2>
         <ul><li>{{ tip_one }}</li><li>{{ tip_two }}</li><li>{{ tip_three }}</li></ul>
@@ -267,6 +302,6 @@
       <p><a class="seo-back" href="index.html">← All Pakistani recipes</a></p>
     </article>
   </main>
-  <footer class="seo-site-footer"><p>© 2026 Pakistan Food · <a href="../image-credits.html">Image credits</a></p></footer>
+  <footer class="seo-site-footer"><p>© 2026 Pakistan Food · <a href="../sitemap.html">Recipe sitemap</a> · <a href="../image-credits.html">Image credits</a></p></footer>
 </body>
 </html>

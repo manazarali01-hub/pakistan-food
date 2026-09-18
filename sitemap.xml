@@ -2,18 +2,19 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/rice/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chicken-biryani.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/chicken/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chicken-karahi.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/beef/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/nihari.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/bbq/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chapli-kebab.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/snacks/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/samosa.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/breakfast/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/aloo-paratha.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/desserts/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/kheer.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/drinks/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/mango-lassi.webp</image:loc></image:image></url>
-  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/vegetarian/</loc><image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/assets/chana-masala.webp</image:loc></image:image></url>
-{% for recipe_pair in site.data.recipes %}{% assign recipe = recipe_pair[1] %}  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html</loc>{% unless recipe.image contains 'http://' or recipe.image contains 'https://' %}<image:image><image:loc>https://manazarali01-hub.github.io/pakistan-food/{{ recipe.image }}</image:loc></image:image>{% endunless %}</url>
-{% endfor %}  <url><loc>https://manazarali01-hub.github.io/pakistan-food/image-credits.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/sitemap.html</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/rice/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/chicken/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/beef/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/bbq/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/snacks/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/breakfast/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/desserts/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/drinks/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/vegetarian/</loc><lastmod>2026-09-18</lastmod></url>
+{% for recipe_pair in site.data.recipes %}  <url><loc>https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html</loc><lastmod>2026-09-18</lastmod></url>
+{% endfor %}  <url><loc>https://manazarali01-hub.github.io/pakistan-food/image-credits.html</loc><lastmod>2026-09-13</lastmod></url>
 </urlset>

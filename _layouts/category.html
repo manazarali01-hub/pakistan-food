@@ -22,6 +22,17 @@
 {% assign category_seo_image = 'https://manazarali01-hub.github.io/pakistan-food/' | append: category_image %}
 {% assign meta_description = page.meta_description | default: 'Explore authentic Pakistani recipes with ingredients and easy step-by-step cooking methods.' %}
 {% assign intro = page.intro | default: 'Discover authentic Pakistani recipes with simple ingredients and clear cooking instructions.' %}
+{% case category_slug %}
+  {% when 'rice' %}{% assign category_focus = 'Pakistani rice dishes reward careful washing, measured liquid and a short resting time. Start with biryani or pulao, prepare the masala before the rice finishes, and fold the grains gently so they remain separate and fragrant.' %}
+  {% when 'chicken' %}{% assign category_focus = 'Pakistani chicken recipes range from tomato-rich karahi to creamy handi and spiced BBQ. Cut pieces evenly, cook the masala until glossy, and check the thickest pieces before serving so the chicken stays tender and fully cooked.' %}
+  {% when 'beef' %}{% assign category_focus = 'Pakistani beef dishes develop their best flavour with browning and patient cooking. Use steady heat, allow tougher cuts to become tender, and reduce the gravy at the end instead of adding too much liquid.' %}
+  {% when 'bbq' %}{% assign category_focus = 'Pakistani BBQ depends on balanced marinades and steady heat. Keep pieces similar in size, remove excess marinade before cooking, and rest the meat briefly before serving with chutney, salad or fresh naan.' %}
+  {% when 'snacks' %}{% assign category_focus = 'Pakistani snacks are best when fillings and chutneys are prepared before frying or assembly begins. Keep the oil temperature steady, drain fried items briefly, and serve them fresh for the crispest texture.' %}
+  {% when 'breakfast' %}{% assign category_focus = 'Pakistani breakfast recipes are hearty and designed to be served warm. Prepare dough, fillings and accompaniments first, use moderate heat, and bring everything to the table with chai, yogurt, pickle or chutney.' %}
+  {% when 'desserts' %}{% assign category_focus = 'Pakistani desserts often rely on gentle heat, careful measuring and patient stirring. Reduce milk or syrup slowly, prevent sticking, and add cardamom, saffron or nuts near the end so their fragrance stays fresh.' %}
+  {% when 'drinks' %}{% assign category_focus = 'Pakistani drinks include cooling lassi and sharbat as well as warming chai. Use fresh ingredients, adjust sweetness gradually, and blend, whisk or brew shortly before serving for the best flavour and texture.' %}
+  {% when 'vegetarian' %}{% assign category_focus = 'Pakistani vegetarian cooking builds flavour with onions, tomatoes, herbs and toasted spices. Prepare vegetables before heating the pan and avoid overcooking delicate ingredients so their colour and texture remain appealing.' %}
+{% endcase %}
 {% capture canonical_url %}https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/{% endcapture %}
 <!doctype html>
 <html lang="en">
@@ -33,6 +44,7 @@
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="theme-color" content="#b21f2d">
   <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="sitemap" type="application/xml" href="https://manazarali01-hub.github.io/pakistan-food/sitemap.xml">
   <link rel="icon" href="../../assets/pakistan-food-logo.png" type="image/png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_PK">
@@ -144,6 +156,7 @@
     <section class="cat-guide">
       <h2>Cooking Pakistani {{ category_name }} Recipes</h2>
       <p>These recipes are designed for home cooking with familiar ingredients and straightforward methods. Read the complete recipe before starting, prepare ingredients in advance, and adjust chilli, salt and cooking time according to your taste and equipment.</p>
+      <p>{{ category_focus }}</p>
       <ul>
         <li>Choose a recipe above to see the full ingredients and method.</li>
         <li>Use fresh ingredients and measure spices before cooking.</li>
@@ -154,6 +167,6 @@
     <nav class="category-nav" aria-label="Other recipe categories"><a href="../rice/">Rice</a><a href="../chicken/">Chicken</a><a href="../beef/">Beef</a><a href="../bbq/">BBQ</a><a href="../snacks/">Snacks</a><a href="../breakfast/">Breakfast</a><a href="../desserts/">Desserts</a><a href="../drinks/">Drinks</a><a href="../vegetarian/">Vegetarian</a></nav>
     <p><a href="../index.html">← Browse all Pakistani recipes</a></p>
   </main>
-  <footer class="cat-site-footer"><p>© 2026 Pakistan Food · <a href="../../image-credits.html">Image credits</a></p></footer>
+  <footer class="cat-site-footer"><p>© 2026 Pakistan Food · <a href="../../sitemap.html">Recipe sitemap</a> · <a href="../../image-credits.html">Image credits</a></p></footer>
 </body>
 </html>
