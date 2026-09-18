@@ -159,8 +159,6 @@
         "url": "{{ canonical_url }}",
         "name": {{ recipe.name | append: ' Recipe | Authentic Pakistani Food' | jsonify }},
         "description": {{ recipe.description | jsonify }},
-        "datePublished": "2026-09-13",
-        "dateModified": "2026-09-18",
         "isPartOf": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#website"},
         "primaryImageOfPage": {
           "@type": "ImageObject",
@@ -178,8 +176,6 @@
         "@id": "{{ canonical_url }}#recipe",
         "name": {{ recipe.name | jsonify }},
         "description": {{ recipe.description | jsonify }},
-        "datePublished": "2026-09-13",
-        "dateModified": "2026-09-18",
         "image": {"@id": "{{ canonical_url }}#primaryimage"},
         "url": "{{ canonical_url }}",
         "mainEntityOfPage": {"@id": "{{ canonical_url }}#webpage"},
@@ -187,7 +183,7 @@
         "recipeCuisine": "Pakistani",
         "recipeCategory": {{ recipe.category | jsonify }},
         "totalTime": "{{ total_duration }}",
-        {% if recipe.serves %}"recipeYield": {{ recipe.serves | append: ' servings' | jsonify }},{% endif %}
+        {% if recipe.serves %}"recipeYield": {{ recipe.serves | jsonify }},{% endif %}
         "keywords": {{ recipe.name | append: ', homemade, traditional, easy' | jsonify }},
         "recipeIngredient": {{ recipe.ingredients | jsonify }},
         "recipeInstructions": [
