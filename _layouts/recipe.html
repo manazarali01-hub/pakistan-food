@@ -1,10 +1,6 @@
 {% assign recipe = site.data.recipes[page.recipe_key] %}
 {% capture canonical_url %}https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html{% endcapture %}
-{% assign meta_description = recipe.description | strip_html | strip %}
-{% assign meta_description_length = meta_description | size %}
-{% if meta_description_length < 80 %}
-  {% capture meta_description %}{{ meta_description }} Get the ingredients, cooking time and easy step-by-step method.{% endcapture %}
-{% endif %}
+{% capture meta_description %}{{ recipe.description | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %} and serves {{ recipe.serves }}{% endif %}. See ingredients and the easy step-by-step method.{% endcapture %}
 {% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
   {% assign display_image = recipe.image %}
   {% assign seo_image = recipe.image | replace: 'Special:Redirect/file/', 'Special:FilePath/' %}
@@ -13,6 +9,13 @@
   {% assign seo_image = 'https://manazarali01-hub.github.io/pakistan-food/' | append: recipe.image %}
 {% endif %}
 {% assign category_slug = recipe.category | downcase %}
+{% assign schema_recipe_category = 'Main course' %}
+{% case recipe.category %}
+  {% when 'Snacks' %}{% assign schema_recipe_category = 'Snack' %}
+  {% when 'Breakfast' %}{% assign schema_recipe_category = 'Breakfast' %}
+  {% when 'Desserts' %}{% assign schema_recipe_category = 'Dessert' %}
+  {% when 'Drinks' %}{% assign schema_recipe_category = 'Drink' %}
+{% endcase %}
 {% assign time_number = recipe.time | split: ' ' | first %}
 {% capture total_duration %}PT{{ time_number }}{% if recipe.time contains 'hr' %}H{% else %}M{% endif %}{% endcapture %}
 {% assign fallback = '' %}
@@ -158,7 +161,7 @@
         "@id": "{{ canonical_url }}#webpage",
         "url": "{{ canonical_url }}",
         "name": {{ recipe.name | append: ' Recipe | Authentic Pakistani Food' | jsonify }},
-        "description": {{ recipe.description | jsonify }},
+        "description": {{ meta_description | strip | jsonify }},
         "isPartOf": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#website"},
         "primaryImageOfPage": {
           "@type": "ImageObject",
@@ -181,7 +184,7 @@
         "mainEntityOfPage": {"@id": "{{ canonical_url }}#webpage"},
         "author": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#organization"},
         "recipeCuisine": "Pakistani",
-        "recipeCategory": {{ recipe.category | jsonify }},
+        "recipeCategory": {{ schema_recipe_category | jsonify }},
         "totalTime": "{{ total_duration }}",
         {% if recipe.serves %}"recipeYield": {{ recipe.serves | jsonify }},{% endif %}
         "keywords": {{ recipe.name | append: ', homemade, traditional, easy' | jsonify }},
@@ -244,8 +247,6 @@
       <div class="seo-meta">
         <span>⏱ <time datetime="{{ total_duration }}">{{ recipe.time }}</time></span>
         {% if recipe.serves %}<strong>👥 Serves {{ recipe.serves }}</strong>{% endif %}
-        <strong>★ {{ recipe.rating }}</strong>
-        <span>Updated <time datetime="2026-09-18">18 September 2026</time></span>
         <strong><a href="{{ category_slug }}/">{{ recipe.category }} Recipes</a></strong>
       </div>
       <h2>Ingredients for {{ recipe.name }}</h2>
