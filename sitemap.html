@@ -12,6 +12,36 @@ layout: null
   <link rel="canonical" href="https://manazarali01-hub.github.io/pakistan-food/sitemap.html">
   <link rel="sitemap" type="application/xml" href="https://manazarali01-hub.github.io/pakistan-food/sitemap.xml">
   <link rel="icon" href="assets/pakistan-food-logo.png" type="image/png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://manazarali01-hub.github.io/pakistan-food/sitemap.html#webpage",
+        "url": "https://manazarali01-hub.github.io/pakistan-food/sitemap.html",
+        "name": "Recipe Sitemap | Pakistan Food",
+        "description": "A complete A–Z directory of authentic Pakistani recipes and recipe categories available on Pakistan Food.",
+        "dateModified": "2026-09-18"
+      },
+      {
+        "@type": "ItemList",
+        "name": "All Pakistani Recipes",
+        "numberOfItems": {{ site.data.recipes | size }},
+        "itemListElement": [
+          {% for recipe_pair in site.data.recipes %}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "name": {{ recipe_pair[1].name | jsonify }},
+            "url": "https://manazarali01-hub.github.io/pakistan-food/recipes/{{ recipe_pair[0] }}.html"
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
     :root{color-scheme:light;font-family:Arial,sans-serif;color:#26211d;background:#fffaf4}body{margin:0}.wrap{max-width:1050px;margin:auto;padding:28px 22px 50px}header,footer{background:#26211d;color:#fff}header .wrap,footer .wrap{padding-top:18px;padding-bottom:18px}header a,footer a{color:#fff}.brand{font-weight:800;text-decoration:none}.crumb{margin:20px 0}.intro{max-width:760px;line-height:1.75}.categories,.recipes{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;padding:0;list-style:none}.categories a,.recipes a{display:block;padding:13px 14px;border:1px solid #eadfd2;border-radius:10px;background:#fff;color:#6f1721;text-decoration:none}.categories a:hover,.recipes a:hover{text-decoration:underline}h1{font-size:clamp(2rem,5vw,3.1rem)}h2{margin-top:34px}
   </style>
@@ -22,6 +52,7 @@ layout: null
     <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › Recipe sitemap</nav>
     <h1>Pakistan Food Recipe Sitemap</h1>
     <p class="intro">Use this complete directory to reach every recipe and category on Pakistan Food. Recipes are listed alphabetically and each page contains ingredients, cooking time, serving information, practical tips and a step-by-step method.</p>
+    <p class="intro">Browse by category when you want to compare similar dishes, or use the A–Z list to open a specific favourite. The collection covers rice, chicken, beef, BBQ, snacks, breakfast, desserts, drinks and vegetarian food from Pakistani home cooking. Each link leads to a permanent, indexable recipe page, while the XML sitemap gives search engines the same complete set of URLs for efficient discovery.</p>
     <h2>Recipe Categories</h2>
     <ul class="categories">
       <li><a href="recipes/rice/">Rice Recipes</a></li>
