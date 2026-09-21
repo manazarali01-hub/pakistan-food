@@ -194,6 +194,7 @@
           {
             "@type": "HowToStep",
             "position": {{ forloop.index }},
+            "name": {{ step | truncatewords: 6 | jsonify }},
             "text": {{ step | jsonify }},
             "url": "{{ canonical_url }}#step-{{ forloop.index }}"
           }{% unless forloop.last %},{% endunless %}
