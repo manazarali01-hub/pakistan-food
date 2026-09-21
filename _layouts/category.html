@@ -39,6 +39,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% if site.adsense_client and site.adsense_client != "" %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
+  {% endif %}
   <title>{{ category_name }} Recipes | Authentic Pakistani Food</title>
   <meta name="description" content="{{ meta_description | escape }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
@@ -168,6 +171,6 @@
     <nav class="category-nav" aria-label="Other recipe categories"><a href="../rice/">Rice</a><a href="../chicken/">Chicken</a><a href="../beef/">Beef</a><a href="../bbq/">BBQ</a><a href="../snacks/">Snacks</a><a href="../breakfast/">Breakfast</a><a href="../desserts/">Desserts</a><a href="../drinks/">Drinks</a><a href="../vegetarian/">Vegetarian</a></nav>
     <p><a href="../index.html">← Browse all Pakistani recipes</a></p>
   </main>
-  <footer class="cat-site-footer"><p>© 2026 Pakistan Food · <a href="../../sitemap.html">Recipe sitemap</a> · <a href="../../image-credits.html">Image credits</a></p></footer>
+  <footer class="cat-site-footer"><p>© 2026 Pakistan Food · <a href="../../sitemap.html">Recipe sitemap</a> · <a href="../../privacy-policy.html">Privacy Policy</a> · <a href="../../image-credits.html">Image credits</a></p></footer>
 </body>
 </html>
