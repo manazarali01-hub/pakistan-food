@@ -6,5 +6,9 @@ lang: en
 locale: en_PK
 encoding: utf-8
 markdown: kramdown
+
+# Google AdSense client ID. Example: ca-pub-1234567890123456
+# Leave blank until the account-specific ID is available.
+adsense_client: ""
 exclude:
   - README.md
