@@ -108,6 +108,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% if site.adsense_client and site.adsense_client != "" %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
+  {% endif %}
   <title>{{ recipe.name }} Recipe | Authentic Pakistani Food</title>
   <meta name="description" content="{{ meta_description | strip_html | truncate: 155 | escape }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -300,6 +303,6 @@
       <p><a class="seo-back" href="index.html">← All Pakistani recipes</a></p>
     </article>
   </main>
-  <footer class="seo-site-footer"><p>© 2026 Pakistan Food · <a href="../sitemap.html">Recipe sitemap</a> · <a href="../image-credits.html">Image credits</a></p></footer>
+  <footer class="seo-site-footer"><p>© 2026 Pakistan Food · <a href="../sitemap.html">Recipe sitemap</a> · <a href="../privacy-policy.html">Privacy Policy</a> · <a href="../image-credits.html">Image credits</a></p></footer>
 </body>
 </html>
