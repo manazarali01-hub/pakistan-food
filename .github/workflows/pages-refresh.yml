@@ -62,5 +62,14 @@ jobs:
           assert 'href="recipes/chicken-biryani.html"' in page
           assert 'A good place to begin' in page
           assert '{{ dish.name }}' not in page
+          import json
+          for data in Path('_data/recipes').glob('*.json'):
+              recipe = json.loads(data.read_text())
+              image = recipe['image'].lstrip('/')
+              if image.startswith(('http://', 'https://')):
+                  continue
+              rendered = Path('_site/recipes', data.stem + '.html').read_text()
+              assert f'src="../{image}"' in rendered, data.stem
+              assert f'content="https://pakistanfoodrecipes.top/{image}"' in rendered, data.stem
           print('Featured links and generated recipe data passed.')
           PY
