@@ -11,6 +11,12 @@ DOMAIN = "https://pakistanfoodrecipes.top"
 REQUIRED = ("name", "category", "time", "serves", "image", "description", "ingredients", "method")
 errors = []
 
+try:
+    urdu_names = json.loads((ROOT / "_data/urdu_names.json").read_text(encoding="utf-8"))
+except (OSError, json.JSONDecodeError) as exc:
+    urdu_names = {}
+    errors.append(f"_data/urdu_names.json: {exc}")
+
 recipes = {}
 for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     try:
@@ -25,6 +31,8 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
         errors.append(f"{slug}: missing {', '.join(missing)}")
     if "rating" in recipe:
         errors.append(f"{slug}: rating requires a real review source")
+    if not (recipe.get("name_urdu") or urdu_names.get(slug)):
+        errors.append(f"{slug}: Urdu recipe name is missing")
     if not (ROOT / f"recipes/{slug}.html").is_file():
         errors.append(f"{slug}: permanent recipe page is missing")
     image = str(recipe.get("image", ""))
@@ -66,6 +74,13 @@ for sitemap in ("sitemap-v2.xml", "sitemap.xml"):
 
 if len(all_paths) == 2 and set(all_paths[0]) != set(all_paths[1]):
     errors.append("Sitemaps do not list the same pages")
+
+for trust_page in ("privacy-policy.html", "editorial-policy.html", "disclaimer.html", "image-credits.html"):
+    if not (ROOT / trust_page).is_file():
+        errors.append(f"{trust_page}: trust page is missing")
+    for paths in all_paths:
+        if f"/{trust_page}" not in paths:
+            errors.append(f"{trust_page}: missing from sitemap")
 
 if DOMAIN + "/sitemap-v2.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
     errors.append("robots.txt does not point to the main sitemap")
