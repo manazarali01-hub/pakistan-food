@@ -1,0 +1,461 @@
+{
+  "bun-kabab": {
+    "description_ur": "پاکستانی اسٹریٹ فوڈ بن کباب جس میں مسالے دار شامی کباب، انڈا، چٹنیاں، پیاز اور چاٹ مصالحہ شامل ہوتا ہے۔",
+    "ingredients_ur": [
+      "4 برگر بن",
+      "4 شامی کباب",
+      "2 انڈے",
+      "1 پیاز، سلائس کی ہوئی",
+      "ہری چٹنی",
+      "املی کی چٹنی",
+      "چاٹ مصالحہ",
+      "تیل"
+    ],
+    "method_en": [
+      "Prepare all chutneys, sliced onion and buns before cooking so the sandwich can be assembled while the kababs are hot.",
+      "Heat a lightly oiled frying pan over medium heat and shallow-fry the shami kababs for 3–4 minutes per side until browned and heated through.",
+      "Beat the eggs with a pinch of salt. Pour a small portion around each kabab or cook thin omelette rounds, depending on the style you prefer.",
+      "Split the buns and toast the cut sides on the same pan until lightly golden; do not dry them out.",
+      "Spread green chutney on one side and tamarind chutney on the other.",
+      "Place the hot kabab and egg inside, then add sliced onion and a light sprinkle of chaat masala.",
+      "Press the sandwich gently on the pan for 30–60 seconds if you like a warmer, slightly crisp bun.",
+      "Serve immediately while the kabab is hot and the chutneys are fresh."
+    ],
+    "method_ur": [
+      "چٹنیاں، کٹی پیاز اور بن پہلے سے تیار رکھیں تاکہ کباب گرم ہوتے ہی بن کباب فوراً بنایا جا سکے۔",
+      "ہلکا تیل لگے پین میں درمیانی آنچ پر شامی کباب ہر طرف 3 سے 4 منٹ سنہری اور اندر تک گرم ہونے تک فرائی کریں۔",
+      "انڈے میں چٹکی بھر نمک ملا کر پھینٹیں۔ اپنی پسند کے مطابق انڈا کباب کے گرد ڈالیں یا پتلا آملیٹ بنا لیں۔",
+      "بن درمیان سے کاٹیں اور اسی پین پر کٹی سطح ہلکی سنہری ہونے تک ٹوسٹ کریں؛ زیادہ خشک نہ کریں۔",
+      "ایک طرف ہری چٹنی اور دوسری طرف املی کی چٹنی لگائیں۔",
+      "گرم کباب اور انڈا رکھیں، پھر پیاز اور ہلکا چاٹ مصالحہ شامل کریں۔",
+      "چاہیں تو بن کباب کو 30 سے 60 سیکنڈ پین پر ہلکا دبا کر گرم اور قدرے کرسپ کریں۔",
+      "کباب گرم اور چٹنیاں تازہ ہونے کے دوران فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Have all toppings ready before frying the kabab.",
+      "Toast the bun only lightly so it stays soft inside.",
+      "Use chutney in moderation so the bun does not become soggy."
+    ],
+    "tips_ur": [
+      "کباب فرائی کرنے سے پہلے تمام ٹاپنگ تیار رکھیں۔",
+      "بن کو صرف ہلکا ٹوسٹ کریں تاکہ اندر سے نرم رہے۔",
+      "چٹنی مناسب مقدار میں لگائیں تاکہ بن گیلا نہ ہو۔"
+    ],
+    "storage_ur": "تیار بن کباب کو ذخیرہ کرنے کے بجائے تازہ کھائیں۔ کباب الگ فریج میں 2 دن تک رکھے جا سکتے ہیں اور دوبارہ مکمل گرم کیے جائیں۔",
+    "serving_ur": "اضافی چٹنی، پیاز اور چائے یا ٹھنڈے مشروب کے ساتھ پیش کریں۔"
+  },
+  "chana-chaat": {
+    "description_ur": "ابلے چنے، آلو، سبزیوں، املی کی چٹنی اور چاٹ مصالحے سے تیار ہونے والی کھٹی میٹھی پاکستانی چنا چاٹ۔",
+    "ingredients_ur": [
+      "2 کپ ابلے چنے",
+      "2 ابلے آلو",
+      "1 ٹماٹر",
+      "1 پیاز",
+      "2 ہری مرچیں",
+      "2 کھانے کے چمچ املی کی چٹنی",
+      "1 چائے کا چمچ چاٹ مصالحہ",
+      "تازہ ہرا دھنیا"
+    ],
+    "method_en": [
+      "Drain the cooked chickpeas well and let them cool. Cut the boiled potatoes into small, even cubes.",
+      "Finely chop the onion, tomato, green chilies and coriander so every spoonful gets a balanced mix.",
+      "Place the chickpeas and potatoes in a large bowl and toss gently.",
+      "Add onion, tomato and green chilies. Mix only enough to distribute them without crushing the potatoes.",
+      "Add tamarind chutney and chaat masala. Start with less chutney, taste and add more if you want extra tang.",
+      "Fold in fresh coriander and taste for salt, spice and sourness.",
+      "Chill for 10–15 minutes if desired, but do not leave the dressed chaat for too long because the vegetables release water.",
+      "Serve fresh and add extra chutney or chaat masala at the table."
+    ],
+    "method_ur": [
+      "ابلے چنوں کا پانی اچھی طرح نکال کر ٹھنڈا ہونے دیں۔ ابلے آلو چھوٹے برابر کیوبز میں کاٹیں۔",
+      "پیاز، ٹماٹر، ہری مرچ اور ہرا دھنیا باریک کاٹیں تاکہ ہر نوالے میں متوازن ذائقہ آئے۔",
+      "چنے اور آلو بڑے پیالے میں ڈال کر نرمی سے مکس کریں۔",
+      "پیاز، ٹماٹر اور ہری مرچ شامل کریں۔ صرف اتنا ہلائیں کہ سب مل جائے اور آلو نہ ٹوٹیں۔",
+      "املی کی چٹنی اور چاٹ مصالحہ ڈالیں۔ پہلے کم چٹنی ڈالیں، چکھیں اور زیادہ کھٹاس کے لیے ضرورت پر بڑھائیں۔",
+      "ہرا دھنیا شامل کریں اور نمک، مرچ اور کھٹاس چیک کریں۔",
+      "چاہیں تو 10 سے 15 منٹ ٹھنڈا کریں، مگر تیار چاٹ زیادہ دیر نہ رکھیں کیونکہ سبزیاں پانی چھوڑتی ہیں۔",
+      "تازہ سرو کریں اور ساتھ اضافی چٹنی یا چاٹ مصالحہ رکھیں۔"
+    ],
+    "tips_en": [
+      "Drain chickpeas well so the chaat does not become watery.",
+      "Add chutney gradually and taste as you go.",
+      "Mix gently after adding potatoes."
+    ],
+    "tips_ur": [
+      "چنے اچھی طرح خشک کریں تاکہ چاٹ پانی والی نہ ہو۔",
+      "چٹنی تھوڑا تھوڑا ڈال کر ذائقہ چیک کریں۔",
+      "آلو ڈالنے کے بعد نرمی سے مکس کریں۔"
+    ],
+    "storage_ur": "بغیر چٹنی والی تیاری فریج میں 1 دن رکھی جا سکتی ہے؛ چٹنی اور مصالحہ سرو کرنے سے قریب ڈالیں۔",
+    "serving_ur": "ٹھنڈی یا کمرے کے درجہ حرارت پر املی اور ہری چٹنی کے ساتھ پیش کریں۔"
+  },
+  "chicken-pizza": {
+    "description_ur": "نرم گھریلو بیس، مصالحے دار چکن، سبزیوں، پیزا ساس اور پگھلے موزریلا پنیر والا چکن پیزا۔",
+    "ingredients_ur": [
+      "2 کپ میدہ",
+      "1 چائے کا چمچ انسٹنٹ خمیر",
+      "1 چائے کا چمچ چینی",
+      "¾ کپ نیم گرم پانی",
+      "250 گرام بون لیس چکن، پکا اور مصالحہ دار",
+      "½ کپ پیزا ساس",
+      "1½ کپ موزریلا پنیر",
+      "1 چھوٹی شملہ مرچ، سلائس کی ہوئی",
+      "1 چھوٹی پیاز، سلائس کی ہوئی",
+      "اوریگانو، نمک اور کوکنگ آئل"
+    ],
+    "method_en": [
+      "Combine flour, yeast, sugar and salt. Add warm water gradually with a little oil and knead for 8–10 minutes until the dough is soft and smooth.",
+      "Place the dough in a lightly oiled bowl, cover and leave in a warm place until nearly doubled, usually 45–60 minutes.",
+      "Preheat the oven to 220°C. Lightly oil a pizza tray or line it with baking paper.",
+      "Press the risen dough gently to remove large air pockets, then roll or stretch it to fit the tray. Keep the centre slightly thinner than the edge.",
+      "Spread pizza sauce in a thin even layer, leaving a small border. Add the cooked chicken, capsicum and onion.",
+      "Cover with mozzarella and sprinkle oregano over the top. Avoid piling wet toppings too heavily in the centre.",
+      "Bake on a hot oven rack until the crust is golden underneath and the cheese is melted and bubbling, usually 12–18 minutes depending on thickness.",
+      "Rest for 3–5 minutes before slicing so the cheese settles and the base stays neater."
+    ],
+    "method_ur": [
+      "میدہ، خمیر، چینی اور نمک ملائیں۔ نیم گرم پانی آہستہ آہستہ تھوڑے تیل کے ساتھ شامل کر کے 8 سے 10 منٹ نرم اور ہموار آٹا گوندھیں۔",
+      "آٹے کو ہلکا تیل لگے پیالے میں رکھ کر ڈھانپیں اور گرم جگہ پر تقریباً دگنا ہونے تک، عموماً 45 سے 60 منٹ، اٹھنے دیں۔",
+      "اوون 220°C پر پہلے سے گرم کریں۔ پیزا ٹرے پر ہلکا تیل لگائیں یا بیکنگ پیپر بچھائیں۔",
+      "اٹھے آٹے کو ہلکا دبا کر بڑی ہوا نکالیں، پھر ٹرے کے مطابق رول یا ہاتھ سے پھیلائیں۔ درمیان کنارے سے ہلکا پتلا رکھیں۔",
+      "پیزا ساس باریک اور یکساں تہہ میں لگائیں اور کنارے پر تھوڑی جگہ چھوڑیں۔ پکا چکن، شملہ مرچ اور پیاز ڈالیں۔",
+      "موزریلا سے ڈھانپیں اور اوپر اوریگانو چھڑکیں۔ بہت زیادہ گیلی ٹاپنگ درمیان میں جمع نہ کریں۔",
+      "گرم اوون میں اس وقت تک بیک کریں جب تک نیچے سے کرسٹ سنہری اور پنیر پگھل کر بلبلے بنانے لگے، عموماً 12 سے 18 منٹ۔",
+      "کاٹنے سے پہلے 3 سے 5 منٹ آرام دیں تاکہ پنیر سیٹ ہو اور بیس صاف رہے۔"
+    ],
+    "tips_en": [
+      "Use warm, not hot, water for yeast.",
+      "Preheat the oven fully before baking.",
+      "Keep toppings reasonably dry to avoid a soggy centre."
+    ],
+    "tips_ur": [
+      "خمیر کے لیے نیم گرم پانی استعمال کریں، بہت گرم نہیں۔",
+      "پیزا ڈالنے سے پہلے اوون مکمل گرم کریں۔",
+      "بیچ کو گیلا ہونے سے بچانے کے لیے ٹاپنگ زیادہ نم نہ ہو۔"
+    ],
+    "storage_ur": "پیزا فریج میں 2 دن تک رکھیں اور اوون یا پین میں دوبارہ گرم کریں تاکہ کرسٹ بہتر رہے۔",
+    "serving_ur": "گرم گرم چلی فلیکس، کیچپ یا لہسن ڈپ کے ساتھ پیش کریں۔"
+  },
+  "chicken-shawarma": {
+    "description_ur": "مصالحے دار رسیلے چکن، تازہ سبزیوں اور کریمی لہسن ساس کو نرم فلیٹ بریڈ میں لپیٹ کر تیار کیا جانے والا چکن شاورما۔",
+    "ingredients_ur": [
+      "500 گرام چکن",
+      "4 فلیٹ بریڈ",
+      "½ کپ دہی",
+      "1 کھانے کا چمچ لیموں کا رس",
+      "1 چائے کا چمچ زیرہ",
+      "1 چائے کا چمچ پاپریکا",
+      "بند گوبھی اور کھیرا",
+      "لہسن ساس"
+    ],
+    "method_en": [
+      "Slice the chicken into strips of similar thickness so it cooks quickly and evenly.",
+      "Mix yogurt, lemon juice, cumin, paprika and a little salt. Coat the chicken and marinate in the refrigerator for at least 30 minutes.",
+      "Heat a heavy frying pan or grill pan over medium-high heat. Add the chicken in a single layer and cook in batches if necessary.",
+      "Cook for 6–8 minutes, turning the pieces, until browned at the edges and fully cooked through.",
+      "Rest the chicken for 3 minutes, then slice any larger pieces into thin strips.",
+      "Warm the flatbreads briefly so they become flexible. Spread garlic sauce down the centre.",
+      "Add cabbage, cucumber and chicken, keeping the filling away from the edges.",
+      "Fold the sides inward and roll tightly. Toast the seam side briefly on a dry pan if you want a firmer wrap, then serve."
+    ],
+    "method_ur": [
+      "چکن تقریباً برابر موٹائی کی پٹیوں میں کاٹیں تاکہ جلد اور یکساں پکے۔",
+      "دہی، لیموں کا رس، زیرہ، پاپریکا اور تھوڑا نمک ملائیں۔ چکن کو کوٹ کر کم از کم 30 منٹ فریج میں میرینیٹ کریں۔",
+      "بھاری فرائنگ پین یا گرل پین درمیانی سے تیز آنچ پر گرم کریں۔ چکن ایک تہہ میں ڈالیں اور ضرورت ہو تو بیچز میں پکائیں۔",
+      "6 سے 8 منٹ الٹ پلٹ کر پکائیں یہاں تک کہ کنارے براؤن اور چکن اندر تک مکمل پک جائے۔",
+      "چکن کو 3 منٹ آرام دیں، پھر بڑے ٹکڑوں کو باریک پٹیوں میں کاٹ لیں۔",
+      "فلیٹ بریڈ ہلکی گرم کریں تاکہ نرم ہو جائے۔ درمیان میں لہسن ساس لگائیں۔",
+      "بند گوبھی، کھیرا اور چکن رکھیں اور فلنگ کناروں سے دور رکھیں۔",
+      "دونوں سائیڈ اندر موڑ کر مضبوط رول کریں۔ چاہیں تو خشک پین پر جوڑ والی طرف ہلکا ٹوسٹ کریں اور سرو کریں۔"
+    ],
+    "tips_en": [
+      "Cook chicken in batches for better browning.",
+      "Warm flatbread before rolling to prevent cracking.",
+      "Do not overfill the wrap."
+    ],
+    "tips_ur": [
+      "بہتر براؤننگ کے لیے چکن بیچز میں پکائیں۔",
+      "رول سے پہلے فلیٹ بریڈ گرم کریں تاکہ نہ پھٹے۔",
+      "رول میں بہت زیادہ فلنگ نہ بھریں۔"
+    ],
+    "storage_ur": "پکا چکن الگ فریج میں 2 دن تک رکھیں۔ شاورما تازہ اسمبل کرنا بہتر ہے تاکہ بریڈ گیلی نہ ہو۔",
+    "serving_ur": "فرائز، اچار، سلاد اور اضافی لہسن ساس کے ساتھ پیش کریں۔"
+  },
+  "dahi-bhallay": {
+    "description_ur": "نرم ماش دال کے بھلے، ٹھنڈا دہی، املی و پودینے کی چٹنی اور چاٹ مصالحے کے ساتھ تیار ہونے والا پاکستانی دہی بھلے۔",
+    "ingredients_ur": [
+      "1 کپ ماش دال",
+      "2 کپ دہی",
+      "املی کی چٹنی",
+      "پودینے کی چٹنی",
+      "1 چائے کا چمچ چاٹ مصالحہ",
+      "بھنا زیرہ",
+      "نمک",
+      "فرائی کے لیے تیل"
+    ],
+    "method_en": [
+      "Wash and soak the mash daal for 4–6 hours. Drain it very well before grinding.",
+      "Grind the daal with only enough water to make a thick, fluffy batter. Beat the batter for 2–3 minutes to incorporate air.",
+      "Heat oil over medium heat. Drop small spoonfuls of batter into the oil and fry in batches until evenly golden and cooked inside.",
+      "Transfer the fried bhallay to warm water for 8–10 minutes so they soften.",
+      "Lift one at a time and press gently between your palms to remove excess water without flattening them completely.",
+      "Whisk the yogurt with a little salt until smooth. Arrange the bhallay in a serving dish and cover generously with yogurt.",
+      "Drizzle tamarind and mint chutneys over the top, then sprinkle with chaat masala and roasted cumin.",
+      "Chill briefly before serving if desired, but keep the bhallay covered with yogurt so they stay soft."
+    ],
+    "method_ur": [
+      "ماش دال دھو کر 4 سے 6 گھنٹے بھگوئیں۔ پیسنے سے پہلے پانی اچھی طرح نکال دیں۔",
+      "دال کو صرف اتنے پانی کے ساتھ پیسیں کہ گاڑھا اور پھولا ہوا بیٹر بنے۔ بیٹر کو 2 سے 3 منٹ پھینٹیں تاکہ ہوا شامل ہو۔",
+      "درمیانی آنچ پر تیل گرم کریں۔ بیٹر کے چھوٹے چمچ تیل میں ڈال کر بیچز میں یکساں سنہری اور اندر تک پکا ہونے تک فرائی کریں۔",
+      "فرائی شدہ بھلے 8 سے 10 منٹ نیم گرم پانی میں ڈالیں تاکہ نرم ہو جائیں۔",
+      "ایک ایک بھلا نکال کر ہتھیلیوں کے درمیان نرمی سے دبا کر اضافی پانی نکالیں، مکمل چپٹا نہ کریں۔",
+      "دہی میں تھوڑا نمک ڈال کر ہموار پھینٹیں۔ بھلے سرونگ ڈش میں رکھیں اور کافی دہی سے ڈھانپ دیں۔",
+      "اوپر املی اور پودینے کی چٹنی ڈالیں، پھر چاٹ مصالحہ اور بھنا زیرہ چھڑکیں۔",
+      "چاہیں تو تھوڑا ٹھنڈا کریں مگر بھلے دہی سے ڈھکے رہیں تاکہ نرم رہیں۔"
+    ],
+    "tips_en": [
+      "Drain soaked daal well so the batter is not runny.",
+      "Beat the batter for lighter bhallay.",
+      "Squeeze soaked bhallay gently to keep them soft."
+    ],
+    "tips_ur": [
+      "بھیگی دال کا پانی اچھی طرح نکالیں تاکہ بیٹر پتلا نہ ہو۔",
+      "نرم بھلوں کے لیے بیٹر اچھی طرح پھینٹیں۔",
+      "پانی سے نکال کر بھلوں کو نرمی سے دبائیں۔"
+    ],
+    "storage_ur": "دہی میں لگے بھلے فریج میں 1 دن بہترین رہتے ہیں۔ چٹنیاں سرو کرنے سے قریب ڈالیں۔",
+    "serving_ur": "ٹھنڈا سرو کریں اور اوپر اضافی چاٹ مصالحہ یا چٹنی رکھیں۔"
+  },
+  "fruit-chaat": {
+    "description_ur": "مختلف تازہ پھل، لیموں یا سنگترے کے رس اور چاٹ مصالحے سے تیار ہونے والی پاکستانی فروٹ چاٹ۔",
+    "ingredients_ur": [
+      "2 سیب",
+      "2 کیلے",
+      "1 سنگترہ",
+      "1 کپ انگور",
+      "1 امرود",
+      "2 کھانے کے چمچ سنگترے یا لیموں کا رس",
+      "1 چائے کا چمچ چاٹ مصالحہ",
+      "چینی اختیاری"
+    ],
+    "method_en": [
+      "Wash and dry all fruit. Chill it before cutting if you want the finished chaat cold without adding ice.",
+      "Cut apples, guava and orange into similar bite-size pieces. Halve large grapes.",
+      "Slice the bananas last so they spend less time exposed to air.",
+      "Place the firmer fruits in a large bowl first, then add the banana gently.",
+      "Pour over the citrus juice and sprinkle with chaat masala. Add sugar only if the fruit needs extra sweetness.",
+      "Fold gently with a large spoon so soft fruit does not mash.",
+      "Taste and adjust citrus or chaat masala, then chill for 10 minutes if desired.",
+      "Serve soon after mixing for the best colour and texture."
+    ],
+    "method_ur": [
+      "تمام پھل دھو کر خشک کریں۔ اگر بغیر برف کے ٹھنڈی چاٹ چاہیے تو کاٹنے سے پہلے پھل فریج میں ٹھنڈے کر لیں۔",
+      "سیب، امرود اور سنگترہ تقریباً برابر چھوٹے ٹکڑوں میں کاٹیں۔ بڑے انگور آدھے کر لیں۔",
+      "کیلا سب سے آخر میں کاٹیں تاکہ ہوا کے سامنے کم وقت رہے۔",
+      "پہلے سخت پھل بڑے پیالے میں ڈالیں، پھر کیلا نرمی سے شامل کریں۔",
+      "اوپر لیموں یا سنگترے کا رس ڈالیں اور چاٹ مصالحہ چھڑکیں۔ چینی صرف اس صورت میں ڈالیں جب پھل کم میٹھے ہوں۔",
+      "بڑے چمچ سے نرمی سے مکس کریں تاکہ نرم پھل میش نہ ہوں۔",
+      "ذائقہ چیک کر کے مزید رس یا چاٹ مصالحہ ایڈجسٹ کریں، چاہیں تو 10 منٹ ٹھنڈا کریں۔",
+      "بہترین رنگ اور ساخت کے لیے مکس کرنے کے بعد جلد سرو کریں۔"
+    ],
+    "tips_en": [
+      "Cut bananas last to reduce browning.",
+      "Use ripe but firm fruit.",
+      "Serve soon after seasoning because fruit releases juice."
+    ],
+    "tips_ur": [
+      "کیلا آخر میں کاٹیں تاکہ جلد کالا نہ ہو۔",
+      "پکے مگر قدرے مضبوط پھل استعمال کریں۔",
+      "مصالحہ لگنے کے بعد جلد سرو کریں کیونکہ پھل پانی چھوڑتے ہیں۔"
+    ],
+    "storage_ur": "تیار فروٹ چاٹ اسی دن استعمال کریں۔ باقی حصہ فریج میں رکھیں مگر اگلے دن ساخت نرم ہو سکتی ہے۔",
+    "serving_ur": "ٹھنڈی سرو کریں، خاص طور پر رمضان یا گرم موسم میں۔"
+  },
+  "pakistani-samosa": {
+    "description_ur": "مسالے دار آلو، زیرہ اور ہری مرچ سے بھرے کرسپ تکونی پاکستانی سموسے۔",
+    "ingredients_ur": [
+      "2 کپ میدہ اور ڈسٹنگ کے لیے تھوڑا مزید",
+      "4 کھانے کے چمچ تیل آٹے کے لیے",
+      "½ چائے کا چمچ اجوائن",
+      "¾ چائے کا چمچ نمک، تقسیم شدہ",
+      "تقریباً ½ کپ پانی آٹے کے لیے",
+      "3 درمیانے آلو، ابلے اور موٹے میش",
+      "1 کھانے کا چمچ تیل فلنگ کے لیے",
+      "1 چائے کا چمچ زیرہ",
+      "½ چائے کا چمچ کٹی لال مرچ",
+      "2 ہری مرچیں، باریک کٹی ہوئی",
+      "2 کھانے کے چمچ ہرا دھنیا",
+      "1 کھانے کا چمچ لیموں کا رس",
+      "ڈیپ فرائی کے لیے تیل",
+      "سیل کرنے کے لیے 2 کھانے کے چمچ میدہ اور پانی"
+    ],
+    "method_en": [
+      "Rub oil into flour with ajwain and salt until it resembles coarse crumbs. Add water gradually to make a firm dough, cover and rest for 30 minutes.",
+      "For the filling, toast cumin in oil, add chilies and crushed red chili, then mix in potatoes and salt. Cook briefly and finish with coriander and lemon. Cool completely.",
+      "Divide the dough into balls, roll each into a thin oval and cut it in half.",
+      "Form each half into a cone using flour paste to seal the straight edge.",
+      "Fill with cooled potato mixture, leaving room at the top, then seal the opening firmly. Keep shaped samosas covered.",
+      "Heat oil over medium-low heat. Add samosas when the oil bubbles gently around a small dough test piece.",
+      "Fry in small batches for 10–12 minutes, turning occasionally, until deeply golden and crisp.",
+      "Drain well and serve warm with mint or tamarind chutney."
+    ],
+    "method_ur": [
+      "میدہ، اجوائن اور نمک میں تیل اچھی طرح رگڑیں یہاں تک کہ مکسچر موٹے چورے جیسا ہو۔ پانی آہستہ ڈال کر سخت آٹا گوندھیں، ڈھانپ کر 30 منٹ آرام دیں۔",
+      "فلنگ کے لیے تیل میں زیرہ بھونیں، ہری مرچ اور کٹی لال مرچ ڈالیں، پھر آلو اور نمک شامل کریں۔ مختصر پکائیں اور ہرا دھنیا و لیموں ڈال کر مکمل ٹھنڈا کریں۔",
+      "آٹے کے پیڑے بنائیں، ہر ایک کو باریک بیضوی شکل میں بیلیں اور درمیان سے آدھا کریں۔",
+      "ہر آدھے حصے کو میدے کے پیسٹ سے سیدھی کنارے سیل کرتے ہوئے کون بنائیں۔",
+      "ٹھنڈی آلو فلنگ بھریں، اوپر تھوڑی جگہ چھوڑیں اور منہ اچھی طرح بند کریں۔ بنے سموسے ڈھکے رکھیں۔",
+      "تیل درمیانی سے ہلکی آنچ پر گرم کریں۔ جب آٹے کا چھوٹا ٹکڑا آہستہ بلبلے بنائے تو سموسے ڈالیں۔",
+      "چھوٹے بیچز میں 10 سے 12 منٹ الٹ پلٹ کر گہرے سنہری اور کرسپ ہونے تک فرائی کریں۔",
+      "تیل اچھی طرح نکال کر پودینے یا املی کی چٹنی کے ساتھ گرم سرو کریں۔"
+    ],
+    "tips_en": [
+      "Firm rested dough makes a flakier wrapper.",
+      "Cool filling completely before shaping.",
+      "Fry gently; very hot oil browns the outside too fast."
+    ],
+    "tips_ur": [
+      "سخت اور آرام دیا ہوا آٹا زیادہ خستہ پرت بناتا ہے۔",
+      "سموسہ بنانے سے پہلے فلنگ مکمل ٹھنڈی کریں۔",
+      "ہلکی آنچ پر فرائی کریں؛ بہت گرم تیل باہر کو جلد براؤن کر دیتا ہے۔"
+    ],
+    "storage_ur": "پکے سموسے فریج میں 2 دن تک رکھیں اور اوون یا ایئر فرائر میں دوبارہ کرسپ کریں۔",
+    "serving_ur": "ہری یا املی کی چٹنی اور چائے کے ساتھ پیش کریں۔"
+  },
+  "pakora": {
+    "description_ur": "بیسن، آلو، پیاز، ہری مرچ اور مصالحوں سے تیار ہونے والے کرسپ پاکستانی پکوڑے۔",
+    "ingredients_ur": [
+      "2 کپ بیسن",
+      "1 آلو، باریک سلائس",
+      "2 پیاز، سلائس کی ہوئی",
+      "3 ہری مرچیں، کٹی ہوئی",
+      "½ کپ ہرا دھنیا",
+      "1 چائے کا چمچ زیرہ اور ½ چائے کا چمچ اجوائن",
+      "تقریباً ¾ کپ پانی",
+      "نمک اور فرائی کے لیے تیل"
+    ],
+    "method_en": [
+      "Place gram flour in a bowl and mix in cumin, ajwain and salt.",
+      "Add water gradually while whisking until you have a thick batter that coats a spoon; do not pour all the water at once.",
+      "Add sliced onion, thin potato, green chilies and coriander and mix until the vegetables are evenly coated.",
+      "Rest the batter for 10 minutes. If the vegetables release water and the batter becomes thin, add a spoonful of gram flour.",
+      "Heat oil over medium heat. Test with a small drop of batter: it should rise steadily and bubble without turning dark immediately.",
+      "Drop small loose spoonfuls into the oil, leaving space between them.",
+      "Fry in batches, turning once or twice, until deep golden, crisp and the potato inside is tender.",
+      "Drain on a rack or kitchen paper and serve immediately."
+    ],
+    "method_ur": [
+      "بیسن پیالے میں ڈال کر زیرہ، اجوائن اور نمک ملائیں۔",
+      "پانی آہستہ آہستہ پھینٹتے ہوئے شامل کریں یہاں تک کہ گاڑھا بیٹر بنے جو چمچ پر کوٹ ہو؛ سارا پانی ایک ساتھ نہ ڈالیں۔",
+      "پیاز، باریک آلو، ہری مرچ اور ہرا دھنیا شامل کریں اور سبزیوں پر بیٹر اچھی طرح لگائیں۔",
+      "بیٹر 10 منٹ آرام دیں۔ اگر سبزی پانی چھوڑے اور بیٹر پتلا ہو جائے تو ایک چمچ بیسن مزید ڈالیں۔",
+      "درمیانی آنچ پر تیل گرم کریں۔ بیٹر کا چھوٹا قطرہ ڈالیں؛ وہ آہستہ اوپر آئے اور فوراً کالا نہ ہو۔",
+      "چھوٹے ڈھیلے چمچ تیل میں ڈالیں اور ایک دوسرے سے جگہ رکھیں۔",
+      "بیچز میں ایک دو بار پلٹ کر گہرے سنہری، کرسپ اور اندر سے آلو نرم ہونے تک فرائی کریں۔",
+      "ریک یا کچن پیپر پر تیل نکال کر فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Add water gradually for batter control.",
+      "Slice potatoes thinly so they cook before the coating gets too dark.",
+      "Fry in small batches to maintain oil temperature."
+    ],
+    "tips_ur": [
+      "بیٹر کا گاڑھا پن کنٹرول کرنے کے لیے پانی آہستہ ڈالیں۔",
+      "آلو باریک کاٹیں تاکہ باہر زیادہ گہرا ہونے سے پہلے اندر پک جائے۔",
+      "تیل کی گرمی برقرار رکھنے کے لیے چھوٹے بیچز میں فرائی کریں۔"
+    ],
+    "storage_ur": "پکوڑے تازہ بہترین ہیں۔ باقی ہوں تو فریج میں رکھ کر اوون یا ایئر فرائر میں دوبارہ کرسپ کریں۔",
+    "serving_ur": "ہری چٹنی، املی کی چٹنی یا چائے کے ساتھ گرم پیش کریں۔"
+  },
+  "shami-kabab": {
+    "description_ur": "بیف اور چنا دال کو ثابت مصالحوں کے ساتھ پکا کر، پیس کر اور ہرے مصالحوں کے ساتھ بنائے جانے والے نرم پاکستانی شامی کباب۔",
+    "ingredients_ur": [
+      "500 گرام بیف",
+      "1 کپ چنا دال",
+      "1 پیاز",
+      "ثابت مصالحے",
+      "2 ہری مرچیں",
+      "تازہ ہرا دھنیا",
+      "1 انڈا",
+      "نمک"
+    ],
+    "method_en": [
+      "Wash the chana daal and soak it for 30 minutes. Cut the beef into medium pieces.",
+      "Place beef, drained daal, onion, whole spices, salt and enough water to cook in a heavy pot.",
+      "Cook covered until the beef and daal are completely tender, then uncover and cook until the mixture is very dry. Excess water makes soft kababs difficult to shape.",
+      "Cool slightly and remove any large whole spices that should not be ground.",
+      "Grind the meat-and-daal mixture until fine but not pasty. Let it cool completely.",
+      "Mix in chopped green chilies, coriander and egg. Taste a tiny cooked test portion for salt if needed.",
+      "Shape into flat patties with damp hands. Chill for 20 minutes if the mixture feels soft.",
+      "Shallow-fry in a lightly oiled pan over medium heat until golden on both sides and hot throughout."
+    ],
+    "method_ur": [
+      "چنا دال دھو کر 30 منٹ بھگوئیں۔ بیف درمیانے ٹکڑوں میں کاٹیں۔",
+      "بھاری دیگچی میں بیف، پانی نکلی دال، پیاز، ثابت مصالحے، نمک اور پکانے کے لیے مناسب پانی ڈالیں۔",
+      "ڈھک کر گوشت اور دال مکمل نرم ہونے تک پکائیں، پھر ڈھکن ہٹا کر مکسچر بالکل خشک کریں۔ اضافی پانی کباب کو نرم اور شکل دینے میں مشکل بناتا ہے۔",
+      "تھوڑا ٹھنڈا کریں اور ایسے بڑے ثابت مصالحے نکال دیں جنہیں پیسنا مناسب نہ ہو۔",
+      "گوشت اور دال کا مکسچر باریک پیسیں مگر پیسٹ نہ بنائیں۔ مکمل ٹھنڈا ہونے دیں۔",
+      "کٹی ہری مرچ، ہرا دھنیا اور انڈا شامل کریں۔ ضرورت ہو تو ایک چھوٹا ٹیسٹ کباب پکا کر نمک چیک کریں۔",
+      "گیلے ہاتھوں سے چپٹے کباب بنائیں۔ آمیزہ نرم ہو تو 20 منٹ فریج میں رکھیں۔",
+      "ہلکا تیل لگے پین میں درمیانی آنچ پر دونوں طرف سنہری اور اندر تک گرم ہونے تک شالو فرائی کریں۔"
+    ],
+    "tips_en": [
+      "Dry the cooked meat-and-daal mixture thoroughly before grinding.",
+      "Cool the mixture before adding egg.",
+      "Freeze shaped uncooked kababs in a single layer for convenient later use."
+    ],
+    "tips_ur": [
+      "پیسنے سے پہلے گوشت اور دال کا مکسچر اچھی طرح خشک کریں۔",
+      "انڈا ڈالنے سے پہلے مکسچر ٹھنڈا کریں۔",
+      "بنے ہوئے کچے کباب ایک تہہ میں فریز کیے جا سکتے ہیں۔"
+    ],
+    "storage_ur": "پکے شامی کباب فریج میں 2 دن رکھیں؛ کچے بنے کباب مناسب پیکنگ میں فریز بھی کیے جا سکتے ہیں۔",
+    "serving_ur": "چٹنی، پیاز، چائے، پراٹھے یا بن میں پیش کریں۔"
+  },
+  "zinger-burger": {
+    "description_ur": "کرسپی مصالحے دار چکن فِلٹ، لیٹش اور کریمی مایونیز کے ساتھ تیار ہونے والا زنگر برگر۔",
+    "ingredients_ur": [
+      "4 چکن فِلٹس",
+      "4 برگر بن",
+      "1 کپ میدہ",
+      "½ کپ کارن فلور",
+      "1 انڈا",
+      "1 چائے کا چمچ لال مرچ پاؤڈر",
+      "لیٹش",
+      "مایونیز",
+      "فرائی کے لیے تیل"
+    ],
+    "method_en": [
+      "Pat the chicken fillets dry and pound any very thick areas so each fillet cooks evenly.",
+      "Season the chicken with salt and chili powder. Let it rest for 15–20 minutes while you prepare the coating.",
+      "Mix flour and cornflour with a little extra salt and chili if desired. Beat the egg separately.",
+      "Dip each fillet in egg, then press firmly into the flour mixture. For a craggier coating, sprinkle a few drops of egg into the flour and press the rough crumbs onto the chicken.",
+      "Heat frying oil over medium heat. The oil should be hot enough to bubble steadily around the coating but not smoke.",
+      "Fry the chicken in batches until deep golden, crisp and fully cooked through, turning as needed.",
+      "Drain on a rack, not directly in a covered container, so the coating stays crisp.",
+      "Toast the buns lightly, spread mayonnaise, add lettuce and hot chicken, then close and serve immediately."
+    ],
+    "method_ur": [
+      "چکن فِلٹس خشک کریں اور بہت موٹے حصوں کو ہلکا پیٹ کر برابر موٹائی کریں تاکہ یکساں پکیں۔",
+      "چکن پر نمک اور لال مرچ لگائیں۔ کوٹنگ تیار کرتے وقت 15 سے 20 منٹ آرام دیں۔",
+      "میدہ اور کارن فلور میں چاہیں تو مزید نمک اور مرچ ملائیں۔ انڈا الگ پھینٹیں۔",
+      "ہر فِلٹ پہلے انڈے میں اور پھر آٹے کے مکسچر میں اچھی طرح دبائیں۔ زیادہ کرنچی کوٹنگ کے لیے انڈے کے چند قطرے آٹے میں ڈال کر بنے کھردرے ٹکڑے چکن پر دبائیں۔",
+      "درمیانی آنچ پر تیل گرم کریں۔ کوٹنگ کے گرد مستقل بلبلے بنیں مگر تیل دھواں نہ دے۔",
+      "چکن بیچز میں گہرا سنہری، کرسپ اور اندر تک مکمل پکنے تک فرائی کریں اور ضرورت پر پلٹیں۔",
+      "ریک پر تیل نکالیں؛ ڈھکے برتن میں فوراً رکھنے سے کوٹنگ نرم ہو سکتی ہے۔",
+      "بن ہلکا ٹوسٹ کریں، مایونیز لگائیں، لیٹش اور گرم چکن رکھیں اور فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Even fillet thickness helps safe, even cooking.",
+      "Press the coating firmly onto the chicken.",
+      "Drain fried chicken on a rack to preserve crispness."
+    ],
+    "tips_ur": [
+      "برابر موٹائی چکن کو محفوظ اور یکساں پکاتی ہے۔",
+      "کوٹنگ چکن پر مضبوطی سے دبائیں۔",
+      "کرسپنس برقرار رکھنے کے لیے فرائی چکن ریک پر رکھیں۔"
+    ],
+    "storage_ur": "پکا چکن فِلٹ فریج میں 2 دن رکھیں اور اوون یا ایئر فرائر میں دوبارہ گرم کریں۔ برگر تازہ اسمبل کریں۔",
+    "serving_ur": "فرائز، کول سلا، کیچپ یا چلی ساس کے ساتھ پیش کریں۔"
+  }
+}
