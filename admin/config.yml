@@ -19,6 +19,10 @@ collections:
       - label: "Recipe Name"
         name: "name"
         widget: "string"
+      - label: "Recipe Name (Urdu)"
+        name: "name_urdu"
+        widget: "string"
+        required: false
       - label: "Category"
         name: "category"
         widget: "select"
