@@ -506,6 +506,41 @@ function readPreference(key, fallback = null) {
 function savePreference(key, value) {
     try { localStorage.setItem(key, value); } catch { /* Browsing still works without storage. */ }
 }
+
+const RECENT_RECIPES_KEY = "pakistanFoodRecentlyViewed";
+
+function recentRecipeIds() {
+    try {
+        const value = JSON.parse(readPreference(RECENT_RECIPES_KEY, "[]"));
+        return Array.isArray(value) ? value.map(Number).filter(Number.isFinite) : [];
+    } catch {
+        return [];
+    }
+}
+
+function rememberRecentlyViewed(id) {
+    const next = [Number(id), ...recentRecipeIds().filter(item => item !== Number(id))].slice(0, 4);
+    savePreference(RECENT_RECIPES_KEY, JSON.stringify(next));
+    renderRecentlyViewed();
+}
+
+function renderRecentlyViewed() {
+    const section = document.getElementById("recentlyViewed");
+    const grid = document.getElementById("recentGrid");
+    if (!section || !grid) return;
+    const items = recentRecipeIds().map(id => recipes.find(recipe => recipe.id === id)).filter(Boolean);
+    section.hidden = items.length === 0;
+    grid.innerHTML = items.map(recipe => `
+        <a class="recent-card" href="${recipePagePath(recipe)}">
+            <img src="${escapeHtml(recipe.image)}" alt="${escapeHtml(recipe.name)} ready to serve" width="480" height="360" loading="lazy" decoding="async">
+            <span class="recent-card-copy">
+                <strong>${escapeHtml(recipe.name)}</strong>
+                ${recipe.nameUrdu ? `<span class="recipe-name-urdu" lang="ur" dir="rtl">${escapeHtml(recipe.nameUrdu)}</span>` : ""}
+                <small>${escapeHtml(recipe.category)} · ${escapeHtml(recipe.time)}</small>
+            </span>
+        </a>
+    `).join("");
+}
 let favorites = [];
 try {
     const saved = JSON.parse(readPreference("pakistanFoodFavorites", "[]"));
@@ -547,6 +582,7 @@ function renderRecipes() {
 
         const searchableText = [
             recipe.name,
+            recipe.nameUrdu,
             recipe.category,
             recipe.description,
             ...recipe.ingredients,
@@ -645,6 +681,7 @@ function renderRecipes() {
                 </div>
 
                 <h3><a class="recipe-title-link" href="${recipePagePath(recipe)}">${escapeHtml(recipe.name)}</a></h3>
+                ${recipe.nameUrdu ? `<div class="recipe-name-urdu" lang="ur" dir="rtl">${escapeHtml(recipe.nameUrdu)}</div>` : ""}
 
                 <p>
                     ${escapeHtml(recipe.description)}
@@ -863,6 +900,8 @@ function openRecipe(id) {
 
     if (!recipe) return;
 
+    rememberRecentlyViewed(recipe.id);
+
     if (!recipeModal.classList.contains("active")) {
         lastFocusedElement = document.activeElement;
         lastFocusedRecipeId = document.activeElement?.matches?.('[data-recipe]') ? id : null;
@@ -888,6 +927,7 @@ function openRecipe(id) {
             </span>
 
             <h2 id="modalRecipeTitle">${escapeHtml(recipe.name)}</h2>
+            ${recipe.nameUrdu ? `<p class="recipe-title-urdu" lang="ur" dir="rtl">${escapeHtml(recipe.nameUrdu)}</p>` : ""}
 
             <a class="modal-full-recipe" href="${recipePagePath(recipe)}">
                 Open the permanent recipe page →
@@ -1214,6 +1254,7 @@ document.getElementById("year").textContent =
 ===================================== */
 
 renderRecipes();
+renderRecentlyViewed();
 
 function openRecipeFromHash() {
 
