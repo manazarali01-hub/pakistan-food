@@ -1,0 +1,32 @@
+{
+  "id": 57,
+  "name": "Pakistani Paya",
+  "category": "Beef",
+  "time": "5 hrs",
+  "serves": 6,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paya_Curry.JPG?width=900",
+  "description": "Traditional Pakistani paya curry with slow-cooked beef trotters in a deeply spiced, silky gravy, served with naan and fresh ginger.",
+  "ingredients": [
+    "4 cleaned beef trotters, cut into pieces",
+    "2 onions, sliced",
+    "2 tomatoes, chopped",
+    "2 tbsp ginger-garlic paste",
+    "2 tsp coriander powder",
+    "1 tsp cumin powder",
+    "1 tsp red chili powder",
+    "½ tsp turmeric",
+    "1 tsp garam masala",
+    "8 cups water",
+    "⅓ cup cooking oil",
+    "Salt to taste",
+    "Fresh ginger, coriander, green chilies and lemon for serving"
+  ],
+  "method": [
+    "Rinse the cleaned trotters thoroughly and drain.",
+    "Heat oil and brown the onions, then add ginger-garlic paste, tomatoes and spices.",
+    "Add the trotters and cook with the masala for 8 to 10 minutes.",
+    "Add water, cover and simmer gently until the trotters are tender and the broth becomes rich and gelatinous.",
+    "Remove excess fat from the surface if desired and simmer uncovered to adjust the gravy.",
+    "Finish with garam masala and serve with ginger, coriander, green chilies and lemon."
+  ]
+}
