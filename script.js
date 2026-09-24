@@ -629,9 +629,7 @@ function renderRecipes() {
                         👥 ${recipe.serves}
                     </span>
 
-                    <span class="recipe-rating">
-                        ★ ${recipe.rating}
-                    </span>
+                    ${recipe.rating ? `<span class="recipe-rating">★ ${recipe.rating}</span>` : ""}
 
                 </div>
 
