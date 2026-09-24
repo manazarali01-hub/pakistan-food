@@ -18,6 +18,9 @@ content:
         label: Recipe Name
         type: string
         required: true
+      - name: name_urdu
+        label: Recipe Name (Urdu)
+        type: string
       - name: category
         label: Category
         type: select
