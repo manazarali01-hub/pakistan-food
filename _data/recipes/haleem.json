@@ -1,0 +1,33 @@
+{
+  "id": 56,
+  "name": "Pakistani Haleem",
+  "category": "Beef",
+  "time": "4 hrs",
+  "serves": 8,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Haleem.JPG?width=900",
+  "description": "Slow-cooked Pakistani haleem made with beef, wheat, barley and mixed lentils, finished with fried onions, ginger, lemon and fresh herbs.",
+  "ingredients": [
+    "750 g beef, boneless or shank pieces",
+    "1 cup cracked wheat",
+    "¼ cup barley",
+    "¼ cup chana dal",
+    "¼ cup masoor dal",
+    "¼ cup moong dal",
+    "2 onions, thinly sliced",
+    "2 tbsp ginger-garlic paste",
+    "2 tbsp haleem masala",
+    "1 tsp red chili powder",
+    "½ tsp turmeric",
+    "Salt and cooking oil",
+    "Fried onions, ginger, coriander and lemon for serving"
+  ],
+  "method": [
+    "Wash the wheat, barley and lentils, then soak them for 1 hour.",
+    "Cook the grains and lentils in plenty of water until very soft.",
+    "In another pot, fry onions, add ginger-garlic paste, beef and spices, then cook until the beef is tender.",
+    "Shred the cooked beef and return it to the masala.",
+    "Blend or mash the cooked grains until thick and smooth, then combine them with the beef mixture.",
+    "Cook on low heat, stirring regularly, until the haleem becomes glossy and stretchy.",
+    "Serve hot with fried onions, julienned ginger, coriander and lemon."
+  ]
+}
