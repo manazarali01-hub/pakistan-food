@@ -1,0 +1,31 @@
+{
+  "id": 62,
+  "name": "Daal Mash",
+  "category": "Vegetarian",
+  "time": "50 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dal_Chana_Aur_Mash_Ki_Dal.JPG?width=900",
+  "description": "Comforting Pakistani daal mash made with split urad lentils, tomatoes, ginger and a fragrant cumin-garlic tarka.",
+  "ingredients": [
+    "1½ cups split urad dal (mash dal)",
+    "1 onion, finely chopped",
+    "2 tomatoes, chopped",
+    "1 tbsp ginger, julienned",
+    "3 garlic cloves, sliced",
+    "2 green chilies",
+    "1 tsp cumin seeds",
+    "1 tsp red chili powder",
+    "½ tsp turmeric",
+    "½ tsp garam masala",
+    "3 tbsp cooking oil or ghee",
+    "Salt and fresh coriander"
+  ],
+  "method": [
+    "Wash the mash dal well and soak it for 30 minutes.",
+    "Cook the dal with fresh water, turmeric and salt until tender but not completely mushy.",
+    "In a separate pan, heat oil and fry cumin, garlic and onion until golden.",
+    "Add tomatoes, red chili and green chilies and cook until the masala softens.",
+    "Stir the cooked dal into the masala and simmer until thick and creamy.",
+    "Finish with garam masala, julienned ginger and fresh coriander."
+  ]
+}
