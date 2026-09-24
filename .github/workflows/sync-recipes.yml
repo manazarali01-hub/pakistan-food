@@ -1,0 +1,46 @@
+name: Sync new CMS recipes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_data/recipes/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create missing recipe pages and sitemap entries
+        run: |
+          python3 scripts/sync_recipes.py
+          python3 scripts/verify_site.py
+      - name: Save new recipe pages
+        id: save
+        run: |
+          git add recipes/ sitemap.xml sitemap-v2.xml
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Publish new CMS recipe pages'
+            git push
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      # A GITHUB_TOKEN commit does not trigger branch-based Pages publishing.
+      - name: Request Pages build for newly added recipes
+        if: steps.save.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl --fail-with-body --silent --show-error --request POST \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/pages/builds"

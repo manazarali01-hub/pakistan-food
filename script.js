@@ -15,7 +15,6 @@ const defaultRecipes = [
         name: "Chicken Biryani",
         category: "Rice",
         time: "60 min",
-        rating: "4.9",
         serves: 6,
         image: "assets/chicken-biryani.webp?v=20260912-fast2",
         description: "Aromatic basmati rice layered with spicy chicken, fried onions and traditional Pakistani spices.",
@@ -45,7 +44,6 @@ const defaultRecipes = [
         name: "Chicken Pulao",
         category: "Rice",
         time: "50 min",
-        rating: "4.8",
         serves: 5,
         image: "assets/chicken-pulao.webp?v=20260912-fast2",
         description: "Fragrant Pakistani pulao prepared with tender chicken and aromatic whole spices.",
@@ -73,7 +71,6 @@ const defaultRecipes = [
         name: "Chicken Karahi",
         category: "Chicken",
         time: "45 min",
-        rating: "4.9",
         serves: 4,
         image: "assets/chicken-karahi.webp?v=20260912-fast2",
         description: "Classic Pakistani chicken karahi cooked with tomatoes, green chilies and fresh ginger.",
@@ -101,7 +98,6 @@ const defaultRecipes = [
         name: "Chicken Handi",
         category: "Chicken",
         time: "45 min",
-        rating: "4.7",
         serves: 4,
         image: "assets/chicken-handi.webp?v=20260912-fast2",
         description: "Creamy and rich chicken handi with a delicious blend of Pakistani spices.",
@@ -130,7 +126,6 @@ const defaultRecipes = [
         name: "Beef Nihari",
         category: "Beef",
         time: "4 hrs",
-        rating: "4.9",
         serves: 6,
         image: "assets/nihari.webp?v=20260912-fast2",
         description: "Slow-cooked Pakistani beef stew with deep spices and rich traditional flavour.",
@@ -158,7 +153,6 @@ const defaultRecipes = [
         name: "Seekh Kabab",
         category: "BBQ",
         time: "40 min",
-        rating: "4.8",
         serves: 5,
         image: "assets/seekh-kebab.webp?v=20260912-fast2",
         description: "Juicy minced-meat seekh kababs seasoned with traditional Pakistani spices.",
@@ -186,7 +180,6 @@ const defaultRecipes = [
         name: "Chapli Kabab",
         category: "BBQ",
         time: "35 min",
-        rating: "4.8",
         serves: 5,
         image: "assets/chapli-kebab.webp?v=20260912-fast2",
         description: "Famous Pashtun-style flat kababs packed with spices, herbs and rich flavour.",
@@ -214,7 +207,6 @@ const defaultRecipes = [
         name: "Pakistani Samosa",
         category: "Snacks",
         time: "45 min",
-        rating: "4.8",
         serves: 6,
         image: "assets/samosa.webp?v=20260912-fast2",
         description: "Crispy golden samosas filled with a delicious spicy potato mixture.",
@@ -242,7 +234,6 @@ const defaultRecipes = [
         name: "Pakora",
         category: "Snacks",
         time: "25 min",
-        rating: "4.7",
         serves: 6,
         image: "assets/pakora.webp?v=20260912-fast2",
         description: "Crispy Pakistani pakoras perfect for rainy evenings and Ramadan iftar.",
@@ -270,7 +261,6 @@ const defaultRecipes = [
         name: "Aloo Paratha",
         category: "Breakfast",
         time: "30 min",
-        rating: "4.9",
         serves: 4,
         image: "assets/aloo-paratha.webp?v=20260912-fast2",
         description: "Crispy stuffed potato paratha served with yogurt, pickle or chai.",
@@ -298,7 +288,6 @@ const defaultRecipes = [
         name: "Halwa Puri",
         category: "Breakfast",
         time: "45 min",
-        rating: "4.9",
         serves: 5,
         image: "assets/halwa-puri.webp?v=20260912-fast2",
         description: "Traditional Pakistani breakfast of fluffy puris served with sweet halwa and chickpea curry.",
@@ -327,7 +316,6 @@ const defaultRecipes = [
         name: "Rice Kheer",
         category: "Desserts",
         time: "60 min",
-        rating: "4.8",
         serves: 6,
         image: "assets/kheer.webp?v=20260912-fast2",
         description: "Traditional creamy Pakistani rice pudding flavored with cardamom and nuts.",
@@ -354,7 +342,6 @@ const defaultRecipes = [
         name: "Gulab Jamun",
         category: "Desserts",
         time: "40 min",
-        rating: "4.9",
         serves: 8,
         image: "assets/gulab-jamun.webp?v=20260912-fast2",
         description: "Soft golden milk-solid dumplings soaked in sweet fragrant sugar syrup.",
@@ -382,7 +369,6 @@ const defaultRecipes = [
         name: "Daal Chawal",
         category: "Rice",
         time: "45 min",
-        rating: "4.7",
         serves: 4,
         image: "assets/daal-chawal.webp?v=20260912-fast2",
         description: "Simple and comforting Pakistani daal served with steamed rice and achaar.",
@@ -410,7 +396,6 @@ const defaultRecipes = [
         name: "Beef Pulao",
         category: "Rice",
         time: "75 min",
-        rating: "4.8",
         serves: 6,
         image: "assets/beef-pulao.webp?v=20260912-fast2",
         description: "Aromatic beef pulao prepared with fragrant rice and traditional whole spices.",
@@ -629,7 +614,6 @@ function renderRecipes() {
                         👥 ${recipe.serves}
                     </span>
 
-                    ${recipe.rating ? `<span class="recipe-rating">★ ${recipe.rating}</span>` : ""}
 
                 </div>
 
@@ -873,7 +857,7 @@ function openRecipe(id) {
         <div class="modal-body">
 
             <span class="section-label">
-                ${recipe.category} • ${recipe.time} • Serves ${recipe.serves} • ★ ${recipe.rating}
+                ${recipe.category} • ${recipe.time} • Serves ${recipe.serves}
             </span>
 
             <h2 id="modalRecipeTitle">${recipe.name}</h2>
@@ -989,6 +973,21 @@ document.addEventListener("keydown", event => {
             menuBtn.focus();
         }
 
+    }
+
+    if (event.key === "Tab" && recipeModal.classList.contains("active")) {
+        const controls = [...recipeModal.querySelectorAll('a[href], button:not([disabled]), input:not([disabled])')]
+            .filter(element => element.getClientRects().length);
+        if (!controls.length) return;
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
     }
 
 });
