@@ -2,7 +2,9 @@
 ---
 window.PAKISTAN_FOOD_RECIPES = [
 {% for recipe_pair in site.data.recipes %}
-  Object.assign({{ recipe_pair[1] | jsonify }}, { slug: {{ recipe_pair[0] | jsonify }} }){% unless forloop.last %},{% endunless %}
+  {% assign urdu_name = recipe_pair[1].name_urdu %}
+  {% unless urdu_name %}{% assign urdu_name = site.data.urdu_names[recipe_pair[0]] %}{% endunless %}
+  Object.assign({{ recipe_pair[1] | jsonify }}, { slug: {{ recipe_pair[0] | jsonify }}, nameUrdu: {{ urdu_name | jsonify }} }){% unless forloop.last %},{% endunless %}
 {% endfor %}
 ];
 
