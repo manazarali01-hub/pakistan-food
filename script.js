@@ -947,6 +947,7 @@ function openRecipe(id) {
             <a class="modal-full-recipe" href="${recipePagePath(recipe)}">
                 Open the permanent recipe page →
             </a>
+            ${recipe.methodUrdu.length ? `<a class="modal-full-recipe modal-urdu-link" href="${recipePagePath(recipe)}?lang=ur" lang="ur" dir="rtl">اردو میں مکمل ترکیب ←</a>` : ""}
 
             <p class="modal-description">
                 ${escapeHtml(recipe.description)}
