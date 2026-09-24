@@ -178,3 +178,76 @@ body.dark {
   .recent-card { grid-template-columns: 86px 1fr; }
   .recipe-name-urdu, .recipe-title-urdu, .card-urdu, .hub-card-urdu { text-align: right; }
 }
+
+
+/* Premium bilingual recipe experience */
+.recipe-language-switch {
+  display: inline-flex;
+  gap: 6px;
+  padding: 5px;
+  margin: 10px 0 22px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-2);
+}
+.recipe-lang-btn {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  min-height: 42px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.recipe-lang-btn.active,
+.recipe-lang-btn[aria-selected="true"] {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 7px 18px rgba(120, 25, 38, .16);
+}
+.recipe-language-panel[hidden],
+[data-recipe-intro][hidden] { display: none !important; }
+.recipe-ingredient-list { display: grid; gap: 8px; padding-left: 1.35rem !important; }
+.recipe-step-list { list-style: none; padding: 0 !important; counter-reset: recipe-step; display: grid; gap: 14px; }
+.recipe-step-list > li {
+  display: grid;
+  gap: 7px;
+  margin: 0 !important;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(55, 30, 18, .05);
+}
+.step-number {
+  display: inline-block;
+  width: fit-content;
+  color: var(--primary);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.urdu-copy {
+  font-family: "Noto Naskh Arabic", "Noto Nastaliq Urdu", "Segoe UI", Tahoma, serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 2;
+}
+.urdu-copy h2, .urdu-copy h3, .urdu-copy p, .urdu-copy li { text-align: right; }
+.urdu-copy .recipe-ingredient-list { padding-left: 0 !important; padding-right: 1.5rem !important; }
+.urdu-copy .recipe-step-list { padding-right: 0 !important; }
+.urdu-copy .step-number { margin-left: 0; margin-right: 0; }
+.modal-urdu-link {
+  margin-inline-start: 10px;
+  color: var(--primary);
+  font-weight: 800;
+}
+@media (max-width: 620px) {
+  .recipe-language-switch { width: 100%; }
+  .recipe-lang-btn { flex: 1; min-width: 0; }
+  .recipe-step-list > li { padding: 16px; }
+  .modal-urdu-link { display: inline-block; margin: 8px 0 0; }
+}
