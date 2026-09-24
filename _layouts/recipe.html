@@ -5,7 +5,11 @@
   {% assign display_image = recipe.image %}
   {% assign seo_image = recipe.image | replace: 'Special:Redirect/file/', 'Special:FilePath/' %}
 {% else %}
-  {% assign local_image = recipe.image | remove_first: '/' %}
+  {% assign local_image = recipe.image %}
+  {% assign first_character = recipe.image | slice: 0, 1 %}
+  {% if first_character == '/' %}
+    {% assign local_image = recipe.image | remove_first: '/' %}
+  {% endif %}
   {% assign display_image = '../' | append: local_image %}
   {% assign seo_image = 'https://pakistanfoodrecipes.top/' | append: local_image %}
 {% endif %}
