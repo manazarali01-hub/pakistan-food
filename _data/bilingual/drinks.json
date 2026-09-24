@@ -1,0 +1,516 @@
+{
+  "badam-milk": {
+    "description_ur": "بادام، دودھ، الائچی اور اختیاری زعفران سے تیار ہونے والا کریمی پاکستانی بادام دودھ، گرم یا ٹھنڈا دونوں طرح پیش کیا جا سکتا ہے۔",
+    "ingredients_ur": [
+      "2 کپ دودھ",
+      "12 بادام، بھگو کر چھیلے ہوئے",
+      "2 کھانے کے چمچ چینی",
+      "2 سبز الائچیاں",
+      "چٹکی بھر زعفران، اختیاری",
+      "کٹے پستے"
+    ],
+    "method_en": [
+      "Soak the almonds until softened, peel them and blend with a few tablespoons of milk to make a smooth paste.",
+      "Pour the remaining milk into a saucepan and warm it over medium-low heat.",
+      "Add the almond paste, sugar and crushed cardamom and whisk well so the paste disperses evenly.",
+      "Bring the milk just to a gentle simmer, then reduce the heat.",
+      "Cook for 5–7 minutes, stirring frequently so the almond mixture does not settle or catch at the bottom.",
+      "Add saffron if using and simmer for another minute.",
+      "Taste for sweetness, then serve warm or cool completely and refrigerate for a chilled drink.",
+      "Garnish with chopped pistachios just before serving."
+    ],
+    "method_ur": [
+      "بادام نرم ہونے تک بھگوئیں، چھیلیں اور چند کھانے کے چمچ دودھ کے ساتھ بلینڈ کر کے ہموار پیسٹ بنائیں۔",
+      "باقی دودھ سوس پین میں ڈال کر درمیانی سے ہلکی آنچ پر گرم کریں۔",
+      "بادام پیسٹ، چینی اور کچلی الائچی شامل کر کے اچھی طرح پھینٹیں تاکہ پیسٹ یکساں مل جائے۔",
+      "دودھ کو ہلکے اُبال تک لائیں، پھر آنچ کم کر دیں۔",
+      "5 سے 7 منٹ بار بار ہلاتے ہوئے پکائیں تاکہ بادام نیچے نہ بیٹھیں یا لگیں۔",
+      "اگر زعفران استعمال کر رہے ہیں تو شامل کر کے مزید ایک منٹ پکائیں۔",
+      "مٹھاس چیک کریں، پھر گرم پیش کریں یا مکمل ٹھنڈا کر کے فریج میں رکھیں۔",
+      "سرو کرنے سے پہلے اوپر کٹے پستے ڈالیں۔"
+    ],
+    "tips_en": [
+      "Blend almonds very smooth for a creamy drink.",
+      "Use gentle heat after adding the almond paste.",
+      "Add saffron near the end to preserve aroma."
+    ],
+    "tips_ur": [
+      "کریمی ساخت کے لیے بادام بہت ہموار بلینڈ کریں۔",
+      "بادام پیسٹ کے بعد ہلکی آنچ رکھیں۔",
+      "زعفران آخر میں ڈالیں تاکہ خوشبو برقرار رہے۔"
+    ],
+    "storage_ur": "فریج میں ڈھکے ہوئے برتن میں 2 دن تک رکھیں اور سرو سے پہلے ہلا لیں۔",
+    "serving_ur": "گرم یا ٹھنڈا، پستے کے ساتھ پیش کریں۔"
+  },
+  "doodh-patti-chai": {
+    "description_ur": "دودھ اور چائے کی پتی کو ساتھ پکا کر تیار ہونے والی مضبوط، کریمی پاکستانی دودھ پتی چائے۔",
+    "ingredients_ur": [
+      "2 کپ دودھ",
+      "2 چائے کے چمچ کالی چائے کی پتی",
+      "2 سے 3 چائے کے چمچ چینی",
+      "2 سبز الائچیاں، اختیاری",
+      "¼ کپ پانی، اختیاری"
+    ],
+    "method_en": [
+      "Pour milk into a small saucepan; add the optional water if you prefer a slightly lighter cup.",
+      "Add tea leaves, sugar and lightly crushed cardamom.",
+      "Heat over medium heat, stirring once or twice so sugar dissolves before the milk gets very hot.",
+      "Bring the tea to a gentle rise, then immediately lower the heat so the milk does not boil over.",
+      "Simmer for 3–5 minutes until the colour deepens and the tea reaches the strength you like.",
+      "Stir and lift the pan briefly off the heat if the milk rises too quickly.",
+      "Strain into warmed cups.",
+      "Serve immediately while hot and frothy."
+    ],
+    "method_ur": [
+      "دودھ چھوٹے سوس پین میں ڈالیں؛ اگر ہلکی چائے پسند ہو تو اختیاری پانی شامل کریں۔",
+      "چائے کی پتی، چینی اور ہلکی کچلی الائچی ڈالیں۔",
+      "درمیانی آنچ پر گرم کریں اور ایک دو بار ہلائیں تاکہ دودھ بہت گرم ہونے سے پہلے چینی گھل جائے۔",
+      "چائے کو ہلکا اوپر آنے دیں، پھر فوراً آنچ کم کریں تاکہ دودھ باہر نہ آئے۔",
+      "3 سے 5 منٹ ہلکی آنچ پر پکائیں یہاں تک کہ رنگ گہرا اور چائے اپنی پسند کی مضبوط ہو جائے۔",
+      "اگر دودھ تیزی سے اوپر آئے تو ہلائیں اور پین چند لمحوں کے لیے آنچ سے اٹھا لیں۔",
+      "چھان کر گرم کپوں میں ڈالیں۔",
+      "گرم اور جھاگ دار حالت میں فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Watch the pan closely once milk approaches a boil.",
+      "Adjust tea leaves for strength rather than overboiling for too long.",
+      "Serve immediately for the best aroma."
+    ],
+    "tips_ur": [
+      "دودھ اُبال کے قریب آئے تو پین پر نظر رکھیں۔",
+      "بہت دیر اُبالنے کے بجائے مضبوطی کے لیے پتی کی مقدار ایڈجسٹ کریں۔",
+      "بہترین خوشبو کے لیے فوراً سرو کریں۔"
+    ],
+    "storage_ur": "چائے تازہ بہترین ہے؛ دوبارہ گرم کرنے کے بجائے نئی بنانا بہتر ہے۔",
+    "serving_ur": "بسکٹ، رسک، پراٹھا یا ناشتے کے ساتھ گرم پیش کریں۔"
+  },
+  "falooda": {
+    "description_ur": "دودھ، گلاب کے شربت، تخمِ بالنگا، فالودہ سویاں اور آئس کریم کی تہوں سے تیار ہونے والا ٹھنڈا پاکستانی فالودہ۔",
+    "ingredients_ur": [
+      "2 کپ ٹھنڈا دودھ",
+      "3 کھانے کے چمچ گلاب کا شربت",
+      "½ کپ پکی فالودہ سویاں",
+      "2 کھانے کے چمچ بھیگے تخمِ بالنگا",
+      "2 اسکوپ ونیلا آئس کریم",
+      "کٹے خشک میوہ جات"
+    ],
+    "method_en": [
+      "Soak basil seeds until they swell fully, then drain any excess water.",
+      "Cook the falooda vermicelli according to its package or until tender, rinse in cold water and drain well.",
+      "Chill the milk, soaked seeds, vermicelli and serving glasses before assembly.",
+      "Add rose syrup to the bottom of each glass.",
+      "Layer in the basil seeds and vermicelli.",
+      "Pour in the chilled milk slowly so the layers stay visible.",
+      "Top each glass with a scoop of vanilla ice cream and chopped nuts.",
+      "Serve immediately with a long spoon and straw."
+    ],
+    "method_ur": [
+      "تخمِ بالنگا مکمل پھولنے تک بھگوئیں اور اضافی پانی نکال دیں۔",
+      "فالودہ سویاں پیکٹ کی ہدایت یا نرم ہونے تک پکائیں، ٹھنڈے پانی سے دھو کر اچھی طرح چھانیں۔",
+      "دودھ، بھیگے بیج، سویاں اور سرونگ گلاس اسمبل کرنے سے پہلے ٹھنڈے کر لیں۔",
+      "ہر گلاس کے نیچے گلاب کا شربت ڈالیں۔",
+      "اوپر تخمِ بالنگا اور سویاں تہہ میں ڈالیں۔",
+      "ٹھنڈا دودھ آہستہ ڈالیں تاکہ تہیں واضح رہیں۔",
+      "ہر گلاس پر ونیلا آئس کریم اور کٹے میوہ جات ڈالیں۔",
+      "لمبے چمچ اور اسٹرا کے ساتھ فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Drain vermicelli well so the drink does not become watery.",
+      "Chill the components before layering.",
+      "Assemble only just before serving."
+    ],
+    "tips_ur": [
+      "سویاں اچھی طرح چھانیں تاکہ مشروب پانی والا نہ ہو۔",
+      "تہیں لگانے سے پہلے تمام اجزاء ٹھنڈے کریں۔",
+      "صرف سرو کرنے سے فوراً پہلے اسمبل کریں۔"
+    ],
+    "storage_ur": "اجزاء الگ فریج میں رکھیں اور فالودہ تازہ اسمبل کریں۔",
+    "serving_ur": "بہت ٹھنڈا، آئس کریم اور میوہ جات کے ساتھ پیش کریں۔"
+  },
+  "imli-aloo-bukhara-sharbat": {
+    "description_ur": "املی اور خشک آلو بخارے سے تیار ہونے والا کھٹا میٹھا پاکستانی شربت، خاص طور پر گرم موسم کے لیے۔",
+    "ingredients_ur": [
+      "½ کپ املی کا گودا",
+      "8 خشک آلو بخارے",
+      "4 کپ پانی",
+      "5 کھانے کے چمچ چینی",
+      "چٹکی کالا نمک",
+      "برف"
+    ],
+    "method_en": [
+      "Soak the tamarind and dried plums in warm water for 20–30 minutes until softened.",
+      "Mash the soaked mixture thoroughly with a spoon or clean hands to release the pulp.",
+      "Strain through a fine sieve, pressing well to extract flavour while leaving seeds and fibres behind.",
+      "Add sugar to the strained concentrate and stir until dissolved; warm briefly if needed, then cool completely.",
+      "Add black salt and taste the concentrate for balance.",
+      "Dilute with the remaining chilled water until the sourness and sweetness are comfortable.",
+      "Chill thoroughly or pour over ice.",
+      "Stir before serving because some fine pulp may settle."
+    ],
+    "method_ur": [
+      "املی اور خشک آلو بخارے 20 سے 30 منٹ نیم گرم پانی میں نرم ہونے تک بھگوئیں۔",
+      "بھیگے ہوئے آمیزے کو چمچ یا صاف ہاتھ سے اچھی طرح میش کریں تاکہ گودا نکل آئے۔",
+      "باریک چھلنی سے چھانیں اور دبا کر ذائقہ دار رس نکالیں، بیج اور ریشے الگ رہنے دیں۔",
+      "چھنے ہوئے گاڑھے رس میں چینی ڈال کر گھلنے تک ہلائیں؛ ضرورت ہو تو ہلکا گرم کریں، پھر مکمل ٹھنڈا کریں۔",
+      "کالا نمک شامل کر کے کھٹاس اور مٹھاس چیک کریں۔",
+      "باقی ٹھنڈا پانی شامل کر کے اپنی پسند کے مطابق ذائقہ متوازن کریں۔",
+      "اچھی طرح ٹھنڈا کریں یا برف پر ڈالیں۔",
+      "سرو کرنے سے پہلے ہلائیں کیونکہ باریک گودا نیچے بیٹھ سکتا ہے۔"
+    ],
+    "tips_en": [
+      "Press the soaked fruit well when straining for fuller flavour.",
+      "Adjust sugar after tasting because dried plums vary in sweetness.",
+      "Chill after dilution so melting ice does not weaken the drink too much."
+    ],
+    "tips_ur": [
+      "زیادہ ذائقے کے لیے چھانتے وقت بھیگے پھل کو اچھی طرح دبائیں۔",
+      "آلو بخارے کی مٹھاس مختلف ہوتی ہے، اس لیے چکھ کر چینی ایڈجسٹ کریں۔",
+      "پانی ملانے کے بعد ٹھنڈا کریں تاکہ برف ذائقہ زیادہ کم نہ کرے۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور سرو سے پہلے ہلائیں۔",
+    "serving_ur": "برف، پودینے یا لیموں کے ساتھ ٹھنڈا پیش کریں۔"
+  },
+  "kashmiri-chai": {
+    "description_ur": "الائچی، دودھ اور خشک میوہ جات والی کریمی گلابی کشمیری چائے۔",
+    "ingredients_ur": [
+      "2 کھانے کے چمچ کشمیری چائے کی پتی",
+      "3 کپ پانی",
+      "2 کپ دودھ",
+      "¼ چائے کا چمچ بیکنگ سوڈا",
+      "4 الائچیاں",
+      "چینی یا نمک حسبِ ذائقہ",
+      "پستہ اور بادام"
+    ],
+    "method_en": [
+      "Add tea leaves, about half the water and baking soda to a saucepan and bring to a boil.",
+      "Cook over medium heat while whisking or pouring the liquid back and forth carefully to aerate it and deepen the reddish colour.",
+      "When the liquid has reduced noticeably, add some cold water and continue whisking for several minutes.",
+      "Strain the concentrated tea base if needed to remove leaves.",
+      "Return the tea base to the pan, add milk and crushed cardamom and heat gently.",
+      "Simmer until the colour turns pink and the flavour is well blended.",
+      "Sweeten with sugar or season lightly with salt according to your preference.",
+      "Pour into cups and garnish with chopped pistachios and almonds."
+    ],
+    "method_ur": [
+      "چائے کی پتی، تقریباً آدھا پانی اور بیکنگ سوڈا سوس پین میں ڈال کر اُبالیں۔",
+      "درمیانی آنچ پر پھینٹتے رہیں یا احتیاط سے مائع کو اوپر نیچے ڈالیں تاکہ ہوا شامل ہو اور سرخی گہری ہو۔",
+      "مائع کافی کم ہو جائے تو کچھ ٹھنڈا پانی ڈالیں اور چند منٹ مزید پھینٹیں۔",
+      "ضرورت ہو تو چائے کا گاڑھا بیس چھان کر پتی الگ کریں۔",
+      "بیس دوبارہ پین میں ڈالیں، دودھ اور کچلی الائچی شامل کر کے ہلکی آنچ پر گرم کریں۔",
+      "رنگ گلابی ہونے اور ذائقہ اچھی طرح ملنے تک ہلکا پکائیں۔",
+      "اپنی پسند کے مطابق چینی یا ہلکا نمک شامل کریں۔",
+      "کپوں میں ڈال کر پستہ اور بادام سے گارنش کریں۔"
+    ],
+    "tips_en": [
+      "Aeration and reduction help develop the characteristic colour.",
+      "Use baking soda sparingly; too much affects taste.",
+      "Add milk after the tea base has developed colour."
+    ],
+    "tips_ur": [
+      "پھینٹنا اور پانی کم کرنا خاص رنگ بنانے میں مدد دیتا ہے۔",
+      "بیکنگ سوڈا بہت کم استعمال کریں؛ زیادہ مقدار ذائقہ خراب کرتی ہے۔",
+      "چائے کے بیس کا رنگ بننے کے بعد دودھ شامل کریں۔"
+    ],
+    "storage_ur": "تازہ بہترین ہے؛ بیس فریج میں 1 دن رکھا جا سکتا ہے اور دودھ سرو سے پہلے شامل کیا جا سکتا ہے۔",
+    "serving_ur": "گرم، پستہ اور بادام کے ساتھ پیش کریں۔"
+  },
+  "lemon-mint-sharbat": {
+    "description_ur": "لیموں، پودینہ، چینی اور کالے نمک سے تیار ہونے والا روشن اور ٹھنڈا پاکستانی لیموں پودینہ شربت۔",
+    "ingredients_ur": [
+      "4 کپ ٹھنڈا پانی",
+      "½ کپ تازہ لیموں کا رس",
+      "½ کپ پودینے کے پتے",
+      "5 کھانے کے چمچ چینی یا حسبِ ذائقہ",
+      "چٹکی کالا نمک",
+      "برف"
+    ],
+    "method_en": [
+      "Wash the mint well and pick out any dark or tough stems.",
+      "Blend mint with about ½ cup of the chilled water until finely broken down.",
+      "Strain if you prefer a smoother drink, or leave the fine mint pulp in for stronger flavour.",
+      "Add lemon juice, sugar and black salt and stir or blend until the sugar dissolves.",
+      "Pour in the remaining chilled water and mix well.",
+      "Taste and adjust lemon, sugar or black salt gradually.",
+      "Add ice only just before serving so the drink does not become diluted too early.",
+      "Serve immediately while the mint tastes fresh."
+    ],
+    "method_ur": [
+      "پودینہ اچھی طرح دھو کر کالے یا سخت ڈنٹھل الگ کریں۔",
+      "پودینے کو تقریباً ½ کپ ٹھنڈے پانی کے ساتھ باریک بلینڈ کریں۔",
+      "ہموار مشروب کے لیے چھان لیں، یا زیادہ پودینے کے ذائقے کے لیے باریک گودا رہنے دیں۔",
+      "لیموں کا رس، چینی اور کالا نمک ڈال کر چینی گھلنے تک ہلائیں یا بلینڈ کریں۔",
+      "باقی ٹھنڈا پانی شامل کر کے اچھی طرح مکس کریں۔",
+      "چکھ کر لیموں، چینی یا کالا نمک تھوڑا تھوڑا ایڈجسٹ کریں۔",
+      "برف صرف سرو کرنے سے فوراً پہلے ڈالیں تاکہ مشروب جلد پتلا نہ ہو۔",
+      "پودینے کی تازہ خوشبو برقرار رہتے ہوئے فوراً پیش کریں۔"
+    ],
+    "tips_en": [
+      "Use fresh lemon juice, not bottled, for cleaner flavour.",
+      "Adjust sweetness after dilution.",
+      "Add ice at the last moment."
+    ],
+    "tips_ur": [
+      "صاف ذائقے کے لیے تازہ لیموں کا رس استعمال کریں۔",
+      "پانی ملانے کے بعد مٹھاس ایڈجسٹ کریں۔",
+      "برف آخر میں ڈالیں۔"
+    ],
+    "storage_ur": "بغیر برف کے فریج میں 1 دن رکھیں؛ تازہ پودینہ جلد رنگ بدل سکتا ہے۔",
+    "serving_ur": "بہت ٹھنڈا، لیموں کے سلائس اور پودینے کے ساتھ پیش کریں۔"
+  },
+  "mango-lassi": {
+    "description_ur": "پکے آم، دہی اور دودھ سے تیار ہونے والی گاڑھی اور ٹھنڈی پاکستانی آم کی لسی۔",
+    "ingredients_ur": [
+      "1 کپ پکا آم",
+      "1½ کپ ٹھنڈا دہی",
+      "½ کپ ٹھنڈا دودھ",
+      "2 کھانے کے چمچ چینی یا حسبِ ذائقہ",
+      "4 برف کے کیوب"
+    ],
+    "method_en": [
+      "Use ripe, sweet mango and chill it before blending if possible.",
+      "Add mango and yogurt to a blender and blend until completely smooth.",
+      "Pour in the milk and add sugar only after tasting the mango for natural sweetness.",
+      "Blend again until creamy and uniform.",
+      "Add ice and pulse briefly; overblending ice can make the lassi thin.",
+      "Check the consistency and add a splash more milk only if it is too thick.",
+      "Taste for sweetness and adjust once more if needed.",
+      "Pour into chilled glasses and serve immediately."
+    ],
+    "method_ur": [
+      "پکا اور میٹھا آم استعمال کریں اور ممکن ہو تو بلینڈ کرنے سے پہلے ٹھنڈا کر لیں۔",
+      "آم اور دہی بلینڈر میں ڈال کر مکمل ہموار ہونے تک بلینڈ کریں۔",
+      "دودھ شامل کریں اور آم کی قدرتی مٹھاس چکھنے کے بعد ہی چینی ڈالیں۔",
+      "دوبارہ بلینڈ کریں یہاں تک کہ کریمی اور یکساں ہو جائے۔",
+      "برف ڈال کر مختصر پلس کریں؛ زیادہ بلینڈ کرنے سے لسی پتلی ہو سکتی ہے۔",
+      "گاڑھا پن چیک کریں اور صرف ضرورت ہو تو تھوڑا مزید دودھ ڈالیں۔",
+      "مٹھاس دوبارہ چیک کر کے ضرورت کے مطابق ایڈجسٹ کریں۔",
+      "ٹھنڈے گلاس میں ڈال کر فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Use ripe mango for flavour and natural sweetness.",
+      "Add sugar after tasting the fruit.",
+      "Blend ice briefly to preserve thickness."
+    ],
+    "tips_ur": [
+      "بہتر ذائقہ اور قدرتی مٹھاس کے لیے پکا آم استعمال کریں۔",
+      "پھل چکھنے کے بعد چینی ڈالیں۔",
+      "گاڑھا پن برقرار رکھنے کے لیے برف مختصر بلینڈ کریں۔"
+    ],
+    "storage_ur": "تازہ بہترین ہے؛ فریج میں 1 دن تک رکھ کر سرو سے پہلے ہلا یا مختصر بلینڈ کریں۔",
+    "serving_ur": "بہت ٹھنڈی، چاہیں تو الائچی یا پستے کے ساتھ پیش کریں۔"
+  },
+  "masala-chai": {
+    "description_ur": "ادرک، الائچی، دارچینی اور کالی چائے سے تیار ہونے والی گرم مصالحہ چائے۔",
+    "ingredients_ur": [
+      "1 کپ پانی",
+      "1½ کپ دودھ",
+      "2 چائے کے چمچ کالی چائے",
+      "2 الائچیاں",
+      "دارچینی کا چھوٹا ٹکڑا",
+      "ادرک کا چھوٹا ٹکڑا",
+      "چینی حسبِ ذائقہ"
+    ],
+    "method_en": [
+      "Lightly crush the cardamom and ginger so they release flavour without turning into paste.",
+      "Add water, ginger, cardamom and cinnamon to a saucepan and bring to a boil.",
+      "Reduce the heat and simmer for 2–3 minutes to extract the spices.",
+      "Add tea leaves and simmer for about 1 minute.",
+      "Pour in the milk and add sugar.",
+      "Bring the chai gently up toward a boil, then lower the heat before it spills over.",
+      "Simmer for another 2–3 minutes until the colour deepens.",
+      "Strain into cups and serve immediately."
+    ],
+    "method_ur": [
+      "الائچی اور ادرک ہلکا کچلیں تاکہ ذائقہ نکلے مگر پیسٹ نہ بنے۔",
+      "سوس پین میں پانی، ادرک، الائچی اور دارچینی ڈال کر اُبالیں۔",
+      "آنچ کم کر کے 2 سے 3 منٹ پکائیں تاکہ مصالحوں کا ذائقہ نکل آئے۔",
+      "چائے کی پتی ڈال کر تقریباً 1 منٹ پکائیں۔",
+      "دودھ اور چینی شامل کریں۔",
+      "چائے کو ہلکے اُبال کے قریب لائیں، پھر باہر آنے سے پہلے آنچ کم کریں۔",
+      "مزید 2 سے 3 منٹ پکائیں یہاں تک کہ رنگ گہرا ہو۔",
+      "چھان کر کپوں میں ڈالیں اور فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Simmer spices in water before adding milk.",
+      "Do not overcook tea leaves or the chai can become bitter.",
+      "Watch closely after milk is added."
+    ],
+    "tips_ur": [
+      "دودھ سے پہلے مصالحے پانی میں پکائیں۔",
+      "چائے کی پتی بہت دیر نہ پکائیں ورنہ کڑواہٹ آ سکتی ہے۔",
+      "دودھ کے بعد پین پر خاص نظر رکھیں۔"
+    ],
+    "storage_ur": "تازہ بہترین ہے؛ دوبارہ گرم کرنے کے بجائے نئی چائے بنائیں۔",
+    "serving_ur": "بسکٹ، رسک یا ناشتے کے ساتھ گرم پیش کریں۔"
+  },
+  "namkeen-lassi": {
+    "description_ur": "دہی، ٹھنڈے پانی، بھنے زیرے اور کالے نمک سے تیار ہونے والی ہلکی نمکین لسی۔",
+    "ingredients_ur": [
+      "2 کپ دہی",
+      "1½ کپ ٹھنڈا پانی",
+      "½ چائے کا چمچ بھنا زیرہ",
+      "½ چائے کا چمچ نمک",
+      "چٹکی کالا نمک",
+      "برف"
+    ],
+    "method_en": [
+      "Whisk the yogurt first so there are no lumps.",
+      "Add chilled water, roasted cumin, salt and black salt.",
+      "Blend or whisk for 30–45 seconds until light and frothy.",
+      "Taste and adjust salt gradually; black salt can become strong quickly.",
+      "Add ice and blend only briefly.",
+      "Check the consistency and add a little more water if you prefer a thinner lassi.",
+      "Pour into cold glasses.",
+      "Serve immediately."
+    ],
+    "method_ur": [
+      "دہی پہلے اچھی طرح پھینٹیں تاکہ گٹھلیاں نہ رہیں۔",
+      "ٹھنڈا پانی، بھنا زیرہ، نمک اور کالا نمک شامل کریں۔",
+      "30 سے 45 سیکنڈ بلینڈ یا پھینٹیں یہاں تک کہ ہلکی جھاگ بن جائے۔",
+      "نمک چکھ کر آہستہ آہستہ ایڈجسٹ کریں؛ کالا نمک جلد غالب ہو سکتا ہے۔",
+      "برف ڈال کر صرف مختصر بلینڈ کریں۔",
+      "گاڑھا پن چیک کریں اور پتلی لسی پسند ہو تو تھوڑا مزید پانی ڈالیں۔",
+      "ٹھنڈے گلاس میں ڈالیں۔",
+      "فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Whisk yogurt smooth before adding water.",
+      "Add black salt sparingly.",
+      "Serve fresh for the best froth."
+    ],
+    "tips_ur": [
+      "پانی سے پہلے دہی ہموار پھینٹیں۔",
+      "کالا نمک کم مقدار میں ڈالیں۔",
+      "بہترین جھاگ کے لیے تازہ سرو کریں۔"
+    ],
+    "storage_ur": "فریج میں 1 دن تک رکھ سکتے ہیں؛ سرو سے پہلے دوبارہ پھینٹیں۔",
+    "serving_ur": "بہت ٹھنڈی، کھانے کے ساتھ یا گرم دن میں پیش کریں۔"
+  },
+  "rooh-afza-milk": {
+    "description_ur": "ٹھنڈے دودھ اور گلابی شربت سے تیار ہونے والا آسان پاکستانی روح افزا دودھ۔",
+    "ingredients_ur": [
+      "2 کپ ٹھنڈا دودھ",
+      "3 کھانے کے چمچ گلابی شربت",
+      "1 چائے کا چمچ چینی، اختیاری",
+      "4 برف کے کیوب",
+      "کٹے بادام، اختیاری"
+    ],
+    "method_en": [
+      "Chill the milk and serving glasses before mixing.",
+      "Pour the milk into a jug.",
+      "Add the rose syrup and stir thoroughly until the colour is even.",
+      "Taste before adding any extra sugar because the syrup is already sweet.",
+      "Add sugar only if needed and stir until dissolved.",
+      "Add ice just before serving.",
+      "Pour into glasses and garnish with almonds if using.",
+      "Serve immediately."
+    ],
+    "method_ur": [
+      "دودھ اور سرونگ گلاس پہلے سے ٹھنڈے کر لیں۔",
+      "دودھ جگ میں ڈالیں۔",
+      "گلابی شربت شامل کر کے اچھی طرح ہلائیں یہاں تک کہ رنگ یکساں ہو جائے۔",
+      "اضافی چینی سے پہلے چکھیں کیونکہ شربت پہلے ہی میٹھا ہوتا ہے۔",
+      "ضرورت ہو تو چینی ڈال کر گھلنے تک ہلائیں۔",
+      "برف صرف سرو کرنے سے فوراً پہلے شامل کریں۔",
+      "گلاسوں میں ڈالیں اور چاہیں تو بادام سے گارنش کریں۔",
+      "فوراً پیش کریں۔"
+    ],
+    "tips_en": [
+      "Taste before adding sugar.",
+      "Use very cold milk for best refreshment.",
+      "Add ice at serving time to avoid dilution."
+    ],
+    "tips_ur": [
+      "چینی سے پہلے ذائقہ ضرور چیک کریں۔",
+      "بہترین ٹھنڈک کے لیے بہت ٹھنڈا دودھ استعمال کریں۔",
+      "پتلا ہونے سے بچانے کے لیے برف سرو کے وقت ڈالیں۔"
+    ],
+    "storage_ur": "فریج میں 1 دن تک رکھیں اور سرو سے پہلے ہلائیں۔",
+    "serving_ur": "برف اور بادام کے ساتھ ٹھنڈا پیش کریں۔"
+  },
+  "sattu-sharbat": {
+    "description_ur": "بھنے چنے کے آٹے، لیموں، ٹھنڈے پانی اور کالے نمک سے تیار ہونے والا تازگی بخش ستو شربت۔",
+    "ingredients_ur": [
+      "4 کھانے کے چمچ ستو",
+      "2 کپ ٹھنڈا پانی",
+      "2 کھانے کے چمچ لیموں کا رس",
+      "1 کھانے کا چمچ چینی",
+      "چٹکی کالا نمک",
+      "برف"
+    ],
+    "method_en": [
+      "Place the sattu in a jug and add about ½ cup chilled water.",
+      "Whisk until completely smooth before adding more liquid; this prevents dry lumps.",
+      "Add the remaining chilled water gradually while whisking.",
+      "Stir in lemon juice, sugar and black salt.",
+      "Mix until the sugar dissolves and the drink looks evenly suspended.",
+      "Taste and adjust lemon, sweetness or salt.",
+      "Add ice and stir once more.",
+      "Serve immediately, stirring again if the sattu settles."
+    ],
+    "method_ur": [
+      "ستو جگ میں ڈال کر تقریباً ½ کپ ٹھنڈا پانی شامل کریں۔",
+      "مزید پانی سے پہلے مکمل ہموار پھینٹیں تاکہ خشک گٹھلیاں نہ بنیں۔",
+      "باقی ٹھنڈا پانی آہستہ آہستہ پھینٹتے ہوئے شامل کریں۔",
+      "لیموں کا رس، چینی اور کالا نمک ڈالیں۔",
+      "چینی گھلنے اور مشروب یکساں ہونے تک مکس کریں۔",
+      "چکھ کر لیموں، مٹھاس یا نمک ایڈجسٹ کریں۔",
+      "برف شامل کر کے دوبارہ ہلائیں۔",
+      "فوراً سرو کریں اور ستو بیٹھ جائے تو دوبارہ ہلا دیں۔"
+    ],
+    "tips_en": [
+      "Make a smooth slurry first before adding all the water.",
+      "Taste after lemon and black salt before adding more sugar.",
+      "Stir just before drinking because sattu naturally settles."
+    ],
+    "tips_ur": [
+      "سارا پانی ڈالنے سے پہلے ہموار گاڑھا محلول بنائیں۔",
+      "مزید چینی سے پہلے لیموں اور کالے نمک کے بعد ذائقہ چیک کریں۔",
+      "ستو قدرتی طور پر بیٹھتا ہے، اس لیے پینے سے پہلے ہلائیں۔"
+    ],
+    "storage_ur": "فریج میں 1 دن تک رکھیں اور سرو سے پہلے اچھی طرح ہلائیں۔",
+    "serving_ur": "برف کے ساتھ بہت ٹھنڈا پیش کریں۔"
+  },
+  "sweet-lassi": {
+    "description_ur": "دہی، ٹھنڈے پانی یا دودھ، چینی اور ہلکی الائچی سے تیار ہونے والی کریمی میٹھی لسی۔",
+    "ingredients_ur": [
+      "2 کپ ٹھنڈا دہی",
+      "1 کپ ٹھنڈا پانی یا دودھ",
+      "3 کھانے کے چمچ چینی",
+      "4 برف کے کیوب",
+      "چٹکی الائچی پاؤڈر"
+    ],
+    "method_en": [
+      "Whisk or blend the yogurt alone first until completely smooth.",
+      "Add chilled water or milk and blend until the mixture is uniform.",
+      "Add sugar and blend for 20–30 seconds until dissolved.",
+      "Add cardamom and taste for sweetness.",
+      "Add ice and pulse briefly until the drink is cold and frothy.",
+      "Check the consistency and add a splash more liquid only if needed.",
+      "Pour into chilled glasses.",
+      "Serve immediately while frothy."
+    ],
+    "method_ur": [
+      "دہی کو پہلے اکیلا اچھی طرح پھینٹیں یا بلینڈ کریں یہاں تک کہ مکمل ہموار ہو جائے۔",
+      "ٹھنڈا پانی یا دودھ شامل کر کے یکساں ہونے تک بلینڈ کریں۔",
+      "چینی ڈال کر 20 سے 30 سیکنڈ بلینڈ کریں تاکہ گھل جائے۔",
+      "الائچی شامل کر کے مٹھاس چیک کریں۔",
+      "برف ڈال کر مختصر پلس کریں یہاں تک کہ مشروب ٹھنڈا اور جھاگ دار ہو۔",
+      "گاڑھا پن چیک کریں اور صرف ضرورت پر تھوڑا مزید مائع ڈالیں۔",
+      "ٹھنڈے گلاسوں میں ڈالیں۔",
+      "جھاگ برقرار رہتے ہوئے فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Smooth the yogurt before adding liquid.",
+      "Use chilled ingredients so less ice is needed.",
+      "Blend ice briefly to avoid thinning the lassi."
+    ],
+    "tips_ur": [
+      "مائع ڈالنے سے پہلے دہی ہموار کریں۔",
+      "کم برف کے لیے ٹھنڈے اجزاء استعمال کریں۔",
+      "لسی پتلی ہونے سے بچانے کے لیے برف مختصر بلینڈ کریں۔"
+    ],
+    "storage_ur": "فریج میں 1 دن تک رکھیں اور سرو سے پہلے دوبارہ پھینٹیں۔",
+    "serving_ur": "بہت ٹھنڈی، چاہیں تو اوپر تھوڑی الائچی کے ساتھ پیش کریں۔"
+  }
+}
