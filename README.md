@@ -15,3 +15,12 @@ Create one JSON recipe in `_data/recipes/` with a lowercase, hyphenated filename
 The **Sync new CMS recipes** workflow creates `recipes/<slug>.html` and adds its URL to both XML sitemaps. It requests a new GitHub Pages build after saving the generated pages. The existing URLs and modification dates are preserved. If the workflow reports an error, inspect its run in GitHub Actions before treating the new page as published.
 
 For a local check, run `python3 scripts/sync_recipes.py` followed by `python3 scripts/verify_site.py`. Existing recipe pages and the main sitemap URL remain unchanged.
+
+
+## Urdu recipe names
+
+Existing recipes use `_data/urdu_names.json` for a compact Urdu display name on recipe cards, category pages and individual recipe pages. New CMS recipes can optionally set `name_urdu` directly; that value takes priority over the shared map.
+
+## Trust and policy pages
+
+The public trust pages are `privacy-policy.html`, `editorial-policy.html`, `disclaimer.html` and `image-credits.html`. Keep their sitemap and footer links intact when redesigning the site.
