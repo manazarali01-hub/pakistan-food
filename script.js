@@ -208,7 +208,7 @@ const defaultRecipes = [
         category: "Snacks",
         time: "45 min",
         serves: 6,
-        image: "assets/samosa.webp?v=20260912-fast2",
+        image: "assets/pakistani-samosa-v2.webp",
         description: "Crispy golden samosas filled with a delicious spicy potato mixture.",
         ingredients: [
             "2 cups plain flour",
