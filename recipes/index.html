@@ -34,6 +34,7 @@ layout: null
   <style>
     .hub-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.hub-site-nav{max-width:1100px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.hub-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.hub-site-links{display:flex;flex-wrap:wrap;gap:14px}.hub-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.hub{max-width:1100px;margin:36px auto 50px;padding:24px}.hub h1{font-size:clamp(2rem,5vw,3.4rem)}.hub h2{margin-top:32px}.hub p{line-height:1.8}.hub-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:28px;align-items:center;margin:26px 0 34px}.hub-hero figure{margin:0}.hub-hero img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:18px}.hub-hero figcaption{font-size:.88rem;color:#666;text-align:center;margin-top:7px}.hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:30px}.hub-card{display:block;padding:18px;border-radius:14px;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.08);text-decoration:none;color:#222}.hub-card strong{display:block;font-size:1.08rem;margin-bottom:5px}.hub-card span{font-size:.92rem;opacity:.75}.hub-categories,.popular-links{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}.hub-categories a,.popular-links a{padding:8px 12px;border-radius:999px;background:#f5f5f5;color:#222;text-decoration:none;font-size:.9rem;font-weight:600}.hub-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.hub-site-footer a{color:#fff}@media(max-width:760px){.hub-hero{grid-template-columns:1fr}.hub-site-nav{align-items:flex-start;flex-direction:column}.hub-site-links{gap:10px}.hub{margin-top:16px;padding:18px}}
   </style>
+  <link rel="stylesheet" href="../premium.css?v=20260924-premium2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -95,13 +96,14 @@ layout: null
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#recipe-directory">Skip to recipes</a>
   <header class="hub-site-header">
     <nav class="hub-site-nav" aria-label="Main navigation">
-      <a class="hub-site-brand" href="../index.html">🍛 Pakistan Food</a>
+      <a class="hub-site-brand" href="../index.html"><img src="../assets/pakistan-food-logo.svg" alt="" width="38" height="38">Pakistan Food</a>
       <div class="hub-site-links"><a href="../index.html">Home</a><a href="#categories">Categories</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div>
     </nav>
   </header>
-  <main class="hub">
+  <main class="hub" id="recipe-directory">
     <nav aria-label="Breadcrumb"><a href="../index.html">Pakistan Food home</a> › Recipes</nav>
     <div class="hub-hero">
       <div>
