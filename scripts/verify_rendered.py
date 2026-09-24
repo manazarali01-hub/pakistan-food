@@ -59,8 +59,9 @@ for url in urls:
     if not path.is_file():
         errors.append(f"missing generated page: {url}")
         continue
+    rendered_html = path.read_text(encoding="utf-8")
     parser = PageParser()
-    parser.feed(path.read_text(encoding="utf-8"))
+    parser.feed(rendered_html)
     if parser.canonicals != [url]:
         errors.append(f"bad canonical {url}: {parser.canonicals}")
     if len(parser.headings) != 1:
@@ -79,8 +80,15 @@ for url in urls:
             continue
         if urlparse(url).path.startswith("/recipes/") and url.endswith(".html"):
             items = graph.get("@graph", [])
-            if not any(item.get("@type") == "Recipe" for item in items):
+            recipe_items = [item for item in items if item.get("@type") == "Recipe"]
+            if not recipe_items:
                 errors.append(f"missing Recipe structured data: {url}")
+            else:
+                instructions = recipe_items[0].get("recipeInstructions") or []
+                if len(instructions) < 6:
+                    errors.append(f"recipe schema has fewer than 6 detailed steps: {url}")
+            if 'data-recipe-lang="ur"' not in rendered_html or 'data-recipe-panel="ur"' not in rendered_html:
+                errors.append(f"missing Urdu recipe interface: {url}")
 
 if errors:
     raise SystemExit("\n".join(errors[:50]))
