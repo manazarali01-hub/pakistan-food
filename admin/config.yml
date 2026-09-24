@@ -4,7 +4,7 @@ backend:
   branch: main
 
 media_folder: "assets"
-public_folder: "/pakistan-food/assets"
+public_folder: "/assets"
 
 collections:
   - name: "recipes"
@@ -35,10 +35,6 @@ collections:
       - label: "Cooking Time"
         name: "time"
         widget: "string"
-      - label: "Rating"
-        name: "rating"
-        widget: "string"
-        default: "4.5"
       - label: "Servings"
         name: "serves"
         widget: "number"

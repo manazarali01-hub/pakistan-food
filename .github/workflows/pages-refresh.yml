@@ -15,6 +15,28 @@ on:
       - '_config.yml'
       - 'style.css'
       - 'script.js'
+      - 'recipes-data.js'
+      - 'enhancements.css'
+      - 'enhancements.js'
+      - 'premium.css'
+      - 'sitemap-v2.xml'
+      - 'scripts/**'
+  pull_request:
+    paths:
+      - '_layouts/**'
+      - '_data/**'
+      - 'recipes/**'
+      - 'index.html'
+      - 'sitemap.xml'
+      - 'sitemap-v2.xml'
+      - '_config.yml'
+      - 'style.css'
+      - 'premium.css'
+      - 'script.js'
+      - 'recipes-data.js'
+      - 'enhancements.css'
+      - 'enhancements.js'
+      - 'scripts/**'
 
 permissions:
   contents: read
@@ -25,7 +47,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - name: Check recipe pages, images and sitemap
+        run: python3 scripts/verify_site.py
       - uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+      - name: Check generated recipe data and featured links
+        run: |
+          node --check _site/recipes-data.js
+          python3 - <<'PY'
+          from pathlib import Path
+          page = Path('_site/index.html').read_text()
+          assert 'href="recipes/chicken-biryani.html"' in page
+          assert 'A good place to begin' in page
+          assert '{{ dish.name }}' not in page
+          print('Featured links and generated recipe data passed.')
+          PY

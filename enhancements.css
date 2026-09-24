@@ -9,18 +9,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.25)
         ),
-        url("assets/chicken-biryani.webp?v=20260913-perf1");
-}
-
-/* Performance: let the browser skip rendering content that is still far below the viewport. */
-.categories,
-.recipes,
-.regions,
-.about,
-.contact,
-.footer {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 900px;
+        url("assets/chicken-biryani.webp?v=20260924-premium1");
 }
 
 .recipe-quick-actions {
