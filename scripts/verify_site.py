@@ -17,6 +17,21 @@ except (OSError, json.JSONDecodeError) as exc:
     urdu_names = {}
     errors.append(f"_data/urdu_names.json: {exc}")
 
+bilingual_by_slug = {}
+for path in sorted((ROOT / "_data/bilingual").glob("*.json")):
+    try:
+        category_data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"{path.relative_to(ROOT)}: {exc}")
+        continue
+    if not isinstance(category_data, dict):
+        errors.append(f"{path.relative_to(ROOT)}: expected object")
+        continue
+    for slug, details in category_data.items():
+        if slug in bilingual_by_slug:
+            errors.append(f"{slug}: duplicate bilingual entry")
+        bilingual_by_slug[slug] = details
+
 recipes = {}
 for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     try:
@@ -33,6 +48,22 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
         errors.append(f"{slug}: rating requires a real review source")
     if not (recipe.get("name_urdu") or urdu_names.get(slug)):
         errors.append(f"{slug}: Urdu recipe name is missing")
+    bilingual = bilingual_by_slug.get(slug, {})
+    method_en = bilingual.get("method_en") or recipe.get("method") or []
+    method_ur = recipe.get("method_ur") or bilingual.get("method_ur") or []
+    ingredients_ur = recipe.get("ingredients_ur") or bilingual.get("ingredients_ur") or []
+    tips_ur = recipe.get("tips_ur") or bilingual.get("tips_ur") or []
+    if len(method_en) < 6:
+        errors.append(f"{slug}: detailed English method needs at least 6 steps")
+    if len(method_ur) < 6:
+        errors.append(f"{slug}: Urdu method needs at least 6 steps")
+    if not ingredients_ur:
+        errors.append(f"{slug}: Urdu ingredients are missing")
+    if len(tips_ur) < 3:
+        errors.append(f"{slug}: Urdu tips need at least 3 items")
+    for field in ("description_ur", "storage_ur", "serving_ur"):
+        if not (recipe.get(field) or bilingual.get(field)):
+            errors.append(f"{slug}: {field} is missing")
     if not (ROOT / f"recipes/{slug}.html").is_file():
         errors.append(f"{slug}: permanent recipe page is missing")
     image = str(recipe.get("image", ""))
@@ -41,6 +72,14 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     for field in ("ingredients", "method"):
         if field in recipe and (not isinstance(recipe[field], list) or not all(isinstance(s, str) and s.strip() for s in recipe[field])):
             errors.append(f"{slug}: {field} must be a non-empty list of text")
+
+if set(bilingual_by_slug) != set(recipes):
+    missing = sorted(set(recipes) - set(bilingual_by_slug))
+    extra = sorted(set(bilingual_by_slug) - set(recipes))
+    if missing:
+        errors.append("Bilingual data missing for: " + ", ".join(missing))
+    if extra:
+        errors.append("Bilingual data has unknown recipes: " + ", ".join(extra))
 
 pages = {p.stem for p in (ROOT / "recipes").glob("*.html") if p.name != "index.html"}
 for slug in pages - recipes.keys():
