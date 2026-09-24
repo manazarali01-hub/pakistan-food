@@ -1,0 +1,31 @@
+{
+  "id": 60,
+  "name": "Chicken Malai Boti",
+  "category": "BBQ",
+  "time": "45 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malai_Boti.JPG?width=900",
+  "description": "Creamy Pakistani chicken malai boti marinated with yogurt, cream, green chilies and mild spices, then grilled until tender and smoky.",
+  "ingredients": [
+    "750 g boneless chicken, cut into cubes",
+    "½ cup thick yogurt",
+    "¼ cup cream",
+    "1 tbsp ginger-garlic paste",
+    "2 tbsp lemon juice",
+    "2 green chilies, finely chopped",
+    "1 tsp roasted cumin powder",
+    "½ tsp black pepper",
+    "½ tsp garam masala",
+    "1 tbsp cornflour",
+    "1 tbsp cooking oil",
+    "Salt to taste"
+  ],
+  "method": [
+    "Pat the chicken dry and place it in a bowl.",
+    "Mix yogurt, cream, ginger-garlic paste, lemon juice, green chilies, cumin, pepper, garam masala, cornflour and salt.",
+    "Coat the chicken well and marinate for at least 1 hour in the refrigerator.",
+    "Thread the chicken onto skewers and brush lightly with oil.",
+    "Grill, barbecue or cook in a hot grill pan, turning regularly, until lightly charred and fully cooked.",
+    "Rest for a few minutes before serving with chutney, onion and lemon."
+  ]
+}
