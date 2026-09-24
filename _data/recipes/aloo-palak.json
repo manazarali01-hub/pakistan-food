@@ -1,0 +1,31 @@
+{
+  "id": 63,
+  "name": "Aloo Palak",
+  "category": "Vegetarian",
+  "time": "40 min",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aloo_Palak_(Spinach_with_Potatoes).JPG?width=900",
+  "description": "Simple Pakistani aloo palak with potatoes and spinach cooked with garlic, cumin, tomatoes and green chilies.",
+  "ingredients": [
+    "500 g fresh spinach, washed and chopped",
+    "3 medium potatoes, peeled and cubed",
+    "1 onion, finely chopped",
+    "2 tomatoes, chopped",
+    "4 garlic cloves, sliced",
+    "2 green chilies",
+    "1 tsp cumin seeds",
+    "1 tsp coriander powder",
+    "½ tsp red chili powder",
+    "¼ tsp turmeric",
+    "3 tbsp cooking oil",
+    "Salt to taste"
+  ],
+  "method": [
+    "Heat oil and fry cumin seeds, garlic and onion until fragrant.",
+    "Add tomatoes, green chilies and powdered spices and cook until soft.",
+    "Add the potatoes with a small splash of water, cover and cook until almost tender.",
+    "Add chopped spinach and cook uncovered until it wilts and releases moisture.",
+    "Continue cooking until the potatoes are tender and excess liquid evaporates.",
+    "Taste for salt and serve hot with roti or paratha."
+  ]
+}
