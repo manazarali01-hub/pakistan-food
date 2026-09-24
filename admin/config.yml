@@ -51,3 +51,15 @@ collections:
       - label: "Method"
         name: "method"
         widget: "list"
+      - label: "Recipe-specific Tips"
+        name: "tips"
+        widget: "list"
+        required: false
+      - label: "Storage Advice"
+        name: "storage"
+        widget: "text"
+        required: false
+      - label: "Serving Suggestion"
+        name: "serving"
+        widget: "text"
+        required: false

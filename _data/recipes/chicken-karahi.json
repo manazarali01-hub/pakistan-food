@@ -5,22 +5,31 @@
   "time": "45 min",
   "serves": 4,
   "image": "assets/chicken-karahi.webp",
-  "description": "Classic Pakistani chicken karahi cooked with tomatoes, green chilies and fresh ginger.",
+  "description": "Chicken karahi with a concentrated tomato masala, fresh ginger and green chillies. Cook the chicken uncovered until the sauce clings to each piece, then finish with coriander.",
   "ingredients": [
-    "1 kg chicken, karahi cut",
-    "6 ripe tomatoes, chopped",
-    "5 green chilies",
-    "2 tbsp fresh ginger, julienned",
-    "1 tbsp garlic paste",
-    "1 tsp red chili powder",
-    "1 tsp crushed coriander",
-    "½ cup cooking oil and salt"
+    "1 kg bone-in chicken, cut into small pieces",
+    "5 medium ripe tomatoes, chopped",
+    "1/3 cup neutral cooking oil",
+    "1 tbsp ginger-garlic paste",
+    "1 tsp crushed coriander seeds",
+    "1 tsp red chilli powder, or to taste",
+    "3/4 tsp salt, or to taste",
+    "3 green chillies, slit lengthwise",
+    "2 tbsp julienned fresh ginger",
+    "2 tbsp chopped fresh coriander"
   ],
   "method": [
-    "Heat oil in a karahi.",
-    "Add chicken and fry well.",
-    "Add tomatoes and spices.",
-    "Cook until oil separates.",
-    "Finish with ginger, chilies and coriander."
-  ]
+    "Pat the chicken dry. Heat the oil in a wide karahi or heavy frying pan over medium-high heat, then add the chicken in a single layer; work in batches if the pan is crowded. Brown for 7–9 minutes, turning once or twice.",
+    "Add the ginger-garlic paste and stir for a minute until fragrant. Mix in the chopped tomatoes, crushed coriander, chilli powder and salt.",
+    "Lower the heat to medium and cook uncovered for 15–20 minutes, stirring and pressing the tomatoes against the pan. If the masala sticks before the chicken is tender, add a small splash of water.",
+    "Continue cooking until the tomatoes have broken down, the chicken is cooked through and oil starts to appear at the edges of the thick sauce. Check the thickest piece; there should be no pink at the centre.",
+    "Add the slit green chillies and half the ginger. Cook for 2 more minutes, then taste and adjust the salt. Scatter the remaining ginger and fresh coriander over the karahi before serving with naan."
+  ],
+  "tips": [
+    "Use a wide pan so the tomatoes reduce instead of steaming the chicken in a watery sauce.",
+    "Stir the masala regularly as it thickens; add water a tablespoon at a time if it starts to scorch.",
+    "Add the fresh ginger in two stages so some cooks into the gravy and some stays bright on top."
+  ],
+  "storage": "Cool promptly and refrigerate covered for up to 2 days. Reheat until the chicken and gravy are piping hot throughout, adding a little water if needed.",
+  "serving": "Serve hot with naan or chapati, sliced onion and lemon wedges."
 }

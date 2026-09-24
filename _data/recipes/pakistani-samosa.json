@@ -2,25 +2,39 @@
   "id": 8,
   "name": "Pakistani Samosa",
   "category": "Snacks",
-  "time": "45 min",
+  "time": "75 min",
   "serves": 6,
   "image": "assets/pakistani-samosa-v2.webp",
-  "description": "Crispy golden samosas filled with a delicious spicy potato mixture.",
+  "description": "Crisp triangular Pakistani samosas filled with spiced potato, cumin and green chilli. A firm dough and gentle frying help the wrappers turn flaky without soaking up too much oil.",
   "ingredients": [
-    "2 cups plain flour",
-    "4 medium potatoes, boiled",
-    "3 green chilies, chopped",
-    "½ cup fresh coriander",
+    "2 cups plain flour, plus a little for dusting",
+    "4 tbsp neutral oil for the dough",
+    "1/2 tsp ajwain (carom seeds)",
+    "3/4 tsp salt, divided",
+    "About 1/2 cup water for the dough, added gradually",
+    "3 medium potatoes, boiled, peeled and roughly mashed",
+    "1 tbsp oil for the filling",
     "1 tsp cumin seeds",
-    "1 tsp crushed red chili",
-    "½ tsp ajwain",
-    "Salt, water and frying oil"
+    "1/2 tsp crushed red chilli, or to taste",
+    "2 green chillies, finely chopped",
+    "2 tbsp chopped fresh coriander",
+    "1 tbsp lemon juice",
+    "Neutral oil for deep frying",
+    "2 tbsp flour mixed with a little water, for sealing"
   ],
   "method": [
-    "Prepare dough with flour.",
-    "Make spicy potato filling.",
-    "Shape samosa wrappers.",
-    "Fill and seal.",
-    "Deep fry until golden."
-  ]
+    "Rub 4 tablespoons of oil into the flour with the ajwain and 1/2 teaspoon salt until the mixture resembles coarse crumbs. Add water gradually to make a firm dough; knead briefly, cover and rest for 30 minutes.",
+    "For the filling, heat 1 tablespoon oil in a pan and toast the cumin seeds for 30 seconds. Add the green chillies and crushed red chilli, then stir in the potatoes and remaining salt. Cook for 2–3 minutes, fold in coriander and lemon juice, and let the filling cool completely.",
+    "Divide the dough into 6 balls. Roll each into a thin oval and cut it in half. Moisten one straight edge of each half with the flour paste, overlap the edges to form a cone and pinch the seam closed.",
+    "Fill each cone with about 2 tablespoons of cooled potato mixture, leaving space at the top. Moisten and press the top edges tightly shut; keep the assembled samosas covered while shaping the rest.",
+    "Heat enough oil for deep frying over medium-low heat. Fry a few samosas at a time in oil that bubbles gently, turning occasionally for 10–12 minutes until deeply golden and crisp; oil that is too hot will brown the outside before the wrapper cooks.",
+    "Lift onto a rack or kitchen paper to drain. Serve warm with mint or tamarind chutney."
+  ],
+  "tips": [
+    "A firm, rested dough makes a crisper wrapper than a soft, sticky dough.",
+    "Cool the potato filling before shaping, and seal every edge well to prevent leaks.",
+    "Fry gently in small batches; rapidly bubbling oil is too hot for raw samosa dough."
+  ],
+  "storage": "Refrigerate cooked samosas promptly in a covered container for up to 2 days. Reheat in an oven or air fryer until hot and crisp; do not leave potato filling at room temperature for extended periods.",
+  "serving": "Pair with green mint chutney or sweet tamarind chutney and a cup of chai."
 }

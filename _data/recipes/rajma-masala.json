@@ -1,0 +1,43 @@
+{
+  "id": 66,
+  "name": "Rajma Masala",
+  "category": "Vegetarian",
+  "time": "45 min",
+  "serves": 4,
+  "image": "assets/rajma-masala.webp",
+  "description": "Red kidney beans simmered in an onion and tomato masala until the gravy clings to each bean. Serve this homestyle rajma with steamed rice or warm chapati.",
+  "ingredients": [
+    "2 cans (400 g each) cooked red kidney beans, drained and rinsed",
+    "2 tbsp neutral oil",
+    "1 large onion, finely chopped",
+    "1 tbsp grated ginger",
+    "3 garlic cloves, crushed",
+    "2 medium tomatoes, finely chopped",
+    "1 tbsp tomato paste",
+    "1 tsp ground cumin",
+    "1 tsp ground coriander",
+    "½ tsp turmeric",
+    "½ tsp red chilli powder, or to taste",
+    "½ tsp garam masala",
+    "¾ cup water, plus a little more if needed",
+    "¾ tsp salt, or to taste",
+    "2 tbsp chopped fresh coriander",
+    "Lemon wedges, for serving"
+  ],
+  "method": [
+    "Drain and rinse the canned kidney beans. If using dried beans instead, soak them overnight and boil them thoroughly until tender before beginning this recipe; never use undercooked kidney beans.",
+    "Heat the oil in a deep pan over medium heat. Add the onion and cook for 8–10 minutes, stirring often, until soft and deep golden rather than burnt.",
+    "Add the ginger and garlic. Stir for about 1 minute, then add the chopped tomatoes and tomato paste. Cook for 6–8 minutes, pressing the tomatoes against the pan until they break down.",
+    "Stir in the cumin, coriander, turmeric and chilli powder. Cook for another minute, adding a splash of water if the spices begin to stick.",
+    "Add the kidney beans, ¾ cup water and salt. Bring to a simmer, then reduce the heat and cook gently, uncovered, for 12–15 minutes. Stir occasionally so the bottom does not catch.",
+    "Mash a spoonful of beans against the side of the pan and stir them back into the gravy. Simmer for 2–3 minutes more if you prefer a thicker sauce; add a little water if it becomes too thick.",
+    "Turn off the heat and stir in the garam masala. Taste and adjust the salt and chilli. Scatter fresh coriander over the top and serve with lemon wedges, rice or chapati."
+  ],
+  "tips": [
+    "Canned beans save the overnight soak; rinse them well so their liquid does not make the gravy taste too salty.",
+    "Cook the onion and tomatoes until thick before adding the beans; this gives the masala body without cream.",
+    "For a thicker sauce, mash a small portion of the beans rather than adding flour."
+  ],
+  "storage": "Cool promptly, cover and refrigerate for up to 3 days. Reheat only the portion needed until piping hot, adding a splash of water if the gravy has thickened.",
+  "serving": "Spoon over plain rice, or serve with chapati, a little plain yogurt and sliced onion."
+}

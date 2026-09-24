@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Recipe image unavailable</title>
+  <desc id="desc">Pakistan Food's illustrated image placeholder.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#faf4e9"/><stop offset="1" stop-color="#ead6be"/></linearGradient></defs>
+  <rect width="900" height="675" fill="url(#bg)"/>
+  <circle cx="450" cy="285" r="145" fill="#fffaf1" stroke="#ba4e39" stroke-width="10"/>
+  <circle cx="450" cy="285" r="109" fill="none" stroke="#c78759" stroke-width="3"/>
+  <path d="M390 300c25-39 93-39 119 0M411 248c20-18 59-18 78 0" fill="none" stroke="#ba4e39" stroke-width="10" stroke-linecap="round"/>
+  <text x="450" y="505" text-anchor="middle" font-family="Georgia,serif" font-size="39" fill="#702b24">Pakistan Food</text>
+  <text x="450" y="548" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#68554b">Recipe image unavailable</text>
+</svg>
