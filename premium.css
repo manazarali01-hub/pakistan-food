@@ -85,6 +85,22 @@ body.dark {
 .cat .card strong { color: var(--primary); }
 .category-nav a { background: var(--surface) !important; border: 1px solid var(--border); }
 .seo-site-footer, .cat-site-footer { background: #27231f !important; }
+.hub-site-header { background: var(--surface) !important; border-color: var(--border) !important; }
+.hub-site-nav { max-width: 1180px !important; }
+.hub-site-brand { display: inline-flex; align-items: center; gap: 9px; color: var(--primary) !important; font-size: 1.15rem !important; }
+.hub-site-brand img { width: 38px; height: 38px; border-radius: 9px; }
+.hub-site-links a { color: var(--text) !important; }
+.hub-site-links a:hover { color: var(--primary) !important; }
+.hub { margin-inline: auto; }
+.hub h1, .hub h2 { font-family: Georgia, serif; line-height: 1.15; text-wrap: balance; }
+.hub-hero { padding: clamp(20px, 4vw, 36px); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; }
+.hub-hero img { border-radius: 16px; }
+.hub-card { border: 1px solid var(--border); background: var(--surface) !important; color: var(--text) !important; box-shadow: var(--shadow); }
+.hub-card strong { color: var(--primary); }
+.hub-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.hub-categories a, .popular-links a { background: var(--surface) !important; color: var(--primary) !important; border: 1px solid var(--border); }
+.hub-categories a:hover, .popular-links a:hover { border-color: var(--primary); }
+.hub-site-footer { background: #27231f !important; }
 .print-recipe { appearance: none; background: var(--primary); color: #fff; border: 0; border-radius: 9px; padding: 10px 16px; min-height: 44px; font: inherit; font-weight: 700; cursor: pointer; }
 .print-recipe:hover { background: var(--primary-dark); }
 
