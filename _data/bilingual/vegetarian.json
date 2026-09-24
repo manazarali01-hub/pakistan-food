@@ -1,0 +1,249 @@
+{
+  "aloo-palak": {
+    "description_ur": "آلو اور پالک کو لہسن، زیرہ، ٹماٹر اور ہری مرچ کے ساتھ پکایا جانے والا سادہ پاکستانی سبزی والا سالن۔",
+    "ingredients_ur": [
+      "500 گرام تازہ پالک، دھلی اور کٹی ہوئی",
+      "3 درمیانے آلو، چھیلے اور کیوبز",
+      "1 پیاز، باریک کٹی ہوئی",
+      "2 ٹماٹر، کٹے ہوئے",
+      "4 لہسن کی کلیاں، سلائس کی ہوئی",
+      "2 ہری مرچیں",
+      "1 چائے کا چمچ زیرہ",
+      "1 چائے کا چمچ دھنیا پاؤڈر",
+      "½ چائے کا چمچ لال مرچ",
+      "¼ چائے کا چمچ ہلدی",
+      "3 کھانے کے چمچ کوکنگ آئل",
+      "نمک حسبِ ذائقہ"
+    ],
+    "method_en": [
+      "Wash the spinach thoroughly in several changes of water, drain well and chop. Cut the potatoes into even cubes.",
+      "Heat oil in a wide pan over medium heat. Add cumin and sliced garlic and cook until fragrant, then add the onion.",
+      "Cook the onion for 5–7 minutes until soft and lightly golden. Add tomatoes, green chilies, coriander powder, red chili, turmeric and salt.",
+      "Cook the tomato masala until soft and thick, adding only a small splash of water if it starts to stick.",
+      "Add the potatoes, stir to coat them in masala, then cover and cook over medium-low heat until they are nearly tender.",
+      "Add the chopped spinach in batches. Let each batch wilt slightly before adding more so the pan does not become overcrowded.",
+      "Cook uncovered until the spinach is tender, potatoes are fully cooked and excess moisture has evaporated.",
+      "Taste for salt and spice, then serve while the spinach still looks fresh rather than overcooked."
+    ],
+    "method_ur": [
+      "پالک کو کئی بار پانی میں اچھی طرح دھوئیں، پانی نکال کر کاٹیں۔ آلو برابر کیوبز میں کاٹیں۔",
+      "چوڑے پین میں درمیانی آنچ پر تیل گرم کریں۔ زیرہ اور سلائس لہسن خوشبو آنے تک پکائیں، پھر پیاز ڈالیں۔",
+      "پیاز 5 سے 7 منٹ نرم اور ہلکی سنہری ہونے تک پکائیں۔ ٹماٹر، ہری مرچ، دھنیا پاؤڈر، لال مرچ، ہلدی اور نمک شامل کریں۔",
+      "ٹماٹر کا مصالحہ نرم اور گاڑھا ہونے تک پکائیں، لگنے لگے تو صرف تھوڑا پانی ڈالیں۔",
+      "آلو شامل کر کے مصالحے میں اچھی طرح کوٹ کریں، پھر ڈھک کر درمیانی سے ہلکی آنچ پر تقریباً نرم ہونے تک پکائیں۔",
+      "کٹی پالک بیچز میں ڈالیں۔ ہر بیچ کو ہلکا مرجھانے دیں پھر اگلا ڈالیں تاکہ پین زیادہ نہ بھرے۔",
+      "بغیر ڈھانپے پکائیں یہاں تک کہ پالک نرم، آلو مکمل پکے اور اضافی پانی خشک ہو جائے۔",
+      "نمک اور مرچ چیک کریں اور پالک کا تازہ رنگ برقرار رہتے ہوئے سرو کریں۔"
+    ],
+    "tips_en": [
+      "Drain spinach well so the curry does not become watery.",
+      "Part-cook potatoes before adding spinach.",
+      "Finish uncovered to evaporate excess moisture."
+    ],
+    "tips_ur": [
+      "پالک اچھی طرح خشک کریں تاکہ سالن پانی والا نہ ہو۔",
+      "پالک سے پہلے آلو تقریباً نرم کر لیں۔",
+      "آخر میں بغیر ڈھانپے پکائیں تاکہ اضافی پانی خشک ہو۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور دوبارہ ہلکی آنچ پر مکمل گرم کریں۔",
+    "serving_ur": "روٹی، پراٹھا یا دال چاول کے ساتھ پیش کریں۔"
+  },
+  "chana-masala": {
+    "description_ur": "چنے کو پیاز، ٹماٹر، ادرک لہسن، ہری مرچ اور پاکستانی مصالحوں کی کھٹی گاڑھی گریوی میں پکایا جاتا ہے۔",
+    "ingredients_ur": [
+      "3 کپ پکے چنے",
+      "2 درمیانے پیاز، باریک کٹے ہوئے",
+      "3 ٹماٹر، کٹے ہوئے",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "2 ہری مرچیں",
+      "1 چائے کا چمچ زیرہ",
+      "1 چائے کا چمچ دھنیا پاؤڈر",
+      "1 چائے کا چمچ لال مرچ",
+      "½ چائے کا چمچ ہلدی",
+      "½ چائے کا چمچ گرم مصالحہ",
+      "2 کھانے کے چمچ کوکنگ آئل",
+      "نمک اور ہرا دھنیا"
+    ],
+    "method_en": [
+      "If using canned chickpeas, rinse and drain them. If using dried chickpeas, soak overnight and boil until completely tender before starting.",
+      "Heat oil in a heavy pan. Add cumin and onions and cook over medium heat until golden.",
+      "Add ginger-garlic paste and stir for 1 minute, then add tomatoes, green chilies, coriander powder, chili powder, turmeric and salt.",
+      "Cook the masala for 8–10 minutes until the tomatoes collapse and oil begins to show at the edges.",
+      "Add the chickpeas with about ½ to ¾ cup of hot cooking water. Bring to a simmer.",
+      "Cook uncovered for 15–20 minutes so the chickpeas absorb the masala. Mash a small spoonful against the side of the pan to thicken the gravy.",
+      "Add garam masala and adjust the consistency with a little hot water if needed.",
+      "Taste for salt, finish with fresh coriander and serve hot."
+    ],
+    "method_ur": [
+      "اگر کین والے چنے استعمال کر رہے ہیں تو دھو کر پانی نکالیں۔ خشک چنے ہوں تو رات بھر بھگو کر مکمل نرم ہونے تک پہلے اُبالیں۔",
+      "بھاری پین میں تیل گرم کریں۔ زیرہ اور پیاز ڈال کر درمیانی آنچ پر سنہری ہونے تک پکائیں۔",
+      "ادرک لہسن پیسٹ ڈال کر 1 منٹ ہلائیں، پھر ٹماٹر، ہری مرچ، دھنیا پاؤڈر، لال مرچ، ہلدی اور نمک شامل کریں۔",
+      "مصالحہ 8 سے 10 منٹ پکائیں یہاں تک کہ ٹماٹر مکمل گل جائیں اور کناروں پر تیل نظر آنے لگے۔",
+      "چنے تقریباً ½ سے ¾ کپ گرم پانی کے ساتھ شامل کریں اور ہلکا اُبال لائیں۔",
+      "15 سے 20 منٹ بغیر ڈھانپے پکائیں تاکہ چنے مصالحہ جذب کریں۔ تھوڑے چنے پین کے کنارے پر میش کر کے گریوی گاڑھی کریں۔",
+      "گرم مصالحہ ڈالیں اور ضرورت ہو تو تھوڑے گرم پانی سے گاڑھا پن درست کریں۔",
+      "نمک چیک کریں، ہرا دھنیا ڈالیں اور گرم سرو کریں۔"
+    ],
+    "tips_en": [
+      "Fully cooked chickpeas are essential before they go into the masala.",
+      "Cook the tomato base until thick before adding chickpeas.",
+      "Mash only a small portion for body while keeping most chickpeas whole."
+    ],
+    "tips_ur": [
+      "مصالحے میں ڈالنے سے پہلے چنے مکمل پکے ہونے چاہئیں۔",
+      "چنے ڈالنے سے پہلے ٹماٹر کا بیس گاڑھا پکائیں۔",
+      "گریوی کے لیے صرف تھوڑے چنے میش کریں اور باقی سالم رکھیں۔"
+    ],
+    "storage_ur": "فریج میں 3 دن تک رکھیں اور دوبارہ گرم کرتے وقت ضرورت پر تھوڑا پانی شامل کریں۔",
+    "serving_ur": "روٹی، نان، پوری یا سادہ چاول کے ساتھ پیش کریں۔"
+  },
+  "daal-mash": {
+    "description_ur": "ماش دال، ٹماٹر، ادرک اور زیرہ لہسن کے تڑکے سے تیار ہونے والی گاڑھی اور آرام دہ پاکستانی دال ماش۔",
+    "ingredients_ur": [
+      "1½ کپ ماش دال",
+      "1 پیاز، باریک کٹی ہوئی",
+      "2 ٹماٹر، کٹے ہوئے",
+      "1 کھانے کا چمچ ادرک، باریک لمبی",
+      "3 لہسن کی کلیاں، سلائس کی ہوئی",
+      "2 ہری مرچیں",
+      "1 چائے کا چمچ زیرہ",
+      "1 چائے کا چمچ لال مرچ",
+      "½ چائے کا چمچ ہلدی",
+      "½ چائے کا چمچ گرم مصالحہ",
+      "3 کھانے کے چمچ تیل یا گھی",
+      "نمک اور ہرا دھنیا"
+    ],
+    "method_en": [
+      "Wash the mash daal until the water is mostly clear and soak it for 30 minutes.",
+      "Drain and place the daal in a saucepan with fresh water, turmeric and salt.",
+      "Bring to a boil, then simmer gently until the lentils are tender but still have some shape. Add hot water only if needed.",
+      "In a separate pan, heat oil or ghee and fry cumin, sliced garlic and onion until the garlic is golden and the onion is lightly browned.",
+      "Add tomatoes, red chili and green chilies and cook until the tomatoes soften into a thick masala.",
+      "Add the cooked daal to the masala and simmer together for 8–10 minutes, stirring gently.",
+      "Cook uncovered until the consistency is thick and creamy, then add garam masala.",
+      "Finish with julienned ginger and coriander and serve hot."
+    ],
+    "method_ur": [
+      "ماش دال پانی صاف آنے تک دھو کر 30 منٹ بھگو دیں۔",
+      "پانی نکال کر دال تازہ پانی، ہلدی اور نمک کے ساتھ سوس پین میں ڈالیں۔",
+      "اُبال لائیں، پھر ہلکی آنچ پر دال نرم ہونے تک پکائیں مگر کچھ دانے شکل میں رہیں۔ صرف ضرورت پر گرم پانی ڈالیں۔",
+      "الگ پین میں تیل یا گھی گرم کر کے زیرہ، سلائس لہسن اور پیاز پکائیں یہاں تک کہ لہسن سنہری اور پیاز ہلکی براؤن ہو جائے۔",
+      "ٹماٹر، لال مرچ اور ہری مرچ شامل کر کے گاڑھا مصالحہ بننے تک پکائیں۔",
+      "پکی دال مصالحے میں شامل کر کے 8 سے 10 منٹ نرمی سے ہلاتے ہوئے پکائیں۔",
+      "بغیر ڈھانپے گاڑھی اور کریمی ساخت آنے تک پکائیں، پھر گرم مصالحہ ڈالیں۔",
+      "باریک ادرک اور ہرا دھنیا شامل کر کے گرم سرو کریں۔"
+    ],
+    "tips_en": [
+      "Do not overcook the daal into a complete puree.",
+      "Use hot water if thinning during cooking.",
+      "Add fresh ginger near the end for a brighter aroma."
+    ],
+    "tips_ur": [
+      "دال کو مکمل پیوری کی طرح نہ پکائیں۔",
+      "پکاتے وقت پتلا کرنا ہو تو گرم پانی ڈالیں۔",
+      "تازہ خوشبو کے لیے ادرک آخر میں شامل کریں۔"
+    ],
+    "storage_ur": "فریج میں 3 دن تک رکھیں اور دوبارہ گرم کرتے وقت تھوڑا پانی شامل کیا جا سکتا ہے۔",
+    "serving_ur": "روٹی، نان، اچار اور سلاد کے ساتھ پیش کریں۔"
+  },
+  "rajma-masala": {
+    "description_ur": "لال لوبیا کو پیاز اور ٹماٹر کے مصالحے میں پکایا جاتا ہے یہاں تک کہ گاڑھی گریوی ہر دانے پر اچھی طرح لگ جائے۔",
+    "ingredients_ur": [
+      "2 کین پکے لال لوبیا، پانی نکلا اور دھلا ہوا",
+      "2 کھانے کے چمچ نیوٹرل آئل",
+      "1 بڑی پیاز، باریک کٹی ہوئی",
+      "1 کھانے کا چمچ کدوکش ادرک",
+      "3 لہسن کی کلیاں، کچلی ہوئی",
+      "2 درمیانے ٹماٹر، باریک کٹے ہوئے",
+      "1 کھانے کا چمچ ٹماٹر پیسٹ",
+      "1 چائے کا چمچ پسا زیرہ",
+      "1 چائے کا چمچ پسا دھنیا",
+      "½ چائے کا چمچ ہلدی",
+      "½ چائے کا چمچ لال مرچ یا حسبِ ذائقہ",
+      "½ چائے کا چمچ گرم مصالحہ",
+      "¾ کپ پانی، ضرورت پر مزید",
+      "¾ چائے کا چمچ نمک یا حسبِ ذائقہ",
+      "2 کھانے کے چمچ ہرا دھنیا",
+      "سرو کے لیے لیموں"
+    ],
+    "method_en": [
+      "Drain and rinse canned kidney beans. If using dried beans, soak them overnight and boil them thoroughly until completely tender before starting; never use undercooked kidney beans.",
+      "Heat oil in a deep pan over medium heat. Add onion and cook for 8–10 minutes, stirring often, until soft and deep golden rather than burnt.",
+      "Add ginger and garlic and stir for about 1 minute. Add tomatoes and tomato paste and cook for 6–8 minutes until broken down.",
+      "Stir in cumin, coriander, turmeric and chili powder. Cook for another minute, adding a splash of water if the spices begin to stick.",
+      "Add kidney beans, water and salt. Bring to a simmer and cook uncovered for 12–15 minutes.",
+      "Mash a spoonful of beans against the side of the pan and stir them back into the gravy to thicken it naturally.",
+      "Simmer for another 2–3 minutes, adjusting with a little water if the gravy becomes too thick.",
+      "Turn off the heat, stir in garam masala, adjust seasoning and finish with coriander and lemon."
+    ],
+    "method_ur": [
+      "کین والے لال لوبیا کا پانی نکال کر دھوئیں۔ خشک لوبیا استعمال کریں تو رات بھر بھگو کر مکمل نرم ہونے تک اچھی طرح اُبالیں؛ کچے یا ادھ پکے لوبیا استعمال نہ کریں۔",
+      "گہرے پین میں درمیانی آنچ پر تیل گرم کریں۔ پیاز 8 سے 10 منٹ بار بار ہلاتے ہوئے نرم اور گہری سنہری کریں، جلنے نہ دیں۔",
+      "ادرک اور لہسن شامل کر کے تقریباً 1 منٹ ہلائیں۔ ٹماٹر اور ٹماٹر پیسٹ ڈال کر 6 سے 8 منٹ مکمل گلنے تک پکائیں۔",
+      "زیرہ، دھنیا، ہلدی اور لال مرچ شامل کریں۔ مزید ایک منٹ پکائیں اور مصالحہ لگنے لگے تو تھوڑا پانی ڈالیں۔",
+      "لال لوبیا، پانی اور نمک شامل کریں۔ ہلکا اُبال لا کر 12 سے 15 منٹ بغیر ڈھانپے پکائیں۔",
+      "ایک چمچ لوبیا پین کے کنارے پر میش کر کے واپس گریوی میں ملائیں تاکہ قدرتی طور پر گاڑھی ہو۔",
+      "مزید 2 سے 3 منٹ پکائیں اور بہت گاڑھی ہو تو تھوڑا پانی شامل کریں۔",
+      "آنچ بند کر کے گرم مصالحہ شامل کریں، ذائقہ درست کریں اور ہرا دھنیا و لیموں کے ساتھ مکمل کریں۔"
+    ],
+    "tips_en": [
+      "Rinse canned beans well.",
+      "Cook onion and tomato base until thick before adding beans.",
+      "Mash only a small portion to thicken naturally."
+    ],
+    "tips_ur": [
+      "کین والے لوبیا اچھی طرح دھوئیں۔",
+      "لوبیا ڈالنے سے پہلے پیاز ٹماٹر کا بیس گاڑھا پکائیں۔",
+      "قدرتی گاڑھے پن کے لیے صرف تھوڑے لوبیا میش کریں۔"
+    ],
+    "storage_ur": "فریج میں 3 دن تک رکھیں اور دوبارہ گرم کرتے وقت تھوڑا پانی شامل کریں۔",
+    "serving_ur": "سادہ چاول، چپاتی، دہی اور پیاز کے ساتھ پیش کریں۔"
+  },
+  "sarson-ka-saag": {
+    "description_ur": "سرسوں کے ساگ اور پالک کو ادرک، لہسن، ہری مرچ اور مکئی کے آٹے کے ساتھ آہستہ پکایا جانے والا کلاسک پنجابی ساگ۔",
+    "ingredients_ur": [
+      "750 گرام سرسوں کا ساگ، صاف اور کٹا ہوا",
+      "250 گرام پالک، کٹی ہوئی",
+      "2 ہری مرچیں",
+      "1 کھانے کا چمچ ادرک، کٹی ہوئی",
+      "5 لہسن کی کلیاں",
+      "2 کھانے کے چمچ مکئی کا آٹا",
+      "1 درمیانی پیاز، باریک کٹی ہوئی",
+      "2 کھانے کے چمچ گھی",
+      "نمک حسبِ ذائقہ",
+      "سرو کے لیے مکئی کی روٹی"
+    ],
+    "method_en": [
+      "Wash mustard greens and spinach very thoroughly because leafy greens can hold grit. Drain and chop roughly.",
+      "Place the greens in a large pot with green chilies, ginger, garlic, salt and only a small splash of water.",
+      "Cover and cook over medium-low heat until the greens are very soft, stirring occasionally. They will release their own moisture.",
+      "Mash with a traditional wooden masher or pulse carefully with a blender until coarse rather than completely smooth.",
+      "Return to low heat, sprinkle in maize flour gradually and stir well to avoid lumps.",
+      "Simmer for 15–20 minutes, stirring from the bottom, until the saag thickens and the raw taste of maize flour disappears.",
+      "For the tempering, heat ghee and fry onion with a little extra garlic until golden.",
+      "Pour the hot tempering over the saag, stir lightly and serve hot with makki di roti."
+    ],
+    "method_ur": [
+      "سرسوں کا ساگ اور پالک بہت اچھی طرح دھوئیں کیونکہ پتوں میں مٹی رہ سکتی ہے۔ پانی نکال کر موٹا کاٹیں۔",
+      "ساگ بڑے برتن میں ہری مرچ، ادرک، لہسن، نمک اور صرف تھوڑے پانی کے ساتھ ڈالیں۔",
+      "ڈھک کر درمیانی سے ہلکی آنچ پر بہت نرم ہونے تک پکائیں اور وقفے وقفے سے ہلائیں۔ ساگ اپنا پانی بھی چھوڑے گا۔",
+      "لکڑی کے مدھانی سے میش کریں یا بلینڈر سے احتیاط سے ہلکا پلس کریں؛ مکمل ہموار پیوری نہ بنائیں۔",
+      "دوبارہ ہلکی آنچ پر رکھیں، مکئی کا آٹا تھوڑا تھوڑا چھڑکیں اور گٹھلیوں سے بچنے کے لیے اچھی طرح ہلائیں۔",
+      "15 سے 20 منٹ نیچے سے ہلاتے ہوئے پکائیں یہاں تک کہ ساگ گاڑھا ہو اور مکئی کے آٹے کا کچا ذائقہ ختم ہو۔",
+      "تڑکے کے لیے گھی گرم کر کے پیاز اور تھوڑا اضافی لہسن سنہری کریں۔",
+      "گرم تڑکا ساگ پر ڈالیں، ہلکا مکس کریں اور مکئی کی روٹی کے ساتھ گرم سرو کریں۔"
+    ],
+    "tips_en": [
+      "Wash greens in several changes of water.",
+      "Blend only to a coarse texture for traditional body.",
+      "Cook maize flour long enough to remove its raw taste."
+    ],
+    "tips_ur": [
+      "ساگ کئی پانیوں میں اچھی طرح دھوئیں۔",
+      "روایتی ساخت کے لیے مکمل پیوری کے بجائے موٹا بلینڈ کریں۔",
+      "مکئی کا آٹا اتنا پکائیں کہ کچا ذائقہ ختم ہو جائے۔"
+    ],
+    "storage_ur": "فریج میں 3 دن تک رکھیں اور دوبارہ ہلکی آنچ پر اچھی طرح گرم کریں۔",
+    "serving_ur": "مکئی کی روٹی، تھوڑے گھی، پیاز یا لسی کے ساتھ پیش کریں۔"
+  }
+}
