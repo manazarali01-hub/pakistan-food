@@ -1,12 +1,12 @@
 {% assign recipe = site.data.recipes[page.recipe_key] %}
-{% capture canonical_url %}https://manazarali01-hub.github.io/pakistan-food/recipes/{{ page.recipe_key }}.html{% endcapture %}
+{% capture canonical_url %}https://pakistanfoodrecipes.top/recipes/{{ page.recipe_key }}.html{% endcapture %}
 {% capture meta_description %}{{ recipe.description | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %} and serves {{ recipe.serves }}{% endif %}. See ingredients and the easy step-by-step method.{% endcapture %}
 {% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
   {% assign display_image = recipe.image %}
   {% assign seo_image = recipe.image | replace: 'Special:Redirect/file/', 'Special:FilePath/' %}
 {% else %}
   {% assign display_image = '../' | append: recipe.image %}
-  {% assign seo_image = 'https://manazarali01-hub.github.io/pakistan-food/' | append: recipe.image %}
+  {% assign seo_image = 'https://pakistanfoodrecipes.top/' | append: recipe.image %}
 {% endif %}
 {% assign category_slug = recipe.category | downcase %}
 {% assign schema_recipe_category = 'Main course' %}
@@ -116,7 +116,7 @@
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#b21f2d">
   <link rel="canonical" href="{{ canonical_url }}">
-  <link rel="sitemap" type="application/xml" href="https://manazarali01-hub.github.io/pakistan-food/sitemap.xml">
+  <link rel="sitemap" type="application/xml" href="https://pakistanfoodrecipes.top/sitemap.xml">
   <link rel="icon" href="../assets/pakistan-food-logo.png" type="image/png">
   <link rel="preload" as="image" href="{{ display_image }}">
   <meta property="og:type" content="article">
@@ -139,24 +139,24 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://manazarali01-hub.github.io/pakistan-food/#organization",
+        "@id": "https://pakistanfoodrecipes.top/#organization",
         "name": "Pakistan Food",
-        "url": "https://manazarali01-hub.github.io/pakistan-food/",
+        "url": "https://pakistanfoodrecipes.top/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://manazarali01-hub.github.io/pakistan-food/assets/pakistan-food-logo.png",
-          "contentUrl": "https://manazarali01-hub.github.io/pakistan-food/assets/pakistan-food-logo.png",
+          "url": "https://pakistanfoodrecipes.top/assets/pakistan-food-logo.png",
+          "contentUrl": "https://pakistanfoodrecipes.top/assets/pakistan-food-logo.png",
           "width": 512,
           "height": 512
         }
       },
       {
         "@type": "WebSite",
-        "@id": "https://manazarali01-hub.github.io/pakistan-food/#website",
-        "url": "https://manazarali01-hub.github.io/pakistan-food/",
+        "@id": "https://pakistanfoodrecipes.top/#website",
+        "url": "https://pakistanfoodrecipes.top/",
         "name": "Pakistan Food",
         "description": "Authentic Pakistani recipes with ingredients and easy step-by-step cooking methods.",
-        "publisher": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#organization"},
+        "publisher": {"@id": "https://pakistanfoodrecipes.top/#organization"},
         "inLanguage": "en"
       },
       {
@@ -165,7 +165,7 @@
         "url": "{{ canonical_url }}",
         "name": {{ recipe.name | append: ' Recipe | Authentic Pakistani Food' | jsonify }},
         "description": {{ meta_description | strip | jsonify }},
-        "isPartOf": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#website"},
+        "isPartOf": {"@id": "https://pakistanfoodrecipes.top/#website"},
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "@id": "{{ canonical_url }}#primaryimage",
@@ -185,7 +185,7 @@
         "image": {"@id": "{{ canonical_url }}#primaryimage"},
         "url": "{{ canonical_url }}",
         "mainEntityOfPage": {"@id": "{{ canonical_url }}#webpage"},
-        "author": {"@id": "https://manazarali01-hub.github.io/pakistan-food/#organization"},
+        "author": {"@id": "https://pakistanfoodrecipes.top/#organization"},
         "recipeCuisine": "Pakistani",
         "recipeCategory": {{ schema_recipe_category | jsonify }},
         "totalTime": "{{ total_duration }}",
@@ -208,9 +208,9 @@
         "@type": "BreadcrumbList",
         "@id": "{{ canonical_url }}#breadcrumb",
         "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://manazarali01-hub.github.io/pakistan-food/"},
-          {"@type":"ListItem","position":2,"name":"Recipes","item":"https://manazarali01-hub.github.io/pakistan-food/recipes/"},
-          {"@type":"ListItem","position":3,"name":{{ recipe.category | append: ' Recipes' | jsonify }},"item":"https://manazarali01-hub.github.io/pakistan-food/recipes/{{ category_slug }}/"},
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://pakistanfoodrecipes.top/"},
+          {"@type":"ListItem","position":2,"name":"Recipes","item":"https://pakistanfoodrecipes.top/recipes/"},
+          {"@type":"ListItem","position":3,"name":{{ recipe.category | append: ' Recipes' | jsonify }},"item":"https://pakistanfoodrecipes.top/recipes/{{ category_slug }}/"},
           {"@type":"ListItem","position":4,"name":{{ recipe.name | jsonify }},"item":"{{ canonical_url }}"}
         ]
       }
