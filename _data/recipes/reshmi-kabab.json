@@ -1,0 +1,31 @@
+{
+  "id": 61,
+  "name": "Reshmi Kabab",
+  "category": "BBQ",
+  "time": "40 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Reshmi_Kabab.JPG?width=900",
+  "description": "Soft Pakistani reshmi kabab made with finely minced chicken, cream, herbs and gentle spices, shaped on skewers and grilled.",
+  "ingredients": [
+    "600 g chicken mince",
+    "2 tbsp cream",
+    "2 tbsp thick yogurt",
+    "1 tbsp ginger-garlic paste",
+    "2 green chilies, finely chopped",
+    "2 tbsp fresh coriander, chopped",
+    "1 tsp roasted cumin powder",
+    "½ tsp white pepper",
+    "½ tsp garam masala",
+    "2 tbsp gram flour, lightly roasted",
+    "1 tbsp cooking oil",
+    "Salt to taste"
+  ],
+  "method": [
+    "Combine chicken mince with cream, yogurt, ginger-garlic paste, chilies, coriander and spices.",
+    "Add roasted gram flour and mix until the mixture becomes sticky enough to hold its shape.",
+    "Cover and chill for 30 minutes.",
+    "With damp hands, shape the mixture around skewers.",
+    "Grill or cook in a lightly oiled grill pan, turning carefully until browned and fully cooked.",
+    "Serve hot with mint chutney, sliced onion and lemon."
+  ]
+}
