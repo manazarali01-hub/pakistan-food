@@ -1,1 +1,34 @@
-{"id":34,"name":"Jalebi","category":"Desserts","time":"50 min","serves":6,"image":"assets/jalebi-v2.webp","description":"Crispy spiral Pakistani sweet soaked in fragrant sugar syrup.","ingredients":["1 cup flour","2 tbsp cornflour","0.5 tsp yeast","0.75 cup water","1.5 cups sugar","1 cup water for syrup","Cardamom","Oil for frying"],"method":["Prepare a smooth fermented batter.","Cook sugar syrup with cardamom.","Pipe batter into hot oil in spirals.","Fry until crisp and golden.","Dip briefly in warm syrup and serve."]}
+{
+  "id": 34,
+  "name": "Jalebi",
+  "category": "Desserts",
+  "time": "2 hr",
+  "serves": 6,
+  "image": "assets/jalebi-v2.webp",
+  "description": "Crisp, syrup-coated jalebi spirals made from a lightly fermented batter. Fry in small batches and dip briefly into warm cardamom syrup so the edges stay delicate.",
+  "ingredients": [
+    "1 cup plain flour",
+    "2 tbsp cornflour",
+    "1/2 tsp instant yeast",
+    "About 3/4 cup lukewarm water, added gradually",
+    "1 1/2 cups sugar",
+    "1 cup water for the syrup",
+    "4 green cardamom pods, lightly crushed",
+    "1 tsp lemon juice",
+    "Neutral oil or ghee for frying"
+  ],
+  "method": [
+    "Mix the plain flour, cornflour and yeast. Whisk in enough lukewarm water for a thick but pourable batter. Cover and let stand in a warm place for 60–90 minutes until lightly bubbly; it should still be thick enough to pipe a spiral.",
+    "For the syrup, simmer the sugar, 1 cup water and crushed cardamom in a saucepan for about 8–10 minutes until the sugar dissolves and the liquid lightly coats a spoon. Stir in the lemon juice and keep warm over very low heat; do not reduce to a hard caramel.",
+    "Pour the batter into a small squeeze bottle or a piping bag with a small opening. Heat oil in a wide pan over medium heat; a drop of batter should rise steadily to the surface without darkening immediately.",
+    "Pipe small connected spirals directly into the oil. Fry a few at a time, turning once, until golden and crisp on both sides; avoid crowding the pan.",
+    "Transfer the hot spirals to the warm syrup for 20–30 seconds, turning once so both sides are coated. Lift out and let excess syrup drip away. Serve while warm and crisp."
+  ],
+  "tips": [
+    "Let the batter become lightly bubbly before frying; if it spreads too much, whisk in a small spoonful of flour.",
+    "Keep the syrup warm and fluid. Thick, cool syrup coats unevenly and can make the jalebi heavy.",
+    "Pipe compact spirals and fry in small batches so you can control the colour."
+  ],
+  "storage": "Jalebi is crispest on the day it is made. Keep leftovers in a covered container at room temperature for a short period; for longer storage, refrigerate and warm briefly in a low oven before serving.",
+  "serving": "Serve warm on its own or alongside a cup of unsweetened chai."
+}

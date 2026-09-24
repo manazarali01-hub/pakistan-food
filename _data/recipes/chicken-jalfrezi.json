@@ -1,1 +1,36 @@
-{"id":46,"name":"Chicken Jalfrezi","category":"Chicken","time":"40 min","serves":4,"image":"assets/chicken-jalfrezi-v2.webp","description":"Spicy chicken stir-fry style curry with tomatoes, onions and colorful bell peppers.","ingredients":["750 g chicken","2 bell peppers","2 onions","3 tomatoes","1 tbsp ginger-garlic paste","1 tsp chili powder","1 tsp cumin","1 tbsp soy sauce optional","Salt and oil"],"method":["Cook chicken with ginger-garlic paste and spices.","Add tomatoes and cook into a thick masala.","Stir-fry onions and bell peppers separately.","Combine vegetables with chicken.","Cook briefly on high heat and serve."]}
+{
+  "id": 46,
+  "name": "Chicken Jalfrezi",
+  "category": "Chicken",
+  "time": "40 min",
+  "serves": 4,
+  "image": "assets/chicken-jalfrezi-v2.webp",
+  "description": "Pakistani-style chicken jalfrezi with tender chicken, a thick tomato masala and bell peppers that keep a little bite.",
+  "ingredients": [
+    "750 g boneless chicken, cut into bite-size pieces",
+    "2 bell peppers, sliced",
+    "1 medium onion, sliced",
+    "3 medium tomatoes, chopped",
+    "2 tbsp neutral oil",
+    "1 tbsp ginger-garlic paste",
+    "1 tsp ground cumin",
+    "1 tsp red chilli powder, or to taste",
+    "3/4 tsp salt, or to taste",
+    "1 tbsp soy sauce, optional",
+    "2 tbsp chopped fresh coriander"
+  ],
+  "method": [
+    "Heat 1 tablespoon oil in a wide pan over medium-high heat. Add the chicken and brown in batches for 5–6 minutes, then transfer to a plate; it will finish cooking in the sauce.",
+    "Add the remaining oil and ginger-garlic paste to the pan. Stir for 30 seconds, then add the tomatoes, cumin, chilli powder and salt. Cook for 8–10 minutes, pressing the tomatoes until the sauce is thick and glossy.",
+    "Return the chicken and any juices to the pan. Cover and simmer gently for about 8 minutes, stirring once, until the chicken is cooked through. If the sauce sticks, add a splash of water.",
+    "In a separate hot pan, stir-fry the sliced onion and bell peppers for 3–4 minutes so they soften at the edges but retain a little crunch.",
+    "Fold the vegetables into the chicken. Add soy sauce only if using, toss over high heat for 1–2 minutes, and taste for seasoning. Finish with fresh coriander and serve with roti or rice."
+  ],
+  "tips": [
+    "Brown the chicken in batches so it sears instead of steaming.",
+    "Keep the tomato masala thick before adding the peppers; a watery sauce will soften them too much.",
+    "Add the vegetables near the end for colour and a light bite."
+  ],
+  "storage": "Cool promptly, cover and refrigerate for up to 2 days. Reheat until the chicken is piping hot; the peppers will soften further after storage.",
+  "serving": "Serve with plain rice or warm chapati and a quick cucumber salad."
+}

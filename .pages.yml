@@ -56,3 +56,13 @@ content:
         label: Cooking Method
         type: string
         list: true
+      - name: tips
+        label: Recipe-specific Tips
+        type: string
+        list: true
+      - name: storage
+        label: Storage Advice
+        type: text
+      - name: serving
+        label: Serving Suggestion
+        type: text

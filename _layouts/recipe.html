@@ -23,35 +23,6 @@
 {% endcase %}
 {% assign time_number = recipe.time | split: ' ' | first %}
 {% capture total_duration %}PT{{ time_number }}{% if recipe.time contains 'hr' %}H{% else %}M{% endif %}{% endcapture %}
-{% assign fallback = '' %}
-{% case page.recipe_key %}
-  {% when 'chicken-biryani' %}{% assign fallback = '../assets/chicken-biryani.jpg' %}
-  {% when 'chicken-pulao' %}{% assign fallback = '../assets/chicken-pulao.jpg' %}
-  {% when 'chicken-karahi' %}{% assign fallback = '../assets/chicken-karahi.jpg' %}
-  {% when 'chicken-handi' %}{% assign fallback = '../assets/chicken-handi.jpg' %}
-  {% when 'beef-nihari' %}{% assign fallback = '../assets/nihari.jpg' %}
-  {% when 'seekh-kabab' %}{% assign fallback = '../assets/seekh-kebab.jpg' %}
-  {% when 'chapli-kabab' %}{% assign fallback = '../assets/chapli-kebab.jpg' %}
-  {% when 'pakistani-samosa' %}{% assign fallback = '../assets/samosa.jpg' %}
-  {% when 'pakora' %}{% assign fallback = '../assets/pakora.jpg' %}
-  {% when 'aloo-paratha' %}{% assign fallback = '../assets/aloo-paratha.jpg' %}
-  {% when 'halwa-puri' %}{% assign fallback = '../assets/halwa-puri.jpg' %}
-  {% when 'rice-kheer' %}{% assign fallback = '../assets/kheer.jpg' %}
-  {% when 'gulab-jamun' %}{% assign fallback = '../assets/gulab-jamun.jpg' %}
-  {% when 'daal-chawal' %}{% assign fallback = '../assets/daal-chawal.jpg' %}
-  {% when 'beef-pulao' %}{% assign fallback = '../assets/beef-pulao.jpg' %}
-  {% when 'aloo-gosht' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aaloo_Gosht.JPG?width=900' %}
-  {% when 'bun-kabab' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bun_Kabab.JPG?width=900' %}
-  {% when 'chana-masala' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chana_masala.jpg?width=900' %}
-  {% when 'chicken-jalfrezi' %}{% assign fallback = '../assets/chicken-jalfrezi.svg' %}
-  {% when 'chicken-sajji' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sajji.JPG?width=900' %}
-  {% when 'keema-matar' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Spicy_Matar_Keema1.jpg?width=900' %}
-  {% when 'mango-lassi' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mango_lassi.jpg?width=900' %}
-  {% when 'matar-pulao' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Matar_Pulao_-_Mohali_2016-08-06_8222.JPG?width=900' %}
-  {% when 'shami-kabab' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Finger_licking_Shami_Kababs.jpg?width=900' %}
-  {% when 'sarson-ka-saag' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarson-Ka-Saag.jpg?width=900' %}
-  {% when 'zinger-burger' %}{% assign fallback = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crispy_chicken_burger.jpg?width=900' %}
-{% endcase %}
 {% case recipe.category %}
   {% when 'Rice' %}
     {% assign tip_one = 'Rinse the rice until the water is nearly clear so the cooked grains stay separate.' %}
@@ -248,11 +219,7 @@
       <h1>{{ recipe.name }} Recipe</h1>
       <p class="seo-desc">{{ recipe.description }}</p>
       <figure>
-        {% if fallback != '' %}
-        <img src="{{ display_image }}" alt="{{ recipe.name }} ready to serve" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='{{ fallback }}';">
-        {% else %}
-        <img src="{{ display_image }}" alt="{{ recipe.name }} ready to serve" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.style.display='none';">
-        {% endif %}
+        <img src="{{ display_image }}" alt="{{ recipe.name }} ready to serve" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
         <figcaption>{{ recipe.name }} prepared with Pakistani flavours.</figcaption>
       </figure>
       <div class="seo-meta">
@@ -269,20 +236,14 @@
         <h2>Helpful Notes for {{ recipe.name }}</h2>
         <p>Read the full method before starting, measure the ingredients, and complete any chopping, soaking or marinating first. This makes {{ recipe.name }} easier to cook and helps every stage finish at the right time.</p>
         <p>{{ technique_note }}</p>
-        <p>{{ storage_note }}</p>
+        <p>{{ recipe.storage | default: storage_note }}</p>
       </section>
       <section class="cooking-tips">
         <h2>{{ recipe.name }} Cooking Tips</h2>
-        <ul><li>{{ tip_one }}</li><li>{{ tip_two }}</li><li>{{ tip_three }}</li></ul>
+        {% if recipe.tips %}<ul>{% for tip in recipe.tips %}<li>{{ tip }}</li>{% endfor %}</ul>
+        {% else %}<ul><li>{{ tip_one }}</li><li>{{ tip_two }}</li><li>{{ tip_three }}</li></ul>{% endif %}
       </section>
-      <div class="recipe-note"><strong>Serving idea:</strong> Serve {{ recipe.name }} freshly prepared with a simple salad, chutney, yogurt or another accompaniment that suits this {{ recipe.category | downcase }} dish.</div>
-      <section class="recipe-faq">
-        <h2>Questions About {{ recipe.name }}</h2>
-        <h3>Can I adjust the spice level?</h3>
-        <p>Yes. Reduce or increase the chilli to suit your household, while keeping the other spices in balance so the dish remains aromatic.</p>
-        <h3>What should I do before I start cooking?</h3>
-        <p>Read the full method once, measure the ingredients, and prepare any chopped items first. This makes the steps easier to follow and helps the dish cook evenly.</p>
-      </section>
+      <div class="recipe-note"><strong>Serving idea:</strong> {% if recipe.serving %}{{ recipe.serving }}{% else %}Serve {{ recipe.name }} freshly prepared with a simple salad, chutney, yogurt or another accompaniment that suits this {{ recipe.category | downcase }} dish.{% endif %}</div>
       <section class="related-recipes">
         <h2>More {{ recipe.category }} Recipes</h2>
         <ul>
@@ -298,7 +259,7 @@
         <p><a href="{{ category_slug }}/">View all Pakistani {{ recipe.category }} recipes →</a></p>
       </section>
       <section class="popular-recipes">
-        <h2>Popular Pakistani Recipes</h2>
+        <h2>Familiar Pakistani Recipes</h2>
         <ul>
           <li><a href="chicken-biryani.html">Chicken Biryani Recipe</a></li>
           <li><a href="chicken-karahi.html">Chicken Karahi Recipe</a></li>

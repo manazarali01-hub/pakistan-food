@@ -457,7 +457,7 @@ const recipes = (cmsRecipes.length ? cmsRecipes : defaultRecipes).map((recipe, i
     id: stableRecipeId(recipe, index),
     slug: stableRecipeSlug(recipe, index),
     serves: Number(recipe.serves) || 4,
-    image: String(recipe.image || "assets/chicken-biryani.webp").replace(/^\//, ""),
+    image: safeImageUrl(recipe.image),
     ingredients: Array.isArray(recipe.ingredients) ? recipe.ingredients : [],
     method: Array.isArray(recipe.method) ? recipe.method : []
 }));
@@ -499,9 +499,35 @@ let lastFocusedElement = null;
    FAVORITES
 ===================================== */
 
-let favorites = JSON.parse(
-    localStorage.getItem("pakistanFoodFavorites") || "[]"
-).map(Number).filter(Number.isFinite);
+function readPreference(key, fallback = null) {
+    try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; }
+}
+function savePreference(key, value) {
+    try { localStorage.setItem(key, value); } catch { /* Browsing still works without storage. */ }
+}
+let favorites = [];
+try {
+    const saved = JSON.parse(readPreference("pakistanFoodFavorites", "[]"));
+    if (Array.isArray(saved)) favorites = saved.map(Number).filter(Number.isFinite);
+} catch { /* Ignore malformed saved favourites. */ }
+
+function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    })[char]);
+}
+function safeImageUrl(value) {
+    const url = String(value || "").trim().replace(/^\//, "");
+    return /^(assets\/[a-zA-Z0-9._/?=&%-]+|https:\/\/(?:commons\.wikimedia\.org|images\.weserv\.nl)\/[^"<>]*)$/.test(url)
+        ? url : "assets/recipe-image-unavailable.svg";
+}
+function useImageFallback(image) {
+    if (image.tagName !== "IMG" || image.src.endsWith("/recipe-image-unavailable.svg")) return;
+    image.src = "assets/recipe-image-unavailable.svg";
+    image.alt = "Recipe image unavailable";
+}
+recipeGrid?.addEventListener("error", event => useImageFallback(event.target), true);
+modalContent?.addEventListener("error", event => useImageFallback(event.target), true);
 
 
 /* =====================================
@@ -577,8 +603,8 @@ function renderRecipes() {
             <div class="recipe-image">
 
                 <img
-                    src="${recipe.image}"
-                    alt="${recipe.name} ready to serve"
+                    src="${escapeHtml(recipe.image)}"
+                    alt="${escapeHtml(recipe.name)} ready to serve"
                     loading="${index < 3 ? "eager" : "lazy"}" decoding="async"
                     fetchpriority="${index === 0 ? "high" : "auto"}"
                     width="900"
@@ -586,14 +612,14 @@ function renderRecipes() {
                 >
 
                 <span class="recipe-badge">
-                    ${recipe.category}
+                    ${escapeHtml(recipe.category)}
                 </span>
 
                 <button
                     type="button"
                     class="favorite-btn ${isFavorite ? "active" : ""}"
                     data-favorite="${recipe.id}"
-                    aria-label="${isFavorite ? "Remove" : "Save"} ${recipe.name} ${isFavorite ? "from" : "to"} favorites"
+                    aria-label="${isFavorite ? "Remove" : "Save"} ${escapeHtml(recipe.name)} ${isFavorite ? "from" : "to"} favorites"
                     aria-pressed="${isFavorite}"
                 >
                     ${isFavorite ? "♥" : "♡"}
@@ -607,20 +633,20 @@ function renderRecipes() {
                 <div class="recipe-meta">
 
                     <span class="recipe-time">
-                        ⏱ ${recipe.time}
+                        ⏱ ${escapeHtml(recipe.time)}
                     </span>
 
                     <span class="recipe-serves">
-                        👥 ${recipe.serves}
+                        👥 ${escapeHtml(recipe.serves)}
                     </span>
 
 
                 </div>
 
-                <h3><a class="recipe-title-link" href="${recipePagePath(recipe)}">${recipe.name}</a></h3>
+                <h3><a class="recipe-title-link" href="${recipePagePath(recipe)}">${escapeHtml(recipe.name)}</a></h3>
 
                 <p>
-                    ${recipe.description}
+                    ${escapeHtml(recipe.description)}
                 </p>
 
                 <div class="recipe-bottom">
@@ -816,10 +842,7 @@ function toggleFavorite(id) {
     }
 
 
-    localStorage.setItem(
-        "pakistanFoodFavorites",
-        JSON.stringify(favorites)
-    );
+    savePreference("pakistanFoodFavorites", JSON.stringify(favorites));
 
 
     renderRecipes();
@@ -839,7 +862,7 @@ function openRecipe(id) {
 
     if (!recipe) return;
 
-    lastFocusedElement = document.activeElement;
+    if (!recipeModal.classList.contains("active")) lastFocusedElement = document.activeElement;
 
     const isFavorite = favorites.includes(recipe.id);
 
@@ -848,8 +871,8 @@ function openRecipe(id) {
 
         <img
             class="modal-image"
-            src="${recipe.image}"
-            alt="${recipe.name} ready to serve"
+            src="${escapeHtml(recipe.image)}"
+            alt="${escapeHtml(recipe.name)} ready to serve"
             width="900"
             height="675"
         >
@@ -857,17 +880,17 @@ function openRecipe(id) {
         <div class="modal-body">
 
             <span class="section-label">
-                ${recipe.category} • ${recipe.time} • Serves ${recipe.serves}
+                ${escapeHtml(recipe.category)} • ${escapeHtml(recipe.time)} • Serves ${escapeHtml(recipe.serves)}
             </span>
 
-            <h2 id="modalRecipeTitle">${recipe.name}</h2>
+            <h2 id="modalRecipeTitle">${escapeHtml(recipe.name)}</h2>
 
             <a class="modal-full-recipe" href="${recipePagePath(recipe)}">
                 Open the permanent recipe page →
             </a>
 
             <p class="modal-description">
-                ${recipe.description}
+                ${escapeHtml(recipe.description)}
             </p>
 
             <button type="button" class="modal-favorite ${isFavorite ? "active" : ""}" data-modal-favorite="${recipe.id}" aria-pressed="${isFavorite}">
@@ -882,7 +905,7 @@ function openRecipe(id) {
 
                     <ul>
                         ${recipe.ingredients
-                            .map(item => `<li>${item}</li>`)
+                            .map(item => `<li>${escapeHtml(item)}</li>`)
                             .join("")
                         }
                     </ul>
@@ -895,7 +918,7 @@ function openRecipe(id) {
 
                     <ol>
                         ${recipe.method
-                            .map(item => `<li>${item}</li>`)
+                            .map(item => `<li>${escapeHtml(item)}</li>`)
                             .join("")
                         }
                     </ol>
@@ -998,7 +1021,7 @@ document.addEventListener("keydown", event => {
 ===================================== */
 
 const savedTheme =
-    localStorage.getItem("pakistanFoodTheme");
+    readPreference("pakistanFoodTheme");
 
 
 if (savedTheme === "dark") {
@@ -1027,10 +1050,7 @@ themeBtn.addEventListener("click", () => {
     themeBtn.setAttribute("aria-label", dark ? "Use light theme" : "Use dark theme");
 
 
-    localStorage.setItem(
-        "pakistanFoodTheme",
-        dark ? "dark" : "light"
-    );
+    savePreference("pakistanFoodTheme", dark ? "dark" : "light");
 
 });
 
