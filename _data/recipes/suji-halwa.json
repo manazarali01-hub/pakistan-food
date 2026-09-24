@@ -1,0 +1,26 @@
+{
+  "id": 65,
+  "name": "Suji Halwa",
+  "category": "Desserts",
+  "time": "25 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suji_Halwa.JPG?width=900",
+  "description": "Classic suji halwa with semolina toasted in ghee and cooked with a fragrant sugar syrup, cardamom and nuts.",
+  "ingredients": [
+    "1 cup semolina (suji)",
+    "¾ cup sugar",
+    "3 cups water",
+    "½ cup ghee",
+    "4 green cardamom pods, crushed",
+    "2 tbsp almonds or pistachios, sliced",
+    "1 tbsp raisins, optional"
+  ],
+  "method": [
+    "Heat the water with sugar and cardamom until the sugar dissolves, then keep the syrup warm.",
+    "Melt ghee in a heavy pan and add the semolina.",
+    "Roast on medium-low heat, stirring continuously, until the semolina turns golden and smells nutty.",
+    "Carefully add the warm syrup in stages while stirring to avoid lumps.",
+    "Cook until the halwa thickens and begins to leave the sides of the pan.",
+    "Garnish with nuts and raisins and serve warm."
+  ]
+}
