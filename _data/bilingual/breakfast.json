@@ -1,0 +1,136 @@
+{
+  "aloo-paratha": {
+    "description_ur": "مصالحے دار آلو کی فلنگ سے بھرا ہوا نرم اور سنہری پاکستانی آلو پراٹھا، دہی، اچار یا چائے کے ساتھ۔",
+    "ingredients_ur": [
+      "2 کپ گندم کا آٹا",
+      "3 درمیانے آلو، ابلے ہوئے",
+      "2 ہری مرچیں، کٹی ہوئی",
+      "½ کپ ہرا دھنیا",
+      "½ چائے کا چمچ لال مرچ",
+      "1 چائے کا چمچ بھنا زیرہ",
+      "آٹے کے لیے پانی اور نمک",
+      "پکانے کے لیے گھی یا تیل"
+    ],
+    "method_en": [
+      "Mix flour with salt and add water gradually to make a soft, smooth dough. Knead for 5–7 minutes, cover and rest for at least 20 minutes.",
+      "Mash the boiled potatoes while still slightly warm, then cool. Mix in green chilies, coriander, red chili, roasted cumin and salt.",
+      "Divide the dough and filling into equal portions. Roll one dough ball into a small circle and place a portion of potato filling in the centre.",
+      "Bring the edges together over the filling and pinch firmly to seal. Flatten gently with your palm.",
+      "Dust lightly with flour and roll slowly from the centre outward, turning often. Stop if filling starts to break through the dough.",
+      "Heat a tawa over medium heat. Place the paratha on the dry tawa and cook until small bubbles appear, then flip.",
+      "Brush with ghee or oil and cook both sides, pressing the edges gently, until golden brown spots appear and the dough is fully cooked.",
+      "Rest for 1 minute and serve hot; stack under a clean cloth if making several."
+    ],
+    "method_ur": [
+      "آٹے میں نمک ملا کر پانی آہستہ آہستہ ڈالیں اور نرم ہموار آٹا گوندھیں۔ 5 سے 7 منٹ گوندھ کر ڈھانپیں اور کم از کم 20 منٹ آرام دیں۔",
+      "ابلے آلو ہلکے گرم ہوں تو میش کریں، پھر ٹھنڈے ہونے دیں۔ ہری مرچ، ہرا دھنیا، لال مرچ، بھنا زیرہ اور نمک ملائیں۔",
+      "آٹا اور فلنگ برابر حصوں میں تقسیم کریں۔ ایک پیڑا چھوٹی روٹی کی شکل میں بیل کر درمیان میں آلو کی فلنگ رکھیں۔",
+      "کنارے اوپر لا کر اچھی طرح بند کریں اور ہتھیلی سے نرمی سے چپٹا کریں۔",
+      "ہلکا آٹا لگا کر درمیان سے باہر کی طرف آہستہ بیلیں اور بار بار گھمائیں۔ فلنگ باہر آنے لگے تو مزید نہ دبائیں۔",
+      "توا درمیانی آنچ پر گرم کریں۔ پراٹھا خشک توا پر رکھیں، چھوٹے بلبلے آنے پر پلٹ دیں۔",
+      "گھی یا تیل لگائیں اور کناروں کو ہلکا دباتے ہوئے دونوں طرف سنہری دھبے آنے اور آٹا مکمل پکنے تک سینکیں۔",
+      "1 منٹ آرام دے کر گرم سرو کریں؛ کئی پراٹھے بنا رہے ہوں تو صاف کپڑے کے نیچے رکھیں۔"
+    ],
+    "tips_en": [
+      "Cool the potato filling before stuffing so steam does not weaken the dough.",
+      "Do not overfill; a moderate amount rolls more evenly.",
+      "Use medium heat so the centre cooks before the surface gets too dark."
+    ],
+    "tips_ur": [
+      "فلنگ ٹھنڈی کر کے بھریں تاکہ بھاپ آٹا کمزور نہ کرے۔",
+      "بہت زیادہ فلنگ نہ بھریں؛ مناسب مقدار بہتر بیلتی ہے۔",
+      "درمیانی آنچ رکھیں تاکہ اندر پکنے سے پہلے باہر نہ جلے۔"
+    ],
+    "storage_ur": "پکے پراٹھے فریج میں 2 دن تک رکھیں اور توا پر دوبارہ گرم کریں۔",
+    "serving_ur": "سادہ دہی، اچار، مکھن، چٹنی یا چائے کے ساتھ پیش کریں۔"
+  },
+  "anda-paratha": {
+    "description_ur": "پاکستانی ناشتے کا آسان امتزاج جس میں گرم پراٹھا مصالحے دار انڈے کے ساتھ پیش کیا جاتا ہے۔",
+    "ingredients_ur": [
+      "2 پراٹھے",
+      "2 انڈے",
+      "1 ہری مرچ",
+      "2 کھانے کے چمچ ہرا دھنیا",
+      "نمک",
+      "کالی مرچ",
+      "تیل یا گھی"
+    ],
+    "method_en": [
+      "Prepare the parathas first or keep cooked parathas ready to reheat so the eggs can be served immediately.",
+      "Heat a tawa over medium heat and cook each paratha with a little ghee until both sides are hot and lightly crisp.",
+      "Crack the eggs into a bowl and beat with chopped green chili, coriander, salt and black pepper.",
+      "Heat a small amount of oil or ghee in a frying pan over medium heat.",
+      "Pour in the eggs. For soft scrambled eggs, stir gently until just set; for an omelette, leave undisturbed until the base sets, then flip or fold.",
+      "Remove the eggs from the heat while still moist because they continue cooking for a short time.",
+      "Place the hot egg beside or inside the paratha, depending on how you like to eat it.",
+      "Serve immediately with chutney, ketchup, pickle or chai."
+    ],
+    "method_ur": [
+      "پراٹھے پہلے تیار کریں یا پکے پراٹھے دوبارہ گرم کرنے کے لیے رکھیں تاکہ انڈا بنتے ہی فوراً سرو کیا جا سکے۔",
+      "توا درمیانی آنچ پر گرم کر کے ہر پراٹھا تھوڑے گھی کے ساتھ دونوں طرف گرم اور ہلکا کرسپ کریں۔",
+      "انڈے پیالے میں توڑ کر ہری مرچ، ہرا دھنیا، نمک اور کالی مرچ کے ساتھ پھینٹیں۔",
+      "فرائنگ پین میں درمیانی آنچ پر تھوڑا تیل یا گھی گرم کریں۔",
+      "انڈا ڈالیں۔ نرم اسکرامبل کے لیے نرمی سے ہلاتے ہوئے بس سیٹ ہونے تک پکائیں؛ آملیٹ کے لیے نیچے سیٹ ہونے دیں پھر پلٹیں یا فولڈ کریں۔",
+      "انڈا ہلکا نم رہتے ہوئے آنچ سے اتاریں کیونکہ چند لمحے مزید پکائی جاری رہتی ہے۔",
+      "گرم انڈا پراٹھے کے ساتھ یا اندر رکھیں، جیسا پسند ہو۔",
+      "چٹنی، کیچپ، اچار یا چائے کے ساتھ فوراً پیش کریں۔"
+    ],
+    "tips_en": [
+      "Cook eggs last so they stay hot and soft.",
+      "Medium heat gives better control than very high heat.",
+      "Remove eggs slightly before your final preferred doneness."
+    ],
+    "tips_ur": [
+      "انڈا آخر میں پکائیں تاکہ گرم اور نرم رہے۔",
+      "بہت تیز آنچ کے بجائے درمیانی آنچ پر بہتر کنٹرول رہتا ہے۔",
+      "اپنی پسند کی مکمل پکائی سے ذرا پہلے انڈا اتار لیں۔"
+    ],
+    "storage_ur": "انڈا اور پراٹھا تازہ بہترین ہیں۔ بچا ہوا حصہ فریج میں 1 دن رکھ کر اچھی طرح گرم کریں۔",
+    "serving_ur": "چائے، اچار، چٹنی یا دہی کے ساتھ گرم سرو کریں۔"
+  },
+  "halwa-puri": {
+    "description_ur": "پاکستانی روایتی ناشتہ جس میں نرم سوجی کا حلوہ، پھولی ہوئی پوری اور مصالحے دار چنے ایک ساتھ پیش کیے جاتے ہیں۔",
+    "ingredients_ur": [
+      "1 کپ سوجی",
+      "¾ کپ چینی",
+      "2 کپ گندم کا آٹا",
+      "½ کپ گھی حلوے کے لیے",
+      "2 کپ پکے چنے",
+      "1 کھانے کا چمچ چنا مصالحہ",
+      "4 سبز الائچیاں",
+      "پانی، نمک اور فرائی کے لیے تیل"
+    ],
+    "method_en": [
+      "Start with the chickpeas: heat a little oil, add chana masala and cooked chickpeas, then simmer with a small amount of water until the flavour is absorbed and the gravy is light but not watery.",
+      "For the halwa, heat ghee in a heavy pan over medium-low heat. Add semolina and roast while stirring until fragrant and lightly golden.",
+      "In a separate saucepan, dissolve sugar in hot water with cardamom. Carefully add this hot syrup to the roasted semolina in stages while stirring continuously.",
+      "Cook the halwa until it thickens, becomes glossy and begins to leave the sides of the pan. Keep warm over very low heat.",
+      "For the puri dough, combine flour with salt and enough water to make a firm, smooth dough. Rest covered for 15–20 minutes.",
+      "Divide into small balls and roll each into a small, even round. Keep the rolled puris covered so they do not dry out.",
+      "Heat frying oil over medium-high heat. Slide in one puri at a time, gently press with a slotted spoon until it puffs, then turn and cook the other side briefly.",
+      "Drain the puris and serve immediately with warm halwa and chickpeas."
+    ],
+    "method_ur": [
+      "سب سے پہلے چنے تیار کریں: تھوڑا تیل گرم کر کے چنا مصالحہ اور پکے چنے ڈالیں، تھوڑا پانی شامل کر کے اتنا پکائیں کہ ذائقہ جذب ہو اور گریوی ہلکی رہے مگر پانی والی نہ ہو۔",
+      "حلوے کے لیے بھاری پین میں درمیانی سے ہلکی آنچ پر گھی گرم کریں۔ سوجی ڈال کر مسلسل ہلاتے ہوئے خوشبو اور ہلکا سنہری رنگ آنے تک بھونیں۔",
+      "الگ سوس پین میں گرم پانی میں چینی اور الائچی گھولیں۔ یہ گرم شیرہ بھنی سوجی میں تھوڑا تھوڑا ڈالیں اور مسلسل ہلاتے رہیں۔",
+      "حلوہ گاڑھا، چمکدار اور پین کے کنارے چھوڑنے تک پکائیں۔ بہت ہلکی آنچ پر گرم رکھیں۔",
+      "پوری کے آٹے کے لیے آٹے میں نمک اور مناسب پانی ڈال کر نسبتاً سخت ہموار آٹا گوندھیں۔ ڈھانپ کر 15 سے 20 منٹ آرام دیں۔",
+      "چھوٹے پیڑے بنا کر ہر ایک کو چھوٹی برابر گول پوری میں بیلیں۔ بیلی پوریاں ڈھکی رکھیں تاکہ خشک نہ ہوں۔",
+      "تیل درمیانی سے تیز آنچ پر گرم کریں۔ ایک وقت میں ایک پوری ڈالیں، جھارے سے ہلکا دبائیں تاکہ پھولے، پھر پلٹ کر دوسری طرف مختصر پکائیں۔",
+      "تیل نکال کر پوری فوراً گرم حلوے اور چنوں کے ساتھ پیش کریں۔"
+    ],
+    "tips_en": [
+      "Roast semolina patiently for better flavour.",
+      "Puri dough should be firmer than chapati dough.",
+      "Fry puris one at a time so the oil temperature stays steady."
+    ],
+    "tips_ur": [
+      "بہتر ذائقے کے لیے سوجی صبر سے بھونیں۔",
+      "پوری کا آٹا چپاتی کے آٹے سے قدرے سخت ہونا چاہیے۔",
+      "تیل کی گرمی برقرار رکھنے کے لیے پوری ایک وقت میں ایک فرائی کریں۔"
+    ],
+    "storage_ur": "حلوہ اور چنے فریج میں 2 دن رکھے جا سکتے ہیں؛ پوری تازہ بہترین ہے اور دوبارہ توا یا اوون میں گرم کی جا سکتی ہے۔",
+    "serving_ur": "تینوں چیزیں گرم پیش کریں، ساتھ اچار یا چائے بھی دی جا سکتی ہے۔"
+  }
+}
