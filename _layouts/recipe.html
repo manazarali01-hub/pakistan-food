@@ -330,7 +330,8 @@
     buttons.forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.recipeLang)));
     let saved = "en";
     try { saved = localStorage.getItem(key) || "en"; } catch (_) {}
-    setLanguage(saved);
+    const requested = new URLSearchParams(window.location.search).get("lang");
+    setLanguage(requested === "ur" ? "ur" : saved);
   })();
   </script>
   <script>
