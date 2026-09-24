@@ -1,0 +1,381 @@
+{
+  "aloo-gosht": {
+    "description_ur": "نرم گوشت اور آلو کو پیاز، ٹماٹر اور روزمرہ مصالحوں کی گاڑھی گریوی میں پکایا جانے والا پاکستانی گھریلو آلو گوشت۔",
+    "ingredients_ur": [
+      "750 گرام بیف یا مٹن",
+      "4 آلو",
+      "2 پیاز",
+      "3 ٹماٹر",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "1 چائے کا چمچ لال مرچ پاؤڈر",
+      "½ چائے کا چمچ ہلدی",
+      "1 چائے کا چمچ دھنیا پاؤڈر",
+      "نمک اور تیل"
+    ],
+    "method_en": [
+      "Cut the meat into similar-size pieces and peel the potatoes into large chunks so they do not break apart during cooking.",
+      "Heat oil in a heavy pot over medium heat. Fry the onions for 7–9 minutes until evenly golden.",
+      "Add ginger-garlic paste and stir for 1 minute. Add the meat and fry for 7–8 minutes until the outside changes colour and begins to brown.",
+      "Add chopped tomatoes, chili powder, turmeric, coriander powder and salt. Cook for 8–10 minutes, stirring until the tomatoes soften and the masala thickens.",
+      "Add enough hot water to partially cover the meat. Cover and simmer gently until the meat is almost tender, adding a little more hot water only if needed.",
+      "Add the potato chunks and enough liquid for them to cook without turning the curry watery. Cover and cook until the potatoes are tender but still hold their shape.",
+      "Remove the lid and simmer until the gravy reaches your preferred thickness and oil starts to show at the edges.",
+      "Taste for salt and spice, then rest for 5 minutes before serving with fresh coriander if available."
+    ],
+    "method_ur": [
+      "گوشت تقریباً ایک ہی سائز کے ٹکڑوں میں کاٹیں اور آلو بڑے ٹکڑوں میں رکھیں تاکہ پکاتے وقت ٹوٹیں نہیں۔",
+      "بھاری دیگچی میں درمیانی آنچ پر تیل گرم کریں۔ پیاز 7 سے 9 منٹ یکساں سنہری ہونے تک فرائی کریں۔",
+      "ادرک لہسن پیسٹ ڈال کر 1 منٹ ہلائیں۔ گوشت شامل کر کے 7 سے 8 منٹ بھونیں یہاں تک کہ باہر کا رنگ بدل جائے اور ہلکی براؤننگ آ جائے۔",
+      "کٹے ٹماٹر، لال مرچ، ہلدی، دھنیا پاؤڈر اور نمک شامل کریں۔ 8 سے 10 منٹ پکائیں اور ہلاتے رہیں، یہاں تک کہ ٹماٹر گل جائیں اور مصالحہ گاڑھا ہو جائے۔",
+      "اتنا گرم پانی ڈالیں کہ گوشت جزوی طور پر ڈھک جائے۔ ڈھک کر ہلکی آنچ پر تقریباً گلنے تک پکائیں اور ضرورت ہو تو صرف تھوڑا گرم پانی مزید ڈالیں۔",
+      "آلو کے ٹکڑے اور اتنا مائع شامل کریں کہ آلو پک سکیں مگر سالن پانی والا نہ ہو۔ ڈھک کر آلو نرم ہونے تک پکائیں مگر انہیں ٹوٹنے نہ دیں۔",
+      "ڈھکن ہٹا کر گریوی مطلوبہ گاڑھی ہونے تک پکائیں اور کناروں پر تیل نظر آنے دیں۔",
+      "نمک اور مصالحہ چیک کریں، پھر 5 منٹ آرام دے کر دستیاب ہو تو ہرے دھنیے کے ساتھ سرو کریں۔"
+    ],
+    "tips_en": [
+      "Add potatoes only after the meat is nearly tender.",
+      "Keep potato chunks fairly large so they hold their shape.",
+      "Use hot water during cooking so the simmer is not interrupted."
+    ],
+    "tips_ur": [
+      "آلو اس وقت ڈالیں جب گوشت تقریباً گل چکا ہو۔",
+      "آلو کے ٹکڑے قدرے بڑے رکھیں تاکہ ٹوٹیں نہیں۔",
+      "پکانے کے دوران ضرورت ہو تو گرم پانی استعمال کریں۔"
+    ],
+    "storage_ur": "جلد ٹھنڈا کر کے فریج میں 2 دن تک رکھیں اور دوبارہ مکمل گرم کریں۔",
+    "serving_ur": "چپاتی، نان، سادہ چاول، سلاد اور اچار کے ساتھ پیش کریں۔"
+  },
+  "aloo-keema": {
+    "description_ur": "بیف قیمہ، نرم آلو، ٹماٹر، ہری مرچ اور روزمرہ پاکستانی مصالحوں سے تیار ہونے والا آسان آلو قیمہ۔",
+    "ingredients_ur": [
+      "500 گرام بیف قیمہ",
+      "3 درمیانے آلو، چھیلے اور کیوبز",
+      "1 پیاز، باریک کٹی ہوئی",
+      "3 ٹماٹر، کٹے ہوئے",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "2 ہری مرچیں، کٹی ہوئی",
+      "1 چائے کا چمچ زیرہ",
+      "1 چائے کا چمچ دھنیا پاؤڈر",
+      "1 چائے کا چمچ لال مرچ",
+      "½ چائے کا چمچ ہلدی",
+      "½ چائے کا چمچ گرم مصالحہ",
+      "3 کھانے کے چمچ کوکنگ آئل",
+      "نمک اور ہرا دھنیا"
+    ],
+    "method_en": [
+      "Peel and cube the potatoes evenly. Keep them in water while you prepare the masala so they do not darken.",
+      "Heat oil in a wide pan. Add cumin and onion and cook over medium heat for 6–8 minutes until the onion is lightly golden.",
+      "Add ginger-garlic paste and stir for 1 minute. Add the beef mince and break it up with a spoon while frying.",
+      "Cook the mince for 7–9 minutes until it changes colour and excess moisture evaporates; this step improves flavour and prevents a watery curry.",
+      "Add tomatoes, green chilies, coriander powder, red chili, turmeric and salt. Cook until the tomatoes break down and the masala looks glossy.",
+      "Drain the potatoes and add them with a small splash of hot water. Cover and cook on medium-low heat until the potatoes are tender, stirring gently once or twice.",
+      "Remove the lid and cook until any excess liquid evaporates and the keema reaches the consistency you like.",
+      "Stir in garam masala, taste for salt, scatter fresh coriander over the top and serve hot."
+    ],
+    "method_ur": [
+      "آلو چھیل کر ایک جیسے کیوبز میں کاٹیں۔ مصالحہ تیار کرتے وقت انہیں پانی میں رکھیں تاکہ رنگ نہ بدلے۔",
+      "چوڑے پین میں تیل گرم کریں۔ زیرہ اور پیاز ڈال کر درمیانی آنچ پر 6 سے 8 منٹ ہلکی سنہری ہونے تک پکائیں۔",
+      "ادرک لہسن پیسٹ ڈال کر 1 منٹ ہلائیں۔ بیف قیمہ شامل کریں اور چمچ سے توڑتے ہوئے بھونیں۔",
+      "قیمہ 7 سے 9 منٹ پکائیں یہاں تک کہ رنگ بدل جائے اور اضافی نمی خشک ہو؛ اس سے ذائقہ بہتر اور سالن کم پانی والا بنتا ہے۔",
+      "ٹماٹر، ہری مرچیں، دھنیا پاؤڈر، لال مرچ، ہلدی اور نمک شامل کریں۔ ٹماٹر گلنے اور مصالحہ چمکدار ہونے تک پکائیں۔",
+      "آلو کا پانی نکال کر تھوڑے گرم پانی کے ساتھ شامل کریں۔ ڈھک کر درمیانی سے ہلکی آنچ پر آلو نرم ہونے تک پکائیں اور ایک دو بار نرمی سے ہلائیں۔",
+      "ڈھکن ہٹا کر اضافی پانی خشک کریں اور قیمہ اپنی پسند کے گاڑھے پن تک پکائیں۔",
+      "گرم مصالحہ شامل کریں، نمک چیک کریں، ہرا دھنیا ڈالیں اور گرم سرو کریں۔"
+    ],
+    "tips_en": [
+      "Brown the mince before adding tomatoes for deeper flavour.",
+      "Cut potatoes evenly so they finish at the same time.",
+      "Do not over-stir once potatoes soften or they may break."
+    ],
+    "tips_ur": [
+      "ٹماٹر سے پہلے قیمہ اچھی طرح بھونیں تاکہ ذائقہ گہرا ہو۔",
+      "آلو برابر سائز میں کاٹیں تاکہ ایک ساتھ پکیں۔",
+      "آلو نرم ہونے کے بعد زیادہ نہ ہلائیں ورنہ ٹوٹ سکتے ہیں۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور دوبارہ گرم کرتے وقت مکمل گرم کریں۔",
+    "serving_ur": "روٹی، نان، پراٹھا، دہی یا کچومر سلاد کے ساتھ پیش کریں۔"
+  },
+  "beef-nihari": {
+    "description_ur": "آہستہ پکایا جانے والا روایتی پاکستانی بیف نہاری جس میں گوشت، نہاری مصالحہ اور آٹے کی ہلکی گاڑھی گریوی شامل ہوتی ہے۔",
+    "ingredients_ur": [
+      "1 کلو بیف شینک",
+      "3 کھانے کے چمچ نہاری مصالحہ",
+      "2 کھانے کے چمچ ادرک لہسن پیسٹ",
+      "⅓ کپ گندم کا آٹا",
+      "½ کپ کوکنگ آئل",
+      "7 کپ پانی",
+      "تازہ ادرک اور ہرا دھنیا",
+      "ہری مرچ، لیموں اور نمک"
+    ],
+    "method_en": [
+      "Pat the beef dry and cut any very large pieces to a similar size. Heat oil in a heavy pot over medium-high heat.",
+      "Add the beef and brown it for 8–10 minutes, turning the pieces so several sides develop colour.",
+      "Add ginger-garlic paste and cook for 1 minute, then stir in the nihari masala and salt. Fry briefly so the spices coat the meat without burning.",
+      "Pour in the water, bring to a boil, then cover and reduce to a very gentle simmer. Cook for 2½–3½ hours, or until the beef is fork-tender.",
+      "Check the pot occasionally and add hot water only if the meat is no longer mostly covered. Slow, steady heat gives a clearer, richer gravy.",
+      "Mix the wheat flour with cool water to make a smooth, lump-free slurry. Remove a little hot broth into the slurry first, stir, then pour it gradually into the pot.",
+      "Simmer uncovered for 15–20 minutes, stirring from the bottom, until the gravy thickens enough to coat a spoon. Add hot water if it becomes too thick.",
+      "Taste and adjust salt. Rest for 10 minutes, skim excess surface fat if desired and serve with ginger, coriander, green chilies and lemon."
+    ],
+    "method_ur": [
+      "بیف کو خشک کریں اور بہت بڑے ٹکڑوں کو تقریباً برابر سائز میں کاٹیں۔ بھاری دیگچی میں درمیانی سے تیز آنچ پر تیل گرم کریں۔",
+      "بیف ڈال کر 8 سے 10 منٹ مختلف سمتوں سے براؤن کریں تاکہ گوشت پر اچھا رنگ آئے۔",
+      "ادرک لہسن پیسٹ ڈال کر 1 منٹ پکائیں، پھر نہاری مصالحہ اور نمک شامل کریں۔ مصالحہ مختصر بھونیں تاکہ گوشت پر لگ جائے مگر جلے نہیں۔",
+      "پانی ڈال کر اُبال لائیں، پھر ڈھک کر بہت ہلکی آنچ پر 2½ سے 3½ گھنٹے یا گوشت کانٹے سے آسانی سے ٹوٹنے تک پکائیں۔",
+      "وقفے وقفے سے دیگچی چیک کریں اور صرف اس صورت میں گرم پانی ڈالیں جب گوشت زیادہ تر شوربے میں نہ رہے۔ ہلکی مستقل آنچ گریوی کو بھرپور رکھتی ہے۔",
+      "گندم کے آٹے کو ٹھنڈے پانی میں اچھی طرح گھول کر بغیر گٹھلیوں کا محلول بنائیں۔ پہلے تھوڑا گرم شوربہ اس میں ملا کر درجہ حرارت برابر کریں، پھر آہستہ آہستہ دیگچی میں ڈالیں۔",
+      "بغیر ڈھانپے 15 سے 20 منٹ ہلکی آنچ پر پکائیں اور نیچے سے ہلاتے رہیں، یہاں تک کہ گریوی چمچ پر ہلکی تہہ بنانے لگے۔ بہت گاڑھی ہو تو گرم پانی شامل کریں۔",
+      "نمک چیک کریں۔ 10 منٹ آرام دیں، چاہیں تو اوپر کا اضافی تیل ہٹا دیں اور ادرک، ہرا دھنیا، ہری مرچ اور لیموں کے ساتھ سرو کریں۔"
+    ],
+    "tips_en": [
+      "Use gentle heat for tender meat and a clear gravy.",
+      "Temper the flour slurry with hot broth before adding it to reduce lumps.",
+      "Nihari thickens further as it stands, so stop cooking slightly before your final preferred consistency."
+    ],
+    "tips_ur": [
+      "نرم گوشت اور صاف گریوی کے لیے ہلکی آنچ رکھیں۔",
+      "آٹے کے محلول میں پہلے گرم شوربہ ملا کر پھر دیگچی میں ڈالیں تاکہ گٹھلیاں نہ بنیں۔",
+      "نہاری کھڑی رہنے سے مزید گاڑھی ہوتی ہے، اس لیے تھوڑا پہلے آنچ بند کریں۔"
+    ],
+    "storage_ur": "نہاری جلد ٹھنڈی کر کے فریج میں 2 سے 3 دن رکھیں۔ دوبارہ گرم کرتے وقت تھوڑا پانی شامل کر کے مکمل گرم کریں۔",
+    "serving_ur": "نان، کلچہ، ادرک، ہرا دھنیا، ہری مرچ اور لیموں کے ساتھ پیش کریں۔"
+  },
+  "bhindi-gosht": {
+    "description_ur": "نرم گوشت اور بھنڈی کو پیاز، ٹماٹر اور مصالحوں کی گاڑھی گریوی میں ملا کر تیار کیا جانے والا کلاسک پاکستانی بھنڈی گوشت۔",
+    "ingredients_ur": [
+      "750 گرام بیف، چھوٹے ٹکڑے",
+      "500 گرام بھنڈی، صاف کی ہوئی",
+      "2 پیاز، سلائس کی ہوئی",
+      "3 ٹماٹر، کٹے ہوئے",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "1 چائے کا چمچ لال مرچ",
+      "½ چائے کا چمچ ہلدی",
+      "1 چائے کا چمچ دھنیا پاؤڈر",
+      "3 ہری مرچیں",
+      "نمک اور کوکنگ آئل"
+    ],
+    "method_en": [
+      "Wash the okra only before trimming, then dry it very well. Trim the ends and cut into medium pieces; wet okra can become slimy during frying.",
+      "Heat a little oil in a wide pan and fry the okra over medium-high heat for 6–8 minutes until lightly coloured and less sticky. Remove and set aside.",
+      "In a heavy pot, heat oil and fry the onions until golden. Add ginger-garlic paste and stir for 1 minute.",
+      "Add the beef and fry for 6–8 minutes, then add tomatoes, chili powder, turmeric, coriander powder and salt.",
+      "Cook until the tomatoes break down and the masala thickens. Add hot water, cover and simmer until the beef is tender.",
+      "Remove the lid and reduce the gravy if it is watery. Add the fried okra and green chilies only after the meat is tender.",
+      "Fold gently, cover and simmer for 8–10 minutes so the okra absorbs flavour without breaking apart.",
+      "Taste for seasoning and serve when the gravy is thick and the okra is tender but still holds its shape."
+    ],
+    "method_ur": [
+      "بھنڈی کو صرف کاٹنے سے پہلے دھوئیں اور بہت اچھی طرح خشک کریں۔ سرے کاٹ کر درمیانے ٹکڑے بنائیں؛ گیلی بھنڈی فرائی کرتے وقت زیادہ لیس دار ہو سکتی ہے۔",
+      "چوڑے پین میں تھوڑا تیل گرم کریں اور درمیانی سے تیز آنچ پر بھنڈی 6 سے 8 منٹ ہلکا رنگ آنے اور چپچپاہٹ کم ہونے تک فرائی کریں۔ نکال کر رکھ دیں۔",
+      "بھاری دیگچی میں تیل گرم کر کے پیاز سنہری کریں۔ ادرک لہسن پیسٹ ڈال کر 1 منٹ ہلائیں۔",
+      "بیف شامل کر کے 6 سے 8 منٹ بھونیں، پھر ٹماٹر، لال مرچ، ہلدی، دھنیا پاؤڈر اور نمک ڈالیں۔",
+      "ٹماٹر گلنے اور مصالحہ گاڑھا ہونے تک پکائیں۔ گرم پانی شامل کریں، ڈھکیں اور بیف گلنے تک ہلکی آنچ پر پکائیں۔",
+      "ڈھکن ہٹا کر گریوی پانی والی ہو تو گاڑھی کریں۔ گوشت گلنے کے بعد ہی فرائی کی ہوئی بھنڈی اور ہری مرچیں شامل کریں۔",
+      "نرمی سے مکس کریں، ڈھک کر 8 سے 10 منٹ پکائیں تاکہ بھنڈی ذائقہ جذب کرے مگر ٹوٹے نہیں۔",
+      "نمک چیک کریں اور اس وقت سرو کریں جب گریوی گاڑھی اور بھنڈی نرم مگر شکل میں قائم ہو۔"
+    ],
+    "tips_en": [
+      "Dry okra thoroughly before frying.",
+      "Add okra only after the meat is tender.",
+      "Stir gently after adding okra to reduce breaking and sliminess."
+    ],
+    "tips_ur": [
+      "بھنڈی فرائی کرنے سے پہلے اچھی طرح خشک کریں۔",
+      "بھنڈی گوشت گلنے کے بعد شامل کریں۔",
+      "بھنڈی ڈالنے کے بعد نرمی سے ہلائیں تاکہ ٹوٹے اور لیس دار نہ ہو۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور ہلکی آنچ پر مکمل گرم کریں؛ دوبارہ زیادہ ہلانے سے بھنڈی ٹوٹ سکتی ہے۔",
+    "serving_ur": "روٹی، نان یا سادہ چاول کے ساتھ پیش کریں۔"
+  },
+  "haleem": {
+    "description_ur": "بیف، گندم، جو اور مختلف دالوں کو آہستہ پکا کر تیار ہونے والا گاڑھا پاکستانی حلیم، جسے تلی پیاز، ادرک، لیموں اور ہرے دھنیے سے مکمل کیا جاتا ہے۔",
+    "ingredients_ur": [
+      "750 گرام بیف",
+      "1 کپ دلیہ یا ٹوٹی گندم",
+      "¼ کپ جو",
+      "¼ کپ چنا دال",
+      "¼ کپ مسور دال",
+      "¼ کپ مونگ دال",
+      "2 پیاز، باریک کٹی ہوئی",
+      "2 کھانے کے چمچ ادرک لہسن پیسٹ",
+      "2 کھانے کے چمچ حلیم مصالحہ",
+      "1 چائے کا چمچ لال مرچ",
+      "½ چائے کا چمچ ہلدی",
+      "نمک اور کوکنگ آئل",
+      "سرو کرنے کے لیے تلی پیاز، ادرک، ہرا دھنیا اور لیموں"
+    ],
+    "method_en": [
+      "Wash the wheat, barley and lentils thoroughly and soak them for about 1 hour. Drain before cooking.",
+      "Place the grains and lentils in a large pot with plenty of water. Bring to a boil, then simmer until everything is very soft and can be mashed easily.",
+      "Meanwhile, heat oil in another pot and fry the onions until golden. Reserve some for garnish.",
+      "Add ginger-garlic paste, beef, haleem masala, chili powder, turmeric and salt. Fry for several minutes, then add hot water and cook until the beef is very tender.",
+      "Remove the beef, shred it finely and return it to the masala. Make sure no large tough pieces remain.",
+      "Mash or blend the cooked grain-and-lentil mixture to a thick, slightly textured paste, then gradually combine it with the beef mixture.",
+      "Cook on low heat for 30–45 minutes, stirring from the bottom often. Add hot water in small amounts if needed until the haleem becomes smooth, glossy and stretchy.",
+      "Taste for salt and spice. Serve hot with fried onions, julienned ginger, coriander, green chilies and lemon."
+    ],
+    "method_ur": [
+      "گندم، جو اور تمام دالیں اچھی طرح دھو کر تقریباً 1 گھنٹہ بھگو دیں۔ پکانے سے پہلے پانی نکال دیں۔",
+      "اناج اور دالیں بڑے برتن میں کافی پانی کے ساتھ ڈالیں۔ اُبال آنے دیں، پھر ہلکی آنچ پر اتنا پکائیں کہ سب کچھ بہت نرم ہو کر آسانی سے میش ہو سکے۔",
+      "دوسری دیگچی میں تیل گرم کر کے پیاز سنہری کریں۔ کچھ پیاز گارنش کے لیے نکال لیں۔",
+      "ادرک لہسن پیسٹ، بیف، حلیم مصالحہ، لال مرچ، ہلدی اور نمک شامل کریں۔ چند منٹ بھونیں، پھر گرم پانی ڈال کر بیف بہت نرم ہونے تک پکائیں۔",
+      "بیف نکال کر باریک ریشے کریں اور دوبارہ مصالحے میں شامل کریں۔ کوئی بڑا سخت ٹکڑا باقی نہ رہنے دیں۔",
+      "پکی ہوئی گندم اور دالوں کو میش یا بلینڈ کر کے گاڑھا مگر ہلکی ساخت والا پیسٹ بنائیں، پھر آہستہ آہستہ بیف کے آمیزے میں ملائیں۔",
+      "30 سے 45 منٹ ہلکی آنچ پر پکائیں اور نیچے سے بار بار ہلاتے رہیں۔ ضرورت ہو تو تھوڑا تھوڑا گرم پانی ڈالیں یہاں تک کہ حلیم ہموار، چمکدار اور کھنچاؤ والی ہو جائے۔",
+      "نمک اور مصالحہ چیک کریں۔ تلی پیاز، باریک ادرک، ہرا دھنیا، ہری مرچ اور لیموں کے ساتھ گرم سرو کریں۔"
+    ],
+    "tips_en": [
+      "Cook grains until extremely soft before blending.",
+      "Stir from the bottom regularly after combining because haleem can catch easily.",
+      "Add water gradually; it is easier to thin haleem than to rescue an overly watery pot."
+    ],
+    "tips_ur": [
+      "بلینڈ کرنے سے پہلے گندم اور دالیں بہت نرم پکائیں۔",
+      "سب کچھ ملانے کے بعد نیچے سے بار بار ہلائیں کیونکہ حلیم جلد لگ سکتی ہے۔",
+      "پانی تھوڑا تھوڑا ڈالیں؛ پتلی حلیم کو دوبارہ گاڑھا کرنا مشکل ہوتا ہے۔"
+    ],
+    "storage_ur": "حلیم فریج میں 3 دن تک رکھی جا سکتی ہے۔ دوبارہ گرم کرتے وقت تھوڑا گرم پانی شامل کر کے نیچے سے ہلاتے رہیں۔",
+    "serving_ur": "تلی پیاز، ادرک، ہرا دھنیا، ہری مرچ، لیموں اور نان کے ساتھ پیش کریں۔"
+  },
+  "keema-matar": {
+    "description_ur": "بیف قیمہ، ہری مٹر، ٹماٹر اور گرم مصالحوں سے تیار ہونے والا پاکستانی قیمہ مٹر۔",
+    "ingredients_ur": [
+      "750 گرام بیف قیمہ",
+      "1½ کپ مٹر",
+      "2 پیاز",
+      "3 ٹماٹر",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "1 چائے کا چمچ لال مرچ",
+      "1 چائے کا چمچ زیرہ",
+      "½ چائے کا چمچ ہلدی",
+      "نمک اور تیل"
+    ],
+    "method_en": [
+      "Heat oil in a wide pan over medium heat and fry the onions for 6–8 minutes until golden.",
+      "Add ginger-garlic paste and stir for 1 minute, then add the mince and break it apart with a wooden spoon.",
+      "Fry the mince for 7–9 minutes until the colour changes and excess moisture evaporates.",
+      "Add tomatoes, chili powder, cumin, turmeric and salt. Cook until the tomatoes break down and the masala becomes thick and glossy.",
+      "Add the peas and a small splash of hot water. Cover and cook over medium-low heat until the peas are tender.",
+      "Remove the lid and cook for a few more minutes if any excess liquid remains.",
+      "Taste and adjust seasoning. If available, finish with fresh coriander or green chilies.",
+      "Rest for a few minutes and serve hot with bread or rice."
+    ],
+    "method_ur": [
+      "چوڑے پین میں درمیانی آنچ پر تیل گرم کریں اور پیاز 6 سے 8 منٹ سنہری ہونے تک فرائی کریں۔",
+      "ادرک لہسن پیسٹ ڈال کر 1 منٹ ہلائیں، پھر قیمہ شامل کریں اور لکڑی کے چمچ سے توڑتے جائیں۔",
+      "قیمہ 7 سے 9 منٹ بھونیں یہاں تک کہ رنگ بدل جائے اور اضافی نمی خشک ہو۔",
+      "ٹماٹر، لال مرچ، زیرہ، ہلدی اور نمک شامل کریں۔ ٹماٹر گلنے اور مصالحہ گاڑھا و چمکدار ہونے تک پکائیں۔",
+      "مٹر اور تھوڑا گرم پانی شامل کریں۔ ڈھک کر درمیانی سے ہلکی آنچ پر مٹر نرم ہونے تک پکائیں۔",
+      "ڈھکن ہٹا کر اگر اضافی پانی ہو تو چند منٹ مزید خشک کریں۔",
+      "نمک اور مصالحہ چیک کریں۔ دستیاب ہو تو ہرا دھنیا یا ہری مرچ شامل کریں۔",
+      "چند منٹ آرام دے کر روٹی یا چاول کے ساتھ گرم سرو کریں۔"
+    ],
+    "tips_en": [
+      "Cook the mince until its raw moisture evaporates before adding tomatoes.",
+      "Frozen peas need less cooking than fresh peas.",
+      "Keep the finished keema moist but not watery."
+    ],
+    "tips_ur": [
+      "ٹماٹر ڈالنے سے پہلے قیمے کی کچی نمی خشک کریں۔",
+      "فروزن مٹر تازہ مٹر کے مقابلے میں جلد پک جاتے ہیں۔",
+      "تیار قیمہ نم رہے مگر پانی والا نہ ہو۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور دوبارہ مکمل گرم کریں۔",
+    "serving_ur": "چپاتی، نان، پراٹھا یا سادہ چاول کے ساتھ پیش کریں۔"
+  },
+  "mutton-karahi": {
+    "description_ur": "ٹماٹر، ادرک، ہری مرچ اور مصالحوں کے ساتھ پکایا جانے والا گاڑھی گریوی والا مٹن کڑاہی۔",
+    "ingredients_ur": [
+      "1 کلو مٹن",
+      "6 ٹماٹر",
+      "2 کھانے کے چمچ ادرک لہسن پیسٹ",
+      "5 ہری مرچیں",
+      "1 چائے کا چمچ کالی مرچ",
+      "1 چائے کا چمچ زیرہ",
+      "تازہ ادرک",
+      "نمک اور تیل"
+    ],
+    "method_en": [
+      "Pat the mutton dry and heat oil in a wide heavy karahi over medium-high heat.",
+      "Add the mutton and brown it for 8–10 minutes, turning the pieces so several sides colour.",
+      "Add ginger-garlic paste and stir for 1 minute, then add chopped tomatoes and salt.",
+      "Cover and cook over medium-low heat, stirring occasionally. Add small amounts of hot water as needed until the mutton is tender.",
+      "Remove the lid and increase the heat to medium. Cook while pressing the tomatoes until the gravy becomes thick.",
+      "Add black pepper, cumin and green chilies and continue cooking until oil begins to appear around the edges.",
+      "Add fresh julienned ginger and cook for 1–2 minutes.",
+      "Taste for seasoning and serve immediately while the masala is concentrated and glossy."
+    ],
+    "method_ur": [
+      "مٹن خشک کریں اور چوڑی بھاری کڑاہی میں درمیانی سے تیز آنچ پر تیل گرم کریں۔",
+      "مٹن ڈال کر 8 سے 10 منٹ مختلف سمتوں سے براؤن کریں۔",
+      "ادرک لہسن پیسٹ ڈال کر 1 منٹ ہلائیں، پھر کٹے ٹماٹر اور نمک شامل کریں۔",
+      "ڈھک کر درمیانی سے ہلکی آنچ پر پکائیں اور وقفے وقفے سے ہلائیں۔ مٹن گلنے تک ضرورت کے مطابق تھوڑا تھوڑا گرم پانی شامل کریں۔",
+      "ڈھکن ہٹا کر آنچ درمیانی کریں۔ ٹماٹروں کو دباتے ہوئے پکائیں یہاں تک کہ گریوی گاڑھی ہو جائے۔",
+      "کالی مرچ، زیرہ اور ہری مرچیں ڈالیں اور اس وقت تک پکائیں جب تک کناروں پر تیل نظر آنے لگے۔",
+      "تازہ باریک ادرک ڈال کر 1 سے 2 منٹ پکائیں۔",
+      "نمک چیک کریں اور گاڑھا، چمکدار مصالحہ رہتے ہوئے فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Tenderise mutton before reducing the tomato gravy.",
+      "Add water in small amounts instead of flooding the karahi.",
+      "Fresh ginger and green chilies are best added near the end."
+    ],
+    "tips_ur": [
+      "ٹماٹر کی گریوی گاڑھی کرنے سے پہلے مٹن مکمل نرم کر لیں۔",
+      "زیادہ پانی ایک ساتھ نہ ڈالیں بلکہ تھوڑا تھوڑا شامل کریں۔",
+      "تازہ ادرک اور ہری مرچ آخر میں ڈالنا بہتر ہے۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور دوبارہ مکمل گرم کریں۔",
+    "serving_ur": "نان، روٹی، پیاز، ہری چٹنی اور لیموں کے ساتھ پیش کریں۔"
+  },
+  "paya": {
+    "description_ur": "بیف پائے کو کئی گھنٹے آہستہ پکا کر تیار ہونے والی ریشمی اور جیلاٹین والی پاکستانی پائے کی گریوی۔",
+    "ingredients_ur": [
+      "4 صاف کیے ہوئے بیف پائے، ٹکڑوں میں",
+      "2 پیاز، سلائس کی ہوئی",
+      "2 ٹماٹر، کٹے ہوئے",
+      "2 کھانے کے چمچ ادرک لہسن پیسٹ",
+      "2 چائے کے چمچ دھنیا پاؤڈر",
+      "1 چائے کا چمچ زیرہ پاؤڈر",
+      "1 چائے کا چمچ لال مرچ",
+      "½ چائے کا چمچ ہلدی",
+      "1 چائے کا چمچ گرم مصالحہ",
+      "8 کپ پانی",
+      "⅓ کپ کوکنگ آئل",
+      "نمک حسبِ ذائقہ",
+      "سرو کرنے کے لیے ادرک، ہرا دھنیا، ہری مرچ اور لیموں"
+    ],
+    "method_en": [
+      "Rinse the cleaned trotters thoroughly under running water and drain well. Use only properly cleaned trotters from a reliable source.",
+      "Heat oil in a large heavy pot. Fry the onions until golden, then add ginger-garlic paste and cook for 1 minute.",
+      "Add tomatoes, coriander powder, cumin, chili powder, turmeric and salt. Cook until the tomatoes soften and the masala thickens.",
+      "Add the trotters and fry them with the masala for 8–10 minutes so they are well coated.",
+      "Pour in the water, bring to a boil, then cover and reduce to a very gentle simmer. Cook for 4–5 hours, or until the joints are tender and the broth becomes rich and gelatinous.",
+      "Check occasionally and add hot water only if needed to keep the trotters mostly submerged. Skim excess surface fat if desired.",
+      "Remove the lid and simmer until the gravy reaches the thickness you prefer. Stir carefully because the tender pieces can loosen from the bone.",
+      "Add garam masala, taste for salt and serve with fresh ginger, coriander, green chilies and lemon."
+    ],
+    "method_ur": [
+      "صاف کیے ہوئے پائے بہتے پانی میں اچھی طرح دھو کر پانی نکال دیں۔ صرف معتبر جگہ سے صحیح طرح صاف کیے ہوئے پائے استعمال کریں۔",
+      "بڑی بھاری دیگچی میں تیل گرم کریں۔ پیاز سنہری کریں، پھر ادرک لہسن پیسٹ ڈال کر 1 منٹ پکائیں۔",
+      "ٹماٹر، دھنیا پاؤڈر، زیرہ، لال مرچ، ہلدی اور نمک شامل کریں۔ ٹماٹر نرم اور مصالحہ گاڑھا ہونے تک پکائیں۔",
+      "پائے شامل کر کے مصالحے کے ساتھ 8 سے 10 منٹ بھونیں تاکہ اچھی طرح کوٹ ہو جائیں۔",
+      "پانی ڈال کر اُبال لائیں، پھر ڈھک کر بہت ہلکی آنچ پر 4 سے 5 گھنٹے پکائیں یا جوڑ نرم اور شوربہ بھرپور و جیلاٹین والا ہونے تک۔",
+      "وقفے وقفے سے چیک کریں اور صرف ضرورت پر گرم پانی ڈالیں تاکہ پائے زیادہ تر ڈوبے رہیں۔ چاہیں تو اوپر کا اضافی تیل ہٹا دیں۔",
+      "ڈھکن ہٹا کر گریوی اپنی پسند کے گاڑھے پن تک پکائیں۔ نرمی سے ہلائیں کیونکہ پکے ہوئے ٹکڑے ہڈی سے الگ ہو سکتے ہیں۔",
+      "گرم مصالحہ شامل کریں، نمک چیک کریں اور تازہ ادرک، ہرا دھنیا، ہری مرچ اور لیموں کے ساتھ پیش کریں۔"
+    ],
+    "tips_en": [
+      "Low, slow cooking is essential for tender trotters and gelatin-rich broth.",
+      "Add hot water, not cold, if the pot needs topping up.",
+      "The gravy thickens as it cools because of natural gelatin."
+    ],
+    "tips_ur": [
+      "نرم پائے اور جیلاٹین والی یخنی کے لیے بہت ہلکی آنچ ضروری ہے۔",
+      "پانی کم ہو تو ٹھنڈا نہیں بلکہ گرم پانی شامل کریں۔",
+      "قدرتی جیلاٹین کی وجہ سے گریوی ٹھنڈی ہو کر مزید گاڑھی ہوتی ہے۔"
+    ],
+    "storage_ur": "پائے جلد ٹھنڈے کر کے فریج میں 2 سے 3 دن رکھیں۔ دوبارہ گرم کرتے وقت مکمل اُبال کے قریب گرم کریں اور ضرورت ہو تو پانی شامل کریں۔",
+    "serving_ur": "نان، کلچہ، تازہ ادرک، ہرا دھنیا، ہری مرچ اور لیموں کے ساتھ پیش کریں۔"
+  }
+}
