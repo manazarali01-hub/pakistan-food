@@ -1,4 +1,6 @@
 {% assign recipe = site.data.recipes[page.recipe_key] %}
+{% assign urdu_name = recipe.name_urdu %}
+{% unless urdu_name %}{% assign urdu_name = site.data.urdu_names[page.recipe_key] %}{% endunless %}
 {% capture canonical_url %}https://pakistanfoodrecipes.top/recipes/{{ page.recipe_key }}.html{% endcapture %}
 {% capture meta_description %}{{ recipe.description | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %} and serves {{ recipe.serves }}{% endif %}. See ingredients and the easy step-by-step method.{% endcapture %}
 {% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
@@ -196,7 +198,7 @@
   <style>
     .seo-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.seo-site-nav{max-width:1000px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.seo-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.seo-site-links{display:flex;flex-wrap:wrap;gap:14px}.seo-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.seo-recipe{max-width:900px;margin:36px auto 50px;padding:24px}.seo-recipe figure{margin:24px 0}.seo-recipe img{display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:540px;object-fit:cover;border-radius:18px;background:#f3f3f3}.seo-recipe figcaption{margin-top:8px;color:#666;font-size:.9rem;text-align:center}.seo-recipe h1{font-size:clamp(2rem,5vw,3.4rem);margin:22px 0 10px}.seo-recipe h2{margin-top:30px}.seo-recipe li{margin:10px 0;line-height:1.7}.seo-meta{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0}.seo-meta time{font-weight:700}.seo-back{display:inline-block;margin:15px 0}.seo-desc{font-size:1.08rem;line-height:1.8}.seo-breadcrumb{font-size:.95rem;margin-bottom:10px}.seo-breadcrumb a{text-decoration:none}.related-recipes,.popular-recipes,.cooking-tips,.recipe-guide,.recipe-faq{margin-top:36px;padding-top:20px;border-top:1px solid #ddd}.related-recipes ul,.popular-recipes ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;padding:0;list-style:none}.related-recipes a,.popular-recipes a{display:block;padding:12px;border-radius:10px;background:#f5f5f5;text-decoration:none;color:inherit}.recipe-note{margin-top:28px;padding:18px;border-radius:14px;background:#f8f8f8;line-height:1.8}.recipe-faq h3{font-size:1.05rem;margin:20px 0 6px}.recipe-faq p,.recipe-guide p{line-height:1.75}.seo-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.seo-site-footer a{color:#fff}@media(max-width:620px){.seo-site-nav{align-items:flex-start;flex-direction:column}.seo-site-links{gap:10px}.seo-recipe{margin-top:16px;padding:18px}}
   </style>
-  <link rel="stylesheet" href="../premium.css?v=20260924-premium1">
+  <link rel="stylesheet" href="../premium.css?v=20260924-premium3">
 </head>
 <body>
   <a class="skip-link" href="#recipe-content">Skip to recipe</a>
@@ -217,6 +219,7 @@
     </nav>
     <article>
       <h1>{{ recipe.name }} Recipe</h1>
+      {% if urdu_name %}<p class="recipe-title-urdu" lang="ur" dir="rtl">{{ urdu_name }}</p>{% endif %}
       <p class="seo-desc">{{ recipe.description }}</p>
       <figure>
         <img src="{{ display_image }}" alt="{{ recipe.name }} ready to serve" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
@@ -273,5 +276,14 @@
     </article>
   </main>
   <footer class="seo-site-footer"><p>© 2026 Pakistan Food · <a href="../sitemap.html">Recipe sitemap</a> · <a href="../privacy-policy.html">Privacy Policy</a> · <a href="../image-credits.html">Image credits</a></p></footer>
+  <script>
+  try {
+    const key = "pakistanFoodRecentlyViewed";
+    const current = Number({{ recipe.id | jsonify }});
+    const saved = JSON.parse(localStorage.getItem(key) || "[]");
+    const next = [current, ...(Array.isArray(saved) ? saved.map(Number).filter(id => Number.isFinite(id) && id !== current) : [])].slice(0, 4);
+    localStorage.setItem(key, JSON.stringify(next));
+  } catch (_) {}
+  </script>
 </body>
 </html>
