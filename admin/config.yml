@@ -49,21 +49,45 @@ collections:
       - label: "Description"
         name: "description"
         widget: "text"
+      - label: "Urdu Description"
+        name: "description_ur"
+        widget: "text"
+        required: false
       - label: "Ingredients"
         name: "ingredients"
         widget: "list"
+      - label: "Ingredients (Urdu)"
+        name: "ingredients_ur"
+        widget: "list"
+        required: false
       - label: "Method"
         name: "method"
         widget: "list"
+      - label: "Method (Urdu)"
+        name: "method_ur"
+        widget: "list"
+        required: false
       - label: "Recipe-specific Tips"
         name: "tips"
+        widget: "list"
+        required: false
+      - label: "Tips (Urdu)"
+        name: "tips_ur"
         widget: "list"
         required: false
       - label: "Storage Advice"
         name: "storage"
         widget: "text"
         required: false
+      - label: "Storage Advice (Urdu)"
+        name: "storage_ur"
+        widget: "text"
+        required: false
       - label: "Serving Suggestion"
         name: "serving"
+        widget: "text"
+        required: false
+      - label: "Serving Suggestion (Urdu)"
+        name: "serving_ur"
         widget: "text"
         required: false
