@@ -493,6 +493,7 @@ const backTop = document.getElementById("backTop");
 let currentCategory = "All";
 let showFavoritesOnly = false;
 let lastFocusedElement = null;
+let lastFocusedRecipeId = null;
 
 
 /* =====================================
@@ -862,7 +863,10 @@ function openRecipe(id) {
 
     if (!recipe) return;
 
-    if (!recipeModal.classList.contains("active")) lastFocusedElement = document.activeElement;
+    if (!recipeModal.classList.contains("active")) {
+        lastFocusedElement = document.activeElement;
+        lastFocusedRecipeId = document.activeElement?.matches?.('[data-recipe]') ? id : null;
+    }
 
     const isFavorite = favorites.includes(recipe.id);
 
@@ -960,8 +964,10 @@ function closeRecipe() {
         history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
     }
 
-    if (lastFocusedElement instanceof HTMLElement) {
+    if (lastFocusedElement instanceof HTMLElement && lastFocusedElement.isConnected) {
         lastFocusedElement.focus();
+    } else if (lastFocusedRecipeId !== null) {
+        (recipeGrid.querySelector(`[data-recipe="${lastFocusedRecipeId}"]`) || searchInput).focus();
     }
 
 }
