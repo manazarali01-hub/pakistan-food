@@ -1,0 +1,375 @@
+{
+  "chicken-handi": {
+    "description_ur": "کریم، دہی، ٹماٹر اور نرم مصالحوں کے ساتھ تیار ہونے والی گاڑھی اور رچ پاکستانی چکن ہانڈی۔",
+    "ingredients_ur": [
+      "750 گرام بون لیس چکن",
+      "½ کپ کوکنگ کریم",
+      "½ کپ سادہ دہی",
+      "4 ٹماٹر، بلینڈ کیے ہوئے",
+      "1 پیاز، باریک کٹی ہوئی",
+      "1½ کھانے کے چمچ ادرک لہسن پیسٹ",
+      "1 چائے کا چمچ لال مرچ پاؤڈر",
+      "½ چائے کا چمچ گرم مصالحہ",
+      "نمک اور کوکنگ آئل"
+    ],
+    "method_en": [
+      "Pat the chicken dry and cut it into even bite-size pieces so it cooks at the same rate.",
+      "Heat oil in a heavy pan over medium heat. Add the onion and cook for 6–8 minutes until soft and lightly golden.",
+      "Add ginger-garlic paste and stir for about 1 minute, then add the chicken and fry for 5–6 minutes until the outside turns opaque.",
+      "Add the blended tomatoes, red chili powder and salt. Cook uncovered for 8–10 minutes, stirring often, until the tomato mixture thickens and oil begins to show at the edges.",
+      "Whisk the yogurt until smooth. Lower the heat and add it gradually while stirring so it does not split. Cook for another 5 minutes.",
+      "Cover and simmer gently until the chicken is fully cooked and tender. If the sauce becomes too thick before the chicken is done, add a small splash of hot water.",
+      "Reduce the heat to low and stir in the cream and garam masala. Simmer for 3–4 minutes without boiling hard.",
+      "Taste, adjust salt and chili, then rest for a few minutes before serving so the sauce settles and coats the chicken."
+    ],
+    "method_ur": [
+      "چکن کو خشک کر کے یکساں چھوٹے ٹکڑوں میں کاٹیں تاکہ سب ٹکڑے ایک ہی وقت میں پکیں۔",
+      "بھاری پین میں درمیانی آنچ پر تیل گرم کریں۔ پیاز ڈال کر 6 سے 8 منٹ نرم اور ہلکی سنہری ہونے تک پکائیں۔",
+      "ادرک لہسن پیسٹ ڈال کر تقریباً 1 منٹ ہلائیں، پھر چکن شامل کر کے 5 سے 6 منٹ بھونیں یہاں تک کہ باہر کا رنگ سفید ہو جائے۔",
+      "بلینڈ کیے ہوئے ٹماٹر، لال مرچ پاؤڈر اور نمک شامل کریں۔ بغیر ڈھانپے 8 سے 10 منٹ پکائیں اور ہلاتے رہیں، یہاں تک کہ ٹماٹر گاڑھے ہوں اور کناروں پر تیل نظر آنے لگے۔",
+      "دہی اچھی طرح پھینٹ لیں۔ آنچ کم کریں اور آہستہ آہستہ دہی شامل کرتے ہوئے مسلسل ہلاتے رہیں تاکہ پھٹے نہیں۔ مزید 5 منٹ پکائیں۔",
+      "ڈھک کر ہلکی آنچ پر چکن مکمل گلنے تک پکائیں۔ اگر چکن گلنے سے پہلے گریوی بہت گاڑھی ہو جائے تو تھوڑا گرم پانی ڈالیں۔",
+      "آنچ ہلکی کر کے کریم اور گرم مصالحہ شامل کریں۔ 3 سے 4 منٹ ہلکا سا پکائیں، تیز اُبال نہ دیں۔",
+      "نمک اور مرچ چیک کریں، پھر چند منٹ آرام دے کر سرو کریں تاکہ گریوی چکن پر اچھی طرح جم جائے۔"
+    ],
+    "tips_en": [
+      "Add yogurt over lower heat to reduce the chance of splitting.",
+      "Do not boil cream aggressively; gentle heat keeps the sauce smooth.",
+      "Keep the tomato masala thick before adding dairy for a richer handi."
+    ],
+    "tips_ur": [
+      "دہی کم آنچ پر شامل کریں تاکہ پھٹنے کا امکان کم ہو۔",
+      "کریم کو تیز نہ اُبالیں؛ ہلکی آنچ گریوی کو ہموار رکھتی ہے۔",
+      "دودھ والی چیزیں ڈالنے سے پہلے ٹماٹر مصالحہ گاڑھا کر لیں۔"
+    ],
+    "storage_ur": "جلد ٹھنڈا کر کے ڈھکے ہوئے برتن میں فریج میں 2 دن تک رکھیں اور دوبارہ اچھی طرح گرم کریں۔",
+    "serving_ur": "نان، روغنی روٹی، چپاتی یا سادہ چاول کے ساتھ پیش کریں۔"
+  },
+  "chicken-achari": {
+    "description_ur": "اچار والے مصالحوں، ٹماٹر اور دہی کے ساتھ تیار ہونے والی کھٹی، خوشبودار اور قدرے تیز پاکستانی اچاری چکن۔",
+    "ingredients_ur": [
+      "750 گرام چکن، کری کٹ",
+      "1 پیاز، باریک کٹی ہوئی",
+      "3 ٹماٹر، کٹے ہوئے",
+      "½ کپ سادہ دہی",
+      "1½ کھانے کے چمچ ادرک لہسن پیسٹ",
+      "1 چائے کا چمچ سونف",
+      "1 چائے کا چمچ کلونجی",
+      "1 چائے کا چمچ رائی",
+      "½ چائے کا چمچ میتھی دانہ",
+      "1 چائے کا چمچ لال مرچ پاؤڈر",
+      "½ چائے کا چمچ ہلدی",
+      "3 ہری مرچیں",
+      "3 کھانے کے چمچ کوکنگ آئل",
+      "نمک اور لیموں کا رس حسبِ ذائقہ"
+    ],
+    "method_en": [
+      "Heat oil in a heavy pan over medium heat and fry the onion for 6–8 minutes until soft and lightly golden.",
+      "Add ginger-garlic paste and stir for 1 minute. Add the chicken and fry for 6–7 minutes until the pieces lose their raw colour and begin to brown lightly.",
+      "Add tomatoes, red chili powder, turmeric and salt. Cook uncovered for 8–10 minutes, pressing the tomatoes until they form a thick masala.",
+      "Whisk the yogurt smooth, lower the heat and stir it into the chicken gradually. Cook for 4–5 minutes until the yogurt is absorbed.",
+      "Lightly crush the fennel, nigella, mustard and fenugreek seeds. Add them with the green chilies and stir for a minute so their aroma opens up.",
+      "Cover and cook on low heat for 10–15 minutes, or until the chicken is fully cooked. Stir once or twice and add only a splash of hot water if needed.",
+      "Remove the lid and reduce any excess moisture until the masala clings to the chicken.",
+      "Finish with lemon juice a little at a time, taste for salt and sourness, then rest for 5 minutes before serving."
+    ],
+    "method_ur": [
+      "بھاری پین میں درمیانی آنچ پر تیل گرم کریں اور پیاز 6 سے 8 منٹ نرم اور ہلکی سنہری ہونے تک فرائی کریں۔",
+      "ادرک لہسن پیسٹ شامل کر کے 1 منٹ ہلائیں۔ چکن ڈال کر 6 سے 7 منٹ بھونیں یہاں تک کہ کچا رنگ ختم ہو اور ہلکی براؤننگ آ جائے۔",
+      "ٹماٹر، لال مرچ، ہلدی اور نمک شامل کریں۔ بغیر ڈھانپے 8 سے 10 منٹ پکائیں اور ٹماٹروں کو دباتے رہیں یہاں تک کہ گاڑھا مصالحہ بن جائے۔",
+      "دہی اچھی طرح پھینٹ کر آنچ کم کریں اور آہستہ آہستہ چکن میں شامل کریں۔ 4 سے 5 منٹ پکائیں یہاں تک کہ دہی جذب ہو جائے۔",
+      "سونف، کلونجی، رائی اور میتھی دانہ ہلکا سا کچلیں۔ ہری مرچوں کے ساتھ ڈال کر ایک منٹ ہلائیں تاکہ خوشبو کھل جائے۔",
+      "ڈھک کر 10 سے 15 منٹ ہلکی آنچ پر پکائیں یا چکن مکمل گلنے تک۔ ایک دو بار ہلائیں اور ضرورت ہو تو صرف تھوڑا گرم پانی ڈالیں۔",
+      "ڈھکن ہٹا کر اضافی پانی خشک کریں یہاں تک کہ مصالحہ چکن پر چپک جائے۔",
+      "آخر میں تھوڑا تھوڑا لیموں کا رس ڈالیں، نمک اور کھٹاس چیک کریں، پھر 5 منٹ آرام دے کر سرو کریں۔"
+    ],
+    "tips_en": [
+      "Crush pickling spices lightly rather than grinding them to powder.",
+      "Add lemon at the end so the sour flavour stays bright.",
+      "Keep the final masala thick; achari chicken should not be watery."
+    ],
+    "tips_ur": [
+      "اچار والے مصالحوں کو پاؤڈر بنانے کے بجائے ہلکا سا کچلیں۔",
+      "لیموں آخر میں ڈالیں تاکہ کھٹاس تازہ محسوس ہو۔",
+      "آخر میں مصالحہ گاڑھا رکھیں؛ اچاری چکن پانی والی نہیں ہونی چاہیے۔"
+    ],
+    "storage_ur": "فریج میں ڈھکے ہوئے برتن میں 2 دن تک رکھیں اور کھانے سے پہلے مکمل گرم کریں۔",
+    "serving_ur": "نان، چپاتی، پراٹھے یا سادہ چاول کے ساتھ پیش کریں۔"
+  },
+  "chicken-jalfrezi": {
+    "description_ur": "ٹماٹر کے گاڑھے مصالحے، نرم چکن، پیاز اور شملہ مرچ کے ہلکے کرنچ کے ساتھ تیار ہونے والی پاکستانی چکن جلفریزی۔",
+    "ingredients_ur": [
+      "750 گرام بون لیس چکن، چھوٹے ٹکڑے",
+      "2 شملہ مرچیں، سلائس کی ہوئی",
+      "1 درمیانی پیاز، سلائس کی ہوئی",
+      "3 درمیانے ٹماٹر، کٹے ہوئے",
+      "2 کھانے کے چمچ نیوٹرل آئل",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "1 چائے کا چمچ پسا زیرہ",
+      "1 چائے کا چمچ لال مرچ پاؤڈر یا حسبِ ذائقہ",
+      "¾ چائے کا چمچ نمک یا حسبِ ذائقہ",
+      "1 کھانے کا چمچ سویا ساس، اختیاری",
+      "2 کھانے کے چمچ ہرا دھنیا"
+    ],
+    "method_en": [
+      "Heat 1 tablespoon oil in a wide pan over medium-high heat. Brown the chicken in batches for 5–6 minutes, then transfer it to a plate; it will finish cooking in the sauce.",
+      "Add the remaining oil and ginger-garlic paste. Stir for 30 seconds, then add tomatoes, cumin, chili powder and salt.",
+      "Cook the tomato mixture for 8–10 minutes, pressing the tomatoes against the pan until the sauce is thick and glossy.",
+      "Return the chicken and any juices to the pan. Cover and simmer gently for about 8 minutes, stirring once, until the chicken is fully cooked.",
+      "In a separate hot pan, stir-fry the sliced onion and bell peppers for 3–4 minutes so the edges soften but the vegetables retain some bite.",
+      "Fold the vegetables into the chicken. Add soy sauce only if using, then toss over high heat for 1–2 minutes.",
+      "Taste for salt and chili, finish with fresh coriander and serve immediately while the peppers still have colour and texture."
+    ],
+    "method_ur": [
+      "چوڑے پین میں 1 کھانے کا چمچ تیل درمیانی سے تیز آنچ پر گرم کریں۔ چکن کو بیچز میں 5 سے 6 منٹ براؤن کریں، پھر پلیٹ میں نکال لیں؛ باقی پکائی ساس میں ہوگی۔",
+      "باقی تیل اور ادرک لہسن پیسٹ ڈالیں۔ 30 سیکنڈ ہلائیں، پھر ٹماٹر، زیرہ، لال مرچ اور نمک شامل کریں۔",
+      "ٹماٹر کا مصالحہ 8 سے 10 منٹ پکائیں اور ٹماٹروں کو پین کے ساتھ دباتے رہیں یہاں تک کہ ساس گاڑھی اور چمکدار ہو جائے۔",
+      "چکن اور اس کا رس دوبارہ پین میں ڈالیں۔ ڈھک کر تقریباً 8 منٹ ہلکی آنچ پر پکائیں اور ایک بار ہلائیں، یہاں تک کہ چکن مکمل پک جائے۔",
+      "الگ گرم پین میں پیاز اور شملہ مرچ 3 سے 4 منٹ تیز آنچ پر بھونیں تاکہ کنارے نرم ہوں مگر سبزی میں ہلکا کرنچ باقی رہے۔",
+      "سبزیاں چکن میں شامل کریں۔ اگر سویا ساس استعمال کر رہے ہیں تو ڈالیں اور 1 سے 2 منٹ تیز آنچ پر ٹاس کریں۔",
+      "نمک اور مرچ چیک کریں، ہرا دھنیا ڈالیں اور شملہ مرچ کا رنگ اور کرنچ برقرار رہتے ہوئے فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Brown chicken in batches to avoid steaming.",
+      "Keep the tomato sauce thick before adding the vegetables.",
+      "Add peppers near the end so they stay bright and slightly crisp."
+    ],
+    "tips_ur": [
+      "چکن کو بیچز میں براؤن کریں تاکہ وہ بھاپ میں نہ پکے۔",
+      "سبزیاں ڈالنے سے پہلے ٹماٹر کی ساس گاڑھی کریں۔",
+      "شملہ مرچ آخر میں ڈالیں تاکہ رنگ اور ہلکا کرنچ برقرار رہے۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں۔ دوبارہ گرم کرتے وقت چکن مکمل گرم کریں؛ شملہ مرچ کچھ نرم ہو سکتی ہے۔",
+    "serving_ur": "سادہ چاول یا گرم چپاتی اور ککڑی کے سلاد کے ساتھ پیش کریں۔"
+  },
+  "chicken-karahi": {
+    "description_ur": "ٹماٹر کے گاڑھے مصالحے، تازہ ادرک اور ہری مرچوں کے ساتھ پکائی جانے والی کلاسک پاکستانی چکن کڑاہی۔",
+    "ingredients_ur": [
+      "1 کلو ہڈی والا چکن، چھوٹے ٹکڑے",
+      "5 درمیانے پکے ٹماٹر، کٹے ہوئے",
+      "⅓ کپ نیوٹرل کوکنگ آئل",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "1 چائے کا چمچ کٹا دھنیا",
+      "1 چائے کا چمچ لال مرچ پاؤڈر یا حسبِ ذائقہ",
+      "¾ چائے کا چمچ نمک یا حسبِ ذائقہ",
+      "3 ہری مرچیں، لمبائی میں کٹی ہوئی",
+      "2 کھانے کے چمچ تازہ ادرک، باریک لمبی کٹی ہوئی",
+      "2 کھانے کے چمچ ہرا دھنیا"
+    ],
+    "method_en": [
+      "Pat the chicken dry. Heat oil in a wide karahi over medium-high heat and brown the chicken for 7–9 minutes, working in batches if needed.",
+      "Add ginger-garlic paste and stir for 1 minute. Add tomatoes, crushed coriander, chili powder and salt.",
+      "Lower the heat to medium and cook uncovered for 15–20 minutes, stirring and pressing the tomatoes until they break down.",
+      "If the masala starts sticking before the chicken is tender, add hot water only a tablespoon at a time.",
+      "Continue cooking until the chicken is fully cooked, the sauce is thick and oil begins to appear around the edges.",
+      "Add the green chilies and half the ginger and cook for 2 minutes.",
+      "Taste and adjust salt, then scatter the remaining ginger and coriander on top and serve immediately."
+    ],
+    "method_ur": [
+      "چکن خشک کریں۔ چوڑی کڑاہی میں درمیانی سے تیز آنچ پر تیل گرم کر کے چکن 7 سے 9 منٹ براؤن کریں؛ ضرورت ہو تو بیچز میں پکائیں۔",
+      "ادرک لہسن پیسٹ ڈال کر 1 منٹ ہلائیں۔ ٹماٹر، کٹا دھنیا، لال مرچ اور نمک شامل کریں۔",
+      "آنچ درمیانی کر کے 15 سے 20 منٹ بغیر ڈھانپے پکائیں، ہلاتے اور ٹماٹر دباتے رہیں یہاں تک کہ وہ مکمل گل جائیں۔",
+      "اگر چکن گلنے سے پہلے مصالحہ لگنے لگے تو گرم پانی صرف ایک ایک کھانے کا چمچ کر کے ڈالیں۔",
+      "پکاتے رہیں یہاں تک کہ چکن مکمل گل جائے، ساس گاڑھی ہو اور کناروں پر تیل نظر آنے لگے۔",
+      "ہری مرچیں اور آدھی ادرک ڈال کر 2 منٹ پکائیں۔",
+      "نمک چیک کریں، باقی ادرک اور ہرا دھنیا اوپر ڈالیں اور فوراً سرو کریں۔"
+    ],
+    "tips_en": [
+      "Use a wide pan so tomato moisture can evaporate.",
+      "Add water sparingly because karahi should have a concentrated masala.",
+      "Use fresh ginger in two stages for deeper aroma."
+    ],
+    "tips_ur": [
+      "چوڑی کڑاہی استعمال کریں تاکہ ٹماٹر کا پانی جلد خشک ہو۔",
+      "پانی بہت کم ڈالیں کیونکہ کڑاہی کا مصالحہ گاڑھا ہونا چاہیے۔",
+      "ادرک دو مرحلوں میں ڈالنے سے خوشبو بہتر رہتی ہے۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور دوبارہ گرم کرتے وقت چکن اور گریوی مکمل گرم کریں۔",
+    "serving_ur": "نان، چپاتی، پیاز اور لیموں کے ساتھ سرو کریں۔"
+  },
+  "chicken-qorma": {
+    "description_ur": "دہی، سنہری تلی ہوئی پیاز اور خوشبودار ثابت مصالحوں کے ساتھ تیار ہونے والا روایتی پاکستانی چکن قورمہ۔",
+    "ingredients_ur": [
+      "1 کلو چکن",
+      "1 کپ دہی",
+      "3 پیاز",
+      "2 کھانے کے چمچ ادرک لہسن پیسٹ",
+      "1 چائے کا چمچ لال مرچ",
+      "1 چائے کا چمچ دھنیا پاؤڈر",
+      "ثابت گرم مصالحہ",
+      "نمک اور تیل"
+    ],
+    "method_en": [
+      "Slice the onions evenly. Heat oil in a heavy pot and fry them over medium heat until deep golden. Remove about half and drain for garnish.",
+      "Add whole garam masala to the remaining oil, then add ginger-garlic paste and chicken. Fry for 6–8 minutes until the chicken loses its raw colour.",
+      "Whisk the yogurt with red chili, coriander powder and salt. Lower the heat and add it gradually while stirring.",
+      "Cook uncovered for 8–10 minutes, stirring often, until the yogurt reduces and the masala becomes glossy.",
+      "Crush some of the reserved fried onion and stir it into the gravy for body and flavour.",
+      "Add a small amount of hot water, cover and simmer gently until the chicken is completely cooked and tender.",
+      "Remove the lid and reduce the gravy to your preferred consistency. Oil should begin to appear at the edges.",
+      "Taste for salt, garnish with the remaining fried onions and rest for 5 minutes before serving."
+    ],
+    "method_ur": [
+      "پیاز یکساں باریک کاٹیں۔ بھاری دیگچی میں تیل گرم کر کے درمیانی آنچ پر گہری سنہری ہونے تک فرائی کریں۔ تقریباً آدھی پیاز گارنش کے لیے نکال کر رکھ دیں۔",
+      "باقی تیل میں ثابت گرم مصالحہ ڈالیں، پھر ادرک لہسن پیسٹ اور چکن شامل کریں۔ 6 سے 8 منٹ بھونیں یہاں تک کہ چکن کا کچا رنگ ختم ہو جائے۔",
+      "دہی میں لال مرچ، دھنیا پاؤڈر اور نمک پھینٹیں۔ آنچ کم کریں اور مسلسل ہلاتے ہوئے آہستہ آہستہ شامل کریں۔",
+      "8 سے 10 منٹ بغیر ڈھانپے پکائیں اور ہلاتے رہیں، یہاں تک کہ دہی کم ہو اور مصالحہ چمکدار ہو جائے۔",
+      "نکالی ہوئی تلی پیاز میں سے کچھ کچل کر گریوی میں شامل کریں تاکہ قورمہ گاڑھا اور ذائقہ دار ہو۔",
+      "تھوڑا گرم پانی ڈالیں، ڈھک کر ہلکی آنچ پر چکن مکمل گلنے تک پکائیں۔",
+      "ڈھکن ہٹا کر گریوی مطلوبہ گاڑھی ہونے تک پکائیں۔ کناروں پر تیل نظر آنا شروع ہو جائے گا۔",
+      "نمک چیک کریں، باقی تلی پیاز اوپر ڈالیں اور 5 منٹ آرام دے کر سرو کریں۔"
+    ],
+    "tips_en": [
+      "Brown onions evenly; burnt onion makes qorma bitter.",
+      "Add yogurt over lower heat and stir continuously.",
+      "Crushed fried onion naturally thickens the gravy."
+    ],
+    "tips_ur": [
+      "پیاز یکساں سنہری کریں؛ جلی ہوئی پیاز قورمہ کڑوا کر سکتی ہے۔",
+      "دہی کم آنچ پر ڈالیں اور مسلسل ہلائیں۔",
+      "کچلی ہوئی تلی پیاز گریوی کو قدرتی طور پر گاڑھا کرتی ہے۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک ڈھک کر رکھیں اور دوبارہ مکمل گرم کریں۔",
+    "serving_ur": "نان، شیرمال، روٹی یا پلاؤ کے ساتھ پیش کریں۔"
+  },
+  "chicken-sajji": {
+    "description_ur": "بلوچستان سے متاثر سادہ مصالحوں والی پوری مرغی، جو اندر سے رسیلی اور باہر سے اچھی طرح روسٹ کی جاتی ہے۔",
+    "ingredients_ur": [
+      "1 پوری مرغی، تقریباً 1.5 کلو",
+      "2 کھانے کے چمچ لیموں کا رس",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "1½ چائے کا چمچ نمک",
+      "1 چائے کا چمچ کالی مرچ",
+      "1 چائے کا چمچ بھنا زیرہ پاؤڈر",
+      "1 چائے کا چمچ کٹا دھنیا",
+      "2 کھانے کے چمچ کوکنگ آئل یا پگھلا مکھن",
+      "سرو کرنے کے لیے لیموں"
+    ],
+    "method_en": [
+      "Pat the chicken dry and make a few shallow cuts in the thickest parts of the breast and legs so the seasoning reaches the meat.",
+      "Mix lemon juice, ginger-garlic paste, salt, black pepper, cumin and coriander into a paste.",
+      "Rub the seasoning all over and inside the chicken. Cover and refrigerate for at least 45 minutes; longer marination gives deeper flavour.",
+      "Remove the chicken from the refrigerator about 20 minutes before cooking. Brush lightly with oil or melted butter.",
+      "Roast on a rotisserie, grill or in a preheated oven. Turn as needed so the outside colours evenly.",
+      "Cook until the thickest part of the chicken is fully done and the juices run clear; avoid relying only on exterior browning.",
+      "Brush once more with oil or butter near the end and roast briefly for a glossy browned surface.",
+      "Rest the chicken for 10 minutes before cutting so the juices redistribute, then serve with lemon."
+    ],
+    "method_ur": [
+      "مرغی کو خشک کریں اور چھاتی اور ٹانگ کے موٹے حصوں میں چند ہلکے کٹ لگائیں تاکہ مصالحہ اندر تک پہنچ سکے۔",
+      "لیموں کا رس، ادرک لہسن پیسٹ، نمک، کالی مرچ، زیرہ اور دھنیا ملا کر پیسٹ بنائیں۔",
+      "مصالحہ مرغی کے باہر اور اندر اچھی طرح لگائیں۔ ڈھانپ کر کم از کم 45 منٹ فریج میں رکھیں؛ زیادہ وقت میرینیٹ کرنے سے ذائقہ گہرا ہوتا ہے۔",
+      "پکانے سے تقریباً 20 منٹ پہلے مرغی فریج سے نکالیں۔ ہلکا سا تیل یا پگھلا مکھن لگائیں۔",
+      "روٹیسیری، گرل یا پہلے سے گرم اوون میں روسٹ کریں۔ ضرورت کے مطابق پلٹیں تاکہ باہر یکساں رنگ آئے۔",
+      "اس وقت تک پکائیں جب تک موٹے حصے تک مرغی مکمل پک نہ جائے اور رس صاف نکلے؛ صرف باہر کے رنگ پر انحصار نہ کریں۔",
+      "آخر میں دوبارہ ہلکا تیل یا مکھن لگا کر تھوڑی دیر روسٹ کریں تاکہ سطح چمکدار اور براؤن ہو۔",
+      "کاٹنے سے پہلے 10 منٹ آرام دیں تاکہ رس گوشت میں واپس جذب ہو، پھر لیموں کے ساتھ پیش کریں۔"
+    ],
+    "tips_en": [
+      "Dry the chicken before seasoning for better browning.",
+      "Use gentle, even heat so the whole bird cooks through before the skin becomes too dark.",
+      "Resting after roasting keeps the meat juicier."
+    ],
+    "tips_ur": [
+      "مصالحہ لگانے سے پہلے مرغی خشک کریں تاکہ بہتر براؤننگ ہو۔",
+      "یکساں اور مناسب آنچ رکھیں تاکہ پوری مرغی اندر تک پکے اور باہر جلد نہ جلے۔",
+      "روسٹ کے بعد آرام دینے سے گوشت زیادہ رسیلا رہتا ہے۔"
+    ],
+    "storage_ur": "پکی مرغی جلد ٹھنڈی کر کے فریج میں 2 دن تک رکھیں اور دوبارہ موٹے حصے تک اچھی طرح گرم کریں۔",
+    "serving_ur": "چاول، نان، لیموں، سلاد اور ہلکی چٹنی کے ساتھ پیش کریں۔"
+  },
+  "lahori-chargha": {
+    "description_ur": "لاہوری انداز کی پوری مرغی جسے دہی، لیموں اور مصالحوں میں میرینیٹ کر کے پہلے نرم کیا جاتا ہے اور پھر سنہری کیا جاتا ہے۔",
+    "ingredients_ur": [
+      "1 پوری مرغی، تقریباً 1.5 کلو",
+      "1 کپ سادہ دہی",
+      "2 کھانے کے چمچ لیموں کا رس",
+      "2 کھانے کے چمچ ادرک لہسن پیسٹ",
+      "1½ چائے کا چمچ لال مرچ پاؤڈر",
+      "1 چائے کا چمچ زیرہ پاؤڈر",
+      "1 چائے کا چمچ دھنیا پاؤڈر",
+      "½ چائے کا چمچ گرم مصالحہ",
+      "½ چائے کا چمچ ہلدی",
+      "2 کھانے کے چمچ بیسن",
+      "نمک حسبِ ذائقہ",
+      "آخر میں سنہری کرنے کے لیے تیل"
+    ],
+    "method_en": [
+      "Pat the chicken dry and make deep cuts in the breast and leg portions without cutting completely through the meat.",
+      "Whisk yogurt, lemon juice, ginger-garlic paste, chili powder, cumin, coriander, garam masala, turmeric, gram flour and salt into a smooth marinade.",
+      "Rub the marinade thoroughly over the chicken, pushing it into the cuts and cavity. Cover and refrigerate for at least 4 hours, preferably longer.",
+      "Place the chicken on a steaming rack and steam gently until the meat is almost fully cooked and tender. Avoid letting the bird sit directly in water.",
+      "Let the steamed chicken rest briefly and allow surface moisture to evaporate so it browns instead of splattering.",
+      "Finish by shallow frying, carefully deep frying, air frying or roasting at high heat until the outside is richly browned and crisp in spots.",
+      "Check the thickest meat for full doneness, then drain excess oil if fried.",
+      "Rest for 8–10 minutes and serve with chaat masala, lemon and chutney."
+    ],
+    "method_ur": [
+      "مرغی خشک کریں اور چھاتی اور ٹانگ کے حصوں میں گہرے کٹ لگائیں مگر گوشت مکمل نہ کاٹیں۔",
+      "دہی، لیموں کا رس، ادرک لہسن پیسٹ، لال مرچ، زیرہ، دھنیا، گرم مصالحہ، ہلدی، بیسن اور نمک اچھی طرح پھینٹ کر ہموار میرینیڈ بنائیں۔",
+      "میرینیڈ مرغی پر اچھی طرح لگائیں اور کٹوں اور اندرونی حصے میں بھی پہنچائیں۔ ڈھانپ کر کم از کم 4 گھنٹے، بہتر ہو تو زیادہ دیر فریج میں رکھیں۔",
+      "مرغی کو اسٹیمنگ ریک پر رکھ کر ہلکی بھاپ میں تقریباً مکمل گلنے تک پکائیں۔ مرغی کو براہِ راست پانی میں نہ بیٹھنے دیں۔",
+      "بھاپ کے بعد مرغی چند منٹ آرام دے کر سطح کی نمی خشک ہونے دیں تاکہ براؤن کرتے وقت چھینٹے کم ہوں اور بہتر رنگ آئے۔",
+      "آخر میں کم تیل میں فرائی، احتیاط سے ڈیپ فرائی، ایئر فرائی یا تیز اوون میں روسٹ کریں یہاں تک کہ باہر گہرا سنہری اور کچھ جگہ کرسپ ہو۔",
+      "موٹے حصے میں مکمل پکنے کی تصدیق کریں اور اگر فرائی کیا ہے تو اضافی تیل نکال دیں۔",
+      "8 سے 10 منٹ آرام دے کر چاٹ مصالحہ، لیموں اور چٹنی کے ساتھ پیش کریں۔"
+    ],
+    "tips_en": [
+      "Long marination gives the spice mixture time to penetrate the whole bird.",
+      "Dry the surface after steaming before frying or roasting.",
+      "Handle the steamed chicken carefully because it becomes delicate when tender."
+    ],
+    "tips_ur": [
+      "زیادہ دیر میرینیٹ کرنے سے مصالحہ پوری مرغی میں بہتر جذب ہوتا ہے۔",
+      "بھاپ کے بعد فرائی یا روسٹ سے پہلے سطح خشک کریں۔",
+      "بھاپ کے بعد مرغی نرم ہو جاتی ہے، اس لیے احتیاط سے اٹھائیں۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور دوبارہ موٹے حصے تک مکمل گرم کریں۔",
+    "serving_ur": "چاٹ مصالحہ، لیموں، ہری چٹنی، پیاز اور نان کے ساتھ سرو کریں۔"
+  },
+  "white-chicken-karahi": {
+    "description_ur": "دہی، کریم، کالی مرچ، ہری مرچ اور ادرک سے تیار ہونے والی نرم اور کریمی وائٹ چکن کڑاہی۔",
+    "ingredients_ur": [
+      "750 گرام چکن",
+      "1 کپ دہی",
+      "½ کپ کریم",
+      "1 کھانے کا چمچ ادرک لہسن پیسٹ",
+      "4 ہری مرچیں",
+      "1 چائے کا چمچ کالی مرچ",
+      "1 چائے کا چمچ زیرہ",
+      "نمک اور تیل"
+    ],
+    "method_en": [
+      "Pat the chicken dry. Heat oil in a wide pan and fry the chicken over medium-high heat for 6–8 minutes until the outside changes colour.",
+      "Add ginger-garlic paste and cook for 1 minute, stirring so it does not catch.",
+      "Whisk the yogurt until smooth. Lower the heat and add it gradually with salt, stirring continuously.",
+      "Cook uncovered over medium-low heat for 8–10 minutes until the yogurt reduces and coats the chicken.",
+      "Add black pepper, cumin and sliced green chilies. Cover and cook gently until the chicken is tender and fully cooked.",
+      "Remove the lid and reduce excess moisture so the masala is creamy rather than watery.",
+      "Lower the heat to minimum, add the cream and stir for 2–3 minutes without a hard boil.",
+      "Taste, adjust salt and pepper, garnish with fresh ginger if available and serve hot."
+    ],
+    "method_ur": [
+      "چکن خشک کریں۔ چوڑے پین میں تیل گرم کر کے درمیانی سے تیز آنچ پر 6 سے 8 منٹ بھونیں یہاں تک کہ باہر کا رنگ بدل جائے۔",
+      "ادرک لہسن پیسٹ ڈال کر 1 منٹ پکائیں اور ہلاتے رہیں تاکہ نہ لگے۔",
+      "دہی اچھی طرح پھینٹیں۔ آنچ کم کریں اور نمک کے ساتھ آہستہ آہستہ شامل کرتے ہوئے مسلسل ہلاتے رہیں۔",
+      "درمیانی سے ہلکی آنچ پر 8 سے 10 منٹ بغیر ڈھانپے پکائیں یہاں تک کہ دہی کم ہو اور چکن پر لگ جائے۔",
+      "کالی مرچ، زیرہ اور کٹی ہری مرچیں شامل کریں۔ ڈھک کر ہلکی آنچ پر چکن نرم اور مکمل پکنے تک پکائیں۔",
+      "ڈھکن ہٹا کر اضافی پانی خشک کریں تاکہ مصالحہ کریمی رہے، پتلا نہ ہو۔",
+      "آنچ بالکل کم کر کے کریم شامل کریں اور 2 سے 3 منٹ ہلائیں، تیز اُبال نہ دیں۔",
+      "نمک اور کالی مرچ چیک کریں، دستیاب ہو تو تازہ ادرک سے گارنش کریں اور گرم سرو کریں۔"
+    ],
+    "tips_en": [
+      "Whisk yogurt before adding it for a smoother sauce.",
+      "Cream goes in at the end over low heat.",
+      "Reduce excess liquid before the cream so the final gravy stays rich."
+    ],
+    "tips_ur": [
+      "دہی شامل کرنے سے پہلے پھینٹیں تاکہ گریوی ہموار رہے۔",
+      "کریم آخر میں کم آنچ پر ڈالیں۔",
+      "کریم سے پہلے اضافی پانی خشک کریں تاکہ گریوی رچ رہے۔"
+    ],
+    "storage_ur": "فریج میں 2 دن تک رکھیں اور ہلکی آنچ پر مکمل گرم کریں۔",
+    "serving_ur": "نان، چپاتی، پراٹھا یا سادہ چاول کے ساتھ پیش کریں۔"
+  }
+}
