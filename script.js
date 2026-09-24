@@ -452,15 +452,27 @@ function recipePagePath(recipe) {
     return `recipes/${encodeURIComponent(recipe.slug)}.html`;
 }
 
-const recipes = (cmsRecipes.length ? cmsRecipes : defaultRecipes).map((recipe, index) => ({
-    ...recipe,
-    id: stableRecipeId(recipe, index),
-    slug: stableRecipeSlug(recipe, index),
-    serves: Number(recipe.serves) || 4,
-    image: safeImageUrl(recipe.image),
-    ingredients: Array.isArray(recipe.ingredients) ? recipe.ingredients : [],
-    method: Array.isArray(recipe.method) ? recipe.method : []
-}));
+const recipes = (cmsRecipes.length ? cmsRecipes : defaultRecipes).map((recipe, index) => {
+    const bilingual = recipe && typeof recipe.bilingual === "object" && recipe.bilingual ? recipe.bilingual : {};
+    return {
+        ...recipe,
+        id: stableRecipeId(recipe, index),
+        slug: stableRecipeSlug(recipe, index),
+        serves: Number(recipe.serves) || 4,
+        image: safeImageUrl(recipe.image),
+        bilingual,
+        ingredients: Array.isArray(recipe.ingredients) ? recipe.ingredients : [],
+        method: Array.isArray(bilingual.method_en) && bilingual.method_en.length
+            ? bilingual.method_en
+            : (Array.isArray(recipe.method) ? recipe.method : []),
+        ingredientsUrdu: Array.isArray(bilingual.ingredients_ur) ? bilingual.ingredients_ur : [],
+        methodUrdu: Array.isArray(bilingual.method_ur) ? bilingual.method_ur : [],
+        tipsUrdu: Array.isArray(bilingual.tips_ur) ? bilingual.tips_ur : [],
+        descriptionUrdu: String(bilingual.description_ur || ""),
+        storageUrdu: String(bilingual.storage_ur || ""),
+        servingUrdu: String(bilingual.serving_ur || "")
+    };
+});
 
 /* =====================================
    ELEMENTS
@@ -585,8 +597,11 @@ function renderRecipes() {
             recipe.nameUrdu,
             recipe.category,
             recipe.description,
+            recipe.descriptionUrdu,
             ...recipe.ingredients,
-            ...recipe.method
+            ...recipe.ingredientsUrdu,
+            ...recipe.method,
+            ...recipe.methodUrdu
         ].join(" ").toLowerCase();
 
         const searchMatch = searchableText.includes(searchTerm);
