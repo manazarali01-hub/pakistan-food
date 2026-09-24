@@ -1,0 +1,34 @@
+{
+  "id": 59,
+  "name": "Chicken Achari",
+  "category": "Chicken",
+  "time": "45 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Achari.jpg?width=900",
+  "description": "Tangy Pakistani chicken achari cooked with tomatoes, yogurt and aromatic pickling spices for a bold, slightly sour curry.",
+  "ingredients": [
+    "750 g chicken, curry cut",
+    "1 onion, finely sliced",
+    "3 tomatoes, chopped",
+    "½ cup plain yogurt",
+    "1½ tbsp ginger-garlic paste",
+    "1 tsp fennel seeds",
+    "1 tsp nigella seeds",
+    "1 tsp mustard seeds",
+    "½ tsp fenugreek seeds",
+    "1 tsp red chili powder",
+    "½ tsp turmeric",
+    "3 green chilies",
+    "3 tbsp cooking oil",
+    "Salt and lemon juice to taste"
+  ],
+  "method": [
+    "Heat oil and fry the onion until soft and lightly golden.",
+    "Add ginger-garlic paste and chicken, then fry until the chicken changes colour.",
+    "Add tomatoes, red chili, turmeric and salt and cook until the tomatoes soften.",
+    "Whisk the yogurt and stir it in over medium-low heat.",
+    "Crush the fennel, nigella, mustard and fenugreek lightly and add them with the green chilies.",
+    "Cover and cook until the chicken is tender and the masala is thick.",
+    "Finish with a little lemon juice for extra tang and serve hot."
+  ]
+}
