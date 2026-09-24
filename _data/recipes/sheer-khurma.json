@@ -1,0 +1,29 @@
+{
+  "id": 64,
+  "name": "Sheer Khurma",
+  "category": "Desserts",
+  "time": "35 min",
+  "serves": 6,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sheer_Khurma_special.JPG?width=900",
+  "description": "Festive Pakistani sheer khurma made with milk, roasted vermicelli, dates, nuts and cardamom, especially popular for Eid.",
+  "ingredients": [
+    "1.5 litres full-fat milk",
+    "1 cup fine vermicelli",
+    "8 dates, sliced",
+    "¼ cup almonds, sliced",
+    "¼ cup pistachios, sliced",
+    "2 tbsp raisins",
+    "4 tbsp sugar, or to taste",
+    "3 green cardamom pods, crushed",
+    "2 tbsp ghee",
+    "1 tbsp rose water, optional"
+  ],
+  "method": [
+    "Heat ghee in a heavy pot and lightly roast the vermicelli until golden.",
+    "Add the milk and crushed cardamom and bring to a gentle simmer.",
+    "Add dates, almonds, pistachios and raisins and cook on low heat for 15 to 20 minutes.",
+    "Add sugar and stir until dissolved.",
+    "Cook until the vermicelli is soft and the milk is slightly thickened.",
+    "Finish with rose water if using and serve warm or chilled."
+  ]
+}
