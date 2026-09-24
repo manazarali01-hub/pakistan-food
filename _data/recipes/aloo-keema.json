@@ -1,0 +1,32 @@
+{
+  "id": 58,
+  "name": "Aloo Keema",
+  "category": "Beef",
+  "time": "50 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aaloo_Keema.JPG?width=900",
+  "description": "Pakistani aloo keema with beef mince, tender potatoes, tomatoes, green chilies and everyday spices for an easy family meal.",
+  "ingredients": [
+    "500 g beef mince",
+    "3 medium potatoes, peeled and cubed",
+    "1 onion, finely chopped",
+    "3 tomatoes, chopped",
+    "1 tbsp ginger-garlic paste",
+    "2 green chilies, sliced",
+    "1 tsp cumin seeds",
+    "1 tsp coriander powder",
+    "1 tsp red chili powder",
+    "½ tsp turmeric",
+    "½ tsp garam masala",
+    "3 tbsp cooking oil",
+    "Salt and fresh coriander"
+  ],
+  "method": [
+    "Heat oil and fry cumin seeds and onion until lightly golden.",
+    "Add ginger-garlic paste and beef mince, then cook until the mince changes colour and moisture reduces.",
+    "Add tomatoes, green chilies and powdered spices and cook until the masala becomes glossy.",
+    "Add potatoes with a small splash of water, cover and cook until tender.",
+    "Remove the lid and cook until the gravy reaches your preferred consistency.",
+    "Finish with garam masala and fresh coriander and serve with roti or naan."
+  ]
+}
