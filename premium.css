@@ -455,3 +455,38 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .category-box { min-height: 112px; }
   .hero h1 { font-size: clamp(2.2rem, 13vw, 3rem); }
 }
+
+/* Screenshot-led mobile hero correction — 2026-09-25 */
+@media (max-width: 620px) {
+  .hero {
+    min-height: 690px;
+    background-position: center, center, 62% center;
+  }
+  .hero-content {
+    padding-top: 42px;
+    padding-bottom: 44px;
+  }
+  .hero-small { margin-top: 0; }
+  .hero h1 {
+    font-size: clamp(2.35rem, 10.8vw, 3.35rem);
+    line-height: 1.02;
+  }
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .hero-buttons { gap: 12px; }
+  .hero-buttons .btn {
+    min-height: 54px;
+    padding: 14px 18px;
+  }
+  .hero-stats {
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+  .hero::after {
+    font-size: clamp(2.6rem, 14vw, 4.6rem);
+    top: 8%;
+  }
+}
