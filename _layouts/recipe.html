@@ -26,6 +26,8 @@
 {% assign urdu_tips = recipe.tips_ur | default: bilingual.tips_ur %}
 {% assign urdu_storage = recipe.storage_ur | default: bilingual.storage_ur %}
 {% assign urdu_serving = recipe.serving_ur | default: bilingual.serving_ur %}
+{% assign key_tip = detailed_tips | first %}
+{% assign urdu_key_tip = urdu_tips | first %}
 {% assign schema_recipe_category = 'Main course' %}
 {% case recipe.category %}
   {% when 'Snacks' %}{% assign schema_recipe_category = 'Snack' %}
@@ -207,7 +209,7 @@
   }
   </script>
   <style>
-    .seo-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.seo-site-nav{max-width:1000px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.seo-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.seo-site-links{display:flex;flex-wrap:wrap;gap:14px}.seo-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.seo-recipe{max-width:900px;margin:36px auto 50px;padding:24px}.seo-recipe figure{margin:24px 0}.seo-recipe img{display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:540px;object-fit:cover;border-radius:18px;background:#f3f3f3}.seo-recipe figcaption{margin-top:8px;color:#666;font-size:.9rem;text-align:center}.seo-recipe h1{font-size:clamp(2rem,5vw,3.4rem);margin:22px 0 10px}.seo-recipe h2{margin-top:30px}.seo-recipe li{margin:10px 0;line-height:1.7}.seo-meta{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0}.seo-meta time{font-weight:700}.seo-back{display:inline-block;margin:15px 0}.seo-desc{font-size:1.08rem;line-height:1.8}.seo-breadcrumb{font-size:.95rem;margin-bottom:10px}.seo-breadcrumb a{text-decoration:none}.related-recipes,.popular-recipes,.cooking-tips,.recipe-guide,.recipe-faq{margin-top:36px;padding-top:20px;border-top:1px solid #ddd}.related-recipes ul,.popular-recipes ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;padding:0;list-style:none}.related-recipes a,.popular-recipes a{display:block;padding:12px;border-radius:10px;background:#f5f5f5;text-decoration:none;color:inherit}.recipe-note{margin-top:28px;padding:18px;border-radius:14px;background:#f8f8f8;line-height:1.8}.recipe-faq h3{font-size:1.05rem;margin:20px 0 6px}.recipe-faq p,.recipe-guide p{line-height:1.75}.seo-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.seo-site-footer a{color:#fff}@media(max-width:620px){.seo-site-nav{align-items:flex-start;flex-direction:column}.seo-site-links{gap:10px}.seo-recipe{margin-top:16px;padding:18px}}
+    .seo-site-header{background:#fff;border-bottom:1px solid #e7e2da;position:sticky;top:0;z-index:20}.seo-site-nav{max-width:1000px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.seo-site-brand{font-weight:800;color:#b21f2d;text-decoration:none;font-size:1.1rem}.seo-site-links{display:flex;flex-wrap:wrap;gap:14px}.seo-site-links a{color:#333;text-decoration:none;font-weight:600;font-size:.92rem}.seo-recipe{max-width:900px;margin:36px auto 50px;padding:24px}.seo-recipe figure{margin:24px 0}.seo-recipe img{display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:540px;object-fit:cover;border-radius:18px;background:#f3f3f3}.seo-recipe figcaption{margin-top:8px;color:#666;font-size:.9rem;text-align:center}.seo-recipe h1{font-size:clamp(2rem,5vw,3.4rem);margin:22px 0 10px}.seo-recipe h2{margin-top:30px}.seo-recipe li{margin:10px 0;line-height:1.7}.seo-meta{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0}.seo-meta time{font-weight:700}.seo-back{display:inline-block;margin:15px 0}.seo-desc{font-size:1.08rem;line-height:1.8}.recipe-intro-detail{margin:14px 0 0;padding:14px 16px;border-left:4px solid var(--primary);background:var(--surface-2);border-radius:10px;line-height:1.75}.urdu-copy .recipe-intro-detail{border-left:0;border-right:4px solid var(--primary)}.seo-breadcrumb{font-size:.95rem;margin-bottom:10px}.seo-breadcrumb a{text-decoration:none}.related-recipes,.popular-recipes,.cooking-tips,.recipe-guide,.recipe-faq{margin-top:36px;padding-top:20px;border-top:1px solid #ddd}.related-recipes ul,.popular-recipes ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;padding:0;list-style:none}.related-recipes a,.popular-recipes a{display:block;padding:12px;border-radius:10px;background:#f5f5f5;text-decoration:none;color:inherit}.recipe-note{margin-top:28px;padding:18px;border-radius:14px;background:#f8f8f8;line-height:1.8}.recipe-faq h3{font-size:1.05rem;margin:20px 0 6px}.recipe-faq p,.recipe-guide p{line-height:1.75}.seo-site-footer{padding:28px 24px;text-align:center;background:#26211d;color:#fff}.seo-site-footer a{color:#fff}@media(max-width:620px){.seo-site-nav{align-items:flex-start;flex-direction:column}.seo-site-links{gap:10px}.seo-recipe{margin-top:16px;padding:18px}}
   </style>
   <link rel="stylesheet" href="../premium.css?v=20260924-bilingual1">
 </head>
@@ -235,8 +237,14 @@
         <button type="button" class="recipe-lang-btn active" role="tab" aria-selected="true" aria-controls="recipe-en" data-recipe-lang="en">English</button>
         <button type="button" class="recipe-lang-btn" role="tab" aria-selected="false" aria-controls="recipe-ur" data-recipe-lang="ur">اردو</button>
       </div>
-      <div id="recipe-intro-en" data-recipe-intro="en"><p class="seo-desc">{{ recipe.description }}</p></div>
-      <div id="recipe-intro-ur" data-recipe-intro="ur" class="urdu-copy" lang="ur" dir="rtl" hidden><p class="seo-desc">{{ urdu_description }}</p></div>
+      <div id="recipe-intro-en" data-recipe-intro="en">
+        <p class="seo-desc">{{ recipe.description }}</p>
+        {% if key_tip %}<p class="recipe-intro-detail"><strong>Key cooking point:</strong> {{ key_tip }}</p>{% endif %}
+      </div>
+      <div id="recipe-intro-ur" data-recipe-intro="ur" class="urdu-copy" lang="ur" dir="rtl" hidden>
+        <p class="seo-desc">{{ urdu_description }}</p>
+        {% if urdu_key_tip %}<p class="recipe-intro-detail"><strong>اہم بات:</strong> {{ urdu_key_tip }}</p>{% endif %}
+      </div>
       <figure>
         <img src="{{ display_image }}" alt="{{ recipe.name }} ready to serve" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
         <figcaption>{{ recipe.name }} prepared with Pakistani flavours.</figcaption>
@@ -259,9 +267,9 @@
           <p>{{ recipe.storage | default: storage_note }}</p>
         </section>
         <section class="cooking-tips">
-          <h2>{{ recipe.name }} Cooking Tips</h2>
-          {% if detailed_tips %}<ul>{% for tip in detailed_tips %}<li>{{ tip }}</li>{% endfor %}</ul>
-          {% else %}<ul><li>{{ tip_one }}</li><li>{{ tip_two }}</li><li>{{ tip_three }}</li></ul>{% endif %}
+          <h2>More {{ recipe.name }} Cooking Tips</h2>
+          {% if detailed_tips %}<ul>{% for tip in detailed_tips offset:1 %}<li>{{ tip }}</li>{% endfor %}</ul>
+          {% else %}<ul><li>{{ tip_two }}</li><li>{{ tip_three }}</li></ul>{% endif %}
         </section>
         <div class="recipe-note"><strong>Serving idea:</strong> {% if recipe.serving %}{{ recipe.serving }}{% else %}Serve {{ recipe.name }} freshly prepared with a simple salad, chutney, yogurt or another accompaniment that suits this {{ recipe.category | downcase }} dish.{% endif %}</div>
       </div>
@@ -277,8 +285,8 @@
           <p>{{ urdu_storage }}</p>
         </section>
         <section class="cooking-tips">
-          <h2>بہتر نتیجے کے لیے ٹپس</h2>
-          <ul>{% for tip in urdu_tips %}<li>{{ tip }}</li>{% endfor %}</ul>
+          <h2>مزید بہتر نتیجے کے لیے ٹپس</h2>
+          <ul>{% for tip in urdu_tips offset:1 %}<li>{{ tip }}</li>{% endfor %}</ul>
         </section>
         <div class="recipe-note"><strong>پیش کرنے کا طریقہ:</strong> {{ urdu_serving }}</div>
       </div>
