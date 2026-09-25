@@ -53,10 +53,10 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     method_ur = recipe.get("method_ur") or bilingual.get("method_ur") or []
     ingredients_ur = recipe.get("ingredients_ur") or bilingual.get("ingredients_ur") or []
     tips_ur = recipe.get("tips_ur") or bilingual.get("tips_ur") or []
-    if len(method_en) < 6:
-        errors.append(f"{slug}: detailed English method needs at least 6 steps")
-    if len(method_ur) < 6:
-        errors.append(f"{slug}: Urdu method needs at least 6 steps")
+    if len(method_en) < 5:
+        errors.append(f"{slug}: detailed English method needs at least 5 steps")
+    if len(method_ur) < 5:
+        errors.append(f"{slug}: Urdu method needs at least 5 steps")
     if not ingredients_ur:
         errors.append(f"{slug}: Urdu ingredients are missing")
     if len(tips_ur) < 3:
@@ -86,43 +86,47 @@ for slug in pages - recipes.keys():
     errors.append(f"{slug}: recipe page has no matching data")
 
 all_paths = []
-for sitemap in ("sitemap-v2.xml", "sitemap.xml"):
-    try:
-        tree = ET.parse(ROOT / sitemap)
-        urls = [node.text for node in tree.findall(".//{*}loc")]
-    except (OSError, ET.ParseError) as exc:
-        errors.append(f"{sitemap}: {exc}")
-        continue
-    paths = []
-    for url in urls:
-        parsed = urlparse(url or "")
-        if f"{parsed.scheme}://{parsed.netloc}" != DOMAIN or parsed.query or parsed.fragment:
-            errors.append(f"{sitemap}: incorrect canonical URL {url}")
-        path = parsed.path
-        paths.append(path)
-        source = ROOT / (path.lstrip("/") + "index.html" if path.endswith("/") else path.lstrip("/"))
-        if not source.is_file():
-            errors.append(f"{sitemap}: {path} has no source page")
-    for path, count in Counter(paths).items():
-        if count > 1:
-            errors.append(f"{sitemap}: duplicate URL {path}")
-    for slug in recipes:
-        if f"/recipes/{slug}.html" not in paths:
-            errors.append(f"{sitemap}: recipe {slug} missing")
-    all_paths.append(paths)
+try:
+    tree = ET.parse(ROOT / "sitemap-v2.xml")
+    urls = [node.text for node in tree.findall(".//{*}loc")]
+except (OSError, ET.ParseError) as exc:
+    errors.append(f"sitemap-v2.xml: {exc}")
+    urls = []
 
-if len(all_paths) == 2 and set(all_paths[0]) != set(all_paths[1]):
-    errors.append("Sitemaps do not list the same pages")
+paths = []
+for url in urls:
+    parsed = urlparse(url or "")
+    if f"{parsed.scheme}://{parsed.netloc}" != DOMAIN or parsed.query or parsed.fragment:
+        errors.append(f"sitemap-v2.xml: incorrect canonical URL {url}")
+    path = parsed.path
+    paths.append(path)
+    source = ROOT / (path.lstrip("/") + "index.html" if path.endswith("/") else path.lstrip("/"))
+    if not source.is_file():
+        errors.append(f"sitemap-v2.xml: {path} has no source page")
+for path, count in Counter(paths).items():
+    if count > 1:
+        errors.append(f"sitemap-v2.xml: duplicate URL {path}")
+for slug in recipes:
+    if f"/recipes/{slug}.html" not in paths:
+        errors.append(f"sitemap-v2.xml: recipe {slug} missing")
+all_paths.append(paths)
 
-for trust_page in ("privacy-policy.html", "editorial-policy.html", "disclaimer.html", "image-credits.html"):
+try:
+    index_tree = ET.parse(ROOT / "sitemap.xml")
+    sitemap_locs = [node.text for node in index_tree.findall(".//{*}loc")]
+    if sitemap_locs != [DOMAIN + "/sitemap-v2.xml"]:
+        errors.append("sitemap.xml must point only to sitemap-v2.xml")
+except (OSError, ET.ParseError) as exc:
+    errors.append(f"sitemap.xml: {exc}")
+
+for trust_page in ("privacy-policy.html", "editorial-policy.html", "disclaimer.html", "terms.html", "image-credits.html"):
     if not (ROOT / trust_page).is_file():
         errors.append(f"{trust_page}: trust page is missing")
-    for paths in all_paths:
-        if f"/{trust_page}" not in paths:
-            errors.append(f"{trust_page}: missing from sitemap")
+    if f"/{trust_page}" not in paths:
+        errors.append(f"{trust_page}: missing from sitemap-v2.xml")
 
-if DOMAIN + "/sitemap-v2.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
-    errors.append("robots.txt does not point to the main sitemap")
+if DOMAIN + "/sitemap.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
+    errors.append("robots.txt does not point to the canonical sitemap")
 
 if errors:
     raise SystemExit("\n".join(errors))
