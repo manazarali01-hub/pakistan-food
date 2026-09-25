@@ -421,3 +421,37 @@ body.dark .print-recipe:hover {
   background: var(--secondary);
   border-color: var(--secondary);
 }
+
+/* Final responsive/accessibility QA polish — 2026-09-25 */
+html, body { max-width: 100%; overflow-x: clip; }
+img { max-width: 100%; height: auto; }
+button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+.category-box, .filter-btn, .saved-filter, .surprise-recipe, .icon-btn, .menu-btn {
+  touch-action: manipulation;
+}
+.recipe-name-urdu, .recipe-title-urdu, .card-urdu, .hub-card-urdu {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 480px) {
+  .hero { min-height: auto; }
+  .hero-content { min-width: 0; }
+  .hero h1, .hero p, .hero-small { max-width: 100%; overflow-wrap: anywhere; }
+  .hero-stats { gap: 12px; flex-wrap: wrap; }
+  .hero-stats > div { min-width: 76px; }
+  .search-box { width: 100%; min-width: 0; }
+  .search-box input { min-width: 0; width: 100%; }
+  .recipe-grid, .featured-grid, .region-grid, .about-grid, .contact-grid { min-width: 0; }
+  .contact-form, .contact-info { min-width: 0; }
+  .form-row { grid-template-columns: 1fr; }
+  .mobile-menu { max-width: min(88vw, 360px); }
+}
+@media (max-width: 340px) {
+  .container { width: calc(100% - 20px); }
+  .category-grid { grid-template-columns: 1fr; }
+  .category-box { min-height: 112px; }
+  .hero h1 { font-size: clamp(2.2rem, 13vw, 3rem); }
+}
