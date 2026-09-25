@@ -1,5 +1,6 @@
 {% assign recipe = site.data.recipes[page.recipe_key] %}
 {% assign urdu_name = recipe.name_urdu %}
+{% assign affiliate_items = site.data.affiliate[page.recipe_key] %}
 {% unless urdu_name %}{% assign urdu_name = site.data.urdu_names[page.recipe_key] %}{% endunless %}
 {% capture canonical_url %}https://pakistanfoodrecipes.top/recipes/{{ page.recipe_key }}.html{% endcapture %}
 {% capture meta_description %}{{ recipe.description | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %} and serves {{ recipe.serves }}{% endif %}. See ingredients and the easy step-by-step method.{% endcapture %}
@@ -290,6 +291,28 @@
         </section>
         <div class="recipe-note"><strong>پیش کرنے کا طریقہ:</strong> {{ urdu_serving }}</div>
       </div>
+      {% if affiliate_items and affiliate_items != empty %}
+      <aside class="affiliate-picks" aria-labelledby="affiliate-picks-title">
+        <div class="affiliate-picks-heading">
+          <span class="affiliate-kicker">OPTIONAL KITCHEN PICKS</span>
+          <h2 id="affiliate-picks-title">Useful tools for {{ recipe.name }}</h2>
+          <p>Only a few recipe-relevant products are shown here. Your recipe remains completely free to use.</p>
+        </div>
+        <div class="affiliate-picks-grid">
+          {% for item in affiliate_items limit:3 %}
+          <a class="affiliate-pick" href="{{ item.url }}" target="_blank" rel="sponsored nofollow noopener noreferrer">
+            <span class="affiliate-pick-copy">
+              <strong>{{ item.title }}</strong>
+              {% if item.note %}<small>{{ item.note }}</small>{% endif %}
+            </span>
+            <span class="affiliate-pick-cta">View product →</span>
+          </a>
+          {% endfor %}
+        </div>
+        <p class="affiliate-disclosure"><strong>Affiliate disclosure:</strong> If you buy through one of these links, Pakistan Food may earn a commission at no extra cost to you. <span lang="ur" dir="rtl">خریداری کی صورت میں ہمیں کمیشن مل سکتا ہے، آپ کے لیے قیمت میں اضافہ نہیں ہوتا۔</span></p>
+      </aside>
+      {% endif %}
+
       <section class="related-recipes">
         <h2>More {{ recipe.category }} Recipes</h2>
         <ul>
