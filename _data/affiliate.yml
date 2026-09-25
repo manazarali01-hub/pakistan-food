@@ -1,0 +1,12 @@
+# Approved affiliate links only.
+# Keep each recipe to a maximum of 1–3 genuinely relevant products.
+# Example structure (do not publish placeholder URLs):
+#
+# chicken-biryani:
+#   - title: "Heavy-bottom cooking pot"
+#     note: "Useful for layering and low-heat dum cooking."
+#     url: "https://approved-affiliate-link.example/"
+#
+# The recipe template automatically marks every live link as:
+# rel="sponsored nofollow noopener noreferrer"
+{}
