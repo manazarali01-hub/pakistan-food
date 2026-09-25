@@ -24,7 +24,7 @@ jobs:
       - name: Save new recipe pages
         id: save
         run: |
-          git add recipes/ sitemap.xml sitemap-v2.xml
+          git add recipes/ sitemap-v2.xml
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
           else
