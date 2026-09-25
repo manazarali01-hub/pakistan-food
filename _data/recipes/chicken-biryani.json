@@ -2,27 +2,38 @@
   "id": 1,
   "name": "Chicken Biryani",
   "category": "Rice",
-  "time": "60 min",
+  "time": "90 min",
   "serves": 6,
   "image": "assets/chicken-biryani.webp",
   "description": "Aromatic basmati rice layered with spicy chicken, fried onions and traditional Pakistani spices.",
   "ingredients": [
     "750 g bone-in chicken",
     "3 cups basmati rice",
-    "3 onions, thinly sliced",
-    "3 tomatoes, chopped",
+    "3 large onions, thinly sliced",
+    "3 medium tomatoes, chopped",
     "1 cup plain yogurt",
-    "2 tbsp biryani masala",
+    "2 tbsp biryani masala, or to taste",
     "2 tbsp ginger-garlic paste",
-    "4 green chilies",
-    "½ cup mint and coriander",
-    "Salt and cooking oil"
+    "4 green chillies, slit",
+    "½ cup chopped mint and coriander",
+    "½–¾ cup neutral cooking oil",
+    "Salt, to taste",
+    "1–2 tbsp lemon juice, optional"
   ],
   "method": [
-    "Wash and soak the basmati rice.",
-    "Cook chicken with onions, tomatoes, yogurt and spices.",
-    "Boil rice separately until nearly cooked.",
-    "Layer rice and chicken masala.",
-    "Cover and cook on low heat for 15–20 minutes."
-  ]
+    "Rinse the basmati rice until the water runs mostly clear, then soak it for about 30 minutes and drain.",
+    "Heat the oil in a heavy pot and fry the sliced onions over medium heat until deep golden. Remove about half and reserve them for layering and garnish.",
+    "Add the ginger-garlic paste and chicken to the remaining onions. Cook for 5–7 minutes, stirring, until the chicken changes colour. Add the biryani masala, tomatoes, green chillies and salt; cook until the tomatoes soften.",
+    "Lower the heat and stir in the yogurt gradually. Cook until the chicken is almost tender and the masala is thick rather than watery, with oil beginning to separate at the edges. Stir in the lemon juice if using.",
+    "Meanwhile, bring a large pot of well-salted water to a boil. Add the soaked rice and boil until about 70% cooked—the grains should still have a firm centre—then drain immediately.",
+    "Spread half the rice over the chicken masala. Add some mint, coriander and reserved fried onion, then cover with the remaining rice and the rest of the herbs and onion.",
+    "Cover the pot tightly and cook on very low heat (dum) for about 20 minutes. Turn off the heat and rest for 10 minutes before opening, then gently lift the rice from the sides to combine without breaking the grains."
+  ],
+  "tips": [
+    "Do not fully cook the rice before layering; overcooked rice can turn soft during dum.",
+    "Keep the chicken masala fairly thick before layering so excess liquid does not make the biryani soggy.",
+    "Use very low heat for dum; place a heat diffuser or flat tawa under a thin pot if needed to prevent scorching."
+  ],
+  "storage": "Cool leftovers promptly and refrigerate covered for up to 2 days. Reheat until the chicken and rice are steaming hot throughout; avoid repeatedly reheating the same batch.",
+  "serving": "Serve hot with raita, salad and lemon wedges."
 }
