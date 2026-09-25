@@ -408,3 +408,16 @@ body { background: var(--bg); }
   .container { width: min(100% - 28px, 1180px); }
   .category-grid { gap: 10px; }
 }
+
+/* Dark-mode brand consistency — 2026-09-25 */
+body.dark .btn-primary,
+body.dark .print-recipe {
+  background: var(--primary-dark);
+  color: #fff;
+  border-color: var(--primary-dark);
+}
+body.dark .btn-primary:hover,
+body.dark .print-recipe:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
