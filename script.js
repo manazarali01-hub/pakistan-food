@@ -576,6 +576,7 @@ function useImageFallback(image) {
 }
 recipeGrid?.addEventListener("error", event => useImageFallback(event.target), true);
 modalContent?.addEventListener("error", event => useImageFallback(event.target), true);
+document.getElementById("recentGrid")?.addEventListener("error", event => useImageFallback(event.target), true);
 
 
 /* =====================================
