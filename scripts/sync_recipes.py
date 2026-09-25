@@ -22,7 +22,7 @@ for data in sorted((ROOT / "_data/recipes").glob("*.json")):
         wrapper.write_text(f"---\nlayout: recipe\nrecipe_key: {slug}\n---\n", encoding="utf-8")
         NEW_URLS.append(f"{BASE}{slug}.html")
 
-for name in ("sitemap-v2.xml", "sitemap.xml"):
+for name in ("sitemap-v2.xml",):
     file = ROOT / name
     xml = file.read_text(encoding="utf-8")
     entries = []
