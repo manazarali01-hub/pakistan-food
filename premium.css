@@ -490,3 +490,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     top: 8%;
   }
 }
+
+/* Brighter default appearance after live mobile review — 2026-09-25 */
+body:not(.dark) {
+  --bg: #fffdf8;
+  --surface: #ffffff;
+  --surface-2: #f7faf7;
+  --text: #17251c;
+}
+body:not(.dark) .featured,
+body:not(.dark) .categories,
+body:not(.dark) .regions,
+body:not(.dark) .about,
+body:not(.dark) .recipes,
+body:not(.dark) .recently-viewed,
+body:not(.dark) .contact {
+  color-scheme: light;
+}
+body:not(.dark) .featured,
+body:not(.dark) .categories,
+body:not(.dark) .regions,
+body:not(.dark) .contact { background: #fffdf8; }
+body:not(.dark) .recipes,
+body:not(.dark) .about,
+body:not(.dark) .recently-viewed { background: #f4f8f4; }
