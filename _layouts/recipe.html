@@ -176,6 +176,7 @@
         "author": {"@id": "https://pakistanfoodrecipes.top/#organization"},
         "recipeCuisine": "Pakistani",
         "recipeCategory": {{ schema_recipe_category | jsonify }},
+        "dateModified": "2026-09-25",
         "totalTime": "{{ total_duration }}",
         {% if recipe.serves %}"recipeYield": {{ recipe.serves | jsonify }},{% endif %}
         "keywords": {{ recipe.name | append: ', homemade, traditional, easy' | jsonify }},
