@@ -1,1 +1,24 @@
-{"id":40,"name":"Namkeen Lassi","category":"Drinks","time":"7 min","serves":2,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Salt_lassi.jpg?width=800","description":"A light salty yogurt drink with roasted cumin, ideal for a refreshing Pakistani summer drink.","ingredients":["2 cups yogurt","1.5 cups chilled water","0.5 tsp roasted cumin","0.5 tsp salt","Pinch of black salt","Ice cubes"],"method":["Add yogurt and chilled water to a blender.","Add cumin, salt and black salt.","Blend until frothy.","Add ice and blend briefly.","Serve chilled."]}
+{
+  "id": 40,
+  "name": "Namkeen Lassi",
+  "category": "Drinks",
+  "time": "7 min",
+  "serves": 2,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Salt_lassi.jpg?width=800",
+  "description": "Light Pakistani namkeen lassi blended with yogurt, chilled water, roasted cumin and black salt for a savoury, refreshing drink.",
+  "ingredients": [
+    "2 cups chilled yogurt",
+    "1.5 cups chilled water, or as needed for the preferred thickness",
+    "0.5 tsp roasted cumin, preferably freshly crushed",
+    "0.5 tsp salt, or to taste",
+    "1 pinch black salt",
+    "Ice cubes, for serving"
+  ],
+  "method": [
+    "Whisk or blend the chilled yogurt first until smooth so the finished lassi has no yogurt lumps.",
+    "Add most of the chilled water, roasted cumin, salt and black salt and blend until light and frothy.",
+    "Check the consistency and add the remaining water gradually if you prefer a thinner lassi.",
+    "Taste only after dilution, then adjust salt or cumin in small amounts.",
+    "Add ice and blend very briefly or pour over ice, then serve immediately while cold and frothy."
+  ]
+}
