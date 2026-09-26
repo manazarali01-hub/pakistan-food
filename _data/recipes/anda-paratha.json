@@ -1,1 +1,30 @@
-{"id":27,"name":"Anda Paratha","category":"Breakfast","time":"20 min","serves":2,"image":"https://commons.wikimedia.org/wiki/Special:FilePath/Anda_Paratha.jpg?width=800","description":"A filling Pakistani breakfast of crisp paratha served with a seasoned egg.","ingredients":["2 parathas","2 eggs","1 green chili, finely chopped","2 tbsp fresh coriander, chopped","Salt to taste","Black pepper to taste","Oil or ghee as needed"],"method":["Heat a tawa over medium heat and cook each paratha with a little ghee or oil until golden and crisp on both sides. Keep warm.","Beat the eggs with green chili, coriander, salt and black pepper.","Heat a lightly greased frying pan over medium heat and add the egg mixture.","Cook until the egg is fully set, turning or folding as preferred; avoid leaving liquid raw egg in the centre.","Serve immediately with the hot parathas and chutney or pickle if desired."],"tips":["Use medium heat so the paratha browns without burning.","Cook the egg until fully set for food safety."]}
+{
+  "id": 27,
+  "name": "Anda Paratha",
+  "category": "Breakfast",
+  "time": "20 min",
+  "serves": 2,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anda_Paratha.jpg?width=800",
+  "description": "Pakistani anda paratha breakfast with hot golden parathas and a seasoned coriander-and-green-chilli egg, ready in about 20 minutes.",
+  "ingredients": [
+    "2 parathas",
+    "2 eggs",
+    "1 green chilli, finely chopped",
+    "2 tbsp fresh coriander, chopped",
+    "Salt to taste",
+    "Black pepper to taste",
+    "Oil or ghee, as needed"
+  ],
+  "method": [
+    "Heat a tawa over medium heat and cook each paratha with a little ghee or oil, turning as needed until both sides are golden and cooked through. Keep the parathas warm.",
+    "Crack the eggs into a bowl and beat with the green chilli, coriander, salt and black pepper until evenly combined.",
+    "Lightly grease a frying pan and heat it over medium heat before adding the egg mixture.",
+    "Cook until the underside is set, then turn, fold or gently stir according to the style you prefer. Continue until no liquid raw egg remains.",
+    "Serve the egg immediately with the hot parathas, adding chutney, yogurt or pickle on the side if desired."
+  ],
+  "tips": [
+    "Use medium heat so the paratha cooks through and browns without scorching.",
+    "Keep cooked parathas loosely covered while the egg cooks so they stay warm without becoming soggy.",
+    "Cook the egg until fully set rather than judging doneness only by surface colour."
+  ]
+}
