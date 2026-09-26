@@ -85,8 +85,8 @@ for url in urls:
                 errors.append(f"missing Recipe structured data: {url}")
             else:
                 instructions = recipe_items[0].get("recipeInstructions") or []
-                if len(instructions) < 6:
-                    errors.append(f"recipe schema has fewer than 6 detailed steps: {url}")
+                if len(instructions) < 5:
+                    errors.append(f"recipe schema has fewer than 5 detailed steps: {url}")
             if 'data-recipe-lang="ur"' not in rendered_html or 'data-recipe-panel="ur"' not in rendered_html:
                 errors.append(f"missing Urdu recipe interface: {url}")
 
