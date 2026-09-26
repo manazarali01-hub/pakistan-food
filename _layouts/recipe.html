@@ -329,8 +329,10 @@
             <li><a href="../guides/how-to-fix-watery-karahi.html">Fix watery karahi</a></li><li><a href="../guides/how-to-thicken-karahi.html">Thicken karahi naturally</a></li><li><a href="../guides/karahi-vs-qorma.html">Karahi vs qorma</a></li>
           {% when 'chicken-qorma' or 'chicken-handi' %}
             <li><a href="../guides/qorma-vs-handi.html">Qorma vs handi</a></li><li><a href="../guides/how-to-stop-yogurt-splitting-in-curry.html">Stop yogurt splitting in curry</a></li><li><a href="../guides/karahi-vs-qorma.html">Karahi vs qorma</a></li>
+          {% when 'chicken-jalfrezi' %}
+            <li><a href="../guides/how-to-keep-jalfrezi-vegetables-crisp.html">Keep Jalfrezi vegetables crisp</a></li>
           {% when 'chicken-tikka' or 'chicken-malai-boti' or 'lahori-chargha' or 'chicken-sajji' %}
-            <li><a href="../guides/how-long-to-marinate-chicken-tikka.html">Chicken marinating guide</a></li><li><a href="../guides/how-to-keep-kabab-juicy.html">Keep grilled meat juicy</a></li>
+            <li><a href="../guides/how-long-to-marinate-chicken-tikka.html">Chicken marinating guide</a></li><li><a href="../guides/how-to-keep-kabab-juicy.html">Keep grilled meat juicy</a></li>{% if page.recipe_key == 'lahori-chargha' or page.recipe_key == 'chicken-sajji' %}<li><a href="../guides/chargha-vs-sajji.html">Chargha vs sajji</a></li>{% endif %}
           {% when 'seekh-kabab' or 'chapli-kabab' or 'shami-kabab' or 'reshmi-kabab' %}
             <li><a href="../guides/chapli-vs-seekh-kabab.html">Chapli vs seekh kabab</a></li><li><a href="../guides/shami-vs-chapli-kabab.html">Shami vs chapli kabab</a></li><li><a href="../guides/how-to-keep-kabab-juicy.html">Keep kababs juicy</a></li><li><a href="../guides/seekh-kabab-not-sticking.html">Keep seekh kabab on the skewer</a></li>
           {% when 'beef-nihari' %}
@@ -347,16 +349,26 @@
             <li><a href="../guides/why-pakora-gets-oily.html">Why pakora gets oily</a></li>
           {% when 'chana-chaat' or 'dahi-bhallay' %}
             <li><a href="../guides/chana-chaat-vs-dahi-bhallay.html">Chana chaat vs dahi bhallay</a></li>
-          {% when 'daal-mash' or 'daal-chawal' or 'chana-masala' or 'rajma-masala' %}
+          {% when 'keema-matar' or 'aloo-keema' %}
+            <li><a href="../guides/how-to-keep-keema-moist.html">Keep keema moist</a></li>
+          {% when 'chana-masala' %}
+            <li><a href="../guides/how-to-cook-chickpeas-until-tender.html">Cook chickpeas until tender</a></li>
+          {% when 'daal-mash' or 'daal-chawal' or 'rajma-masala' %}
             <li><a href="../guides/how-to-cook-daal-without-mushy-texture.html">Control daal texture</a></li>
           {% when 'sarson-ka-saag' or 'aloo-palak' %}
             <li><a href="../guides/how-to-remove-bitterness-from-sarson-ka-saag.html">Balance saag bitterness</a></li>
+          {% when 'falooda' %}
+            <li><a href="../guides/how-to-make-falooda-at-home.html">Make and layer falooda</a></li>
+          {% when 'fruit-chaat' %}
+            <li><a href="../guides/how-to-stop-fruit-chaat-browning.html">Stop fruit chaat from browning</a></li>
+          {% when 'imli-aloo-bukhara-sharbat' or 'lemon-mint-sharbat' or 'sattu-sharbat' %}
+            <li><a href="../guides/how-to-make-sharbat-balanced.html">Balance sweetness and tang in sharbat</a></li>
           {% when 'gulab-jamun' %}
             <li><a href="../guides/how-to-make-gulab-jamun-soft.html">Make gulab jamun soft</a></li><li><a href="../guides/traditional-pakistani-desserts.html">Traditional Pakistani desserts</a></li>
           {% when 'ras-malai' %}
             <li><a href="../guides/how-to-keep-ras-malai-soft.html">Keep ras malai soft</a></li><li><a href="../guides/best-way-to-store-pakistani-sweets.html">Store Pakistani sweets safely</a></li>
           {% when 'rice-kheer' or 'sheer-khurma' or 'suji-halwa' or 'gajar-ka-halwa' or 'jalebi' %}
-            <li><a href="../guides/traditional-pakistani-desserts.html">Traditional Pakistani desserts</a></li><li><a href="../guides/best-way-to-store-pakistani-sweets.html">Store Pakistani sweets safely</a></li>{% if page.recipe_key == 'rice-kheer' %}<li><a href="../guides/how-to-make-kheer-thicker.html">Make kheer thicker</a></li>{% endif %}{% if page.recipe_key == 'sheer-khurma' %}<li><a href="../guides/sheer-khurma-vs-kheer.html">Sheer khurma vs kheer</a></li>{% endif %}{% if page.recipe_key == 'jalebi' %}<li><a href="../guides/why-jalebi-turns-soft.html">Why jalebi turns soft</a></li>{% endif %}
+            <li><a href="../guides/traditional-pakistani-desserts.html">Traditional Pakistani desserts</a></li><li><a href="../guides/best-way-to-store-pakistani-sweets.html">Store Pakistani sweets safely</a></li>{% if page.recipe_key == 'rice-kheer' %}<li><a href="../guides/how-to-make-kheer-thicker.html">Make kheer thicker</a></li>{% endif %}{% if page.recipe_key == 'sheer-khurma' %}<li><a href="../guides/sheer-khurma-vs-kheer.html">Sheer khurma vs kheer</a></li>{% endif %}{% if page.recipe_key == 'jalebi' %}<li><a href="../guides/why-jalebi-turns-soft.html">Why jalebi turns soft</a></li>{% endif %}{% if page.recipe_key == 'gajar-ka-halwa' %}<li><a href="../guides/how-to-make-gajar-halwa-without-burning.html">Cook gajar halwa without burning</a></li>{% endif %}
           {% when 'kashmiri-chai' %}
             <li><a href="../guides/how-to-make-kashmiri-chai-pink.html">Make Kashmiri chai pink</a></li><li><a href="../guides/doodh-patti-vs-masala-chai.html">Doodh patti vs masala chai</a></li>
           {% when 'doodh-patti-chai' or 'masala-chai' %}
