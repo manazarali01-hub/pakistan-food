@@ -1,1 +1,40 @@
-{"id":32,"name":"Shami Kabab","category":"Snacks","time":"90 min","serves":6,"image":"assets/shami-kabab.webp","description":"Classic Pakistani shami kababs made from tender beef and chana dal cooked until dry, ground with spices and herbs, then shallow-fried.","ingredients":["500 g boneless beef, small pieces","1 cup chana dal, rinsed and soaked for 30 minutes","1 medium onion, quartered","1 tbsp ginger-garlic paste","1 tsp cumin seeds","1 tsp coriander seeds","6 black peppercorns","3 cloves","1 small cinnamon stick","2 green chilies, chopped","½ cup fresh coriander and mint, chopped","1 egg, beaten","1–1½ tsp salt, or to taste","2–3 tbsp oil for shallow frying","Water as needed"],"method":["Put beef, soaked chana dal, onion, ginger-garlic paste, whole spices and salt in a pot. Add enough water to cook the mixture without leaving excess liquid.","Cover and simmer until the beef and dal are completely tender. Uncover near the end and cook, stirring, until the mixture is dry; excess moisture can make the kababs break.","Cool slightly, remove any large hard spice pieces if desired, then grind to a smooth but firm mixture.","Mix in green chilies, coriander, mint and enough beaten egg to bind; do not add more egg than needed.","Shape into flat patties. Chill for 15–20 minutes if the mixture feels soft.","Heat a thin layer of oil over medium heat and shallow-fry the kababs until golden on both sides and hot throughout.","Drain briefly and serve with chutney, onion and lemon."],"tips":["The cooked beef-and-dal mixture must be quite dry before grinding.","Add egg gradually; too much liquid can make shami kababs fragile."],"storage":"Cool promptly and refrigerate cooked kababs for up to 2 days. Unfried shaped kababs can also be frozen in a single layer, then packed once firm."}
+{
+  "id": 32,
+  "name": "Shami Kabab",
+  "category": "Snacks",
+  "time": "90 min",
+  "serves": 6,
+  "image": "assets/shami-kabab.webp",
+  "description": "Classic Pakistani shami kababs with tender beef and chana dal cooked until dry, ground with warm spices and herbs, then shaped and shallow-fried.",
+  "ingredients": [
+    "500 g boneless beef, small pieces",
+    "1 cup chana dal, rinsed and soaked for 30 minutes",
+    "1 medium onion, quartered",
+    "1 tbsp ginger-garlic paste",
+    "1 tsp cumin seeds",
+    "1 tsp coriander seeds",
+    "6 black peppercorns",
+    "3 cloves",
+    "1 small cinnamon stick",
+    "2 green chilies, chopped",
+    "½ cup fresh coriander and mint, chopped",
+    "1 egg, beaten",
+    "1–1½ tsp salt, or to taste",
+    "2–3 tbsp oil for shallow frying",
+    "Water as needed"
+  ],
+  "method": [
+    "Combine the beef, drained soaked chana dal, onion, ginger-garlic paste, cumin, coriander seeds, peppercorns, cloves, cinnamon and salt in a heavy pot. Add only enough water to cook the meat and dal tender.",
+    "Cover and simmer gently until both beef and dal are completely tender. Uncover near the end and cook while stirring until all visible excess moisture has evaporated; a wet mixture is difficult to shape.",
+    "Cool until safe to handle, remove the cinnamon or other large hard spice pieces if desired, then grind the mixture until cohesive and fairly smooth without adding water.",
+    "Mix in the green chillies, coriander and mint. Add the beaten egg a little at a time, stopping as soon as the mixture binds well enough to shape.",
+    "Form even flat patties and chill briefly if they feel soft. This also makes them easier to transfer to the pan without breaking.",
+    "Heat a thin layer of oil over medium heat and shallow-fry in batches, turning carefully after the first side has set, until both sides are golden and the kababs are thoroughly hot.",
+    "Drain briefly and serve with chutney, onion and lemon."
+  ],
+  "tips": [
+    "The cooked beef-and-dal mixture must be quite dry before grinding.",
+    "Add egg gradually; too much liquid can make shami kababs fragile."
+  ],
+  "storage": "Cool cooked kababs promptly and refrigerate covered. For longer storage, shaped uncooked kababs can be frozen separately until firm and then packed together."
+}
