@@ -1,1 +1,25 @@
-{"id":42,"name":"Imli Aloo Bukhara Sharbat","category":"Drinks","time":"25 min","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Fresh_Tamarind_Juice.jpg?width=800","description":"A tangy-sweet Pakistani summer drink made from tamarind and dried plums.","ingredients":["0.5 cup tamarind pulp","8 dried plums","4 cups water","5 tbsp sugar","Pinch of black salt","Ice cubes"],"method":["Soak tamarind and dried plums in warm water.","Mash and strain the mixture.","Add sugar and black salt.","Dilute with chilled water.","Serve over ice."]}
+{
+  "id": 42,
+  "name": "Imli Aloo Bukhara Sharbat",
+  "category": "Drinks",
+  "time": "25 min",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fresh_Tamarind_Juice.jpg?width=800",
+  "description": "Tangy-sweet Pakistani imli aloo bukhara sharbat made with tamarind and dried plums, chilled and balanced with sugar and black salt.",
+  "ingredients": [
+    "0.5 cup tamarind pulp",
+    "8 dried plums (aloo bukhara)",
+    "4 cups water, divided as needed",
+    "5 tbsp sugar, or to taste",
+    "1 pinch black salt",
+    "Ice cubes, for serving"
+  ],
+  "method": [
+    "Soak the tamarind pulp and dried plums in enough warm water to soften them and make the pulp easier to extract.",
+    "Mash the softened mixture thoroughly, pressing the tamarind and plums so their flavour moves into the liquid.",
+    "Strain through a fine sieve, pressing the pulp, and discard hard seeds and coarse fibres.",
+    "Stir in the sugar and black salt while the liquid is still easy to dissolve them into, then add the remaining chilled water.",
+    "Chill and taste after dilution; adjust sweetness or tartness gradually because tamarind and dried plums vary naturally.",
+    "Stir well and serve over ice."
+  ]
+}
