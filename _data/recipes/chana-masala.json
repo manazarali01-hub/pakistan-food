@@ -5,27 +5,28 @@
   "time": "50 min",
   "serves": 5,
   "image": "assets/chana-masala.webp",
-  "description": "Comforting chickpeas simmered in a tangy tomato-onion masala with ginger, green chilies and warm Pakistani spices.",
+  "description": "Pakistani chana masala with tender chickpeas simmered in a tangy onion-tomato masala with ginger, green chillies and warm spices.",
   "ingredients": [
-    "3 cups cooked chickpeas",
+    "3 cups cooked chickpeas, tender and drained with some cooking liquid reserved",
     "2 medium onions, finely chopped",
     "3 tomatoes, chopped",
     "1 tbsp ginger-garlic paste",
-    "2 green chilies",
+    "2 green chillies, sliced",
     "1 tsp cumin seeds",
     "1 tsp coriander powder",
-    "1 tsp red chili powder",
+    "1 tsp red chilli powder",
     "0.5 tsp turmeric",
     "0.5 tsp garam masala",
     "2 tbsp cooking oil",
-    "Salt and fresh coriander"
+    "Salt to taste and fresh coriander for finishing"
   ],
   "method": [
-    "Heat oil and fry cumin seeds and onions until golden.",
-    "Add ginger-garlic paste, tomatoes, green chilies and powdered spices.",
-    "Cook until the tomatoes break down and oil begins to separate.",
-    "Add chickpeas with a little cooking water and simmer for 15 to 20 minutes.",
-    "Lightly mash a few chickpeas to thicken the gravy.",
-    "Finish with garam masala and fresh coriander and serve with roti, naan or rice."
+    "Heat the oil in a pot, add the cumin seeds and let them become aromatic, then add the onions and cook until golden.",
+    "Stir in the ginger-garlic paste, followed by the tomatoes, green chillies, coriander powder, red chilli, turmeric and salt.",
+    "Cook the masala until the tomatoes have broken down and the mixture looks cohesive, stirring often so the spices do not catch on the base.",
+    "Add the already tender chickpeas with a little reserved cooking liquid and simmer for 15 to 20 minutes so they absorb the masala flavour.",
+    "Mash a small portion of the chickpeas against the side of the pot and stir them back into the gravy for natural body without turning the whole dish into a paste.",
+    "Adjust the gravy with a little more chickpea liquid if needed, then finish with garam masala and fresh coriander.",
+    "Taste for salt and chilli and serve hot with roti, naan or rice."
   ]
 }
