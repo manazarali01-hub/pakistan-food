@@ -1,1 +1,35 @@
-{"id":14,"name":"Daal Chawal","category":"Rice","time":"50 min","serves":4,"image":"assets/daal-chawal.webp","description":"Comforting Pakistani lentils with a fragrant garlic-cumin tarka, served with fluffy basmati rice.","ingredients":["1 cup moong or masoor lentils, rinsed","2 cups basmati rice, rinsed and soaked for 20–30 minutes","1 medium onion, thinly sliced","1 medium tomato, chopped","4 garlic cloves, sliced","1 tsp cumin seeds","½ tsp red chili powder","¼ tsp turmeric","3 tbsp ghee or cooking oil","Salt to taste","Water as needed"],"method":["Put the rinsed lentils in a pot with turmeric, salt and about 3 cups water. Bring to a boil, then simmer until tender, adding a little hot water if needed.","Add the chopped tomato to the tender lentils and simmer until it softens. Adjust the daal to your preferred consistency.","For the rice, bring plenty of salted water to a boil, add the drained soaked basmati and cook until tender but the grains remain intact. Drain well and rest covered for a few minutes.","Heat ghee or oil in a small pan. Fry cumin seeds, sliced garlic and onion until fragrant and golden, then add the red chili powder briefly without burning it.","Carefully pour the hot tarka over the daal and stir lightly.","Taste for salt and serve the hot daal with rice, achaar and salad."],"tips":["Lentils thicken as they stand, so keep a little hot water available to adjust consistency.","Do not burn the garlic or chili in the tarka; both can turn bitter."],"storage":"Cool rice and daal promptly and refrigerate separately in covered containers for up to 2 days. Reheat until steaming hot throughout."}
+{
+  "id": 14,
+  "name": "Daal Chawal",
+  "category": "Rice",
+  "time": "50 min",
+  "serves": 4,
+  "image": "assets/daal-chawal.webp",
+  "description": "Comforting Pakistani daal chawal with tender lentils, fluffy basmati rice and a fragrant garlic-cumin tarka for an everyday home-style meal.",
+  "ingredients": [
+    "1 cup moong or masoor lentils, rinsed",
+    "2 cups basmati rice, rinsed and soaked for 20–30 minutes",
+    "1 medium onion, thinly sliced",
+    "1 medium tomato, chopped",
+    "4 garlic cloves, sliced",
+    "1 tsp cumin seeds",
+    "½ tsp red chili powder",
+    "¼ tsp turmeric",
+    "3 tbsp ghee or cooking oil",
+    "Salt to taste",
+    "Water as needed"
+  ],
+  "method": [
+    "Put the rinsed lentils in a pot with turmeric, salt and about 3 cups water. Bring to a boil, then lower to a gentle simmer and cook until tender, adding hot water in small amounts only when needed.",
+    "Add the chopped tomato once the lentils are tender and simmer until it softens into the daal. Adjust with hot water to keep the consistency pourable rather than excessively thick.",
+    "For the rice, bring plenty of salted water to a boil. Drain the soaked basmati, add it to the boiling water and cook until tender while the grains still hold their shape, then drain immediately.",
+    "Let the drained rice rest covered for a few minutes so excess steam settles, then fluff gently without crushing the grains.",
+    "For the tarka, heat the ghee or oil and fry the cumin, sliced garlic and onion until aromatic and golden. Add the red chilli powder only briefly at the end so it does not burn.",
+    "Carefully pour the hot tarka over the daal, stir lightly, taste for salt and serve immediately with the warm rice, achar and salad."
+  ],
+  "tips": [
+    "Lentils thicken as they stand, so keep a little hot water available to adjust consistency.",
+    "Do not burn the garlic or chili in the tarka; both can turn bitter."
+  ],
+  "storage": "Cool leftover rice and daal promptly and refrigerate them in covered containers. Reheat the portion you plan to serve until thoroughly hot."
+}
