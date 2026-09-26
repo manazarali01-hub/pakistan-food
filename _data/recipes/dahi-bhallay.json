@@ -1,1 +1,27 @@
-{"id":33,"name":"Dahi Bhallay","category":"Snacks","time":"45 min","serves":5,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Dahi_bhalla.JPG?width=800","description":"Soft lentil dumplings topped with chilled yogurt, chutneys and chaat masala.","ingredients":["1 cup mash daal","2 cups yogurt","Tamarind chutney","Mint chutney","1 tsp chaat masala","Roasted cumin","Salt","Oil for frying"],"method":["Soak and grind daal into a thick batter.","Fry spoonfuls until golden.","Soak bhallay briefly in warm water and squeeze gently.","Cover with seasoned yogurt.","Top with chutneys and spices."]}
+{
+  "id": 33,
+  "name": "Dahi Bhallay",
+  "category": "Snacks",
+  "time": "45 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dahi_bhalla.JPG?width=800",
+  "description": "Pakistani dahi bhallay with soft mash-daal dumplings, chilled seasoned yogurt, sweet-sour tamarind chutney, mint chutney and chaat spices.",
+  "ingredients": [
+    "1 cup mash daal (urad dal), soaked",
+    "2 cups chilled yogurt",
+    "Tamarind chutney, to taste",
+    "Mint chutney, to taste",
+    "1 tsp chaat masala, or to taste",
+    "Roasted cumin, to taste",
+    "Salt to taste",
+    "Cooking oil, for frying"
+  ],
+  "method": [
+    "Drain the soaked mash daal and grind it into a thick, smooth batter, adding only as much water as needed for the blender or grinder to work.",
+    "Beat the batter briefly to lighten it, then heat the frying oil and fry small spoonfuls in manageable batches until cooked through and evenly golden.",
+    "Transfer the fried bhallay to warm water and let them soften. Remove them carefully and press very gently between your palms to release excess water without crushing them.",
+    "Whisk the chilled yogurt until smooth and season lightly with salt and some roasted cumin if desired.",
+    "Arrange the softened bhallay in a serving dish and cover them generously with the seasoned yogurt.",
+    "Drizzle with tamarind and mint chutneys, then finish with chaat masala and roasted cumin. Chill briefly or serve once the bhallay have absorbed some yogurt."
+  ]
+}
