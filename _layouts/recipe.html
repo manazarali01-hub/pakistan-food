@@ -19,7 +19,7 @@
 {% assign category_slug = recipe.category | downcase %}
 {% assign bilingual_category = site.data.bilingual[category_slug] %}
 {% assign bilingual = bilingual_category[page.recipe_key] %}
-{% assign detailed_method = bilingual.method_en | default: recipe.method %}
+{% assign detailed_method = recipe.method | default: bilingual.method_en %}
 {% assign detailed_tips = bilingual.tips_en | default: recipe.tips %}
 {% assign urdu_description = recipe.description_ur | default: bilingual.description_ur %}
 {% assign urdu_ingredients = recipe.ingredients_ur | default: bilingual.ingredients_ur %}
