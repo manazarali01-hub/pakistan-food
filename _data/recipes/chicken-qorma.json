@@ -1,1 +1,35 @@
-{"id":28,"name":"Chicken Qorma","category":"Chicken","time":"60 min","serves":5,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Korma.JPG?width=800","description":"Traditional Pakistani chicken qorma with yogurt, deeply fried onions and aromatic whole spices.","ingredients":["1 kg chicken, curry cut","1 cup plain yogurt, whisked","3 medium onions, thinly sliced","2 tbsp ginger-garlic paste","1 tsp red chili powder","1 tsp coriander powder","½ tsp garam masala","1 tsp mixed whole spices","½ cup cooking oil","1–1½ tsp salt, or to taste","½–1 cup hot water, as needed"],"method":["Heat oil in a heavy pot and fry the onions until deep golden. Remove them, drain briefly and crush when cool.","In the same oil add the whole spices, ginger-garlic paste and chicken. Fry over medium-high heat for 6–8 minutes until the chicken changes colour and lightly browns.","Lower the heat and add red chili, coriander powder and salt. Add the whisked yogurt gradually while stirring.","Return most of the crushed fried onion to the pot and cook the masala thoroughly until it thickens and oil begins to separate.","Add a little hot water, cover and simmer gently until the chicken is fully cooked and tender.","Finish with garam masala. Adjust the gravy with a little hot water if needed, garnish with the reserved fried onion and serve hot."],"tips":["Fry the onions evenly golden rather than dark brown, as burnt onions can make qorma bitter.","Add yogurt gradually over lower heat and cook the masala well for a smooth, rich gravy."],"storage":"Cool promptly and refrigerate covered for up to 2 days. Reheat until piping hot throughout."}
+{
+  "id": 28,
+  "name": "Chicken Qorma",
+  "category": "Chicken",
+  "time": "60 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Korma.JPG?width=800",
+  "description": "Pakistani chicken qorma with deeply golden onions, yogurt and whole spices cooked into a rich aromatic gravy without splitting the yogurt.",
+  "ingredients": [
+    "1 kg chicken, curry cut",
+    "1 cup plain yogurt, whisked",
+    "3 medium onions, thinly sliced",
+    "2 tbsp ginger-garlic paste",
+    "1 tsp red chili powder",
+    "1 tsp coriander powder",
+    "½ tsp garam masala",
+    "1 tsp mixed whole spices",
+    "½ cup cooking oil",
+    "1–1½ tsp salt, or to taste",
+    "½–1 cup hot water, as needed"
+  ],
+  "method": [
+    "Heat the oil in a heavy pot and fry the sliced onions gradually until evenly deep golden. Remove them, drain briefly and crush once cool, reserving a little for garnish if desired.",
+    "In the same oil, add the whole spices, ginger-garlic paste and chicken. Cook over medium to medium-high heat until the chicken loses its raw exterior colour and develops light browning.",
+    "Lower the heat. Add the red chilli, coriander powder and salt, then stir in the smoothly whisked yogurt gradually so the temperature changes less abruptly.",
+    "Return most of the crushed fried onion and cook the masala patiently, stirring and scraping the base, until it becomes cohesive and the raw yogurt taste has cooked out.",
+    "Add a modest amount of hot water, cover and simmer gently until the chicken is fully cooked and tender. Add more water only if needed for the desired qorma gravy.",
+    "Finish with garam masala, adjust the gravy consistency and salt, then garnish with the reserved fried onion and serve hot."
+  ],
+  "tips": [
+    "Fry the onions evenly golden rather than dark brown, as burnt onions can make qorma bitter.",
+    "Add yogurt gradually over lower heat and cook the masala well for a smooth, rich gravy."
+  ],
+  "storage": "Cool leftover qorma promptly and refrigerate covered. Reheat gently but thoroughly before serving."
+}
