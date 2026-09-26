@@ -5,7 +5,19 @@
   "time": "12 min",
   "serves": 2,
   "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Doodh_Patti_Chai.JPG?width=800",
-  "description": "Rich Pakistani milk tea brewed with tea leaves for a strong, comforting cup of chai.",
-  "ingredients": ["2 cups milk", "2 tsp black tea leaves", "2 to 3 tsp sugar", "2 green cardamoms, optional", "0.25 cup water, optional"],
-  "method": ["Heat milk in a saucepan.", "Add tea leaves, sugar and cardamom.", "Bring gently to a boil.", "Simmer until the colour deepens.", "Strain into cups and serve hot."]
+  "description": "Rich Pakistani doodh patti made by simmering black tea with milk, sugar and optional cardamom for a strong, comforting cup.",
+  "ingredients": [
+    "2 cups milk",
+    "2 tsp black tea leaves",
+    "2 to 3 tsp sugar, or to taste",
+    "2 green cardamom pods, lightly crushed, optional",
+    "0.25 cup water, optional"
+  ],
+  "method": [
+    "Add the milk to a saucepan with the optional water and cardamom, and heat gently while watching closely so it does not boil over.",
+    "Add the black tea leaves and sugar once the liquid is hot, then stir to dissolve the sugar.",
+    "Bring the chai to a controlled boil, lower the heat and simmer briefly until the colour deepens and the tea strength suits you.",
+    "Avoid extending the boil excessively to force a darker colour, as prolonged brewing can make the tea harsh.",
+    "Strain directly into cups and serve hot. Adjust tea quantity or simmering time on the next batch if you prefer a stronger or lighter doodh patti."
+  ]
 }
