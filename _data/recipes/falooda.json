@@ -1,1 +1,25 @@
-{"id":37,"name":"Falooda","category":"Drinks","time":"20 min","serves":2,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Falooda.jpg?width=800","description":"A chilled Pakistani dessert drink layered with milk, rose syrup, basil seeds and vermicelli.","ingredients":["2 cups chilled milk","3 tbsp rose syrup","0.5 cup cooked falooda vermicelli","2 tbsp soaked basil seeds","2 scoops vanilla ice cream","Chopped nuts"],"method":["Add rose syrup to serving glasses.","Layer soaked basil seeds and vermicelli.","Pour in chilled milk.","Top with vanilla ice cream.","Garnish with nuts and serve immediately."]}
+{
+  "id": 37,
+  "name": "Falooda",
+  "category": "Drinks",
+  "time": "20 min",
+  "serves": 2,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Falooda.jpg?width=800",
+  "description": "Chilled Pakistani falooda layered with rose syrup, basil seeds, vermicelli, cold milk and vanilla ice cream for a creamy dessert drink.",
+  "ingredients": [
+    "2 cups chilled milk",
+    "3 tbsp rose syrup",
+    "0.5 cup falooda vermicelli, cooked and cooled",
+    "2 tbsp basil seeds, soaked until fully swollen and drained",
+    "2 scoops vanilla ice cream",
+    "Chopped nuts, for garnish"
+  ],
+  "method": [
+    "Prepare the basil seeds until fully swollen and cook the falooda vermicelli according to its type, then cool both components before assembling.",
+    "Divide the rose syrup between two tall serving glasses.",
+    "Add the drained basil seeds and cooled vermicelli, distributing them evenly between the glasses.",
+    "Pour in the chilled milk slowly so the glass stays cold and the layers remain visible.",
+    "Top each glass with a scoop of vanilla ice cream and garnish with chopped nuts.",
+    "Serve immediately with a spoon and straw; stir while drinking if you prefer the syrup fully mixed through the milk."
+  ]
+}
