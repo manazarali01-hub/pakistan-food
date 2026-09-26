@@ -1,1 +1,36 @@
-{"id":11,"name":"Halwa Puri","category":"Breakfast","time":"60 min","serves":5,"image":"assets/halwa-puri.webp","description":"Traditional Pakistani breakfast of semolina halwa, spiced chickpeas and freshly fried puffed puris.","ingredients":["1 cup semolina (suji)","¾ cup sugar","2 cups whole-wheat flour (atta)","½ cup ghee for halwa","2 cups cooked chickpeas","1 tbsp chana masala","4 green cardamoms","½ tsp salt for puri dough","Water as needed","Oil for deep frying"],"method":["For the halwa, heat ghee and roast the semolina over medium-low heat until fragrant and lightly golden. Separately dissolve the sugar in about 1½ cups hot water with cardamom.","Carefully add the hot sugar liquid to the roasted semolina while stirring. Cook on low heat until the liquid is absorbed and the halwa becomes glossy.","For the chickpeas, heat a little oil, add chana masala and the cooked chickpeas with a splash of water, then simmer until well seasoned. Adjust salt to taste.","For the puris, mix flour and salt and add water gradually to make a firm but pliable dough. Rest covered for about 15 minutes.","Divide the dough into small balls and roll into thin discs, keeping unused dough covered.","Heat frying oil over medium-high heat. Slide in one puri at a time, gently press with a slotted spoon until it puffs, turn, and fry until lightly golden. Drain well.","Serve the hot puris immediately with halwa and chickpea curry."],"tips":["Roast semolina before adding liquid for better flavour and texture.","Puri dough should be firmer than chapati dough; very soft dough absorbs more oil.","Use properly hot oil so puris puff quickly without becoming greasy."],"storage":"Halwa and chickpea curry can be refrigerated covered for up to 2 days. Puris are best freshly fried."}
+{
+  "id": 11,
+  "name": "Halwa Puri",
+  "category": "Breakfast",
+  "time": "60 min",
+  "serves": 5,
+  "image": "assets/halwa-puri.webp",
+  "description": "Traditional Pakistani halwa puri breakfast with fragrant semolina halwa, warmly spiced chickpeas and freshly fried puris that puff in properly heated oil.",
+  "ingredients": [
+    "1 cup semolina (suji)",
+    "¾ cup sugar",
+    "2 cups whole-wheat flour (atta)",
+    "½ cup ghee for halwa",
+    "2 cups cooked chickpeas",
+    "1 tbsp chana masala",
+    "4 green cardamoms",
+    "½ tsp salt for puri dough",
+    "Water as needed",
+    "Oil for deep frying"
+  ],
+  "method": [
+    "For the halwa, heat the ghee in a heavy pan and roast the semolina over medium-low heat, stirring continuously, until fragrant and evenly light golden. Separately dissolve the sugar in about 1½ cups hot water with the cardamom.",
+    "Reduce the heat and carefully add the hot sugar liquid to the roasted semolina in stages while stirring; the mixture can bubble vigorously. Cook until the semolina swells and the halwa becomes glossy but not dry.",
+    "For the chickpeas, heat a little oil, briefly bloom the chana masala without scorching it, then add the cooked chickpeas with a splash of water. Simmer until seasoned and adjust salt and consistency to taste.",
+    "For the puris, mix the flour and salt and add water gradually to form a firm but pliable dough. Knead until smooth, cover and rest for about 15 minutes.",
+    "Divide the rested dough into small equal balls and roll each into a thin, even disc. Keep the unused dough covered so the surface does not dry out.",
+    "Heat enough frying oil so a test piece rises promptly without burning. Fry one puri at a time, gently pressing the surface with a slotted spoon to encourage puffing, then turn and cook until lightly golden.",
+    "Drain each puri well and serve immediately with the warm halwa and chickpeas while the bread is still puffed and crisp."
+  ],
+  "tips": [
+    "Roast semolina before adding liquid for better flavour and texture.",
+    "Puri dough should be firmer than chapati dough; very soft dough absorbs more oil.",
+    "Use properly hot oil so puris puff quickly without becoming greasy."
+  ],
+  "storage": "Cool halwa and chickpea curry promptly and refrigerate them covered. Puris are best freshly fried; if any remain, cool before storing and reheat with dry heat."
+}
