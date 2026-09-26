@@ -1,1 +1,28 @@
-{"id":31,"name":"Matar Pulao","category":"Rice","time":"40 min","serves":5,"image":"assets/matar-pulao.webp","description":"Simple aromatic basmati rice cooked with green peas and whole spices.","ingredients":["3 cups basmati rice","1.5 cups green peas","1 onion","1 tsp cumin","Whole garam masala","5 cups water or stock","Salt and oil"],"method":["Brown sliced onion in oil.","Add cumin, whole spices and peas.","Add soaked rice and water or stock.","Cook until liquid is absorbed.","Steam on low heat for 10 minutes."]}
+{
+  "id": 31,
+  "name": "Matar Pulao",
+  "category": "Rice",
+  "time": "40 min",
+  "serves": 5,
+  "image": "assets/matar-pulao.webp",
+  "description": "Aromatic Pakistani matar pulao with basmati rice, green peas, browned onion and whole spices, finished on gentle dum for separate grains.",
+  "ingredients": [
+    "3 cups basmati rice, rinsed and soaked",
+    "1.5 cups green peas",
+    "1 medium onion, thinly sliced",
+    "1 tsp cumin seeds",
+    "Whole garam masala, such as bay leaf, cloves, cardamom and cinnamon",
+    "5 cups water or stock, adjusted for the rice and soaking",
+    "Salt to taste",
+    "Cooking oil, as needed"
+  ],
+  "method": [
+    "Rinse the basmati until the water is much clearer, soak it according to the rice you use, then drain well.",
+    "Heat oil in a heavy pot and brown the sliced onion evenly; reserve a little for garnish if desired.",
+    "Add cumin and the whole garam masala and stir briefly until aromatic, then add the peas.",
+    "Pour in the water or stock, season with salt and bring it to a boil. Taste the liquid and correct the seasoning before adding rice.",
+    "Add the drained rice and cook uncovered until most of the liquid has been absorbed and small steam holes appear at the surface.",
+    "Cover tightly, reduce to low heat and steam for about 10 minutes, or until the grains are tender and separate.",
+    "Rest the covered pulao for a few minutes off the heat, then fluff gently from the sides so the grains do not break."
+  ]
+}
