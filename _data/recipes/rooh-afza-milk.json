@@ -5,7 +5,19 @@
   "time": "5 min",
   "serves": 2,
   "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Milk_Roohafza.jpg?width=800",
-  "description": "A chilled rose-flavoured milk drink popular in Pakistani homes, especially during warm weather and Ramadan.",
-  "ingredients": ["2 cups chilled milk", "3 tbsp rose sharbat syrup", "1 tsp sugar, optional", "4 ice cubes", "Chopped almonds, optional"],
-  "method": ["Pour chilled milk into a jug.", "Add rose sharbat syrup.", "Stir or blend until evenly mixed.", "Add ice cubes.", "Garnish with almonds and serve cold."]
+  "description": "Chilled Pakistani rose-sharbat milk, quickly mixed until evenly pink and optionally finished with ice and chopped almonds.",
+  "ingredients": [
+    "2 cups chilled milk",
+    "3 tbsp rose sharbat syrup",
+    "1 tsp sugar, optional and only if needed",
+    "4 ice cubes",
+    "Chopped almonds, optional for garnish"
+  ],
+  "method": [
+    "Pour the well-chilled milk into a jug or blender.",
+    "Add the rose sharbat syrup and stir or blend briefly until the colour and flavour are evenly distributed.",
+    "Taste before adding the optional sugar because the syrup already contributes substantial sweetness.",
+    "Add the ice just before serving, or blend very briefly if you prefer the drink extra cold; prolonged blending can dilute it as the ice melts.",
+    "Pour into two glasses, garnish with chopped almonds if using and serve immediately while chilled."
+  ]
 }
