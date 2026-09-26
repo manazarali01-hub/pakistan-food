@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "https://pakistanfoodrecipes.top/:splat"
+  status = 301
+  force = true
