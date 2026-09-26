@@ -5,7 +5,20 @@
   "time": "10 min",
   "serves": 4,
   "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mint_lemonade.jpg?width=800",
-  "description": "A bright and cooling lemon-mint sharbat that is refreshing for summer afternoons and iftar.",
-  "ingredients": ["4 cups chilled water", "0.5 cup fresh lemon juice", "0.5 cup mint leaves", "5 tbsp sugar or to taste", "1 pinch black salt", "Ice cubes"],
-  "method": ["Blend mint with a little water.", "Add lemon juice and sugar.", "Mix with the remaining chilled water.", "Add black salt and ice.", "Serve cold."]
+  "description": "Bright Pakistani lemon-mint sharbat with fresh citrus, mint and a touch of black salt, served well chilled for summer or iftar.",
+  "ingredients": [
+    "4 cups chilled water",
+    "0.5 cup fresh lemon juice",
+    "0.5 cup fresh mint leaves, washed",
+    "5 tbsp sugar, or to taste",
+    "1 pinch black salt",
+    "Ice cubes, for serving"
+  ],
+  "method": [
+    "Blend the mint leaves with a small amount of the chilled water until the leaves are finely broken down.",
+    "Strain the mint mixture if you prefer a smoother drink, then combine it with the fresh lemon juice.",
+    "Stir in the sugar and black salt with most of the remaining chilled water until the sugar is dissolved.",
+    "Taste the fully diluted sharbat and adjust lemon, sweetness or water gradually; remember that serving over plenty of ice will dilute it further.",
+    "Add ice just before serving, stir well and serve cold while the mint flavour is fresh."
+  ]
 }
