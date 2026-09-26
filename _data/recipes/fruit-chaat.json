@@ -1,1 +1,27 @@
-{"id":44,"name":"Fruit Chaat","category":"Snacks","time":"15 min","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Fruit_Chaat.jpg?width=800","description":"Fresh mixed fruit tossed with citrus juice and chaat masala, a popular Pakistani Ramadan favorite.","ingredients":["2 apples","2 bananas","1 orange","1 cup grapes","1 guava","2 tbsp orange or lemon juice","1 tsp chaat masala","Sugar optional"],"method":["Wash and cut all fruit into bite-sized pieces.","Combine fruit in a large bowl.","Add citrus juice and chaat masala.","Mix gently.","Chill briefly and serve fresh."]}
+{
+  "id": 44,
+  "name": "Fruit Chaat",
+  "category": "Snacks",
+  "time": "15 min",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fruit_Chaat.jpg?width=800",
+  "description": "Fresh Pakistani fruit chaat with apple, banana, orange, grapes and guava, gently tossed with citrus and chaat masala.",
+  "ingredients": [
+    "2 apples",
+    "2 bananas",
+    "1 orange",
+    "1 cup grapes",
+    "1 guava",
+    "2 tbsp orange or lemon juice",
+    "1 tsp chaat masala, or to taste",
+    "Sugar, optional and to taste"
+  ],
+  "method": [
+    "Wash and dry the fruit. Peel where needed and cut the firmer fruits into similar bite-size pieces.",
+    "Prepare the banana and apple close to assembly time because their cut surfaces discolor faster than many other fruits.",
+    "Place all the fruit in a large bowl and immediately add the orange or lemon juice, tossing gently to coat the pieces.",
+    "Sprinkle over the chaat masala and add sugar only if the fruit itself is not sweet enough.",
+    "Fold everything together gently so soft fruit is not crushed and excessive juice is not released.",
+    "Chill briefly if desired and serve fresh rather than storing for a long period, as the fruit gradually softens and releases liquid."
+  ]
+}
