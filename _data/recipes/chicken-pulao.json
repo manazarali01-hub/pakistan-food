@@ -1,1 +1,35 @@
-{"id":2,"name":"Chicken Pulao","category":"Rice","time":"65 min","serves":5,"image":"assets/chicken-pulao.webp","description":"Fragrant Pakistani chicken pulao cooked with basmati rice, tender chicken and aromatic yakhni-style spices.","ingredients":["750 g bone-in chicken","3 cups basmati rice, rinsed and soaked for 30 minutes","2 medium onions, thinly sliced","1 tbsp mixed whole spices","½ cup plain yogurt, whisked","2 tbsp ginger-garlic paste","4 tbsp cooking oil","4–5 green chilies","5 cups water for stock","Salt to taste"],"method":["Put the chicken, about half the onion, 1 tbsp ginger-garlic paste, half the whole spices, salt and 5 cups water in a pot. Simmer until the chicken is almost tender and the stock is flavourful.","Remove the chicken and strain the stock. Measure the stock so the amount used with the rice can be controlled.","Heat oil in a heavy pot and fry the remaining onion until golden. Add the remaining ginger-garlic paste and whole spices, then add the chicken and fry briefly.","Lower the heat, add the whisked yogurt and green chilies, and cook until excess moisture reduces.","Drain the soaked rice and add it gently. Pour in enough hot chicken stock for your basmati variety and taste the liquid for salt.","Cook uncovered until most liquid is absorbed and steam holes appear. Cover tightly and cook on very low heat for 15–20 minutes.","Turn off the heat, rest covered for 10 minutes, then fluff gently and serve."],"tips":["Do not automatically pour in all the stock; basmati varieties absorb different amounts of liquid.","Avoid excessive stirring after adding rice to keep the grains intact."],"storage":"Cool promptly and refrigerate covered for up to 2 days. Reheat until the chicken and rice are steaming hot throughout."}
+{
+  "id": 2,
+  "name": "Chicken Pulao",
+  "category": "Rice",
+  "time": "65 min",
+  "serves": 5,
+  "image": "assets/chicken-pulao.webp",
+  "description": "Fragrant Pakistani chicken pulao with bone-in chicken, basmati rice and aromatic yakhni-style stock, finished on low heat for separate, flavourful grains.",
+  "ingredients": [
+    "750 g bone-in chicken",
+    "3 cups basmati rice, rinsed and soaked for 30 minutes",
+    "2 medium onions, thinly sliced",
+    "1 tbsp mixed whole spices",
+    "½ cup plain yogurt, whisked",
+    "2 tbsp ginger-garlic paste",
+    "4 tbsp cooking oil",
+    "4–5 green chilies",
+    "5 cups water for stock",
+    "Salt to taste"
+  ],
+  "method": [
+    "Combine the chicken, about half the onion, half the ginger-garlic paste, half the whole spices, salt and the stock water in a pot. Simmer gently until the chicken is nearly tender and the liquid is flavourful.",
+    "Remove the chicken carefully and strain the stock. Measure how much stock you have so the liquid added to the soaked rice can be controlled rather than guessed.",
+    "Heat the oil in a heavy pot and fry the remaining onion until evenly golden. Add the remaining ginger-garlic paste and whole spices, then return the chicken and fry briefly.",
+    "Lower the heat, add the whisked yogurt gradually with the green chillies and cook until the yogurt is incorporated and excess moisture reduces.",
+    "Drain the soaked basmati well and add it gently. Pour in the amount of hot chicken stock appropriate for your rice variety and taste the cooking liquid for salt before absorption begins.",
+    "Cook uncovered until most of the liquid is absorbed and steam holes appear across the rice. Cover tightly, reduce to very low heat and let the pulao finish gently without repeated stirring.",
+    "Turn off the heat and rest covered for about 10 minutes, then fluff from the sides with a light hand and serve."
+  ],
+  "tips": [
+    "Do not automatically pour in all the stock; basmati varieties absorb different amounts of liquid.",
+    "Avoid excessive stirring after adding rice to keep the grains intact."
+  ],
+  "storage": "Cool leftover chicken pulao promptly, refrigerate covered and reheat the portion being served until thoroughly hot."
+}
