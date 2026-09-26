@@ -1,1 +1,36 @@
-{"id":15,"name":"Beef Pulao","category":"Rice","time":"100 min","serves":6,"image":"assets/beef-pulao.webp","description":"Aromatic Pakistani beef pulao cooked in seasoned beef yakhni with fragrant basmati rice and whole spices.","ingredients":["1 kg beef with bones","4 cups basmati rice, rinsed and soaked for 30 minutes","3 medium onions, thinly sliced","2 tbsp ginger-garlic paste","1½ tbsp mixed whole spices","5 green chilies, slit","½ cup plain yogurt, whisked","½ cup cooking oil","7 cups water for yakhni","Salt to taste"],"method":["Put the beef, half the onion, 1 tbsp ginger-garlic paste, half the whole spices, salt and 7 cups water in a pot. Bring to a boil, then cover and simmer until the beef is tender.","Remove the beef and strain the yakhni. Measure the stock so the liquid added to the rice can be controlled.","Heat oil in a heavy pot and fry the remaining onions until golden. Add the remaining ginger-garlic paste and whole spices, then add the cooked beef and fry for several minutes.","Lower the heat and stir in the whisked yogurt and green chilies. Cook until the masala is glossy and excess moisture has reduced.","Drain the soaked rice and add it gently. Pour in enough hot yakhni for the rice to cook, adjusting for the basmati variety, and taste the liquid for salt.","Bring to a boil and cook uncovered until most liquid is absorbed and steam holes appear. Cover tightly, reduce to very low heat and cook on dum for 15–20 minutes.","Turn off the heat, rest covered for 10 minutes, then fluff gently and serve."],"tips":["Use strained beef yakhni rather than plain water for the characteristic pulao flavour.","Basmati varieties absorb different amounts of liquid, so add stock according to the rice rather than automatically using all of it.","Avoid repeated stirring after adding rice so the grains stay intact."],"storage":"Cool promptly and refrigerate covered for up to 2 days. Reheat until the beef and rice are steaming hot throughout."}
+{
+  "id": 15,
+  "name": "Beef Pulao",
+  "category": "Rice",
+  "time": "100 min",
+  "serves": 6,
+  "image": "assets/beef-pulao.webp",
+  "description": "Aromatic Pakistani beef pulao with tender bone-in beef and basmati rice cooked in seasoned yakhni, then finished on dum for separate, flavourful grains.",
+  "ingredients": [
+    "1 kg beef with bones",
+    "4 cups basmati rice, rinsed and soaked for 30 minutes",
+    "3 medium onions, thinly sliced",
+    "2 tbsp ginger-garlic paste",
+    "1½ tbsp mixed whole spices",
+    "5 green chilies, slit",
+    "½ cup plain yogurt, whisked",
+    "½ cup cooking oil",
+    "7 cups water for yakhni",
+    "Salt to taste"
+  ],
+  "method": [
+    "Combine the beef, half the onion, half the ginger-garlic paste, half the whole spices, salt and the yakhni water in a pot. Bring to a boil, then simmer gently until the beef is tender and the stock is well flavoured.",
+    "Remove the tender beef carefully and strain the yakhni. Measure the strained stock so you can control how much liquid goes into the soaked rice.",
+    "Heat the oil in a heavy pot and fry the remaining onions until evenly golden. Add the remaining ginger-garlic paste and whole spices, then return the cooked beef and fry briefly.",
+    "Lower the heat and stir in the whisked yogurt gradually with the green chillies. Cook until the yogurt is incorporated and excess moisture has reduced.",
+    "Drain the soaked basmati well and fold it in gently. Add the amount of hot yakhni appropriate for your rice variety, then taste the cooking liquid for salt before absorption begins.",
+    "Bring to a steady boil and cook uncovered until most of the liquid has been absorbed and steam holes appear. Cover tightly, reduce to very low heat and finish on dum without repeated stirring.",
+    "Turn off the heat and rest covered for about 10 minutes. Fluff gently from the sides and serve while the rice is hot and aromatic."
+  ],
+  "tips": [
+    "Use strained beef yakhni rather than plain water for the characteristic pulao flavour.",
+    "Basmati varieties absorb different amounts of liquid, so add stock according to the rice rather than automatically using all of it.",
+    "Avoid repeated stirring after adding rice so the grains stay intact."
+  ],
+  "storage": "Cool leftover beef pulao promptly, refrigerate covered and reheat the portion being served until thoroughly hot."
+}
