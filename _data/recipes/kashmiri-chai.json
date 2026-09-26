@@ -1,1 +1,32 @@
-{"id":39,"name":"Kashmiri Chai","category":"Drinks","time":"45 min","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Kashmiri_Tea.jpg?width=800","description":"Traditional pink Kashmiri chai brewed with green tea leaves, baking soda, aeration, milk and cardamom, then topped with nuts.","ingredients":["2 tbsp Kashmiri green tea leaves","3 cups water","1 cup ice-cold water","2 cups milk","¼ tsp baking soda","4 green cardamoms, lightly crushed","Sugar or salt to taste","Chopped pistachios and almonds"],"method":["Add tea leaves, 3 cups water and baking soda to a saucepan. Bring to a boil and cook briskly until the liquid reduces substantially and develops a deep reddish-brown colour.","Add the ice-cold water carefully, then whisk or ladle the tea repeatedly to aerate it for several minutes; this helps develop the characteristic colour.","Simmer again briefly, then strain the concentrated tea base.","Return the tea base to the pan, add milk and cardamom, and bring to a gentle simmer. The colour should turn pink as the milk combines with the brewed tea.","Add sugar for the common sweet Pakistani version, or salt according to preference. Pour into cups and garnish with pistachios and almonds."],"tips":["The pink colour depends on suitable Kashmiri green tea, baking soda and thorough aeration; ordinary black tea will not give the same result.","Do not add excessive baking soda, which can give the tea an unpleasant taste."],"storage":"Best served fresh. Refrigerate leftover tea promptly and reheat gently once."}
+{
+  "id": 39,
+  "name": "Kashmiri Chai",
+  "category": "Drinks",
+  "time": "45 min",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kashmiri_Tea.jpg?width=800",
+  "description": "Traditional Pakistani pink Kashmiri chai brewed from green tea with baking soda and aeration, then finished with milk, cardamom and chopped nuts.",
+  "ingredients": [
+    "2 tbsp Kashmiri green tea leaves",
+    "3 cups water",
+    "1 cup ice-cold water",
+    "2 cups milk",
+    "¼ tsp baking soda",
+    "4 green cardamoms, lightly crushed",
+    "Sugar or salt to taste",
+    "Chopped pistachios and almonds"
+  ],
+  "method": [
+    "Combine the Kashmiri green tea leaves, 3 cups water and the measured baking soda in a saucepan. Boil briskly until the liquid reduces substantially and develops a deep reddish-brown tone.",
+    "Carefully add the ice-cold water. Whisk vigorously or repeatedly lift and pour the tea with a ladle for several minutes to aerate the concentrated brew.",
+    "Simmer the aerated tea base briefly again, then strain out the tea leaves so they do not continue extracting and become harsh.",
+    "Return the strained concentrate to the pan and add the milk and crushed cardamom. Heat gently while stirring; the characteristic pink tone should become more visible as the milk combines with the prepared tea base.",
+    "Taste before seasoning. Add sugar for a sweet Pakistani-style cup, or salt if that is your preference, without masking the tea and cardamom flavour.",
+    "Pour into cups, garnish with chopped pistachios and almonds and serve hot."
+  ],
+  "tips": [
+    "The pink colour depends on suitable Kashmiri green tea, baking soda and thorough aeration; ordinary black tea will not give the same result.",
+    "Do not add excessive baking soda, which can give the tea an unpleasant taste."
+  ],
+  "storage": "Kashmiri chai is best freshly made. If you keep leftovers, cool them promptly, refrigerate covered and reheat gently only as needed."
+}
