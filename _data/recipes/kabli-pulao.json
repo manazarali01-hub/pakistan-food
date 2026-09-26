@@ -1,1 +1,29 @@
-{"id":30,"name":"Kabli Pulao","category":"Rice","time":"90 min","serves":6,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Kabuli_Pulao.JPG?width=800","description":"Fragrant rice with tender meat, carrots and raisins inspired by the beloved pulao served across Pakistan.","ingredients":["1 kg beef or mutton","4 cups basmati rice","2 carrots","0.5 cup raisins","2 onions","Whole spices","1 tsp cumin","Salt and oil"],"method":["Cook meat until tender and reserve stock.","Brown onions and add spices.","Add soaked rice and measured stock.","Top with sautéed carrots and raisins.","Steam on low heat until rice is cooked."]}
+{
+  "id": 30,
+  "name": "Kabli Pulao",
+  "category": "Rice",
+  "time": "90 min",
+  "serves": 6,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kabuli_Pulao.JPG?width=800",
+  "description": "Fragrant Kabli pulao with tender beef or mutton, basmati rice, carrots and raisins, finished gently so the rice stays separate.",
+  "ingredients": [
+    "1 kg beef or mutton, cut into serving pieces",
+    "4 cups basmati rice, rinsed and soaked",
+    "2 carrots, cut into fine strips",
+    "0.5 cup raisins",
+    "2 medium onions, sliced",
+    "Whole spices, such as cardamom, cloves, cinnamon and bay leaf",
+    "1 tsp cumin",
+    "Salt to taste",
+    "Cooking oil, as needed"
+  ],
+  "method": [
+    "Cook the beef or mutton with water and salt until tender, then remove the meat and reserve the cooking stock for the rice.",
+    "Heat oil in a heavy pot and brown the sliced onions evenly. Add the whole spices and cumin and stir briefly until aromatic.",
+    "Measure the reserved stock according to the rice you use, bring it to a boil and check the salt before adding the drained soaked rice.",
+    "Cook until most of the liquid has been absorbed and the rice is close to tender, then arrange the cooked meat with the rice without aggressively stirring the grains.",
+    "In a separate small pan, sauté the carrot strips until slightly softened, add the raisins briefly so they plump without burning, and spread the mixture over the rice.",
+    "Cover tightly and steam on low heat until the rice is fully tender and separate.",
+    "Rest for a few minutes off the heat, then fluff gently and serve with the carrot-raisin topping distributed through or over the pulao."
+  ]
+}
