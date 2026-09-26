@@ -1,1 +1,25 @@
-{"id":41,"name":"Masala Chai","category":"Drinks","time":"12 min","serves":2,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Masala_Chai.JPG?width=800","description":"Warm milk tea infused with cardamom, cinnamon, ginger and aromatic spices.","ingredients":["1 cup water","1.5 cups milk","2 tsp black tea","2 cardamoms","Small cinnamon stick","Small piece ginger","Sugar to taste"],"method":["Boil water with ginger and spices.","Add tea leaves and simmer briefly.","Pour in milk and sugar.","Bring gently to a boil.","Strain and serve hot."]}
+{
+  "id": 41,
+  "name": "Masala Chai",
+  "category": "Drinks",
+  "time": "12 min",
+  "serves": 2,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Masala_Chai.JPG?width=800",
+  "description": "Pakistani-style masala chai with black tea, milk, ginger, cardamom and cinnamon, simmered until aromatic and balanced.",
+  "ingredients": [
+    "1 cup water",
+    "1.5 cups milk",
+    "2 tsp black tea leaves",
+    "2 green cardamom pods, lightly crushed",
+    "1 small cinnamon stick",
+    "1 small piece fresh ginger, lightly crushed or sliced",
+    "Sugar to taste"
+  ],
+  "method": [
+    "Add the water, ginger, cardamom and cinnamon to a saucepan and bring to a boil so the spices begin releasing their aroma.",
+    "Add the black tea and simmer briefly; avoid boiling the leaves for so long that the tea becomes harsh.",
+    "Pour in the milk and add sugar to taste, stirring so nothing settles on the base.",
+    "Bring the chai back to a gentle boil, then lower the heat and simmer briefly until the colour and strength suit you.",
+    "Strain into cups and serve hot. For a stronger cup next time, adjust the tea quantity rather than greatly extending the boil."
+  ]
+}
