@@ -5,7 +5,26 @@
   "time": "75 min",
   "serves": 4,
   "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_pizza.jpg?width=800",
-  "description": "Homemade chicken pizza with a soft crust, seasoned chicken, vegetables, pizza sauce and melted cheese.",
-  "ingredients": ["2 cups plain flour", "1 tsp instant yeast", "1 tsp sugar", "0.75 cup warm water", "250 g boneless chicken, cooked and seasoned", "0.5 cup pizza sauce", "1.5 cups mozzarella cheese", "1 small capsicum, sliced", "1 small onion, sliced", "Oregano, salt and cooking oil"],
-  "method": ["Mix flour, yeast, sugar, salt, warm water and a little oil to make a soft dough.", "Cover the dough and let it rise until nearly doubled.", "Roll the dough and place it on a pizza tray.", "Spread pizza sauce and add chicken, capsicum and onion.", "Top generously with mozzarella and oregano.", "Bake in a preheated oven at 220°C until the crust is golden and cheese is bubbling.", "Slice and serve hot."]
+  "description": "Homemade chicken pizza with a soft yeast crust, cooked seasoned chicken, vegetables, pizza sauce and bubbling mozzarella.",
+  "ingredients": [
+    "2 cups plain flour",
+    "1 tsp instant yeast",
+    "1 tsp sugar",
+    "0.75 cup warm water, added gradually as needed",
+    "250 g boneless chicken, cooked and seasoned",
+    "0.5 cup pizza sauce",
+    "1.5 cups mozzarella cheese",
+    "1 small capsicum, thinly sliced",
+    "1 small onion, thinly sliced",
+    "Oregano, salt and cooking oil, as needed"
+  ],
+  "method": [
+    "Combine the flour, instant yeast, sugar and salt. Add the warm water gradually with a little oil and knead until you have a soft, smooth dough rather than a wet sticky mixture.",
+    "Cover the dough and leave it in a warm place until it has risen to nearly double its original size.",
+    "Preheat the oven to 220°C. Gently deflate the risen dough, shape or roll it to fit the pizza tray and leave a slightly thicker rim if desired.",
+    "Spread the pizza sauce over the base, leaving the edge mostly clear, then distribute the already cooked seasoned chicken, capsicum and onion evenly.",
+    "Cover with mozzarella and sprinkle with oregano. Avoid piling all wet toppings in the centre, which can make the middle slower to bake.",
+    "Bake in the fully preheated oven until the crust is cooked and golden at the edges and the cheese is melted and bubbling.",
+    "Rest for a few minutes so the cheese settles slightly, then slice and serve hot."
+  ]
 }
