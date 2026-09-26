@@ -1,1 +1,33 @@
-{"id":6,"name":"Seekh Kabab","category":"BBQ","time":"50 min","serves":5,"image":"assets/seekh-kebab.webp","description":"Juicy Pakistani beef seekh kababs seasoned with herbs and spices, shaped around skewers and grilled until browned and fully cooked.","ingredients":["750 g beef mince with some fat","1 small onion, very finely chopped and excess moisture squeezed out","3 green chilies, finely chopped","½ cup fresh coriander, chopped","1 tbsp ginger-garlic paste","1½ tbsp seekh kabab masala","1 tbsp lemon juice","1–1½ tsp salt, or to taste","Oil for brushing"],"method":["Combine the beef mince, squeezed onion, green chilies, coriander, ginger-garlic paste, seekh kabab masala, lemon juice and salt.","Mix and knead the mince for several minutes until it becomes sticky enough to hold together. Cover and chill for at least 30 minutes.","With damp or lightly oiled hands, press the mixture evenly around skewers, keeping each kabab a consistent thickness.","Grill or barbecue over medium-high heat, turning carefully and brushing lightly with oil as needed.","Cook until browned on all sides and fully cooked in the centre; ground beef should reach 71°C/160°F.","Rest briefly, then slide from the skewers and serve hot with chutney, onion and lemon."],"tips":["Squeeze excess moisture from the onion so the kababs hold to the skewers.","Do not make the kababs too thick or the outside may brown before the centre cooks."],"storage":"Refrigerate cooked kababs promptly in a covered container for up to 2 days and reheat until piping hot."}
+{
+  "id": 6,
+  "name": "Seekh Kabab",
+  "category": "BBQ",
+  "time": "50 min",
+  "serves": 5,
+  "image": "assets/seekh-kebab.webp",
+  "description": "Juicy Pakistani beef seekh kababs with herbs and spices, mixed until cohesive, shaped evenly on skewers and grilled until browned and fully cooked.",
+  "ingredients": [
+    "750 g beef mince with some fat",
+    "1 small onion, very finely chopped and excess moisture squeezed out",
+    "3 green chilies, finely chopped",
+    "½ cup fresh coriander, chopped",
+    "1 tbsp ginger-garlic paste",
+    "1½ tbsp seekh kabab masala",
+    "1 tbsp lemon juice",
+    "1–1½ tsp salt, or to taste",
+    "Oil for brushing"
+  ],
+  "method": [
+    "Combine the beef mince, well-squeezed onion, green chillies, coriander, ginger-garlic paste, seekh kabab masala, lemon juice and salt in a large bowl.",
+    "Mix and knead the mince for several minutes until it becomes tacky and cohesive enough to hold together. Cover and chill for at least 30 minutes so shaping is easier.",
+    "With damp or lightly oiled hands, press the mixture firmly and evenly around skewers. Keep the kababs fairly thin and consistent in thickness, with no loose cracks.",
+    "Preheat the grill or barbecue well, then cook over medium-high heat. Turn carefully only after the first side has begun to set, brushing lightly with oil if needed.",
+    "Continue cooking until evenly browned and fully cooked in the centre. Use a reliable doneness check for minced meat rather than judging only by the charred exterior.",
+    "Rest briefly, slide carefully from the skewers and serve hot with chutney, sliced onion and lemon."
+  ],
+  "tips": [
+    "Squeeze excess moisture from the onion so the kababs hold to the skewers.",
+    "Do not make the kababs too thick or the outside may brown before the centre cooks."
+  ],
+  "storage": "Cool cooked kababs promptly and refrigerate covered. Reheat only the portion you need until thoroughly hot."
+}
