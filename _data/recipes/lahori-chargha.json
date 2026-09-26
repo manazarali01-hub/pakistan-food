@@ -1,1 +1,37 @@
-{"id":53,"name":"Lahori Chargha","category":"Chicken","time":"90 min plus marinating","serves":5,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Lahori_Charga_after_steam_cooking.JPG?width=900","description":"Lahore-style whole chicken marinated with bold spices and lemon, gently steamed until cooked through and finished until richly browned.","ingredients":["1 whole chicken, about 1.5 kg","1 cup plain yogurt","2 tbsp lemon juice","2 tbsp ginger-garlic paste","1½ tsp red chili powder","1 tsp cumin powder","1 tsp coriander powder","½ tsp garam masala","½ tsp turmeric","2 tbsp gram flour","1½ tsp salt, or to taste","Oil for frying or brushing","Chaat masala, lemon and chutney for serving"],"method":["Pat the chicken dry and make several cuts in the thickest meaty parts so the marinade penetrates without cutting through the bones.","Mix yogurt, lemon juice, ginger-garlic paste, spices, gram flour and salt. Rub thoroughly over and inside the chicken.","Cover and marinate in the refrigerator for at least 4 hours; do not marinate raw chicken at room temperature.","Place the chicken on a steaming rack over simmering water, cover and steam until nearly tender. Check the thickest breast and inner thigh; after the finishing step the chicken must reach at least 74°C/165°F without the thermometer touching bone.","Carefully remove the chicken and let surface moisture evaporate briefly. Finish by shallow frying, deep frying or roasting until richly browned and fully cooked to at least 74°C/165°F.","Rest for about 10 minutes, then sprinkle with chaat masala if desired and serve with lemon wedges and chutney."],"tips":["A whole chicken can cook unevenly, so temperature is more reliable than appearance alone.","If deep frying after steaming, dry the exterior well and lower the chicken carefully to reduce dangerous oil splatter."],"storage":"Cool leftovers promptly and refrigerate covered for up to 2 days. Reheat until steaming hot throughout."}
+{
+  "id": 53,
+  "name": "Lahori Chargha",
+  "category": "Chicken",
+  "time": "90 min plus marinating",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lahori_Charga_after_steam_cooking.JPG?width=900",
+  "description": "Lahori-style whole chicken chargha marinated with yogurt, lemon and bold spices, gently steamed for tenderness and finished until richly browned.",
+  "ingredients": [
+    "1 whole chicken, about 1.5 kg",
+    "1 cup plain yogurt",
+    "2 tbsp lemon juice",
+    "2 tbsp ginger-garlic paste",
+    "1½ tsp red chili powder",
+    "1 tsp cumin powder",
+    "1 tsp coriander powder",
+    "½ tsp garam masala",
+    "½ tsp turmeric",
+    "2 tbsp gram flour",
+    "1½ tsp salt, or to taste",
+    "Oil for frying or brushing",
+    "Chaat masala, lemon and chutney for serving"
+  ],
+  "method": [
+    "Pat the chicken dry and make several shallow cuts in the thickest fleshy areas so the marinade reaches more surface without cutting deeply into bone.",
+    "Mix the yogurt, lemon juice, ginger-garlic paste, red chilli, cumin, coriander, garam masala, turmeric, gram flour and salt into a smooth marinade. Rub it thoroughly over and inside the chicken.",
+    "Cover and marinate in the refrigerator for at least 4 hours. Keep the raw chicken chilled until the cooking process begins.",
+    "Set the chicken on a steaming rack above simmering water, cover and steam steadily until the meat is nearly cooked through. Whole birds cook unevenly, so check the thickest breast and inner-thigh areas rather than judging only by time.",
+    "Carefully remove the chicken and let surface moisture evaporate. If frying, make the exterior as dry as practical before it approaches hot oil; alternatively roast to develop the browned finish.",
+    "Finish by frying or roasting until richly browned and fully cooked through, then rest for about 10 minutes before serving with chaat masala, lemon and chutney."
+  ],
+  "tips": [
+    "A whole chicken can cook unevenly, so temperature is more reliable than appearance alone.",
+    "If deep frying after steaming, dry the exterior well and lower the chicken carefully to reduce dangerous oil splatter."
+  ],
+  "storage": "Cool leftovers promptly and refrigerate covered. Reheat the portion being served until thoroughly hot."
+}
