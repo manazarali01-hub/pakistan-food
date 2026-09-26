@@ -5,7 +5,19 @@
   "time": "10 min",
   "serves": 2,
   "image": "assets/mango-lassi.webp",
-  "description": "A thick, refreshing mango and yogurt drink with a naturally fruity Pakistani summer flavour.",
-  "ingredients": ["1 cup ripe mango pieces", "1.5 cups chilled yogurt", "0.5 cup chilled milk", "2 tbsp sugar or to taste", "4 ice cubes"],
-  "method": ["Place mango and yogurt in a blender.", "Add milk and sugar.", "Blend until creamy.", "Add ice and blend again.", "Serve immediately."]
+  "description": "Thick Pakistani mango lassi blended with ripe mango, chilled yogurt and milk for a creamy, refreshing summer drink.",
+  "ingredients": [
+    "1 cup ripe mango pieces, chilled",
+    "1.5 cups chilled yogurt",
+    "0.5 cup chilled milk",
+    "2 tbsp sugar, or to taste depending on the mango",
+    "4 ice cubes"
+  ],
+  "method": [
+    "Taste the mango first so you can judge how much added sugar it needs.",
+    "Add the mango and chilled yogurt to a blender and blend until the fruit is smooth.",
+    "Pour in the milk and add sugar to taste, then blend again until creamy and evenly combined.",
+    "Add the ice and pulse briefly; avoid excessive blending once the drink is cold and frothy.",
+    "Taste and adjust thickness with a small splash of milk if needed, then serve immediately while well chilled."
+  ]
 }
