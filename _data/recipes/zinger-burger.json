@@ -1,1 +1,37 @@
-{"id":25,"name":"Zinger Burger","category":"Snacks","time":"55 min","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:FilePath/Crispy_chicken_burger.jpg?width=960","description":"Crispy spicy chicken fillet burger with a seasoned crunchy coating, lettuce and creamy mayonnaise.","ingredients":["4 boneless chicken fillets, evenly flattened","4 burger buns","1 cup plain flour","½ cup cornflour","1 egg","½ cup milk or water for egg wash","1 tsp red chili powder","1 tsp paprika","½ tsp black pepper","1 tsp salt, divided or to taste","Lettuce leaves","Mayonnaise","Neutral oil for deep frying"],"method":["Pat the chicken dry and season it with some of the salt, chili powder, paprika and black pepper. Refrigerate for 20–30 minutes while preparing the coating.","Mix flour, cornflour and the remaining seasoning in a shallow bowl. In another bowl beat the egg with the milk or water.","Dip each fillet in the egg mixture, then press firmly into the seasoned flour mixture so an even craggy coating forms.","Heat frying oil over medium heat. Fry the chicken without overcrowding the pan, turning as needed, until the coating is deep golden and the centre is fully cooked; chicken should reach 74°C/165°F.","Drain the fried fillets on a rack or kitchen paper. Toast the cut sides of the burger buns lightly.","Spread mayonnaise on the buns, add lettuce and the hot crispy chicken fillet, close the burger and serve immediately."],"tips":["Flatten fillets to an even thickness so the centre cooks before the coating becomes too dark.","If the coating browns very quickly, lower the oil temperature rather than serving chicken that may still be raw inside."],"storage":"Cooked chicken is best served immediately. Refrigerate leftovers promptly for up to 2 days and reheat thoroughly before assembling a fresh burger."}
+{
+  "id": 25,
+  "name": "Zinger Burger",
+  "category": "Snacks",
+  "time": "55 min",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Crispy_chicken_burger.jpg?width=960",
+  "description": "Crispy spicy chicken zinger-style burger with evenly cooked chicken fillets, a craggy seasoned coating, lettuce and creamy mayonnaise in toasted buns.",
+  "ingredients": [
+    "4 boneless chicken fillets, evenly flattened",
+    "4 burger buns",
+    "1 cup plain flour",
+    "½ cup cornflour",
+    "1 egg",
+    "½ cup milk or water for egg wash",
+    "1 tsp red chili powder",
+    "1 tsp paprika",
+    "½ tsp black pepper",
+    "1 tsp salt, divided or to taste",
+    "Lettuce leaves",
+    "Mayonnaise",
+    "Neutral oil for deep frying"
+  ],
+  "method": [
+    "Pat the chicken fillets dry and flatten thicker areas so each piece has a fairly even thickness. Season with some of the salt, chilli, paprika and black pepper, then refrigerate briefly while preparing the coating.",
+    "Combine the flour and cornflour with the remaining seasoning in a wide bowl. In a second bowl, beat the egg with the milk or water until uniform.",
+    "Dip each fillet into the egg mixture, let excess drip off, then press firmly into the seasoned flour. Pinch some flour onto the surface to create irregular craggy pieces that become crisp during frying.",
+    "Heat the frying oil over medium heat and cook the fillets in manageable batches. Avoid overcrowding, which lowers the oil temperature and can make the coating greasy.",
+    "Turn as needed and continue frying until the coating is deeply golden and the chicken is fully cooked through. Check the thickest part rather than relying only on crust colour.",
+    "Drain on a rack or absorbent paper while lightly toasting the cut sides of the buns. Assemble with mayonnaise, lettuce and the hot chicken fillet and serve immediately."
+  ],
+  "tips": [
+    "Flatten fillets to an even thickness so the centre cooks before the coating becomes too dark.",
+    "If the coating browns very quickly, lower the oil temperature rather than serving chicken that may still be raw inside."
+  ],
+  "storage": "The burger is best assembled fresh. Cool leftover cooked chicken promptly, refrigerate covered and reheat thoroughly before putting it into a freshly assembled bun."
+}
