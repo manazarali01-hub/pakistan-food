@@ -1,1 +1,34 @@
-{"id":10,"name":"Aloo Paratha","category":"Breakfast","time":"40 min","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:FilePath/Aloo_paratha.jpg?width=900","description":"Crispy Pakistani whole-wheat flatbread stuffed with a well-seasoned potato filling, served with yogurt, pickle or chai.","ingredients":["2 cups whole-wheat flour (atta)","¾ tsp salt, divided","Water as needed for dough","3 medium potatoes, boiled, cooled and mashed","2 green chilies, finely chopped","½ cup fresh coriander, chopped","½ tsp red chili powder","1 tsp roasted cumin, crushed","½ tsp chaat masala or garam masala, optional","Ghee or oil for cooking"],"method":["Mix the flour with about ½ tsp salt. Add water gradually and knead into a soft, smooth dough. Cover and rest for 15–20 minutes.","Mix the cooled mashed potatoes with green chilies, coriander, red chili, roasted cumin, remaining salt and optional chaat masala. Keep the filling fairly dry and lump-free.","Divide the dough and filling into equal portions. Roll one dough portion into a small disc, place potato filling in the centre, bring the edges together and seal well.","Dust lightly with flour and roll gently into an even paratha, taking care not to tear the dough.","Place on a hot tawa and cook until light spots appear. Flip, spread a little ghee or oil, then cook both sides until golden-brown and cooked through.","Serve immediately with yogurt, pickle or chutney."],"tips":["Cool the potatoes before filling; hot or wet filling makes the dough difficult to roll.","Add water to the dough gradually so it stays soft without becoming sticky."],"storage":"Best served fresh. Refrigerate cooked leftovers covered and reheat thoroughly on a tawa."}
+{
+  "id": 10,
+  "name": "Aloo Paratha",
+  "category": "Breakfast",
+  "time": "40 min",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aloo_paratha.jpg?width=900",
+  "description": "Pakistani aloo paratha with soft whole-wheat dough wrapped around a dry, well-seasoned potato filling and cooked on a tawa until golden on both sides.",
+  "ingredients": [
+    "2 cups whole-wheat flour (atta)",
+    "¾ tsp salt, divided",
+    "Water as needed for dough",
+    "3 medium potatoes, boiled, cooled and mashed",
+    "2 green chilies, finely chopped",
+    "½ cup fresh coriander, chopped",
+    "½ tsp red chili powder",
+    "1 tsp roasted cumin, crushed",
+    "½ tsp chaat masala or garam masala, optional",
+    "Ghee or oil for cooking"
+  ],
+  "method": [
+    "Mix the atta with about ½ tsp salt. Add water gradually and knead until the dough is soft and smooth but not sticky, then cover and rest for 15 to 20 minutes.",
+    "Mix the completely cooled mashed potatoes with green chillies, coriander, red chilli, roasted cumin, the remaining salt and optional chaat masala. Break up all potato lumps and keep the filling fairly dry.",
+    "Divide both dough and filling into equal portions. Flatten one dough ball, place a portion of filling in the centre, bring the edges together above it and pinch firmly to seal.",
+    "Flatten the sealed ball gently with your fingers, dust lightly with flour and roll from the centre outward into an even paratha. Use light pressure so the filling spreads without tearing the dough.",
+    "Place the paratha on a properly heated tawa. When light spots appear, flip it, apply a little ghee or oil and continue flipping as needed until both sides are golden and the dough is cooked through.",
+    "Serve immediately with yogurt, pickle or chutney. Keep finished parathas loosely covered only briefly if cooking several, since trapped steam can soften their surface."
+  ],
+  "tips": [
+    "Cool the potatoes before filling; hot or wet filling makes the dough difficult to roll.",
+    "Add water to the dough gradually so it stays soft without becoming sticky."
+  ],
+  "storage": "Aloo paratha is best fresh. Cool leftovers promptly, refrigerate covered and reheat thoroughly on a tawa or other hot dry surface."
+}
