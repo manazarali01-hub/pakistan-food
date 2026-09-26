@@ -1,1 +1,34 @@
-{"id":23,"name":"Mutton Karahi","category":"Beef","time":"100 min","serves":5,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Mutton_Karahi.JPG?width=800","description":"Tender mutton cooked in a concentrated tomato karahi masala with ginger, green chilies and freshly ground spices.","ingredients":["1 kg mutton, bone-in pieces","6 medium tomatoes, chopped","2 tbsp ginger-garlic paste","5 green chilies, slit","1 tsp freshly ground black pepper","1 tsp crushed cumin","⅓ cup cooking oil","1–1½ tsp salt, or to taste","½–1 cup hot water, only as needed","Fresh ginger, julienned, for garnish"],"method":["Heat oil in a karahi or heavy pan over medium-high heat. Add the mutton and fry for 6–8 minutes until it changes colour and begins to brown.","Add ginger-garlic paste and cook briefly, then add tomatoes and salt. Cook until the tomatoes soften and begin forming a thick masala.","Add a small amount of hot water, cover and cook over medium-low heat until the mutton is tender. Add more hot water only if needed during cooking.","Uncover once the meat is tender and cook over medium-high heat, stirring frequently, until excess moisture evaporates and the masala clings to the meat.","Add crushed cumin, black pepper and green chilies. Cook for another 3–5 minutes until the oil begins to separate at the edges.","Taste for salt, garnish generously with fresh ginger and serve hot with naan or roti."],"tips":["Mutton may need longer than 70 minutes depending on the cut and age of the meat; tenderness is more important than a fixed clock time.","Avoid adding a large amount of water at once because karahi should finish with a concentrated tomato masala rather than a thin gravy."],"storage":"Cool promptly and refrigerate covered for up to 2 days. Reheat until piping hot throughout."}
+{
+  "id": 23,
+  "name": "Mutton Karahi",
+  "category": "Beef",
+  "time": "100 min",
+  "serves": 5,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mutton_Karahi.JPG?width=800",
+  "description": "Pakistani mutton karahi with tender bone-in meat and a concentrated fresh tomato masala finished with cumin, black pepper, green chillies and ginger.",
+  "ingredients": [
+    "1 kg mutton, bone-in pieces",
+    "6 medium tomatoes, chopped",
+    "2 tbsp ginger-garlic paste",
+    "5 green chilies, slit",
+    "1 tsp freshly ground black pepper",
+    "1 tsp crushed cumin",
+    "⅓ cup cooking oil",
+    "1–1½ tsp salt, or to taste",
+    "½–1 cup hot water, only as needed",
+    "Fresh ginger, julienned, for garnish"
+  ],
+  "method": [
+    "Heat the oil in a karahi or heavy wide pan over medium-high heat. Add the mutton and fry for several minutes, turning the pieces, until they lose their raw exterior colour and begin to brown.",
+    "Add the ginger-garlic paste and cook briefly, then add the tomatoes and salt. Cook while stirring until the tomatoes collapse and begin forming a thick masala around the meat.",
+    "Add a modest amount of hot water, cover and cook over medium-low heat until the mutton becomes tender. Check periodically and add more hot water only if the pan becomes dry before tenderness is reached.",
+    "Once the meat is tender, uncover and raise the heat moderately. Cook while stirring frequently until excess moisture evaporates and the tomato masala becomes concentrated rather than gravy-like.",
+    "Add the crushed cumin, freshly ground black pepper and green chillies near the end so their aroma remains distinct. Cook a few more minutes until the masala clings well to the mutton.",
+    "Taste for salt, garnish generously with julienned fresh ginger and serve hot with naan or roti."
+  ],
+  "tips": [
+    "Mutton may need longer than 70 minutes depending on the cut and age of the meat; tenderness is more important than a fixed clock time.",
+    "Avoid adding a large amount of water at once because karahi should finish with a concentrated tomato masala rather than a thin gravy."
+  ],
+  "storage": "Cool leftovers promptly and refrigerate covered. Reheat the portion being served until thoroughly hot."
+}
