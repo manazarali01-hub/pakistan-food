@@ -5,25 +5,26 @@
   "time": "60 min",
   "serves": 5,
   "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bhindi_Gosht.JPG?width=800",
-  "description": "A classic Pakistani curry combining tender beef with bhindi in a rich onion-tomato masala.",
+  "description": "Pakistani bhindi gosht with tender beef and okra folded into a concentrated onion-tomato masala without overcooking the bhindi.",
   "ingredients": [
-    "750 g beef, small pieces",
-    "500 g bhindi (okra), trimmed",
-    "2 onions, sliced",
+    "750 g beef, cut into small serving pieces",
+    "500 g bhindi (okra), washed, dried thoroughly and trimmed",
+    "2 medium onions, sliced",
     "3 tomatoes, chopped",
     "1 tbsp ginger-garlic paste",
-    "1 tsp red chili powder",
+    "1 tsp red chilli powder",
     "0.5 tsp turmeric",
     "1 tsp coriander powder",
-    "3 green chilies",
-    "Salt and cooking oil"
+    "3 green chillies",
+    "Salt to taste",
+    "Cooking oil, as needed"
   ],
   "method": [
-    "Lightly fry the bhindi until it loses excess moisture, then set aside.",
-    "Cook onions until golden and add ginger-garlic paste.",
-    "Add beef, tomatoes and spices and cook until the masala thickens.",
-    "Add a little water, cover and cook until the beef is tender.",
-    "Fold in the fried bhindi and green chilies and simmer for 8 to 10 minutes.",
-    "Serve hot with roti or naan."
+    "Wash the bhindi ahead of time and dry it thoroughly before trimming. Heat a little oil and fry the bhindi until its surface moisture reduces and it is partly cooked, then remove and set aside.",
+    "In the same pot, add oil if needed and cook the sliced onions until golden. Stir in the ginger-garlic paste and cook until its raw aroma reduces.",
+    "Add the beef, tomatoes, red chilli, turmeric, coriander powder and salt. Cook while stirring until the tomatoes break down and the masala becomes concentrated.",
+    "Add only enough water for the beef to become tender, cover and cook gently until the meat yields easily. Add small amounts of hot water during cooking if the pot becomes dry too early.",
+    "Once the beef is tender and the gravy is no longer watery, fold in the fried bhindi and green chillies gently so the okra does not break apart.",
+    "Simmer uncovered just until the bhindi is tender and the masala clings to the meat and vegetables, then serve hot with roti or naan."
   ]
 }
