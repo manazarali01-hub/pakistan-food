@@ -1,1 +1,25 @@
-{"id":43,"name":"Badam Milk","category":"Drinks","time":"15 min","serves":2,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Badam_milk.jpg?width=800","description":"Creamy almond milk drink flavored with cardamom and saffron, served warm or chilled.","ingredients":["2 cups milk","12 almonds soaked and peeled","2 tbsp sugar","2 cardamoms","Pinch of saffron optional","Chopped pistachios"],"method":["Blend almonds with a little milk.","Heat remaining milk gently.","Add almond paste, sugar and cardamom.","Simmer for several minutes.","Garnish with pistachios and serve warm or chilled."]}
+{
+  "id": 43,
+  "name": "Badam Milk",
+  "category": "Drinks",
+  "time": "15 min",
+  "serves": 2,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Badam_milk.jpg?width=800",
+  "description": "Creamy badam milk made with almonds, milk and cardamom, with optional saffron and pistachio for a fragrant warm or chilled drink.",
+  "ingredients": [
+    "2 cups milk",
+    "12 almonds, soaked and peeled",
+    "2 tbsp sugar, or to taste",
+    "2 green cardamom pods, lightly crushed",
+    "1 pinch saffron, optional",
+    "Chopped pistachios, for garnish"
+  ],
+  "method": [
+    "Blend the soaked, peeled almonds with a small amount of the milk until as smooth as your blender allows.",
+    "Warm the remaining milk gently in a saucepan, stirring occasionally so it does not catch on the base.",
+    "Add the almond paste, sugar and cardamom and stir thoroughly to disperse the almond mixture.",
+    "Simmer gently for several minutes, stirring regularly, until the drink is fragrant and slightly richer in texture. Add saffron during this stage if using.",
+    "Taste and adjust sweetness, then pour into cups for a warm drink or cool promptly and refrigerate if you prefer it chilled.",
+    "Garnish with chopped pistachios just before serving."
+  ]
+}
