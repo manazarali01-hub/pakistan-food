@@ -1,1 +1,35 @@
-{"id":13,"name":"Gulab Jamun","category":"Desserts","time":"50 min","serves":8,"image":"assets/gulab-jamun.webp","description":"Soft golden milk-powder dumplings fried gently and soaked in warm cardamom sugar syrup.","ingredients":["1 cup milk powder","¼ cup plain flour","½ tsp baking powder","2 tbsp ghee","¼ cup milk, approximately and added gradually","1½ cups sugar","1½ cups water","4 green cardamoms, lightly crushed","½ tsp lemon juice, optional","Neutral oil or ghee for frying"],"method":["Combine sugar, water and cardamom in a saucepan. Simmer for 6–8 minutes until the sugar dissolves and a light syrup forms. Add lemon juice if using, then keep the syrup warm rather than boiling hard.","Mix milk powder, flour and baking powder. Rub in 2 tbsp ghee, then add milk a little at a time to form a soft dough. Do not over-knead.","Rest the dough for 5–10 minutes, then shape into small smooth balls without cracks; they will expand while soaking.","Heat frying oil or ghee over low to medium-low heat. Fry the balls slowly, moving them gently for even colour, until deep golden and cooked through.","Let the fried balls rest briefly, then place them in warm—not vigorously boiling—syrup.","Soak for at least 1–2 hours so the gulab jamun absorb syrup and soften before serving."],"tips":["High frying heat can brown the outside before the centre cooks.","Add milk gradually because milk-powder mixtures can become sticky quickly.","Smooth, crack-free balls are less likely to split while frying."],"storage":"Refrigerate covered in syrup for up to 3 days. Warm gently before serving if desired."}
+{
+  "id": 13,
+  "name": "Gulab Jamun",
+  "category": "Desserts",
+  "time": "50 min",
+  "serves": 8,
+  "image": "assets/gulab-jamun.webp",
+  "description": "Soft Pakistani gulab jamun made from a tender milk-powder dough, fried slowly for even cooking and soaked in warm cardamom syrup.",
+  "ingredients": [
+    "1 cup milk powder",
+    "¼ cup plain flour",
+    "½ tsp baking powder",
+    "2 tbsp ghee",
+    "¼ cup milk, approximately and added gradually",
+    "1½ cups sugar",
+    "1½ cups water",
+    "4 green cardamoms, lightly crushed",
+    "½ tsp lemon juice, optional",
+    "Neutral oil or ghee for frying"
+  ],
+  "method": [
+    "Combine the sugar, water and cardamom in a saucepan. Simmer until the sugar is fully dissolved and a light syrup forms; add the optional lemon juice, then keep the syrup warm without boiling it hard.",
+    "Mix the milk powder, flour and baking powder evenly. Rub in the ghee, then add milk little by little just until a soft cohesive dough forms; excessive kneading can make the finished jamun dense.",
+    "Rest the dough briefly, then divide and roll into small smooth balls. Seal visible cracks before frying because rough or cracked surfaces are more likely to split.",
+    "Heat the frying oil or ghee over low to medium-low heat. Add a test ball first if needed, then fry in manageable batches, moving the balls gently so they colour evenly and cook through before becoming too dark.",
+    "Let the fried balls rest very briefly, then transfer them to warm—not vigorously boiling—syrup so they can absorb it without a severe temperature shock.",
+    "Leave the gulab jamun in the syrup until noticeably softer and well soaked before serving. Keep them in enough syrup that exposed surfaces do not dry out."
+  ],
+  "tips": [
+    "High frying heat can brown the outside before the centre cooks.",
+    "Add milk gradually because milk-powder mixtures can become sticky quickly.",
+    "Smooth, crack-free balls are less likely to split while frying."
+  ],
+  "storage": "Cool leftovers appropriately and refrigerate them covered in their syrup. Warm gently for serving if desired rather than repeatedly heating the whole batch."
+}
