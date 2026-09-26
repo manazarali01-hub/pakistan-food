@@ -1,1 +1,24 @@
-{"id":38,"name":"Sattu Sharbat","category":"Drinks","time":"8 min","serves":2,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Sattu.jpg?width=800","description":"A refreshing traditional drink made with roasted gram flour, chilled water, lemon and a touch of salt.","ingredients":["4 tbsp sattu","2 cups chilled water","2 tbsp lemon juice","1 tbsp sugar","Pinch of black salt","Ice cubes"],"method":["Add sattu to chilled water.","Mix thoroughly until smooth.","Add lemon juice, sugar and black salt.","Stir well with ice.","Serve immediately."]}
+{
+  "id": 38,
+  "name": "Sattu Sharbat",
+  "category": "Drinks",
+  "time": "8 min",
+  "serves": 2,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sattu.jpg?width=800",
+  "description": "Refreshing sattu sharbat made with roasted gram flour, chilled water, lemon and black salt, balanced between tangy, lightly sweet and savoury flavours.",
+  "ingredients": [
+    "4 tbsp sattu (roasted gram flour)",
+    "2 cups chilled water",
+    "2 tbsp lemon juice",
+    "1 tbsp sugar, or to taste",
+    "1 pinch black salt",
+    "Ice cubes, for serving"
+  ],
+  "method": [
+    "Put the sattu in a jug and add a small amount of the chilled water first, whisking it into a smooth slurry so dry lumps do not remain.",
+    "Gradually whisk in the remaining chilled water until the sattu is evenly dispersed.",
+    "Add lemon juice, sugar and black salt and stir until the sugar dissolves.",
+    "Taste the fully diluted drink and adjust sweetness, lemon or salt in small amounts rather than changing several flavours at once.",
+    "Stir again just before pouring because sattu can settle, then serve immediately over ice."
+  ]
+}
