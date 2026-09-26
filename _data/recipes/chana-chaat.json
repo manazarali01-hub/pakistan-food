@@ -1,1 +1,26 @@
-{"id":26,"name":"Chana Chaat","category":"Snacks","time":"20 min","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Chana_Chaat.jpg?width=800","description":"Tangy Pakistani chickpea chaat mixed with potatoes, vegetables, chutney and chaat masala.","ingredients":["2 cups boiled chickpeas","2 boiled potatoes","1 tomato","1 onion","2 green chilies","2 tbsp tamarind chutney","1 tsp chaat masala","Fresh coriander"],"method":["Combine chickpeas and diced potatoes.","Add onion, tomato and green chilies.","Mix in tamarind chutney and chaat masala.","Garnish with coriander.","Serve fresh."]}
+{
+  "id": 26,
+  "name": "Chana Chaat",
+  "category": "Snacks",
+  "time": "20 min",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chana_Chaat.jpg?width=800",
+  "description": "Tangy Pakistani chana chaat with tender chickpeas, potatoes, fresh vegetables, tamarind chutney and chaat masala.",
+  "ingredients": [
+    "2 cups boiled chickpeas, drained and tender",
+    "2 boiled potatoes, cooled and diced",
+    "1 tomato, diced",
+    "1 onion, finely chopped",
+    "2 green chillies, finely sliced or chopped",
+    "2 tbsp tamarind chutney, or to taste",
+    "1 tsp chaat masala, or to taste",
+    "Fresh coriander, chopped for garnish"
+  ],
+  "method": [
+    "Make sure the chickpeas are fully tender and well drained, then place them in a large mixing bowl with the cooled diced potatoes.",
+    "Add the onion, tomato and green chillies, keeping the pieces small enough to distribute through each serving.",
+    "Add the tamarind chutney and chaat masala and fold gently so the potatoes keep their shape.",
+    "Taste the assembled chaat and adjust chutney or chaat masala gradually rather than making it overly sour or salty at once.",
+    "Fold in or garnish with fresh coriander and serve soon after mixing so the vegetables remain fresh and the chaat does not become watery."
+  ]
+}
