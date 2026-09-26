@@ -1,1 +1,31 @@
-{"id":12,"name":"Rice Kheer","category":"Desserts","time":"75 min","serves":6,"image":"assets/kheer.webp","description":"Traditional creamy Pakistani rice pudding slowly cooked with milk, basmati rice, cardamom and nuts.","ingredients":["1 litre full-fat milk","¼ cup basmati rice, rinsed and soaked for 20–30 minutes","½ cup sugar, or to taste","4 green cardamoms, lightly crushed","2 tbsp sliced almonds","2 tbsp sliced pistachios","1 tsp rose water, optional"],"method":["Drain the soaked rice. Bring the milk to a gentle boil in a heavy-bottomed pot, stirring so it does not catch.","Add the rice and cardamom, reduce the heat and simmer gently, stirring regularly, until the rice is very soft and the milk has reduced.","Lightly mash some of the softened rice against the side of the pot to give the kheer a naturally creamy texture.","Add the sugar only after the rice is tender. Continue cooking over low heat until the sugar dissolves and the kheer reaches a creamy consistency.","Stir in most of the almonds and pistachios and cook for another 2–3 minutes. Add rose water after turning off the heat if using.","Serve warm, or cool promptly and refrigerate until chilled. Garnish with the remaining nuts."],"tips":["Use a heavy pot and stir frequently, especially near the end, because milk can scorch easily.","Kheer thickens further as it cools, so stop cooking while it is slightly looser than your final desired consistency."],"storage":"Cool promptly, cover and refrigerate for up to 2 days. Keep chilled until serving."}
+{
+  "id": 12,
+  "name": "Rice Kheer",
+  "category": "Desserts",
+  "time": "75 min",
+  "serves": 6,
+  "image": "assets/kheer.webp",
+  "description": "Creamy Pakistani rice kheer slowly simmered with basmati rice, full-fat milk and cardamom, then finished with nuts for a rich but spoonable texture.",
+  "ingredients": [
+    "1 litre full-fat milk",
+    "¼ cup basmati rice, rinsed and soaked for 20–30 minutes",
+    "½ cup sugar, or to taste",
+    "4 green cardamoms, lightly crushed",
+    "2 tbsp sliced almonds",
+    "2 tbsp sliced pistachios",
+    "1 tsp rose water, optional"
+  ],
+  "method": [
+    "Drain the soaked rice. Pour the milk into a heavy-bottomed pot and bring it gradually to a gentle simmer, stirring across the base so the milk does not scorch.",
+    "Add the drained rice and crushed cardamom. Cook over low to medium-low heat, stirring regularly, until the rice becomes very soft and the milk reduces noticeably.",
+    "Lightly mash some of the softened rice against the side of the pot and stir it back in; this releases starch and thickens the kheer naturally without needing a separate thickener.",
+    "Add the sugar only after the rice is tender. Stir until dissolved, then continue simmering gently because the sugar can loosen the mixture temporarily.",
+    "Add most of the almonds and pistachios and cook briefly until the kheer is creamy but still slightly looser than your final target, since it thickens further while cooling.",
+    "Turn off the heat and add rose water if using. Serve warm, or cool promptly and refrigerate before serving chilled, garnished with the remaining nuts."
+  ],
+  "tips": [
+    "Use a heavy pot and stir frequently, especially near the end, because milk can scorch easily.",
+    "Kheer thickens further as it cools, so stop cooking while it is slightly looser than your final desired consistency."
+  ],
+  "storage": "Cool leftover kheer promptly, keep it covered and refrigerated, and discard it if it has been left unrefrigerated for an unsafe length of time."
+}
