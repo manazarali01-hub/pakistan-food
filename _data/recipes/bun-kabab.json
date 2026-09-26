@@ -1,1 +1,27 @@
-{"id":48,"name":"Bun Kabab","category":"Snacks","time":"35 min","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:FilePath/Bun_Kabab.JPG?width=900","description":"Classic Pakistani street-food bun kabab with a spicy patty, chutney, onion and egg.","ingredients":["4 burger buns","4 shami kababs","2 eggs","1 onion sliced","Green chutney","Tamarind chutney","Chaat masala","Oil"],"method":["Shallow fry the kababs.","Cook beaten egg and coat or top kababs.","Toast buns lightly.","Spread chutneys on buns.","Add kabab, onion and chaat masala and serve hot."]}
+{
+  "id": 48,
+  "name": "Bun Kabab",
+  "category": "Snacks",
+  "time": "35 min",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bun_Kabab.JPG?width=900",
+  "description": "Pakistani street-style bun kabab with hot shami kabab, egg, chutneys, onion and chaat masala in a lightly toasted bun.",
+  "ingredients": [
+    "4 burger buns",
+    "4 prepared shami kababs",
+    "2 eggs, lightly beaten",
+    "1 medium onion, thinly sliced",
+    "Green chutney, as needed",
+    "Tamarind chutney, as needed",
+    "Chaat masala, to taste",
+    "Cooking oil, for frying and toasting"
+  ],
+  "method": [
+    "Heat a little oil in a pan and shallow-fry the prepared shami kababs until hot through and browned on both sides.",
+    "Season the beaten eggs lightly if desired, pour into the pan and cook as a thin omelette; divide it among the four buns or coat the kababs in egg according to your preferred bun-kabab style.",
+    "Split the buns and toast the cut sides lightly on the pan so they are warm without becoming hard.",
+    "Spread green chutney and tamarind chutney over the toasted buns, adjusting the sweet, sour and spicy balance to taste.",
+    "Place a hot kabab and egg in each bun, then add sliced onion and a light sprinkle of chaat masala.",
+    "Close the buns and serve immediately while the kabab is hot and the bread is still lightly crisp at the edges."
+  ]
+}
