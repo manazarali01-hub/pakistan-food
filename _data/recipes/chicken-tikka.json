@@ -1,1 +1,35 @@
-{"id":52,"name":"Chicken Tikka","category":"BBQ","time":"45 min plus marinating","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Tikka.jpg?width=900","description":"Smoky Pakistani chicken tikka marinated in yogurt, lemon, ginger-garlic and spices, then grilled until charred and juicy.","ingredients":["800 g boneless chicken pieces, similar size","1 cup plain yogurt","2 tbsp lemon juice","1½ tbsp ginger-garlic paste","1 tsp red chili powder","1 tsp roasted cumin powder","1 tsp coriander powder","½ tsp garam masala","1 tbsp oil","Salt to taste"],"method":["Mix yogurt, lemon juice, ginger-garlic paste, spices, oil and salt into a smooth marinade.","Coat the chicken thoroughly, cover and marinate in the refrigerator for at least 2 hours.","Thread the chicken onto skewers with a little space between pieces, or arrange on a grill rack.","Grill over medium-high to high heat, turning regularly, until lightly charred and fully cooked. The thickest pieces should reach at least 74°C/165°F.","Rest for a few minutes, then serve hot with mint chutney, sliced onion and lemon."],"tips":["Keep the chicken pieces similar in size so they finish cooking at the same time.","Marinate raw chicken in the refrigerator and discard marinade that has contacted raw chicken unless it is thoroughly cooked."],"storage":"Cool cooked chicken promptly and refrigerate covered for up to 2 days. Reheat until piping hot throughout."}
+{
+  "id": 52,
+  "name": "Chicken Tikka",
+  "category": "BBQ",
+  "time": "45 min plus marinating",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Tikka.jpg?width=900",
+  "description": "Smoky Pakistani chicken tikka marinated in yogurt, lemon, ginger-garlic and spices, then grilled over strong heat for juicy pieces with charred edges.",
+  "ingredients": [
+    "800 g boneless chicken, cut into similar-size pieces",
+    "1 cup plain yogurt, preferably thick",
+    "2 tbsp lemon juice",
+    "1½ tbsp ginger-garlic paste",
+    "1 tsp red chilli powder",
+    "1 tsp roasted cumin powder",
+    "1 tsp coriander powder",
+    "½ tsp garam masala",
+    "1 tbsp cooking oil",
+    "Salt to taste"
+  ],
+  "method": [
+    "Pat the chicken dry and cut it into similar-size pieces so they cook at roughly the same rate.",
+    "Mix the yogurt, lemon juice, ginger-garlic paste, red chilli, cumin, coriander, garam masala, oil and salt into a smooth marinade.",
+    "Coat the chicken thoroughly, cover and marinate in the refrigerator for at least 2 hours. Keep raw chicken chilled throughout marination.",
+    "Thread the pieces onto skewers with a little space between them, or arrange them in a single layer on a grill rack so heat can circulate.",
+    "Grill over medium-high to high heat, turning as needed, until the exterior has charred spots and the thickest pieces are fully cooked. Use a reliable doneness check rather than judging by surface colour alone.",
+    "Rest the cooked tikka for a few minutes, then serve hot with mint chutney, sliced onion and lemon."
+  ],
+  "tips": [
+    "Keep the chicken pieces similar in size so they finish cooking together.",
+    "Do not reuse marinade that has contacted raw chicken as a serving sauce unless it has been thoroughly cooked first.",
+    "Avoid repeatedly cutting every piece open during grilling, which releases juices and makes consistent cooking harder."
+  ],
+  "storage": "Cool leftovers promptly, refrigerate covered, and reheat only the portion you plan to serve until thoroughly hot."
+}
