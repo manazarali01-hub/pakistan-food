@@ -138,7 +138,7 @@
   <header class="cat-site-header">
     <nav class="cat-site-nav" aria-label="Main navigation">
       <a class="cat-site-brand" href="../../index.html"><img src="../../assets/pakistan-food-logo.svg" alt="" width="38" height="38">Pakistan Food</a>
-      <div class="cat-site-links"><a href="../index.html">All Recipes</a><a href="../../about.html">About</a><a href="../../index.html#contact">Contact</a></div>
+      <div class="cat-site-links"><a href="../index.html">All Recipes</a><a href="../../guides/">Cooking Guides</a><a href="../../about.html">About</a><a href="../../index.html#contact">Contact</a></div>
     </nav>
   </header>
   <main class="cat" id="category-content">
@@ -171,6 +171,21 @@
         <li>Follow cooking times as a guide and check doneness before serving.</li>
         <li>Explore related categories below for more Pakistani meal ideas.</li>
       </ul>
+    </section>
+    <section class="cat-guide">
+      <h2>Learn More About Pakistani {{ category_name }} Cooking</h2>
+      {% case category_slug %}
+        {% when 'rice' %}<p><a href="../../guides/pakistani-rice-dishes-guide.html">Pakistani rice dishes guide</a> · <a href="../../guides/biryani-vs-pulao.html">Biryani vs pulao</a> · <a href="../../guides/best-rice-for-biryani.html">Best rice for biryani</a></p>
+        {% when 'chicken' %}<p><a href="../../guides/karahi-vs-qorma.html">Karahi vs qorma</a> · <a href="../../guides/qorma-vs-handi.html">Qorma vs handi</a> · <a href="../../guides/how-long-to-marinate-chicken-tikka.html">Chicken tikka marinating guide</a></p>
+        {% when 'beef' %}<p><a href="../../guides/best-meat-for-nihari.html">Best meat for nihari</a> · <a href="../../guides/how-to-cook-paya-until-tender.html">Cook paya until tender</a> · <a href="../../guides/how-to-make-haleem-smooth.html">Make haleem smooth</a></p>
+        {% when 'bbq' %}<p><a href="../../guides/chapli-vs-seekh-kabab.html">Chapli vs seekh kabab</a> · <a href="../../guides/how-to-keep-kabab-juicy.html">Keep kababs juicy</a> · <a href="../../guides/seekh-kabab-not-sticking.html">Seekh kabab shaping tips</a></p>
+        {% when 'snacks' %}<p><a href="../../guides/how-to-keep-samosas-crispy.html">Keep samosas crispy</a> · <a href="../../guides/why-pakora-gets-oily.html">Why pakora gets oily</a> · <a href="../../guides/chana-chaat-vs-dahi-bhallay.html">Chana chaat vs dahi bhallay</a></p>
+        {% when 'breakfast' %}<p><a href="../../guides/pakistani-breakfast-guide.html">Pakistani breakfast guide</a> · <a href="../../guides/how-to-make-soft-aloo-paratha.html">Make soft aloo paratha</a> · <a href="../../guides/doodh-patti-vs-masala-chai.html">Doodh patti vs masala chai</a></p>
+        {% when 'desserts' %}<p><a href="../../guides/traditional-pakistani-desserts.html">Traditional Pakistani desserts</a> · <a href="../../guides/how-to-make-gulab-jamun-soft.html">Make gulab jamun soft</a> · <a href="../../guides/best-way-to-store-pakistani-sweets.html">Store Pakistani sweets safely</a></p>
+        {% when 'drinks' %}<p><a href="../../guides/sweet-vs-salted-lassi.html">Sweet vs salted lassi</a> · <a href="../../guides/lassi-vs-mango-lassi.html">Lassi vs mango lassi</a> · <a href="../../guides/how-to-make-kashmiri-chai-pink.html">Make Kashmiri chai pink</a></p>
+        {% when 'vegetarian' %}<p><a href="../../guides/how-to-cook-daal-without-mushy-texture.html">Control daal texture</a> · <a href="../../guides/how-to-remove-bitterness-from-sarson-ka-saag.html">Balance saag bitterness</a> · <a href="../../guides/pakistani-food-guide.html">Pakistani food guide</a></p>
+      {% endcase %}
+      <p><a href="../../guides/">Browse all Pakistani cooking guides →</a></p>
     </section>
     <nav class="category-nav" aria-label="Other recipe categories"><a href="../rice/">Rice</a><a href="../chicken/">Chicken</a><a href="../beef/">Beef</a><a href="../bbq/">BBQ</a><a href="../snacks/">Snacks</a><a href="../breakfast/">Breakfast</a><a href="../desserts/">Desserts</a><a href="../drinks/">Drinks</a><a href="../vegetarian/">Vegetarian</a></nav>
     <p><a href="../index.html">← Browse all Pakistani recipes</a></p>
