@@ -1,1 +1,37 @@
-{"id":4,"name":"Chicken Handi","category":"Chicken","time":"50 min","serves":4,"image":"assets/chicken-handi.webp","description":"Creamy Pakistani chicken handi cooked in a rich tomato-yogurt masala and finished gently with cream.","ingredients":["750 g boneless chicken, bite-size pieces","½ cup cooking cream","½ cup plain yogurt, whisked","4 medium tomatoes, blended","1 medium onion, finely chopped","1½ tbsp ginger-garlic paste","1 tsp red chili powder","½ tsp coriander powder","½ tsp garam masala","4 tbsp cooking oil","1 tsp salt, or to taste","2 green chilies and fresh coriander, for garnish"],"method":["Heat oil in a heavy pan over medium heat and cook the onion until lightly golden.","Add ginger-garlic paste and chicken. Fry for 5–7 minutes until the chicken changes colour and begins to brown.","Add blended tomatoes, red chili, coriander powder and salt. Cook uncovered until the tomatoes reduce and the masala becomes glossy.","Lower the heat. Add the whisked yogurt gradually while stirring and cook until the masala thickens again and oil appears at the edges.","Cover and cook gently until the chicken is fully cooked, adding only a small splash of water if the masala starts sticking.","Reduce the heat to low, stir in the cream and garam masala, and simmer gently for 3–5 minutes without a hard boil.","Taste for seasoning, garnish with green chilies and coriander, and serve hot."],"tips":["Add yogurt over moderate-to-low heat and stir to reduce the chance of splitting.","After adding cream, keep the heat gentle so the sauce remains smooth."],"storage":"Cool promptly and refrigerate covered for up to 2 days. Reheat until the chicken and sauce are piping hot throughout."}
+{
+  "id": 4,
+  "name": "Chicken Handi",
+  "category": "Chicken",
+  "time": "50 min",
+  "serves": 4,
+  "image": "assets/chicken-handi.webp",
+  "description": "Creamy Pakistani chicken handi with boneless chicken cooked in a concentrated tomato-yogurt masala and finished gently with cream and garam masala.",
+  "ingredients": [
+    "750 g boneless chicken, bite-size pieces",
+    "½ cup cooking cream",
+    "½ cup plain yogurt, whisked",
+    "4 medium tomatoes, blended",
+    "1 medium onion, finely chopped",
+    "1½ tbsp ginger-garlic paste",
+    "1 tsp red chili powder",
+    "½ tsp coriander powder",
+    "½ tsp garam masala",
+    "4 tbsp cooking oil",
+    "1 tsp salt, or to taste",
+    "2 green chilies and fresh coriander, for garnish"
+  ],
+  "method": [
+    "Heat the oil in a heavy pan over medium heat and cook the chopped onion until softened and lightly golden.",
+    "Add the ginger-garlic paste and boneless chicken. Fry for several minutes, turning the pieces, until the chicken loses its raw exterior colour and begins to brown.",
+    "Add the blended tomatoes, red chilli, coriander powder and salt. Cook uncovered, stirring regularly, until the tomato mixture reduces and no longer looks raw or watery.",
+    "Lower the heat and stir in the smoothly whisked yogurt gradually. Continue cooking until the masala becomes cohesive again and excess yogurt moisture has reduced.",
+    "Cover and cook gently until the chicken is fully cooked and tender, adding only a small splash of hot water if the masala becomes too dry before the chicken is done.",
+    "Reduce to low heat, stir in the cream and garam masala and warm gently for a few minutes without boiling aggressively.",
+    "Taste for seasoning, adjust the final thickness, garnish with green chillies and coriander and serve hot."
+  ],
+  "tips": [
+    "Add yogurt over moderate-to-low heat and stir to reduce the chance of splitting.",
+    "After adding cream, keep the heat gentle so the sauce remains smooth."
+  ],
+  "storage": "Cool leftover handi promptly and refrigerate covered. Reheat gently until the chicken and sauce are thoroughly hot."
+}
