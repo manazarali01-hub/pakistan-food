@@ -1,1 +1,37 @@
-{"id":24,"name":"Chicken Shawarma","category":"Snacks","time":"60 min plus marinating","serves":4,"image":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Shawarma.jpg?width=800","description":"Juicy yogurt-marinated spiced chicken wrapped in soft flatbread with crisp vegetables and creamy garlic sauce.","ingredients":["500 g boneless chicken, thin strips","4 flatbreads","½ cup plain yogurt","1 tbsp lemon juice","1 tbsp cooking oil","1 tsp ground cumin","1 tsp paprika","½ tsp ground coriander","½ tsp black pepper","1 tsp salt, or to taste","1 cup shredded cabbage","½ cucumber, thinly sliced","Garlic sauce, as needed"],"method":["Mix yogurt, lemon juice, oil, cumin, paprika, coriander, black pepper and salt. Coat the chicken and marinate covered in the refrigerator for at least 1 hour.","Heat a wide pan or grill pan over medium-high heat. Cook the chicken in batches so it browns rather than steams.","Turn the pieces and continue cooking until browned and fully cooked through; chicken should reach 74°C/165°F in the thickest pieces.","Rest the chicken for a few minutes, then slice into smaller strips if needed.","Warm the flatbreads, add cabbage, cucumber and chicken, drizzle with garlic sauce, then roll tightly and serve immediately."],"tips":["Marinate chicken in the refrigerator, not at room temperature.","Avoid overcrowding the pan so the chicken develops browned edges."],"storage":"Refrigerate cooked chicken promptly for up to 2 days. Keep vegetables and sauce separate and assemble wraps just before serving."}
+{
+  "id": 24,
+  "name": "Chicken Shawarma",
+  "category": "Snacks",
+  "time": "60 min plus marinating",
+  "serves": 4,
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Shawarma.jpg?width=800",
+  "description": "Home-style chicken shawarma with yogurt-marinated spiced chicken, browned in a hot pan and wrapped in warm flatbread with crisp vegetables and garlic sauce.",
+  "ingredients": [
+    "500 g boneless chicken, thin strips",
+    "4 flatbreads",
+    "½ cup plain yogurt",
+    "1 tbsp lemon juice",
+    "1 tbsp cooking oil",
+    "1 tsp ground cumin",
+    "1 tsp paprika",
+    "½ tsp ground coriander",
+    "½ tsp black pepper",
+    "1 tsp salt, or to taste",
+    "1 cup shredded cabbage",
+    "½ cucumber, thinly sliced",
+    "Garlic sauce, as needed"
+  ],
+  "method": [
+    "Mix the yogurt, lemon juice, oil, cumin, paprika, coriander, black pepper and salt into a smooth marinade. Coat the chicken thoroughly, cover and refrigerate for at least 1 hour.",
+    "Take out only the chicken you are ready to cook. Heat a wide pan or grill pan over medium-high heat until properly hot before adding the first batch.",
+    "Cook the chicken in uncrowded batches so released moisture can evaporate and the strips develop browned edges instead of steaming.",
+    "Turn the pieces as needed and continue until the chicken is fully cooked through. Check the thickest pieces rather than relying only on exterior colour.",
+    "Rest the cooked chicken briefly, then cut larger pieces into easy-to-eat strips if necessary. Warm the flatbreads separately so they bend without tearing.",
+    "Layer cabbage, cucumber and hot chicken over each flatbread, add garlic sauce, roll tightly and serve immediately so the vegetables stay crisp."
+  ],
+  "tips": [
+    "Marinate chicken in the refrigerator, not at room temperature.",
+    "Avoid overcrowding the pan so the chicken develops browned edges."
+  ],
+  "storage": "Cool leftover cooked chicken promptly and refrigerate it covered. Store vegetables and sauce separately and assemble fresh wraps only when serving."
+}
