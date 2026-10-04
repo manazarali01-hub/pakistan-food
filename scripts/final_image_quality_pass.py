@@ -72,15 +72,13 @@ COMMONS = {
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
         "zoom": 0.90,
     },
-}
-
-PEXELS = {
     "aloo-gosht": {
-        "page": "https://www.pexels.com/photo/bowl-with-roasted-potatoes-17543143/",
-        "author": "Nadin Sh",
-        "license": "Pexels License",
-        "license_url": "https://www.pexels.com/license/",
-        "zoom": 0.91,
+        "filename": "Odia Mutton Curry (Mansha Tarkari).jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Odia_Mutton_Curry_(Mansha_Tarkari).jpg",
+        "author": "Satwik Cuttack",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "zoom": 0.90,
     },
 }
 
@@ -111,23 +109,6 @@ def request_bytes(url, accept="image/avif,image/webp,image/apng,image/*,*/*;q=0.
 def fetch_commons(filename):
     url = "https://commons.wikimedia.org/wiki/Special:FilePath/" + urllib.parse.quote(filename) + "?width=1800"
     return request_bytes(url)
-
-def fetch_pexels(page_url):
-    page, _, _ = request_bytes(page_url, "text/html,application/xhtml+xml")
-    text = page.decode("utf-8", errors="replace")
-    patterns = [
-        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-    ]
-    image_url = None
-    for pattern in patterns:
-        match = re.search(pattern, text, flags=re.I)
-        if match:
-            image_url = html.unescape(match.group(1))
-            break
-    if not image_url:
-        raise RuntimeError(f"Could not discover Pexels og:image: {page_url}")
-    return request_bytes(image_url)
 
 def open_rgb(raw_or_path):
     if isinstance(raw_or_path, bytes):
@@ -230,15 +211,6 @@ def replace_commons(slug, meta):
     write_recipe(path, data)
     return {"slug": slug, "action": "replace-commons", "resolved": resolved, "content_type": content_type, **info}
 
-def replace_pexels(slug, meta):
-    path, data = recipe(slug)
-    raw, resolved, content_type = fetch_pexels(meta["page"])
-    im = crop_4x3(open_rgb(raw), zoom=meta.get("zoom", 0.92))
-    info = save_webp(im, image_path(data))
-    apply_source(data, meta["page"], meta["author"], meta["license"], meta["license_url"], "Pexels")
-    write_recipe(path, data)
-    return {"slug": slug, "action": "replace-pexels", "resolved": resolved, "content_type": content_type, **info}
-
 def zoom_existing(slug, factor):
     path, data = recipe(slug)
     out = image_path(data)
@@ -254,14 +226,12 @@ def main():
 
     for slug, meta in COMMONS.items():
         results.append(replace_commons(slug, meta))
-    for slug, meta in PEXELS.items():
-        results.append(replace_pexels(slug, meta))
     for slug, factor in ZOOM.items():
         results.append(zoom_existing(slug, factor))
 
     # Mutton biryani intentionally untouched: user explicitly approved it.
     # Chicken Handi remains existing real local photo, only reframed.
-    expected = {"pakistani-samosa", *COMMONS.keys(), *PEXELS.keys(), *ZOOM.keys()}
+    expected = {"pakistani-samosa", *COMMONS.keys(), *ZOOM.keys()}
     done = {row["slug"] for row in results}
     if done != expected:
         raise RuntimeError(f"Image pass mismatch: expected {sorted(expected)}, got {sorted(done)}")
