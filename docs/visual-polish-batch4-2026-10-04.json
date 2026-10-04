@@ -1,0 +1,44 @@
+{
+  "policy": "Real openly licensed food photography only.",
+  "cache_version": "20261004-final8",
+  "changed": [
+    "chicken-biryani",
+    "chicken-qorma",
+    "mutton-karahi",
+    "reshmi-kabab"
+  ],
+  "results": [
+    {
+      "slug": "chicken-biryani",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Lahori_Biryani.jpg/1920px-Lahori_Biryani.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 214524
+    },
+    {
+      "slug": "chicken-qorma",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Chicken_Korma.JPG/1920px-Chicken_Korma.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 252790
+    },
+    {
+      "slug": "mutton-karahi",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Mutton_Karahi_2.JPG/1920px-Mutton_Karahi_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 339354
+    },
+    {
+      "slug": "reshmi-kabab",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Chicken_reshmi_kebabs.jpg/1920px-Chicken_reshmi_kebabs.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 326416
+    }
+  ]
+}

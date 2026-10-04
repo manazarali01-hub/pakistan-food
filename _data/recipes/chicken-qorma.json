@@ -4,7 +4,7 @@
   "category": "Chicken",
   "time": "60 min",
   "serves": 5,
-  "image": "assets/recipe-images/chicken-qorma.webp",
+  "image": "assets/recipe-images/chicken-qorma-v2.webp",
   "description": "Pakistani chicken qorma with deeply golden onions, yogurt and whole spices cooked into a rich aromatic gravy without splitting the yogurt.",
   "ingredients": [
     "1 kg chicken, curry cut",
@@ -38,8 +38,8 @@
   "cook_time_iso": "PT45M",
   "total_time_iso": "PT1H",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani chicken qorma with rich yogurt gravy, deeply golden onions and whole spices",
-  "image_caption": "Chicken qorma built from deep-golden fried onions, yogurt and aromatic whole spices.",
+  "image_alt": "Pakistani chicken qorma with chicken pieces in a rich red-brown gravy",
+  "image_caption": "Chicken qorma with tender chicken pieces in a rich reduced gravy.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Korma.JPG",
   "technique": "The onion stage gives qorma both colour and body. Fry sliced onions evenly deep golden, not burnt, cool and crush them, then cook the yogurt masala patiently until its raw tang disappears before adding the final simmering liquid.",
   "doneness_cues": [
@@ -77,5 +77,7 @@
   ],
   "image_author": "Miansari66",
   "image_license": "CC0 1.0",
-  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "image_creator": "Miansari66",
+  "image_source_label": "Wikimedia Commons"
 }
