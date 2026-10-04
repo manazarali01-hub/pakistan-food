@@ -1299,7 +1299,7 @@ body:not(.dark) main img {
   width:min(1100px,92%);margin:auto;min-height:68px;
   display:flex;align-items:center;justify-content:space-between;gap:20px;
 }
-.guide-site-brand{font-weight:850;color:var(--primary);text-decoration:none;white-space:nowrap}
+.guide-site-brand{min-height:44px;display:inline-flex;align-items:center;font-weight:850;color:var(--primary);text-decoration:none;white-space:nowrap}
 .guide-site-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .guide-site-links a{color:var(--text);font-weight:700;text-decoration:none}
 .guide-site-links a:hover,.guide-site-links a:focus-visible{color:var(--primary)}
@@ -1312,7 +1312,7 @@ body:not(.dark) main img {
   width:min(860px,92%);margin:18px auto 0;padding:12px 0;
   color:var(--muted);font-size:.88rem;
 }
-.guide-trustline a{color:var(--primary);font-weight:700}
+.guide-trustline a{min-height:32px;display:inline-flex;align-items:center;padding:5px 2px;color:var(--primary);font-weight:700}
 @media(max-width:700px){
   .guide-site-nav{align-items:flex-start;flex-direction:column;padding:12px 0}
   .guide-site-links{gap:8px 14px}
