@@ -75,6 +75,13 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
             errors.append(f"{slug}: image_source must point to the Commons file page")
         if bool(recipe.get("image_author")) != bool(recipe.get("image_license")):
             errors.append(f"{slug}: image_author and image_license must be supplied together")
+    elif "staticflickr.com" in image:
+        source_url = str(recipe.get("image_source", ""))
+        if "flickr.com/photos/" not in source_url:
+            errors.append(f"{slug}: Flickr image_source must point to the Flickr photo page")
+        for field in ("image_author", "image_license", "image_license_url", "image_source_label"):
+            if not recipe.get(field):
+                errors.append(f"{slug}: {field} is required for Flickr image attribution")
     for field in ("ingredients", "method"):
         if field in recipe and (not isinstance(recipe[field], list) or not all(isinstance(s, str) and s.strip() for s in recipe[field])):
             errors.append(f"{slug}: {field} must be a non-empty list of text")
