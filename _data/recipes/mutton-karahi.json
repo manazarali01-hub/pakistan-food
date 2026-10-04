@@ -62,5 +62,7 @@
   "serving": "Serve with naan or roti and extra julienned ginger.",
   "image_author": "Miansari66",
   "image_license": "CC0 1.0",
-  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "image_zoom": 1.12,
+  "image_position": "50% 52%"
 }
