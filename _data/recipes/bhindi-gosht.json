@@ -59,5 +59,7 @@
   "serving": "Serve with roti or naan.",
   "image_author": "Miansari66",
   "image_license": "Public domain",
-  "image_license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain"
+  "image_license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+  "image_zoom": 1.2,
+  "image_position": "50% 50%"
 }
