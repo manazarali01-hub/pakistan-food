@@ -166,13 +166,16 @@ def main():
         zoom=0.90, focal_x=0.53, focal_y=0.52,
     ))
 
-    # Clearer, food-forward Daal Chawal.
-    results.append(replace_pexels(
+    # High-resolution daal-and-rice plate, tightly cropped around the food.
+    results.append(replace_commons(
         "daal-chawal",
-        "https://www.pexels.com/photo/meal-with-rice-on-plate-8996219/",
-        "I Own My Food Art",
+        "Rice with Lentils.jpg",
+        "https://commons.wikimedia.org/wiki/File:Rice_with_Lentils.jpg",
+        "Mrsagar105",
+        "CC BY-SA 4.0",
+        "https://creativecommons.org/licenses/by-sa/4.0/",
         "assets/recipe-images/daal-chawal-v2.webp",
-        zoom=0.94, focal_x=0.50, focal_y=0.50,
+        zoom=0.84, focal_x=0.50, focal_y=0.52,
     ))
 
     # Re-fetch the exact Chicken Handi source at full resolution and crop around the food.
