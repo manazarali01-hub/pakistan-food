@@ -27,7 +27,7 @@
       "content_type": "image/jpeg",
       "width": 1200,
       "height": 900,
-      "bytes": 142394
+      "bytes": 150154
     },
     {
       "slug": "chicken-handi",
@@ -52,9 +52,9 @@
       "action": "replace-commons",
       "resolved": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Nihari_%26_Halwa_Puri_-_Breakfast_of_every_Lahori.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
       "content_type": "image/jpeg",
-      "width": 696,
-      "height": 522,
-      "bytes": 46992
+      "width": 620,
+      "height": 465,
+      "bytes": 40372
     },
     {
       "slug": "lahori-chargha",
@@ -67,10 +67,12 @@
     },
     {
       "slug": "kashmiri-chai",
-      "action": "recrop-local",
-      "width": 948,
-      "height": 711,
-      "bytes": 138454
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Noon_Chai.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 163808
     }
   ]
 }
