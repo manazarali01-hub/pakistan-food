@@ -30,5 +30,46 @@
     "Cool the potatoes before filling; hot or wet filling makes the dough difficult to roll.",
     "Add water to the dough gradually so it stays soft without becoming sticky."
   ],
-  "storage": "Aloo paratha is best fresh. Cool leftovers promptly, refrigerate covered and reheat thoroughly on a tawa or other hot dry surface."
+  "storage": "Aloo paratha is best fresh. Cool leftovers promptly, refrigerate covered and reheat thoroughly on a tawa or other hot dry surface.",
+  "prep_time": "20 min",
+  "cook_time": "20 min",
+  "prep_time_iso": "PT20M",
+  "cook_time_iso": "PT20M",
+  "total_time_iso": "PT40M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani aloo paratha with golden tawa spots and a soft spiced potato filling",
+  "image_caption": "Aloo paratha cooked on a tawa until golden outside with a soft, evenly spread potato filling.",
+  "technique": "The filling should be cool, dry and mashed without hard lumps, while the dough should be soft enough to seal without tearing. Roll from the centre with light, even pressure so the potato spreads with the dough rather than collecting in one spot.",
+  "doneness_cues": [
+    "The potato filling should hold together without visible steam or excess moisture.",
+    "The stuffed dough ball should seal cleanly with no exposed filling before rolling.",
+    "The paratha should show golden-brown spots on both sides while remaining flexible rather than brittle.",
+    "The centre should feel hot and cooked through with no raw dough layer around the filling."
+  ],
+  "mistakes": [
+    "Stuffing with hot or wet potatoes, which weakens the dough and encourages tearing.",
+    "Using large potato lumps that puncture the dough while rolling.",
+    "Adding excessive dry flour during rolling, which can make the cooked surface dusty and dry.",
+    "Cooking only on very low heat for a long time, which dries the bread before it browns."
+  ],
+  "substitutions": [
+    "Use well-drained potatoes with a floury texture; waxy potatoes may make the filling heavier.",
+    "Green chilli can be reduced without affecting structure.",
+    "A small amount of ghee can replace oil for cooking if you prefer a richer flavour."
+  ],
+  "reheating": "Reheat on a dry or lightly greased tawa over medium-low heat, turning once or twice until the centre is hot. Avoid prolonged microwaving if you want the surface to stay pleasant.",
+  "faqs": [
+    {
+      "question": "Why does aloo paratha break while rolling?",
+      "answer": "The filling may be wet, hot or lumpy, the dough may be too tight, or too much filling may be packed into one ball. Cool the filling and roll with gentle even pressure."
+    },
+    {
+      "question": "How do I keep aloo paratha soft?",
+      "answer": "Use a supple rested dough, avoid excessive bench flour and do not leave the paratha on the tawa longer than necessary."
+    },
+    {
+      "question": "Can the filling be made ahead?",
+      "answer": "Yes. Cool and refrigerate it covered, then bring it close to cool room temperature before stuffing so it spreads more easily."
+    }
+  ]
 }
