@@ -10,6 +10,7 @@ const pages = [
   ["halwa-puri", "/recipes/halwa-puri.html"],
   ["rice-kheer", "/recipes/rice-kheer.html"],
   ["cooking-guides", "/guides/"],
+  ["guide-article", "/guides/best-rice-for-biryani.html"],
 ];
 
 fs.mkdirSync("qa-screenshots", { recursive: true });

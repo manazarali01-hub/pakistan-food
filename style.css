@@ -823,7 +823,7 @@ button {
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.35)
         ),
-        url("assets/halwa-puri.jpg")
+        url("assets/recipe-images/halwa-puri-v2.webp")
         center/cover;
     font-size: 0;
 }
