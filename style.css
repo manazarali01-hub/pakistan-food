@@ -1448,3 +1448,57 @@ button {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Ivory fallback layer for pages that only load style.css — 2026-10-04 */
+body:not(.dark) {
+  --bg: #f8f1df;
+  --surface: #fffaf0;
+  --surface-2: #f3ead5;
+  --text: #30291e;
+  --muted: #746956;
+  --border: #dfd0b4;
+  --primary: #0b5a36;
+  --primary-dark: #074529;
+  --secondary: #b68b45;
+  --shadow: 0 16px 42px rgba(91,69,34,.10);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255,255,255,.72), transparent 34%),
+    linear-gradient(180deg,#fffaf0 0%,#f8f1df 58%,#f4ead4 100%);
+  color: var(--text);
+}
+
+body:not(.dark) .policy-wrap,
+body:not(.dark) .guide,
+body:not(.dark) .wrap {
+  color: var(--text);
+}
+
+body:not(.dark) .policy-wrap .policy-note,
+body:not(.dark) .guide .quick,
+body:not(.dark) .guide .guide-cta,
+body:not(.dark) .guide .urdu-box,
+body:not(.dark) .wrap .card,
+body:not(.dark) .wrap .cluster-nav a {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  color: var(--text);
+  box-shadow: 0 8px 24px rgba(91,69,34,.06);
+}
+
+body:not(.dark) .guide .quick {
+  border-left-color: var(--primary) !important;
+}
+
+body:not(.dark) .wrap .card:hover,
+body:not(.dark) .wrap .cluster-nav a:hover {
+  border-color: #c9b58e !important;
+  box-shadow: 0 14px 30px rgba(91,69,34,.10);
+}
+
+body:not(.dark) .policy-wrap a,
+body:not(.dark) .guide a,
+body:not(.dark) .wrap a {
+  color: var(--primary);
+}
+/* END ivory fallback layer */
