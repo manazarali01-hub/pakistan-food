@@ -4,7 +4,7 @@
   "category": "Beef",
   "time": "50 min",
   "serves": 5,
-  "image": "assets/recipe-images/aloo-keema.webp",
+  "image": "assets/recipe-images/aloo-keema-v2.webp",
   "description": "Pakistani aloo keema with beef mince and tender potatoes cooked in a concentrated tomato masala with green chillies and everyday spices.",
   "ingredients": [
     "500 g beef mince",
@@ -35,8 +35,8 @@
   "cook_time_iso": "PT35M",
   "total_time_iso": "PT50M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani aloo keema with beef mince, tender potato cubes, tomato masala and green chilli",
-  "image_caption": "Beef mince and potatoes simmered in a concentrated tomato masala until the potatoes are tender but intact.",
+  "image_alt": "Pakistani aloo keema with minced meat, potatoes and green chilli in a reduced masala",
+  "image_caption": "Aloo keema with minced meat and potatoes cooked in a concentrated masala.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Aaloo_Keema.JPG",
   "technique": "Cook the mince and masala first, then add evenly cut potatoes with only enough liquid to soften them. Once the potatoes are nearly tender, uncover and reduce carefully so they stay intact while the keema remains moist.",
   "doneness_cues": [
@@ -61,5 +61,7 @@
   "serving": "Serve with roti or naan and a simple onion-cucumber salad.",
   "image_author": "Miansari66",
   "image_license": "CC0 1.0",
-  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "image_creator": "Miansari66",
+  "image_source_label": "Wikimedia Commons"
 }

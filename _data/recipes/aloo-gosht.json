@@ -4,7 +4,7 @@
   "category": "Beef",
   "time": "90 min",
   "serves": 5,
-  "image": "assets/aloo-gosht.webp",
+  "image": "assets/recipe-images/aloo-gosht-v2.webp",
   "description": "Pakistani aloo gosht with beef or mutton and tender potato chunks simmered in a well-cooked onion-tomato masala and comforting gravy.",
   "ingredients": [
     "750 g beef or mutton, curry cut",
@@ -40,8 +40,8 @@
   "cook_time_iso": "PT1H10M",
   "total_time_iso": "PT1H30M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani aloo gosht with tender beef or mutton, potato chunks and onion tomato gravy",
-  "image_caption": "Meat simmered until nearly tender before potatoes are added so both finish together in a balanced gravy.",
+  "image_alt": "Pakistani aloo gosht with tender meat and potatoes in rich red-brown curry",
+  "image_caption": "Aloo gosht with tender meat and potatoes in a rich Pakistani curry.",
   "technique": "Meat determines the schedule. Simmer it until nearly tender before adding potatoes; otherwise potatoes break down while the beef or mutton is still firm. Use hot water in stages so gravy remains controlled.",
   "doneness_cues": [
     "Meat should be close to fork-tender before potatoes enter.",
@@ -62,10 +62,10 @@
   ],
   "reheating": "Warm gently and avoid aggressive stirring once potatoes are soft.",
   "serving": "Serve with roti, naan or plain rice and fresh coriander.",
-  "image_source": "https://commons.wikimedia.org/wiki/File:Odia_Mutton_Curry_(Mansha_Tarkari).jpg",
-  "image_author": "Satwik Cuttack",
-  "image_creator": "Satwik Cuttack",
-  "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Aaloo_Gosht_(cropped).JPG",
+  "image_author": "Miansari66",
+  "image_creator": "Miansari66",
+  "image_license": "CC0 1.0",
+  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
   "image_source_label": "Wikimedia Commons"
 }
