@@ -109,6 +109,14 @@ async function testHomeInteractions(width) {
   if (width <= 430) {
     await page.locator("#menuBtn").click();
     await page.waitForSelector("#mobileMenu.active", { timeout: 5000 });
+    // The drawer intentionally animates from right:-100% to right:0 over 350ms.
+    // Verify its final resting state rather than sampling mid-transition.
+    await page.waitForFunction(() => {
+      const menu = document.querySelector("#mobileMenu.active");
+      if (!menu) return false;
+      const rect = menu.getBoundingClientRect();
+      return rect.left >= -2 && rect.right <= window.innerWidth + 2;
+    }, null, { timeout: 1800 });
     const menuState = await page.evaluate(() => {
       const menu = document.querySelector("#mobileMenu");
       const close = document.querySelector("#closeMenu");
