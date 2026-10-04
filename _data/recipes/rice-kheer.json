@@ -4,7 +4,7 @@
   "category": "Desserts",
   "time": "75 min",
   "serves": 6,
-  "image": "assets/kheer.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Shahi_Rice_Kheer.jpg?width=1280",
   "description": "Creamy Pakistani rice kheer slowly simmered with basmati rice, full-fat milk and cardamom, then finished with nuts for a rich but spoonable texture.",
   "ingredients": [
     "1 litre full-fat milk",
@@ -34,8 +34,8 @@
   "cook_time_iso": "PT1H5M",
   "total_time_iso": "PT1H15M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani rice kheer with creamy reduced milk, soft basmati rice, cardamom and chopped nuts",
-  "image_caption": "Creamy rice kheer slowly reduced until the milk coats tender rice while remaining spoonable after cooling.",
+  "image_alt": "Creamy rice kheer garnished with nuts and saffron in a serving bowl",
+  "image_caption": "Rice kheer with creamy milk, rice and nut garnish; served as a South Asian pudding.",
   "technique": "Kheer thickens from both milk reduction and rice starch. Keep the simmer gentle, stir more often as it thickens, and stop while it is slightly looser than your final serving texture because cooling makes it firmer.",
   "doneness_cues": [
     "Rice grains should be very tender and easy to press between the fingers.",
@@ -68,5 +68,8 @@
       "question": "When should I stop cooking kheer?",
       "answer": "Stop when the rice is fully tender and the hot milk is creamy but still a little looser than the texture you want after cooling."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Shahi_Rice_Kheer.jpg",
+  "image_author": "Teena Sometimes",
+  "image_license": "CC BY-SA 4.0"
 }

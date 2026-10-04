@@ -4,7 +4,7 @@
   "category": "Breakfast",
   "time": "60 min",
   "serves": 5,
-  "image": "assets/halwa-puri.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Halwa_Puri,_a_traditional_food_made_in_Walled_City_of_Lahore.jpg?width=1280",
   "description": "Traditional Pakistani halwa puri breakfast with fragrant semolina halwa, warmly spiced chickpeas and freshly fried puris that puff in properly heated oil.",
   "ingredients": [
     "1 cup semolina (suji)",
@@ -39,8 +39,8 @@
   "cook_time_iso": "PT35M",
   "total_time_iso": "PT1H",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani halwa puri breakfast with puffed puris, semolina halwa and spiced chickpeas",
-  "image_caption": "Halwa puri breakfast with fresh puffed puris, fragrant semolina halwa and spiced chickpeas.",
+  "image_alt": "Pakistani halwa puri breakfast with puffed puris, chickpea curry and semolina halwa",
+  "image_caption": "Traditional Lahore-style halwa puri breakfast with fried puris, chickpea curry and sweet halwa.",
   "technique": "Treat the three components separately so none waits too long. Roast semolina until fragrant before adding liquid, keep chana thick enough to sit beside the halwa, and fry puris last so they arrive puffed and crisp.",
   "doneness_cues": [
     "Roasted semolina should smell nutty and lose its raw flour aroma before liquid is added.",
@@ -73,5 +73,8 @@
       "question": "What should be cooked first?",
       "answer": "Prepare chana and halwa first, then fry puris close to serving so they stay at their best."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Halwa_Puri,_a_traditional_food_made_in_Walled_City_of_Lahore.jpg",
+  "image_author": "Tahsin Shah",
+  "image_license": "CC BY-SA 4.0"
 }
