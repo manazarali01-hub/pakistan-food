@@ -19,6 +19,7 @@ const context = await browser.newContext({
   viewport: { width: 768, height: 920 },
   deviceScaleFactor: 1,
 });
+await context.route(/googlesyndication|doubleclick|googleadservices/, route => route.abort());
 const page = await context.newPage();
 const failures = [];
 const results = [];
@@ -167,7 +168,7 @@ for (const width of widths) {
 
   for (const [label, path] of pages) {
     const before = failures.length;
-    const response = await page.goto(base + path, { waitUntil: "networkidle", timeout: 60000 });
+    const response = await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 30000 });
     if (!response || !response.ok()) {
       failures.push(`${label} @ ${width}px: HTTP ${response?.status() || "no response"}`);
       continue;
