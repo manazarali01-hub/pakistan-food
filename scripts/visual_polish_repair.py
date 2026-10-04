@@ -26,18 +26,14 @@ def request_bytes(url, accept="image/avif,image/webp,image/apng,image/*,*/*;q=0.
         return data, response.geturl(), response.headers.get("Content-Type", "")
 
 def fetch_pexels(page_url):
-    page, _, _ = request_bytes(page_url, "text/html,application/xhtml+xml")
-    text = page.decode("utf-8", errors="replace")
-    patterns = [
-        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, text, flags=re.I)
-        if match:
-            image_url = html.unescape(match.group(1))
-            return request_bytes(image_url)
-    raise RuntimeError(f"Could not find Pexels og:image: {page_url}")
+    # Pexels blocks GitHub Actions HTML requests. Use the exact public image
+    # endpoint for the user-provided Samosa photograph.
+    if "2474658" in page_url:
+        return request_bytes(
+            "https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg"
+            "?cs=srgb&dl=pexels-marvin-ozz-1297854-2474658.jpg&fm=jpg"
+        )
+    raise RuntimeError(f"No runner-safe direct Pexels image configured: {page_url}")
 
 def fetch_commons(filename):
     url = "https://commons.wikimedia.org/wiki/Special:FilePath/" + urllib.parse.quote(filename)
