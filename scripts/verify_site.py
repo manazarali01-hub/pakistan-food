@@ -69,6 +69,13 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     image = str(recipe.get("image", ""))
     if image and not image.startswith(("http://", "https://")) and not (ROOT / image.lstrip("/")).is_file():
         errors.append(f"{slug}: local image {image} is missing")
+    if "commons.wikimedia.org" in image:
+        for field in ("image_source", "image_author", "image_license"):
+            if not recipe.get(field):
+                errors.append(f"{slug}: external Commons image is missing {field}")
+        source_url = str(recipe.get("image_source", ""))
+        if source_url and "commons.wikimedia.org/wiki/File:" not in source_url:
+            errors.append(f"{slug}: image_source must point to the Commons file page")
     for field in ("ingredients", "method"):
         if field in recipe and (not isinstance(recipe[field], list) or not all(isinstance(s, str) and s.strip() for s in recipe[field])):
             errors.append(f"{slug}: {field} must be a non-empty list of text")
@@ -119,7 +126,7 @@ try:
 except (OSError, ET.ParseError) as exc:
     errors.append(f"sitemap.xml: {exc}")
 
-for trust_page in ("privacy-policy.html", "editorial-policy.html", "disclaimer.html", "terms.html", "image-credits.html"):
+for trust_page in ("about.html", "contact.html", "privacy-policy.html", "editorial-policy.html", "disclaimer.html", "terms.html", "image-credits.html"):
     if not (ROOT / trust_page).is_file():
         errors.append(f"{trust_page}: trust page is missing")
     if f"/{trust_page}" not in paths:
