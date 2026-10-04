@@ -4,7 +4,7 @@
   "category": "Chicken",
   "time": "45 min",
   "serves": 4,
-  "image": "assets/chicken-karahi.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Karahi_in_Pakistan.jpg?width=1280",
   "description": "Pakistani chicken karahi with bone-in chicken cooked in a concentrated fresh tomato masala and finished with green chillies, coriander and plenty of fresh ginger.",
   "ingredients": [
     "1 kg bone-in chicken, cut into small pieces",
@@ -73,5 +73,8 @@
       "question": "When should ginger and green chilli be added?",
       "answer": "Use some during cooking if desired, but keep part for the final minutes so the aroma remains fresh."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Karahi_in_Pakistan.jpg",
+  "image_author": "Kskhh",
+  "image_license": "CC BY-SA 4.0"
 }
