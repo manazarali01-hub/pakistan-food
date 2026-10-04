@@ -99,6 +99,38 @@ indexed_missing_sitemap = sorted(name for name, _, indexed, _ in guide_rows if i
 thin_indexed = sorted((name, words) for name, words, indexed, _ in guide_rows if indexed and words < 220)
 generic_indexed = sorted((name, hits) for name, _, indexed, hits in guide_rows if indexed and hits)
 
+noindex_guides = {name for name, _, indexed, _ in guide_rows if not indexed}
+stale_user_links = []
+
+def record_links(source: Path, html: str, pattern: str):
+    for match in re.finditer(pattern, html, flags=re.I):
+        target = match.group(1).split("/")[-1]
+        if target in noindex_guides:
+            stale_user_links.append((str(source.relative_to(ROOT)), target))
+
+# Public hubs, recipe templates and category pages should send users to the stronger
+# consolidated resource, not prominently link back to a noindex micro-page.
+for source in [
+    ROOT / "index.html",
+    ROOT / "sitemap.html",
+    GUIDES / "index.html",
+    ROOT / "_layouts" / "recipe.html",
+]:
+    if not source.is_file():
+        continue
+    html = source.read_text(encoding="utf-8")
+    if source == GUIDES / "index.html":
+        record_links(source, html, r'href=["\'](?:\.\/)?([^"\'#?]+\.html)')
+    record_links(source, html, r'href=["\'](?:\.\.\/)?guides\/([^"\'#?]+\.html)')
+
+recipes_dir = ROOT / "recipes"
+if recipes_dir.is_dir():
+    for source in recipes_dir.rglob("*.html"):
+        html = source.read_text(encoding="utf-8")
+        record_links(source, html, r'href=["\'](?:\.\.\/)?guides\/([^"\'#?]+\.html)')
+
+stale_user_links = sorted(set(stale_user_links))
+
 print("CONTENT QUALITY AUDIT")
 print(f"Guides: {len(guide_rows)}")
 print(f"Indexed guides: {sum(1 for _,_,indexed,_ in guide_rows if indexed)}")
@@ -107,6 +139,7 @@ print(f"Sitemap guide URLs: {len(sitemap_guides)}")
 print(f"Indexed guides under 220 visible words: {len(thin_indexed)}")
 print(f"Indexed guides with generic-template phrase hits: {len(generic_indexed)}")
 print(f"Exact duplicate visible-body groups: {len(duplicate_groups)}")
+print(f"Public/hub links to noindex guides: {len(stale_user_links)}")
 
 if duplicate_groups:
     print("\nEXACT DUPLICATE BODY GROUPS")
@@ -133,8 +166,13 @@ if indexed_missing_sitemap:
     for name in indexed_missing_sitemap:
         print(f"- {name}")
 
+if stale_user_links:
+    print("\nERROR: PUBLIC/HUB LINKS POINT TO NOINDEX GUIDES")
+    for source, target in stale_user_links:
+        print(f"- {source} -> {target}")
+
 strict = "--strict" in sys.argv
-if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap):
+if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or stale_user_links):
     raise SystemExit("Strict content-quality audit failed.")
 
 print("\nAudit complete.")
