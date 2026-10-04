@@ -4,7 +4,7 @@
   "category": "Beef",
   "time": "4 hrs",
   "serves": 6,
-  "image": "assets/recipe-images/beef-nihari.webp",
+  "image": "assets/recipe-images/beef-nihari-v2.webp",
   "description": "Slow-cooked Pakistani beef nihari made with tender shank, deeply bloomed spices and a smooth atta-thickened gravy, finished with classic fresh garnishes.",
   "ingredients": [
     "1 kg beef shank, cut into large pieces",
@@ -39,8 +39,8 @@
   "cook_time_iso": "PT3H40M",
   "total_time_iso": "PT4H",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani beef nihari with tender shank, smooth spiced gravy, ginger, coriander and green chilli",
-  "image_caption": "Slow-cooked beef nihari with tender shank and a smooth atta-thickened gravy.",
+  "image_alt": "Pakistani beef nihari with rich gravy, tender beef, ginger, coriander and green chilli garnish",
+  "image_caption": "Beef nihari finished with julienne ginger, coriander and green chilli.",
   "technique": "Nihari improves with patient, gentle cooking. Tenderise the shank before thickening, then whisk atta into slightly cooled nihari liquid until completely smooth and add the slurry gradually so the gravy stays silky rather than lumpy.",
   "doneness_cues": [
     "The beef shank should yield easily when pressed with a fork and should not feel tight or chewy.",
@@ -74,10 +74,10 @@
       "answer": "It should feel rich and lightly coat a spoon but still pour around the meat. If it becomes heavy, loosen it gradually with hot water."
     }
   ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Beef_Nihari.JPG",
-  "image_author": "Miansari66",
-  "image_license": "CC0 1.0",
-  "image_creator": "Miansari66",
-  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Beef_Nihari,_made_by_Saleha_Atif,_Pakistan.jpg",
+  "image_author": "Satcreak",
+  "image_license": "CC BY-SA 4.0",
+  "image_creator": "Satcreak",
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "image_source_label": "Wikimedia Commons"
 }
