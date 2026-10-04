@@ -1,0 +1,76 @@
+{
+  "policy": "Real photographs only; exact or clearly relevant dish photography; no AI food images.",
+  "cache_version": "20261004-final5",
+  "changed": [
+    "pakistani-samosa",
+    "daal-chawal",
+    "chicken-handi",
+    "chicken-sajji",
+    "halwa-puri",
+    "lahori-chargha",
+    "kashmiri-chai"
+  ],
+  "results": [
+    {
+      "slug": "pakistani-samosa",
+      "action": "replace-pexels",
+      "resolved": "https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?cs=srgb&dl=pexels-marvin-ozz-1297854-2474658.jpg&fm=jpg",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 141400
+    },
+    {
+      "slug": "daal-chawal",
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/5/51/Rice_with_Lentils.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 142394
+    },
+    {
+      "slug": "chicken-handi",
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/8/86/Punjabi_Chicken_Handi_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 197080
+    },
+    {
+      "slug": "chicken-sajji",
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/0/08/Sajji.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 133624
+    },
+    {
+      "slug": "halwa-puri",
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Nihari_%26_Halwa_Puri_-_Breakfast_of_every_Lahori.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "content_type": "image/jpeg",
+      "width": 696,
+      "height": 522,
+      "bytes": 46992
+    },
+    {
+      "slug": "lahori-chargha",
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/b/be/Lahori_Charga.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 287158
+    },
+    {
+      "slug": "kashmiri-chai",
+      "action": "recrop-local",
+      "width": 948,
+      "height": 711,
+      "bytes": 138454
+    }
+  ]
+}

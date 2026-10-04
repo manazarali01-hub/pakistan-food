@@ -4,7 +4,7 @@
   "category": "Snacks",
   "time": "75 min",
   "serves": 6,
-  "image": "assets/pakistani-samosa-v2.webp",
+  "image": "assets/pakistani-samosa-v3.webp",
   "description": "Crisp Pakistani potato samosas with a firm ajwain-scented dough, cooled spiced filling and tightly sealed wrappers fried slowly for a flaky finish.",
   "ingredients": [
     "2 cups plain flour, plus a little for dusting",
@@ -78,5 +78,11 @@
       "question": "Can samosas be shaped in advance?",
       "answer": "Yes, but protect the wrappers from drying. For longer storage, freeze them in a single layer before packing so they do not stick together."
     }
-  ]
+  ],
+  "image_source": "https://www.pexels.com/photo/close-up-photo-of-fried-food-on-saucer-2474658/",
+  "image_author": "Marvin Ozz",
+  "image_creator": "Marvin Ozz",
+  "image_license": "Pexels License",
+  "image_license_url": "https://www.pexels.com/license/",
+  "image_source_label": "Pexels"
 }
