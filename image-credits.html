@@ -25,31 +25,28 @@ layout: null
     <main class="policy-shell policy-page">
       <span class="section-label">TRANSPARENCY</span>
       <h1>Image Credits</h1>
-      <p class="policy-intro">Pakistan Food uses optimized local photographs, site-created recipe illustrations and selected openly licensed external photographs. This page records where recipe imagery comes from and keeps external image credits synchronized with the current recipe data.</p>
+      <p class="policy-intro">Pakistan Food serves optimized local recipe photographs for speed and reliability. Where a photograph comes from an open-license source, we retain the source, creator and license details. Recipe photos may be moderately cropped and resized for a clearer food-focused presentation on mobile screens.</p>
 
-      <h2>Site-created recipe illustrations</h2>
-      <p>The current Chicken Jalfrezi, Pakistani Samosa, Jalebi and Rajma Masala images are AI-generated illustrations made for Pakistan Food. They are presented as visual representations of the dishes, not as photographs documenting a tested preparation.</p>
-
-      <h2>Current externally served open-license images</h2>
-      <p>The links below are generated from the image records currently used by our recipes. Each source link opens the original Commons or Flickr record where the creator, license and reuse terms can be checked.</p>
+      <h2>Open-license photograph sources</h2>
+      <p>The links below are generated from recipe records that carry source metadata. Each source link opens the original Commons or Flickr record where the creator, license and reuse terms can be checked. Local display copies may be cropped/resized from the source photograph.</p>
       <ul class="credits-list">
         {% for recipe_pair in site.data.recipes %}
           {% assign r = recipe_pair[1] %}
-          {% if r.image contains 'commons.wikimedia.org' or r.image contains 'staticflickr.com' %}
-            {% assign source_url = r.image | replace: 'Special:Redirect/file/', 'File:' | replace: 'Special:FilePath/', 'File:' | split: '?' | first %}
-            {% assign source_label = r.image_source_label | default: 'Wikimedia Commons' %}
+          {% if r.image_source %}
+            {% assign source_label = r.image_source_label | default: 'Source' %}
             <li>
-              <a href="{{ r.image_source | default: source_url }}" rel="noopener noreferrer">{{ r.name }}</a>
+              <a href="{{ r.image_source }}" rel="noopener noreferrer">{{ r.name }}</a>
               {% if r.image_author %} — {{ r.image_author }}{% endif %}
               · {{ source_label }}
               {% if r.image_license %} · {% if r.image_license_url %}<a href="{{ r.image_license_url }}" rel="noopener noreferrer">{{ r.image_license }}</a>{% else %}{{ r.image_license }}{% endif %}{% endif %}
+              · cropped/resized for display
             </li>
           {% endif %}
         {% endfor %}
       </ul>
 
-      <h2>Sources for current optimized local recipe images</h2>
-      <p>These recipe photographs are still served from local optimized files. Their source records are retained below. Recipes now served from audited external open-license sources are listed above with creator and license information.</p>
+      <h2>Additional legacy local-photo source records</h2>
+      <p>These older optimized local photographs were already stored on the site before source metadata was moved into individual recipe records. Their original source pages remain listed for transparency.</p>
       <ul class="credits-list">
         <li><a href="https://commons.wikimedia.org/wiki/File:Chicken_Handi.JPG">Chicken Handi</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Bannu_Gull_Beeff_Pulao.jpg">Beef Pulao</a></li>
