@@ -16,6 +16,10 @@
   {% assign display_image = '../' | append: local_image %}
   {% assign seo_image = 'https://pakistanfoodrecipes.top/' | append: local_image %}
 {% endif %}
+{% assign display_image_mobile = display_image %}
+{% if recipe.image contains 'commons.wikimedia.org' %}
+  {% assign display_image_mobile = display_image | replace: 'width=1280', 'width=720' | replace: 'width=960', 'width=720' %}
+{% endif %}
 {% assign category_slug = recipe.category | downcase %}
 {% assign bilingual_category = site.data.bilingual[category_slug] %}
 {% assign bilingual = bilingual_category[page.recipe_key] %}
@@ -112,7 +116,6 @@
   <link rel="canonical" href="{{ canonical_url }}">
   <link rel="sitemap" type="application/xml" href="https://pakistanfoodrecipes.top/sitemap.xml">
   <link rel="icon" href="../assets/pakistan-food-logo.png" type="image/png">
-  <link rel="preload" as="image" href="{{ display_image }}">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="en_PK">
   <meta property="og:title" content="{{ recipe.name }} Recipe | Pakistan Food">
@@ -255,7 +258,10 @@
         {% if urdu_key_tip %}<p class="recipe-intro-detail"><strong>اہم بات:</strong> {{ urdu_key_tip }}</p>{% endif %}
       </div>
       <figure>
-        <img src="{{ display_image }}" alt="{{ image_alt | escape }}" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+        <picture>
+          {% if recipe.image contains 'commons.wikimedia.org' %}<source media="(max-width: 640px)" srcset="{{ display_image_mobile }}">{% endif %}
+          <img src="{{ display_image }}" alt="{{ image_alt | escape }}" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+        </picture>
         <figcaption>{{ image_caption }}</figcaption>
       </figure>
       <div class="seo-meta recipe-facts" aria-label="Recipe facts">
