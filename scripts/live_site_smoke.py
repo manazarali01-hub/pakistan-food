@@ -7,6 +7,8 @@ site rather than only the repository/Jekyll build, with retries for CDN/DNS prop
 from __future__ import annotations
 
 from html import unescape
+import json
+import os
 import re
 import time
 from urllib.error import HTTPError, URLError
@@ -84,6 +86,7 @@ def wait_for_pages_deployment() -> None:
 
     raise SystemExit(f"Timed out waiting for Pages deployment of {GITHUB_SHA}")
 
+
 def fetch(path: str) -> tuple[int, str, str]:
     url = BASE + path
     last_error: Exception | None = None
@@ -125,7 +128,9 @@ def require(path: str, *needles: str) -> str:
     print(f"OK {path} ({len(body)} bytes)")
     return body
 
-wait_for_pages_deployment()\n\nhome = require("/", "Pakistan Food", "Flavours worth sharing.")
+wait_for_pages_deployment()
+
+home = require("/", "Pakistan Food", "Flavours worth sharing.")
 if "{{ dish.name }}" in home:
     raise SystemExit("/: unresolved Liquid/template marker found in deployed homepage")
 
