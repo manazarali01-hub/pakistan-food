@@ -156,6 +156,25 @@ async function inspectLayout(label, width) {
 async function testHomeInteractions(width) {
   await page.waitForSelector(".recipe-card", { timeout: 15000 });
 
+  const recipeImageShape = await page.locator(".recipe-card img").evaluateAll(imgs => {
+    const issues = imgs
+      .filter(img => img.complete && img.naturalWidth > 0 && img.naturalHeight > 0)
+      .map(img => ({
+        src: img.getAttribute("src"),
+        ratio: img.naturalWidth / img.naturalHeight,
+        width: img.naturalWidth,
+        height: img.naturalHeight,
+      }))
+      .filter(item => Math.abs(item.ratio - (4 / 3)) > 0.015);
+    return { count: imgs.length, issues: issues.slice(0, 12) };
+  });
+  if (recipeImageShape.count < 60) {
+    failures.push(`home @ ${width}px: expected at least 60 recipe-card images, found ${recipeImageShape.count}`);
+  }
+  if (recipeImageShape.issues.length) {
+    failures.push(`home @ ${width}px: recipe images are not normalized to 4:3: ${JSON.stringify(recipeImageShape.issues)}`);
+  }
+
   if (width <= 430) {
     await page.locator("#menuBtn").click();
     await page.waitForSelector("#mobileMenu.active", { timeout: 5000 });

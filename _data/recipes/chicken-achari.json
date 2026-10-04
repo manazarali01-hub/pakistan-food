@@ -39,7 +39,7 @@
   "date_modified": "2026-10-04",
   "image_alt": "Pakistani chicken achari with tomato yogurt masala, green chillies and pickling spices",
   "image_caption": "Chicken achari finished with fennel, nigella, mustard and fenugreek in a tangy reduced masala.",
-  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Achari.jpg",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Achari_Chicken.jpg",
   "technique": "Achari flavour comes from restraint: lightly crush the pickling spices and add them after the tomato-yogurt base is established. Fenugreek and mustard become harsh if burnt, so do not fry them aggressively at the beginning.",
   "doneness_cues": [
     "Tomatoes should cook down until the masala is cohesive before final spice finishing.",
@@ -61,7 +61,9 @@
   "storage": "Cool promptly and refrigerate covered.",
   "reheating": "Reheat gently until hot, adding only a small splash of water if the masala has tightened.",
   "serving": "Serve with roti, naan or plain rice and fresh green chilli.",
-  "image_author": "Asif Saleh",
+  "image_author": "Monali.mishra",
   "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "image_creator": "Monali.mishra",
+  "image_source_label": "Wikimedia Commons"
 }

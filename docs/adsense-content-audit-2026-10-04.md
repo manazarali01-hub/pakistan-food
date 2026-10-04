@@ -153,9 +153,9 @@ Evidence-led decisions included:
 - premium open-license replacements were introduced only when the dish and recipe matched closely enough;
 - Rice Kheer's current high-resolution hero was retained because it clearly represents creamy rice kheer with the nut/saffron-style garnish described by the recipe, rather than replacing an accurate image merely for novelty.
 
-Current image audit: **52 external recipe images, 14 local recipe images, 0 external records missing source metadata, 0 partial attribution records, 0 missing alt text, and 0 missing captions**.
+Current image audit: **66 local recipe images, 0 externally served recipe images, 0 missing alt text, and 0 missing captions**. Twelve visually weak or AI-origin recipe images were replaced with real openly licensed photographs from Wikimedia Commons, with source/creator/license metadata retained where applicable. All 66 recipe images were normalized to a mobile-friendly 4:3 food-focused crop, using only the minimum aspect crop plus a gentle extra zoom for near-4:3 sources to avoid over-cropping.
 
-PR #21 added a second delivery-quality pass across 45 recipe image mappings: Wikimedia `Special:Redirect/file` URLs were normalized to `Special:FilePath`, 800/900/960px requests were raised to 1280px where supported, and Sarson ka Saag now explicitly requests a 1280px source. PR #21 passed Pages Refresh and Mobile Browser QA before merge. PR #22 then hardened static homepage image fallback handling so a failed `srcset` candidate is removed before switching to the local fallback; PR #22 also passed Pages Refresh, Mobile Browser QA and the Netlify deploy preview before merge.
+PR #21 added a delivery-quality pass and PR #22 hardened image fallback behavior. A later production image-localization pass then moved all 66 recipe images to local assets. The current premium crop pass replaces 12 weak/AI-origin images with real copyright-safe photographs and normalizes the full 66-image set to 4:3 subject-forward crops. Mobile Browser QA now treats placeholders as failures and also checks homepage recipe-card source images for the required 4:3 aspect ratio.
 
 ## Structured-data rules
 

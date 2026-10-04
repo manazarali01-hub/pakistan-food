@@ -13,6 +13,7 @@ on:
       - 'enhancements.css'
       - 'script.js'
       - 'recipes-data.js'
+      - 'assets/**/*.webp'
       - 'scripts/mobile_browser_qa.mjs'
       - '.github/workflows/mobile-browser-qa.yml'
   workflow_dispatch:
