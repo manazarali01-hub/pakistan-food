@@ -4,7 +4,7 @@
   "category": "Rice",
   "time": "90 min",
   "serves": 6,
-  "image": "assets/recipe-images/chicken-biryani.webp",
+  "image": "assets/recipe-images/chicken-biryani-v2.webp",
   "description": "Pakistani chicken biryani with spiced chicken masala, fragrant basmati rice, fried onions and fresh herbs layered and finished gently on dum.",
   "ingredients": [
     "750 g bone-in chicken",
@@ -42,8 +42,8 @@
   "cook_time_iso": "PT60M",
   "total_time_iso": "PT1H30M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani chicken biryani with long basmati rice, spiced chicken, fried onions and fresh herbs",
-  "image_caption": "Chicken biryani with separate basmati grains, spiced chicken masala, fried onions and herbs.",
+  "image_alt": "Pakistani chicken biryani with long basmati rice, spiced chicken and fried onion",
+  "image_caption": "Chicken biryani with long basmati rice and spiced chicken in a tighter food-first crop.",
   "technique": "The two stages that decide the texture are the rice parboil and the moisture level of the chicken masala. Drain the rice while the centre is still firm enough to finish on dum, and reduce the masala until it coats the chicken instead of leaving a pool of thin gravy.",
   "doneness_cues": [
     "Fried onions should be evenly deep golden; very dark edges can make the biryani bitter.",
@@ -79,5 +79,8 @@
   ],
   "image_source": "https://commons.wikimedia.org/wiki/File:Lahori_Biryani.jpg",
   "image_author": "Muhammad Umair Mirza",
-  "image_license": "CC BY-SA 4.0"
+  "image_license": "CC BY-SA 4.0",
+  "image_creator": "Muhammad Umair Mirza",
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "image_source_label": "Wikimedia Commons"
 }

@@ -4,7 +4,7 @@
   "category": "Beef",
   "time": "100 min",
   "serves": 5,
-  "image": "assets/recipe-images/mutton-karahi.webp",
+  "image": "assets/recipe-images/mutton-karahi-v2.webp",
   "description": "Pakistani mutton karahi with tender bone-in meat and a concentrated fresh tomato masala finished with cumin, black pepper, green chillies and ginger.",
   "ingredients": [
     "1 kg mutton, bone-in pieces",
@@ -37,9 +37,9 @@
   "cook_time_iso": "PT1H20M",
   "total_time_iso": "PT1H40M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani mutton karahi with tender bone-in meat, concentrated fresh tomato masala, green chilli and ginger",
-  "image_caption": "Mutton cooked tender first, then finished uncovered until fresh tomato masala clings to the meat.",
-  "image_source": "https://commons.wikimedia.org/wiki/File:Mutton_Karahi.JPG",
+  "image_alt": "Pakistani mutton karahi with tender bone-in meat, tomato masala, ginger and green chilli",
+  "image_caption": "Mutton karahi with bone-in meat in concentrated tomato masala, ginger and green chilli.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Mutton_Karahi_2.JPG",
   "technique": "Tenderness comes before final karahi reduction. Use a modest amount of hot water only as needed to soften the mutton, then uncover and reduce the tomatoes aggressively enough to concentrate without drying the meat.",
   "doneness_cues": [
     "Mutton should yield easily before the final high-moisture reduction ends.",
@@ -62,5 +62,7 @@
   "serving": "Serve with naan or roti and extra julienned ginger.",
   "image_author": "Miansari66",
   "image_license": "CC0 1.0",
-  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "image_creator": "Miansari66",
+  "image_source_label": "Wikimedia Commons"
 }
