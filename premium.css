@@ -1279,3 +1279,10 @@ body.dark {
   }
 }
 /* END PREMIUM IVORY SITE THEME */
+
+
+/* Complete ivory coverage for content photography; brand/header logos stay untouched. */
+body:not(.dark) main img {
+  filter: sepia(.055) saturate(.96) brightness(1.02) contrast(1.015);
+}
+/* END complete ivory content-image coverage */
