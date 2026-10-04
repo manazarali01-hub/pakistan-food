@@ -74,10 +74,15 @@ def crop_4x3(im, zoom=1.0, focal_x=0.5, focal_y=0.5, target_w=1200):
     out = im.crop((left, top, left + crop_w, top + crop_h))
 
     final_w = min(target_w, out.width)
-    final_h = int(round(final_w * 3 / 4))
+    final_w -= final_w % 4
+    final_h = (final_w * 3) // 4
     if final_h > out.height:
-        final_h = out.height
-        final_w = int(round(final_h * 4 / 3))
+        final_h = out.height - (out.height % 3)
+        final_w = (final_h * 4) // 3
+        final_w -= final_w % 4
+        final_h = (final_w * 3) // 4
+    if final_w < 4 or final_h < 3:
+        raise RuntimeError(f"Crop too small: {out.size}")
     if out.size != (final_w, final_h):
         out = out.resize((final_w, final_h), Image.Resampling.LANCZOS)
     return out
