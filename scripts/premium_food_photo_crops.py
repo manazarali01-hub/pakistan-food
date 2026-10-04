@@ -79,6 +79,20 @@ REPLACEMENTS = {
     "author": "Miansari66",
     "license": "CC0 1.0",
     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "chicken-jalfrezi": {
+    "filename": "Chicken Jalfrezi (2103956162).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Chicken_Jalfrezi_(2103956162).jpg",
+    "author": "David Pursehouse",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "rajma-masala": {
+    "filename": "Rajma Masala (32081557778).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Rajma_Masala_(32081557778).jpg",
+    "author": "Gaurav Nemade",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/"
   }
 }
 
@@ -191,7 +205,7 @@ def main():
         print(f"CROPPED {path.stem}: {image_rel} ({size} bytes)")
 
     report = {
-      "policy": "No AI-generated replacement photos. Replacements are downloaded from copyright-safe Wikimedia Commons sources with license metadata retained.",
+      "policy": "No AI-generated recipe photos. Replacements are downloaded from copyright-safe Wikimedia Commons sources with license metadata retained.",
       "replaced_count": len(REPLACEMENTS),
       "cropped_total": len(crop_log),
       "target_aspect": "4:3",
