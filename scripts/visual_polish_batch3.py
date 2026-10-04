@@ -41,12 +41,12 @@ SOURCES={
     "caption":"Aloo palak with tender potatoes folded through a thick spinach masala."
   },
   "beef-nihari":{
-    "filename":"Beef Nihari, made by Saleha Atif, Pakistan.jpg",
-    "source":"https://commons.wikimedia.org/wiki/File:Beef_Nihari,_made_by_Saleha_Atif,_Pakistan.jpg",
-    "author":"Satcreak","license":"CC BY-SA 4.0",
-    "license_url":"https://creativecommons.org/licenses/by-sa/4.0/",
+    "filename":"Beef Nihari.JPG",
+    "source":"https://commons.wikimedia.org/wiki/File:Beef_Nihari.JPG",
+    "author":"Miansari66","license":"CC0 1.0",
+    "license_url":"https://creativecommons.org/publicdomain/zero/1.0/",
     "out":"assets/recipe-images/beef-nihari-v2.webp",
-    "zoom":0.66,"fx":0.50,"fy":0.53,
+    "zoom":0.76,"fx":0.50,"fy":0.50,
     "alt":"Pakistani beef nihari with rich gravy, tender beef, ginger, coriander and green chilli garnish",
     "caption":"Beef nihari finished with julienne ginger, coriander and green chilli."
   }
