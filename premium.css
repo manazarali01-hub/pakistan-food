@@ -908,3 +908,48 @@ body:not(.dark) .hero-stats {
 @media print{
   .recipe-quick-actions,.recipe-trustline{display:none!important}
 }
+
+
+/* Browser-QA tap target corrections — 2026-10-04 */
+.close-menu{
+  width:44px;
+  min-width:44px;
+  height:44px;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  line-height:1;
+  border-radius:50%;
+}
+.recipe-title-link{
+  display:inline-flex;
+  align-items:center;
+  min-height:36px;
+}
+.recipe-bottom .view-recipe,
+.recipe-bottom .full-recipe{
+  min-height:40px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 6px;
+  line-height:1.25;
+}
+@media (max-width:430px){
+  .recipe-bottom .view-recipe,
+  .recipe-bottom .full-recipe{
+    min-height:44px;
+    padding:10px 8px;
+  }
+}
+
+
+/* Browser-QA recipe header target correction — 2026-10-04 */
+.seo-site-links a{
+  min-height:36px;
+  display:inline-flex;
+  align-items:center;
+  padding:6px 2px;
+}
