@@ -27,6 +27,9 @@ ATTEMPTS = 8
 DELAY_SECONDS = 10
 
 EXPECTED_ADS = "google.com, pub-4531216214099892, DIRECT, f08c47fec0942fa0"
+_config_text = Path("_config.yml").read_text(encoding="utf-8")
+_version_match = re.search(r'^recipe_image_version:\s*["\']?([^"\'\s]+)', _config_text, re.M)
+RECIPE_IMAGE_VERSION = _version_match.group(1) if _version_match else "20261004-photo3"
 
 
 def wait_for_pages_deployment() -> None:
@@ -161,6 +164,8 @@ def require(path: str, *needles: str) -> str:
 wait_for_pages_deployment()
 
 home = require("/", "Pakistan Food", "Flavours worth sharing.")
+if f"?v={RECIPE_IMAGE_VERSION}" not in home:
+    raise SystemExit(f"/: recipe image cache-busting version {RECIPE_IMAGE_VERSION!r} missing")
 if "{{ dish.name }}" in home:
     raise SystemExit("/: unresolved Liquid/template marker found in deployed homepage")
 
@@ -173,6 +178,8 @@ halwa = require(
     "CC BY-SA 2.0",
     'https://pakistanfoodrecipes.top/recipes/halwa-puri.html',
 )
+if f"assets/recipe-images/halwa-puri.webp?v={RECIPE_IMAGE_VERSION}" not in halwa:
+    raise SystemExit("/recipes/halwa-puri.html: versioned local recipe image URL missing")
 if '"@type": "Recipe"' not in halwa and '"@type":"Recipe"' not in halwa:
     raise SystemExit("/recipes/halwa-puri.html: Recipe structured data marker missing")
 if "noindex" in re.search(r'<meta[^>]+name=["\']robots["\'][^>]*>', halwa, re.I).group(0).lower() if re.search(r'<meta[^>]+name=["\']robots["\'][^>]*>', halwa, re.I) else True:
@@ -200,10 +207,11 @@ if len(recipe_images) != 66:
     raise SystemExit(f"Expected 66 local recipe images, found {len(recipe_images)}")
 
 for slug, image_path in recipe_images:
-    status, final_url, body, content_type = fetch_binary(image_path)
+    versioned_image_path = f"{image_path}?v={RECIPE_IMAGE_VERSION}"
+    status, final_url, body, content_type = fetch_binary(versioned_image_path)
     if status != 200:
         raise SystemExit(f"{slug}: {image_path} expected HTTP 200, got {status}")
-    if final_url.rstrip("/") != (BASE + image_path).rstrip("/"):
+    if final_url.rstrip("/") != (BASE + versioned_image_path).rstrip("/"):
         if not final_url.startswith(BASE + "/"):
             raise SystemExit(f"{slug}: unexpected image redirect target {final_url}")
     if not content_type.lower().startswith("image/"):

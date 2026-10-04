@@ -1,5 +1,6 @@
 ---
 ---
+window.PAKISTAN_FOOD_IMAGE_VERSION = {{ site.recipe_image_version | default: "20261004-photo3" | jsonify }};
 window.PAKISTAN_FOOD_RECIPES = [
 {% for recipe_pair in site.data.recipes %}
   {% assign urdu_name = recipe_pair[1].name_urdu %}
@@ -40,6 +41,10 @@ window.PAKISTAN_FOOD_RECIPES = [
     image = image
       .replace("commons.wikimedia.org/wiki/Special:Redirect/file/", "commons.wikimedia.org/wiki/Special:FilePath/")
       .replace(/^\/(?!\/)/, "");
+
+    if (/^assets\//.test(image) && !/[?&]v=/.test(image)) {
+      image += `?v=${encodeURIComponent(window.PAKISTAN_FOOD_IMAGE_VERSION || "20261004-photo3")}`;
+    }
 
     recipe.image = image;
   });

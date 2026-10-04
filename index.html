@@ -55,7 +55,7 @@
                 {% if dish.image contains 'commons.wikimedia.org' %}
                 <img src="{{ dish.image }}" srcset="{{ card_image_small }} 640w, {{ dish.image }} 1280w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% else %}
-                <img src="{{ dish.image }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+                <img src="{{ dish.image }}?v={{ site.recipe_image_version }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% endif %}
                 <span class="featured-card-content"><span class="featured-kicker">{{ dish.category }} · {{ dish.time }}</span><strong>{{ dish.name }}</strong><span>{{ dish.description }}</span><span class="featured-arrow" aria-hidden="true">View recipe →</span></span>
               </a>
@@ -74,7 +74,7 @@
                 {% if dish.image contains 'commons.wikimedia.org' %}
                 <img src="{{ dish.image }}" srcset="{{ popular_image_small }} 640w, {{ dish.image }} 1280w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% else %}
-                <img src="{{ dish.image }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+                <img src="{{ dish.image }}?v={{ site.recipe_image_version }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% endif %}
                 <span><small>{{ dish.category }} · {{ dish.time }}</small><strong>{{ dish.name }}</strong><small>{{ dish.description | truncate: 115 }}</small></span>
               </a>
@@ -120,7 +120,7 @@
                   {% if dish.image contains 'commons.wikimedia.org' %}
                     <img src="{{ region_image_small }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                   {% else %}
-                    <img src="{{ dish.image }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+                    <img src="{{ dish.image }}?v={{ site.recipe_image_version }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                   {% endif %}
                   <div class="region-overlay"></div>
                   <div class="region-content"><span>0{{ forloop.index }}</span><h3>{{ regional_names[region_index] }}</h3><p>{{ dish.name }} · Open recipe →</p></div>
