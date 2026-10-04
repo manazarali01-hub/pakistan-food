@@ -91,13 +91,18 @@ jobs:
           assert 'A good place to begin' in page
           assert '{{ dish.name }}' not in page
           import json
+          version = next(
+              line.split(':', 1)[1].strip().strip('"\'')
+              for line in Path('_config.yml').read_text().splitlines()
+              if line.startswith('recipe_image_version:')
+          )
           for data in Path('_data/recipes').glob('*.json'):
               recipe = json.loads(data.read_text())
               image = recipe['image'].lstrip('/')
               if image.startswith(('http://', 'https://')):
                   continue
               rendered = Path('_site/recipes', data.stem + '.html').read_text()
-              assert f'src="../{image}"' in rendered, data.stem
-              assert f'content="https://pakistanfoodrecipes.top/{image}"' in rendered, data.stem
-          print('Featured links and generated recipe data passed.')
+              assert f'src="../{image}?v={version}"' in rendered, data.stem
+              assert f'content="https://pakistanfoodrecipes.top/{image}?v={version}"' in rendered, data.stem
+          print('Featured links and versioned generated recipe data passed.')
           PY
