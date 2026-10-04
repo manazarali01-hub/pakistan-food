@@ -32,5 +32,46 @@
     "Remove excess moisture from onion and tomato to help the kababs hold together.",
     "Make the patties relatively thin so the centre cooks before the exterior burns."
   ],
-  "storage": "Cool cooked kababs promptly and refrigerate covered. Reheat the portion you plan to eat until thoroughly hot."
+  "storage": "Cool cooked kababs promptly and refrigerate covered. Reheat the portion you plan to eat until thoroughly hot.",
+  "prep_time": "20 min",
+  "cook_time": "25 min",
+  "prep_time_iso": "PT20M",
+  "cook_time_iso": "PT25M",
+  "total_time_iso": "PT45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chapli kabab with browned craggy edges, crushed coriander, tomato and fresh herbs",
+  "image_caption": "Thin chapli kababs with browned, craggy edges and a juicy seasoned beef centre.",
+  "technique": "Chapli kabab is shaped flatter than seekh kabab so a broad surface can brown while the centre stays juicy. Keep tomato and other wet ingredients controlled, shape immediately before frying, and use enough heat to brown without burning the spices.",
+  "doneness_cues": [
+    "The mixture should feel moist and cohesive but should not release a puddle of water.",
+    "Patties should be thin and broad with rough edges rather than thick burger-like discs.",
+    "The first side should develop a deep brown crust before turning.",
+    "The centre must be fully cooked while the edges remain crisp rather than hard."
+  ],
+  "mistakes": [
+    "Adding very juicy tomato too early and letting the mixture sit until it becomes wet.",
+    "Shaping thick patties that stay dense in the centre.",
+    "Frying on heat so high that coriander and exterior spices burn before the meat cooks.",
+    "Pressing cooked kababs repeatedly with a spatula and squeezing out juices."
+  ],
+  "substitutions": [
+    "Use firm tomato and remove excessive watery seed pulp if the mixture already feels loose.",
+    "The chilli level can be reduced while keeping crushed coriander and cumin for the characteristic aromatic profile.",
+    "If your mince is unusually wet, chill the mixed batch before shaping rather than adding large amounts of dry filler."
+  ],
+  "reheating": "Warm chapli kababs in a dry or lightly greased pan over medium-low heat, covered briefly if needed. Reheat only until hot so the centre stays moist.",
+  "faqs": [
+    {
+      "question": "Why does chapli kabab break while frying?",
+      "answer": "Excess moisture, a warm soft mixture or turning before the first side sets are common causes. Chill the mixture and cook a small test patty first."
+    },
+    {
+      "question": "Why are my chapli kababs hard?",
+      "answer": "They may be too thick, too lean, overmixed or overcooked. Keep them thin and stop cooking once the centre is done."
+    },
+    {
+      "question": "Can I prepare the mixture ahead?",
+      "answer": "You can prepare much of it ahead, but very wet ingredients such as chopped tomato are better added close to shaping so they do not loosen the mixture."
+    }
+  ]
 }
