@@ -33,5 +33,34 @@
     "Flatten fillets to an even thickness so the centre cooks before the coating becomes too dark.",
     "If the coating browns very quickly, lower the oil temperature rather than serving chicken that may still be raw inside."
   ],
-  "storage": "The burger is best assembled fresh. Cool leftover cooked chicken promptly, refrigerate covered and reheat thoroughly before putting it into a freshly assembled bun."
+  "storage": "The burger is best assembled fresh. Cool leftover cooked chicken promptly, refrigerate covered and reheat thoroughly before putting it into a freshly assembled bun.",
+  "prep_time": "25 min",
+  "cook_time": "30 min",
+  "prep_time_iso": "PT25M",
+  "cook_time_iso": "PT30M",
+  "total_time_iso": "PT55M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Crispy chicken zinger-style burger with craggy seasoned coating, lettuce and mayonnaise",
+  "image_caption": "Evenly flattened chicken fillets coated in seasoned flour, fried crisp and assembled in toasted buns.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Crispy_chicken_burger.jpg",
+  "technique": "Even chicken thickness is the safety and texture key. Build a craggy coating by pressing flour onto the egg-washed fillet, then fry at steady medium heat so the centre cooks before the crust becomes too dark.",
+  "doneness_cues": [
+    "Fillets should be similar thickness after flattening.",
+    "Coating should look rough and well adhered before frying.",
+    "Oil should bubble steadily rather than smoke.",
+    "Thickest chicken area must be fully cooked while the crust stays crisp."
+  ],
+  "mistakes": [
+    "Frying thick uneven fillets.",
+    "Crowding the pan and dropping oil temperature.",
+    "Using very hot oil that browns the crust before the centre cooks.",
+    "Assembling too early and steaming the crisp coating inside the bun."
+  ],
+  "substitutions": [
+    "Use boneless thigh for a juicier burger with adjusted shape.",
+    "Milk or water both work in the egg wash.",
+    "Add chilli gradually to the flour instead of relying on hot sauce to mask bland chicken."
+  ],
+  "reheating": "Reheat cooked fillets with dry heat until hot and crisp, then assemble fresh.",
+  "serving": "Toast buns lightly and assemble only when the chicken is ready to serve."
 }

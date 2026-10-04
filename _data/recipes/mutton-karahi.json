@@ -30,5 +30,34 @@
     "Mutton may need longer than 70 minutes depending on the cut and age of the meat; tenderness is more important than a fixed clock time.",
     "Avoid adding a large amount of water at once because karahi should finish with a concentrated tomato masala rather than a thin gravy."
   ],
-  "storage": "Cool leftovers promptly and refrigerate covered. Reheat the portion being served until thoroughly hot."
+  "storage": "Cool leftovers promptly and refrigerate covered. Reheat the portion being served until thoroughly hot.",
+  "prep_time": "20 min",
+  "cook_time": "80 min",
+  "prep_time_iso": "PT20M",
+  "cook_time_iso": "PT1H20M",
+  "total_time_iso": "PT1H40M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani mutton karahi with tender bone-in meat, concentrated fresh tomato masala, green chilli and ginger",
+  "image_caption": "Mutton cooked tender first, then finished uncovered until fresh tomato masala clings to the meat.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Mutton_Karahi.JPG",
+  "technique": "Tenderness comes before final karahi reduction. Use a modest amount of hot water only as needed to soften the mutton, then uncover and reduce the tomatoes aggressively enough to concentrate without drying the meat.",
+  "doneness_cues": [
+    "Mutton should yield easily before the final high-moisture reduction ends.",
+    "Tomatoes should break down completely into a clinging masala.",
+    "No large pool of thin gravy should remain.",
+    "Fresh ginger, cumin, pepper and green chilli should remain distinct at the finish."
+  ],
+  "mistakes": [
+    "Trying to keep karahi dry from the beginning and leaving mutton tough.",
+    "Adding a large quantity of water and ending with curry-like gravy.",
+    "Continuing reduction long after meat is tender and drying it out.",
+    "Adding finishing spices too early so their aroma disappears."
+  ],
+  "substitutions": [
+    "Mutton cuts vary greatly; use tenderness rather than minutes as the endpoint.",
+    "Reduce green chilli without reducing fresh ginger.",
+    "If tomatoes are watery, use a wider pan rather than flour."
+  ],
+  "reheating": "Reheat gently with a spoonful of water only if needed.",
+  "serving": "Serve with naan or roti and extra julienned ginger."
 }

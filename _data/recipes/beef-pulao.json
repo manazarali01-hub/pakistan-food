@@ -32,5 +32,33 @@
     "Basmati varieties absorb different amounts of liquid, so add stock according to the rice rather than automatically using all of it.",
     "Avoid repeated stirring after adding rice so the grains stay intact."
   ],
-  "storage": "Cool leftover beef pulao promptly, refrigerate covered and reheat the portion being served until thoroughly hot."
+  "storage": "Cool leftover beef pulao promptly, refrigerate covered and reheat the portion being served until thoroughly hot.",
+  "prep_time": "25 min",
+  "cook_time": "75 min",
+  "prep_time_iso": "PT25M",
+  "cook_time_iso": "PT1H15M",
+  "total_time_iso": "PT1H40M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani beef pulao with tender bone-in beef and separate basmati rice cooked in yakhni",
+  "image_caption": "Beef pulao cooked with measured yakhni, browned onions and whole spices, then rested for separate aromatic grains.",
+  "technique": "Build the pulao from a finished yakhni, not guessed starting water. Tenderise beef, strain and measure the stock, then season that liquid before rice. The final dum should finish absorption without repeated stirring.",
+  "doneness_cues": [
+    "Beef should be tender before rice is added.",
+    "Strained yakhni should smell clearly of beef and whole spices.",
+    "Most liquid should disappear before low dum begins.",
+    "Finished rice should be separate and aromatic with tender beef pieces."
+  ],
+  "mistakes": [
+    "Using all starting water as if none evaporated during yakhni cooking.",
+    "Adding rice before beef is tender.",
+    "Using too much stock for soaked basmati.",
+    "Stirring repeatedly once rice starts cooking."
+  ],
+  "substitutions": [
+    "Mutton can use the same approach with its own tenderness time.",
+    "Use less yogurt for a lighter meat base.",
+    "Different basmati brands need slightly different stock amounts."
+  ],
+  "reheating": "Reheat covered with a splash of water until rice and beef are steaming hot.",
+  "serving": "Serve with raita, onion salad or chutney."
 }
