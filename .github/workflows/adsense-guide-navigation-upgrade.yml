@@ -1,0 +1,36 @@
+name: AdSense Guide Navigation Upgrade
+
+on:
+  push:
+    branches:
+      - adsense-final-risk-reduction-2026-10-05
+    paths:
+      - 'scripts/adsense_guide_navigation_upgrade.py'
+      - '.github/workflows/adsense-guide-navigation-upgrade.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: adsense-final-risk-reduction-2026-10-05
+      - name: Upgrade guide navigation and trust
+        run: python3 scripts/adsense_guide_navigation_upgrade.py
+      - name: Commit guide upgrades
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add guides/
+          if git diff --cached --quiet; then
+            echo "No guide changes."
+            exit 0
+          fi
+          git commit -m "Integrate cooking guides into site navigation"
+          git push origin HEAD:adsense-final-risk-reduction-2026-10-05
