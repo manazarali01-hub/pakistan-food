@@ -4,7 +4,7 @@
   "category": "Breakfast",
   "time": "40 min",
   "serves": 4,
-  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aloo_paratha.jpg?width=900",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Aloo_paratha_served_with_daal,_curd_and_achar.jpg?width=1280",
   "description": "Pakistani aloo paratha with soft whole-wheat dough wrapped around a dry, well-seasoned potato filling and cooked on a tawa until golden on both sides.",
   "ingredients": [
     "2 cups whole-wheat flour (atta)",
@@ -71,5 +71,8 @@
       "question": "Can the filling be made ahead?",
       "answer": "Yes. Cool and refrigerate it covered, then bring it close to cool room temperature before stuffing so it spreads more easily."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Aloo_paratha_served_with_daal,_curd_and_achar.jpg",
+  "image_author": "AjayDas",
+  "image_license": "CC BY-SA 4.0"
 }
