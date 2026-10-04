@@ -23,11 +23,11 @@
     {
       "slug": "daal-chawal",
       "action": "replace-commons",
-      "resolved": "https://upload.wikimedia.org/wikipedia/commons/5/51/Rice_with_Lentils.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Dal_chawal.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
       "content_type": "image/jpeg",
       "width": 1200,
       "height": 900,
-      "bytes": 150154
+      "bytes": 98126
     },
     {
       "slug": "chicken-handi",
@@ -52,9 +52,9 @@
       "action": "replace-commons",
       "resolved": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Nihari_%26_Halwa_Puri_-_Breakfast_of_every_Lahori.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
       "content_type": "image/jpeg",
-      "width": 620,
-      "height": 465,
-      "bytes": 40372
+      "width": 544,
+      "height": 408,
+      "bytes": 31574
     },
     {
       "slug": "lahori-chargha",
@@ -68,11 +68,11 @@
     {
       "slug": "kashmiri-chai",
       "action": "replace-commons",
-      "resolved": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Noon_Chai.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Kashmiri_Chai.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
       "content_type": "image/jpeg",
       "width": 1200,
       "height": 900,
-      "bytes": 163808
+      "bytes": 367368
     }
   ]
 }
