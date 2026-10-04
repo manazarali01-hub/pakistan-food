@@ -1,7 +1,7 @@
 # Pakistan Food — AdSense Low-Value Content Recovery Audit
 
 **Audit date:** 2026-10-04  
-**Current verified state:** repository QA through PR #22 (`c1a11bf7`) plus a successful latest-main custom-domain deployment/smoke verification on commit `3e9bb85f` (Live Site Smoke run 37208801821; Pages deployment run 996).  
+**Current verified state:** latest visual-quality recovery is merged through PR #32 on main commit `40d6e5fa250dd80617c6da062277b190cfb14dfb`; GitHub Pages deployment run `37221130690`, Pages Refresh run `37221130805`, and Live Site Smoke run `37221130803` all completed successfully.  
 **Main site:** https://pakistanfoodrecipes.top/  
 **Reason for recovery work:** Google AdSense — Low value content
 
@@ -156,9 +156,9 @@ Evidence-led decisions included:
 - premium open-license replacements were introduced only when the dish and recipe matched closely enough;
 - Rice Kheer's current high-resolution hero was retained because it clearly represents creamy rice kheer with the nut/saffron-style garnish described by the recipe, rather than replacing an accurate image merely for novelty.
 
-Current image audit: **66 local recipe images, 0 externally served recipe images, 0 missing alt text, and 0 missing captions**. The final user-directed visual pass changes **21 recipe images**: nine replacements and twelve controlled zoom/reframes. Pakistani Samosa uses the exact user-supplied photograph; Aloo Gosht, Aloo Paratha, Anda Paratha, Chicken Sajji, Daal Chawal, Halwa Puri, Kashmiri Chai and Paya use newly selected real licensed photographs with source/creator/license metadata retained. Chicken Biryani, Beef Nihari, Aloo Keema, Aloo Palak, Bhindi Gosht, Chicken Handi, Chicken Qorma, Kabli Pulao, Lahori Chargha, Mutton Karahi, Reshmi Kabab and White Chicken Karahi keep their existing real photographs but receive stronger food-first crops. Mutton Biryani is intentionally unchanged because it passed the user's visual review. Every changed output is exact 4:3 and validated as a non-trivial WebP asset.
+Current image audit: **66 local recipe images, 0 externally served recipe images, 0 missing alt text, and 0 missing captions**. The final user-directed visual pass changes **21 recipe images**: nine replacements and twelve controlled zoom/reframes. Pakistani Samosa now uses the selected Pexels photograph with explicit source/creator/license metadata and a repaired local WebP. The final visual repair also introduced stronger real photographs or tighter food-first crops for Chicken Handi, Daal Chawal, Halwa Puri, Chicken Sajji, Lahori Chargha and Kashmiri Chai. Earlier replacements and reframes remain in place for the rest of the user-priority set. Mutton Biryani is intentionally unchanged because it passed the user's visual review. Every current priority output is served locally and validated as a non-trivial 4:3 WebP asset.
 
-Earlier image work moved all 66 recipe images to local assets and normalized the library to 4:3. The final quality pass is narrower and user-directed: it improves the specific dishes that still looked weak after live review. Mobile Browser QA treats placeholders as failures, checks homepage recipe-card source images for 4:3, and now includes a dedicated 390px hero-image sweep across the 21 user-priority recipe pages. The cache-busting image version is advanced to `20261004-final4` so browsers and CDNs request the final image bytes instead of reusing older cached files.
+Earlier image work moved all 66 recipe images to local assets and normalized the library to 4:3. The final quality pass is narrower and user-directed: it improves the specific dishes that still looked weak after live review. Mobile Browser QA treats placeholders as failures, checks homepage recipe-card source images for 4:3, and now includes a dedicated 390px hero-image sweep across the 21 user-priority recipe pages. The cache-busting image version is now `20261004-final5` so browsers and CDNs request the latest repaired image bytes instead of reusing older cached files.
 
 ## Structured-data rules
 
@@ -194,7 +194,7 @@ Branch validation checks:
 - Process/step images are an optional future enhancement, not treated as factual Recipe-schema data unless real source images exist.
 - The 15 priority recipes received the deepest manual editorial review; automated quality gates now pass across all 66 recipes, but this does not substitute for future human taste/testing feedback.
 - Real Playwright browser QA is now verified across **42 page/viewport combinations** at 320, 360, 375, 390, 412, 430 and 768 px, with zero horizontal overflow, zero broken images and zero recorded interaction/layout failures in the tested set.
-- The latest-main custom-domain gate is now verified. Live Site Smoke run **37208801821** completed successfully for commit `3e9bb85f` after matching Pages deployment run **996**. The live checks passed for `/`, `/recipes/halwa-puri.html`, `ads.txt`, `robots.txt`, `sitemap.xml`, `sitemap-v2.xml`, the **223-URL canonical sitemap set**, and the About, Contact, Privacy, Editorial Policy, Disclaimer, Terms and Image Credits pages.
+- The latest-main custom-domain gate is verified after the final image repair. Live Site Smoke run **37221130803** completed successfully for commit `40d6e5fa250dd80617c6da062277b190cfb14dfb` after Pages deployment run **37221130690** and Pages Refresh run **37221130805** both succeeded. The live smoke continues to cover the homepage, Halwa Puri recipe page, recipe image delivery, `ads.txt`, `robots.txt`, sitemap endpoints and trust pages.
 
 ## Resubmission rule
 
