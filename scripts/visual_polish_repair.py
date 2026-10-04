@@ -167,16 +167,16 @@ def main():
         zoom=0.90, focal_x=0.53, focal_y=0.52,
     ))
 
-    # High-resolution daal-and-rice plate, tightly cropped around the food.
+    # Clear full-plate dal chawal composition rather than an extreme close-up.
     results.append(replace_commons(
         "daal-chawal",
-        "Rice with Lentils.jpg",
-        "https://commons.wikimedia.org/wiki/File:Rice_with_Lentils.jpg",
-        "Mrsagar105",
+        "Dal chawal.JPG",
+        "https://commons.wikimedia.org/wiki/File:Dal_chawal.JPG",
+        "Nirmal Deb",
         "CC BY-SA 4.0",
         "https://creativecommons.org/licenses/by-sa/4.0/",
         "assets/recipe-images/daal-chawal-v2.webp",
-        zoom=1.00, focal_x=0.50, focal_y=0.52,
+        zoom=0.80, focal_x=0.50, focal_y=0.52,
     ))
 
     # Re-fetch the exact Chicken Handi source at full resolution and crop around the food.
@@ -212,7 +212,7 @@ def main():
         "CC BY-SA 4.0",
         "https://creativecommons.org/licenses/by-sa/4.0/",
         "assets/recipe-images/halwa-puri-v2.webp",
-        zoom=0.82, focal_x=0.70, focal_y=0.42,
+        zoom=0.72, focal_x=0.75, focal_y=0.38,
     ))
 
     # Use the actual cooked Lahori Chargha source rather than the steam-stage image.
@@ -227,16 +227,16 @@ def main():
         zoom=0.78, focal_x=0.50, focal_y=0.50,
     ))
 
-    # Keep the accurate Noon Chai source, but crop tightly around one pink tea glass.
+    # Use a dedicated Kashmiri Chai cup photo with visible pink tea and nut garnish.
     results.append(replace_commons(
         "kashmiri-chai",
-        "Noon Chai.jpg",
-        "https://commons.wikimedia.org/wiki/File:Noon_Chai.jpg",
-        "Naryiitmandi",
-        "CC BY-SA 4.0",
-        "https://creativecommons.org/licenses/by-sa/4.0/",
+        "Kashmiri Chai.JPG",
+        "https://commons.wikimedia.org/wiki/File:Kashmiri_Chai.JPG",
+        "Miansari66",
+        "CC0 1.0",
+        "https://creativecommons.org/publicdomain/zero/1.0/",
         "assets/recipe-images/kashmiri-chai-v2.webp",
-        zoom=0.55, focal_x=0.75, focal_y=0.62,
+        zoom=0.80, focal_x=0.50, focal_y=0.52,
     ))
 
     bump_cache()
