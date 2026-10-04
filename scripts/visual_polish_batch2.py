@@ -81,11 +81,9 @@ def crop43(im,zoom,fx,fy):
     cx=round(w*fx); cy=round(h*fy)
     left=max(0,min(w-cw,cx-cw//2)); top=max(0,min(h-ch,cy-ch//2))
     out=im.crop((left,top,left+cw,top+ch))
-    fw=min(1400,out.width); fh=round(fw*3/4)
-    if fh>out.height:
-        fh=out.height; fw=round(fh*4/3)
-    if out.size!=(fw,fh):
-        out=out.resize((fw,fh),Image.Resampling.LANCZOS)
+    # Standardize every hero/card asset to an exact 4:3 canvas.
+    # All selected source files are comfortably above this resolution.
+    out=out.resize((1200,900),Image.Resampling.LANCZOS)
     # Gentle contrast only; preserve natural food color.
     out=ImageEnhance.Contrast(out).enhance(1.04)
     return out
