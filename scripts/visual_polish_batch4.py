@@ -41,12 +41,12 @@ SOURCES={
     "caption":"Mutton karahi with bone-in meat in concentrated tomato masala, ginger and green chilli."
   },
   "reshmi-kabab":{
-    "filename":"Food-Chicken-Reshmi-Kebab-3.jpg",
-    "source":"https://commons.wikimedia.org/wiki/File:Food-Chicken-Reshmi-Kebab-3.jpg",
-    "author":"Sumit Surai","license":"CC BY-SA 3.0",
-    "license_url":"https://creativecommons.org/licenses/by-sa/3.0/",
+    "filename":"Chicken reshmi kebabs.jpg",
+    "source":"https://commons.wikimedia.org/wiki/File:Chicken_reshmi_kebabs.jpg",
+    "author":"Prianxi","license":"CC BY-SA 4.0",
+    "license_url":"https://creativecommons.org/licenses/by-sa/4.0/",
     "out":"assets/recipe-images/reshmi-kabab-v2.webp",
-    "zoom":0.82,"fx":0.50,"fy":0.50,
+    "zoom":0.80,"fx":0.50,"fy":0.50,
     "alt":"Chicken reshmi kababs grilled until lightly browned and served hot",
     "caption":"Reshmi kababs grilled until lightly browned with a soft juicy centre."
   }
