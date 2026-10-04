@@ -32,5 +32,46 @@
     "After adding the atta slurry, simmer long enough for the raw flour taste to disappear."
   ],
   "storage": "Cool leftover nihari promptly and refrigerate covered. Reheat the portion being served until the meat and gravy are thoroughly hot.",
-  "serving": "Serve hot with naan or sheermal, lemon wedges, fresh ginger, coriander and green chillies."
+  "serving": "Serve hot with naan or sheermal, lemon wedges, fresh ginger, coriander and green chillies.",
+  "prep_time": "20 min",
+  "cook_time": "3 hr 40 min",
+  "prep_time_iso": "PT20M",
+  "cook_time_iso": "PT3H40M",
+  "total_time_iso": "PT4H",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani beef nihari with tender shank, smooth spiced gravy, ginger, coriander and green chilli",
+  "image_caption": "Slow-cooked beef nihari with tender shank and a smooth atta-thickened gravy.",
+  "technique": "Nihari improves with patient, gentle cooking. Tenderise the shank before thickening, then whisk atta into slightly cooled nihari liquid until completely smooth and add the slurry gradually so the gravy stays silky rather than lumpy.",
+  "doneness_cues": [
+    "The beef shank should yield easily when pressed with a fork and should not feel tight or chewy.",
+    "The spice base should smell toasted and savoury, not raw or burnt.",
+    "The atta slurry should be smooth before it enters the pot, with no dry flour pockets.",
+    "Finished gravy should coat a spoon lightly while still flowing; nihari should not set like a thick paste."
+  ],
+  "mistakes": [
+    "Boiling tough beef aggressively instead of giving connective tissue time to soften at a gentle simmer.",
+    "Adding dry atta directly to the pot, which encourages lumps.",
+    "Using burnt onions or scorched spices; long cooking magnifies those bitter flavours.",
+    "Over-thickening before the final simmer, forgetting that the gravy continues to tighten as it cooks and rests."
+  ],
+  "substitutions": [
+    "Beef shank is especially suitable because of its connective tissue; a stewing cut such as chuck can work but may give a less gelatinous body.",
+    "Use hot water for later adjustments so the simmer recovers quickly without shocking the pot.",
+    "Whole-wheat atta gives the expected style of body; other starches will produce a different texture."
+  ],
+  "reheating": "Nihari reheats well. Warm it slowly, stirring from the base and adding hot water a little at a time if the chilled gravy has become too thick. Heat the meat and gravy thoroughly before serving.",
+  "faqs": [
+    {
+      "question": "Why is nihari meat still tough?",
+      "answer": "The cut has not had enough gentle moist cooking. Continue at a low simmer and judge tenderness by the meat rather than by a fixed clock time."
+    },
+    {
+      "question": "How do I stop atta lumps in nihari?",
+      "answer": "Whisk the atta with some slightly cooled nihari liquid in a separate bowl until smooth, then add it gradually while stirring."
+    },
+    {
+      "question": "How thick should nihari gravy be?",
+      "answer": "It should feel rich and lightly coat a spoon but still pour around the meat. If it becomes heavy, loosen it gradually with hot water."
+    }
+  ]
 }
