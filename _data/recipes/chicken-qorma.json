@@ -31,5 +31,48 @@
     "Fry the onions evenly golden rather than dark brown, as burnt onions can make qorma bitter.",
     "Add yogurt gradually over lower heat and cook the masala well for a smooth, rich gravy."
   ],
-  "storage": "Cool leftover qorma promptly and refrigerate covered. Reheat gently but thoroughly before serving."
+  "storage": "Cool leftover qorma promptly and refrigerate covered. Reheat gently but thoroughly before serving.",
+  "prep_time": "15 min",
+  "cook_time": "45 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT45M",
+  "total_time_iso": "PT1H",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chicken qorma with rich yogurt gravy, deeply golden onions and whole spices",
+  "image_caption": "Chicken qorma built from deep-golden fried onions, yogurt and aromatic whole spices.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Korma.JPG",
+  "technique": "The onion stage gives qorma both colour and body. Fry sliced onions evenly deep golden, not burnt, cool and crush them, then cook the yogurt masala patiently until its raw tang disappears before adding the final simmering liquid.",
+  "doneness_cues": [
+    "Fried onions should be deep golden with no black bitter edges.",
+    "Whisked yogurt should cook into the masala until it looks cohesive instead of watery.",
+    "Chicken should be tender and fully cooked while the gravy remains flowing rather than paste-like.",
+    "A modest aromatic oil sheen may appear as the masala finishes."
+  ],
+  "mistakes": [
+    "Burning onions to force a darker qorma.",
+    "Adding yogurt on very high heat without whisking it first.",
+    "Using so much water that the fried-onion body disappears.",
+    "Treating qorma like tomato curry and adding tomato to this recipe."
+  ],
+  "substitutions": [
+    "Bone-in chicken suits the longer aromatic simmer; boneless thigh can be used with shorter cooking.",
+    "If whole spices are very strong, use a measured mix rather than increasing all of them.",
+    "Use hot water for gravy adjustment so cooking resumes quickly."
+  ],
+  "reheating": "Reheat gently, stirring from the base; add a small splash of hot water if the chilled gravy is too tight.",
+  "serving": "Serve with naan, sheermal or plain basmati rice, with fried onion garnish kept light.",
+  "faqs": [
+    {
+      "question": "Why is my qorma bitter?",
+      "answer": "Over-browned or burnt onion is a common cause. Spices scorched in the oil can also contribute."
+    },
+    {
+      "question": "Why did the yogurt split?",
+      "answer": "Very high heat or adding cold unwhisked yogurt abruptly can cause separation. Lower the heat and add smooth yogurt gradually."
+    },
+    {
+      "question": "Why is qorma slightly sweet?",
+      "answer": "Fried onions naturally bring some sweetness. It should stay savoury; balance salt and yogurt before trying sharp fixes."
+    }
+  ]
 }

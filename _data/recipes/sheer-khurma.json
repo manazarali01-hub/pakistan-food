@@ -25,5 +25,54 @@
     "Add the sugar after the vermicelli has softened and stir until fully dissolved. Taste before adding more because the dates and raisins also contribute sweetness.",
     "Continue cooking only until the vermicelli is tender and the milk is slightly thickened; sheer khurma will thicken further as it cools.",
     "Stir in the optional rose water off the strongest heat, then serve warm or cool promptly and refrigerate for a chilled serving."
+  ],
+  "prep_time": "10 min",
+  "cook_time": "25 min",
+  "prep_time_iso": "PT10M",
+  "cook_time_iso": "PT25M",
+  "total_time_iso": "PT35M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani sheer khurma with roasted vermicelli, milk, dates, almonds, pistachios and raisins",
+  "image_caption": "Sheer khurma with ghee-roasted vermicelli, dates and nuts simmered gently in cardamom milk.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Sheer_Khurma_special.JPG",
+  "technique": "Roast the fine vermicelli only until lightly golden, then let it soften in milk before sugar goes in. Dates and raisins already add sweetness, and the dessert thickens as it cools, so both sugar and reduction should stop earlier than they would for a dense halwa.",
+  "doneness_cues": [
+    "Vermicelli should smell toasted without dark burnt strands.",
+    "Milk should be lightly thickened but still flowing at the end of cooking.",
+    "Dates and raisins should be plump rather than cooked into a paste.",
+    "The hot dessert should look slightly looser than the final cooled texture."
+  ],
+  "mistakes": [
+    "Burning fine vermicelli in hot ghee.",
+    "Adding sugar before tasting the sweetness contributed by dates and raisins.",
+    "Reducing until very thick while hot and ending with a pasty dessert after cooling.",
+    "Adding rose water during a long strong boil and losing its aroma."
+  ],
+  "substitutions": [
+    "Rose water is optional and should be added off the strongest heat.",
+    "Use the nuts you prefer, or omit them for allergy; dates remain a key festive component.",
+    "If dates are exceptionally sweet, reduce the added sugar before changing the milk ratio."
+  ],
+  "storage": "Cool promptly and refrigerate covered for a chilled serving. It thickens as it stands.",
+  "reheating": "Warm gently with a splash of milk if refrigerated sheer khurma has become thicker than you prefer.",
+  "serving": "Serve warm or thoroughly chilled, with a few fresh sliced nuts on top.",
+  "tips": [
+    "Watch fine vermicelli constantly while roasting.",
+    "Add sugar only after vermicelli is tender.",
+    "Stop reduction while the dessert is still slightly loose."
+  ],
+  "faqs": [
+    {
+      "question": "Why did sheer khurma become too thick?",
+      "answer": "Vermicelli continues absorbing milk as the dessert cools. Stop cooking while the hot mixture is still a little loose."
+    },
+    {
+      "question": "Why is it too sweet?",
+      "answer": "Dates and raisins add their own sweetness. Taste before increasing the recipe's added sugar."
+    },
+    {
+      "question": "When should rose water be added?",
+      "answer": "Add the optional rose water near the end, away from aggressive heat, so its aroma stays fresh."
+    }
   ]
 }

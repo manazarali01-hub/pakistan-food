@@ -2,7 +2,7 @@
   "id": 36,
   "name": "Ras Malai",
   "category": "Desserts",
-  "time": "70 min plus chilling",
+  "time": "3 hrs 10 min including chilling",
   "serves": 6,
   "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rasmalai.jpg?width=800",
   "description": "Soft Pakistani ras malai with tender milk-powder patties gently cooked in cardamom-scented sweet milk, then chilled and topped with pistachios.",
@@ -28,5 +28,48 @@
     "Add the egg gradually because different milk powders absorb different amounts; an overly wet dough can make the patties break.",
     "Once the patties are added, maintain a gentle simmer and handle them carefully."
   ],
-  "storage": "Keep ras malai covered and refrigerated. Serve it chilled and avoid leaving the milk-based dessert at room temperature for extended periods."
+  "storage": "Keep ras malai covered and refrigerated. Serve it chilled and avoid leaving the milk-based dessert at room temperature for extended periods.",
+  "prep_time": "25 min",
+  "cook_time": "45 min",
+  "prep_time_iso": "PT25M",
+  "cook_time_iso": "PT45M",
+  "total_time_iso": "PT3H10M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani ras malai with soft milk patties in cardamom sweet milk and chopped pistachios",
+  "image_caption": "Soft ras malai patties gently cooked in cardamom-scented milk, chilled and topped with pistachios.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Rasmalai.jpg",
+  "technique": "The patty dough must stay very soft without becoming wet. Add beaten egg gradually, shape smooth crack-free patties and cook them at a steady gentle simmer. Violent boiling or a stiff overworked dough produces dense or broken ras malai.",
+  "doneness_cues": [
+    "Dough should be soft enough to shape smoothly without deep cracks.",
+    "Patties should puff during gentle simmering rather than disintegrate.",
+    "Cooked patties should feel tender and springy, not hard or raw at the centre.",
+    "After at least 2 hours chilling in the milk, patties should be cold through and well flavoured."
+  ],
+  "mistakes": [
+    "Adding the entire egg regardless of how much the milk powder absorbs.",
+    "Kneading aggressively until the dough becomes tight.",
+    "Using a rolling boil that knocks delicate patties apart.",
+    "Handling hot cooked patties repeatedly before they firm slightly in the milk."
+  ],
+  "substitutions": [
+    "Different milk-powder brands absorb egg differently, so texture matters more than an exact egg volume.",
+    "Pistachio garnish can be omitted for allergy or replaced with a small amount of almond.",
+    "Cardamom is enough for aroma; rose water is optional rather than necessary."
+  ],
+  "reheating": "Ras malai is intended to be served chilled; do not boil the finished dessert again.",
+  "serving": "Chill in its sweet milk for at least 2 hours, then serve cold with pistachios added just before serving.",
+  "faqs": [
+    {
+      "question": "Why did ras malai patties break?",
+      "answer": "The dough may be too wet, cracked, or the milk may be boiling too violently. Add egg gradually and keep the simmer gentle."
+    },
+    {
+      "question": "Why is ras malai rubbery?",
+      "answer": "An overworked or too-dry dough, too much egg imbalance, or aggressive cooking can make the patties dense."
+    },
+    {
+      "question": "How long should ras malai chill?",
+      "answer": "This version allows at least 2 hours so the patties cool through and absorb the cardamom milk."
+    }
+  ]
 }

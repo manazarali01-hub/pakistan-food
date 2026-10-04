@@ -2,7 +2,7 @@
   "id": 60,
   "name": "Chicken Malai Boti",
   "category": "BBQ",
-  "time": "45 min",
+  "time": "45 min plus 1 hr marinating",
   "serves": 5,
   "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malai_Boti.JPG?width=900",
   "description": "Creamy Pakistani chicken malai boti marinated with thick yogurt, cream, green chillies and mild spices, then grilled until juicy with lightly charred edges.",
@@ -27,5 +27,54 @@
     "Thread the pieces onto skewers without packing them too tightly and brush the surface lightly with oil.",
     "Cook over a hot barbecue, grill or grill pan, turning as needed for even browning, until the chicken is fully cooked through and has lightly charred edges. Do not rely on surface colour alone to judge doneness.",
     "Rest the cooked malai boti briefly before serving with chutney, sliced onion and lemon."
+  ],
+  "prep_time": "30 min plus 1 hr marinating",
+  "cook_time": "15 min",
+  "prep_time_iso": "PT1H30M",
+  "cook_time_iso": "PT15M",
+  "total_time_iso": "PT1H45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chicken malai boti with creamy yogurt marinade and lightly charred grilled edges",
+  "image_caption": "Malai boti marinated with thick yogurt, cream, green chilli and mild spices, then grilled until juicy.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Malai_Boti.JPG",
+  "technique": "Malai boti needs a thick, mild marinade that stays on the meat. Dry the chicken surface, use thick yogurt plus a small amount of cornflour for adhesion, chill for at least one hour, then grill hot and relatively fast so cream does not simply melt away before browning.",
+  "doneness_cues": [
+    "Raw marinade should visibly coat the chicken cubes rather than run off.",
+    "Skewered pieces should have small gaps for even heat exposure.",
+    "The exterior should have light golden-charred patches rather than a dark chilli crust.",
+    "The centre must be fully cooked while remaining moist."
+  ],
+  "mistakes": [
+    "Using thin yogurt or wet chicken and ending with a sliding marinade.",
+    "Overloading cornflour until the coating tastes pasty.",
+    "Cooking over weak heat for a long time and drying the chicken before colour develops.",
+    "Judging doneness only from the pale creamy exterior."
+  ],
+  "substitutions": [
+    "Boneless thigh is especially forgiving; breast works with careful timing.",
+    "Green chilli can be reduced for a very mild version.",
+    "Do not replace all cream with extra yogurt if the goal is the characteristic malai richness."
+  ],
+  "storage": "Cool cooked boti promptly and refrigerate covered; discard raw marinade left after chicken has been removed unless it is thoroughly cooked for another use.",
+  "reheating": "Warm briefly until thoroughly hot, preferably covered or in an oven, to limit moisture loss.",
+  "serving": "Serve hot with mint chutney, lemon and sliced onion.",
+  "tips": [
+    "Pat chicken dry before marinating.",
+    "Use thick yogurt so the coating stays on the meat.",
+    "Cook over strong enough heat to brown before the centre dries."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my malai boti marinade sliding off?",
+      "answer": "The chicken surface or yogurt is too wet. Pat the chicken dry and use thick yogurt; the small amount of cornflour also helps adhesion."
+    },
+    {
+      "question": "Why is malai boti dry?",
+      "answer": "The pieces may be too small or cooked too long. Keep cubes similar in size and use strong heat for a shorter cook."
+    },
+    {
+      "question": "Should malai boti be spicy?",
+      "answer": "It is usually milder than red chicken tikka, with green chilli, black pepper, cumin and creamy dairy doing more of the flavour work."
+    }
   ]
 }
