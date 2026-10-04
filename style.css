@@ -747,20 +747,22 @@ button {
     transform: translateY(-8px);
 }
 
-.punjab {
-    background-image: url("assets/chicken-karahi.webp?v=20260912-fast2");
+.region-card {
+    color: inherit;
+    text-decoration: none;
 }
 
-.sindh {
-    background-image: url("assets/chicken-biryani.webp?v=20260912-fast2");
+.region-card > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.kp {
-    background-image: url("assets/chapli-kebab.webp?v=20260912-fast2");
-}
-
-.balochistan {
-    background-image: url("assets/beef-pulao.webp?v=20260912-fast2");
+.region-card:focus-visible {
+    outline: 3px solid #f5bb36;
+    outline-offset: 4px;
 }
 
 .region-overlay {
