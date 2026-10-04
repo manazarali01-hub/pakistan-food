@@ -255,10 +255,10 @@ body.dark {
 
 /* Pakistan green identity redesign — 2026-09-25 */
 :root {
-  --primary: #01411c;
-  --primary-dark: #002f14;
-  --secondary: #0b7a3b;
-  --emerald: #128a49;
+  --primary: #2f7d57;
+  --primary-dark: #245f43;
+  --secondary: #4f9c73;
+  --emerald: #65ad83;
   --gold: #c9972f;
   --bg: #fbfaf5;
   --surface: #ffffff;
@@ -314,11 +314,11 @@ body { background: var(--bg); }
 .hero-small { color: #d9efdf; }
 .hero h1 span { color: #ffffff; text-decoration: underline; text-decoration-color: rgba(226,189,99,.75); text-decoration-thickness: .08em; text-underline-offset: .12em; }
 .hero p { color: rgba(255,255,255,.9); }
-.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 26px rgba(1,65,28,.18); }
-.hero .btn-primary { background: #fff; color: #01411c; box-shadow: 0 12px 30px rgba(0,0,0,.16); }
-.hero .btn-primary:hover { background: #f1f7f3; color: #002f14; }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 26px rgba(47,125,87,.18); }
+.hero .btn-primary { background: #fff; color: #2f7d57; box-shadow: 0 12px 30px rgba(0,0,0,.16); }
+.hero .btn-primary:hover { background: #f1f7f3; color: #245f43; }
 .btn-primary:hover { background: var(--primary-dark); }
-.btn-outline:hover { color: #01411c; }
+.btn-outline:hover { color: #2f7d57; }
 .hero-stats { border-top: 1px solid rgba(255,255,255,.22); padding-top: 24px; }
 .hero-stats span { color: rgba(255,255,255,.72); }
 
@@ -360,9 +360,9 @@ body { background: var(--bg); }
   transform: translateY(-5px);
   box-shadow: 0 20px 42px rgba(1,65,28,.13);
 }
-.recipe-badge { background: rgba(1,65,28,.94); }
-.favorite-btn { color: #01411c; box-shadow: 0 5px 16px rgba(0,0,0,.13); }
-.favorite-btn.active { color: #01411c; background: #eff8f2; }
+.recipe-badge { background: rgba(47,125,87,.94); }
+.favorite-btn { color: #2f7d57; box-shadow: 0 5px 16px rgba(0,0,0,.13); }
+.favorite-btn.active { color: #2f7d57; background: #eff8f2; }
 .recipe-title-link:hover, .recipe-title-link:focus-visible, .view-recipe, .full-recipe { color: var(--primary); }
 .recipe-name-urdu, .recipe-title-urdu, .card-urdu, .hub-card-urdu { color: var(--primary); }
 
@@ -373,7 +373,7 @@ body { background: var(--bg); }
 .about-points span { color: var(--primary); }
 
 .footer, .seo-site-footer, .cat-site-footer, .hub-site-footer, .policy-header, .policy-footer {
-  background: #002f14 !important;
+  background: #245f43 !important;
 }
 .footer a:hover { color: #d8eddf; }
 
@@ -386,7 +386,7 @@ body { background: var(--bg); }
 .recipe-lang-btn.active, .recipe-lang-btn[aria-selected="true"], .print-recipe {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 7px 18px rgba(1,65,28,.18);
+  box-shadow: 0 7px 18px rgba(47,125,87,.18);
 }
 .step-number { color: var(--primary); }
 .recipe-step-list > li { box-shadow: 0 8px 24px rgba(1,65,28,.045); }
@@ -547,7 +547,7 @@ body:not(.dark) .hero .btn-outline {
 }
 body:not(.dark) .hero .btn-outline:hover {
   background: #fff;
-  color: #01411c;
+  color: #2f7d57;
 }
 body:not(.dark) .hero-stats {
   border-top-color: rgba(255,255,255,.30);
@@ -967,8 +967,8 @@ body:not(.dark) {
   --text: #30291e;
   --muted: #746956;
   --border: #dfd0b4;
-  --primary: #0b5a36;
-  --primary-dark: #074529;
+  --primary: #2f7d57;
+  --primary-dark: #245f43;
   --secondary: #b68b45;
   --gold: #c59d55;
   --shadow: 0 16px 42px rgba(91, 69, 34, .10);
@@ -1061,7 +1061,7 @@ body:not(.dark) select:focus,
 body:not(.dark) textarea:focus,
 body:not(.dark) .search-box:focus-within {
   border-color: var(--primary) !important;
-  box-shadow: 0 0 0 4px rgba(11, 90, 54, .10) !important;
+  box-shadow: 0 0 0 4px rgba(47, 125, 87, .12) !important;
 }
 
 /* Ivory-forward hero: retain the food photo but wash the scene in warm cream. */
@@ -1100,7 +1100,7 @@ body:not(.dark) .hero-small {
 body:not(.dark) .hero .btn-primary {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 12px 28px rgba(11,90,54,.18);
+  box-shadow: 0 12px 28px rgba(47,125,87,.18);
 }
 
 body:not(.dark) .hero .btn-primary:hover {
@@ -1111,7 +1111,7 @@ body:not(.dark) .hero .btn-primary:hover {
 body:not(.dark) .hero .btn-outline {
   background: rgba(255,250,240,.76);
   color: var(--primary);
-  border-color: rgba(11,90,54,.34);
+  border-color: rgba(47,125,87,.34);
   backdrop-filter: blur(8px);
 }
 
