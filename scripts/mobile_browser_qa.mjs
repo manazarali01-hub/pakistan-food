@@ -71,7 +71,21 @@ async function inspectLayout(label, width) {
         const style = getComputedStyle(el);
         if (style.display === "none" || style.visibility === "hidden" || rect.width === 0 || rect.height === 0) return false;
         if (rect.bottom < 0 || rect.top > window.innerHeight) return false;
-        return rect.width < 32 || rect.height < 32;
+
+        if (el.tagName === "BUTTON") {
+          // Prominent controls on this site are designed around a 40–44px touch target.
+          return rect.width < 40 || rect.height < 40;
+        }
+
+        // WCAG 2.2 Target Size (Minimum) uses a 24px floor, while ordinary
+        // inline text links have a spacing/inline exception. Do not turn
+        // paragraph/breadcrumb links into false failures.
+        const inlineTextLink =
+          style.display === "inline" &&
+          (el.closest("p, li, .seo-breadcrumb, .guide-shell, .policy-page") !== null);
+        if (inlineTextLink) return false;
+
+        return rect.width < 24 || rect.height < 24;
       })
       .slice(0, 12)
       .map(el => ({
@@ -101,8 +115,8 @@ async function inspectLayout(label, width) {
   if (report.broken.length) {
     failures.push(`${label} @ ${width}px: broken images: ${JSON.stringify(report.broken)}`);
   }
-  // 32px is a hard floor for this audit; important controls are designed at ~40-44px.
-  if (report.smallTapTargets.length > 4) {
+  // Buttons use the site's 40px control floor; non-inline links use WCAG's 24px floor.
+  if (report.smallTapTargets.length > 0) {
     failures.push(`${label} @ ${width}px: too many tiny visible tap targets: ${JSON.stringify(report.smallTapTargets)}`);
   }
   return report;
