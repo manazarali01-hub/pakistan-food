@@ -4,7 +4,7 @@
   "category": "BBQ",
   "time": "50 min",
   "serves": 5,
-  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Seekh_kebab.jpg?width=960",
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mughlai_Seekh_Kebab.JPG?width=1280",
   "description": "Juicy Pakistani beef seekh kababs with herbs and spices, mixed until cohesive, shaped evenly on skewers and grilled until browned and fully cooked.",
   "ingredients": [
     "750 g beef mince with some fat",
@@ -36,8 +36,8 @@
   "cook_time_iso": "PT30M",
   "total_time_iso": "PT50M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani beef seekh kabab with browned juicy minced-meat skewers, onion, lemon and green chutney",
-  "image_caption": "Beef seekh kababs browned on the outside and served with onion, lemon and green chutney.",
+  "image_alt": "Mughlai-style seekh kebabs grilled until browned and served as a minced-meat kebab platter",
+  "image_caption": "Seekh kebabs grilled until browned; a high-resolution Wikimedia Commons photograph used as a visual reference.",
   "technique": "A seekh mixture must be cold, cohesive and not watery. Mix until the mince becomes slightly tacky, chill if it feels soft, then press a thin even layer around each skewer so the centre cooks before the outside dries.",
   "doneness_cues": [
     "The mixed mince should hold together when pressed rather than shedding visible water.",
@@ -71,7 +71,8 @@
       "answer": "Keep the layer fairly even and not excessively thick so the centre cooks by the time the surface browns."
     }
   ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Seekh_kebab.jpg",
-  "image_author": "Vivid mongoose",
-  "image_license": "CC0 1.0"
+  "image_source": "https://commons.wikimedia.org/wiki/File:Mughlai_Seekh_Kebab.JPG",
+  "image_author": "Srishti Gurung",
+  "image_license": "CC BY-SA 4.0",
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
 }
