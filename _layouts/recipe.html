@@ -13,8 +13,9 @@
   {% if first_character == '/' %}
     {% assign local_image = recipe.image | remove_first: '/' %}
   {% endif %}
-  {% assign display_image = '../' | append: local_image %}
-  {% assign seo_image = 'https://pakistanfoodrecipes.top/' | append: local_image %}
+  {% assign image_version = site.recipe_image_version | default: '20261004-photo3' %}
+  {% assign display_image = '../' | append: local_image | append: '?v=' | append: image_version %}
+  {% assign seo_image = 'https://pakistanfoodrecipes.top/' | append: local_image | append: '?v=' | append: image_version %}
 {% endif %}
 {% assign display_image_mobile = display_image %}
 {% if recipe.image contains 'commons.wikimedia.org' %}
