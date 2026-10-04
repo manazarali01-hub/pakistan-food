@@ -273,6 +273,76 @@ for (const width of widths) {
   }
 }
 
+const priorityImageSlugs = [
+  "pakistani-samosa",
+  "chicken-biryani",
+  "beef-nihari",
+  "aloo-gosht",
+  "aloo-keema",
+  "aloo-palak",
+  "aloo-paratha",
+  "anda-paratha",
+  "bhindi-gosht",
+  "chicken-handi",
+  "chicken-qorma",
+  "chicken-sajji",
+  "daal-chawal",
+  "halwa-puri",
+  "kabli-pulao",
+  "kashmiri-chai",
+  "lahori-chargha",
+  "mutton-karahi",
+  "paya",
+  "reshmi-kabab",
+  "white-chicken-karahi",
+];
+
+await page.setViewportSize({ width: 390, height: 920 });
+for (const slug of priorityImageSlugs) {
+  const before = failures.length;
+  const url = base + `/recipes/${slug}.html`;
+  const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+  if (!response || !response.ok()) {
+    failures.push(`${slug} priority image sweep: HTTP ${response?.status() || "no response"}`);
+    continue;
+  }
+  await page.waitForSelector("figure img", { timeout: 10000 });
+  await settleImages();
+  const hero = await page.locator("figure img").first().evaluate(img => ({
+    src: img.getAttribute("src") || "",
+    currentSrc: img.currentSrc || "",
+    complete: img.complete,
+    naturalWidth: img.naturalWidth,
+    naturalHeight: img.naturalHeight,
+    renderedWidth: Math.round(img.getBoundingClientRect().width),
+    viewportWidth: window.innerWidth,
+  }));
+  if (!hero.complete || hero.naturalWidth <= 0 || hero.naturalHeight <= 0) {
+    failures.push(`${slug} priority image sweep: hero failed to load: ${JSON.stringify(hero)}`);
+  }
+  if (hero.src.includes("recipe-image-unavailable.svg") || hero.currentSrc.includes("recipe-image-unavailable.svg")) {
+    failures.push(`${slug} priority image sweep: placeholder rendered`);
+  }
+  if (hero.naturalWidth > 0 && Math.abs((hero.naturalWidth / hero.naturalHeight) - (4 / 3)) > 0.015) {
+    failures.push(`${slug} priority image sweep: hero source is not 4:3: ${hero.naturalWidth}x${hero.naturalHeight}`);
+  }
+  if (/\.webp(?:\?|$)/.test(hero.src) && !/[?&]v=/.test(hero.src)) {
+    failures.push(`${slug} priority image sweep: hero missing image cache version: ${hero.src}`);
+  }
+  if (hero.renderedWidth < Math.floor(hero.viewportWidth * 0.82)) {
+    failures.push(`${slug} priority image sweep: hero is too narrow on mobile: ${hero.renderedWidth}px of ${hero.viewportWidth}px`);
+  }
+  results.push({
+    label: `${slug}-priority-image`,
+    width: 390,
+    overflow: 0,
+    broken: [],
+    placeholders: [],
+    h1Text: slug,
+    failuresAdded: failures.length - before,
+  });
+}
+
 await browser.close();
 
 console.log("MOBILE BROWSER QA");
