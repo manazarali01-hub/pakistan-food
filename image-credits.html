@@ -37,23 +37,23 @@ layout: null
           {% assign r = recipe_pair[1] %}
           {% if r.image contains 'commons.wikimedia.org' %}
             {% assign source_url = r.image | replace: 'Special:Redirect/file/', 'File:' | replace: 'Special:FilePath/', 'File:' | split: '?' | first %}
-            <li><a href="{{ source_url }}" rel="noopener noreferrer">{{ r.name }}</a></li>
+            <li>
+              <a href="{{ r.image_source | default: source_url }}" rel="noopener noreferrer">{{ r.name }}</a>
+              {% if r.image_author %} — {{ r.image_author }}{% endif %}
+              {% if r.image_license %} · {{ r.image_license }}{% endif %}
+            </li>
           {% endif %}
         {% endfor %}
       </ul>
 
-      <h2>Sources for optimized local recipe images</h2>
-      <p>Some photographs are stored locally in optimized web formats for reliability and speed. Their source records are retained below.</p>
+      <h2>Sources for current optimized local recipe images</h2>
+      <p>These recipe photographs are still served from local optimized files. Their source records are retained below. Recipes now served directly from Wikimedia Commons are listed above with creator and license information.</p>
       <ul class="credits-list">
-        <li><a href="https://commons.wikimedia.org/wiki/File:Chicken_biriyani.jpg">Chicken Biryani</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Chicken_Yakhni_Pulao.jpg">Chicken Pulao</a></li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Chicken_Karahi.JPG">Chicken Karahi</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Chicken_Handi.JPG">Chicken Handi</a></li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Beef_Nihari,_made_by_Saleha_Atif,_Pakistan.jpg">Beef Nihari</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Bannu_Gull_Beeff_Pulao.jpg">Beef Pulao</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Aaloo_Gosht.JPG">Aloo Gosht</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Chana_masala.jpg">Chana Masala</a></li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Chapli_Kebab.jpg">Chapli Kabab</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Seekh_Kebab.JPG">Seekh Kabab</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Finger_licking_Shami_Kababs.jpg">Shami Kabab</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Sajji.JPG">Chicken Sajji</a></li>
@@ -61,13 +61,11 @@ layout: null
         <li><a href="https://commons.wikimedia.org/wiki/File:Pakora_(6005558506).jpg">Pakora</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Halwa_Puri_-_Walled_City_of_Lahore_Punjab_Pakistan_is_famous_for_this_traditional_food.jpg">Halwa Puri</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Kheer.jpg">Rice Kheer</a></li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Gulab_Jamun_1.jpg">Gulab Jamun</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Spicy_Matar_Keema1.jpg">Keema Matar</a></li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Mango_lassi.jpg">Mango Lassi</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Matar_Pulao_-_Mohali_2016-08-06_8222.JPG">Matar Pulao</a></li>
       </ul>
 
-      <p><small>Images and licenses can change at their source. The linked Commons file page is the authoritative record for creator and license details. Questions or correction requests can be sent to <a href="mailto:manazarali01@gmail.com">manazarali01@gmail.com</a>.</small></p>
+      <p><small>Images and licenses can change at their source. The linked Commons file page is the authoritative record for creator and license details. Questions or correction requests can be sent through <a href="contact.html">Contact &amp; Recipe Corrections</a> or by email at <a href="mailto:manazarali01@gmail.com">manazarali01@gmail.com</a>.</small></p>
     </main>
 
     <footer class="policy-footer">
