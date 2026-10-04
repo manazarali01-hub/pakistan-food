@@ -255,10 +255,10 @@ body.dark {
 
 /* Pakistan green identity redesign — 2026-09-25 */
 :root {
-  --primary: #2f7d57;
-  --primary-dark: #245f43;
-  --secondary: #4f9c73;
-  --emerald: #65ad83;
+  --primary: #278202;
+  --primary-dark: #096201;
+  --secondary: #6ab446;
+  --emerald: #89c862;
   --gold: #c9972f;
   --bg: #fbfaf5;
   --surface: #ffffff;
@@ -266,7 +266,7 @@ body.dark {
   --text: #15231a;
   --muted: #5c6b61;
   --border: #dce7df;
-  --shadow: 0 16px 42px rgba(1,65,28,.09);
+  --shadow: 0 16px 42px rgba(39,130,2,.09);
 }
 body.dark {
   --bg: #0c1510;
@@ -283,10 +283,10 @@ body.dark {
 }
 body { background: var(--bg); }
 .header { background: color-mix(in srgb, var(--surface) 94%, transparent); border-bottom-color: var(--border); }
-.header.scrolled { box-shadow: 0 8px 28px rgba(1,65,28,.10); }
+.header.scrolled { box-shadow: 0 8px 28px rgba(39,130,2,.10); }
 .logo { letter-spacing: -.02em; }
 .logo strong { color: var(--primary); }
-.brand-mark { box-shadow: 0 4px 14px rgba(1,65,28,.12); }
+.brand-mark { box-shadow: 0 4px 14px rgba(39,130,2,.12); }
 .desktop-nav > a:hover, .nav-dropdown > a:hover, .dropdown-menu a:hover { color: var(--primary); }
 .icon-btn, .menu-btn { background: var(--surface); }
 .icon-btn:hover, .menu-btn:hover { border-color: var(--primary); }
@@ -295,7 +295,7 @@ body { background: var(--bg); }
   min-height: min(760px, 94svh);
   background-image:
     radial-gradient(circle at 84% 24%, rgba(255,255,255,.11) 0 4px, transparent 5px),
-    linear-gradient(90deg, rgba(0,47,20,.96) 0%, rgba(1,65,28,.86) 38%, rgba(1,65,28,.42) 67%, rgba(0,0,0,.18) 100%),
+    linear-gradient(90deg, rgba(9,98,1,.96) 0%, rgba(39,130,2,.86) 38%, rgba(39,130,2,.42) 67%, rgba(0,0,0,.18) 100%),
     url("/assets/recipe-images/chicken-biryani-v2.webp");
   background-size: 36px 36px, auto, cover;
   background-position: center, center, center;
@@ -314,11 +314,11 @@ body { background: var(--bg); }
 .hero-small { color: #d9efdf; }
 .hero h1 span { color: #ffffff; text-decoration: underline; text-decoration-color: rgba(226,189,99,.75); text-decoration-thickness: .08em; text-underline-offset: .12em; }
 .hero p { color: rgba(255,255,255,.9); }
-.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 26px rgba(47,125,87,.18); }
-.hero .btn-primary { background: #fff; color: #2f7d57; box-shadow: 0 12px 30px rgba(0,0,0,.16); }
-.hero .btn-primary:hover { background: #f1f7f3; color: #245f43; }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 26px rgba(39,130,2,.18); }
+.hero .btn-primary { background: #fff; color: #278202; box-shadow: 0 12px 30px rgba(0,0,0,.16); }
+.hero .btn-primary:hover { background: #f1f7f3; color: #096201; }
 .btn-primary:hover { background: var(--primary-dark); }
-.btn-outline:hover { color: #2f7d57; }
+.btn-outline:hover { color: #278202; }
 .hero-stats { border-top: 1px solid rgba(255,255,255,.22); padding-top: 24px; }
 .hero-stats span { color: rgba(255,255,255,.72); }
 
@@ -334,50 +334,50 @@ body { background: var(--bg); }
 .category-box {
   background: var(--surface);
   border-color: var(--border);
-  box-shadow: 0 7px 22px rgba(1,65,28,.04);
+  box-shadow: 0 7px 22px rgba(39,130,2,.04);
 }
 .category-box:hover, .category-box:focus-visible {
   transform: translateY(-4px);
   border-color: var(--secondary);
-  box-shadow: 0 16px 32px rgba(1,65,28,.11);
+  box-shadow: 0 16px 32px rgba(39,130,2,.11);
 }
 .category-box h3 { color: var(--primary); }
-.search-box { border-radius: 999px; box-shadow: 0 8px 28px rgba(1,65,28,.06); }
-.search-box:focus-within { border-color: var(--secondary); box-shadow: 0 0 0 4px rgba(18,138,73,.10); }
+.search-box { border-radius: 999px; box-shadow: 0 8px 28px rgba(39,130,2,.06); }
+.search-box:focus-within { border-color: var(--secondary); box-shadow: 0 0 0 4px rgba(106,180,70,.10); }
 .filter-btn:hover, .filter-btn.active, .saved-filter:hover, .saved-filter.active {
   background: var(--primary);
   border-color: var(--primary);
   color: #fff;
 }
-.saved-filter span { background: rgba(1,65,28,.10); }
+.saved-filter span { background: rgba(39,130,2,.10); }
 .surprise-recipe:hover { border-color: var(--secondary); color: var(--primary); }
 
 .recipe-card, .featured-card {
   border-color: var(--border);
-  box-shadow: 0 9px 28px rgba(1,65,28,.06);
+  box-shadow: 0 9px 28px rgba(39,130,2,.06);
 }
 .recipe-card:hover, .featured-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 42px rgba(1,65,28,.13);
+  box-shadow: 0 20px 42px rgba(39,130,2,.13);
 }
-.recipe-badge { background: rgba(47,125,87,.94); }
-.favorite-btn { color: #2f7d57; box-shadow: 0 5px 16px rgba(0,0,0,.13); }
-.favorite-btn.active { color: #2f7d57; background: #eff8f2; }
+.recipe-badge { background: rgba(39,130,2,.94); }
+.favorite-btn { color: #278202; box-shadow: 0 5px 16px rgba(0,0,0,.13); }
+.favorite-btn.active { color: #278202; background: #eff8f2; }
 .recipe-title-link:hover, .recipe-title-link:focus-visible, .view-recipe, .full-recipe { color: var(--primary); }
 .recipe-name-urdu, .recipe-title-urdu, .card-urdu, .hub-card-urdu { color: var(--primary); }
 
-.region-card { border: 1px solid rgba(1,65,28,.10); }
-.region-overlay { background: linear-gradient(transparent 20%, rgba(0,47,20,.92)); }
+.region-card { border: 1px solid rgba(39,130,2,.10); }
+.region-overlay { background: linear-gradient(transparent 20%, rgba(9,98,1,.92)); }
 .region-content span { color: #f0cd77; }
 .about-badge { background: var(--primary); }
 .about-points span { color: var(--primary); }
 
 .footer, .seo-site-footer, .cat-site-footer, .hub-site-footer, .policy-header, .policy-footer {
-  background: #245f43 !important;
+  background: #096201 !important;
 }
 .footer a:hover { color: #d8eddf; }
 
-.seo-site-header, .cat-site-header, .hub-site-header { box-shadow: 0 5px 22px rgba(1,65,28,.06); }
+.seo-site-header, .cat-site-header, .hub-site-header { box-shadow: 0 5px 22px rgba(39,130,2,.06); }
 .seo-site-brand, .cat-site-brand, .hub-site-brand,
 .seo-meta a, .seo-breadcrumb a, .cat nav a, .hub-card strong,
 .hub-categories a, .popular-links a, .policy-page a { color: var(--primary) !important; }
@@ -386,13 +386,13 @@ body { background: var(--bg); }
 .recipe-lang-btn.active, .recipe-lang-btn[aria-selected="true"], .print-recipe {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 7px 18px rgba(47,125,87,.18);
+  box-shadow: 0 7px 18px rgba(39,130,2,.18);
 }
 .step-number { color: var(--primary); }
-.recipe-step-list > li { box-shadow: 0 8px 24px rgba(1,65,28,.045); }
+.recipe-step-list > li { box-shadow: 0 8px 24px rgba(39,130,2,.045); }
 
 @media (max-width: 620px) {
-  .hero { background-image: radial-gradient(circle at 84% 24%, rgba(255,255,255,.11) 0 4px, transparent 5px), linear-gradient(90deg, rgba(0,47,20,.96) 0%, rgba(1,65,28,.86) 38%, rgba(1,65,28,.42) 67%, rgba(0,0,0,.18) 100%), url("/assets/recipe-images/chicken-biryani-v2.webp"); background-position: center, center, 58% center; }
+  .hero { background-image: radial-gradient(circle at 84% 24%, rgba(255,255,255,.11) 0 4px, transparent 5px), linear-gradient(90deg, rgba(9,98,1,.96) 0%, rgba(39,130,2,.86) 38%, rgba(39,130,2,.42) 67%, rgba(0,0,0,.18) 100%), url("/assets/recipe-images/chicken-biryani-v2.webp"); background-position: center, center, 58% center; }
   .hero::after { top: 13%; right: 14px; opacity: .65; }
   .hero-content { padding-block: 72px 54px; }
   .hero h1 { font-size: clamp(2.55rem, 12vw, 3.9rem); }
@@ -522,9 +522,9 @@ body:not(.dark) .hero {
     linear-gradient(
       90deg,
       rgba(0, 47, 20, .80) 0%,
-      rgba(1, 65, 28, .64) 32%,
-      rgba(1, 65, 28, .30) 58%,
-      rgba(1, 65, 28, .10) 78%,
+      rgba(39, 130, 2, .64) 32%,
+      rgba(39, 130, 2, .30) 58%,
+      rgba(39, 130, 2, .10) 78%,
       rgba(0, 0, 0, .03) 100%
     ),
     url("/assets/recipe-images/chicken-biryani-v2.webp");
@@ -547,7 +547,7 @@ body:not(.dark) .hero .btn-outline {
 }
 body:not(.dark) .hero .btn-outline:hover {
   background: #fff;
-  color: #2f7d57;
+  color: #278202;
 }
 body:not(.dark) .hero-stats {
   border-top-color: rgba(255,255,255,.30);
@@ -560,9 +560,9 @@ body:not(.dark) .hero-stats {
       linear-gradient(
         90deg,
         rgba(0, 47, 20, .76) 0%,
-        rgba(1, 65, 28, .58) 44%,
-        rgba(1, 65, 28, .24) 72%,
-        rgba(1, 65, 28, .08) 100%
+        rgba(39, 130, 2, .58) 44%,
+        rgba(39, 130, 2, .24) 72%,
+        rgba(39, 130, 2, .08) 100%
       ),
       url("/assets/recipe-images/chicken-biryani-v2.webp");
     background-size: cover;
@@ -621,7 +621,7 @@ body:not(.dark) .hero-stats {
 .affiliate-pick:hover, .affiliate-pick:focus-visible {
   transform: translateY(-2px);
   border-color: var(--secondary);
-  box-shadow: 0 12px 26px rgba(1,65,28,.08);
+  box-shadow: 0 12px 26px rgba(39,130,2,.08);
 }
 .affiliate-pick-copy { display: grid; gap: 6px; }
 .affiliate-pick-copy small { color: var(--muted); line-height: 1.5; }
@@ -708,14 +708,14 @@ body:not(.dark) .hero-stats {
   background: var(--surface);
   color: var(--text);
   text-decoration: none;
-  box-shadow: 0 10px 28px rgba(1,65,28,.055);
+  box-shadow: 0 10px 28px rgba(39,130,2,.055);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .popular-recipe-card:hover,
 .popular-recipe-card:focus-visible {
   transform: translateY(-4px);
   border-color: var(--secondary);
-  box-shadow: 0 18px 38px rgba(1,65,28,.12);
+  box-shadow: 0 18px 38px rgba(39,130,2,.12);
 }
 .popular-recipe-card img {
   width: 100%;
@@ -743,7 +743,7 @@ body:not(.dark) .hero-stats {
   background: var(--surface);
   color: var(--text);
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(1,65,28,.045);
+  box-shadow: 0 8px 24px rgba(39,130,2,.045);
 }
 .cooking-help-card:hover,
 .cooking-help-card:focus-visible {
@@ -963,18 +963,19 @@ body:not(.dark) .hero-stats {
 body:not(.dark) {
   --bg: #f8f1df;
   --surface: #fffaf0;
-  --surface-2: #f3ead5;
+  --surface-2: #f1f6e9;
   --text: #30291e;
-  --muted: #746956;
-  --border: #dfd0b4;
-  --primary: #2f7d57;
-  --primary-dark: #245f43;
-  --secondary: #b68b45;
+  --muted: #6d6957;
+  --border: #d8e1c8;
+  --primary: #278202;
+  --primary-dark: #096201;
+  --secondary: #6ab446;
+  --leaf-light: #89c862;
   --gold: #c59d55;
   --shadow: 0 16px 42px rgba(91, 69, 34, .10);
   background:
-    radial-gradient(circle at 12% 8%, rgba(255,255,255,.72), transparent 34%),
-    linear-gradient(180deg, #fffaf0 0%, #f8f1df 58%, #f4ead4 100%);
+    radial-gradient(circle at 12% 8%, rgba(137,200,98,.16), transparent 34%),
+    linear-gradient(180deg, #fffaf0 0%, #f7f3df 58%, #f0f3df 100%);
   color: var(--text);
 }
 
@@ -1012,7 +1013,7 @@ body:not(.dark) .recipes,
 body:not(.dark) .about,
 body:not(.dark) .recently-viewed {
   background:
-    linear-gradient(180deg, rgba(255,250,240,.80), rgba(243,234,213,.92)) !important;
+    linear-gradient(180deg, rgba(255,250,240,.86), rgba(235,243,220,.94)) !important;
 }
 
 body:not(.dark) .category-box,
@@ -1061,7 +1062,7 @@ body:not(.dark) select:focus,
 body:not(.dark) textarea:focus,
 body:not(.dark) .search-box:focus-within {
   border-color: var(--primary) !important;
-  box-shadow: 0 0 0 4px rgba(47, 125, 87, .12) !important;
+  box-shadow: 0 0 0 4px rgba(39, 130, 2, .12) !important;
 }
 
 /* Ivory-forward hero: retain the food photo but wash the scene in warm cream. */
@@ -1100,7 +1101,7 @@ body:not(.dark) .hero-small {
 body:not(.dark) .hero .btn-primary {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 12px 28px rgba(47,125,87,.18);
+  box-shadow: 0 12px 28px rgba(39,130,2,.18);
 }
 
 body:not(.dark) .hero .btn-primary:hover {
@@ -1111,7 +1112,7 @@ body:not(.dark) .hero .btn-primary:hover {
 body:not(.dark) .hero .btn-outline {
   background: rgba(255,250,240,.76);
   color: var(--primary);
-  border-color: rgba(47,125,87,.34);
+  border-color: rgba(39,130,2,.34);
   backdrop-filter: blur(8px);
 }
 
@@ -1153,7 +1154,7 @@ body:not(.dark) .hub-card img {
 body:not(.dark) .recipe-image,
 body:not(.dark) .region-card,
 body:not(.dark) .featured-card {
-  background: #eee2c9;
+  background: #e8efd8;
 }
 
 /* Preserve strong green calls-to-action against the ivory canvas. */
@@ -1175,7 +1176,7 @@ body:not(.dark) .featured-card:hover,
 body:not(.dark) .popular-recipe-card:hover,
 body:not(.dark) .cooking-help-card:hover,
 body:not(.dark) .affiliate-pick:hover {
-  border-color: #c9b58e !important;
+  border-color: #9fc47c !important;
   box-shadow: 0 18px 40px rgba(91, 69, 34, .13) !important;
 }
 
@@ -1205,7 +1206,7 @@ body:not(.dark) .seo-site-footer,
 body:not(.dark) .cat-site-footer,
 body:not(.dark) .hub-site-footer,
 body:not(.dark) .policy-footer {
-  background: #efe2c7 !important;
+  background: #e7f0d8 !important;
   color: var(--text) !important;
   border-top: 1px solid var(--border);
 }
@@ -1249,9 +1250,9 @@ body.dark {
   --text: #f6eedf;
   --muted: #cbbfae;
   --border: #463c2d;
-  --primary: #8fd1a7;
-  --primary-dark: #6fbd8b;
-  --secondary: #d5b46f;
+  --primary: #89c862;
+  --primary-dark: #6ab446;
+  --secondary: #a8d785;
   --gold: #d7b76f;
 }
 
@@ -1305,7 +1306,7 @@ body:not(.dark) main img {
 .guide-site-links a:hover,.guide-site-links a:focus-visible{color:var(--primary)}
 .guide-site-footer{
   margin-top:48px;padding:28px 20px;text-align:center;
-  background:#efe2c7;color:var(--text);border-top:1px solid var(--border);
+  background:#e7f0d8;color:var(--text);border-top:1px solid var(--border);
 }
 .guide-site-footer a{color:var(--primary);font-weight:750}
 .guide-trustline{
@@ -1357,7 +1358,7 @@ body:not(.dark) .policy-header .policy-brand strong {
 body:not(.dark) .back-top {
   background: var(--primary) !important;
   color: #fff !important;
-  box-shadow: 0 10px 24px rgba(47,125,87,.18);
+  box-shadow: 0 10px 24px rgba(39,130,2,.18);
 }
 body:not(.dark) .back-top:hover,
 body:not(.dark) .back-top:focus-visible {
@@ -1444,9 +1445,9 @@ body:not(.dark) .hero-small {
   width: fit-content;
   margin-bottom: 16px;
   padding: 7px 11px;
-  border: 1px solid rgba(47,125,87,.16);
+  border: 1px solid rgba(39,130,2,.16);
   border-radius: 999px;
-  background: rgba(47,125,87,.065);
+  background: rgba(39,130,2,.065);
   color: var(--primary);
   font-size: .72rem;
   font-weight: 850;
@@ -1498,11 +1499,11 @@ body:not(.dark) .hero .btn {
   letter-spacing: .01em;
 }
 body:not(.dark) .hero .btn-primary {
-  box-shadow: 0 12px 24px rgba(47,125,87,.17);
+  box-shadow: 0 12px 24px rgba(39,130,2,.17);
 }
 body:not(.dark) .hero .btn-outline {
   background: rgba(255,253,247,.76);
-  border-color: rgba(47,125,87,.22);
+  border-color: rgba(39,130,2,.22);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
 }
 body:not(.dark) .hero-stats {
@@ -1622,7 +1623,7 @@ body:not(.dark) .recipe-image {
   height: auto;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #eee2c9;
+  background: #e8efd8;
 }
 body:not(.dark) .recipe-image::after {
   content: "";
@@ -1646,7 +1647,7 @@ body:not(.dark) .recipe-badge {
   left: 14px;
   padding: 7px 11px;
   border: 1px solid rgba(255,255,255,.42);
-  box-shadow: 0 6px 18px rgba(47,125,87,.16);
+  box-shadow: 0 6px 18px rgba(39,130,2,.16);
   font-size: .66rem;
   letter-spacing: .065em;
   text-transform: uppercase;
@@ -1723,11 +1724,11 @@ body:not(.dark) .recipe-bottom .full-recipe {
   font-weight: 800;
 }
 body:not(.dark) .recipe-bottom .view-recipe {
-  background: rgba(47,125,87,.075);
+  background: rgba(39,130,2,.075);
   color: var(--primary);
 }
 body:not(.dark) .recipe-bottom .view-recipe:hover {
-  background: rgba(47,125,87,.12);
+  background: rgba(39,130,2,.12);
 }
 body:not(.dark) .recipe-bottom .full-recipe {
   color: var(--primary);
@@ -1855,3 +1856,23 @@ body.dark .recipe-bottom {
 }
 
 /* END FINAL IVORY HOMEPAGE POLISH */
+
+
+/* CORIANDER GREEN PALETTE — sampled from the user-provided fresh coriander reference.
+   Primary #278202 is used for readable actions; #6ab446 and #89c862 provide the light leaf accents. */
+body:not(.dark) .section-heading > span,
+body:not(.dark) .section-label,
+body:not(.dark) .featured-kicker,
+body:not(.dark) .category-box h3 {
+  color: var(--primary);
+}
+body:not(.dark) .category-box:hover,
+body:not(.dark) .recipe-card:hover,
+body:not(.dark) .featured-card:hover,
+body:not(.dark) .popular-recipe-card:hover,
+body:not(.dark) .cooking-help-card:hover {
+  border-color: var(--leaf-light) !important;
+}
+body:not(.dark) .guide .quick {
+  border-left-color: var(--primary) !important;
+}
