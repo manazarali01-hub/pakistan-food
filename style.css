@@ -1458,8 +1458,8 @@ body:not(.dark) {
   --text: #30291e;
   --muted: #746956;
   --border: #dfd0b4;
-  --primary: #0b5a36;
-  --primary-dark: #074529;
+  --primary: #2f7d57;
+  --primary-dark: #245f43;
   --secondary: #b68b45;
   --shadow: 0 16px 42px rgba(91,69,34,.10);
   background:
