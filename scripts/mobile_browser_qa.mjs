@@ -53,6 +53,25 @@ async function scrollThrough() {
   await page.waitForFunction(() => window.scrollY === 0, null, { timeout: 1500 });
 }
 
+async function settleImages() {
+  await page.evaluate(async () => {
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+    const pending = [...document.images]
+      .filter(img => !img.complete)
+      .map(img => new Promise(resolve => {
+        const done = () => resolve();
+        img.addEventListener("load", done, { once: true });
+        img.addEventListener("error", done, { once: true });
+      }));
+    await Promise.race([
+      Promise.all(pending),
+      sleep(2500),
+    ]);
+    // Give an onerror local fallback a moment to replace and decode.
+    await sleep(180);
+  });
+}
+
 async function inspectLayout(label, width) {
   const report = await page.evaluate(() => {
     const doc = document.documentElement;
@@ -208,6 +227,7 @@ for (const width of widths) {
     }
 
     await scrollThrough();
+    await settleImages();
     const report = await inspectLayout(label, width);
     results.push({ label, width, ...report, failuresAdded: failures.length - before });
 
