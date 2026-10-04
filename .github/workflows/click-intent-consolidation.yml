@@ -1,0 +1,29 @@
+name: Click Focused Intent Consolidation
+on:
+  push:
+    branches:
+      - final-image-and-query-quality-pass-2026-10-04
+    paths:
+      - 'scripts/consolidate_click_intent.py'
+      - '.github/workflows/click-intent-consolidation.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  consolidate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: final-image-and-query-quality-pass-2026-10-04
+      - run: python3 scripts/consolidate_click_intent.py
+      - run: python3 scripts/audit_content_quality.py --strict
+      - name: Commit conservative intent cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add guides sitemap-v2.xml sitemap.html index.html recipes
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Consolidate overlapping low-intent guide pages"
+          git push origin HEAD:final-image-and-query-quality-pass-2026-10-04
