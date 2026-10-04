@@ -4,7 +4,7 @@
   "category": "BBQ",
   "time": "45 min",
   "serves": 5,
-  "image": "assets/chapli-kebab.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Peshawari_Chapli_Kabab_by_Chef_Nina.jpg?width=1280",
   "description": "Pashtun-style chapli kababs made with seasoned beef mince, crushed coriander and cumin, herbs and tomato, shaped thin and shallow-fried until browned and cooked through.",
   "ingredients": [
     "750 g beef mince with some fat",
@@ -73,5 +73,8 @@
       "question": "Can I prepare the mixture ahead?",
       "answer": "You can prepare much of it ahead, but very wet ingredients such as chopped tomato are better added close to shaping so they do not loosen the mixture."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Peshawari_Chapli_Kabab_by_Chef_Nina.jpg",
+  "image_author": "Sholokov",
+  "image_license": "CC BY-SA 4.0"
 }
