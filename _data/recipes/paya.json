@@ -37,7 +37,7 @@
   "date_modified": "2026-10-04",
   "image_alt": "Pakistani beef paya with tender trotters in a rich gelatinous spiced broth and ginger garnish",
   "image_caption": "Slow-cooked beef paya with tender trotters and a naturally gelatin-rich onion-tomato broth.",
-  "image_source": "https://commons.wikimedia.org/wiki/File:Paya_Curry.JPG",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Siri_Payey_(Head_and_feet_curry_of_Goat),_a_traditional_breakfast_food_of_Pakistan.jpg",
   "technique": "Paya is a tenderness-first dish. Keep the trotters at a gentle covered simmer long enough for connective tissue to soften before reducing the broth. If you concentrate the liquid too early, the pot can run dry while the trotters are still firm.",
   "doneness_cues": [
     "The trotters should yield easily rather than feel rubbery or tight.",
@@ -78,7 +78,9 @@
       "answer": "This version relies on natural gelatin and controlled reduction, not flour."
     }
   ],
-  "image_author": "Miansari66",
-  "image_license": "Public domain",
-  "image_license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain"
+  "image_author": "Tahsin Shah",
+  "image_license": "CC BY-SA 4.0",
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "image_creator": "Tahsin Shah",
+  "image_source_label": "Wikimedia Commons"
 }
