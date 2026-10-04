@@ -4,7 +4,7 @@
   "category": "Rice",
   "time": "90 min",
   "serves": 6,
-  "image": "assets/chicken-biryani.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lahori_Biryani.jpg?width=1280",
   "description": "Pakistani chicken biryani with spiced chicken masala, fragrant basmati rice, fried onions and fresh herbs layered and finished gently on dum.",
   "ingredients": [
     "750 g bone-in chicken",
@@ -76,5 +76,8 @@
       "question": "Should biryani be mixed after dum?",
       "answer": "Rest it briefly first, then lift portions gently from the side so the masala and rice combine without crushing the grains."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Lahori_Biryani.jpg",
+  "image_author": "Muhammad Umair Mirza",
+  "image_license": "CC BY-SA 4.0"
 }
