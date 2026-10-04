@@ -1,0 +1,44 @@
+{
+  "policy": "Real, openly licensed food photography only.",
+  "cache_version": "20261004-final6",
+  "changed": [
+    "aloo-paratha",
+    "anda-paratha",
+    "bhindi-gosht",
+    "kabli-pulao"
+  ],
+  "results": [
+    {
+      "slug": "aloo-paratha",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/%22Amazing_Aloo_Paratha_and_Lovely_Lassi%22.jpg/1920px-%22Amazing_Aloo_Paratha_and_Lovely_Lassi%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 334814
+    },
+    {
+      "slug": "anda-paratha",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/FreshFarm_Omlette_with_Parathas.jpg/1920px-FreshFarm_Omlette_with_Parathas.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 230554
+    },
+    {
+      "slug": "bhindi-gosht",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Bhindi_Gosht.JPG/1920px-Bhindi_Gosht.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 389400
+    },
+    {
+      "slug": "kabli-pulao",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Qabuli_palao_%28rice_with_carrots_%26_raisins%29_with_lamb_-_Afghanistan_-_04272008.jpg/1920px-Qabuli_palao_%28rice_with_carrots_%26_raisins%29_with_lamb_-_Afghanistan_-_04272008.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 282946
+    }
+  ]
+}

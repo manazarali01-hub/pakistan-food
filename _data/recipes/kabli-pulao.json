@@ -4,7 +4,7 @@
   "category": "Rice",
   "time": "90 min",
   "serves": 6,
-  "image": "assets/recipe-images/kabli-pulao.webp",
+  "image": "assets/recipe-images/kabli-pulao-v2.webp",
   "description": "Fragrant Kabli pulao with tender beef or mutton, basmati rice, carrots and raisins, finished gently so the rice stays separate.",
   "ingredients": [
     "1 kg beef or mutton, cut into serving pieces",
@@ -32,9 +32,9 @@
   "cook_time_iso": "PT1H5M",
   "total_time_iso": "PT1H30M",
   "date_modified": "2026-10-04",
-  "image_alt": "Kabli pulao with basmati rice, tender meat, julienned carrots and plump raisins",
-  "image_caption": "Tender meat and basmati rice finished with a sweet-savory carrot and raisin topping.",
-  "image_source": "https://commons.wikimedia.org/wiki/File:Afghani_Pulao_1.JPG",
+  "image_alt": "Kabli pulao with lamb, basmati rice, carrots and raisins",
+  "image_caption": "Kabli pulao with tender lamb, basmati rice, carrots and raisins.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Qabuli_palao_(rice_with_carrots_%26_raisins)_with_lamb_-_Afghanistan_-_04272008.jpg",
   "technique": "Separate the jobs: tenderise the meat and build stock first, cook rice in measured stock second, and prepare the carrot-raisin topping briefly in a separate pan. This keeps the rice savoury while the garnish stays bright and distinct.",
   "doneness_cues": [
     "Meat should be tender before rice cooking begins.",
@@ -56,9 +56,9 @@
   "storage": "Cool promptly and refrigerate covered.",
   "reheating": "Reheat covered with a small splash of water until rice and meat are hot.",
   "serving": "Serve with yogurt or salad; distribute the carrot-raisin topping across portions.",
-  "image_author": "Miansari66",
-  "image_license": "CC0 1.0",
-  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "image_creator": "Miansari66",
+  "image_author": "Chen Zhao",
+  "image_license": "CC BY 2.0",
+  "image_license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "image_creator": "Chen Zhao",
   "image_source_label": "Wikimedia Commons"
 }
