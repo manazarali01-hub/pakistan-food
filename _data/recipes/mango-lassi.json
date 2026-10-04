@@ -19,5 +19,51 @@
     "Pour in the milk and add sugar to taste, then blend again until creamy and evenly combined.",
     "Add the ice and pulse briefly; avoid excessive blending once the drink is cold and frothy.",
     "Taste and adjust thickness with a small splash of milk if needed, then serve immediately while well chilled."
+  ],
+  "prep_time": "10 min",
+  "prep_time_iso": "PT10M",
+  "total_time_iso": "PT10M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Thick Pakistani mango lassi made with ripe mango, chilled yogurt and milk",
+  "image_caption": "Creamy mango lassi blended with ripe mango and chilled yogurt, with milk added only to adjust the pour.",
+  "technique": "Taste the mango before sweetening. A ripe aromatic mango provides both flavour and body, so blend mango with yogurt first and use milk only to loosen the drink to your preferred consistency.",
+  "doneness_cues": [
+    "Mango pieces should taste ripe and aromatic before they go into the blender.",
+    "The first mango-yogurt blend should be completely smooth with no fibrous chunks.",
+    "Finished lassi should pour slowly and evenly rather than separating into fruit pulp and thin liquid.",
+    "Sweetness should still taste balanced once the drink is fully chilled."
+  ],
+  "mistakes": [
+    "Using a watery or underripe mango and trying to compensate with extra sugar.",
+    "Adding all the milk at once and ending with a thin drink.",
+    "Adding lots of ice before checking thickness; melting ice dilutes flavour.",
+    "Blending for much longer than needed after the drink is already smooth and cold."
+  ],
+  "substitutions": [
+    "If mango is very sweet, reduce or omit added sugar.",
+    "For a thicker lassi, use well-chilled thick yogurt and less milk rather than adding dry thickeners.",
+    "A pinch of cardamom can be added for aroma, but keep it light so ripe mango remains the main flavour."
+  ],
+  "storage": "Mango lassi is best immediately after blending. If needed, refrigerate covered for a short period, stir before serving, and do not leave dairy-based lassi at room temperature for extended periods.",
+  "reheating": "Do not reheat mango lassi. Keep it chilled and discard it if it has been left in unsafe warm conditions for an extended period.",
+  "serving": "Serve very cold in small glasses, optionally with a few mango pieces or a light pinch of cardamom.",
+  "tips": [
+    "Start with ripe, fragrant mango so the drink needs less added sugar.",
+    "Blend mango and yogurt before adding milk; this makes thickness easier to control.",
+    "Use chilled ingredients to reduce the amount of ice needed."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my mango lassi thin?",
+      "answer": "The mango may be watery, the yogurt may be thin, or too much milk or ice was added. Start with thick yogurt and add milk only after blending the fruit."
+    },
+    {
+      "question": "Can I make mango lassi without sugar?",
+      "answer": "Yes, if the mango is sweet enough. Taste the fruit and the first blend before deciding whether any sugar is needed."
+    },
+    {
+      "question": "How do I make mango lassi thicker?",
+      "answer": "Use thicker chilled yogurt, a ripe fleshy mango and less milk. Avoid relying on a large amount of ice because it dilutes the drink as it melts."
+    }
   ]
 }
