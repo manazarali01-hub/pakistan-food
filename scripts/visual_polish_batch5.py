@@ -31,12 +31,12 @@ SOURCES={
     "caption":"Chana chaat with boiled chickpeas, tomato, onion and coriander in a tangy masala."
   },
   "fruit-chaat":{
-    "filename":"Fruit chaat.JPG",
-    "source":"https://commons.wikimedia.org/wiki/File:Fruit_chaat.JPG",
-    "author":"Milanography","license":"CC BY-SA 4.0",
+    "filename":"Indian Fruit Chaat.jpg",
+    "source":"https://commons.wikimedia.org/wiki/File:Indian_Fruit_Chaat.jpg",
+    "author":"Nami Verma","license":"CC BY-SA 4.0",
     "license_url":"https://creativecommons.org/licenses/by-sa/4.0/",
     "out":"assets/recipe-images/fruit-chaat-v2.webp",
-    "zoom":0.78,"fx":0.50,"fy":0.50,
+    "zoom":0.80,"fx":0.50,"fy":0.52,
     "alt":"Fresh mixed fruit chaat with colorful fruit pieces and crunchy dry fruits",
     "caption":"Fresh mixed fruit chaat with colorful fruit pieces and a crunchy dry-fruit topping."
   },
