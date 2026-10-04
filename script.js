@@ -544,7 +544,7 @@ function renderRecentlyViewed() {
     section.hidden = items.length === 0;
     grid.innerHTML = items.map(recipe => `
         <a class="recent-card" href="${recipePagePath(recipe)}">
-            <img src="${escapeHtml(recipe.image)}" alt="${escapeHtml(recipe.name)} ready to serve" width="480" height="360" loading="lazy" decoding="async">
+            <img src="${escapeHtml(sizedRecipeImage(recipe, 480))}" alt="${escapeHtml(recipeImageAlt(recipe))}" width="480" height="360" loading="lazy" decoding="async">
             <span class="recent-card-copy">
                 <strong>${escapeHtml(recipe.name)}</strong>
                 ${recipe.nameUrdu ? `<span class="recipe-name-urdu" lang="ur" dir="rtl">${escapeHtml(recipe.nameUrdu)}</span>` : ""}
@@ -568,6 +568,20 @@ function safeImageUrl(value) {
     const url = String(value || "").trim().replace(/^\//, "");
     return /^(assets\/[a-zA-Z0-9._/?=&%-]+|https:\/\/(?:commons\.wikimedia\.org|images\.weserv\.nl)\/[^"<>]*)$/.test(url)
         ? url : "assets/recipe-image-unavailable.svg";
+}
+function recipeImageAlt(recipe) {
+    return String(recipe?.image_alt || recipe?.name || "Pakistani recipe").trim();
+}
+function sizedRecipeImage(recipe, width) {
+    let url = safeImageUrl(recipe?.image);
+    if (/^https:\/\/commons\.wikimedia\.org\//.test(url)) {
+        if (/([?&]width=)\d+/.test(url)) return url.replace(/([?&]width=)\d+/, `$1${width}`);
+        return `${url}${url.includes("?") ? "&" : "?"}width=${width}`;
+    }
+    if (/^https:\/\/images\.weserv\.nl\//.test(url) && /([?&]w=)\d+/.test(url)) {
+        return url.replace(/([?&]w=)\d+/, `$1${width}`);
+    }
+    return url;
 }
 function useImageFallback(image) {
     if (image.tagName !== "IMG" || image.src.endsWith("/recipe-image-unavailable.svg")) return;
@@ -656,10 +670,10 @@ function renderRecipes() {
             <div class="recipe-image">
 
                 <img
-                    src="${escapeHtml(recipe.image)}"
-                    alt="${escapeHtml(recipe.name)} ready to serve"
-                    loading="${index < 3 ? "eager" : "lazy"}" decoding="async"
-                    fetchpriority="${index === 0 ? "high" : "auto"}"
+                    src="${escapeHtml(sizedRecipeImage(recipe, 640))}"
+                    alt="${escapeHtml(recipeImageAlt(recipe))}"
+                    loading="lazy"
+                    decoding="async"
                     width="900"
                     height="675"
                 >
@@ -930,10 +944,11 @@ function openRecipe(id) {
 
         <img
             class="modal-image"
-            src="${escapeHtml(recipe.image)}"
-            alt="${escapeHtml(recipe.name)} ready to serve"
+            src="${escapeHtml(sizedRecipeImage(recipe, 960))}"
+            alt="${escapeHtml(recipeImageAlt(recipe))}"
             width="900"
             height="675"
+            decoding="async"
         >
 
         <div class="modal-body">
