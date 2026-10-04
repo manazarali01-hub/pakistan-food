@@ -29,5 +29,46 @@
     "Mash or blend the cooked grain-and-lentil mixture to your preferred smoothness, then combine it gradually with the shredded beef mixture.",
     "Cook together on low heat, stirring and scraping the base frequently, until the haleem becomes thick, cohesive and glossy. Adjust with hot water if it becomes too stiff before the flavours have combined.",
     "Taste for seasoning and serve hot with fried onions, julienned ginger, coriander and lemon."
+  ],
+  "prep_time": "30 min",
+  "cook_time": "3 hr 30 min",
+  "prep_time_iso": "PT30M",
+  "cook_time_iso": "PT3H30M",
+  "total_time_iso": "PT4H",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani beef haleem with smooth wheat and lentil texture, fried onions, ginger, coriander and lemon",
+  "image_caption": "Slow-cooked beef haleem blended until the grains, lentils and meat form a thick cohesive texture.",
+  "technique": "Haleem needs two textures at once: the grains and lentils must soften enough to blend into the base, while the beef should be tender enough to shred through it. Blend or mash in stages and adjust hot water gradually so the mixture stays thick but spoonable.",
+  "doneness_cues": [
+    "Wheat, barley and lentils should crush easily between the fingers before final blending.",
+    "The beef should shred without resistance and disperse through the grain mixture.",
+    "Finished haleem should fall slowly from a spoon rather than run like soup or hold as a dry lump.",
+    "The surface should look cohesive after stirring, without separate watery liquid collecting around the edges."
+  ],
+  "mistakes": [
+    "Trying to blend grains before they are fully soft, which leaves a coarse, gritty texture.",
+    "Adding a large amount of water at the end; it is easier to loosen haleem gradually than to reduce a watery pot.",
+    "Using very high heat once the mixture is thick, when it can catch and scorch on the base.",
+    "Over-blending until all meat texture disappears if you prefer visible fine shreds."
+  ],
+  "substitutions": [
+    "The exact lentil mix can vary, but keep the overall grain-and-lentil quantity controlled so the final thickness remains predictable.",
+    "Beef can be replaced with another slow-cooking meat, but cooking time and flavour will change.",
+    "Add garnishes at serving time so fried onion stays crisp and ginger, coriander and lemon stay fresh."
+  ],
+  "reheating": "Haleem thickens considerably when chilled. Reheat over low heat, stirring from the base and adding hot water a few tablespoons at a time until it returns to a spoonable consistency.",
+  "faqs": [
+    {
+      "question": "Why is my haleem grainy?",
+      "answer": "The grains or lentils were probably not soft enough before mashing or blending. Cook them until they crush easily, then blend in stages."
+    },
+    {
+      "question": "How do I fix haleem that is too thick?",
+      "answer": "Stir in hot water gradually while reheating or simmering. Add small amounts so you do not turn it watery."
+    },
+    {
+      "question": "How do I stop haleem sticking to the pot?",
+      "answer": "Once it thickens, use lower heat and scrape the base regularly with a sturdy spoon."
+    }
   ]
 }
