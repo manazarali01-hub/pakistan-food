@@ -1,0 +1,54 @@
+name: Mobile Browser QA
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - '_layouts/**'
+      - '_data/**'
+      - 'recipes/**'
+      - 'guides/**'
+      - 'style.css'
+      - 'premium.css'
+      - 'enhancements.css'
+      - 'script.js'
+      - 'recipes-data.js'
+      - 'scripts/mobile_browser_qa.mjs'
+      - '.github/workflows/mobile-browser-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Serve rendered site
+        run: |
+          python3 -m http.server 4173 --directory _site >/tmp/pakistan-food-qa-server.log 2>&1 &
+          for i in {1..20}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/pakistan-food-qa-server.log
+          exit 1
+      - name: Test 320-768px layouts and interactions
+        run: node scripts/mobile_browser_qa.mjs
+      - name: Upload QA screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pakistan-food-mobile-browser-qa
+          path: qa-screenshots/
+          retention-days: 7
