@@ -63,6 +63,14 @@ if "assets/chicken-biryani.webp" in client:
     errors.append("old chicken-biryani hero remains as a client fallback")
 if any(not r["alt"] or not r["caption"] for r in rows):
     errors.append("one or more recipes are missing image alt/caption")
+if missing_source:
+    errors.append("one or more external recipe images are missing an explicit image_source")
+for r in external:
+    if r["source"]:
+        data = json.loads((RECIPES / f"{r['slug']}.json").read_text(encoding="utf-8"))
+        source = str(data.get("image_source", ""))
+        if "commons.wikimedia.org/wiki/File:" not in source:
+            errors.append(f"{r['slug']}: image_source must point to the Commons file page")
 
 if errors:
     raise SystemExit("\n".join(errors))
