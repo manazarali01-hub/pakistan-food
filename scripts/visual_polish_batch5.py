@@ -21,32 +21,32 @@ SOURCES={
     "caption":"Pakistani street-style bun kabab with kabab filling and chutney in a toasted bun."
   },
   "chana-chaat":{
-    "filename":"Chaaney Ki Chat.jpg",
-    "source":"https://commons.wikimedia.org/wiki/File:Chaaney_Ki_Chat.jpg",
-    "author":"Roboture","license":"CC BY-SA 3.0",
-    "license_url":"https://creativecommons.org/licenses/by-sa/3.0/",
+    "filename":"Healthy Channa Special.jpg",
+    "source":"https://commons.wikimedia.org/wiki/File:Healthy_Channa_Special.jpg",
+    "author":"ThamsSelvi","license":"CC BY-SA 4.0",
+    "license_url":"https://creativecommons.org/licenses/by-sa/4.0/",
     "out":"assets/recipe-images/chana-chaat-v2.webp",
-    "zoom":0.78,"fx":0.50,"fy":0.53,
+    "zoom":0.82,"fx":0.50,"fy":0.52,
     "alt":"Pakistani chana chaat with chickpeas, tomato, onion, coriander and tangy seasoning",
     "caption":"Chana chaat with boiled chickpeas, tomato, onion and coriander in a tangy masala."
   },
   "fruit-chaat":{
-    "filename":"Fruit chaat with crunchy dry fruits.jpg",
-    "source":"https://commons.wikimedia.org/wiki/File:Fruit_chaat_with_crunchy_dry_fruits.jpg",
-    "author":"Bingo2310","license":"CC BY-SA 4.0",
+    "filename":"Fruit chaat.JPG",
+    "source":"https://commons.wikimedia.org/wiki/File:Fruit_chaat.JPG",
+    "author":"Milanography","license":"CC BY-SA 4.0",
     "license_url":"https://creativecommons.org/licenses/by-sa/4.0/",
     "out":"assets/recipe-images/fruit-chaat-v2.webp",
-    "zoom":0.80,"fx":0.50,"fy":0.52,
+    "zoom":0.78,"fx":0.50,"fy":0.50,
     "alt":"Fresh mixed fruit chaat with colorful fruit pieces and crunchy dry fruits",
     "caption":"Fresh mixed fruit chaat with colorful fruit pieces and a crunchy dry-fruit topping."
   },
   "chicken-shawarma":{
-    "filename":"Chicken Shawarma (94298).jpg",
-    "source":"https://commons.wikimedia.org/wiki/File:Chicken_Shawarma_(94298).jpg",
-    "author":"Dr. Chinchu C.","license":"CC BY 4.0",
-    "license_url":"https://creativecommons.org/licenses/by/4.0/",
+    "filename":"Chicken Shawarma.jpg",
+    "source":"https://commons.wikimedia.org/wiki/File:Chicken_Shawarma.jpg",
+    "author":"Zebaarts","license":"CC BY-SA 4.0",
+    "license_url":"https://creativecommons.org/licenses/by-sa/4.0/",
     "out":"assets/recipe-images/chicken-shawarma-v2.webp",
-    "zoom":0.78,"fx":0.50,"fy":0.50,
+    "zoom":0.84,"fx":0.56,"fy":0.52,
     "alt":"Chicken shawarma with browned spiced chicken, flatbread, vegetables and sauce",
     "caption":"Chicken shawarma with browned spiced chicken, flatbread, crisp vegetables and sauce."
   }
