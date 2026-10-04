@@ -1,7 +1,7 @@
 # Pakistan Food — AdSense Low-Value Content Recovery Audit
 
 **Audit date:** 2026-10-04  
-**Working branch:** `adsense-quality-recovery-2026-10-04`  
+**Current verified state:** main through PR #17; post-deploy live smoke gate introduced in PR #18  
 **Main site:** https://pakistanfoodrecipes.top/  
 **Reason for recovery work:** Google AdSense — Low value content
 
@@ -113,7 +113,9 @@ Search Console performance data could not be retrieved because the connected GSC
 
 ## Recipe quality work
 
-All 66 recipe URLs remain indexable. The first deep-upgrade group contains 15 priority recipes:
+All 66 recipe URLs remain indexable. Current CI reports **0 recipes below 180 English core words**, **0 recipes with fewer than four deep editorial fields**, **0 exact duplicate English methods/descriptions**, **0 generic-phrase hits**, and **0 recipes missing image alt/caption**.
+
+The first intensive manual deep-upgrade group contained 15 priority recipes:
 
 1. Chicken Biryani
 2. Chicken Karahi
@@ -131,7 +133,7 @@ All 66 recipe URLs remain indexable. The first deep-upgrade group contains 15 pr
 14. Kashmiri Chai
 15. Mango Lassi
 
-Where useful, these data records now include recipe-specific technique, doneness/visual cues, mistakes, substitutions, storage/reheating, FAQs, better image alt/captions, and factual prep/cook/total time fields.
+Those priority recipes received the most intensive manual pass. The wider 66-recipe set has also been expanded enough to pass the same automated depth/duplication gates, with recipe-specific technique, doneness/visual cues, mistakes, substitutions, storage/reheating, FAQs, image alt/captions and factual time fields where appropriate.
 
 The recipe layout no longer invents generic category filler when recipe-specific data is absent.
 
@@ -145,10 +147,13 @@ Evidence-led decisions included:
 - old Chicken Karahi hero was harsh/flash-heavy;
 - old Nihari image was weak/low-resolution;
 - old Seekh/Chapli images were dated/weak;
-- Halwa Puri existing hero is still a known weakness because it shows a frying scene rather than a complete plated breakfast;
+- the misleading Halwa Puri frying-only hero was replaced after browser QA with a complete real breakfast photograph showing puri, halwa and chickpea curry together; its Flickr creator/source/license are displayed on-page;
 - Samosa and Jalebi visuals were strong enough to keep;
 - the Samosa recipe was explicitly aligned with the optional pea variation visible in its retained hero;
-- premium licensed Commons replacements were introduced only when the dish and recipe matched closely enough.
+- premium open-license replacements were introduced only when the dish and recipe matched closely enough;
+- Rice Kheer's current high-resolution hero was retained because it clearly represents creamy rice kheer with the nut/saffron-style garnish described by the recipe, rather than replacing an accurate image merely for novelty.
+
+Current image audit: **52 external recipe images, 14 local recipe images, 0 external records missing source metadata, 0 partial attribution records, 0 missing alt text, and 0 missing captions**.
 
 ## Structured-data rules
 
@@ -180,12 +185,12 @@ Branch validation checks:
 ## Remaining weaknesses / not yet verified
 
 - No destructive URL deletion decision should be made until Search Console traffic/backlink evidence is available.
-- Halwa Puri and Rice Kheer remain image-upgrade candidates; a replacement should not be accepted unless it matches the actual recipe closely.
-- Useful process images for priority recipes are not yet complete.
-- The 51 non-priority recipes have not all received the same depth of manual editorial expansion as the first 15.
-- Source-level responsive QA and CI are available, but full visual browser screenshots at every requested width (320, 360, 375, 390, 412, 430 and 768 px) still need final verification.
-- Live-domain `ads.txt` could not be independently fetched from the current tool environment; branch-rendered `ads.txt` is validated in CI.
+- Search Console traffic/backlink evidence is still unavailable: the connected GSC Wizard now reports that its trial/subscription is inactive. Do not hard-delete or redirect the 78 consolidated noindex URLs without that evidence.
+- Process/step images are an optional future enhancement, not treated as factual Recipe-schema data unless real source images exist.
+- The 15 priority recipes received the deepest manual editorial review; automated quality gates now pass across all 66 recipes, but this does not substitute for future human taste/testing feedback.
+- Real Playwright browser QA is now verified across **42 page/viewport combinations** at 320, 360, 375, 390, 412, 430 and 768 px, with zero horizontal overflow, zero broken images and zero recorded interaction/layout failures in the tested set.
+- The current tool environment still cannot independently resolve the custom domain, so PR #18 adds a GitHub-hosted post-deploy live smoke gate to verify the deployed homepage, Halwa Puri page/image credit, `ads.txt`, robots, XML sitemaps and trust pages after Pages deployment. Its first successful main-branch run is required before this item can be marked verified.
 
 ## Resubmission rule
 
-Do not request a new AdSense review merely because this branch builds successfully. Merge, deploy, verify the live site, recheck navigation/mobile/important URLs/ads.txt, and complete the remaining final-readiness audit first.
+Do not request a new AdSense review merely because repository CI is green. First require a successful post-deploy live smoke run on the custom domain. Search Console-dependent destructive URL cleanup remains deferred; it is not a prerequisite to keep the 78 consolidated URLs safely noindexed. Even after all technical gates pass, AdSense approval itself cannot be guaranteed and must be confirmed by Google's review.
