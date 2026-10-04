@@ -4,7 +4,7 @@
   "category": "Desserts",
   "time": "50 min",
   "serves": 8,
-  "image": "assets/gulab-jamun.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hot_Gulab_jamun.jpg?width=960",
   "description": "Soft Pakistani gulab jamun made from a tender milk-powder dough, fried slowly for even cooking and soaked in warm cardamom syrup.",
   "ingredients": [
     "1 cup milk powder",
@@ -72,5 +72,8 @@
       "question": "Why are they not absorbing syrup?",
       "answer": "A hard fried shell or syrup that is too concentrated can slow absorption. Fry gradually and keep the syrup pourable rather than candy-thick."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Hot_Gulab_jamun.jpg",
+  "image_author": "YKanchan07",
+  "image_license": "CC BY-SA 4.0"
 }
