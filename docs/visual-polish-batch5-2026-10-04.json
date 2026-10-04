@@ -18,27 +18,27 @@
     },
     {
       "slug": "chana-chaat",
-      "resolved": "https://upload.wikimedia.org/wikipedia/commons/7/79/Chaaney_Ki_Chat.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Healthy_Channa_Special.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
       "content_type": "image/jpeg",
       "width": 1200,
       "height": 900,
-      "bytes": 153944
+      "bytes": 184078
     },
     {
       "slug": "fruit-chaat",
-      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Fruit_chaat_with_crunchy_dry_fruits.jpg/1920px-Fruit_chaat_with_crunchy_dry_fruits.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Fruit_chaat.JPG/1920px-Fruit_chaat.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
       "content_type": "image/jpeg",
       "width": 1200,
       "height": 900,
-      "bytes": 223768
+      "bytes": 162246
     },
     {
       "slug": "chicken-shawarma",
-      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Chicken_Shawarma_%2894298%29.jpg/1920px-Chicken_Shawarma_%2894298%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Chicken_Shawarma.jpg/1920px-Chicken_Shawarma.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
       "content_type": "image/jpeg",
       "width": 1200,
       "height": 900,
-      "bytes": 125876
+      "bytes": 157768
     }
   ]
 }
