@@ -33,5 +33,47 @@
     "Add yogurt over moderate-to-low heat and stir to reduce the chance of splitting.",
     "After adding cream, keep the heat gentle so the sauce remains smooth."
   ],
-  "storage": "Cool leftover handi promptly and refrigerate covered. Reheat gently until the chicken and sauce are thoroughly hot."
+  "storage": "Cool leftover handi promptly and refrigerate covered. Reheat gently until the chicken and sauce are thoroughly hot.",
+  "prep_time": "15 min",
+  "cook_time": "35 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT35M",
+  "total_time_iso": "PT50M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chicken handi with boneless chicken in a creamy tomato yogurt gravy and green chilli garnish",
+  "image_caption": "Chicken handi with boneless chicken in a reduced tomato-yogurt masala finished gently with cream.",
+  "technique": "Handi should be saucy and creamy, but not watery. Reduce the blended tomatoes until their raw moisture is gone, then cook the yogurt back into a cohesive masala before using cream as the final enrichment.",
+  "doneness_cues": [
+    "Blended tomato should reduce from a thin red liquid to a thicker cooked masala.",
+    "After yogurt, the gravy should become cohesive again rather than show watery whey.",
+    "Boneless chicken pieces should be fully cooked but still juicy.",
+    "Cream should make the final sauce smooth and rich without a hard boil."
+  ],
+  "mistakes": [
+    "Adding yogurt before the tomato base has reduced.",
+    "Pouring in extra water automatically even though tomato and yogurt already contribute moisture.",
+    "Boiling cream aggressively and making the sauce split or greasy.",
+    "Cooking small boneless pieces for too long after they are done."
+  ],
+  "substitutions": [
+    "Boneless thigh stays juicier than breast during sauce reduction, though either can be used with timing adjustments.",
+    "Use plain unsweetened yogurt, whisked smooth.",
+    "Reduce chilli powder rather than adding sugar if you want a milder handi."
+  ],
+  "reheating": "Warm gently over low heat, stirring the sauce and adding only a small splash of water if chilled gravy is very thick.",
+  "serving": "Serve with naan, roti or a small portion of plain rice; add fresh coriander and green chilli just before serving.",
+  "faqs": [
+    {
+      "question": "What is the texture difference between handi and karahi?",
+      "answer": "This handi is creamier and more sauce-focused, with yogurt and cream; tomato karahi is more intensely reduced and usually finished without cream."
+    },
+    {
+      "question": "Why is my handi sauce thin?",
+      "answer": "Tomato or yogurt moisture was not reduced enough before the cream stage."
+    },
+    {
+      "question": "When should cream be added?",
+      "answer": "At the end, once chicken is cooked and the tomato-yogurt gravy is already at the desired thickness."
+    }
+  ]
 }

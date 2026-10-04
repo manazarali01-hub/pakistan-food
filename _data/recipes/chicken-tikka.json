@@ -2,7 +2,7 @@
   "id": 52,
   "name": "Chicken Tikka",
   "category": "BBQ",
-  "time": "45 min plus marinating",
+  "time": "45 min plus 2 hr marinating",
   "serves": 4,
   "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Tikka.jpg?width=900",
   "description": "Smoky Pakistani chicken tikka marinated in yogurt, lemon, ginger-garlic and spices, then grilled over strong heat for juicy pieces with charred edges.",
@@ -31,5 +31,48 @@
     "Do not reuse marinade that has contacted raw chicken as a serving sauce unless it has been thoroughly cooked first.",
     "Avoid repeatedly cutting every piece open during grilling, which releases juices and makes consistent cooking harder."
   ],
-  "storage": "Cool leftovers promptly, refrigerate covered, and reheat only the portion you plan to serve until thoroughly hot."
+  "storage": "Cool leftovers promptly, refrigerate covered, and reheat only the portion you plan to serve until thoroughly hot.",
+  "prep_time": "30 min plus 2 hr marinating",
+  "cook_time": "15 min",
+  "prep_time_iso": "PT2H30M",
+  "cook_time_iso": "PT15M",
+  "total_time_iso": "PT2H45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chicken tikka pieces with charred edges, yogurt spice marinade, onion and lemon",
+  "image_caption": "Chicken tikka marinated in yogurt, lemon and spices, then grilled over strong heat for charred edges.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Tikka.jpg",
+  "technique": "The marinade should coat rather than drip off the chicken. Pat the pieces dry first, use thick yogurt, give the marinade at least two chilled hours, and space the pieces on skewers so hot air or grill heat can reach their sides.",
+  "doneness_cues": [
+    "Marinated chicken should carry a visible coating without a puddle of thin yogurt at the bottom.",
+    "The exterior should develop charred spots while the centre remains juicy.",
+    "The thickest pieces must be fully cooked; surface colour alone is not a safe doneness test.",
+    "Rested tikka should release some juice but not raw-looking liquid."
+  ],
+  "mistakes": [
+    "Using watery yogurt and a wet chicken surface so the marinade slides off.",
+    "Cutting pieces in very different sizes.",
+    "Packing skewers so tightly that sides steam instead of brown.",
+    "Using leftover raw-chicken marinade as a table sauce without cooking it thoroughly."
+  ],
+  "substitutions": [
+    "Boneless thigh stays forgiving on high heat; breast can be used but needs closer timing.",
+    "Reduce red chilli without changing lemon, cumin and coriander.",
+    "For an oven grill, use a rack so released moisture can fall away from the chicken."
+  ],
+  "reheating": "Reheat briefly and covered or in a hot oven only until thoroughly hot; long reheating dries grilled chicken.",
+  "serving": "Serve with mint chutney, onion rings and lemon immediately after the short rest.",
+  "faqs": [
+    {
+      "question": "Why does tikka marinade fall off?",
+      "answer": "The chicken or yogurt is probably too wet, or the marinade did not have enough chilled time to adhere. Pat chicken dry and use thicker yogurt."
+    },
+    {
+      "question": "How long should chicken tikka marinate?",
+      "answer": "This recipe uses at least 2 hours in the refrigerator. Keep raw chicken chilled throughout marination."
+    },
+    {
+      "question": "How do I get char without drying the chicken?",
+      "answer": "Use strong heat, evenly sized pieces and enough spacing, then stop once the thickest pieces are fully cooked."
+    }
+  ]
 }

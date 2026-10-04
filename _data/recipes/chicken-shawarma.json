@@ -2,7 +2,7 @@
   "id": 24,
   "name": "Chicken Shawarma",
   "category": "Snacks",
-  "time": "60 min plus marinating",
+  "time": "2 hrs including marinating",
   "serves": 4,
   "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Shawarma.jpg?width=800",
   "description": "Home-style chicken shawarma with yogurt-marinated spiced chicken, browned in a hot pan and wrapped in warm flatbread with crisp vegetables and garlic sauce.",
@@ -33,5 +33,34 @@
     "Marinate chicken in the refrigerator, not at room temperature.",
     "Avoid overcrowding the pan so the chicken develops browned edges."
   ],
-  "storage": "Cool leftover cooked chicken promptly and refrigerate it covered. Store vegetables and sauce separately and assemble fresh wraps only when serving."
+  "storage": "Cool leftover cooked chicken promptly and refrigerate it covered. Store vegetables and sauce separately and assemble fresh wraps only when serving.",
+  "prep_time": "1 hr 20 min including marinating",
+  "cook_time": "40 min",
+  "prep_time_iso": "PT1H20M",
+  "cook_time_iso": "PT40M",
+  "total_time_iso": "PT2H",
+  "date_modified": "2026-10-04",
+  "image_alt": "Chicken shawarma wrap with browned yogurt-marinated chicken, cabbage, cucumber and garlic sauce",
+  "image_caption": "Yogurt-marinated chicken browned in a hot pan and wrapped with crisp vegetables and garlic sauce.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Shawarma.jpg",
+  "technique": "Use a wide hot pan and cook in batches so marinade moisture evaporates quickly. Thin strips brown better than crowded chicken simmering in released liquid, and vegetables should stay cold and crisp until assembly.",
+  "doneness_cues": [
+    "Chicken strips should brown at edges instead of sitting in a pool of liquid.",
+    "Thickest strips must be cooked through before resting.",
+    "Flatbread should be warm and flexible without becoming dry.",
+    "Cabbage and cucumber should stay crisp at serving."
+  ],
+  "mistakes": [
+    "Crowding the pan.",
+    "Adding cold vegetables to the pan with the chicken.",
+    "Overfilling wraps so they tear.",
+    "Using raw marinade as sauce after it has touched chicken."
+  ],
+  "substitutions": [
+    "Boneless thigh gives a juicier wrap; breast works with careful timing.",
+    "Use lettuce instead of cabbage for a lighter wrap.",
+    "Tahini-garlic or yogurt-garlic sauce can be used depending on preferred style."
+  ],
+  "reheating": "Reheat cooked chicken separately; assemble with fresh vegetables and sauce afterward.",
+  "serving": "Serve immediately after rolling so the flatbread stays soft and vegetables crisp."
 }

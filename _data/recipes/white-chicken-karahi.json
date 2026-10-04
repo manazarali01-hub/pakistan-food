@@ -27,8 +27,52 @@
     "Taste for salt and pepper, garnish generously with julienned ginger and serve hot with naan or roti."
   ],
   "tips": [
-    "Whisk yogurt and add it over reduced heat to lower the chance of splitting.",
-    "After adding cream, use gentle heat so the sauce remains smooth."
+    "Whisk yogurt smooth before it enters the pan.",
+    "Reduce yogurt moisture before adding cream.",
+    "Keep the final cream stage gentle."
   ],
-  "storage": "Cool leftovers promptly and refrigerate covered. Reheat gently but thoroughly so the creamy sauce does not catch or split."
+  "storage": "Cool promptly and refrigerate covered. Dairy-based sauce thickens when chilled.",
+  "prep_time": "10 min",
+  "cook_time": "35 min",
+  "prep_time_iso": "PT10M",
+  "cook_time_iso": "PT35M",
+  "total_time_iso": "PT45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani white chicken karahi with thick yogurt cream sauce, green chillies, black pepper and fresh ginger",
+  "image_caption": "White chicken karahi finished with a pale, thick yogurt-cream sauce, black pepper, cumin, green chillies and ginger.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_White_Karahi.JPG",
+  "technique": "White karahi gets its body from reduced yogurt and a restrained cream finish rather than tomatoes. Lower the heat before adding yogurt, cook away its excess whey until the sauce clings to the chicken, and add cream only near the end on gentle heat.",
+  "doneness_cues": [
+    "Yogurt should lose its loose watery look and become a coating sauce before cream is added.",
+    "Chicken must be fully cooked through at the thickest pieces.",
+    "After cream, the sauce should remain smooth and pale rather than oily or curdled.",
+    "Fresh ginger and green chilli should remain aromatic at serving."
+  ],
+  "mistakes": [
+    "Adding cold yogurt to very high heat and increasing the chance of splitting.",
+    "Adding cream before the yogurt moisture has reduced.",
+    "Boiling aggressively after cream is added.",
+    "Using flour to imitate thickness instead of reducing the yogurt base."
+  ],
+  "substitutions": [
+    "Boneless thigh can replace curry-cut chicken and may cook faster.",
+    "Use freshly ground black pepper for a brighter finish.",
+    "For a lighter sauce, reduce cream modestly but do not compensate with extra water."
+  ],
+  "reheating": "Reheat slowly over low heat with a small splash of water only if needed; avoid a hard boil that can split the sauce.",
+  "serving": "Serve immediately with naan or roti and fresh ginger on top.",
+  "faqs": [
+    {
+      "question": "Why did white karahi split?",
+      "answer": "High heat during yogurt or cream addition is a common cause. Lower the heat, add yogurt gradually and avoid hard boiling after cream."
+    },
+    {
+      "question": "Why is my white karahi watery?",
+      "answer": "The yogurt whey probably has not reduced enough. Cook uncovered before the cream stage until the sauce clings to the chicken."
+    },
+    {
+      "question": "Should white karahi contain tomatoes?",
+      "answer": "This version intentionally does not; its pale sauce comes from yogurt, cream, pepper and cumin."
+    }
+  ]
 }

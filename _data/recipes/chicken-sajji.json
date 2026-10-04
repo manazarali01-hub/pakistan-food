@@ -29,5 +29,33 @@
     "Whole chickens cook more evenly when allowed to roast steadily rather than over excessively high heat.",
     "Use a food thermometer in the thickest areas to confirm doneness, especially with a whole bird."
   ],
-  "storage": "Cool leftovers promptly, refrigerate covered and reheat only the portion needed until thoroughly hot."
+  "storage": "Cool leftovers promptly and refrigerate covered.",
+  "prep_time": "1 hr including marinating",
+  "cook_time": "1 hr",
+  "prep_time_iso": "PT1H",
+  "cook_time_iso": "PT1H",
+  "total_time_iso": "PT2H",
+  "date_modified": "2026-10-04",
+  "image_alt": "Balochistan-inspired whole chicken sajji with deeply browned skin and simple cumin coriander seasoning",
+  "image_caption": "Whole chicken sajji roasted steadily with restrained seasoning for browned skin and juicy meat.",
+  "technique": "Sajji benefits from restrained seasoning and even roasting. Dry the bird, season lightly, marinate chilled, then use steady rather than extreme heat so the thick thigh cooks through before the skin burns.",
+  "doneness_cues": [
+    "Exterior should brown evenly rather than blacken in isolated spots.",
+    "Juices from the thickest area should not look raw.",
+    "A food thermometer in the thickest breast and inner thigh should confirm safe doneness without touching bone.",
+    "Rested chicken should carve with moist meat rather than flooding the board."
+  ],
+  "mistakes": [
+    "Using very high heat from the start.",
+    "Making deep cuts that dry the meat.",
+    "Skipping the rest before carving.",
+    "Judging the whole bird only by skin colour."
+  ],
+  "substitutions": [
+    "Use a smaller chicken for faster, more even roasting.",
+    "Butter can replace oil for richer browning.",
+    "Keep spices simple rather than converting the dish into tikka-style marinade."
+  ],
+  "reheating": "Reheat covered until hot through, then uncover briefly if you want the skin drier.",
+  "serving": "Rest about 10 minutes, carve and serve with lemon, rice or naan."
 }

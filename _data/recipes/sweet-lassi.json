@@ -19,5 +19,48 @@
     "Taste after dilution and adjust the sweetness before adding more liquid.",
     "Add the cardamom and ice and pulse briefly so the drink becomes cold without being unnecessarily diluted.",
     "Check the consistency, adding the remaining water or milk only if needed, then serve immediately while frothy and chilled."
+  ],
+  "prep_time": "10 min",
+  "prep_time_iso": "PT10M",
+  "total_time_iso": "PT10M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Creamy Pakistani sweet lassi with chilled yogurt, light froth and cardamom",
+  "image_caption": "Sweet lassi blended from cold yogurt with controlled dilution, sugar and a light cardamom aroma.",
+  "technique": "Blend the yogurt smooth before adding the full amount of water or milk. This lets you control body: a thick yogurt may need more liquid, while a loose yogurt may need much less than the listed cup.",
+  "doneness_cues": [
+    "The lassi should pour in a steady creamy stream rather than separate into watery liquid and yogurt lumps.",
+    "Fine froth on top is normal after blending, but the body underneath should remain creamy.",
+    "Cardamom should be a background aroma, not a gritty powdery flavour."
+  ],
+  "mistakes": [
+    "Adding all the dilution liquid before seeing how thick the yogurt is.",
+    "Using a large amount of ice as the main way to thin the drink; melting ice weakens flavour.",
+    "Adding cardamom heavily enough to hide the clean yogurt flavour."
+  ],
+  "substitutions": [
+    "Use chilled milk for a richer lassi or chilled water for a lighter one.",
+    "Sugar can be reduced to suit the tartness of the yogurt.",
+    "A few drops of rose water can be used as a variation, but keep it subtle."
+  ],
+  "storage": "Sweet lassi is best freshly blended. If needed, refrigerate it covered for a short period and stir or whisk before serving because some separation is natural.",
+  "serving": "Serve immediately in chilled glasses while creamy and lightly frothy.",
+  "tips": [
+    "Start with cold thick yogurt for better body.",
+    "Add water or milk gradually instead of all at once.",
+    "Taste sweetness after dilution because a thicker first blend can taste sweeter."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my sweet lassi thin?",
+      "answer": "The yogurt may be loose or too much water, milk or ice was added. Start with yogurt alone, then add liquid gradually."
+    },
+    {
+      "question": "Why does lassi separate after sitting?",
+      "answer": "Yogurt solids and liquid naturally settle over time. A brief stir or whisk usually recombines a fresh refrigerated lassi."
+    },
+    {
+      "question": "Can I use milk instead of water?",
+      "answer": "Yes. Milk gives a richer drink; add it gradually because you may need less than the full amount."
+    }
   ]
 }

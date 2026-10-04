@@ -20,5 +20,48 @@
     "Stir in the sugar and black salt with most of the remaining chilled water until the sugar is dissolved.",
     "Taste the fully diluted sharbat and adjust lemon, sweetness or water gradually; remember that serving over plenty of ice will dilute it further.",
     "Add ice just before serving, stir well and serve cold while the mint flavour is fresh."
+  ],
+  "prep_time": "10 min",
+  "prep_time_iso": "PT10M",
+  "total_time_iso": "PT10M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani lemon mint sharbat with fresh lemon, mint and ice",
+  "image_caption": "Fresh lemon-mint sharbat served cold with bright citrus, mint and a small pinch of black salt.",
+  "technique": "Blend mint with only a little water, then combine it with fresh lemon and the remaining chilled water. Taste before adding the serving ice because melting ice will soften both sweetness and acidity.",
+  "doneness_cues": [
+    "Mint should smell fresh and green, not bruised or muddy.",
+    "Sugar should be fully dissolved before the drink is served.",
+    "The final flavour should be tart and refreshing without one-note sourness or syrupy sweetness."
+  ],
+  "mistakes": [
+    "Blending mint for a very long time, which can make the flavour grassy and darken the drink.",
+    "Using bottled lemon with a stale flavour when fresh citrus is available.",
+    "Balancing the concentrated base before adding all the water and then discovering it is too weak."
+  ],
+  "substitutions": [
+    "Lime can replace some or all of the lemon for a sharper citrus profile.",
+    "Black salt is optional; omit it for a clean sweet lemonade style.",
+    "Strain the mint after blending for a smoother drink or leave fine mint in for a more rustic texture."
+  ],
+  "storage": "Fresh mint and citrus are best the day they are mixed. If prepared ahead briefly, keep covered and refrigerated and add ice only at serving.",
+  "serving": "Serve in tall glasses over fresh ice, with a small mint sprig or lemon slice if available.",
+  "tips": [
+    "Use chilled water so the flavour is not diluted by too much ice.",
+    "Dissolve sugar completely before the final taste check.",
+    "Add ice at the last moment."
+  ],
+  "faqs": [
+    {
+      "question": "Why does lemon mint sharbat taste bitter?",
+      "answer": "Over-blended mint, crushed citrus seeds or excessive peel can add bitterness. Blend only the leaves briefly and use strained fresh juice."
+    },
+    {
+      "question": "How do I fix sharbat that is too sour?",
+      "answer": "Add a small amount of dissolved sugar and water together, taste, then repeat only if needed."
+    },
+    {
+      "question": "Can I prepare it hours ahead?",
+      "answer": "You can refrigerate it covered for a short period, but the brightest mint aroma is best soon after blending. Add ice only before serving."
+    }
   ]
 }

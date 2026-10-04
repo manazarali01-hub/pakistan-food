@@ -4,7 +4,7 @@
   "category": "Rice",
   "time": "90 min",
   "serves": 6,
-  "image": "assets/chicken-biryani.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lahori_Biryani.jpg?width=1280",
   "description": "Pakistani chicken biryani with spiced chicken masala, fragrant basmati rice, fried onions and fresh herbs layered and finished gently on dum.",
   "ingredients": [
     "750 g bone-in chicken",
@@ -35,5 +35,49 @@
     "Use very low heat for dum; place a heat diffuser or flat tawa under a thin pot if needed to prevent scorching."
   ],
   "storage": "Cool leftover biryani promptly, refrigerate covered and reheat only the portion needed until the chicken and rice are thoroughly hot.",
-  "serving": "Serve hot with raita, salad and lemon wedges."
+  "serving": "Serve hot with raita, salad and lemon wedges.",
+  "prep_time": "30 min",
+  "cook_time": "60 min",
+  "prep_time_iso": "PT30M",
+  "cook_time_iso": "PT60M",
+  "total_time_iso": "PT1H30M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chicken biryani with long basmati rice, spiced chicken, fried onions and fresh herbs",
+  "image_caption": "Chicken biryani with separate basmati grains, spiced chicken masala, fried onions and herbs.",
+  "technique": "The two stages that decide the texture are the rice parboil and the moisture level of the chicken masala. Drain the rice while the centre is still firm enough to finish on dum, and reduce the masala until it coats the chicken instead of leaving a pool of thin gravy.",
+  "doneness_cues": [
+    "Fried onions should be evenly deep golden; very dark edges can make the biryani bitter.",
+    "Before layering, the chicken should be nearly tender and the masala should cling to it with no large pool of watery liquid.",
+    "Parboiled rice should bend but still have a firm centre when bitten; it finishes cooking during dum.",
+    "After dum and a short rest, the grains should be fully tender yet distinct rather than wet or clumped."
+  ],
+  "mistakes": [
+    "Cooking the rice until completely tender before layering; the final steam can then turn it soft or mushy.",
+    "Layering over a watery masala, which sends excess steam into the rice.",
+    "Mixing or pressing the layers aggressively; long cooked basmati breaks easily.",
+    "Using strong direct heat for the full dum period; a thin pot may scorch before the top layer finishes."
+  ],
+  "substitutions": [
+    "Bone-in chicken gives the masala more flavour; boneless thigh can be used but usually cooks faster, so reduce the masala without overcooking the meat.",
+    "If your biryani masala is very salty or hot, start with less than the listed amount and adjust after the tomato-yogurt base has cooked.",
+    "Lemon juice is optional; use it only if the finished masala needs extra acidity."
+  ],
+  "reheating": "For a small portion, sprinkle over a teaspoon or two of water, cover and reheat gently until the rice and chicken are steaming hot throughout. Avoid repeatedly reheating the full batch.",
+  "faqs": [
+    {
+      "question": "How cooked should the rice be before layering?",
+      "answer": "It should be partly cooked with a firm centre, not ready to eat. The exact minute count depends on the rice, so judge the grain rather than relying only on a timer."
+    },
+    {
+      "question": "Why does chicken biryani become mushy?",
+      "answer": "The most common combination is over-parboiled rice plus excess liquid in the masala. Poor draining and an overly long or hot dum can make the problem worse."
+    },
+    {
+      "question": "Should biryani be mixed after dum?",
+      "answer": "Rest it briefly first, then lift portions gently from the side so the masala and rice combine without crushing the grains."
+    }
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Lahori_Biryani.jpg",
+  "image_author": "Muhammad Umair Mirza",
+  "image_license": "CC BY-SA 4.0"
 }

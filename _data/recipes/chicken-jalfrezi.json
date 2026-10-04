@@ -33,5 +33,32 @@
     "Add the vegetables near the end for colour and a light bite."
   ],
   "storage": "Cool leftovers promptly and refrigerate covered. Reheat until the chicken is thoroughly hot, noting that stored peppers naturally become softer.",
-  "serving": "Serve with plain rice or warm chapati and a quick cucumber salad."
+  "serving": "Serve immediately with chapati or plain rice.",
+  "prep_time": "15 min",
+  "cook_time": "25 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT25M",
+  "total_time_iso": "PT40M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chicken jalfrezi with browned chicken, thick tomato masala, onion and colourful bell peppers",
+  "image_caption": "Chicken jalfrezi finished with quickly stir-fried onion and peppers so they keep colour and a light bite.",
+  "technique": "Cook the chicken-tomato masala and vegetables on separate timelines. Brown chicken in batches, reduce tomatoes until thick, then stir-fry onion and peppers quickly and fold them in only at the end.",
+  "doneness_cues": [
+    "Chicken should brown rather than steam during the first stage.",
+    "Tomato masala should be thick before peppers are added.",
+    "Peppers should remain bright with a slight bite.",
+    "Finished chicken must be fully cooked through."
+  ],
+  "mistakes": [
+    "Crowding chicken in a small pan.",
+    "Adding peppers early and turning them soft and grey.",
+    "Using a watery tomato base.",
+    "Adding too much soy sauce and making the dish taste salty rather than tomato-spice led."
+  ],
+  "substitutions": [
+    "Use different bell-pepper colours for appearance without changing technique.",
+    "Soy sauce is optional.",
+    "Boneless thigh can stay juicier than breast during browning."
+  ],
+  "reheating": "Reheat quickly until chicken is hot; expect stored peppers to be softer than freshly cooked."
 }

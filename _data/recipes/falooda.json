@@ -21,5 +21,49 @@
     "Pour in the chilled milk slowly so the glass stays cold and the layers remain visible.",
     "Top each glass with a scoop of vanilla ice cream and garnish with chopped nuts.",
     "Serve immediately with a spoon and straw; stir while drinking if you prefer the syrup fully mixed through the milk."
+  ],
+  "prep_time": "20 min",
+  "prep_time_iso": "PT20M",
+  "total_time_iso": "PT20M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani falooda layered with rose syrup, basil seeds, vermicelli, cold milk and vanilla ice cream",
+  "image_caption": "Chilled falooda with rose syrup, swollen basil seeds, cooled vermicelli, milk and vanilla ice cream.",
+  "technique": "Every component should be cold before assembly. Warm vermicelli melts ice cream and warms milk, while poorly soaked basil seeds remain hard. Assemble only after both are prepared, cooled and drained.",
+  "doneness_cues": [
+    "Basil seeds should be fully swollen with a translucent gel coating and no hard dry centre.",
+    "Vermicelli should be tender but not mushy, then cooled before it touches the milk.",
+    "The glass should remain distinctly cold as the final milk and ice cream are added."
+  ],
+  "mistakes": [
+    "Assembling with warm vermicelli.",
+    "Using basil seeds before they are fully hydrated.",
+    "Adding so much rose syrup that the dessert becomes cloying before the ice cream is included.",
+    "Preparing the complete layered glass too far ahead, causing vermicelli and seeds to continue softening."
+  ],
+  "substitutions": [
+    "Use kulfi instead of vanilla ice cream for a richer variation.",
+    "Reduce rose syrup if your ice cream is very sweet.",
+    "Nuts are optional and can be omitted for allergy or preference."
+  ],
+  "storage": "Prepare and refrigerate individual components separately if needed. Assemble falooda close to serving; a fully assembled glass loses its best texture during storage.",
+  "serving": "Serve immediately with both a spoon and a wide straw so the vermicelli and basil seeds are easy to eat.",
+  "tips": [
+    "Cool cooked vermicelli completely before layering.",
+    "Drain excess water from swollen basil seeds.",
+    "Treat rose syrup as both flavour and sweetener."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my falooda watery?",
+      "answer": "Excess soaking water from basil seeds, undrained vermicelli or melting ice cream can thin the milk. Drain components well and assemble them cold."
+    },
+    {
+      "question": "Can falooda be assembled ahead?",
+      "answer": "It is better to keep the components chilled separately and assemble shortly before serving so the textures stay distinct."
+    },
+    {
+      "question": "How long do basil seeds need to soak?",
+      "answer": "Use the visual cue rather than a fixed clock: each seed should develop a full translucent gel coating with no hard dry centre."
+    }
   ]
 }

@@ -25,5 +25,35 @@
     "In a separate small pan, sauté the carrot strips until slightly softened, add the raisins briefly so they plump without burning, and spread the mixture over the rice.",
     "Cover tightly and steam on low heat until the rice is fully tender and separate.",
     "Rest for a few minutes off the heat, then fluff gently and serve with the carrot-raisin topping distributed through or over the pulao."
-  ]
+  ],
+  "prep_time": "25 min",
+  "cook_time": "65 min",
+  "prep_time_iso": "PT25M",
+  "cook_time_iso": "PT1H5M",
+  "total_time_iso": "PT1H30M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Kabli pulao with basmati rice, tender meat, julienned carrots and plump raisins",
+  "image_caption": "Tender meat and basmati rice finished with a sweet-savory carrot and raisin topping.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Kabuli_Pulao.JPG",
+  "technique": "Separate the jobs: tenderise the meat and build stock first, cook rice in measured stock second, and prepare the carrot-raisin topping briefly in a separate pan. This keeps the rice savoury while the garnish stays bright and distinct.",
+  "doneness_cues": [
+    "Meat should be tender before rice cooking begins.",
+    "Stock should taste seasoned but not aggressively salty after reduction.",
+    "Rice should absorb most liquid before final dum.",
+    "Carrots should soften slightly while raisins plump without burning."
+  ],
+  "mistakes": [
+    "Using unmeasured stock after meat cooking.",
+    "Cooking carrots and raisins from the start and turning them mushy.",
+    "Stirring rice repeatedly once it begins absorbing liquid.",
+    "Adding so much sweet garnish that the pulao becomes dessert-like."
+  ],
+  "substitutions": [
+    "Beef or mutton can be used; cooking time depends on the cut.",
+    "Use golden or dark raisins according to preference.",
+    "Add nuts only as an optional garnish rather than a structural ingredient."
+  ],
+  "storage": "Cool promptly and refrigerate covered.",
+  "reheating": "Reheat covered with a small splash of water until rice and meat are hot.",
+  "serving": "Serve with yogurt or salad; distribute the carrot-raisin topping across portions."
 }

@@ -8,6 +8,15 @@ on:
       - '_layouts/**'
       - '_data/**'
       - 'recipes/**'
+      - 'guides/**'
+      - 'about.html'
+      - 'contact.html'
+      - 'editorial-policy.html'
+      - 'image-credits.html'
+      - 'privacy-policy.html'
+      - 'disclaimer.html'
+      - 'terms.html'
+      - '.pages.yml'
       - 'index.html'
       - 'sitemap.xml'
       - 'sitemap.html'
@@ -26,6 +35,15 @@ on:
       - '_layouts/**'
       - '_data/**'
       - 'recipes/**'
+      - 'guides/**'
+      - 'about.html'
+      - 'contact.html'
+      - 'editorial-policy.html'
+      - 'image-credits.html'
+      - 'privacy-policy.html'
+      - 'disclaimer.html'
+      - 'terms.html'
+      - '.pages.yml'
       - 'index.html'
       - 'sitemap.xml'
       - 'sitemap-v2.xml'
@@ -49,6 +67,10 @@ jobs:
       - uses: actions/checkout@v7
       - name: Check recipe pages, images and sitemap
         run: python3 scripts/verify_site.py
+      - name: Audit low-value and duplicate guide content
+        run: python3 scripts/audit_content_quality.py --strict
+      - name: Audit recipe depth and duplication
+        run: python3 scripts/audit_recipe_quality.py
       - uses: actions/jekyll-build-pages@v1
         with:
           source: ./

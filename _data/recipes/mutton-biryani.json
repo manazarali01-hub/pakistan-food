@@ -28,5 +28,54 @@
     "Layer the mutton masala and rice with reserved fried onion, mint, coriander, green chillies and lemon, handling the rice gently so the grains do not break.",
     "Cover the pot tightly and cook on low heat for about 20 minutes, adjusting for your pot and stove, until the rice is tender and aromatic.",
     "Rest the biryani covered for a few minutes, then lift and fluff gently from the sides before serving with raita and salad."
+  ],
+  "prep_time": "30 min",
+  "cook_time": "70 min",
+  "prep_time_iso": "PT30M",
+  "cook_time_iso": "PT1H10M",
+  "total_time_iso": "PT1H40M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani mutton biryani with tender bone-in mutton, separate basmati rice, fried onions and herbs",
+  "image_caption": "Mutton biryani with tender meat masala layered with partly cooked basmati, fried onions, mint and coriander.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Mutton_Biryani.jpg",
+  "technique": "Mutton tenderness must be achieved before the final rice dum. Simmer the meat in its yogurt-tomato masala until it yields easily, then reduce the gravy to a coating consistency. Dum should finish the rice and marry the layers—not serve as the main tenderising stage for tough mutton.",
+  "doneness_cues": [
+    "Mutton should be tender enough to yield to a fork before layering.",
+    "The masala should be rich and reduced, with no large pool of watery liquid.",
+    "Parboiled basmati should be firm in the centre when drained.",
+    "After resting, rice grains should be tender and separate while the mutton remains moist."
+  ],
+  "mistakes": [
+    "Layering tough mutton and expecting a short dum to tenderise it.",
+    "Adding large amounts of water late in the meat stage and failing to reduce it before rice.",
+    "Overcooking basmati while waiting for mutton to finish.",
+    "Using high direct heat for the whole dum and scorching the base."
+  ],
+  "substitutions": [
+    "Bone-in mutton gives the biryani more body; boneless pieces can cook faster but still need tenderness before layering.",
+    "If your mutton is from a tougher cut, allow more covered simmering rather than increasing dum time.",
+    "Adjust packaged biryani masala for salt and chilli before using the full amount."
+  ],
+  "storage": "Cool promptly and refrigerate covered. Keep fresh raita and salad separately.",
+  "reheating": "Sprinkle a little water over a portion, cover and reheat gently until meat and rice are steaming hot; avoid repeated reheating of the full pot.",
+  "serving": "Serve with raita, salad and lemon wedges without stirring the biryani into a uniform mixture.",
+  "tips": [
+    "Tenderise the mutton fully before layering.",
+    "Reduce the meat gravy before adding rice.",
+    "Rest after dum before lifting portions gently."
+  ],
+  "faqs": [
+    {
+      "question": "Why is mutton biryani meat tough?",
+      "answer": "The meat needed more gentle covered cooking before layering. A normal dum is too short to rescue genuinely tough mutton."
+    },
+    {
+      "question": "Can I cook mutton separately from the rice?",
+      "answer": "Yes. In fact, finishing meat tenderness and gravy consistency before layering gives better control."
+    },
+    {
+      "question": "Why is the bottom wet?",
+      "answer": "The mutton masala was probably too loose or the rice carried excess water after draining."
+    }
   ]
 }

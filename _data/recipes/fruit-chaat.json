@@ -23,5 +23,48 @@
     "Sprinkle over the chaat masala and add sugar only if the fruit itself is not sweet enough.",
     "Fold everything together gently so soft fruit is not crushed and excessive juice is not released.",
     "Chill briefly if desired and serve fresh rather than storing for a long period, as the fruit gradually softens and releases liquid."
+  ],
+  "prep_time": "15 min",
+  "prep_time_iso": "PT15M",
+  "total_time_iso": "PT15M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani fruit chaat with apple, banana, orange, grapes and guava tossed with citrus and chaat masala",
+  "image_caption": "Fresh mixed fruit chaat seasoned lightly with citrus and chaat masala.",
+  "technique": "Cut firmer fruits first and banana last, then add citrus promptly to exposed apple and banana surfaces. Season gently: ripe fruit should still taste like fruit rather than a bowl dominated by chaat masala.",
+  "doneness_cues": [
+    "All fruit should be ripe enough to eat but firm enough to hold its shape when tossed.",
+    "Pieces should be similar enough in size that each spoonful has a mix of fruit.",
+    "Only a light amount of juice should collect in the bowl immediately after mixing."
+  ],
+  "mistakes": [
+    "Cutting banana far in advance and letting it soften and brown.",
+    "Using so much chaat masala that salt and spice overpower ripe fruit.",
+    "Stirring aggressively and crushing soft fruit into a wet mixture."
+  ],
+  "substitutions": [
+    "Use seasonal firm-ripe fruits available to you; avoid very watery melon if preparing ahead because it changes the bowl quickly.",
+    "Lemon juice can replace orange juice for a sharper chaat.",
+    "Added sugar is optional and often unnecessary with ripe fruit."
+  ],
+  "storage": "Fruit chaat is best assembled close to serving. Refrigerate leftovers promptly, but expect the fruit to soften and release more juice as it sits.",
+  "serving": "Serve slightly chilled in bowls with extra chaat masala offered separately rather than added heavily to the whole batch.",
+  "tips": [
+    "Use firm-ripe fruit rather than overripe soft pieces.",
+    "Add banana near the end of preparation.",
+    "Season after tasting the natural sweetness of the fruit."
+  ],
+  "faqs": [
+    {
+      "question": "Why does fruit chaat become watery?",
+      "answer": "Cut fruit releases juice over time, especially after sugar and salt are added. Assemble close to serving and keep very watery fruits limited."
+    },
+    {
+      "question": "How do I stop apples and bananas browning?",
+      "answer": "Cut them close to assembly and toss promptly with the recipe's orange or lemon juice."
+    },
+    {
+      "question": "Does fruit chaat need sugar?",
+      "answer": "Not always. Taste the fruit first; ripe seasonal fruit can be sweet enough without added sugar."
+    }
   ]
 }

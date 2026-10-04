@@ -39,5 +39,46 @@
     "For a thicker sauce, mash a small portion of the beans rather than adding flour."
   ],
   "storage": "Cool leftover rajma promptly and refrigerate covered. Reheat only the portion needed until thoroughly hot, adding a splash of water if the gravy has thickened.",
-  "serving": "Spoon over plain rice, or serve with chapati, a little plain yogurt and sliced onion."
+  "serving": "Spoon over plain rice, or serve with chapati, a little plain yogurt and sliced onion.",
+  "prep_time": "15 min",
+  "cook_time": "30 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT30M",
+  "total_time_iso": "PT45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Rajma masala with tender red kidney beans in thick onion tomato gravy and fresh coriander",
+  "image_caption": "Tender kidney beans simmered in a reduced onion-tomato masala and lightly mashed for natural thickness.",
+  "technique": "With canned beans, the cooking challenge is not tenderness but flavour absorption and gravy body. Cook onion and tomato fully before adding beans, then simmer gently and mash only a spoonful so starch thickens the sauce without turning it into bean paste.",
+  "doneness_cues": [
+    "Onion should be deep golden before tomato goes in.",
+    "Tomato masala should be thick and cohesive before beans are added.",
+    "Beans should remain intact while the gravy coats them.",
+    "Finished gravy should be thick but still spoonable."
+  ],
+  "mistakes": [
+    "Adding canned-bean liquid directly and making the gravy taste salty or metallic.",
+    "Using raw or undercooked dried kidney beans; dried beans must be boiled fully before use.",
+    "Adding flour instead of using mashed beans for natural body.",
+    "Reducing until beans split and the gravy becomes pasty."
+  ],
+  "substitutions": [
+    "Cooked dried kidney beans can replace canned beans only after proper soaking and complete boiling.",
+    "Use a small amount of lemon at serving if extra brightness is needed.",
+    "Tomato paste strengthens tomato depth but can be omitted if fresh tomatoes are concentrated enough."
+  ],
+  "reheating": "Warm gently with a splash of water if needed until thoroughly hot.",
+  "faqs": [
+    {
+      "question": "Why is rajma gravy thin?",
+      "answer": "The onion-tomato base may not be reduced enough. Mash a small spoonful of beans into the sauce and simmer gently."
+    },
+    {
+      "question": "Can I use dried kidney beans?",
+      "answer": "Yes, but they must be soaked and boiled thoroughly until fully tender before being added to the masala."
+    },
+    {
+      "question": "Why is my rajma too thick after refrigeration?",
+      "answer": "Bean starch continues thickening the gravy as it cools. Add a little water during reheating."
+    }
+  ]
 }

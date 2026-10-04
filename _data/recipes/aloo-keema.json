@@ -28,5 +28,35 @@
     "Add the potato cubes with only enough water to help them cook, cover and simmer gently until the potatoes are tender and the beef is fully cooked.",
     "Remove the lid and reduce any excess liquid while stirring gently so the potatoes keep their shape and the keema remains moist rather than dry.",
     "Finish with garam masala and fresh coriander, taste for salt and serve hot with roti or naan."
-  ]
+  ],
+  "prep_time": "15 min",
+  "cook_time": "35 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT35M",
+  "total_time_iso": "PT50M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani aloo keema with beef mince, tender potato cubes, tomato masala and green chilli",
+  "image_caption": "Beef mince and potatoes simmered in a concentrated tomato masala until the potatoes are tender but intact.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Aaloo_Keema.JPG",
+  "technique": "Cook the mince and masala first, then add evenly cut potatoes with only enough liquid to soften them. Once the potatoes are nearly tender, uncover and reduce carefully so they stay intact while the keema remains moist.",
+  "doneness_cues": [
+    "Mince should be broken into small even pieces before potatoes are added.",
+    "Potato cubes should be fork-tender without collapsing.",
+    "Masala should coat both mince and potatoes instead of pooling as thin gravy.",
+    "A final stir should not turn the potatoes into mash."
+  ],
+  "mistakes": [
+    "Cutting potatoes into mixed sizes.",
+    "Adding potatoes before the mince-tomato base is developed.",
+    "Using too much water and then overcooking to remove it.",
+    "Stirring vigorously after potatoes become tender."
+  ],
+  "substitutions": [
+    "Mutton mince can replace beef with timing adjusted to fat content.",
+    "Use waxier potatoes if you want cubes that hold shape especially well.",
+    "Green chilli can be reduced without changing the cumin-coriander base."
+  ],
+  "storage": "Cool promptly and refrigerate covered.",
+  "reheating": "Warm gently with a small splash of water, folding rather than stirring hard so potatoes remain intact.",
+  "serving": "Serve with roti or naan and a simple onion-cucumber salad."
 }

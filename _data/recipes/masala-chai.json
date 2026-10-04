@@ -21,5 +21,51 @@
     "Pour in the milk and add sugar to taste, stirring so nothing settles on the base.",
     "Bring the chai back to a gentle boil, then lower the heat and simmer briefly until the colour and strength suit you.",
     "Strain into cups and serve hot. For a stronger cup next time, adjust the tea quantity rather than greatly extending the boil."
+  ],
+  "prep_time": "3 min",
+  "cook_time": "9 min",
+  "prep_time_iso": "PT3M",
+  "cook_time_iso": "PT9M",
+  "total_time_iso": "PT12M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani masala chai with milk, black tea, ginger, green cardamom and cinnamon",
+  "image_caption": "Masala chai brewed with ginger, cardamom and cinnamon before milk is added.",
+  "technique": "Extract the whole spices in water before the black tea spends much time boiling. Tea leaves turn harsh when prolonged spice simmering and tea extraction are treated as the same stage.",
+  "doneness_cues": [
+    "The spice water should smell clearly of ginger and cardamom before the tea leaves are added.",
+    "After milk, the colour should deepen without a scorched milk smell.",
+    "The finished cup should taste strong but not drying or bitter."
+  ],
+  "mistakes": [
+    "Boiling tea leaves for the entire spice-extraction period.",
+    "Using so many cloves, cinnamon or cardamom that the black tea disappears.",
+    "Leaving milk unattended at a hard boil where it can catch or overflow."
+  ],
+  "substitutions": [
+    "Fresh ginger can be reduced for a gentler cup without changing the tea ratio.",
+    "Use 1 green cardamom pod instead of 2 for a lighter floral aroma.",
+    "If your black tea is a very strong CTC blend, reduce the leaf quantity before lengthening the brew."
+  ],
+  "storage": "Masala chai is best freshly strained. If a small amount is refrigerated, cool it promptly, keep covered and reheat gently only once for best flavour.",
+  "reheating": "Reheat over low to medium heat only until steaming hot. Do not repeatedly boil the finished milk tea, which makes the tea harsher and the milk flavour flatter.",
+  "serving": "Strain directly into warm cups and serve immediately.",
+  "tips": [
+    "Let spices perfume the water before adding black tea.",
+    "Keep black-tea extraction shorter than the spice simmer.",
+    "Adjust tea quantity on the next batch instead of forcing strength with a very long boil."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my masala chai bitter?",
+      "answer": "The tea leaves may have boiled too long or the tea quantity may be high for the liquid. Simmer spices first and add the black tea later."
+    },
+    {
+      "question": "Why does my masala chai taste muddy?",
+      "answer": "Too many strong spices at once can blur the flavour. Keep ginger, cardamom and cinnamon measured and let black tea remain recognizable."
+    },
+    {
+      "question": "Can I make it stronger without boiling longer?",
+      "answer": "Yes. Increase black tea slightly in the next batch while keeping its extraction controlled."
+    }
   ]
 }

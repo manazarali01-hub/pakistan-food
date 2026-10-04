@@ -26,5 +26,48 @@
     "Use medium heat so the paratha cooks through and browns without scorching.",
     "Keep cooked parathas loosely covered while the egg cooks so they stay warm without becoming soggy.",
     "Cook the egg until fully set rather than judging doneness only by surface colour."
+  ],
+  "prep_time": "5 min",
+  "cook_time": "15 min",
+  "prep_time_iso": "PT5M",
+  "cook_time_iso": "PT15M",
+  "total_time_iso": "PT20M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani anda paratha breakfast with golden paratha and coriander green-chilli egg",
+  "image_caption": "Hot golden paratha served with a freshly cooked coriander-and-green-chilli egg.",
+  "technique": "Cook the paratha first but hold it only briefly and loosely covered, then cook the egg on medium heat. The breakfast works best when the paratha stays flexible while the egg reaches a fully set but not over-dry texture.",
+  "doneness_cues": [
+    "Paratha should have golden spots on both sides without raw dough at the centre.",
+    "Egg should be fully set with no translucent liquid areas.",
+    "Coriander should remain green rather than scorched in the pan.",
+    "The paratha should still bend rather than crack when served."
+  ],
+  "mistakes": [
+    "Using very high heat and burning the paratha surface before the centre warms.",
+    "Sealing hot paratha tightly so trapped steam makes it soggy.",
+    "Overcooking the egg until rubbery.",
+    "Adding wet chutney onto the paratha long before eating."
+  ],
+  "substitutions": [
+    "Use a plain homemade paratha or a prepared one, cooked fully according to its thickness.",
+    "Reduce green chilli for a milder breakfast.",
+    "Black pepper can be omitted or replaced with a small pinch of red chilli."
+  ],
+  "storage": "Best served fresh. If components remain, cool and refrigerate separately rather than storing the egg wrapped in the paratha.",
+  "reheating": "Reheat paratha on a dry or lightly greased tawa; reheat cooked egg gently and only until hot.",
+  "serving": "Serve immediately with yogurt, pickle or chutney on the side.",
+  "faqs": [
+    {
+      "question": "How do I keep the paratha soft while cooking the egg?",
+      "answer": "Hold it loosely covered for only a few minutes rather than leaving it exposed or sealing it tightly while steaming hot."
+    },
+    {
+      "question": "Why is my paratha hard?",
+      "answer": "It may be overcooked, cooked too long on low heat or reheated repeatedly."
+    },
+    {
+      "question": "Can I cook the egg directly on the paratha?",
+      "answer": "Some styles do, but this recipe cooks the egg separately for easier doneness control."
+    }
   ]
 }

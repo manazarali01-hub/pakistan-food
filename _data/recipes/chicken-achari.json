@@ -30,5 +30,35 @@
     "Lightly crush the fennel, nigella, mustard and fenugreek seeds and add them with the green chillies. Cover and cook gently until the chicken is fully cooked and tender.",
     "Uncover and reduce excess moisture until the masala clings to the chicken, stirring so the spices do not scorch.",
     "Taste first, then add only as much lemon juice as needed to sharpen the tang without overwhelming the achari spices. Serve hot."
-  ]
+  ],
+  "prep_time": "15 min",
+  "cook_time": "30 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT30M",
+  "total_time_iso": "PT45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chicken achari with tomato yogurt masala, green chillies and pickling spices",
+  "image_caption": "Chicken achari finished with fennel, nigella, mustard and fenugreek in a tangy reduced masala.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Achari.jpg",
+  "technique": "Achari flavour comes from restraint: lightly crush the pickling spices and add them after the tomato-yogurt base is established. Fenugreek and mustard become harsh if burnt, so do not fry them aggressively at the beginning.",
+  "doneness_cues": [
+    "Tomatoes should cook down until the masala is cohesive before final spice finishing.",
+    "Yogurt should be incorporated without visible watery separation.",
+    "Chicken should be fully cooked and coated with masala.",
+    "Fennel and nigella should smell aromatic, not scorched."
+  ],
+  "mistakes": [
+    "Burning mustard or fenugreek seeds in very hot oil.",
+    "Adding lots of lemon before tasting the natural tang from yogurt and tomatoes.",
+    "Leaving the final masala watery.",
+    "Using achari spice in such quantity that it tastes medicinal."
+  ],
+  "substitutions": [
+    "Use less fenugreek if your batch is very bitter or strong.",
+    "Boneless thigh can be used with a shorter cook.",
+    "Lemon is a final adjustment, not a mandatory fixed quantity."
+  ],
+  "storage": "Cool promptly and refrigerate covered.",
+  "reheating": "Reheat gently until hot, adding only a small splash of water if the masala has tightened.",
+  "serving": "Serve with roti, naan or plain rice and fresh green chilli."
 }

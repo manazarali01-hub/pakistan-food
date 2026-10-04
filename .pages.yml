@@ -47,6 +47,27 @@ content:
         label: Recipe Image
         type: image
         required: true
+      - name: image_alt
+        label: Image Alt Text
+        type: string
+      - name: image_caption
+        label: Image Caption
+        type: text
+      - name: prep_time
+        label: Prep Time
+        type: string
+      - name: cook_time
+        label: Cook Time
+        type: string
+      - name: prep_time_iso
+        label: Prep Time ISO 8601
+        type: string
+      - name: cook_time_iso
+        label: Cook Time ISO 8601
+        type: string
+      - name: total_time_iso
+        label: Total Time ISO 8601
+        type: string
       - name: description
         label: Description
         type: text
@@ -90,3 +111,35 @@ content:
       - name: serving_ur
         label: Serving Suggestion (Urdu)
         type: text
+      - name: technique
+        label: Technique That Matters
+        type: text
+      - name: doneness_cues
+        label: Visual / Doneness Cues
+        type: string
+        list: true
+      - name: mistakes
+        label: Mistakes to Avoid
+        type: string
+        list: true
+      - name: substitutions
+        label: Substitutions & Adjustments
+        type: string
+        list: true
+      - name: reheating
+        label: Reheating Advice
+        type: text
+      - name: faqs
+        label: Recipe FAQs
+        type: object
+        list: true
+        fields:
+          - name: question
+            label: Question
+            type: string
+          - name: answer
+            label: Answer
+            type: text
+      - name: date_modified
+        label: Last Editorial Update
+        type: string

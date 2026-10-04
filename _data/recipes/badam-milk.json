@@ -21,5 +21,51 @@
     "Simmer gently for several minutes, stirring regularly, until the drink is fragrant and slightly richer in texture. Add saffron during this stage if using.",
     "Taste and adjust sweetness, then pour into cups for a warm drink or cool promptly and refrigerate if you prefer it chilled.",
     "Garnish with chopped pistachios just before serving."
+  ],
+  "prep_time": "5 min",
+  "cook_time": "10 min",
+  "prep_time_iso": "PT5M",
+  "cook_time_iso": "PT10M",
+  "total_time_iso": "PT15M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Creamy badam milk with blended almonds, cardamom, optional saffron and pistachio",
+  "image_caption": "Almond milk drink gently simmered with a smooth almond paste and cardamom.",
+  "technique": "Blend soaked peeled almonds with only enough milk to make a smooth paste, then cook that paste gently in the remaining milk. High heat can scorch both milk solids and ground almonds on the pan base.",
+  "doneness_cues": [
+    "The almond paste should be fine enough that no large gritty nut pieces remain.",
+    "Milk should simmer gently rather than boil violently.",
+    "Finished badam milk should be slightly richer than plain milk but still pour easily."
+  ],
+  "mistakes": [
+    "Adding coarse almond pieces and expecting a silky drink.",
+    "Using high heat after almond paste is added, when the base catches more easily.",
+    "Adding a large pinch of saffron that dominates the almond and cardamom."
+  ],
+  "substitutions": [
+    "Saffron is optional; the drink remains badam milk without it.",
+    "Pistachio garnish can be omitted or replaced with a few sliced almonds.",
+    "Reduce sugar if serving chilled, then taste again once cold."
+  ],
+  "storage": "For a chilled version, cool promptly and refrigerate covered. Stir before serving because fine almond solids can settle.",
+  "reheating": "Warm gently over low heat while stirring from the base. Avoid repeated hard boiling.",
+  "serving": "Serve warm in small cups or chill fully and serve cold; add pistachio garnish only at serving.",
+  "tips": [
+    "Soak and peel almonds for a smoother paste.",
+    "Use gentle heat once ground nuts are in the milk.",
+    "Taste sweetness at the intended serving temperature."
+  ],
+  "faqs": [
+    {
+      "question": "Why is badam milk gritty?",
+      "answer": "The almond paste may be too coarse. Blend the soaked peeled almonds with a little milk until as smooth as your blender allows."
+    },
+    {
+      "question": "Can I serve badam milk cold?",
+      "answer": "Yes. Cool it promptly, refrigerate covered and stir before serving because almond solids can settle."
+    },
+    {
+      "question": "Is saffron required?",
+      "answer": "No. Saffron is an optional aromatic variation; cardamom and almonds are enough for a clear badam-milk flavour."
+    }
   ]
 }

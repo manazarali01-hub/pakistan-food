@@ -25,5 +25,48 @@
     "Stir in the maize flour gradually so it does not form dry lumps, then simmer on low heat until the saag thickens and the raw flour taste disappears.",
     "For the tempering, heat the ghee and cook the chopped onion with the remaining garlic until golden and aromatic.",
     "Pour the hot tempering over the saag, stir through or leave partly visible on top, taste for salt and serve hot with makki di roti."
+  ],
+  "prep_time": "25 min",
+  "cook_time": "65 min",
+  "prep_time_iso": "PT25M",
+  "cook_time_iso": "PT1H5M",
+  "total_time_iso": "PT1H30M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Punjabi sarson ka saag with mustard greens, spinach, maize flour and ghee garlic tempering",
+  "image_caption": "Mustard greens and spinach cooked slowly, lightly thickened with maize flour and finished with ghee tempering.",
+  "technique": "Wash mustard greens extremely well, then cook them slowly with minimal added water until fully soft. Maize flour is a light thickener, not the main ingredient; add it gradually and simmer long enough to remove its raw flour taste.",
+  "doneness_cues": [
+    "Greens should be fully soft before mashing or blending.",
+    "The saag should retain some rustic body rather than become watery puree.",
+    "No raw maize-flour taste should remain after the final simmer.",
+    "Garlic-onion tempering should be golden and aromatic, not burnt."
+  ],
+  "mistakes": [
+    "Failing to wash grit thoroughly from the greens.",
+    "Adding too much water at the start.",
+    "Using so much maize flour that the saag becomes pasty.",
+    "Burning garlic in the finishing ghee."
+  ],
+  "substitutions": [
+    "Spinach softens the stronger mustard-green flavour and can be adjusted modestly.",
+    "A hand masher gives a more rustic texture than a blender.",
+    "Use neutral oil instead of ghee for a lighter finish, though the flavour changes."
+  ],
+  "storage": "Cool promptly and refrigerate covered. Saag often thickens after chilling.",
+  "reheating": "Reheat slowly, stirring from the base and adding a little water only if needed.",
+  "serving": "Serve hot with makki di roti, a small amount of ghee and optional fresh green chilli.",
+  "faqs": [
+    {
+      "question": "Why is sarson ka saag bitter?",
+      "answer": "Mustard greens naturally have some bitterness, but very mature greens or a burnt tempering can make it harsh. Spinach helps balance the flavour."
+    },
+    {
+      "question": "Why is my saag watery?",
+      "answer": "Too much starting water or insufficient uncovered simmering after the greens soften are common causes."
+    },
+    {
+      "question": "Why add maize flour?",
+      "answer": "A small amount helps give body and the traditional texture, but it should not turn the saag into a flour-thickened paste."
+    }
   ]
 }

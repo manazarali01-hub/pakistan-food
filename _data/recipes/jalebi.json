@@ -31,5 +31,46 @@
     "Pipe compact spirals and fry in small batches so you can control the colour."
   ],
   "storage": "Jalebi has its best texture when freshly made. If leftovers are stored, keep them covered and restore some crispness with gentle dry heat before serving rather than soaking them again.",
-  "serving": "Serve warm on its own or alongside a cup of unsweetened chai."
+  "serving": "Serve warm on its own or alongside a cup of unsweetened chai.",
+  "prep_time": "1 hr 20 min",
+  "cook_time": "40 min",
+  "prep_time_iso": "PT1H20M",
+  "cook_time_iso": "PT40M",
+  "total_time_iso": "PT2H",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani jalebi spirals fried crisp and coated with glossy cardamom sugar syrup",
+  "image_caption": "Crisp jalebi spirals with a light fermented batter and a thin glossy coating of warm cardamom syrup.",
+  "technique": "Jalebi depends on two consistencies: batter that flows in a controlled ribbon and syrup that coats without setting hard. Fry at moderate heat until the spirals are crisp, then dip briefly while jalebi and syrup are compatible in temperature.",
+  "doneness_cues": [
+    "Rested batter should flow in a continuous ribbon that can hold a spiral instead of spreading flat in the oil.",
+    "Oil should bubble steadily around the batter without browning the jalebi immediately.",
+    "Fried jalebi should feel crisp at the edges before it enters the syrup.",
+    "Syrup should cling in a glossy layer; a heavy crystallised coating means it has become too concentrated."
+  ],
+  "mistakes": [
+    "Using very thin batter, which spreads and cannot hold the spiral shape.",
+    "Frying too hot, which darkens the outside before enough moisture leaves the centre.",
+    "Leaving crisp jalebi in syrup too long, which softens it.",
+    "Overcooking syrup or stirring crystallising sugar around the sides of the pan."
+  ],
+  "substitutions": [
+    "A piping bottle, squeeze bottle or strong piping bag can be used; choose an opening that gives a controllable medium-thin stream.",
+    "Cardamom can be kept subtle so it supports rather than dominates the fermented aroma.",
+    "If the rested batter thickens too much, adjust with water a teaspoon at a time rather than making a large correction."
+  ],
+  "reheating": "Jalebi is best fresh. If it softens, brief dry heat can restore some crispness, but reheating syrup-coated jalebi too aggressively can make the sugar sticky or burn.",
+  "faqs": [
+    {
+      "question": "Why is my jalebi not crispy?",
+      "answer": "The batter may be too thin, the oil may be too cool, the jalebi may be under-fried, or it may have remained in syrup too long."
+    },
+    {
+      "question": "Why does jalebi batter spread in the oil?",
+      "answer": "It is usually too thin or not rested enough to develop body. Adjust with a small amount of flour and test one spiral."
+    },
+    {
+      "question": "How long should jalebi stay in syrup?",
+      "answer": "Only long enough to take on a light coating while keeping its structure. A long soak makes crisp jalebi soft."
+    }
+  ]
 }

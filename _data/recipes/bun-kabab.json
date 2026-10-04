@@ -23,5 +23,48 @@
     "Spread green chutney and tamarind chutney over the toasted buns, adjusting the sweet, sour and spicy balance to taste.",
     "Place a hot kabab and egg in each bun, then add sliced onion and a light sprinkle of chaat masala.",
     "Close the buns and serve immediately while the kabab is hot and the bread is still lightly crisp at the edges."
+  ],
+  "prep_time": "15 min",
+  "cook_time": "20 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT20M",
+  "total_time_iso": "PT35M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani bun kabab with hot shami patty, egg, chutneys, onion and a lightly toasted bun",
+  "image_caption": "Street-style bun kabab assembled with a hot shami kabab, egg, green and tamarind chutneys and onion.",
+  "technique": "Treat bun kabab as an assembly dish with three timing-sensitive parts: a hot shami kabab, just-cooked egg and a bun toasted only enough to give structure. Build it immediately so chutneys do not soak through the bread before serving.",
+  "doneness_cues": [
+    "Shami kabab should be hot through and browned on both sides.",
+    "Egg should have no liquid raw areas remaining.",
+    "The bun cut surface should be lightly toasted but still soft enough to bite easily.",
+    "Chutneys should coat the bun without pooling heavily at the bottom."
+  ],
+  "mistakes": [
+    "Toasting buns until dry and hard.",
+    "Adding a large amount of watery chutney too early and making the bun soggy.",
+    "Assembling with a cold centre because the shami kabab was only browned outside.",
+    "Overloading chaat masala so the sandwich becomes salty."
+  ],
+  "substitutions": [
+    "Use homemade or prepared shami kababs, but heat them fully before assembly.",
+    "Egg can be cooked as a thin omelette or used to coat the kabab depending on preferred street style.",
+    "Adjust green versus tamarind chutney to control spicy versus sweet-sour balance."
+  ],
+  "storage": "Store buns, chutneys and cooked filling components separately if preparing ahead. A fully assembled bun kabab softens quickly.",
+  "reheating": "Reheat the shami kabab separately in a pan until hot, then toast the bun fresh and assemble with cold chutneys and onion.",
+  "serving": "Serve immediately after assembly, with extra chutney on the side rather than soaking the bun.",
+  "faqs": [
+    {
+      "question": "Why does bun kabab get soggy?",
+      "answer": "Watery chutney, untoasted bread and long holding after assembly are the main causes. Toast lightly and assemble only when ready to serve."
+    },
+    {
+      "question": "Should the egg be inside or around the kabab?",
+      "answer": "Both styles are used. This recipe supports a thin omelette or an egg-coated patty."
+    },
+    {
+      "question": "Can I assemble bun kababs ahead?",
+      "answer": "It is better to prepare the components ahead and assemble at serving so the bun stays pleasant."
+    }
   ]
 }

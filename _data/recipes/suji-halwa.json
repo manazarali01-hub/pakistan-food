@@ -23,5 +23,48 @@
     "Keep stirring until the semolina absorbs the liquid, swells and the halwa becomes smooth and begins to leave the sides of the pan.",
     "Taste the texture and stop before it becomes dry, since it will firm slightly as it cools.",
     "Garnish with sliced nuts and the optional raisins and serve warm."
+  ],
+  "prep_time": "5 min",
+  "cook_time": "20 min",
+  "prep_time_iso": "PT5M",
+  "cook_time_iso": "PT20M",
+  "total_time_iso": "PT25M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani suji halwa with golden roasted semolina, ghee, cardamom and sliced nuts",
+  "image_caption": "Semolina halwa roasted patiently in ghee and finished with warm cardamom syrup until soft and glossy.",
+  "technique": "Roasting determines flavour before any syrup is added. Keep semolina moving over medium-low heat until it smells nutty and turns evenly golden, then add warm syrup carefully in stages so it hydrates without forming lumps.",
+  "doneness_cues": [
+    "Dry semolina should smell nutty and look evenly golden before syrup is added.",
+    "After syrup, grains should swell and the mixture should become smooth rather than sandy and dry.",
+    "Finished halwa should pull slightly from the sides while remaining soft and glossy.",
+    "It should be looser hot than the final serving texture because it firms as it cools."
+  ],
+  "mistakes": [
+    "Rushing the roast and leaving raw-tasting semolina.",
+    "Using very high heat and creating burnt patches.",
+    "Adding cold syrup all at once and encouraging lumps and violent splattering.",
+    "Cooking until completely dry in the pan."
+  ],
+  "substitutions": [
+    "Use almonds, pistachios or a mix for garnish; nuts are optional.",
+    "Raisins are optional and can be added near the end.",
+    "Reduce sugar to taste without changing the roasting stage."
+  ],
+  "storage": "Cool leftovers and refrigerate covered. Halwa becomes firmer when chilled.",
+  "reheating": "Warm gently with a small splash of water or milk if needed, stirring until soft again.",
+  "serving": "Serve warm, especially alongside puri or as a standalone dessert.",
+  "faqs": [
+    {
+      "question": "Why does suji halwa taste raw?",
+      "answer": "The semolina was probably not roasted long enough before syrup was added."
+    },
+    {
+      "question": "Why is my halwa dry?",
+      "answer": "It was reduced too far or did not receive enough liquid. Remember that it firms further after cooling."
+    },
+    {
+      "question": "Why did lumps form?",
+      "answer": "Add warm syrup gradually while stirring continuously so the semolina hydrates evenly."
+    }
   ]
 }

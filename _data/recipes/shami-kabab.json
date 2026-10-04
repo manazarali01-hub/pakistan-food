@@ -36,5 +36,47 @@
     "The cooked beef-and-dal mixture must be quite dry before grinding.",
     "Add egg gradually; too much liquid can make shami kababs fragile."
   ],
-  "storage": "Cool cooked kababs promptly and refrigerate covered. For longer storage, shaped uncooked kababs can be frozen separately until firm and then packed together."
+  "storage": "Cool cooked kababs promptly and refrigerate covered. For longer storage, shaped uncooked kababs can be frozen separately until firm and then packed together.",
+  "prep_time": "30 min",
+  "cook_time": "60 min",
+  "prep_time_iso": "PT30M",
+  "cook_time_iso": "PT1H",
+  "total_time_iso": "PT1H30M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani shami kabab patties made with beef, chana dal, herbs and warm spices",
+  "image_caption": "Shami kababs shaped from a dry, cohesive beef-and-chana-dal mixture and shallow-fried until golden.",
+  "technique": "Moisture control happens before grinding. Beef and chana dal must be completely tender, then the cooking liquid must evaporate until the mixture is dry enough to grind into a cohesive paste. Egg is a final binder added only as needed.",
+  "doneness_cues": [
+    "Chana dal should mash easily and beef should be tender before the pot is dried down.",
+    "No visible watery liquid should remain before grinding.",
+    "Ground mixture should hold a patty shape without leaking moisture.",
+    "Fried kababs should be golden outside and thoroughly hot through the centre."
+  ],
+  "mistakes": [
+    "Grinding a wet beef-and-dal mixture.",
+    "Adding the whole beaten egg automatically even when the mixture already binds.",
+    "Shaping while the mixture is hot and very soft.",
+    "Turning the patty before the first side has set."
+  ],
+  "substitutions": [
+    "Use only as much beaten egg as the particular batch needs.",
+    "Green chilli and fresh herbs can be adjusted without changing the core beef-dal structure.",
+    "If a mixture is soft, chill it before adding dry filler."
+  ],
+  "reheating": "Reheat gently in a lightly greased pan or oven until hot through; avoid prolonged frying that dries the patties.",
+  "serving": "Serve with green chutney, sliced onion and lemon, or use in a bun kabab.",
+  "faqs": [
+    {
+      "question": "Why do shami kababs break?",
+      "answer": "The mixture is often too wet, too warm or has too much egg. Dry the cooked mixture properly and chill before shaping if needed."
+    },
+    {
+      "question": "Why are my shami kababs dry?",
+      "answer": "The beef-dal mixture may have been over-dried or the patties fried too long. Remove only excess water; the ground mixture should still feel cohesive."
+    },
+    {
+      "question": "Can shami kababs be frozen?",
+      "answer": "Yes. Freeze shaped uncooked patties separately until firm, then pack them so they do not stick together."
+    }
+  ]
 }

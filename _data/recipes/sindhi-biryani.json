@@ -28,5 +28,54 @@
     "Layer the rice over the chicken masala with reserved fried onion, mint, coriander, green chillies and lemon, handling the rice gently.",
     "Cover tightly and cook on low heat for 15 to 20 minutes, adjusting for your pot and stove, until the rice and potatoes are fully tender.",
     "Rest covered for a few minutes, then lift and fluff gently from the sides before serving."
+  ],
+  "prep_time": "25 min",
+  "cook_time": "50 min",
+  "prep_time_iso": "PT25M",
+  "cook_time_iso": "PT50M",
+  "total_time_iso": "PT1H15M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Sindhi chicken biryani with basmati rice, chicken, potatoes, tomato masala, mint and fried onions",
+  "image_caption": "Sindhi-style chicken biryani layered with potatoes, tomato-yogurt masala, herbs and partly cooked basmati rice.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Sindhi_Biryani.JPG",
+  "technique": "Sindhi biryani carries more tomato, chilli and tang than a milder chicken biryani, but the rice still depends on moisture control. Cook the chicken-potato masala until the tomatoes and yogurt are cohesive and the potatoes are partly tender before layering; a watery base will continue steaming the rice during dum.",
+  "doneness_cues": [
+    "Potatoes should be partly tender before layering so they can finish during dum without remaining hard.",
+    "Chicken masala should look concentrated and cling to the pieces rather than pool as thin tomato liquid.",
+    "Parboiled rice should still have a firm centre when drained.",
+    "After dum, potatoes and rice should be tender while the grains remain distinct."
+  ],
+  "mistakes": [
+    "Adding raw or barely softened potatoes at the layering stage.",
+    "Leaving the tomato-yogurt masala watery because Sindhi biryani is meant to be bold; bold flavour does not require excess liquid.",
+    "Overcooking rice before dum.",
+    "Mixing the layers aggressively after cooking and breaking long grains."
+  ],
+  "substitutions": [
+    "Bone-in chicken gives a fuller masala; boneless thigh can be used with a shorter cooking time.",
+    "Adjust green chilli and biryani masala independently so heat does not overwhelm the tomato, herb and lemon notes.",
+    "If potatoes are very large, cut them smaller rather than extending dum until the rice overcooks."
+  ],
+  "storage": "Cool leftovers promptly and refrigerate covered. Store raita separately from the rice.",
+  "reheating": "Reheat only the portion needed, covered, with a small splash of water until the chicken, potato and rice are steaming hot throughout.",
+  "serving": "Serve with plain raita, sliced onion and cucumber so the spicy, tangy biryani remains the main flavour.",
+  "tips": [
+    "Part-cook the potatoes in the masala before layering.",
+    "Drain parboiled rice promptly while its centre is still firm.",
+    "Keep the chicken masala concentrated enough for dum."
+  ],
+  "faqs": [
+    {
+      "question": "What makes Sindhi biryani different from a milder chicken biryani?",
+      "answer": "The style is typically bolder in tomato, chilli, herbs and tang, often with potatoes. The core rice-control rules still apply."
+    },
+    {
+      "question": "Why are the potatoes hard while the rice is done?",
+      "answer": "The potato pieces were probably too large or not partly cooked before layering. Give them a head start in the chicken masala."
+    },
+    {
+      "question": "Why did my Sindhi biryani become mushy?",
+      "answer": "Over-parboiled rice and excess liquid in the tomato-yogurt masala are the most common combination."
+    }
   ]
 }

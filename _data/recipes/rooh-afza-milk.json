@@ -19,5 +19,48 @@
     "Taste before adding the optional sugar because the syrup already contributes substantial sweetness.",
     "Add the ice just before serving, or blend very briefly if you prefer the drink extra cold; prolonged blending can dilute it as the ice melts.",
     "Pour into two glasses, garnish with chopped almonds if using and serve immediately while chilled."
+  ],
+  "prep_time": "5 min",
+  "prep_time_iso": "PT5M",
+  "total_time_iso": "PT5M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Chilled Pakistani Rooh Afza milk with an even pink colour and optional almond garnish",
+  "image_caption": "Cold milk mixed with rose sharbat syrup until evenly pink, served over ice.",
+  "technique": "Keep the milk very cold and taste after the syrup is fully mixed. Rose sharbat is already sweet and strongly flavoured, so extra sugar should be a final adjustment rather than an automatic ingredient.",
+  "doneness_cues": [
+    "The drink should be evenly pink with no streaks of concentrated syrup at the bottom.",
+    "Milk should remain smooth rather than curdled; use fresh cold milk and clean equipment.",
+    "Sweetness should still feel balanced after the ice has begun to melt."
+  ],
+  "mistakes": [
+    "Adding sugar before tasting the rose syrup in the milk.",
+    "Using so much ice that the drink becomes watery within a few minutes.",
+    "Blending for a long time when simple stirring is enough, which warms and dilutes the drink."
+  ],
+  "substitutions": [
+    "Use less rose sharbat for a lighter floral drink rather than compensating with extra milk after mixing.",
+    "Almond garnish is optional and can be omitted for allergy or preference.",
+    "Do not replace milk with acidic juice; the dairy can split."
+  ],
+  "storage": "Best served immediately. If prepared briefly ahead, keep it covered and refrigerated, stir before serving, and do not leave the milk drink warm for an extended period.",
+  "serving": "Serve very cold in two glasses, with the optional chopped almonds added just before drinking.",
+  "tips": [
+    "Chill the milk before mixing so less ice is needed.",
+    "Taste before adding the optional sugar because rose sharbat contributes substantial sweetness.",
+    "Stir again immediately before pouring if the drink has been standing."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my Rooh Afza milk too sweet?",
+      "answer": "The syrup itself is concentrated and sweet. Add less syrup in the next batch; for an already mixed drink, a small amount of extra cold milk is a cleaner correction than more ice."
+    },
+    {
+      "question": "Why did the milk split?",
+      "answer": "Fresh milk should stay smooth with rose sharbat. Sour milk, contaminated utensils or an acidic addition can cause curdling; do not serve a drink that smells or looks spoiled."
+    },
+    {
+      "question": "Can I make it without extra sugar?",
+      "answer": "Yes. Taste after mixing the syrup first; many batches need no additional sugar."
+    }
   ]
 }

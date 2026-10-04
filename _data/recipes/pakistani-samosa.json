@@ -13,6 +13,7 @@
     "3/4 tsp salt, divided",
     "About 1/2 cup water for the dough, added gradually",
     "3 medium potatoes, boiled, peeled and roughly mashed",
+    "1/2 cup green peas, optional",
     "1 tbsp oil for the filling",
     "1 tsp cumin seeds",
     "1/2 tsp crushed red chilli, or to taste",
@@ -24,7 +25,7 @@
   ],
   "method": [
     "Rub the dough oil into the flour with the ajwain and measured salt until the mixture resembles coarse crumbs. Add water gradually to form a firm, pliable dough, knead only until smooth, then cover and rest for about 30 minutes.",
-    "For the filling, heat the oil and bloom the cumin briefly. Add the green chillies and crushed red chilli, then fold in the potatoes and remaining salt. Cook briefly, finish with coriander and lemon juice and let the filling cool completely.",
+    "For the filling, heat the oil and bloom the cumin briefly. Add the green chillies and crushed red chilli, then fold in the potatoes and remaining salt. Cook briefly, finish with coriander and lemon juice and let the filling cool completely. Add the optional peas with the potatoes if using, and cook just until any extra moisture has evaporated.",
     "Divide the rested dough into equal balls. Roll each into a thin oval and cut it in half. Moisten a straight edge with flour paste, overlap to form a cone and press the seam firmly so there are no gaps.",
     "Fill each cone without overpacking it, leave enough clean dough at the top to seal, then moisten and press the top edges tightly together. Keep assembled samosas covered while shaping the remainder.",
     "Heat the frying oil over medium-low to medium heat. Add only a few samosas at a time and fry gently, turning occasionally, so the raw dough has time to become crisp before the exterior gets too dark.",
@@ -36,5 +37,46 @@
     "Fry gently in small batches; rapidly bubbling oil is too hot for raw samosa dough."
   ],
   "storage": "Samosas are best fresh. Cool leftovers promptly, refrigerate covered and reheat with dry heat until thoroughly hot and crisp.",
-  "serving": "Pair with green mint chutney or sweet tamarind chutney and a cup of chai."
+  "serving": "Pair with green mint chutney or sweet tamarind chutney and a cup of chai.",
+  "prep_time": "35 min",
+  "cook_time": "40 min",
+  "prep_time_iso": "PT35M",
+  "cook_time_iso": "PT40M",
+  "total_time_iso": "PT1H15M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Crisp Pakistani potato samosas with flaky golden pastry and spiced potato filling",
+  "image_caption": "Pakistani potato samosas with a firm flaky wrapper, cooled spiced filling and an even golden fry.",
+  "technique": "Crisp samosa pastry starts with a firm, rested dough and a completely cool, fairly dry filling. Fry from moderately hot rather than aggressively hot oil so the wrapper has time to blister and crisp before it becomes dark.",
+  "doneness_cues": [
+    "The dough should feel firm and smooth after resting, not soft like roti dough.",
+    "The potato filling should be cool and dry enough that no steam softens the wrapper during shaping.",
+    "Sealed edges should stay closed when the samosa is lifted and moved.",
+    "Finished samosas should be evenly golden with a crisp shell that does not feel oily or soft."
+  ],
+  "mistakes": [
+    "Using warm filling, which creates steam inside the wrapper before frying.",
+    "Making the dough too soft or rolling it paper-thin.",
+    "Starting in oil that is too hot; the outside colors before the pastry layers dry and crisp.",
+    "Overfilling or leaving gaps in the seal, which can cause bursting and oil entry."
+  ],
+  "substitutions": [
+    "Ajwain is traditional in many doughs but can be reduced if you prefer a milder aroma.",
+    "The potato filling can include peas, but cook off excess moisture before cooling it.",
+    "If preparing ahead, keep shaped uncooked samosas covered so the dough surface does not crack."
+  ],
+  "reheating": "Reheat cooked samosas in an oven, air fryer or dry pan until hot and crisp. A microwave warms the filling quickly but usually softens the pastry.",
+  "faqs": [
+    {
+      "question": "Why do samosas lose their crispness?",
+      "answer": "Steam is the main enemy after frying. Drain briefly, avoid sealing hot samosas in an airtight box, and reheat with dry heat."
+    },
+    {
+      "question": "Why do samosas burst in oil?",
+      "answer": "Common causes are trapped air, wet filling, weak seals or very high frying heat. Keep the filling cool and dry and seal the edges firmly."
+    },
+    {
+      "question": "Can samosas be shaped in advance?",
+      "answer": "Yes, but protect the wrappers from drying. For longer storage, freeze them in a single layer before packing so they do not stick together."
+    }
+  ]
 }

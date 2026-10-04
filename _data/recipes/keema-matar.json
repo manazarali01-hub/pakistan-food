@@ -25,5 +25,34 @@
     "Add the peas and only a small splash of water if the pan needs moisture for them to cook. Cover and simmer gently until the peas are tender and the beef is cooked through.",
     "Uncover and cook to the consistency you prefer, stirring so the keema stays moist rather than reducing until tough or dry.",
     "Taste for seasoning, garnish with fresh coriander if available and serve hot with roti, naan or rice."
-  ]
+  ],
+  "prep_time": "15 min",
+  "cook_time": "30 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT30M",
+  "total_time_iso": "PT45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani keema matar with browned beef mince, green peas and concentrated tomato masala",
+  "image_caption": "Beef mince cooked until separated and moist, then finished with peas in a reduced onion-tomato masala.",
+  "technique": "Brown the mince before the tomato stage and let released beef moisture evaporate instead of trapping it under a lid. Add peas only after the masala is cohesive so they stay green and tender rather than overcooking while the mince dries out.",
+  "doneness_cues": [
+    "Mince should look separated rather than clumped in large grey pieces.",
+    "Tomato masala should cling to the beef with no raw watery layer.",
+    "Peas should be tender but still hold shape.",
+    "Finished keema should be moist and spoonable rather than greasy or dry."
+  ],
+  "mistakes": [
+    "Covering the mince too early and steaming it in its own liquid.",
+    "Adding peas before the tomato masala is cooked.",
+    "Reducing until all moisture is gone and the beef becomes tough.",
+    "Leaving large mince clumps unbroken during browning."
+  ],
+  "substitutions": [
+    "Use lamb mince for a richer variation with a slightly different fat level.",
+    "Frozen peas can go in directly and usually need less time than fresh peas.",
+    "Add a small splash of hot water only if the peas need more time after the masala has reduced."
+  ],
+  "storage": "Cool promptly and refrigerate covered. Keema thickens slightly as it chills.",
+  "reheating": "Reheat gently with a spoonful of water if needed, just until piping hot.",
+  "serving": "Serve with roti, naan or plain rice and fresh coriander."
 }

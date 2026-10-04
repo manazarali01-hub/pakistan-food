@@ -26,5 +26,35 @@
     "Add only enough water for the beef to become tender, cover and cook gently until the meat yields easily. Add small amounts of hot water during cooking if the pot becomes dry too early.",
     "Once the beef is tender and the gravy is no longer watery, fold in the fried bhindi and green chillies gently so the okra does not break apart.",
     "Simmer uncovered just until the bhindi is tender and the masala clings to the meat and vegetables, then serve hot with roti or naan."
-  ]
+  ],
+  "prep_time": "20 min",
+  "cook_time": "40 min",
+  "prep_time_iso": "PT20M",
+  "cook_time_iso": "PT40M",
+  "total_time_iso": "PT1H",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani bhindi gosht with tender beef and intact okra in reduced onion tomato masala",
+  "image_caption": "Beef masala cooked until tender, then folded with separately fried okra so the bhindi stays intact.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Bhindi_Gosht.JPG",
+  "technique": "Dry the okra thoroughly and fry it separately before it meets the meat. Beef needs much longer cooking than bhindi, so finish tenderness and gravy reduction first, then fold the okra in only for the final stage.",
+  "doneness_cues": [
+    "Okra surface should be dry before frying.",
+    "Beef should yield easily before bhindi is returned.",
+    "Masala should be concentrated rather than watery.",
+    "Final okra should be tender while many pieces remain intact."
+  ],
+  "mistakes": [
+    "Adding wet okra directly to the curry.",
+    "Cooking bhindi for the full meat-tenderising time.",
+    "Stirring aggressively after okra is added.",
+    "Leaving a thin gravy that softens the bhindi excessively."
+  ],
+  "substitutions": [
+    "Mutton can replace beef with cooking time adjusted to tenderness.",
+    "Use a wide pan for the final stage so moisture escapes quickly.",
+    "Green chilli can be added near the end for fresher aroma."
+  ],
+  "storage": "Cool promptly and refrigerate covered.",
+  "reheating": "Warm gently and avoid vigorous stirring so the okra does not break apart.",
+  "serving": "Serve with roti or naan."
 }
