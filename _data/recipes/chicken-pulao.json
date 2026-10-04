@@ -31,5 +31,46 @@
     "Do not automatically pour in all the stock; basmati varieties absorb different amounts of liquid.",
     "Avoid excessive stirring after adding rice to keep the grains intact."
   ],
-  "storage": "Cool leftover chicken pulao promptly, refrigerate covered and reheat the portion being served until thoroughly hot."
+  "storage": "Cool leftover chicken pulao promptly, refrigerate covered and reheat the portion being served until thoroughly hot.",
+  "prep_time": "20 min",
+  "cook_time": "45 min",
+  "prep_time_iso": "PT20M",
+  "cook_time_iso": "PT45M",
+  "total_time_iso": "PT1H5M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chicken pulao with separate basmati rice, bone-in chicken and whole aromatic spices",
+  "image_caption": "Chicken pulao cooked in an aromatic yakhni-style stock with separate basmati grains.",
+  "technique": "Pulao flavour is carried by the seasoned cooking liquid. Build a well-flavoured chicken and spice base first, then add rice with a measured amount of liquid and finish with controlled steam rather than repeatedly opening and stirring the pot.",
+  "doneness_cues": [
+    "The stock should taste pleasantly seasoned before the rice goes in; weak stock usually produces weak pulao.",
+    "As the rice nears completion, visible free liquid should be almost gone without the bottom smelling scorched.",
+    "A finished grain should be tender through the centre and separate when lifted gently.",
+    "Resting the covered pot briefly should allow steam to settle so the rice fluffs more cleanly."
+  ],
+  "mistakes": [
+    "Using a weak or under-seasoned yakhni and trying to repair the rice only after it has absorbed the liquid.",
+    "Adding too much water for the particular rice batch.",
+    "Stirring often after the grains soften, which releases starch and breaks basmati.",
+    "Keeping the flame high after most liquid has been absorbed."
+  ],
+  "substitutions": [
+    "Bone-in chicken contributes more flavour to the stock, but boneless thigh can be used with a shorter cooking time.",
+    "Different basmati brands absorb liquid differently; keep notes on the rice you use instead of forcing one ratio onto every batch.",
+    "If the stock is already salty, reduce added salt before the rice goes in."
+  ],
+  "reheating": "Break up chilled pulao gently, add a small splash of water, cover and reheat over low heat or in short microwave intervals until the chicken and rice are steaming hot.",
+  "faqs": [
+    {
+      "question": "Why does chicken pulao taste bland?",
+      "answer": "Pulao depends heavily on the yakhni. Taste and correct the stock before adding rice because the grains absorb that seasoning."
+    },
+    {
+      "question": "Why did my pulao become mushy?",
+      "answer": "Too much liquid, very long soaking, overcooking before dum, or vigorous stirring can all soften and break the grains."
+    },
+    {
+      "question": "Should pulao rice be soaked?",
+      "answer": "A short soak can help many basmati varieties, but the ideal time depends on the rice. Follow the behaviour of your regular brand and drain it well."
+    }
+  ]
 }
