@@ -55,6 +55,7 @@
 {% assign schema_total_duration = recipe.total_time_iso | default: total_duration %}
 {% assign image_alt = recipe.image_alt | default: recipe.name %}
 {% assign image_caption = recipe.image_caption | default: recipe.description %}
+{% assign image_source_label = recipe.image_source_label | default: 'Wikimedia Commons' %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -219,7 +220,7 @@
         <figcaption>
           {{ image_caption }}
           {% if recipe.image_source %}
-            <span class="image-credit">Image: {% if recipe.image_author %}{{ recipe.image_author }} · {% endif %}<a href="{{ recipe.image_source }}" rel="noopener noreferrer">Wikimedia Commons</a>{% if recipe.image_license %} · {% if recipe.image_license_url %}<a href="{{ recipe.image_license_url }}" rel="noopener noreferrer">{{ recipe.image_license }}</a>{% else %}{{ recipe.image_license }}{% endif %}{% endif %}</span>
+            <span class="image-credit">Image: {% if recipe.image_author %}{{ recipe.image_author }} · {% endif %}<a href="{{ recipe.image_source }}" rel="noopener noreferrer">{{ image_source_label }}</a>{% if recipe.image_license %} · {% if recipe.image_license_url %}<a href="{{ recipe.image_license_url }}" rel="noopener noreferrer">{{ recipe.image_license }}</a>{% else %}{{ recipe.image_license }}{% endif %}{% endif %}</span>
           {% endif %}
         </figcaption>
       </figure>
