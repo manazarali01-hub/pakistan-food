@@ -44,8 +44,8 @@
   "cook_time_iso": "PT40M",
   "total_time_iso": "PT1H15M",
   "date_modified": "2026-10-04",
-  "image_alt": "Crisp Pakistani potato samosas with flaky golden pastry and spiced potato filling",
-  "image_caption": "Pakistani potato samosas with a firm flaky wrapper, cooled spiced filling and an even golden fry.",
+  "image_alt": "Golden Pakistani samosas with fresh greens and sliced red onion",
+  "image_caption": "Golden Pakistani samosas served with fresh greens and sliced red onion.",
   "technique": "Crisp samosa pastry starts with a firm, rested dough and a completely cool, fairly dry filling. Fry from moderately hot rather than aggressively hot oil so the wrapper has time to blister and crisp before it becomes dark.",
   "doneness_cues": [
     "The dough should feel firm and smooth after resting, not soft like roti dough.",
@@ -78,11 +78,5 @@
       "question": "Can samosas be shaped in advance?",
       "answer": "Yes, but protect the wrappers from drying. For longer storage, freeze them in a single layer before packing so they do not stick together."
     }
-  ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Samosa-and-Chatni.jpg",
-  "image_author": "Kaushalspeed",
-  "image_creator": "Kaushalspeed",
-  "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "image_source_label": "Wikimedia Commons"
+  ]
 }

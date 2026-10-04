@@ -17,12 +17,12 @@ No fake reviews, ratings, nutrition, video, qualifications or engagement signals
 | --- | ---: | --- |
 | Recipe data/pages | 66 | Kept indexable; top-priority set deeply upgraded first |
 | Guide pages (excluding guide index) | 215 | Audited for visible length, duplicate body and template prose |
-| Guides kept indexable | 137 | Must pass strict duplicate/template-content gate |
-| Guides consolidated + `noindex,follow` | 78 | Retained for existing links; removed from XML sitemap; point to fuller resources |
+| Guides kept indexable | 132 | Must pass strict duplicate/template-content gate and click-intent overlap review |
+| Guides consolidated + `noindex,follow` | 83 | Retained for existing links; removed from XML sitemap; point to fuller resources |
 | Guides removed/deleted | 0 | Destructive removal deferred without Search Console traffic evidence |
-| Current XML sitemap URLs | 223 | Canonical, indexable URLs only |
+| Current XML sitemap URLs | 218 | Canonical, indexable URLs only |
 | Recipe URLs in sitemap | 66 | All permanent recipe pages |
-| Guide article URLs in sitemap | 137 | Excludes the 78 noindexed guide URLs |
+| Guide article URLs in sitemap | 132 | Excludes the 83 noindexed guide URLs |
 | Guide directory URL | 1 | Curated guide hub |
 | Recipe category URLs | 9 | Non-empty category hubs |
 
@@ -43,6 +43,7 @@ Representative repeated prose included generic instructions about controlling he
 
 The strict branch audit now reports:
 
+- **Indexed guides: 132; noindex guides: 83; sitemap guide URLs: 132**
 - **Indexed guides under 220 visible words: 0**
 - **Indexed guides with known generic-template phrase hits: 0**
 - **Exact duplicate indexed guide-body groups: 0**
@@ -88,7 +89,7 @@ Kept when the topic has distinct cooking intent and can teach something specific
 
 ### MERGE / CONSOLIDATE
 
-78 guide URLs were found to be exact duplicates, near-template micro-pages, or strongly overlapping support topics. They were consolidated into stronger recipe/guide resources.
+83 guide URLs are now consolidated. The original 78 exact-duplicate/near-template micro-pages were joined by five additional indexable pages that a dedicated search-intent overlap audit found to compete with stronger pages on essentially the same user problem.
 
 Examples include:
 
@@ -101,7 +102,9 @@ Examples include:
 
 ### NOINDEX
 
-The 78 consolidated URLs now use `noindex,follow`. They retain a self-canonical and a visible handoff to a stronger page so old links do not dead-end. They are excluded from `sitemap-v2.xml`.
+A final click-focused overlap audit conservatively consolidated five more micro-pages into stronger destinations: Seekh Kabab skewer/falling, roti hard-after-cooling, Gulab Jamun hard/soft, overly strong/bitter chai, and draining/soggy fried food. The stronger destination remains indexable; the narrower source remains accessible with `noindex,follow`, is removed from the sitemap, and hands users to the fuller guide.
+
+The 83 consolidated URLs now use `noindex,follow`. They retain a self-canonical and a visible handoff to a stronger page so old links do not dead-end. They are excluded from `sitemap-v2.xml`.
 
 This is intentionally reversible.
 
@@ -153,9 +156,9 @@ Evidence-led decisions included:
 - premium open-license replacements were introduced only when the dish and recipe matched closely enough;
 - Rice Kheer's current high-resolution hero was retained because it clearly represents creamy rice kheer with the nut/saffron-style garnish described by the recipe, rather than replacing an accurate image merely for novelty.
 
-Current image audit: **66 local recipe images, 0 externally served recipe images, 0 missing alt text, and 0 missing captions**. Twelve visually weak or AI-origin recipe images were replaced with real openly licensed photographs from Wikimedia Commons, with source/creator/license metadata retained where applicable. All 66 recipe images were normalized to a mobile-friendly 4:3 food-focused crop, using only the minimum aspect crop plus a gentle extra zoom for near-4:3 sources to avoid over-cropping.
+Current image audit: **66 local recipe images, 0 externally served recipe images, 0 missing alt text, and 0 missing captions**. The final user-directed visual pass changes **21 recipe images**: nine replacements and twelve controlled zoom/reframes. Pakistani Samosa uses the exact user-supplied photograph; Aloo Gosht, Aloo Paratha, Anda Paratha, Chicken Sajji, Daal Chawal, Halwa Puri, Kashmiri Chai and Paya use newly selected real licensed photographs with source/creator/license metadata retained. Chicken Biryani, Beef Nihari, Aloo Keema, Aloo Palak, Bhindi Gosht, Chicken Handi, Chicken Qorma, Kabli Pulao, Lahori Chargha, Mutton Karahi, Reshmi Kabab and White Chicken Karahi keep their existing real photographs but receive stronger food-first crops. Mutton Biryani is intentionally unchanged because it passed the user's visual review. Every changed output is exact 4:3 and validated as a non-trivial WebP asset.
 
-PR #21 added a delivery-quality pass and PR #22 hardened image fallback behavior. A later production image-localization pass then moved all 66 recipe images to local assets. The current premium crop pass replaces 12 weak/AI-origin images with real copyright-safe photographs and normalizes the full 66-image set to 4:3 subject-forward crops. Mobile Browser QA now treats placeholders as failures and also checks homepage recipe-card source images for the required 4:3 aspect ratio.
+Earlier image work moved all 66 recipe images to local assets and normalized the library to 4:3. The final quality pass is narrower and user-directed: it improves the specific dishes that still looked weak after live review. Mobile Browser QA treats placeholders as failures, checks homepage recipe-card source images for 4:3, and now includes a dedicated 390px hero-image sweep across the 21 user-priority recipe pages. The cache-busting image version is advanced to `20261004-final4` so browsers and CDNs request the final image bytes instead of reusing older cached files.
 
 ## Structured-data rules
 
@@ -187,7 +190,7 @@ Branch validation checks:
 ## Remaining weaknesses / not yet verified
 
 - No destructive URL deletion decision should be made until Search Console traffic/backlink evidence is available.
-- Search Console traffic/backlink evidence is still unavailable: the connected GSC Wizard now reports that its trial/subscription is inactive. Do not hard-delete or redirect the 78 consolidated noindex URLs without that evidence.
+- Search Console traffic/backlink evidence is still unavailable: the connected GSC Wizard now reports that its trial/subscription is inactive. Do not hard-delete or redirect the 83 consolidated noindex URLs without that evidence.
 - Process/step images are an optional future enhancement, not treated as factual Recipe-schema data unless real source images exist.
 - The 15 priority recipes received the deepest manual editorial review; automated quality gates now pass across all 66 recipes, but this does not substitute for future human taste/testing feedback.
 - Real Playwright browser QA is now verified across **42 page/viewport combinations** at 320, 360, 375, 390, 412, 430 and 768 px, with zero horizontal overflow, zero broken images and zero recorded interaction/layout failures in the tested set.
@@ -195,4 +198,4 @@ Branch validation checks:
 
 ## Resubmission rule
 
-The technical resubmission gate is now satisfied: repository quality checks, mobile browser QA, deployment validation and latest-main custom-domain smoke verification have passed. A new AdSense review may now be requested. Search Console-dependent destructive URL cleanup remains deferred; it is not a prerequisite while the 78 consolidated URLs remain safely noindexed and excluded from the sitemap. AdSense approval itself cannot be guaranteed and must be confirmed by Google's review.
+The technical resubmission gate is now satisfied: repository quality checks, mobile browser QA, deployment validation and latest-main custom-domain smoke verification have passed. A new AdSense review may now be requested. Search Console-dependent destructive URL cleanup remains deferred; it is not a prerequisite while the 83 consolidated URLs remain safely noindexed and excluded from the sitemap. AdSense approval itself cannot be guaranteed and must be confirmed by Google's review.

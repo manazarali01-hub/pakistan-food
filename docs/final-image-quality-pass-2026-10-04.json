@@ -1,0 +1,209 @@
+{
+  "policy": "Real photographs only. No AI-generated food images used.",
+  "user_supplied_samosa": true,
+  "replacements": [
+    "aloo-gosht",
+    "aloo-paratha",
+    "anda-paratha",
+    "chicken-sajji",
+    "daal-chawal",
+    "halwa-puri",
+    "kashmiri-chai",
+    "pakistani-samosa",
+    "paya"
+  ],
+  "zoom_only": [
+    "aloo-keema",
+    "aloo-palak",
+    "beef-nihari",
+    "bhindi-gosht",
+    "chicken-biryani",
+    "chicken-handi",
+    "chicken-qorma",
+    "kabli-pulao",
+    "lahori-chargha",
+    "mutton-karahi",
+    "reshmi-kabab",
+    "white-chicken-karahi"
+  ],
+  "untouched_approved": [
+    "mutton-biryani"
+  ],
+  "results": [
+    {
+      "slug": "aloo-gosht",
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Odia_Mutton_Curry_%28Mansha_Tarkari%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+      "content_type": "image/jpeg",
+      "bytes": 172878,
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "slug": "aloo-keema",
+      "action": "zoom-existing",
+      "zoom_factor": 0.9,
+      "bytes": 153406,
+      "width": 1016,
+      "height": 762
+    },
+    {
+      "slug": "aloo-palak",
+      "action": "zoom-existing",
+      "zoom_factor": 0.9,
+      "bytes": 137870,
+      "width": 1016,
+      "height": 762
+    },
+    {
+      "slug": "aloo-paratha",
+      "action": "replace-commons",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Aloo_Paratha.jpg/1920px-Aloo_Paratha.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "bytes": 281284,
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "slug": "anda-paratha",
+      "action": "replace-commons",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Anda_Paratha.jpg/1920px-Anda_Paratha.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "bytes": 422874,
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "slug": "beef-nihari",
+      "action": "zoom-existing",
+      "zoom_factor": 0.88,
+      "bytes": 391518,
+      "width": 1188,
+      "height": 891
+    },
+    {
+      "slug": "bhindi-gosht",
+      "action": "zoom-existing",
+      "zoom_factor": 0.9,
+      "bytes": 254672,
+      "width": 1016,
+      "height": 762
+    },
+    {
+      "slug": "chicken-biryani",
+      "action": "zoom-existing",
+      "zoom_factor": 0.86,
+      "bytes": 132232,
+      "width": 968,
+      "height": 726
+    },
+    {
+      "slug": "chicken-handi",
+      "action": "zoom-existing",
+      "zoom_factor": 0.9,
+      "bytes": 40182,
+      "width": 504,
+      "height": 378
+    },
+    {
+      "slug": "chicken-qorma",
+      "action": "zoom-existing",
+      "zoom_factor": 0.9,
+      "bytes": 149456,
+      "width": 1016,
+      "height": 762
+    },
+    {
+      "slug": "chicken-sajji",
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Sajji._A_culture_itself.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+      "content_type": "image/jpeg",
+      "bytes": 135222,
+      "width": 880,
+      "height": 660
+    },
+    {
+      "slug": "daal-chawal",
+      "action": "replace-commons",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/7/79/C8-DPPxXsAEeCOy.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+      "content_type": "image/jpeg",
+      "bytes": 116606,
+      "width": 1104,
+      "height": 828
+    },
+    {
+      "slug": "halwa-puri",
+      "action": "replace-commons",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Halwa_Puri%2C_a_traditional_food_made_in_Walled_City_of_Lahore.jpg/1920px-Halwa_Puri%2C_a_traditional_food_made_in_Walled_City_of_Lahore.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "bytes": 262924,
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "slug": "kabli-pulao",
+      "action": "zoom-existing",
+      "zoom_factor": 0.86,
+      "bytes": 216526,
+      "width": 1160,
+      "height": 870
+    },
+    {
+      "slug": "kashmiri-chai",
+      "action": "replace-commons",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Noon_Chai.jpg/1920px-Noon_Chai.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "bytes": 252032,
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "slug": "lahori-chargha",
+      "action": "zoom-existing",
+      "zoom_factor": 0.88,
+      "bytes": 141802,
+      "width": 992,
+      "height": 744
+    },
+    {
+      "slug": "mutton-karahi",
+      "action": "zoom-existing",
+      "zoom_factor": 0.9,
+      "bytes": 258524,
+      "width": 1016,
+      "height": 762
+    },
+    {
+      "slug": "pakistani-samosa",
+      "action": "user-photo",
+      "bytes": 83298,
+      "width": 920,
+      "height": 690
+    },
+    {
+      "slug": "paya",
+      "action": "replace-commons",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Siri_Payey_%28Head_and_feet_curry_of_Goat%29%2C_a_traditional_breakfast_food_of_Pakistan.jpg/1920px-Siri_Payey_%28Head_and_feet_curry_of_Goat%29%2C_a_traditional_breakfast_food_of_Pakistan.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "bytes": 211232,
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "slug": "reshmi-kabab",
+      "action": "zoom-existing",
+      "zoom_factor": 0.9,
+      "bytes": 134134,
+      "width": 1016,
+      "height": 762
+    },
+    {
+      "slug": "white-chicken-karahi",
+      "action": "zoom-existing",
+      "zoom_factor": 0.9,
+      "bytes": 130430,
+      "width": 1016,
+      "height": 762
+    }
+  ]
+}
