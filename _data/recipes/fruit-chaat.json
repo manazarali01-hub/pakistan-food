@@ -4,7 +4,7 @@
   "category": "Snacks",
   "time": "15 min",
   "serves": 4,
-  "image": "assets/recipe-images/fruit-chaat.webp",
+  "image": "assets/recipe-images/fruit-chaat-v2.webp",
   "description": "Fresh Pakistani fruit chaat with apple, banana, orange, grapes and guava, gently tossed with citrus and chaat masala.",
   "ingredients": [
     "2 apples",
@@ -28,8 +28,8 @@
   "prep_time_iso": "PT15M",
   "total_time_iso": "PT15M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani fruit chaat with apple, banana, orange, grapes and guava tossed with citrus and chaat masala",
-  "image_caption": "Fresh mixed fruit chaat seasoned lightly with citrus and chaat masala.",
+  "image_alt": "Fresh mixed fruit chaat with colorful fruit pieces and crunchy dry fruits",
+  "image_caption": "Fresh mixed fruit chaat with colorful fruit pieces and a crunchy dry-fruit topping.",
   "technique": "Cut firmer fruits first and banana last, then add citrus promptly to exposed apple and banana surfaces. Season gently: ripe fruit should still taste like fruit rather than a bowl dominated by chaat masala.",
   "doneness_cues": [
     "All fruit should be ripe enough to eat but firm enough to hold its shape when tossed.",
@@ -67,8 +67,10 @@
       "answer": "Not always. Taste the fruit first; ripe seasonal fruit can be sweet enough without added sugar."
     }
   ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Fruit_Chaat.jpg",
-  "image_author": "Delhifoodwalks",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Indian_Fruit_Chaat.jpg",
+  "image_author": "Nami Verma",
   "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "image_creator": "Nami Verma",
+  "image_source_label": "Wikimedia Commons"
 }

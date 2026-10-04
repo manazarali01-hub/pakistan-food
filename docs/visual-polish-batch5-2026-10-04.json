@@ -1,0 +1,44 @@
+{
+  "policy": "Real openly licensed food photography only.",
+  "cache_version": "20261004-final9",
+  "changed": [
+    "bun-kabab",
+    "chana-chaat",
+    "fruit-chaat",
+    "chicken-shawarma"
+  ],
+  "results": [
+    {
+      "slug": "bun-kabab",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Bun_Kabab.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 88548
+    },
+    {
+      "slug": "chana-chaat",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Healthy_Channa_Special.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 184078
+    },
+    {
+      "slug": "fruit-chaat",
+      "resolved": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Indian_Fruit_Chaat.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 100364
+    },
+    {
+      "slug": "chicken-shawarma",
+      "resolved": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Chicken_Shawarma.jpg/1920px-Chicken_Shawarma.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "content_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "bytes": 157768
+    }
+  ]
+}
