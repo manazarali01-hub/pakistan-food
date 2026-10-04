@@ -114,6 +114,35 @@ def fetch(path: str) -> tuple[int, str, str]:
             time.sleep(DELAY_SECONDS)
     raise SystemExit(f"Live fetch failed after {ATTEMPTS} attempts: {url}: {last_error}")
 
+def fetch_binary(path: str) -> tuple[int, str, bytes, str]:
+    url = BASE + path
+    last_error: Exception | None = None
+    for attempt in range(1, ATTEMPTS + 1):
+        try:
+            req = Request(
+                url,
+                headers={
+                    "User-Agent": USER_AGENT,
+                    "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                    "Cache-Control": "no-cache",
+                },
+            )
+            with urlopen(req, timeout=20) as response:
+                body = response.read()
+                status = int(getattr(response, "status", 200))
+                final_url = response.geturl()
+                content_type = response.headers.get("Content-Type", "")
+                if status == 200:
+                    return status, final_url, body, content_type
+                last_error = RuntimeError(f"HTTP {status} for {url}")
+        except (HTTPError, URLError, TimeoutError, OSError) as exc:
+            last_error = exc
+        if attempt < ATTEMPTS:
+            print(f"Retry {attempt}/{ATTEMPTS - 1} for {url}: {last_error}")
+            time.sleep(DELAY_SECONDS)
+    raise SystemExit(f"Live image fetch failed after {ATTEMPTS} attempts: {url}: {last_error}")
+
+
 def require(path: str, *needles: str) -> str:
     status, final_url, body = fetch(path)
     if status != 200:
@@ -137,7 +166,7 @@ if "{{ dish.name }}" in home:
 halwa = require(
     "/recipes/halwa-puri.html",
     "Halwa Puri Recipe",
-    "https://live.staticflickr.com/4546/38452599836_a1031bd01d_k.jpg",
+    "assets/recipe-images/halwa-puri.webp",
     "Umair Abbasi",
     "Flickr",
     "CC BY-SA 2.0",
@@ -147,6 +176,41 @@ if '"@type": "Recipe"' not in halwa and '"@type":"Recipe"' not in halwa:
     raise SystemExit("/recipes/halwa-puri.html: Recipe structured data marker missing")
 if "noindex" in re.search(r'<meta[^>]+name=["\']robots["\'][^>]*>', halwa, re.I).group(0).lower() if re.search(r'<meta[^>]+name=["\']robots["\'][^>]*>', halwa, re.I) else True:
     raise SystemExit("/recipes/halwa-puri.html: expected an indexable robots meta tag")
+
+
+recipe_dir = Path("_data/recipes")
+recipe_images = []
+external_recipe_images = []
+for recipe_file in sorted(recipe_dir.glob("*.json")):
+    recipe_data = json.loads(recipe_file.read_text(encoding="utf-8"))
+    image = str(recipe_data.get("image") or "").strip()
+    if image.startswith(("http://", "https://")):
+        external_recipe_images.append((recipe_file.stem, image))
+    elif image:
+        recipe_images.append((recipe_file.stem, "/" + image.lstrip("/")))
+
+if external_recipe_images:
+    raise SystemExit(
+        "External recipe image URLs remain after localization: "
+        + ", ".join(f"{slug}={url}" for slug, url in external_recipe_images)
+    )
+
+if len(recipe_images) != 66:
+    raise SystemExit(f"Expected 66 local recipe images, found {len(recipe_images)}")
+
+for slug, image_path in recipe_images:
+    status, final_url, body, content_type = fetch_binary(image_path)
+    if status != 200:
+        raise SystemExit(f"{slug}: {image_path} expected HTTP 200, got {status}")
+    if final_url.rstrip("/") != (BASE + image_path).rstrip("/"):
+        if not final_url.startswith(BASE + "/"):
+            raise SystemExit(f"{slug}: unexpected image redirect target {final_url}")
+    if not content_type.lower().startswith("image/"):
+        raise SystemExit(f"{slug}: {image_path} returned non-image content type {content_type!r}")
+    if len(body) < 1024:
+        raise SystemExit(f"{slug}: {image_path} is suspiciously small ({len(body)} bytes)")
+
+print(f"OK live recipe image assets ({len(recipe_images)} local images, 0 external URLs)")
 
 ads = require("/ads.txt", "pub-4531216214099892")
 ads_lines = [line.strip() for line in ads.splitlines() if line.strip()]
