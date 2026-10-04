@@ -1331,3 +1331,494 @@ body:not(.dark) main img {
   padding-block: 4px;
 }
 /* END accessible guide tap targets */
+
+
+/* =========================================================
+   FINAL IVORY HOMEPAGE POLISH — 2026-10-05
+   Hero composition, recipe-card depth and typography rhythm.
+========================================================= */
+
+/* Editorial typography rhythm */
+body:not(.dark) main > .section {
+  padding-block: clamp(72px, 8vw, 112px);
+}
+body:not(.dark) .section-heading {
+  max-width: 790px;
+  margin-bottom: clamp(34px, 4.5vw, 54px);
+}
+body:not(.dark) .section-heading > span,
+body:not(.dark) .section-label {
+  display: inline-block;
+  font-size: .76rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+body:not(.dark) .section-heading h2 {
+  margin: 11px 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 4.4vw, 3.65rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+body:not(.dark) .section-heading p {
+  max-width: 690px;
+  margin-inline: auto;
+  color: var(--muted);
+  font-size: clamp(.98rem, 1.3vw, 1.08rem);
+  line-height: 1.75;
+}
+body:not(.dark) .featured-heading {
+  margin-bottom: clamp(30px, 4vw, 46px);
+}
+
+/* Hero: let the food breathe while giving copy a premium ivory glass surface. */
+body:not(.dark) .hero {
+  min-height: min(735px, 92svh);
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(248,241,223,.48) 0%,
+      rgba(248,241,223,.30) 36%,
+      rgba(248,241,223,.10) 62%,
+      rgba(248,241,223,.02) 100%
+    ),
+    url("/assets/recipe-images/chicken-biryani-v2.webp");
+  background-size: cover;
+  background-position: 68% center;
+}
+body:not(.dark) .hero-content {
+  position: relative;
+  width: min(760px, 88%);
+  max-width: 760px;
+  margin: 86px auto 44px max(4%, calc((100vw - 1180px) / 2));
+  padding: clamp(32px, 4.4vw, 50px);
+  border: 1px solid rgba(223,208,180,.88);
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(255,253,247,.94), rgba(248,241,223,.84));
+  box-shadow:
+    0 28px 70px rgba(91,69,34,.16),
+    inset 0 1px 0 rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+}
+body:not(.dark) .hero-small {
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 7px 11px;
+  border: 1px solid rgba(11,90,54,.16);
+  border-radius: 999px;
+  background: rgba(11,90,54,.065);
+  color: var(--primary);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .12em;
+  line-height: 1.25;
+  text-shadow: none;
+}
+body:not(.dark) .hero h1 {
+  max-width: 680px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 6.3vw, 5.45rem);
+  font-weight: 700;
+  line-height: .99;
+  letter-spacing: -.038em;
+  text-wrap: balance;
+  text-shadow: none;
+}
+body:not(.dark) .hero h1 span {
+  display: inline-block;
+  margin-top: 7px;
+  color: var(--primary);
+  text-decoration-thickness: .055em;
+  text-underline-offset: .13em;
+}
+body:not(.dark) .hero p {
+  max-width: 630px;
+  margin-top: 22px;
+  color: #5f5546;
+  font-size: clamp(1rem, 1.45vw, 1.13rem);
+  line-height: 1.72;
+  text-shadow: none;
+}
+body:not(.dark) .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 27px;
+}
+body:not(.dark) .hero .btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 21px;
+  border-radius: 999px;
+  font-size: .91rem;
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+body:not(.dark) .hero .btn-primary {
+  box-shadow: 0 12px 24px rgba(11,90,54,.17);
+}
+body:not(.dark) .hero .btn-outline {
+  background: rgba(255,253,247,.76);
+  border-color: rgba(11,90,54,.22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+body:not(.dark) .hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 9px;
+  margin-top: 31px;
+  padding-top: 0;
+  border-top: 0;
+}
+body:not(.dark) .hero-stats > div {
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid rgba(223,208,180,.86);
+  border-radius: 15px;
+  background: rgba(255,250,240,.70);
+}
+body:not(.dark) .hero-stats strong {
+  display: block;
+  color: var(--primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  line-height: 1.05;
+}
+body:not(.dark) .hero-stats span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .035em;
+}
+
+/* Featured / popular cards use the same visual language. */
+body:not(.dark) .featured-grid {
+  gap: clamp(18px, 2vw, 25px);
+}
+body:not(.dark) .featured-card,
+body:not(.dark) .popular-recipe-card {
+  border-radius: 24px;
+  box-shadow:
+    0 14px 34px rgba(91,69,34,.085),
+    inset 0 1px 0 rgba(255,255,255,.78);
+}
+body:not(.dark) .featured-card:hover,
+body:not(.dark) .popular-recipe-card:hover {
+  transform: translateY(-5px);
+  border-color: #cdb990 !important;
+  box-shadow: 0 23px 48px rgba(91,69,34,.14) !important;
+}
+body:not(.dark) .featured-card img,
+body:not(.dark) .popular-recipe-card img {
+  transition: transform .35s ease, filter .25s ease;
+}
+body:not(.dark) .featured-card:hover img,
+body:not(.dark) .popular-recipe-card:hover img {
+  transform: scale(1.025);
+}
+body:not(.dark) .featured-card-content {
+  gap: 11px;
+  padding: clamp(21px, 2.5vw, 27px);
+}
+body:not(.dark) .featured-kicker,
+body:not(.dark) .popular-recipe-card small:first-child {
+  font-size: .73rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+body:not(.dark) .featured-card-content strong {
+  font-size: clamp(1.48rem, 2vw, 1.85rem);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+}
+body:not(.dark) .featured-card-content > span:nth-of-type(2) {
+  font-size: .94rem;
+  line-height: 1.65;
+}
+body:not(.dark) .featured-arrow {
+  padding-top: 7px;
+  font-size: .9rem;
+}
+body:not(.dark) .popular-recipe-card span {
+  gap: 8px;
+  padding: 18px 19px 20px;
+}
+body:not(.dark) .popular-recipe-card strong {
+  font-size: 1.24rem;
+  line-height: 1.2;
+  letter-spacing: -.012em;
+}
+body:not(.dark) .popular-recipe-card small:last-child {
+  line-height: 1.55;
+}
+
+/* Main recipe collection cards: equal height, cleaner metadata and stronger hierarchy. */
+body:not(.dark) .recipe-grid {
+  align-items: stretch;
+  gap: clamp(18px, 2.3vw, 27px);
+}
+body:not(.dark) .recipe-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  box-shadow:
+    0 13px 32px rgba(91,69,34,.075),
+    inset 0 1px 0 rgba(255,255,255,.72);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+body:not(.dark) .recipe-card:hover {
+  transform: translateY(-5px);
+  border-color: #cdb990 !important;
+  box-shadow: 0 24px 48px rgba(91,69,34,.14) !important;
+}
+body:not(.dark) .recipe-image {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #eee2c9;
+}
+body:not(.dark) .recipe-image::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 28%;
+  background: linear-gradient(transparent, rgba(48,41,30,.08));
+  pointer-events: none;
+}
+body:not(.dark) .recipe-image img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.001);
+  transition: transform .38s ease, filter .25s ease;
+}
+body:not(.dark) .recipe-card:hover .recipe-image img {
+  transform: scale(1.035);
+}
+body:not(.dark) .recipe-badge {
+  top: 14px;
+  left: 14px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255,255,255,.42);
+  box-shadow: 0 6px 18px rgba(11,90,54,.16);
+  font-size: .66rem;
+  letter-spacing: .065em;
+  text-transform: uppercase;
+}
+body:not(.dark) .favorite-btn {
+  top: 13px;
+  right: 13px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(223,208,180,.84);
+  background: rgba(255,253,247,.92);
+  backdrop-filter: blur(8px);
+}
+body:not(.dark) .recipe-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 21px 22px 20px;
+}
+body:not(.dark) .recipe-meta {
+  justify-content: flex-start;
+  gap: 7px;
+  margin-bottom: 13px;
+}
+body:not(.dark) .recipe-time,
+body:not(.dark) .recipe-serves {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: #6d614f;
+  font-size: .7rem;
+  font-weight: 700;
+}
+body:not(.dark) .recipe-body h3 {
+  margin: 0 0 3px;
+  font-size: clamp(1.42rem, 2.05vw, 1.74rem);
+  line-height: 1.12;
+  letter-spacing: -.018em;
+}
+body:not(.dark) .recipe-title-link {
+  min-height: 0;
+}
+body:not(.dark) .recipe-name-urdu {
+  margin: 2px 0 7px;
+  font-size: .96rem;
+  line-height: 1.65;
+}
+body:not(.dark) .recipe-body > p {
+  display: -webkit-box;
+  min-height: 4.65em;
+  margin: 6px 0 17px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: .89rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+body:not(.dark) .recipe-bottom {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(223,208,180,.72);
+}
+body:not(.dark) .recipe-bottom .view-recipe,
+body:not(.dark) .recipe-bottom .full-recipe {
+  min-height: 40px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 800;
+}
+body:not(.dark) .recipe-bottom .view-recipe {
+  background: rgba(11,90,54,.075);
+  color: var(--primary);
+}
+body:not(.dark) .recipe-bottom .view-recipe:hover {
+  background: rgba(11,90,54,.12);
+}
+body:not(.dark) .recipe-bottom .full-recipe {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Category tiles inherit the typography rhythm without becoming visually heavy. */
+body:not(.dark) .category-grid {
+  gap: clamp(11px, 1.7vw, 17px);
+}
+body:not(.dark) .category-box {
+  min-height: 176px;
+  padding-inline: 12px;
+  border-radius: 20px;
+}
+body:not(.dark) .category-box h3 {
+  margin-top: 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.28rem;
+  line-height: 1.15;
+}
+body:not(.dark) .category-box p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+/* Mobile keeps the premium treatment but removes unnecessary glass weight. */
+@media (max-width: 700px) {
+  body:not(.dark) main > .section {
+    padding-block: clamp(58px, 12vw, 78px);
+  }
+  body:not(.dark) .section-heading {
+    margin-bottom: 32px;
+  }
+  body:not(.dark) .hero {
+    min-height: auto;
+    padding: 92px 0 34px;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(248,241,223,.16) 0%,
+        rgba(248,241,223,.24) 46%,
+        rgba(248,241,223,.52) 100%
+      ),
+      url("/assets/recipe-images/chicken-biryani-v2.webp");
+    background-position: 60% center;
+  }
+  body:not(.dark) .hero-content {
+    width: min(92%, 680px);
+    margin: 0 auto;
+    padding: 27px 22px 24px;
+    border-radius: 24px;
+    background: rgba(255,253,247,.91);
+    backdrop-filter: blur(8px);
+  }
+  body:not(.dark) .hero h1 {
+    font-size: clamp(2.65rem, 11.8vw, 4rem);
+    line-height: 1.01;
+  }
+  body:not(.dark) .hero p {
+    margin-top: 18px;
+    font-size: .98rem;
+    line-height: 1.65;
+  }
+  body:not(.dark) .hero-buttons {
+    margin-top: 22px;
+  }
+  body:not(.dark) .hero .btn {
+    flex: 1 1 180px;
+    min-height: 46px;
+  }
+  body:not(.dark) .hero-stats {
+    gap: 7px;
+    margin-top: 24px;
+  }
+  body:not(.dark) .hero-stats > div {
+    padding: 10px 8px;
+    text-align: center;
+  }
+  body:not(.dark) .hero-stats strong {
+    font-size: 1.22rem;
+  }
+  body:not(.dark) .recipe-body {
+    padding: 20px 19px 18px;
+  }
+}
+@media (max-width: 420px) {
+  body:not(.dark) .hero {
+    padding-top: 88px;
+  }
+  body:not(.dark) .hero-content {
+    width: 94%;
+    padding: 24px 18px 21px;
+  }
+  body:not(.dark) .hero-small {
+    font-size: .65rem;
+    letter-spacing: .09em;
+  }
+  body:not(.dark) .hero h1 {
+    font-size: clamp(2.35rem, 12vw, 3.25rem);
+  }
+  body:not(.dark) .hero-stats > div {
+    border-radius: 13px;
+  }
+  body:not(.dark) .recipe-grid {
+    gap: 18px;
+  }
+}
+
+/* Dark mode keeps the same spacing/card improvements without ivory overrides. */
+body.dark .recipe-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 24px;
+}
+body.dark .recipe-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+body.dark .recipe-bottom {
+  margin-top: auto;
+}
+
+/* END FINAL IVORY HOMEPAGE POLISH */
