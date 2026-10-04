@@ -1332,6 +1332,39 @@ body:not(.dark) main img {
 }
 /* END accessible guide tap targets */
 
+/* LIGHT GREEN CONSISTENCY POLISH — 2026-10-05 */
+body:not(.dark) .policy-brand {
+  color: var(--primary) !important;
+}
+body:not(.dark) .footer-brand p,
+body:not(.dark) .footer-bottom {
+  color: var(--muted) !important;
+}
+body:not(.dark) .footer-links h3 {
+  color: var(--text) !important;
+}
+body:not(.dark) .footer-bottom {
+  border-top-color: var(--border) !important;
+}
+body:not(.dark) .footer .logo,
+body:not(.dark) .policy-header .policy-brand {
+  color: var(--text) !important;
+}
+body:not(.dark) .footer .logo strong,
+body:not(.dark) .policy-header .policy-brand strong {
+  color: var(--primary) !important;
+}
+body:not(.dark) .back-top {
+  background: var(--primary) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 24px rgba(47,125,87,.18);
+}
+body:not(.dark) .back-top:hover,
+body:not(.dark) .back-top:focus-visible {
+  background: var(--primary-dark) !important;
+}
+/* END LIGHT GREEN CONSISTENCY POLISH */
+
 
 /* =========================================================
    FINAL IVORY HOMEPAGE POLISH — 2026-10-05
