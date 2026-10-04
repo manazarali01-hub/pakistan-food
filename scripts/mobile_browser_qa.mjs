@@ -157,22 +157,26 @@ async function testHomeInteractions(width) {
   await page.waitForSelector(".recipe-card", { timeout: 15000 });
 
   const recipeImageShape = await page.locator(".recipe-card img").evaluateAll(imgs => {
-    const issues = imgs
+    const loaded = imgs
       .filter(img => img.complete && img.naturalWidth > 0 && img.naturalHeight > 0)
       .map(img => ({
-        src: img.getAttribute("src"),
+        src: img.getAttribute("src") || "",
         ratio: img.naturalWidth / img.naturalHeight,
         width: img.naturalWidth,
         height: img.naturalHeight,
-      }))
-      .filter(item => Math.abs(item.ratio - (4 / 3)) > 0.015);
-    return { count: imgs.length, issues: issues.slice(0, 12) };
+      }));
+    const issues = loaded.filter(item => Math.abs(item.ratio - (4 / 3)) > 0.015);
+    const unversioned = loaded.filter(item => /^assets\/.+\.webp(?:$|\?)/.test(item.src) && !/[?&]v=/.test(item.src));
+    return { count: imgs.length, issues: issues.slice(0, 12), unversioned: unversioned.slice(0, 12) };
   });
   if (recipeImageShape.count < 60) {
     failures.push(`home @ ${width}px: expected at least 60 recipe-card images, found ${recipeImageShape.count}`);
   }
   if (recipeImageShape.issues.length) {
     failures.push(`home @ ${width}px: recipe images are not normalized to 4:3: ${JSON.stringify(recipeImageShape.issues)}`);
+  }
+  if (recipeImageShape.unversioned.length) {
+    failures.push(`home @ ${width}px: recipe images missing cache-busting version: ${JSON.stringify(recipeImageShape.unversioned)}`);
   }
 
   if (width <= 430) {
