@@ -25,6 +25,18 @@ GENERIC_PHRASES = (
     "practical pakistani cooking guide with direct answers and bilingual support",
     "adjust one variable",
     "add sweetness gradually",
+    "this step has the strongest effect on the final result",
+    "this is the first practical factor to control",
+    "this factor directly changes the final texture or flavour",
+    "check this factor first because it has a direct effect on texture or flavour",
+    "this is the first thing to check because it directly changes",
+    "small, even distribution works better than concentrating one ingredient",
+    "protect the rice or bread structure while it is hot",
+    "use aroma, visible moisture and texture to decide when to continue",
+    "if a correction is needed, make it gradually",
+    "finish with a short rest or prompt serving as appropriate",
+    "keep it deliberate rather than rushing it",
+    "it sets up the ingredient for the rest of the method",
 )
 
 def strip_visible(html: str) -> str:
