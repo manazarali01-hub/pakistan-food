@@ -50,8 +50,13 @@
             <div class="featured-grid">
               {% assign featured_keys = 'chicken-biryani,chicken-karahi,mango-lassi' | split: ',' %}
               {% for key in featured_keys %}{% assign dish = site.data.recipes[key] %}
+              {% assign card_image_small = dish.image | replace: 'width=1280', 'width=640' | replace: 'width=960', 'width=640' %}
               <a class="featured-card" href="recipes/{{ key }}.html">
-                <img src="{{ dish.image }}" alt="{{ dish.name }}" width="900" height="675" loading="lazy" decoding="async">
+                {% if dish.image contains 'commons.wikimedia.org' %}
+                <img src="{{ dish.image }}" srcset="{{ card_image_small }} 640w, {{ dish.image }} 1280w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async">
+                {% else %}
+                <img src="{{ dish.image }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async">
+                {% endif %}
                 <span class="featured-card-content"><span class="featured-kicker">{{ dish.category }} · {{ dish.time }}</span><strong>{{ dish.name }}</strong><span>{{ dish.description }}</span><span class="featured-arrow" aria-hidden="true">View recipe →</span></span>
               </a>
               {% endfor %}
@@ -64,8 +69,13 @@
             <div class="popular-recipe-grid">
               {% assign popular_keys = 'chicken-biryani,chicken-karahi,beef-nihari,haleem,seekh-kabab,pakistani-samosa,jalebi,rice-kheer' | split: ',' %}
               {% for key in popular_keys %}{% assign dish = site.data.recipes[key] %}
+              {% assign popular_image_small = dish.image | replace: 'width=1280', 'width=640' | replace: 'width=960', 'width=640' %}
               <a class="popular-recipe-card" href="recipes/{{ key }}.html">
+                {% if dish.image contains 'commons.wikimedia.org' %}
+                <img src="{{ dish.image }}" srcset="{{ popular_image_small }} 640w, {{ dish.image }} 1280w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async">
+                {% else %}
                 <img src="{{ dish.image }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async">
+                {% endif %}
                 <span><small>{{ dish.category }} · {{ dish.time }}</small><strong>{{ dish.name }}</strong><small>{{ dish.description | truncate: 115 }}</small></span>
               </a>
               {% endfor %}
