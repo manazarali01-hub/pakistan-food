@@ -1313,6 +1313,7 @@ body:not(.dark) main img {
   color:var(--muted);font-size:.88rem;
 }
 .guide-trustline a{min-height:32px;display:inline-flex;align-items:center;padding:5px 2px;color:var(--primary);font-weight:700}
+.crumbs a{min-height:32px;display:inline-flex;align-items:center;padding:5px 2px}
 @media(max-width:700px){
   .guide-site-nav{align-items:flex-start;flex-direction:column;padding:12px 0}
   .guide-site-links{gap:8px 14px}
