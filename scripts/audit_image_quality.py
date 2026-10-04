@@ -71,8 +71,17 @@ for r in external:
     if r["source"]:
         data = json.loads((RECIPES / f"{r['slug']}.json").read_text(encoding="utf-8"))
         source = str(data.get("image_source", ""))
-        if "commons.wikimedia.org/wiki/File:" not in source:
-            errors.append(f"{r['slug']}: image_source must point to the Commons file page")
+        image = str(data.get("image", ""))
+        if "commons.wikimedia.org" in image:
+            if "commons.wikimedia.org/wiki/File:" not in source:
+                errors.append(f"{r['slug']}: Wikimedia image_source must point to the Commons file page")
+        elif "staticflickr.com" in image:
+            if "flickr.com/photos/" not in source:
+                errors.append(f"{r['slug']}: Flickr image_source must point to the Flickr photo page")
+            if not str(data.get("image_source_label", "")).strip():
+                errors.append(f"{r['slug']}: non-Wikimedia external image needs image_source_label")
+        else:
+            errors.append(f"{r['slug']}: external image host is not on the audited allowlist")
 
 if errors:
     raise SystemExit("\n".join(errors))
