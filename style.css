@@ -1454,17 +1454,17 @@ button {
 body:not(.dark) {
   --bg: #f8f1df;
   --surface: #fffaf0;
-  --surface-2: #f3ead5;
+  --surface-2: #f1f6e9;
   --text: #30291e;
   --muted: #746956;
-  --border: #dfd0b4;
+  --border: #d8e1c8;
   --primary: #2f7d57;
   --primary-dark: #245f43;
   --secondary: #b68b45;
   --shadow: 0 16px 42px rgba(91,69,34,.10);
   background:
-    radial-gradient(circle at 12% 8%, rgba(255,255,255,.72), transparent 34%),
-    linear-gradient(180deg,#fffaf0 0%,#f8f1df 58%,#f4ead4 100%);
+    radial-gradient(circle at 12% 8%, rgba(137,200,98,.16), transparent 34%),
+    linear-gradient(180deg,#fffaf0 0%,#f7f3df 58%,#f0f3df 100%);
   color: var(--text);
 }
 
