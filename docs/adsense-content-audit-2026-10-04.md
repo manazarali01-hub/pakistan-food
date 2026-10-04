@@ -1,7 +1,7 @@
 # Pakistan Food — AdSense Low-Value Content Recovery Audit
 
 **Audit date:** 2026-10-04  
-**Current verified state:** repository QA through PR #22 (`c1a11bf7`); custom-domain live smoke was previously verified on main after PR #20 (`c4496aaf`). The latest PR #22 production push still requires its own successful post-deploy smoke result before AdSense resubmission.  
+**Current verified state:** repository QA through PR #22 (`c1a11bf7`) plus a successful latest-main custom-domain deployment/smoke verification on commit `3e9bb85f` (Live Site Smoke run 37208801821; Pages deployment run 996).  
 **Main site:** https://pakistanfoodrecipes.top/  
 **Reason for recovery work:** Google AdSense — Low value content
 
@@ -191,8 +191,8 @@ Branch validation checks:
 - Process/step images are an optional future enhancement, not treated as factual Recipe-schema data unless real source images exist.
 - The 15 priority recipes received the deepest manual editorial review; automated quality gates now pass across all 66 recipes, but this does not substitute for future human taste/testing feedback.
 - Real Playwright browser QA is now verified across **42 page/viewport combinations** at 320, 360, 375, 390, 412, 430 and 768 px, with zero horizontal overflow, zero broken images and zero recorded interaction/layout failures in the tested set.
-- The current tool environment still cannot independently resolve the custom domain. The GitHub-hosted post-deploy live smoke gate introduced in PR #18 was subsequently exercised successfully on main after PR #20 (`c4496aaf`). Because PR #21 and PR #22 changed image delivery/fallback behavior after that point, the latest main commit still needs its own successful post-deploy live smoke result before the AdSense review is requested.
+- The latest-main custom-domain gate is now verified. Live Site Smoke run **37208801821** completed successfully for commit `3e9bb85f` after matching Pages deployment run **996**. The live checks passed for `/`, `/recipes/halwa-puri.html`, `ads.txt`, `robots.txt`, `sitemap.xml`, `sitemap-v2.xml`, the **223-URL canonical sitemap set**, and the About, Contact, Privacy, Editorial Policy, Disclaimer, Terms and Image Credits pages.
 
 ## Resubmission rule
 
-Do not request a new AdSense review merely because repository CI is green. First require a successful post-deploy live smoke run on the **latest main commit** on the custom domain. Search Console-dependent destructive URL cleanup remains deferred; it is not a prerequisite to keep the 78 consolidated URLs safely noindexed. Even after all technical gates pass, AdSense approval itself cannot be guaranteed and must be confirmed by Google's review.
+The technical resubmission gate is now satisfied: repository quality checks, mobile browser QA, deployment validation and latest-main custom-domain smoke verification have passed. A new AdSense review may now be requested. Search Console-dependent destructive URL cleanup remains deferred; it is not a prerequisite while the 78 consolidated URLs remain safely noindexed and excluded from the sitemap. AdSense approval itself cannot be guaranteed and must be confirmed by Google's review.
