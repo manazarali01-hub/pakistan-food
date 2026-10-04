@@ -27,5 +27,46 @@
     "Use a heavy pot and stir frequently, especially near the end, because milk can scorch easily.",
     "Kheer thickens further as it cools, so stop cooking while it is slightly looser than your final desired consistency."
   ],
-  "storage": "Cool leftover kheer promptly, keep it covered and refrigerated, and discard it if it has been left unrefrigerated for an unsafe length of time."
+  "storage": "Cool leftover kheer promptly, keep it covered and refrigerated, and discard it if it has been left unrefrigerated for an unsafe length of time.",
+  "prep_time": "10 min",
+  "cook_time": "65 min",
+  "prep_time_iso": "PT10M",
+  "cook_time_iso": "PT1H5M",
+  "total_time_iso": "PT1H15M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani rice kheer with creamy reduced milk, soft basmati rice, cardamom and chopped nuts",
+  "image_caption": "Creamy rice kheer slowly reduced until the milk coats tender rice while remaining spoonable after cooling.",
+  "technique": "Kheer thickens from both milk reduction and rice starch. Keep the simmer gentle, stir more often as it thickens, and stop while it is slightly looser than your final serving texture because cooling makes it firmer.",
+  "doneness_cues": [
+    "Rice grains should be very tender and easy to press between the fingers.",
+    "The milk should look creamy and coat the spoon without a raw watery layer.",
+    "The base of the pot should stay clean when scraped; browned stuck milk can flavour the whole batch.",
+    "Hot kheer should be a little looser than the texture you want after chilling."
+  ],
+  "mistakes": [
+    "Using strong heat to speed reduction and scorching milk solids on the bottom.",
+    "Stopping because the clock is finished while the rice is still firm.",
+    "Reducing to the final cold thickness while the kheer is still hot.",
+    "Adding a large amount of sugar before judging how much the milk will reduce."
+  ],
+  "substitutions": [
+    "Full-fat milk gives the richest body; lower-fat milk usually needs more careful reduction and will taste lighter.",
+    "Basmati adds aroma, but another rice can work if you adjust cooking time and understand its starch level.",
+    "Nuts are optional and can be omitted for allergy or preference; keep cardamom measured so it does not dominate."
+  ],
+  "reheating": "Kheer thickens in the refrigerator. Reheat gently with a splash of milk, stirring from the base until smooth, or serve chilled if that is your preference.",
+  "faqs": [
+    {
+      "question": "Why is my kheer watery?",
+      "answer": "It may need more gentle reduction, the rice may not have released enough starch, or too much liquid was used. Remember that kheer also thickens while cooling."
+    },
+    {
+      "question": "Why is kheer grainy?",
+      "answer": "Possible causes include scorched milk solids, poorly dissolved sugar or rice that was not cooked evenly. Keep the simmer gentle and stir from the base."
+    },
+    {
+      "question": "When should I stop cooking kheer?",
+      "answer": "Stop when the rice is fully tender and the hot milk is creamy but still a little looser than the texture you want after cooling."
+    }
+  ]
 }
