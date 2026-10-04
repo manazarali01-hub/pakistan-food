@@ -156,7 +156,7 @@ function escapeHtml(value) {
 }
 function safeImageUrl(value) {
     const url = String(value || "").trim().replace(/^\//, "");
-    return /^(assets\/[a-zA-Z0-9._/?=&%-]+|https:\/\/(?:commons\.wikimedia\.org|images\.weserv\.nl)\/[^"<>]*)$/.test(url)
+    return /^(assets\/[a-zA-Z0-9._/?=&%-]+|https:\/\/commons\.wikimedia\.org\/[^"<>]*)$/.test(url)
         ? url : "assets/recipe-image-unavailable.svg";
 }
 function recipeImageAlt(recipe) {
@@ -167,9 +167,6 @@ function sizedRecipeImage(recipe, width) {
     if (/^https:\/\/commons\.wikimedia\.org\//.test(url)) {
         if (/([?&]width=)\d+/.test(url)) return url.replace(/([?&]width=)\d+/, `$1${width}`);
         return `${url}${url.includes("?") ? "&" : "?"}width=${width}`;
-    }
-    if (/^https:\/\/images\.weserv\.nl\//.test(url) && /([?&]w=)\d+/.test(url)) {
-        return url.replace(/([?&]w=)\d+/, `$1${width}`);
     }
     return url;
 }
