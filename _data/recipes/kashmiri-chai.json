@@ -28,5 +28,46 @@
     "The pink colour depends on suitable Kashmiri green tea, baking soda and thorough aeration; ordinary black tea will not give the same result.",
     "Do not add excessive baking soda, which can give the tea an unpleasant taste."
   ],
-  "storage": "Kashmiri chai is best freshly made. If you keep leftovers, cool them promptly, refrigerate covered and reheat gently only as needed."
+  "storage": "Kashmiri chai is best freshly made. If you keep leftovers, cool them promptly, refrigerate covered and reheat gently only as needed.",
+  "prep_time": "5 min",
+  "cook_time": "40 min",
+  "prep_time_iso": "PT5M",
+  "cook_time_iso": "PT40M",
+  "total_time_iso": "PT45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani pink Kashmiri chai with milk, cardamom and chopped nuts",
+  "image_caption": "Pink Kashmiri chai brewed from green tea, aerated and finished with milk, cardamom and nuts.",
+  "technique": "The pink colour comes from the tea brew chemistry and aeration before milk is added, not from simply boiling milk longer. Build a strong reddish-brown tea concentrate with the measured baking soda, aerate it, then add milk and judge the final shade.",
+  "doneness_cues": [
+    "Before milk, the reduced tea concentrate should be deep reddish-brown rather than pale green.",
+    "Repeated aeration should create a lively foamy surface and deepen the concentrate.",
+    "After milk is added, the drink should move toward a pink or rosy beige shade depending on tea and milk.",
+    "Tea aroma should remain clean; an aggressively long boil can make the cup harsh."
+  ],
+  "mistakes": [
+    "Adding milk before the tea concentrate has developed enough colour.",
+    "Using too much baking soda, which can create an unpleasant taste.",
+    "Expecting every green tea to react identically; leaf type and freshness affect colour.",
+    "Boiling the finished milky tea excessively just to chase a darker pink shade."
+  ],
+  "substitutions": [
+    "Use a green tea intended for Kashmiri/Noon chai when available; ordinary green teas can vary greatly in colour response.",
+    "Salted Noon chai and sweet Pakistani pink tea are different serving styles; season according to the version you are making.",
+    "Nuts are optional and should be added at serving so they keep their texture."
+  ],
+  "reheating": "Reheat gently just until hot. Repeated prolonged boiling after milk is added can flatten the aroma and make the tea taste harsher.",
+  "faqs": [
+    {
+      "question": "Why is my Kashmiri chai not pink?",
+      "answer": "The tea concentrate may be too weak, the aeration insufficient, the milk may have been added too early, or the tea leaves may react differently. Work on the concentrate before increasing baking soda."
+    },
+    {
+      "question": "Can I add more baking soda to force the colour?",
+      "answer": "Adding too much can spoil the taste. Use a small measured amount and improve brewing and aeration first."
+    },
+    {
+      "question": "When should milk be added?",
+      "answer": "After the tea concentrate has reduced, aerated and developed a deep reddish-brown tone. Milk reveals the final pink shade."
+    }
+  ]
 }
