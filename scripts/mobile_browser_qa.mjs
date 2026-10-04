@@ -35,6 +35,9 @@ page.on("requestfailed", request => {
 async function scrollThrough() {
   await page.evaluate(async () => {
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+    const root = document.documentElement;
+    const previousBehavior = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
     const height = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     const step = Math.max(420, Math.floor(window.innerHeight * 0.72));
     for (let y = 0; y < height; y += step) {
@@ -44,8 +47,10 @@ async function scrollThrough() {
     window.scrollTo(0, Math.max(0, height - window.innerHeight));
     await sleep(180);
     window.scrollTo(0, 0);
-    await sleep(180);
+    await sleep(80);
+    root.style.scrollBehavior = previousBehavior;
   });
+  await page.waitForFunction(() => window.scrollY === 0, null, { timeout: 1500 });
 }
 
 async function inspectLayout(label, width) {
