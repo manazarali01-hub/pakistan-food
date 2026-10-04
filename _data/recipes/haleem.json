@@ -4,7 +4,7 @@
   "category": "Beef",
   "time": "4 hrs",
   "serves": 8,
-  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Haleem.JPG?width=900",
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistani_Haleem_served_with_garnish.jpg?width=1280",
   "description": "Slow-cooked Pakistani beef haleem with wheat, barley and mixed lentils blended into a thick, cohesive texture and finished with classic fresh garnishes.",
   "ingredients": [
     "750 g beef, boneless or shank pieces",
@@ -36,8 +36,8 @@
   "cook_time_iso": "PT3H30M",
   "total_time_iso": "PT4H",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani beef haleem with smooth wheat and lentil texture, fried onions, ginger, coriander and lemon",
-  "image_caption": "Slow-cooked beef haleem blended until the grains, lentils and meat form a thick cohesive texture.",
+  "image_alt": "Pakistani haleem in a serving bowl with fried onions, lemon, ginger and fresh green garnish",
+  "image_caption": "Slow-cooked Pakistani haleem finished with classic fried onion, lemon, ginger and fresh herb garnishes.",
   "technique": "Haleem needs two textures at once: the grains and lentils must soften enough to blend into the base, while the beef should be tender enough to shred through it. Blend or mash in stages and adjust hot water gradually so the mixture stays thick but spoonable.",
   "doneness_cues": [
     "Wheat, barley and lentils should crush easily between the fingers before final blending.",
@@ -71,7 +71,8 @@
       "answer": "Once it thickens, use lower heat and scrape the base regularly with a sturdy spoon."
     }
   ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Haleem.JPG",
-  "image_author": "Miansari66",
-  "image_license": "Public domain"
+  "image_source": "https://commons.wikimedia.org/wiki/File:Pakistani_Haleem_served_with_garnish.jpg",
+  "image_author": "Halt123halt",
+  "image_license": "CC BY-SA 3.0",
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
 }
