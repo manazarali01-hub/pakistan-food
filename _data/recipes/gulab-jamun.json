@@ -31,5 +31,46 @@
     "Add milk gradually because milk-powder mixtures can become sticky quickly.",
     "Smooth, crack-free balls are less likely to split while frying."
   ],
-  "storage": "Cool leftovers appropriately and refrigerate them covered in their syrup. Warm gently for serving if desired rather than repeatedly heating the whole batch."
+  "storage": "Cool leftovers appropriately and refrigerate them covered in their syrup. Warm gently for serving if desired rather than repeatedly heating the whole batch.",
+  "prep_time": "20 min",
+  "cook_time": "30 min",
+  "prep_time_iso": "PT20M",
+  "cook_time_iso": "PT30M",
+  "total_time_iso": "PT50M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Soft Pakistani gulab jamun in cardamom sugar syrup with an even deep golden surface",
+  "image_caption": "Soft gulab jamun fried slowly for an even golden centre-to-edge cook and soaked in warm cardamom syrup.",
+  "technique": "A tender dough and slow fry matter more than speed. Mix only until the milk-powder dough comes together, smooth surface cracks gently, then fry over controlled low-to-medium heat so the centres cook before the outside becomes dark.",
+  "doneness_cues": [
+    "The dough should feel soft and smooth enough to roll without deep cracks, but not wet or sticky.",
+    "Balls should be evenly sized so they cook at the same rate.",
+    "Frying should produce gradual, even browning instead of a dark shell within the first minute.",
+    "After soaking, gulab jamun should feel soft through the centre and carry syrup inside rather than only on the surface."
+  ],
+  "mistakes": [
+    "Kneading aggressively, which can develop a tight dough and dense jamun.",
+    "Frying on high heat, creating a dark shell around an undercooked centre.",
+    "Rolling cracked balls and expecting syrup to repair the structure.",
+    "Dropping very hot fried jamun into aggressively boiling syrup, which can damage texture."
+  ],
+  "substitutions": [
+    "Different milk powders absorb moisture differently; add liquid gradually and stop when the dough is workable.",
+    "Use a neutral frying oil or a suitable oil-ghee combination according to your preference.",
+    "Rose water is optional; cardamom alone can provide a clean syrup aroma."
+  ],
+  "reheating": "Serve at room temperature or warm gently with a little syrup. Avoid boiling soaked gulab jamun because the soft structure can break.",
+  "faqs": [
+    {
+      "question": "Why are gulab jamun hard inside?",
+      "answer": "The dough may be too dry or overworked, or the oil may have been too hot. A slow even fry gives the centre time to cook."
+    },
+    {
+      "question": "Why do gulab jamun break while frying?",
+      "answer": "The dough may be too wet or weak, the balls may have cracks, or the oil temperature may be unstable. Test one ball before frying the batch."
+    },
+    {
+      "question": "Why are they not absorbing syrup?",
+      "answer": "A hard fried shell or syrup that is too concentrated can slow absorption. Fry gradually and keep the syrup pourable rather than candy-thick."
+    }
+  ]
 }
