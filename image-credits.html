@@ -40,7 +40,7 @@ layout: null
             <li>
               <a href="{{ r.image_source | default: source_url }}" rel="noopener noreferrer">{{ r.name }}</a>
               {% if r.image_author %} — {{ r.image_author }}{% endif %}
-              {% if r.image_license %} · {{ r.image_license }}{% endif %}
+              {% if r.image_license %} · {% if r.image_license_url %}<a href="{{ r.image_license_url }}" rel="noopener noreferrer">{{ r.image_license }}</a>{% else %}{{ r.image_license }}{% endif %}{% endif %}
             </li>
           {% endif %}
         {% endfor %}
