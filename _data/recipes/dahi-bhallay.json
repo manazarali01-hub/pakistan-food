@@ -23,5 +23,47 @@
     "Whisk the chilled yogurt until smooth and season lightly with salt and some roasted cumin if desired.",
     "Arrange the softened bhallay in a serving dish and cover them generously with the seasoned yogurt.",
     "Drizzle with tamarind and mint chutneys, then finish with chaat masala and roasted cumin. Chill briefly or serve once the bhallay have absorbed some yogurt."
+  ],
+  "prep_time": "25 min",
+  "cook_time": "20 min",
+  "prep_time_iso": "PT25M",
+  "cook_time_iso": "PT20M",
+  "total_time_iso": "PT45M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani dahi bhallay with soft urad-dal dumplings, chilled yogurt, tamarind chutney and chaat masala",
+  "image_caption": "Soft soaked bhallay covered with smooth chilled yogurt, tamarind chutney, mint chutney and chaat spices.",
+  "technique": "The key texture comes after frying: soak hot bhallay in warm water until the centres soften, then press out excess water very gently before yogurt. Too much pressure makes them dense or broken; too little leaves the yogurt diluted.",
+  "doneness_cues": [
+    "Fried bhallay should be cooked through before soaking, not dark outside with raw batter inside.",
+    "After soaking, a bhalla should feel soft and springy rather than hard.",
+    "Pressed bhallay should release excess water without collapsing.",
+    "Yogurt should be smooth and thick enough to coat rather than run off immediately."
+  ],
+  "mistakes": [
+    "Grinding the dal batter too thin and producing dense oily bhallay.",
+    "Frying on very high heat before the centres cook.",
+    "Squeezing soaked bhallay aggressively.",
+    "Adding watery yogurt or large quantities of chutney long before serving."
+  ],
+  "substitutions": [
+    "Use plain unsweetened yogurt and whisk it smooth; thin it only if genuinely too thick.",
+    "Tamarind and mint chutney quantities can be adjusted separately.",
+    "Roasted cumin can be increased for aroma without increasing chaat masala saltiness."
+  ],
+  "storage": "Keep soaked bhallay and yogurt refrigerated. For best appearance, add chutneys and dry spices closer to serving.",
+  "serving": "Serve chilled or cool, with tamarind and mint chutneys drizzled at the end.",
+  "faqs": [
+    {
+      "question": "Why are my bhallay hard?",
+      "answer": "The batter may be too dense, the frying heat too high, or the post-fry soak too short. Soak until the centres soften before adding yogurt."
+    },
+    {
+      "question": "Why does the yogurt become watery?",
+      "answer": "Bhallay may still hold too much soaking water or the yogurt itself may be thin. Press gently and use well-whisked thick yogurt."
+    },
+    {
+      "question": "Can dahi bhallay be made ahead?",
+      "answer": "Yes, but keep the components chilled and add chutneys and final spices closer to serving for better texture."
+    }
   ]
 }

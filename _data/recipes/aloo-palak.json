@@ -27,5 +27,48 @@
     "Add the chopped spinach in batches if necessary; it will wilt rapidly and release its own moisture, so avoid adding extra water unless the pan genuinely needs it.",
     "Cook uncovered until the potatoes are fully tender and excess spinach liquid has evaporated, stirring gently enough to keep the potato pieces intact.",
     "Taste for seasoning and serve hot with roti or paratha."
+  ],
+  "prep_time": "15 min",
+  "cook_time": "25 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT25M",
+  "total_time_iso": "PT40M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani aloo palak with tender potato cubes coated in spinach, garlic, cumin and tomato masala",
+  "image_caption": "Potatoes cooked until tender and coated with reduced spinach and tomato masala without excess water.",
+  "technique": "Give potatoes a head start in the tomato masala, then add spinach late because it wilts quickly and releases its own water. Finish uncovered so the greens coat the potatoes instead of becoming a watery spinach soup.",
+  "doneness_cues": [
+    "Potato cubes should be almost tender before spinach enters the pan.",
+    "Spinach should wilt fully but still retain a fresh green character.",
+    "Excess spinach water should evaporate before serving.",
+    "Potatoes should stay intact rather than dissolve into the greens."
+  ],
+  "mistakes": [
+    "Adding extra water when spinach is about to release plenty of its own moisture.",
+    "Cutting potato cubes very unevenly.",
+    "Over-stirring after potatoes become tender.",
+    "Covering the pan for the whole spinach stage and trapping water."
+  ],
+  "substitutions": [
+    "Baby spinach can be used but wilts faster than mature leaves.",
+    "Green chilli can be reduced without affecting structure.",
+    "If tomatoes are especially watery, cook them down further before the potatoes."
+  ],
+  "storage": "Cool promptly and refrigerate covered. Spinach colour softens during storage even when the flavour remains good.",
+  "reheating": "Reheat gently in a pan with only a small splash of water if needed.",
+  "serving": "Serve with roti, paratha or plain rice and yogurt on the side.",
+  "faqs": [
+    {
+      "question": "Why is aloo palak watery?",
+      "answer": "Spinach releases moisture and the pan may have stayed covered too long. Finish uncovered until the greens coat the potatoes."
+    },
+    {
+      "question": "Why are the potatoes breaking?",
+      "answer": "They may be overcooked or stirred too vigorously after becoming tender."
+    },
+    {
+      "question": "Should spinach be cooked before potatoes?",
+      "answer": "This method gives potatoes a head start because spinach cooks much faster."
+    }
   ]
 }

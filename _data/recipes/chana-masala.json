@@ -28,5 +28,48 @@
     "Mash a small portion of the chickpeas against the side of the pot and stir them back into the gravy for natural body without turning the whole dish into a paste.",
     "Adjust the gravy with a little more chickpea liquid if needed, then finish with garam masala and fresh coriander.",
     "Taste for salt and chilli and serve hot with roti, naan or rice."
+  ],
+  "prep_time": "15 min",
+  "cook_time": "35 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT35M",
+  "total_time_iso": "PT50M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani chana masala with tender chickpeas in thick onion tomato masala, green chilli and coriander",
+  "image_caption": "Tender chickpeas simmered in a cooked onion-tomato masala and lightly mashed for natural gravy body.",
+  "technique": "The chickpeas must already be tender before they meet the masala. Build a thick onion-tomato base first, then simmer the cooked chickpeas in it and mash only a small portion for body so the final dish still contains whole chickpeas.",
+  "doneness_cues": [
+    "Chickpeas should mash easily with a fork and have no hard centre.",
+    "Tomato masala should look cohesive rather than watery before chickpeas are added.",
+    "Gravy should cling to the beans after simmering.",
+    "Only a small percentage of chickpeas should be mashed for thickening."
+  ],
+  "mistakes": [
+    "Using undercooked chickpeas and expecting the masala simmer to tenderise them quickly.",
+    "Adding too much reserved cooking liquid at once.",
+    "Mashing most of the chickpeas and losing the intended texture.",
+    "Adding garam masala early enough that its aroma disappears."
+  ],
+  "substitutions": [
+    "Canned chickpeas work if rinsed and drained thoroughly.",
+    "Reserved chickpea cooking liquid gives better continuity than plain water but use it gradually.",
+    "Green chilli can be reduced while keeping cumin and coriander for aroma."
+  ],
+  "storage": "Cool promptly and refrigerate covered. The gravy thickens as chickpeas continue absorbing liquid.",
+  "reheating": "Reheat gently with a small splash of hot water if the gravy has become too thick.",
+  "serving": "Serve with roti, naan or rice and fresh coriander.",
+  "faqs": [
+    {
+      "question": "Why is chana masala watery?",
+      "answer": "The masala may not have reduced before chickpeas were added, or too much cooking liquid was used. Simmer uncovered and mash a small portion of beans."
+    },
+    {
+      "question": "Why are my chickpeas hard?",
+      "answer": "They were not fully tender before the masala stage. Cook dried chickpeas completely first."
+    },
+    {
+      "question": "Can I use canned chickpeas?",
+      "answer": "Yes. Rinse and drain them well, then simmer in the finished masala long enough to absorb flavour."
+    }
   ]
 }

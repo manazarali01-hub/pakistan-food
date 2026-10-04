@@ -27,5 +27,48 @@
     "Add the tomatoes, red chilli powder and green chillies and cook until the tomatoes soften into a cohesive masala.",
     "Fold the cooked dal into the masala and simmer gently until the flavours combine and the consistency is thick and creamy, stirring carefully so all the lentils do not break down.",
     "Finish with garam masala, julienned ginger and fresh coriander, then taste for salt before serving hot."
+  ],
+  "prep_time": "15 min",
+  "cook_time": "35 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT35M",
+  "total_time_iso": "PT50M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani daal mash with tender split urad lentils, tomato masala, cumin, garlic and ginger",
+  "image_caption": "Daal mash with tender lentils folded through a tomato, cumin and garlic masala and finished with ginger.",
+  "technique": "Mash dal should be tender but still show some grain structure. Simmer the soaked lentils gently and stop before they become a puree; then fold them into a separately cooked tomato masala rather than continuing a long hard boil.",
+  "doneness_cues": [
+    "Lentils should crush easily when pressed but many grains should still hold shape.",
+    "Tomato masala should be cohesive with no raw tomato water.",
+    "Finished dal should be thick and creamy enough to sit on a spoon without becoming a dry paste.",
+    "Fresh ginger at the finish should remain aromatic."
+  ],
+  "mistakes": [
+    "Over-boiling the lentils until completely broken before masala is added.",
+    "Flooding the pot with water and then reducing for a long time.",
+    "Adding raw tomato masala directly to tender dal.",
+    "Stirring aggressively once the lentils are soft."
+  ],
+  "substitutions": [
+    "Use ghee for a richer finish or neutral oil for a lighter one.",
+    "Green chilli can be adjusted independently from red chilli powder.",
+    "If the dal thickens too much, loosen with hot water in small amounts."
+  ],
+  "storage": "Cool promptly and refrigerate covered. Mash dal thickens noticeably as it stands.",
+  "reheating": "Reheat gently with a splash of hot water, stirring carefully so the lentils do not become a complete puree.",
+  "serving": "Serve with roti or naan and fresh ginger, coriander and green chilli.",
+  "faqs": [
+    {
+      "question": "Why did daal mash become mushy?",
+      "answer": "The lentils cooked too long or were stirred too aggressively after becoming tender."
+    },
+    {
+      "question": "Why is it too thick after refrigeration?",
+      "answer": "Cooked lentils continue absorbing liquid. Add a little hot water during gentle reheating."
+    },
+    {
+      "question": "Should mash dal be completely smooth?",
+      "answer": "This version keeps some visible grain texture rather than blending it into a puree."
+    }
   ]
 }

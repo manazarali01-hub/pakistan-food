@@ -32,5 +32,47 @@
     "If the batter becomes watery after the onions release moisture, mix in a little more gram flour.",
     "Avoid excessively hot oil, which can brown the outside while leaving the centre undercooked."
   ],
-  "storage": "Pakoras are best freshly fried. Cool leftovers promptly, refrigerate covered and reheat with dry heat until thoroughly hot and crisp."
+  "storage": "Pakoras are best freshly fried. Cool leftovers promptly, refrigerate covered and reheat with dry heat until thoroughly hot and crisp.",
+  "prep_time": "15 min",
+  "cook_time": "15 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT15M",
+  "total_time_iso": "PT30M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Crispy Pakistani potato onion pakoras in seasoned besan batter with green chilli and coriander",
+  "image_caption": "Potato and onion pakoras fried in controlled heat until crisp outside and fully cooked inside.",
+  "technique": "Pakora batter should cling thickly to the vegetables. Onion releases water after mixing, so judge batter consistency again just before frying and add a little besan if it has loosened. Maintain medium frying heat so thin potato slices cook before the coating becomes too dark.",
+  "doneness_cues": [
+    "Batter should coat vegetables rather than drip away in a thin stream.",
+    "A test drop should rise and bubble steadily without blackening quickly.",
+    "Potato inside a finished pakora should be tender.",
+    "Exterior should stay crisp after a brief drain rather than feel oil-soaked."
+  ],
+  "mistakes": [
+    "Using thick potato slices that remain raw inside.",
+    "Crowding the fryer and dropping oil temperature sharply.",
+    "Frying in excessively hot oil that darkens besan before vegetables cook.",
+    "Piling steaming-hot pakoras into a covered bowl."
+  ],
+  "substitutions": [
+    "Other quick-cooking vegetables can be used if cut to a suitable size.",
+    "Ajwain can be reduced for a milder aroma.",
+    "If onions make the batter watery, correct with besan rather than more spice."
+  ],
+  "reheating": "Use an oven, air fryer or dry pan until thoroughly hot and crisp; microwaving usually softens the coating.",
+  "serving": "Serve immediately with green chutney or tamarind chutney.",
+  "faqs": [
+    {
+      "question": "Why are pakoras oily?",
+      "answer": "Oil may be too cool or the pan overcrowded. Fry manageable batches at steady medium heat."
+    },
+    {
+      "question": "Why are potato pakoras raw inside?",
+      "answer": "Potato slices are likely too thick or the oil too hot. Slice thinly and let the centre cook before deep browning."
+    },
+    {
+      "question": "Why did the batter become thin while waiting?",
+      "answer": "Salt draws moisture from onions and vegetables. Recheck consistency immediately before frying."
+    }
+  ]
 }
