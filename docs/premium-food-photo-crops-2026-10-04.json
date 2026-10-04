@@ -1,6 +1,6 @@
 {
-  "policy": "No AI-generated replacement photos. Replacements are downloaded from copyright-safe Wikimedia Commons sources with license metadata retained.",
-  "replaced_count": 10,
+  "policy": "No AI-generated recipe photos. Replacements are downloaded from copyright-safe Wikimedia Commons sources with license metadata retained.",
+  "replaced_count": 12,
   "cropped_total": 66,
   "target_aspect": "4:3",
   "zoom_policy": "Minimum aspect crop plus gentle 6% extra zoom only for images already close to 4:3; avoids over-zooming portrait/square/wide sources.",
@@ -84,6 +84,22 @@
       "license": "CC0 1.0",
       "output": "assets/recipe-images/kabli-pulao.webp",
       "bytes": 335228
+    },
+    "chicken-jalfrezi": {
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Jalfrezi_(2103956162).jpg",
+      "resolved_download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Chicken_Jalfrezi_%282103956162%29.jpg/1920px-Chicken_Jalfrezi_%282103956162%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "author": "David Pursehouse",
+      "license": "CC BY 2.0",
+      "output": "assets/chicken-jalfrezi-v2.webp",
+      "bytes": 289250
+    },
+    "rajma-masala": {
+      "source": "https://commons.wikimedia.org/wiki/File:Rajma_Masala_(32081557778).jpg",
+      "resolved_download": "https://upload.wikimedia.org/wikipedia/commons/3/37/Rajma_Masala_%2832081557778%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+      "author": "Gaurav Nemade",
+      "license": "CC BY-SA 2.0",
+      "output": "assets/rajma-masala.webp",
+      "bytes": 138782
     }
   },
   "images": [
@@ -95,12 +111,12 @@
     {
       "slug": "aloo-keema",
       "image": "assets/recipe-images/aloo-keema.webp",
-      "bytes": 214932
+      "bytes": 182682
     },
     {
       "slug": "aloo-palak",
       "image": "assets/recipe-images/aloo-palak.webp",
-      "bytes": 194802
+      "bytes": 160534
     },
     {
       "slug": "aloo-paratha",
@@ -115,7 +131,7 @@
     {
       "slug": "badam-milk",
       "image": "assets/recipe-images/badam-milk.webp",
-      "bytes": 70066
+      "bytes": 60802
     },
     {
       "slug": "beef-nihari",
@@ -125,12 +141,12 @@
     {
       "slug": "beef-pulao",
       "image": "assets/beef-pulao.webp",
-      "bytes": 33494
+      "bytes": 30696
     },
     {
       "slug": "bhindi-gosht",
       "image": "assets/recipe-images/bhindi-gosht.webp",
-      "bytes": 367996
+      "bytes": 312410
     },
     {
       "slug": "bun-kabab",
@@ -140,17 +156,17 @@
     {
       "slug": "chana-chaat",
       "image": "assets/recipe-images/chana-chaat.webp",
-      "bytes": 40766
+      "bytes": 34952
     },
     {
       "slug": "chana-masala",
       "image": "assets/chana-masala.webp",
-      "bytes": 83272
+      "bytes": 74074
     },
     {
       "slug": "chapli-kabab",
       "image": "assets/recipe-images/chapli-kabab.webp",
-      "bytes": 393820
+      "bytes": 340068
     },
     {
       "slug": "chicken-achari",
@@ -160,42 +176,42 @@
     {
       "slug": "chicken-biryani",
       "image": "assets/recipe-images/chicken-biryani.webp",
-      "bytes": 232782
+      "bytes": 188396
     },
     {
       "slug": "chicken-handi",
       "image": "assets/chicken-handi.webp",
-      "bytes": 61290
+      "bytes": 50780
     },
     {
       "slug": "chicken-jalfrezi",
       "image": "assets/chicken-jalfrezi-v2.webp",
-      "bytes": 213548
+      "bytes": 236338
     },
     {
       "slug": "chicken-karahi",
       "image": "assets/recipe-images/chicken-karahi.webp",
-      "bytes": 236454
+      "bytes": 225072
     },
     {
       "slug": "chicken-malai-boti",
       "image": "assets/recipe-images/chicken-malai-boti.webp",
-      "bytes": 304336
+      "bytes": 257906
     },
     {
       "slug": "chicken-pizza",
       "image": "assets/recipe-images/chicken-pizza.webp",
-      "bytes": 201146
+      "bytes": 172538
     },
     {
       "slug": "chicken-pulao",
       "image": "assets/recipe-images/chicken-pulao.webp",
-      "bytes": 286052
+      "bytes": 277130
     },
     {
       "slug": "chicken-qorma",
       "image": "assets/recipe-images/chicken-qorma.webp",
-      "bytes": 232204
+      "bytes": 193436
     },
     {
       "slug": "chicken-sajji",
@@ -205,67 +221,67 @@
     {
       "slug": "chicken-shawarma",
       "image": "assets/recipe-images/chicken-shawarma.webp",
-      "bytes": 79280
+      "bytes": 66242
     },
     {
       "slug": "chicken-tikka",
       "image": "assets/recipe-images/chicken-tikka.webp",
-      "bytes": 98058
+      "bytes": 83568
     },
     {
       "slug": "daal-chawal",
       "image": "assets/daal-chawal.webp",
-      "bytes": 6976
+      "bytes": 6914
     },
     {
       "slug": "daal-mash",
       "image": "assets/recipe-images/daal-mash.webp",
-      "bytes": 222372
+      "bytes": 185140
     },
     {
       "slug": "dahi-bhallay",
       "image": "assets/recipe-images/dahi-bhallay.webp",
-      "bytes": 133508
+      "bytes": 113904
     },
     {
       "slug": "doodh-patti-chai",
       "image": "assets/recipe-images/doodh-patti-chai.webp",
-      "bytes": 320888
+      "bytes": 249778
     },
     {
       "slug": "falooda",
       "image": "assets/recipe-images/falooda.webp",
-      "bytes": 50122
+      "bytes": 38458
     },
     {
       "slug": "fruit-chaat",
       "image": "assets/recipe-images/fruit-chaat.webp",
-      "bytes": 28704
+      "bytes": 25738
     },
     {
       "slug": "gajar-ka-halwa",
       "image": "assets/recipe-images/gajar-ka-halwa.webp",
-      "bytes": 223806
+      "bytes": 187946
     },
     {
       "slug": "gulab-jamun",
       "image": "assets/recipe-images/gulab-jamun.webp",
-      "bytes": 51282
+      "bytes": 44346
     },
     {
       "slug": "haleem",
       "image": "assets/recipe-images/haleem.webp",
-      "bytes": 114560
+      "bytes": 99626
     },
     {
       "slug": "halwa-puri",
       "image": "assets/recipe-images/halwa-puri.webp",
-      "bytes": 108734
+      "bytes": 86238
     },
     {
       "slug": "imli-aloo-bukhara-sharbat",
       "image": "assets/recipe-images/imli-aloo-bukhara-sharbat.webp",
-      "bytes": 20136
+      "bytes": 18216
     },
     {
       "slug": "jalebi",
@@ -280,52 +296,52 @@
     {
       "slug": "kashmiri-chai",
       "image": "assets/recipe-images/kashmiri-chai.webp",
-      "bytes": 47092
+      "bytes": 35816
     },
     {
       "slug": "keema-matar",
       "image": "assets/keema-matar.webp",
-      "bytes": 62746
+      "bytes": 58942
     },
     {
       "slug": "lahori-chargha",
       "image": "assets/recipe-images/lahori-chargha.webp",
-      "bytes": 200000
+      "bytes": 172082
     },
     {
       "slug": "lemon-mint-sharbat",
       "image": "assets/recipe-images/lemon-mint-sharbat.webp",
-      "bytes": 106650
+      "bytes": 85750
     },
     {
       "slug": "mango-lassi",
       "image": "assets/recipe-images/mango-lassi.webp",
-      "bytes": 46718
+      "bytes": 37918
     },
     {
       "slug": "masala-chai",
       "image": "assets/recipe-images/masala-chai.webp",
-      "bytes": 186648
+      "bytes": 144430
     },
     {
       "slug": "matar-pulao",
       "image": "assets/matar-pulao.webp",
-      "bytes": 62396
+      "bytes": 52428
     },
     {
       "slug": "mutton-biryani",
       "image": "assets/recipe-images/mutton-biryani.webp",
-      "bytes": 250504
+      "bytes": 222122
     },
     {
       "slug": "mutton-karahi",
       "image": "assets/recipe-images/mutton-karahi.webp",
-      "bytes": 437550
+      "bytes": 347952
     },
     {
       "slug": "namkeen-lassi",
       "image": "assets/recipe-images/namkeen-lassi.webp",
-      "bytes": 56820
+      "bytes": 48236
     },
     {
       "slug": "pakistani-samosa",
@@ -335,87 +351,87 @@
     {
       "slug": "pakora",
       "image": "assets/pakora.webp",
-      "bytes": 50702
+      "bytes": 55070
     },
     {
       "slug": "paya",
       "image": "assets/recipe-images/paya.webp",
-      "bytes": 174104
+      "bytes": 149114
     },
     {
       "slug": "rajma-masala",
       "image": "assets/rajma-masala.webp",
-      "bytes": 248286
+      "bytes": 113004
     },
     {
       "slug": "ras-malai",
       "image": "assets/recipe-images/ras-malai.webp",
-      "bytes": 108068
+      "bytes": 87350
     },
     {
       "slug": "reshmi-kabab",
       "image": "assets/recipe-images/reshmi-kabab.webp",
-      "bytes": 200236
+      "bytes": 166404
     },
     {
       "slug": "rice-kheer",
       "image": "assets/recipe-images/rice-kheer.webp",
-      "bytes": 238108
+      "bytes": 175704
     },
     {
       "slug": "rooh-afza-milk",
       "image": "assets/recipe-images/rooh-afza-milk.webp",
-      "bytes": 36248
+      "bytes": 29970
     },
     {
       "slug": "sarson-ka-saag",
       "image": "assets/recipe-images/sarson-ka-saag.webp",
-      "bytes": 110368
+      "bytes": 101512
     },
     {
       "slug": "sattu-sharbat",
       "image": "assets/recipe-images/sattu-sharbat.webp",
-      "bytes": 203008
+      "bytes": 182662
     },
     {
       "slug": "seekh-kabab",
       "image": "assets/recipe-images/seekh-kabab.webp",
-      "bytes": 135012
+      "bytes": 121420
     },
     {
       "slug": "shami-kabab",
       "image": "assets/shami-kabab.webp",
-      "bytes": 28222
+      "bytes": 23644
     },
     {
       "slug": "sheer-khurma",
       "image": "assets/recipe-images/sheer-khurma.webp",
-      "bytes": 254278
+      "bytes": 201252
     },
     {
       "slug": "sindhi-biryani",
       "image": "assets/recipe-images/sindhi-biryani.webp",
-      "bytes": 321358
+      "bytes": 269852
     },
     {
       "slug": "suji-halwa",
       "image": "assets/recipe-images/suji-halwa.webp",
-      "bytes": 146598
+      "bytes": 117082
     },
     {
       "slug": "sweet-lassi",
       "image": "assets/recipe-images/sweet-lassi.webp",
-      "bytes": 30976
+      "bytes": 24982
     },
     {
       "slug": "white-chicken-karahi",
       "image": "assets/recipe-images/white-chicken-karahi.webp",
-      "bytes": 173186
+      "bytes": 149452
     },
     {
       "slug": "zinger-burger",
       "image": "assets/recipe-images/zinger-burger.webp",
-      "bytes": 269776
+      "bytes": 229036
     }
   ]
 }
