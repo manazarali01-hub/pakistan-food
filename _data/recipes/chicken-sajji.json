@@ -4,7 +4,7 @@
   "category": "BBQ",
   "time": "2 hrs",
   "serves": 5,
-  "image": "assets/chicken-sajji.webp",
+  "image": "assets/recipe-images/chicken-sajji-v2.webp",
   "description": "Balochistan-inspired whole chicken sajji with restrained seasoning, roasted steadily for a deeply browned exterior and juicy, fully cooked meat.",
   "ingredients": [
     "1 whole chicken, about 1.5 kg",
@@ -36,8 +36,8 @@
   "cook_time_iso": "PT1H",
   "total_time_iso": "PT2H",
   "date_modified": "2026-10-04",
-  "image_alt": "Balochistan-inspired whole chicken sajji with deeply browned skin and simple cumin coriander seasoning",
-  "image_caption": "Whole chicken sajji roasted steadily with restrained seasoning for browned skin and juicy meat.",
+  "image_alt": "Plated whole chicken sajji with lemon, tomato and green chillies",
+  "image_caption": "Whole chicken sajji plated with lemon, tomato and green chillies after slow roasting.",
   "technique": "Sajji benefits from restrained seasoning and even roasting. Dry the bird, season lightly, marinate chilled, then use steady rather than extreme heat so the thick thigh cooks through before the skin burns.",
   "doneness_cues": [
     "Exterior should brown evenly rather than blacken in isolated spots.",
@@ -58,10 +58,10 @@
   ],
   "reheating": "Reheat covered until hot through, then uncover briefly if you want the skin drier.",
   "serving": "Rest about 10 minutes, carve and serve with lemon, rice or naan.",
-  "image_source": "https://commons.wikimedia.org/wiki/File:Sajji._A_culture_itself.jpg",
-  "image_author": "Mustafa usman",
-  "image_creator": "Mustafa usman",
-  "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Sajji.JPG",
+  "image_author": "Miansari66",
+  "image_creator": "Miansari66",
+  "image_license": "CC0 1.0",
+  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
   "image_source_label": "Wikimedia Commons"
 }

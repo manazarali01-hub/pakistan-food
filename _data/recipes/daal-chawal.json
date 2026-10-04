@@ -4,7 +4,7 @@
   "category": "Rice",
   "time": "50 min",
   "serves": 4,
-  "image": "assets/daal-chawal.webp",
+  "image": "assets/recipe-images/daal-chawal-v2.webp",
   "description": "Comforting Pakistani daal chawal with tender lentils, fluffy basmati rice and a fragrant garlic-cumin tarka for an everyday home-style meal.",
   "ingredients": [
     "1 cup moong or masoor lentils, rinsed",
@@ -38,8 +38,8 @@
   "cook_time_iso": "PT35M",
   "total_time_iso": "PT50M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani daal chawal with tender lentils, fluffy basmati rice and garlic cumin tarka",
-  "image_caption": "Everyday daal chawal with soft lentils, separate rice and a fresh garlic-cumin tarka.",
+  "image_alt": "Dal chawal plate with yellow lentils, white rice, green chilli and fresh salad",
+  "image_caption": "Dal chawal served as a full plate with yellow lentils, white rice, green chilli and fresh salad.",
   "technique": "Cook rice and daal as separate texture projects. Keep lentils pourable because they thicken while resting, and let drained basmati steam off briefly before fluffing. Add tarka at the end so garlic and cumin stay aromatic.",
   "doneness_cues": [
     "Lentils should be fully tender without dry hard centres.",
@@ -60,9 +60,9 @@
   ],
   "reheating": "Reheat daal with a splash of water and rice covered with a little moisture until both are hot.",
   "serving": "Serve daal over or beside rice with achar, salad and optional yogurt.",
-  "image_source": "https://commons.wikimedia.org/wiki/File:C8-DPPxXsAEeCOy.jpg",
-  "image_author": "Maryum Siddiqui",
-  "image_creator": "Maryum Siddiqui",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Dal_chawal.JPG",
+  "image_author": "Nirmal Deb",
+  "image_creator": "Nirmal Deb",
   "image_license": "CC BY-SA 4.0",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "image_source_label": "Wikimedia Commons"

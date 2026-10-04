@@ -4,7 +4,7 @@
   "category": "Chicken",
   "time": "5 hrs 30 min including marinating",
   "serves": 5,
-  "image": "assets/recipe-images/lahori-chargha.webp",
+  "image": "assets/recipe-images/lahori-chargha-v2.webp",
   "description": "Lahori-style whole chicken chargha marinated with yogurt, lemon and bold spices, gently steamed for tenderness and finished until richly browned.",
   "ingredients": [
     "1 whole chicken, about 1.5 kg",
@@ -42,7 +42,7 @@
   "date_modified": "2026-10-04",
   "image_alt": "Lahori chargha whole chicken with bold yogurt spice marinade and deep browned finish",
   "image_caption": "Whole Lahori chargha marinated, steamed until nearly tender and finished until richly browned.",
-  "image_source": "https://commons.wikimedia.org/wiki/File:Lahori_Charga_after_steam_cooking.JPG",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Lahori_Charga.JPG",
   "technique": "Use the two-stage method for control: steam until the whole chicken is nearly cooked, then dry the exterior and finish with frying or roasting for colour. This separates internal doneness from crust development.",
   "doneness_cues": [
     "Steamed chicken should be nearly cooked before browning begins.",
@@ -65,5 +65,7 @@
   "serving": "Rest 10 minutes, then serve with lemon, chutney and a light sprinkle of chaat masala.",
   "image_author": "Miansari66",
   "image_license": "CC0 1.0",
-  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "image_creator": "Miansari66",
+  "image_source_label": "Wikimedia Commons"
 }

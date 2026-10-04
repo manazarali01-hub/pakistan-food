@@ -4,7 +4,7 @@
   "category": "Breakfast",
   "time": "60 min",
   "serves": 5,
-  "image": "assets/recipe-images/halwa-puri.webp",
+  "image": "assets/recipe-images/halwa-puri-v2.webp",
   "description": "Traditional Pakistani halwa puri breakfast with fragrant semolina halwa, warmly spiced chickpeas and freshly fried puris that puff in properly heated oil.",
   "ingredients": [
     "1 cup semolina (suji)",
@@ -74,10 +74,10 @@
       "answer": "Prepare chana and halwa first, then fry puris close to serving so they stay at their best."
     }
   ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Halwa_Puri,_a_traditional_food_made_in_Walled_City_of_Lahore.jpg",
-  "image_author": "Tahsin Shah",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Nihari_%26_Halwa_Puri_-_Breakfast_of_every_Lahori.jpg",
+  "image_author": "Robin Crusoe",
   "image_license": "CC BY-SA 4.0",
   "image_source_label": "Wikimedia Commons",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "image_creator": "Tahsin Shah"
+  "image_creator": "Robin Crusoe"
 }

@@ -172,13 +172,13 @@ if "{{ dish.name }}" in home:
 halwa = require(
     "/recipes/halwa-puri.html",
     "Halwa Puri Recipe",
-    "assets/recipe-images/halwa-puri.webp",
-    "Tahsin Shah",
+    "assets/recipe-images/halwa-puri-v2.webp",
+    "Robin Crusoe",
     "Wikimedia Commons",
     "CC BY-SA 4.0",
     'https://pakistanfoodrecipes.top/recipes/halwa-puri.html',
 )
-if f"assets/recipe-images/halwa-puri.webp?v={RECIPE_IMAGE_VERSION}" not in halwa:
+if f"assets/recipe-images/halwa-puri-v2.webp?v={RECIPE_IMAGE_VERSION}" not in halwa:
     raise SystemExit("/recipes/halwa-puri.html: versioned local recipe image URL missing")
 if '"@type": "Recipe"' not in halwa and '"@type":"Recipe"' not in halwa:
     raise SystemExit("/recipes/halwa-puri.html: Recipe structured data marker missing")
