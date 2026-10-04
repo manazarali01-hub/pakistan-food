@@ -24,5 +24,34 @@
     "Add the drained rice and cook uncovered until most of the liquid has been absorbed and small steam holes appear at the surface.",
     "Cover tightly, reduce to low heat and steam for about 10 minutes, or until the grains are tender and separate.",
     "Rest the covered pulao for a few minutes off the heat, then fluff gently from the sides so the grains do not break."
-  ]
+  ],
+  "prep_time": "15 min",
+  "cook_time": "25 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT25M",
+  "total_time_iso": "PT40M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani matar pulao with separate basmati rice, green peas, browned onion and whole spices",
+  "image_caption": "Basmati rice and peas cooked in seasoned liquid, then finished on low dum for separate grains.",
+  "technique": "Liquid control matters more than extra spice. Brown the onion, bloom whole spices, season the liquid before rice, and stop the uncovered stage when most liquid is absorbed. The final covered steam should finish the grains without repeated stirring.",
+  "doneness_cues": [
+    "Soaked rice should be well drained before it enters the pot.",
+    "Cooking liquid should taste properly seasoned before absorption starts.",
+    "Steam holes should appear when most liquid is absorbed.",
+    "Finished grains should be separate and peas tender but not grey."
+  ],
+  "mistakes": [
+    "Using the same liquid ratio for every basmati brand.",
+    "Stirring often after rice is added.",
+    "Keeping high heat through the final dum.",
+    "Adding peas so early that they overcook badly."
+  ],
+  "substitutions": [
+    "Use stock instead of water for a deeper savoury pulao.",
+    "Frozen peas can be added later than fresh peas.",
+    "Reserve some browned onion for garnish if you want extra aroma."
+  ],
+  "storage": "Cool rice promptly and refrigerate covered.",
+  "reheating": "Sprinkle a little water, cover and reheat until steaming hot without repeated stirring.",
+  "serving": "Serve with raita, salad or a simple curry."
 }

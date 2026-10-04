@@ -26,5 +26,35 @@
     "Cover with mozzarella and sprinkle with oregano. Avoid piling all wet toppings in the centre, which can make the middle slower to bake.",
     "Bake in the fully preheated oven until the crust is cooked and golden at the edges and the cheese is melted and bubbling.",
     "Rest for a few minutes so the cheese settles slightly, then slice and serve hot."
-  ]
+  ],
+  "prep_time": "50 min including rise",
+  "cook_time": "25 min",
+  "prep_time_iso": "PT50M",
+  "cook_time_iso": "PT25M",
+  "total_time_iso": "PT1H15M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Homemade chicken pizza with golden yeast crust, seasoned chicken, capsicum, onion and melted mozzarella",
+  "image_caption": "Chicken pizza baked on a risen yeast crust with cooked chicken, vegetables and bubbling mozzarella.",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_pizza.jpg",
+  "technique": "The crust needs a soft dough and a real rise before baking. Keep toppings relatively dry and the chicken already cooked so the oven can focus on setting the crust and melting cheese rather than steaming a wet centre.",
+  "doneness_cues": [
+    "Dough should expand close to double before shaping.",
+    "Base should feel soft and elastic, not stiff and cracked.",
+    "Crust edges should be golden and the underside cooked through.",
+    "Cheese should be melted and bubbling without the centre remaining doughy."
+  ],
+  "mistakes": [
+    "Using wet tomato or vegetable toppings that flood the centre.",
+    "Loading raw chicken onto a short-bake pizza.",
+    "Rolling dough too thin at the centre while leaving very wet toppings there.",
+    "Cutting immediately while molten cheese and steam make slices collapse."
+  ],
+  "substitutions": [
+    "Use cooked tikka-style chicken for a spicier Pakistani variation.",
+    "Part whole-wheat flour can be used but may require more water and a denser crust.",
+    "Reduce cheese rather than increasing bake time if you want a lighter pizza."
+  ],
+  "storage": "Cool slices and refrigerate covered.",
+  "reheating": "Reheat in an oven, air fryer or covered pan until hot; this keeps the crust better than a long microwave cycle.",
+  "serving": "Rest 3 to 5 minutes after baking, then slice and serve."
 }
