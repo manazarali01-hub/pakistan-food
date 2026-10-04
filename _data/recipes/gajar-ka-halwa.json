@@ -22,5 +22,53 @@
     "Add the ghee and cook while stirring until the halwa looks glossy, concentrated and moist rather than watery.",
     "Taste and stop reducing before the halwa becomes dry because it will firm slightly as it cools.",
     "Garnish with chopped almonds and pistachios and serve warm, or cool and store appropriately for later serving."
+  ],
+  "prep_time": "15 min",
+  "cook_time": "55 min",
+  "prep_time_iso": "PT15M",
+  "cook_time_iso": "PT55M",
+  "total_time_iso": "PT1H10M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani gajar ka halwa with reduced carrot and milk, cardamom, ghee, almonds and pistachios",
+  "image_caption": "Carrot halwa slowly reduced with milk, sugar, cardamom and ghee until glossy and moist.",
+  "technique": "Use a broad heavy pan so milk can reduce efficiently around the grated carrots. Sugar goes in only after the carrots are tender and most milk has reduced; it releases fresh moisture, which must be cooked away again before ghee finishes the texture.",
+  "doneness_cues": [
+    "Carrot shreds should be fully tender before sugar is added.",
+    "After sugar, the loose syrupy phase should reduce until no watery liquid pools around the halwa.",
+    "At the finish, the mixture should look glossy and moist, and a spoon should leave a brief clean track across the pan base.",
+    "The halwa should remain spoonable; it firms further as it cools."
+  ],
+  "mistakes": [
+    "Adding sugar early, before the carrots have softened in milk.",
+    "Using high heat and scorching concentrated milk solids on the base.",
+    "Stopping immediately after adding sugar while the halwa is still watery.",
+    "Reducing until dry and crumbly, forgetting it becomes firmer after cooling."
+  ],
+  "substitutions": [
+    "A mix of almonds and pistachios is optional and can be adjusted for preference or allergy.",
+    "Use full-fat milk for the richest body; lower-fat milk produces a lighter result and may reduce differently.",
+    "Ghee contributes the characteristic finish; reducing it changes richness but does not require adding other fat."
+  ],
+  "storage": "Cool leftovers, cover and refrigerate. The halwa firms when cold, so loosen it gently during reheating if necessary.",
+  "reheating": "Warm slowly in a pan or microwave only until hot. If it has become very firm, stir in a small splash of milk before gentle reheating.",
+  "serving": "Serve warm in small bowls with chopped almonds and pistachios added at the end.",
+  "tips": [
+    "Grate carrots to a reasonably even size so they soften together.",
+    "Stir more often as the milk level drops.",
+    "After adding sugar, wait for the newly released liquid to reduce before adding the finishing ghee."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my gajar ka halwa watery?",
+      "answer": "Sugar releases moisture and the milk may not have reduced enough. Continue gentle uncovered cooking, stirring more frequently as it thickens."
+    },
+    {
+      "question": "Why did the halwa burn at the bottom?",
+      "answer": "The heat was probably too high once the milk became concentrated, or the pan was not stirred often enough near the end."
+    },
+    {
+      "question": "How do I know when gajar ka halwa is finished?",
+      "answer": "The carrots should be tender, the mixture glossy and moist with no watery pool, and a spoon should briefly expose the pan base when drawn through it."
+    }
   ]
 }

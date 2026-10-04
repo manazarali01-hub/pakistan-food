@@ -21,5 +21,48 @@
     "Stir in the sugar and black salt while the liquid is still easy to dissolve them into, then add the remaining chilled water.",
     "Chill and taste after dilution; adjust sweetness or tartness gradually because tamarind and dried plums vary naturally.",
     "Stir well and serve over ice."
+  ],
+  "prep_time": "25 min",
+  "prep_time_iso": "PT25M",
+  "total_time_iso": "PT25M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani imli aloo bukhara sharbat made with tamarind and dried plums over ice",
+  "image_caption": "Tangy imli aloo bukhara sharbat strained smooth and balanced with sugar and black salt.",
+  "technique": "Soften tamarind and dried plums enough to extract their pulp, then strain before final dilution. Tamarind and aloo bukhara vary widely in acidity, so the listed sugar is a starting point and the real adjustment happens after the full water volume is added.",
+  "doneness_cues": [
+    "The soaked tamarind should mash easily enough to release pulp from seeds and fibres.",
+    "The strained concentrate should be smooth enough to drink without hard seed fragments.",
+    "After dilution, tartness should remain lively without making the drink aggressively sour."
+  ],
+  "mistakes": [
+    "Sweetening the undiluted concentrate heavily before knowing its final acidity.",
+    "Leaving tamarind seeds or tough fibres in the serving jug.",
+    "Adding lots of ice to repair an over-concentrated drink instead of adjusting with measured water."
+  ],
+  "substitutions": [
+    "Use seedless tamarind paste only if you adjust quantity for its concentration.",
+    "Black salt is optional but gives a characteristic savoury edge.",
+    "If dried plums are especially sweet, reduce sugar before increasing acidity."
+  ],
+  "storage": "Keep the strained sharbat covered and refrigerated if made ahead. Stir before serving and add ice only to individual glasses.",
+  "serving": "Serve cold over ice; a small pinch of black salt can be offered separately for people who prefer a more savoury finish.",
+  "tips": [
+    "Soak until the fruit is soft enough to press easily.",
+    "Strain before adding the final water so hard fragments are removed.",
+    "Make sweetness adjustments after dilution."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my imli aloo bukhara sharbat too sour?",
+      "answer": "Tamarind batches vary. Add dissolved sugar in small amounts and, if the concentrate is strong, a little more water rather than masking it with a very large sugar addition."
+    },
+    {
+      "question": "Can I leave the pulp in?",
+      "answer": "Soft fruit pulp is a preference, but tamarind seeds and coarse fibres should be removed for a safer, more pleasant drink."
+    },
+    {
+      "question": "Why does the flavour change from batch to batch?",
+      "answer": "Natural tamarind and dried plums vary in acidity and sweetness, so final seasoning needs tasting rather than a fixed sugar correction."
+    }
   ]
 }

@@ -19,5 +19,51 @@
     "Bring the chai to a controlled boil, lower the heat and simmer briefly until the colour deepens and the tea strength suits you.",
     "Avoid extending the boil excessively to force a darker colour, as prolonged brewing can make the tea harsh.",
     "Strain directly into cups and serve hot. Adjust tea quantity or simmering time on the next batch if you prefer a stronger or lighter doodh patti."
+  ],
+  "prep_time": "2 min",
+  "cook_time": "10 min",
+  "prep_time_iso": "PT2M",
+  "cook_time_iso": "PT10M",
+  "total_time_iso": "PT12M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani doodh patti chai made with milk, black tea and optional green cardamom",
+  "image_caption": "Rich doodh patti simmered with black tea, milk and optional cardamom until balanced and strong.",
+  "technique": "Doodh patti is milk-forward, so watch both tea extraction and milk heat. A darker cup is not automatically better; stop when the tea is strong enough before the leaves make the milk tea drying or harsh.",
+  "doneness_cues": [
+    "The milk should be hot and steaming without a scorched smell.",
+    "Tea colour should deepen gradually after the leaves are added.",
+    "The finished cup should taste rounded and milky with clear black-tea flavour rather than bitterness."
+  ],
+  "mistakes": [
+    "Boiling the tea for a long time simply to force a dark colour.",
+    "Leaving milk unattended where it can overflow or catch.",
+    "Using cardamom so heavily that it becomes masala chai rather than simple doodh patti."
+  ],
+  "substitutions": [
+    "The optional 1/4 cup water gives the tea leaves an easier extraction stage and can be omitted for a richer milk-only style.",
+    "Cardamom can be omitted for a plain doodh patti.",
+    "Adjust sugar after the tea reaches its final strength."
+  ],
+  "storage": "Best served freshly strained. If refrigerated, cool promptly and keep covered; milk tea loses aroma during long storage.",
+  "reheating": "Warm gently until steaming and avoid repeated boiling, which over-extracts any remaining tea particles and flattens the milk flavour.",
+  "serving": "Strain into two cups and serve hot, ideally soon after brewing.",
+  "tips": [
+    "Use a saucepan with enough headroom because milk rises quickly.",
+    "Judge tea strength by taste, not colour alone.",
+    "For a stronger next batch, change leaf quantity slightly rather than greatly extending the boil."
+  ],
+  "faqs": [
+    {
+      "question": "Why is my doodh patti bitter?",
+      "answer": "The tea leaves were likely too strong for the milk or boiled too long. Shorten extraction first."
+    },
+    {
+      "question": "Does doodh patti need water?",
+      "answer": "No. Some versions use only milk; a small amount of water is an optional way to help tea extraction and lighten the cup."
+    },
+    {
+      "question": "Why is my doodh patti pale?",
+      "answer": "The tea quantity may be light or the leaves may need a little more controlled extraction. Increase leaf quantity slightly before resorting to a very long boil."
+    }
   ]
 }

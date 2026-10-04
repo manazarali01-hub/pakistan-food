@@ -20,5 +20,48 @@
     "Check the consistency and add the remaining water gradually if you prefer a thinner lassi.",
     "Taste only after dilution, then adjust salt or cumin in small amounts.",
     "Add ice and blend very briefly or pour over ice, then serve immediately while cold and frothy."
+  ],
+  "prep_time": "7 min",
+  "prep_time_iso": "PT7M",
+  "total_time_iso": "PT7M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani namkeen lassi with yogurt, roasted cumin and black salt served cold",
+  "image_caption": "Savoury namkeen lassi blended until light and smooth, with roasted cumin and black salt.",
+  "technique": "Season only after most of the water has been blended into the yogurt. Salt intensity changes with dilution, and black salt is especially assertive, so final adjustment should happen in the finished drink.",
+  "doneness_cues": [
+    "The yogurt should be fully smooth before seasoning.",
+    "Roasted cumin should smell nutty rather than raw or burnt.",
+    "The finished drink should taste refreshing and savoury without a harsh black-salt aftertaste."
+  ],
+  "mistakes": [
+    "Adding the full salt amount before dilution and ending with an overly salty drink.",
+    "Using unroasted or scorched cumin, which changes the aroma dramatically.",
+    "Making the lassi very thin before tasting the yogurt's natural tartness."
+  ],
+  "substitutions": [
+    "Regular salt can be used without black salt for a cleaner flavour.",
+    "Freshly crushed roasted cumin gives stronger aroma than old pre-ground cumin.",
+    "A little fresh mint can be blended in as a variation, but it changes the classic simple profile."
+  ],
+  "storage": "Best served fresh. If briefly refrigerated, keep covered and stir well before serving because yogurt and water can separate.",
+  "serving": "Pour over ice or serve from a chilled jug with a light pinch of roasted cumin on top.",
+  "tips": [
+    "Roast cumin gently and crush it only after cooling.",
+    "Blend the yogurt smooth before adding water.",
+    "Make the final salt adjustment after the drink reaches its serving thickness."
+  ],
+  "faqs": [
+    {
+      "question": "Why is namkeen lassi too salty?",
+      "answer": "Salt was probably adjusted before final dilution or too much black salt was used. Add a little more plain yogurt and water together rather than water alone if you want to keep the body."
+    },
+    {
+      "question": "Should namkeen lassi be thick?",
+      "answer": "It is usually lighter than sweet lassi, but it should still have some yogurt body rather than taste like flavoured water."
+    },
+    {
+      "question": "Can I omit black salt?",
+      "answer": "Yes. Use ordinary salt to taste; the flavour will be simpler and less sulphurous."
+    }
   ]
 }

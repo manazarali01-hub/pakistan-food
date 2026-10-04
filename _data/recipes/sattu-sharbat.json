@@ -20,5 +20,48 @@
     "Add lemon juice, sugar and black salt and stir until the sugar dissolves.",
     "Taste the fully diluted drink and adjust sweetness, lemon or salt in small amounts rather than changing several flavours at once.",
     "Stir again just before pouring because sattu can settle, then serve immediately over ice."
+  ],
+  "prep_time": "8 min",
+  "prep_time_iso": "PT8M",
+  "total_time_iso": "PT8M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Cold sattu sharbat with roasted gram flour, lemon and black salt",
+  "image_caption": "Sattu sharbat whisked smooth with chilled water, lemon and a balanced sweet-savoury finish.",
+  "technique": "Make a lump-free slurry with a small amount of water before adding the rest. Sattu settles naturally because it is suspended roasted gram flour, so a final stir before each pour is part of the drink rather than a sign of failure.",
+  "doneness_cues": [
+    "No dry pockets of sattu should remain after whisking.",
+    "The drink should look evenly cloudy immediately after stirring.",
+    "Lemon, sweetness and black salt should be balanced only after the full water quantity is added."
+  ],
+  "mistakes": [
+    "Pouring all the water onto dry sattu at once and trapping floury lumps.",
+    "Adding excessive sugar that hides the roasted gram flavour.",
+    "Serving without stirring after the jug has been standing."
+  ],
+  "substitutions": [
+    "Omit sugar for a more savoury version and adjust lemon and salt instead.",
+    "Regular salt can replace black salt if preferred.",
+    "Use cold water rather than large amounts of ice to control dilution."
+  ],
+  "storage": "Best mixed close to serving. If refrigerated briefly, keep covered and stir very thoroughly before pouring because settling is expected.",
+  "serving": "Serve over ice with an extra squeeze of lemon only if the fully mixed drink needs more acidity.",
+  "tips": [
+    "Start with a slurry for the smoothest texture.",
+    "Taste after full dilution, not while the base is concentrated.",
+    "Stir the jug each time before refilling a glass."
+  ],
+  "faqs": [
+    {
+      "question": "Why does sattu settle at the bottom?",
+      "answer": "Sattu is a suspension, not a dissolved powder, so some settling is normal. Stir well just before serving."
+    },
+    {
+      "question": "How do I remove sattu lumps?",
+      "answer": "Whisk the powder with a small amount of water into a smooth paste first, then gradually add the remaining water."
+    },
+    {
+      "question": "Can sattu sharbat be savoury instead of sweet?",
+      "answer": "Yes. Omit or reduce sugar and balance lemon, regular salt and black salt to taste."
+    }
   ]
 }
