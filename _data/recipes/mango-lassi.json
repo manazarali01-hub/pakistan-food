@@ -4,7 +4,7 @@
   "category": "Drinks",
   "time": "10 min",
   "serves": 2,
-  "image": "assets/mango-lassi.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mango_Lassi.jpg?width=1280",
   "description": "Thick Pakistani mango lassi blended with ripe mango, chilled yogurt and milk for a creamy, refreshing summer drink.",
   "ingredients": [
     "1 cup ripe mango pieces, chilled",
@@ -65,5 +65,8 @@
       "question": "How do I make mango lassi thicker?",
       "answer": "Use thicker chilled yogurt, a ripe fleshy mango and less milk. Avoid relying on a large amount of ice because it dilutes the drink as it melts."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Mango_Lassi.jpg",
+  "image_author": "Ayshamarjana",
+  "image_license": "CC BY-SA 4.0"
 }
