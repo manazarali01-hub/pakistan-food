@@ -29,5 +29,46 @@
     "Squeeze excess moisture from the onion so the kababs hold to the skewers.",
     "Do not make the kababs too thick or the outside may brown before the centre cooks."
   ],
-  "storage": "Cool cooked kababs promptly and refrigerate covered. Reheat only the portion you need until thoroughly hot."
+  "storage": "Cool cooked kababs promptly and refrigerate covered. Reheat only the portion you need until thoroughly hot.",
+  "prep_time": "20 min",
+  "cook_time": "30 min",
+  "prep_time_iso": "PT20M",
+  "cook_time_iso": "PT30M",
+  "total_time_iso": "PT50M",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani beef seekh kabab browned on skewers with herbs, onion and green chilli",
+  "image_caption": "Beef seekh kababs shaped firmly on skewers and cooked until browned while remaining juicy.",
+  "technique": "A seekh mixture must be cold, cohesive and not watery. Mix until the mince becomes slightly tacky, chill if it feels soft, then press a thin even layer around each skewer so the centre cooks before the outside dries.",
+  "doneness_cues": [
+    "The mixed mince should hold together when pressed rather than shedding visible water.",
+    "Raw kababs should grip the skewer without sliding when it is lifted carefully.",
+    "The surface should brown in spots while the centre cooks fully.",
+    "A cooked kabab should feel springy and juicy, not wet in the centre or dry and crumbly."
+  ],
+  "mistakes": [
+    "Adding wet onion, herbs or marinade liquid without controlling moisture.",
+    "Shaping a very thick cylinder that browns outside before the centre cooks.",
+    "Handling warm soft mince; chilling makes shaping and skewer adhesion easier.",
+    "Turning constantly before the first side has set."
+  ],
+  "substitutions": [
+    "If using very lean mince, the kababs may cook drier; choose mince with enough natural fat for a juicy result.",
+    "Wooden skewers can be used for oven or grill cooking if soaked as appropriate, but metal skewers conduct heat into the centre more effectively.",
+    "Green chilli can be reduced without changing the binding of the mixture."
+  ],
+  "reheating": "Reheat covered over gentle heat or briefly in the oven so the kababs warm through without losing too much moisture. Avoid prolonged high heat.",
+  "faqs": [
+    {
+      "question": "Why does seekh kabab fall off the skewer?",
+      "answer": "The mixture is often too wet, too warm or not mixed enough to become cohesive. Chill it and test a small portion before shaping the full batch."
+    },
+    {
+      "question": "Should seekh kabab mixture be very soft?",
+      "answer": "It should be moist but able to hold a ridge when pressed. If liquid squeezes out, correct the moisture before shaping."
+    },
+    {
+      "question": "How thick should seekh kababs be?",
+      "answer": "Keep the layer fairly even and not excessively thick so the centre cooks by the time the surface browns."
+    }
+  ]
 }
