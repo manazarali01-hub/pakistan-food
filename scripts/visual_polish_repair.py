@@ -176,7 +176,7 @@ def main():
         "CC BY-SA 4.0",
         "https://creativecommons.org/licenses/by-sa/4.0/",
         "assets/recipe-images/daal-chawal-v2.webp",
-        zoom=0.84, focal_x=0.50, focal_y=0.52,
+        zoom=1.00, focal_x=0.50, focal_y=0.52,
     ))
 
     # Re-fetch the exact Chicken Handi source at full resolution and crop around the food.
@@ -212,7 +212,7 @@ def main():
         "CC BY-SA 4.0",
         "https://creativecommons.org/licenses/by-sa/4.0/",
         "assets/recipe-images/halwa-puri-v2.webp",
-        zoom=0.92, focal_x=0.53, focal_y=0.54,
+        zoom=0.82, focal_x=0.70, focal_y=0.42,
     ))
 
     # Use the actual cooked Lahori Chargha source rather than the steam-stage image.
@@ -227,11 +227,16 @@ def main():
         zoom=0.78, focal_x=0.50, focal_y=0.50,
     ))
 
-    # Current Noon Chai photo is accurate, but too much empty table is visible.
-    results.append(recrop_local(
+    # Keep the accurate Noon Chai source, but crop tightly around one pink tea glass.
+    results.append(replace_commons(
         "kashmiri-chai",
+        "Noon Chai.jpg",
+        "https://commons.wikimedia.org/wiki/File:Noon_Chai.jpg",
+        "Naryiitmandi",
+        "CC BY-SA 4.0",
+        "https://creativecommons.org/licenses/by-sa/4.0/",
         "assets/recipe-images/kashmiri-chai-v2.webp",
-        zoom=0.66, focal_x=0.50, focal_y=0.63,
+        zoom=0.55, focal_x=0.75, focal_y=0.62,
     ))
 
     bump_cache()
