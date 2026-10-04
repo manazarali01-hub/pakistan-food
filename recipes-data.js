@@ -12,8 +12,6 @@ window.PAKISTAN_FOOD_RECIPES = [
 
 (() => {
   const recipes = Array.isArray(window.PAKISTAN_FOOD_RECIPES) ? window.PAKISTAN_FOOD_RECIPES : [];
-  const isMobile = window.matchMedia("(max-width: 900px)").matches;
-
   const cleanCategory = (value) => {
     const text = String(value || "").trim().toLowerCase();
     const map = {
@@ -31,67 +29,17 @@ window.PAKISTAN_FOOD_RECIPES = [
     return map[text] || String(value || "Other").trim();
   };
 
-  const localFallbacks = {
-    "chicken biryani": "assets/chicken-biryani.webp",
-    "chicken pulao": "assets/chicken-pulao.webp",
-    "chicken karahi": "assets/chicken-karahi.webp",
-    "chicken handi": "assets/chicken-handi.webp",
-    "beef nihari": "assets/nihari.webp",
-    "seekh kabab": "assets/seekh-kebab.webp",
-    "chapli kabab": "assets/chapli-kebab.webp",
-    "pakistani samosa": "assets/pakistani-samosa-v2.webp",
-    "pakora": "assets/pakora.webp",
-    "aloo paratha": "assets/aloo-paratha.webp",
-    "halwa puri": "assets/halwa-puri.webp",
-    "rice kheer": "assets/kheer.webp",
-    "gulab jamun": "assets/gulab-jamun.webp",
-    "daal chawal": "assets/daal-chawal.webp",
-    "beef pulao": "assets/beef-pulao.webp",
-    "aloo gosht": "assets/aloo-gosht.webp",
-    "bun kabab": "assets/bun-kabab.webp",
-    "chana masala": "assets/chana-masala.webp",
-    "chicken jalfrezi": "assets/chicken-jalfrezi-v2.webp",
-    "chicken sajji": "assets/chicken-sajji.webp",
-    "keema matar": "assets/keema-matar.webp",
-    "mango lassi": "assets/mango-lassi.webp",
-    "matar pulao": "assets/matar-pulao.webp",
-    "shami kabab": "assets/shami-kabab.webp"
-  };
-
-  const jpgFallbacks = {
-    "chicken biryani": "assets/chicken-biryani.jpg",
-    "chicken pulao": "assets/chicken-pulao.jpg",
-    "chicken karahi": "assets/chicken-karahi.jpg",
-    "chicken handi": "assets/chicken-handi.jpg",
-    "beef nihari": "assets/nihari.jpg",
-    "seekh kabab": "assets/seekh-kebab.jpg",
-    "chapli kabab": "assets/chapli-kebab.jpg",
-    "pakistani samosa": "assets/samosa.jpg",
-    "pakora": "assets/pakora.jpg",
-    "aloo paratha": "assets/aloo-paratha.jpg",
-    "halwa puri": "assets/halwa-puri.jpg",
-    "rice kheer": "assets/kheer.jpg",
-    "gulab jamun": "assets/gulab-jamun.jpg",
-    "daal chawal": "assets/daal-chawal.jpg",
-    "beef pulao": "assets/beef-pulao.jpg"
-  };
 
   recipes.forEach((recipe) => {
     if (!recipe) return;
 
     recipe.category = cleanCategory(recipe.category);
 
-    const key = String(recipe.name || "").trim().toLowerCase();
-    let image = String(recipe.image || localFallbacks[key] || "assets/pakistan-food-logo.png").trim();
+    let image = String(recipe.image || "assets/recipe-image-unavailable.svg").trim();
 
     image = image
       .replace("commons.wikimedia.org/wiki/Special:Redirect/file/", "commons.wikimedia.org/wiki/Special:FilePath/")
       .replace(/^\/(?!\/)/, "");
-
-    if (isMobile && image.includes("commons.wikimedia.org/wiki/Special:FilePath/")) {
-      const sourceWithoutQuery = image.split("?")[0].replace(/^https?:\/\//i, "");
-      image = `https://images.weserv.nl/?url=${encodeURIComponent(sourceWithoutQuery)}&w=720&h=540&fit=cover&output=webp&q=78`;
-    }
 
     recipe.image = image;
   });
@@ -132,39 +80,4 @@ window.PAKISTAN_FOOD_RECIPES = [
   const results = document.getElementById("recipeResults");
   if (results) results.textContent = `Showing all ${recipes.length} recipes`;
 
-  document.addEventListener("error", (event) => {
-    const img = event.target;
-    if (!(img instanceof HTMLImageElement) || !img.closest(".recipe-card, .modal")) return;
-
-    const current = img.currentSrc || img.src || "";
-    const attempt = Number(img.dataset.fallbackAttempt || "0");
-    const label = (img.alt || "")
-      .replace(/ (?:ready to serve|Pakistani recipe)$/i, "")
-      .trim()
-      .toLowerCase();
-
-    if (attempt === 0 && jpgFallbacks[label] && !current.includes(jpgFallbacks[label])) {
-      img.dataset.fallbackAttempt = "1";
-      img.src = jpgFallbacks[label];
-      return;
-    }
-
-    if (attempt < 2 && localFallbacks[label] && !current.includes(localFallbacks[label])) {
-      img.dataset.fallbackAttempt = "2";
-      img.src = localFallbacks[label];
-      return;
-    }
-
-    if (attempt < 3) {
-      img.dataset.fallbackAttempt = "3";
-      img.src = "assets/pakistan-food-logo.png";
-      img.alt = `${label || "Pakistan Food"} image unavailable`;
-      img.style.objectFit = "contain";
-      img.style.padding = "24px";
-      img.style.background = "#fff8ef";
-      return;
-    }
-
-    img.style.display = "none";
-  }, true);
 })();
