@@ -156,7 +156,7 @@ async function inspectLayout(label, width) {
 async function testHomeInteractions(width) {
   await page.waitForSelector(".recipe-card", { timeout: 15000 });
 
-  const recipeImageShape = await page.$eval(".recipe-card img", imgs => {
+  const recipeImageShape = await page.locator(".recipe-card img").evaluateAll(imgs => {
     const issues = imgs
       .filter(img => img.complete && img.naturalWidth > 0 && img.naturalHeight > 0)
       .map(img => ({
