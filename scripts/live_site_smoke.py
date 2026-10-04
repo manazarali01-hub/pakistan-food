@@ -9,7 +9,7 @@ from __future__ import annotations
 from html import unescape
 import json
 import os
-import re
+from pathlib import Path\nimport re
 import time
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
