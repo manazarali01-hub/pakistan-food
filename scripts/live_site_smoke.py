@@ -14,11 +14,75 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 BASE = "https://pakistanfoodrecipes.top"
+GITHUB_API = "https://api.github.com"
+GITHUB_TOKEN = os.environ.get("GH_TOKEN", "")
+GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")
+GITHUB_SHA = os.environ.get("GITHUB_SHA", "")
+GITHUB_RUN_ID = os.environ.get("GITHUB_RUN_ID", "")
 USER_AGENT = "PakistanFoodLiveSmoke/1.0 (+https://pakistanfoodrecipes.top/)"
 ATTEMPTS = 8
 DELAY_SECONDS = 10
 
 EXPECTED_ADS = "google.com, pub-4531216214099892, DIRECT, f08c47fec0942fa0"
+
+
+def wait_for_pages_deployment() -> None:
+    """Wait until GitHub Pages has successfully deployed the same commit."""
+
+    if not (GITHUB_TOKEN and GITHUB_REPOSITORY and GITHUB_SHA):
+        print("Pages deployment wait skipped outside GitHub Actions")
+        return
+
+    url = (
+        f"{GITHUB_API}/repos/{GITHUB_REPOSITORY}/actions/runs"
+        f"?head_sha={GITHUB_SHA}&per_page=30"
+    )
+    for attempt in range(1, 37):
+        req = Request(
+            url,
+            headers={
+                "Authorization": f"Bearer {GITHUB_TOKEN}",
+                "Accept": "application/vnd.github+json",
+                "User-Agent": USER_AGENT,
+                "X-GitHub-Api-Version": "2022-11-28",
+            },
+        )
+        try:
+            with urlopen(req, timeout=20) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except (HTTPError, URLError, TimeoutError, OSError, json.JSONDecodeError) as exc:
+            if attempt == 36:
+                raise SystemExit(f"Could not read Pages workflow status: {exc}")
+            print(f"Waiting for Pages status ({attempt}/36): {exc}")
+            time.sleep(10)
+            continue
+
+        pages_runs = [
+            run
+            for run in payload.get("workflow_runs", [])
+            if run.get("name") == "pages build and deployment"
+            and str(run.get("id", "")) != GITHUB_RUN_ID
+        ]
+        if pages_runs:
+            latest = max(pages_runs, key=lambda run: run.get("run_number", 0))
+            status = latest.get("status")
+            conclusion = latest.get("conclusion")
+            if status == "completed":
+                if conclusion != "success":
+                    raise SystemExit(
+                        f"Pages deployment for {GITHUB_SHA} completed with {conclusion!r}"
+                    )
+                print(
+                    f"OK Pages deployment for {GITHUB_SHA[:12]} "
+                    f"(run {latest.get('run_number')})"
+                )
+                return
+
+        if attempt < 36:
+            print(f"Waiting for Pages deployment of {GITHUB_SHA[:12]} ({attempt}/36)")
+            time.sleep(10)
+
+    raise SystemExit(f"Timed out waiting for Pages deployment of {GITHUB_SHA}")
 
 def fetch(path: str) -> tuple[int, str, str]:
     url = BASE + path
@@ -61,7 +125,7 @@ def require(path: str, *needles: str) -> str:
     print(f"OK {path} ({len(body)} bytes)")
     return body
 
-home = require("/", "Pakistan Food", "Flavours worth sharing.")
+wait_for_pages_deployment()\n\nhome = require("/", "Pakistan Food", "Flavours worth sharing.")
 if "{{ dish.name }}" in home:
     raise SystemExit("/: unresolved Liquid/template marker found in deployed homepage")
 
