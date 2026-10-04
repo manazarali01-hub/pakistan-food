@@ -32,5 +32,46 @@
     "Puri dough should be firmer than chapati dough; very soft dough absorbs more oil.",
     "Use properly hot oil so puris puff quickly without becoming greasy."
   ],
-  "storage": "Cool halwa and chickpea curry promptly and refrigerate them covered. Puris are best freshly fried; if any remain, cool before storing and reheat with dry heat."
+  "storage": "Cool halwa and chickpea curry promptly and refrigerate them covered. Puris are best freshly fried; if any remain, cool before storing and reheat with dry heat.",
+  "prep_time": "25 min",
+  "cook_time": "35 min",
+  "prep_time_iso": "PT25M",
+  "cook_time_iso": "PT35M",
+  "total_time_iso": "PT1H",
+  "date_modified": "2026-10-04",
+  "image_alt": "Pakistani halwa puri breakfast with puffed puris, semolina halwa and spiced chickpeas",
+  "image_caption": "Halwa puri breakfast with fresh puffed puris, fragrant semolina halwa and spiced chickpeas.",
+  "technique": "Treat the three components separately so none waits too long. Roast semolina until fragrant before adding liquid, keep chana thick enough to sit beside the halwa, and fry puris last so they arrive puffed and crisp.",
+  "doneness_cues": [
+    "Roasted semolina should smell nutty and lose its raw flour aroma before liquid is added.",
+    "Halwa should be glossy and soft enough to spoon, not dry or greasy with separated fat.",
+    "Chana should be tender with a coating gravy rather than a watery pool.",
+    "Puri should puff quickly in properly heated oil and turn light golden without becoming hard."
+  ],
+  "mistakes": [
+    "Adding syrup or water to semolina before it has roasted enough, which leaves a raw taste.",
+    "Cooking halwa until very dry; it firms further as it sits.",
+    "Frying puri in cool oil, where it absorbs more oil and struggles to puff.",
+    "Preparing puris too early and covering them while steaming hot, which softens them."
+  ],
+  "substitutions": [
+    "Ghee gives halwa a richer aroma, while neutral oil can be used for a lighter profile.",
+    "If chickpeas are cooked from dry, make sure they are fully tender before seasoning the final chana.",
+    "Puri dough should remain firmer than soft roti dough; do not increase water simply to make kneading easier."
+  ],
+  "reheating": "Reheat halwa and chana separately over low heat, adding a small splash of water only if needed. Reheat puris with dry heat in an oven or pan rather than sealing them in steam.",
+  "faqs": [
+    {
+      "question": "Why does puri not puff?",
+      "answer": "The dough may be too soft, the disc may be rolled unevenly, or the oil may not be hot enough. Roll an even disc and test one puri before frying the batch."
+    },
+    {
+      "question": "Why is suji halwa greasy?",
+      "answer": "The semolina may not have absorbed the liquid well or the fat ratio may be too high. Roast properly and add liquid carefully while stirring."
+    },
+    {
+      "question": "What should be cooked first?",
+      "answer": "Prepare chana and halwa first, then fry puris close to serving so they stay at their best."
+    }
+  ]
 }
