@@ -83,6 +83,14 @@ async function inspectLayout(label, width) {
       .filter(img => img.complete && img.naturalWidth === 0)
       .map(img => ({ src: img.getAttribute("src"), alt: img.getAttribute("alt") }))
       .slice(0, 12);
+    const placeholders = imageNodes
+      .filter(img => {
+        const src = img.getAttribute("src") || "";
+        const current = img.currentSrc || "";
+        return src.includes("recipe-image-unavailable.svg") || current.includes("recipe-image-unavailable.svg");
+      })
+      .map(img => ({ src: img.getAttribute("src"), currentSrc: img.currentSrc, alt: img.getAttribute("alt") }))
+      .slice(0, 12);
 
     const smallTapTargets = [...document.querySelectorAll("button, a")]
       .filter(el => {
@@ -121,6 +129,7 @@ async function inspectLayout(label, width) {
       hasH1: Boolean(h1 && h1.getClientRects().length),
       h1Text: h1?.textContent?.trim() || "",
       broken,
+      placeholders,
       smallTapTargets,
     };
   });
@@ -133,6 +142,9 @@ async function inspectLayout(label, width) {
   }
   if (report.broken.length) {
     failures.push(`${label} @ ${width}px: broken images: ${JSON.stringify(report.broken)}`);
+  }
+  if (report.placeholders.length) {
+    failures.push(`${label} @ ${width}px: recipe image placeholder rendered: ${JSON.stringify(report.placeholders)}`);
   }
   // Buttons use the site's 40px control floor; non-inline links use WCAG's 24px floor.
   if (report.smallTapTargets.length > 0) {
@@ -242,7 +254,7 @@ await browser.close();
 
 console.log("MOBILE BROWSER QA");
 for (const r of results) {
-  console.log(`- ${r.label} @ ${r.width}px: overflow=${r.overflow}px, brokenImages=${r.broken.length}, h1=${JSON.stringify(r.h1Text)}, failures=${r.failuresAdded}`);
+  console.log(`- ${r.label} @ ${r.width}px: overflow=${r.overflow}px, brokenImages=${r.broken.length}, placeholders=${r.placeholders.length}, h1=${JSON.stringify(r.h1Text)}, failures=${r.failuresAdded}`);
 }
 
 if (failures.length) {

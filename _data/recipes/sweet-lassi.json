@@ -4,7 +4,7 @@
   "category": "Drinks",
   "time": "10 min",
   "serves": 2,
-  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sweet_Lassi.JPG?width=1280",
+  "image": "assets/recipe-images/sweet-lassi.webp",
   "description": "Cool Pakistani sweet lassi blended from chilled yogurt with sugar, cardamom and water or milk until creamy and frothy.",
   "ingredients": [
     "2 cups chilled yogurt",
