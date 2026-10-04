@@ -25,21 +25,23 @@ layout: null
     <main class="policy-shell policy-page">
       <span class="section-label">TRANSPARENCY</span>
       <h1>Image Credits</h1>
-      <p class="policy-intro">Pakistan Food uses optimized local photographs, site-created recipe illustrations and selected Wikimedia Commons images. This page records where recipe imagery comes from and keeps the list of externally served Commons images synchronized with the current recipe data.</p>
+      <p class="policy-intro">Pakistan Food uses optimized local photographs, site-created recipe illustrations and selected openly licensed external photographs. This page records where recipe imagery comes from and keeps external image credits synchronized with the current recipe data.</p>
 
       <h2>Site-created recipe illustrations</h2>
       <p>The current Chicken Jalfrezi, Pakistani Samosa, Jalebi and Rajma Masala images are AI-generated illustrations made for Pakistan Food. They are presented as visual representations of the dishes, not as photographs documenting a tested preparation.</p>
 
-      <h2>Current externally served Wikimedia Commons images</h2>
-      <p>The links below are generated from the image URLs currently used by our recipes. Each link opens the corresponding Wikimedia Commons file page, where the creator, license and reuse terms can be checked.</p>
+      <h2>Current externally served open-license images</h2>
+      <p>The links below are generated from the image records currently used by our recipes. Each source link opens the original Commons or Flickr record where the creator, license and reuse terms can be checked.</p>
       <ul class="credits-list">
         {% for recipe_pair in site.data.recipes %}
           {% assign r = recipe_pair[1] %}
-          {% if r.image contains 'commons.wikimedia.org' %}
+          {% if r.image contains 'commons.wikimedia.org' or r.image contains 'staticflickr.com' %}
             {% assign source_url = r.image | replace: 'Special:Redirect/file/', 'File:' | replace: 'Special:FilePath/', 'File:' | split: '?' | first %}
+            {% assign source_label = r.image_source_label | default: 'Wikimedia Commons' %}
             <li>
               <a href="{{ r.image_source | default: source_url }}" rel="noopener noreferrer">{{ r.name }}</a>
               {% if r.image_author %} — {{ r.image_author }}{% endif %}
+              · {{ source_label }}
               {% if r.image_license %} · {% if r.image_license_url %}<a href="{{ r.image_license_url }}" rel="noopener noreferrer">{{ r.image_license }}</a>{% else %}{{ r.image_license }}{% endif %}{% endif %}
             </li>
           {% endif %}
@@ -47,7 +49,7 @@ layout: null
       </ul>
 
       <h2>Sources for current optimized local recipe images</h2>
-      <p>These recipe photographs are still served from local optimized files. Their source records are retained below. Recipes now served directly from Wikimedia Commons are listed above with creator and license information.</p>
+      <p>These recipe photographs are still served from local optimized files. Their source records are retained below. Recipes now served from audited external open-license sources are listed above with creator and license information.</p>
       <ul class="credits-list">
         <li><a href="https://commons.wikimedia.org/wiki/File:Chicken_Handi.JPG">Chicken Handi</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Bannu_Gull_Beeff_Pulao.jpg">Beef Pulao</a></li>
@@ -61,7 +63,7 @@ layout: null
         <li><a href="https://commons.wikimedia.org/wiki/File:Matar_Pulao_-_Mohali_2016-08-06_8222.JPG">Matar Pulao</a></li>
       </ul>
 
-      <p><small>Images and licenses can change at their source. The linked Commons file page is the authoritative record for creator and license details. Questions or correction requests can be sent through <a href="contact.html">Contact &amp; Recipe Corrections</a> or by email at <a href="mailto:manazarali01@gmail.com">manazarali01@gmail.com</a>.</small></p>
+      <p><small>Images and licenses can change at their source. The linked source page is the authoritative record for creator and license details. Questions or correction requests can be sent through <a href="contact.html">Contact &amp; Recipe Corrections</a> or by email at <a href="mailto:manazarali01@gmail.com">manazarali01@gmail.com</a>.</small></p>
     </main>
 
     <footer class="policy-footer">
