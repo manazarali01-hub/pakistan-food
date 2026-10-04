@@ -106,7 +106,29 @@
             <div class="recent-grid" id="recentGrid"></div>
           </div>
         </section>
-        <section class="regions section" id="regions"><div class="container"><div class="section-heading"><span>FLAVOURS OF PAKISTAN</span><h2>Explore Pakistani Regions</h2><p>Every region of Pakistan has its own unique taste.</p></div><div class="region-grid"><div class="region-card punjab"><div class="region-overlay"></div><div class="region-content"><span>01</span><h3>Punjab</h3><p>Rich, spicy & hearty food</p></div></div><div class="region-card sindh"><div class="region-overlay"></div><div class="region-content"><span>02</span><h3>Sindh</h3><p>Traditional & aromatic flavours</p></div></div><div class="region-card kp"><div class="region-overlay"></div><div class="region-content"><span>03</span><h3>Khyber Pakhtunkhwa</h3><p>Simple & delicious cuisine</p></div></div><div class="region-card balochistan"><div class="region-overlay"></div><div class="region-content"><span>04</span><h3>Balochistan</h3><p>Rustic & authentic flavours</p></div></div></div></div></section>
+        <section class="regions section" id="regions" aria-labelledby="regions-title">
+          <div class="container">
+            <div class="section-heading"><span>REGIONAL FAVOURITES</span><h2 id="regions-title">Cook across Pakistan</h2><p>Open a real recipe associated with each regional food tradition instead of browsing decorative cards.</p></div>
+            <div class="region-grid">
+              {% assign regional_slugs = 'sarson-ka-saag,sindhi-biryani,chapli-kabab,chicken-sajji' | split: ',' %}
+              {% assign regional_names = 'Punjab,Sindh,Khyber Pakhtunkhwa,Balochistan' | split: ',' %}
+              {% for slug in regional_slugs %}
+                {% assign dish = site.data.recipes[slug] %}
+                {% assign region_index = forloop.index0 %}
+                {% assign region_image_small = dish.image | replace: 'width=1280', 'width=720' | replace: 'width=960', 'width=720' | replace: 'width=900', 'width=720' | replace: 'width=800', 'width=720' %}
+                <a class="region-card" href="recipes/{{ slug }}.html">
+                  {% if dish.image contains 'commons.wikimedia.org' %}
+                    <img src="{{ region_image_small }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async">
+                  {% else %}
+                    <img src="{{ dish.image }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async">
+                  {% endif %}
+                  <div class="region-overlay"></div>
+                  <div class="region-content"><span>0{{ forloop.index }}</span><h3>{{ regional_names[region_index] }}</h3><p>{{ dish.name }} · Open recipe →</p></div>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        </section>
         <section class="about section" id="about"><div class="container about-grid"><div class="about-image"><div class="about-image-main">🍲</div><div class="about-badge"><strong>100%</strong><span>Pakistani<br>Flavours</span></div></div><div class="about-content"><span class="section-label">ABOUT PAKISTAN FOOD</span><h2>Bringing Pakistan's <span>Authentic Taste</span> to Your Kitchen</h2><p>Pakistan Food is created to celebrate the rich culinary traditions of Pakistan.</p><p>From aromatic biryani and spicy karahi to crispy samosas, vegetarian classics, traditional desserts and refreshing drinks, discover recipes that bring the real taste of Pakistan to your home.</p><div class="about-points"><div><span>✓</span><p>Traditional Pakistani Recipes</p></div><div><span>✓</span><p>Simple Cooking Methods</p></div><div><span>✓</span><p>Authentic Ingredients & Flavours</p></div></div></div></div></section>
         <section class="editorial-trust section" aria-labelledby="trust-title">
           <div class="container">
