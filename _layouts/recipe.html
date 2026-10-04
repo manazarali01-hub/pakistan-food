@@ -231,10 +231,20 @@
         <span><small>Category</small><strong><a href="{{ category_slug }}/">{{ recipe.category }}</a></strong></span>
         <button class="print-recipe" type="button" onclick="window.print()">Print recipe</button>
       </div>
+      <nav class="recipe-quick-actions" aria-label="Recipe quick links">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Step-by-step method</a>
+        {% if recipe.faqs %}<a href="#recipe-faq-title">FAQs</a>{% endif %}
+        <button class="quick-print" type="button" onclick="window.print()">Print</button>
+      </nav>
+      <div class="recipe-trustline" aria-label="Editorial information">
+        {% if recipe.date_modified %}<span>Last updated: <time datetime="{{ recipe.date_modified }}">{{ recipe.date_modified | date: "%-d %B %Y" }}</time></span><span aria-hidden="true">·</span>{% endif %}
+        <a href="../editorial-policy.html">Editorial standards</a><span aria-hidden="true">·</span><a href="../contact.html">Report a correction</a>
+      </div>
       <div id="recipe-en" class="recipe-language-panel" role="tabpanel" lang="en" data-recipe-panel="en">
-        <h2>Ingredients for {{ recipe.name }}</h2>
+        <h2 id="ingredients">Ingredients for {{ recipe.name }}</h2>
         <ul class="recipe-ingredient-list">{% for item in recipe.ingredients %}<li>{{ item }}</li>{% endfor %}</ul>
-        <h2>How to Make {{ recipe.name }} — Step by Step</h2>
+        <h2 id="method">How to Make {{ recipe.name }} — Step by Step</h2>
         <ol class="recipe-step-list">{% for step in detailed_method %}<li id="step-{{ forloop.index }}"><span class="step-number">Step {{ forloop.index }}</span><span>{{ step }}</span></li>{% endfor %}</ol>
         {% if recipe.technique %}<section class="recipe-guide"><h2>Technique That Matters</h2><p>{{ recipe.technique }}</p></section>{% endif %}
         {% if recipe.doneness_cues %}<section class="recipe-detail-section"><h2>Visual & Doneness Cues</h2><ul>{% for cue in recipe.doneness_cues %}<li>{{ cue }}</li>{% endfor %}</ul></section>{% endif %}
