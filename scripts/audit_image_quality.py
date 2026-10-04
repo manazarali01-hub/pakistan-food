@@ -65,6 +65,8 @@ if any(not r["alt"] or not r["caption"] for r in rows):
     errors.append("one or more recipes are missing image alt/caption")
 if missing_source:
     errors.append("one or more external recipe images are missing an explicit image_source")
+if partial_credit:
+    errors.append("one or more external recipe images are missing verified author or license metadata")
 for r in external:
     if r["source"]:
         data = json.loads((RECIPES / f"{r['slug']}.json").read_text(encoding="utf-8"))

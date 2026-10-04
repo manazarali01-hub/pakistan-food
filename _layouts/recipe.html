@@ -219,7 +219,7 @@
         <figcaption>
           {{ image_caption }}
           {% if recipe.image_source %}
-            <span class="image-credit">Image: {% if recipe.image_author %}{{ recipe.image_author }} · {% endif %}<a href="{{ recipe.image_source }}" rel="noopener noreferrer">Wikimedia Commons</a>{% if recipe.image_license %} · {{ recipe.image_license }}{% endif %}</span>
+            <span class="image-credit">Image: {% if recipe.image_author %}{{ recipe.image_author }} · {% endif %}<a href="{{ recipe.image_source }}" rel="noopener noreferrer">Wikimedia Commons</a>{% if recipe.image_license %} · {% if recipe.image_license_url %}<a href="{{ recipe.image_license_url }}" rel="noopener noreferrer">{{ recipe.image_license }}</a>{% else %}{{ recipe.image_license }}{% endif %}{% endif %}</span>
           {% endif %}
         </figcaption>
       </figure>
