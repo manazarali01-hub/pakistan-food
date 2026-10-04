@@ -134,7 +134,7 @@ function renderRecentlyViewed() {
     section.hidden = items.length === 0;
     grid.innerHTML = items.map(recipe => `
         <a class="recent-card" href="${recipePagePath(recipe)}">
-            <img src="${escapeHtml(sizedRecipeImage(recipe, 480))}" alt="${escapeHtml(recipeImageAlt(recipe))}" width="480" height="360" loading="lazy" decoding="async">
+            <img src="${escapeHtml(sizedRecipeImage(recipe, 480))}" alt="${escapeHtml(recipeImageAlt(recipe))}" width="480" height="360" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
             <span class="recent-card-copy">
                 <strong>${escapeHtml(recipe.name)}</strong>
                 ${recipe.nameUrdu ? `<span class="recipe-name-urdu" lang="ur" dir="rtl">${escapeHtml(recipe.nameUrdu)}</span>` : ""}
@@ -263,6 +263,7 @@ function renderRecipes() {
                     decoding="async"
                     width="900"
                     height="675"
+                    onerror="this.onerror=null;this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';"
                 >
 
                 <span class="recipe-badge">
