@@ -67,6 +67,8 @@ jobs:
       - uses: actions/checkout@v7
       - name: Check recipe pages, images and sitemap
         run: python3 scripts/verify_site.py
+      - name: Audit low-value and duplicate guide content
+        run: python3 scripts/audit_content_quality.py
       - uses: actions/jekyll-build-pages@v1
         with:
           source: ./
