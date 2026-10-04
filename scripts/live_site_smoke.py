@@ -173,9 +173,9 @@ halwa = require(
     "/recipes/halwa-puri.html",
     "Halwa Puri Recipe",
     "assets/recipe-images/halwa-puri.webp",
-    "Umair Abbasi",
-    "Flickr",
-    "CC BY-SA 2.0",
+    "Tahsin Shah",
+    "Wikimedia Commons",
+    "CC BY-SA 4.0",
     'https://pakistanfoodrecipes.top/recipes/halwa-puri.html',
 )
 if f"assets/recipe-images/halwa-puri.webp?v={RECIPE_IMAGE_VERSION}" not in halwa:
