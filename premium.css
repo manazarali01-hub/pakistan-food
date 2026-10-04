@@ -944,3 +944,12 @@ body:not(.dark) .hero-stats {
     padding:10px 8px;
   }
 }
+
+
+/* Browser-QA recipe header target correction — 2026-10-04 */
+.seo-site-links a{
+  min-height:36px;
+  display:inline-flex;
+  align-items:center;
+  padding:6px 2px;
+}
