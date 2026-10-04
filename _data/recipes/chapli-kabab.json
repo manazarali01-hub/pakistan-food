@@ -4,7 +4,7 @@
   "category": "BBQ",
   "time": "45 min",
   "serves": 5,
-  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Peshawari_Chapli_Kabab_by_Chef_Nina.jpg?width=1280",
+  "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chapli_Kabab.JPG?width=1280",
   "description": "Pashtun-style chapli kababs made with seasoned beef mince, crushed coriander and cumin, herbs and tomato, shaped thin and shallow-fried until browned and cooked through.",
   "ingredients": [
     "750 g beef mince with some fat",
@@ -39,8 +39,8 @@
   "cook_time_iso": "PT25M",
   "total_time_iso": "PT45M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani chapli kabab with browned craggy edges, crushed coriander, tomato and fresh herbs",
-  "image_caption": "Thin chapli kababs with browned, craggy edges and a juicy seasoned beef centre.",
+  "image_alt": "Pakistani chapli kabab with browned flat minced-meat patties served as a Pashtun-style kebab dish",
+  "image_caption": "Traditional chapli kabab photographed as a Pashtun-style minced-meat kebab dish.",
   "technique": "Chapli kabab is shaped flatter than seekh kabab so a broad surface can brown while the centre stays juicy. Keep tomato and other wet ingredients controlled, shape immediately before frying, and use enough heat to brown without burning the spices.",
   "doneness_cues": [
     "The mixture should feel moist and cohesive but should not release a puddle of water.",
@@ -74,7 +74,8 @@
       "answer": "You can prepare much of it ahead, but very wet ingredients such as chopped tomato are better added close to shaping so they do not loosen the mixture."
     }
   ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Peshawari_Chapli_Kabab_by_Chef_Nina.jpg",
-  "image_author": "Sholokov",
-  "image_license": "CC BY-SA 4.0"
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chapli_Kabab.JPG",
+  "image_author": "Miansari66",
+  "image_license": "Public domain",
+  "image_license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain"
 }
