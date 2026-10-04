@@ -784,3 +784,57 @@ body:not(.dark) .hero-stats {
   .recipe-facts .print-recipe { grid-column: 1 / -1; }
   .recipe-faq { padding: 19px 17px; }
 }
+
+
+/* Mobile width QA — AdSense quality recovery 2026-10-04 */
+@media (max-width: 620px) {
+  .seo-site-nav {
+    padding: 10px 14px !important;
+    gap: 8px !important;
+  }
+  .seo-site-links {
+    width: 100%;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 8px !important;
+    padding: 2px 1px 7px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .seo-site-links::-webkit-scrollbar { display: none; }
+  .seo-site-links a { flex: 0 0 auto; min-height: 40px; display: inline-flex; align-items: center; }
+  .modal-box {
+    width: calc(100% - 20px);
+    max-height: calc(100dvh - 20px);
+    margin: 10px auto;
+    border-radius: 15px;
+  }
+  .modal-image { height: clamp(190px, 52vw, 260px); }
+  .modal-close { width: 44px; height: 44px; top: 10px; right: 10px; }
+  .modal-body { padding: 18px; }
+  .toast {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero { min-height: auto; }
+  .hero-content { padding-top: 46px; padding-bottom: 48px; }
+  .section { padding-block: 58px; }
+  .popular-recipe-card strong { font-size: 1.08rem; }
+  .recipe-facts { gap: 8px !important; }
+  .recipe-facts > span { padding: 9px 10px; }
+}
+
+@media (max-width: 360px) {
+  .hero h1 { font-size: clamp(2.15rem, 12vw, 2.75rem); }
+  .hero-buttons { gap: 10px; }
+  .hero-stats { justify-content: space-between; }
+  .hero-stats > div { min-width: 0; }
+  .recipe-facts { grid-template-columns: 1fr !important; }
+  .recipe-facts .print-recipe { grid-column: auto; }
+}
