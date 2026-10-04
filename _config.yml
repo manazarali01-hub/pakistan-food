@@ -10,6 +10,6 @@ markdown: kramdown
 # Google AdSense client ID. Example: ca-pub-1234567890123456
 # Leave blank until the account-specific ID is available.
 adsense_client: "ca-pub-4531216214099892"
-recipe_image_version: "20261004-final5"
+recipe_image_version: "20261004-final6"
 exclude:
   - README.md
