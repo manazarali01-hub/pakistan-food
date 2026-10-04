@@ -45,6 +45,8 @@ for path in sorted(GUIDES.glob("*.html")):
 
     if 'name="theme-color"' not in text:
         text=re.sub(r'(<meta\s+name="viewport"[^>]*>)', r'\1\n<meta name="theme-color" content="#f8f1df">', text, count=1, flags=re.I)
+    else:
+        text=re.sub(r'<meta\s+name="theme-color"\s+content="[^"]*"\s*/?>', '<meta name="theme-color" content="#f8f1df">', text, count=1, flags=re.I)
 
     if "guide-site-header" not in text:
         text,n=re.subn(r'<body([^>]*)>', lambda m: '<body'+m.group(1)+'>'+HEADER, text, count=1, flags=re.I)
