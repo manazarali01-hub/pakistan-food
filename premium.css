@@ -1319,3 +1319,14 @@ body:not(.dark) main img {
   .guide-site-links a{min-height:34px;display:inline-flex;align-items:center}
 }
 /* END ADSENSE GUIDE NAVIGATION */
+
+
+/* Accessible guide tap targets — AdSense pre-review QA */
+.guide-trustline a,
+.guide .crumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding-block: 4px;
+}
+/* END accessible guide tap targets */
