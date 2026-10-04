@@ -4,7 +4,7 @@
   "category": "Snacks",
   "time": "20 min",
   "serves": 4,
-  "image": "assets/recipe-images/chana-chaat.webp",
+  "image": "assets/recipe-images/chana-chaat-v2.webp",
   "description": "Tangy Pakistani chana chaat with tender chickpeas, potatoes, fresh vegetables, tamarind chutney and chaat masala.",
   "ingredients": [
     "2 cups boiled chickpeas, drained and tender",
@@ -27,8 +27,8 @@
   "prep_time_iso": "PT20M",
   "total_time_iso": "PT20M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani chana chaat with tender chickpeas, potato, tomato, onion, tamarind chutney and coriander",
-  "image_caption": "Chana chaat tossed with tender chickpeas, cooled potato, fresh vegetables and tangy tamarind chutney.",
+  "image_alt": "Pakistani chana chaat with chickpeas, tomato, onion, coriander and tangy seasoning",
+  "image_caption": "Chana chaat with boiled chickpeas, tomato, onion and coriander in a tangy masala.",
   "technique": "The chickpeas must be tender and well drained before assembly, while the potatoes must be cool enough to hold their shape. Add chutney gradually because its concentration varies and excess liquid quickly makes the chaat soupy.",
   "doneness_cues": [
     "A chickpea should mash easily between the fingers without a hard chalky centre.",
@@ -67,8 +67,10 @@
       "answer": "Prepare the cooked components ahead, but combine fresh vegetables and chutney closer to serving for better texture."
     }
   ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Chana_Chaat.jpg",
-  "image_author": "Rashmiwalia85",
-  "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chaaney_Ki_Chat.jpg",
+  "image_author": "Roboture",
+  "image_license": "CC BY-SA 3.0",
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "image_creator": "Roboture",
+  "image_source_label": "Wikimedia Commons"
 }
