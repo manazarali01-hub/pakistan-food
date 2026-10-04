@@ -953,3 +953,329 @@ body:not(.dark) .hero-stats {
   align-items:center;
   padding:6px 2px;
 }
+
+
+/* =========================================================
+   PREMIUM IVORY SITE THEME — 2026-10-04
+   Whole-site warm ivory treatment while preserving natural
+   food color, Pakistan green identity and readable contrast.
+========================================================= */
+body:not(.dark) {
+  --bg: #f8f1df;
+  --surface: #fffaf0;
+  --surface-2: #f3ead5;
+  --text: #30291e;
+  --muted: #746956;
+  --border: #dfd0b4;
+  --primary: #0b5a36;
+  --primary-dark: #074529;
+  --secondary: #b68b45;
+  --gold: #c59d55;
+  --shadow: 0 16px 42px rgba(91, 69, 34, .10);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255,255,255,.72), transparent 34%),
+    linear-gradient(180deg, #fffaf0 0%, #f8f1df 58%, #f4ead4 100%);
+  color: var(--text);
+}
+
+body:not(.dark) .header,
+body:not(.dark) .mobile-menu,
+body:not(.dark) .dropdown-menu,
+body:not(.dark) .modal-box,
+body:not(.dark) .seo-site-header,
+body:not(.dark) .cat-site-header,
+body:not(.dark) .hub-site-header,
+body:not(.dark) .policy-header {
+  background: rgba(255, 250, 240, .96) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 8px 28px rgba(91, 69, 34, .08);
+  backdrop-filter: blur(12px);
+}
+
+body:not(.dark) .categories,
+body:not(.dark) .featured,
+body:not(.dark) .regions,
+body:not(.dark) .contact,
+body:not(.dark) .popular-recipes-premium,
+body:not(.dark) .cooking-help,
+body:not(.dark) .editorial-trust,
+body:not(.dark) .policy-page,
+body:not(.dark) .seo-recipe,
+body:not(.dark) .cat,
+body:not(.dark) .hub {
+  background: var(--bg) !important;
+  color: var(--text);
+}
+
+body:not(.dark) .recipes,
+body:not(.dark) .about,
+body:not(.dark) .recently-viewed {
+  background:
+    linear-gradient(180deg, rgba(255,250,240,.80), rgba(243,234,213,.92)) !important;
+}
+
+body:not(.dark) .category-box,
+body:not(.dark) .recipe-card,
+body:not(.dark) .featured-card,
+body:not(.dark) .search-box,
+body:not(.dark) .filter-btn,
+body:not(.dark) .saved-filter,
+body:not(.dark) .contact-card,
+body:not(.dark) .contact-form,
+body:not(.dark) .recipe-facts > span,
+body:not(.dark) .recipe-step-list > li,
+body:not(.dark) .recipe-faq,
+body:not(.dark) .affiliate-picks,
+body:not(.dark) .affiliate-pick,
+body:not(.dark) .popular-recipe-card,
+body:not(.dark) .cooking-help-card,
+body:not(.dark) .editorial-trust .trust-panel,
+body:not(.dark) .related-recipe-card,
+body:not(.dark) .related-guides,
+body:not(.dark) .recipe-note {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 10px 28px rgba(91, 69, 34, .07);
+}
+
+body:not(.dark) .related-guides a,
+body:not(.dark) .popular-recipes a,
+body:not(.dark) .recipe-intro-detail,
+body:not(.dark) .icon-btn,
+body:not(.dark) .menu-btn {
+  background: var(--surface-2) !important;
+  border-color: var(--border) !important;
+}
+
+body:not(.dark) input,
+body:not(.dark) select,
+body:not(.dark) textarea {
+  background: #fffdf7 !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+body:not(.dark) input:focus,
+body:not(.dark) select:focus,
+body:not(.dark) textarea:focus,
+body:not(.dark) .search-box:focus-within {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px rgba(11, 90, 54, .10) !important;
+}
+
+/* Ivory-forward hero: retain the food photo but wash the scene in warm cream. */
+body:not(.dark) .hero {
+  color: var(--text);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255,250,240,.98) 0%,
+      rgba(250,243,226,.94) 31%,
+      rgba(248,239,218,.76) 54%,
+      rgba(248,239,218,.42) 73%,
+      rgba(248,239,218,.20) 100%
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Lahori_Biryani.jpg?width=1600");
+  background-size: cover;
+  background-position: center;
+}
+
+body:not(.dark) .hero h1,
+body:not(.dark) .hero p,
+body:not(.dark) .hero-small {
+  color: var(--text);
+  text-shadow: 0 1px 0 rgba(255,255,255,.75);
+}
+
+body:not(.dark) .hero h1 span {
+  color: var(--primary);
+  text-decoration-color: rgba(182,139,69,.58);
+}
+
+body:not(.dark) .hero-small {
+  color: var(--primary);
+}
+
+body:not(.dark) .hero .btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(11,90,54,.18);
+}
+
+body:not(.dark) .hero .btn-primary:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+body:not(.dark) .hero .btn-outline {
+  background: rgba(255,250,240,.76);
+  color: var(--primary);
+  border-color: rgba(11,90,54,.34);
+  backdrop-filter: blur(8px);
+}
+
+body:not(.dark) .hero .btn-outline:hover {
+  background: #fffaf0;
+  color: var(--primary-dark);
+  border-color: var(--primary);
+}
+
+body:not(.dark) .hero-stats {
+  border-top-color: rgba(48,41,30,.18);
+}
+
+body:not(.dark) .hero-stats strong {
+  color: var(--text);
+}
+
+body:not(.dark) .hero-stats span {
+  color: var(--muted);
+}
+
+body:not(.dark) .hero::after {
+  color: rgba(182,139,69,.12);
+}
+
+/* Warm ivory food-photo glaze: deliberately subtle, not a sepia wash. */
+body:not(.dark) .recipe-image img,
+body:not(.dark) .featured-card img,
+body:not(.dark) .popular-recipe-card img,
+body:not(.dark) .related-recipe-card img,
+body:not(.dark) .seo-recipe figure img,
+body:not(.dark) .region-card > img,
+body:not(.dark) .modal-image img,
+body:not(.dark) .cat .card img,
+body:not(.dark) .hub-card img {
+  filter: sepia(.055) saturate(.96) brightness(1.02) contrast(1.015);
+}
+
+body:not(.dark) .recipe-image,
+body:not(.dark) .region-card,
+body:not(.dark) .featured-card {
+  background: #eee2c9;
+}
+
+/* Preserve strong green calls-to-action against the ivory canvas. */
+body:not(.dark) .btn-primary,
+body:not(.dark) .filter-btn.active,
+body:not(.dark) .saved-filter.active,
+body:not(.dark) .recipe-badge,
+body:not(.dark) .print-recipe,
+body:not(.dark) .recipe-lang-btn.active,
+body:not(.dark) .recipe-lang-btn[aria-selected="true"] {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+}
+
+body:not(.dark) .category-box:hover,
+body:not(.dark) .recipe-card:hover,
+body:not(.dark) .featured-card:hover,
+body:not(.dark) .popular-recipe-card:hover,
+body:not(.dark) .cooking-help-card:hover,
+body:not(.dark) .affiliate-pick:hover {
+  border-color: #c9b58e !important;
+  box-shadow: 0 18px 40px rgba(91, 69, 34, .13) !important;
+}
+
+/* Recipe and category pages also inherit the ivory canvas despite inline legacy whites. */
+body:not(.dark) .seo-recipe figcaption,
+body:not(.dark) .image-credit,
+body:not(.dark) .recipe-trustline,
+body:not(.dark) .recipe-faq p,
+body:not(.dark) .cooking-help-card span,
+body:not(.dark) .popular-recipe-card small,
+body:not(.dark) .related-recipe-card small {
+  color: var(--muted) !important;
+}
+
+body:not(.dark) .related-recipes,
+body:not(.dark) .popular-recipes,
+body:not(.dark) .cooking-tips,
+body:not(.dark) .recipe-guide,
+body:not(.dark) .recipe-faq,
+body:not(.dark) .recipe-detail-section {
+  border-top-color: var(--border) !important;
+}
+
+/* Replace the old dark-green footer/header blocks with premium ivory. */
+body:not(.dark) .footer,
+body:not(.dark) .seo-site-footer,
+body:not(.dark) .cat-site-footer,
+body:not(.dark) .hub-site-footer,
+body:not(.dark) .policy-footer {
+  background: #efe2c7 !important;
+  color: var(--text) !important;
+  border-top: 1px solid var(--border);
+}
+
+body:not(.dark) .footer a,
+body:not(.dark) .seo-site-footer a,
+body:not(.dark) .cat-site-footer a,
+body:not(.dark) .hub-site-footer a,
+body:not(.dark) .policy-footer a {
+  color: var(--primary) !important;
+}
+
+/* Keep the About background image warm even though it is a CSS background. */
+body:not(.dark) .about-image-main {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  box-shadow: 0 16px 38px rgba(91,69,34,.12);
+}
+
+body:not(.dark) .about-image-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,248,232,.13);
+  pointer-events: none;
+  z-index: 1;
+}
+
+body:not(.dark) .about-badge {
+  background: var(--primary);
+  color: #fff;
+  border: 5px solid #f8f1df;
+}
+
+/* Dark mode remains available, but uses a warmer charcoal instead of blue/black. */
+body.dark {
+  --bg: #17140f;
+  --surface: #211d16;
+  --surface-2: #2a241b;
+  --text: #f6eedf;
+  --muted: #cbbfae;
+  --border: #463c2d;
+  --primary: #8fd1a7;
+  --primary-dark: #6fbd8b;
+  --secondary: #d5b46f;
+  --gold: #d7b76f;
+}
+
+/* Mobile: increase the ivory wash so hero copy stays readable over food. */
+@media (max-width: 620px) {
+  body:not(.dark) .hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(255,250,240,.97) 0%,
+        rgba(250,243,226,.91) 55%,
+        rgba(248,239,218,.67) 78%,
+        rgba(248,239,218,.38) 100%
+      ),
+      url("https://commons.wikimedia.org/wiki/Special:FilePath/Lahori_Biryani.jpg?width=900");
+    background-position: 62% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:not(.dark) .recipe-card,
+  body:not(.dark) .featured-card,
+  body:not(.dark) .popular-recipe-card {
+    transition: none;
+  }
+}
+/* END PREMIUM IVORY SITE THEME */
