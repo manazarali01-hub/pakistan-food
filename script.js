@@ -134,7 +134,7 @@ function renderRecentlyViewed() {
     section.hidden = items.length === 0;
     grid.innerHTML = items.map(recipe => `
         <a class="recent-card" href="${recipePagePath(recipe)}">
-            <img src="${escapeHtml(sizedRecipeImage(recipe, 480))}" alt="${escapeHtml(recipeImageAlt(recipe))}" width="480" height="360" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+            <img src="${escapeHtml(sizedRecipeImage(recipe, 480))}" style="${escapeHtml(recipeImageStyle(recipe))}" alt="${escapeHtml(recipeImageAlt(recipe))}" width="480" height="360" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
             <span class="recent-card-copy">
                 <strong>${escapeHtml(recipe.name)}</strong>
                 ${recipe.nameUrdu ? `<span class="recipe-name-urdu" lang="ur" dir="rtl">${escapeHtml(recipe.nameUrdu)}</span>` : ""}
@@ -161,6 +161,13 @@ function safeImageUrl(value) {
 }
 function recipeImageAlt(recipe) {
     return String(recipe?.image_alt || recipe?.name || "Pakistani recipe").trim();
+}
+function recipeImageStyle(recipe) {
+    const rawZoom = Number(recipe?.image_zoom);
+    const zoom = Number.isFinite(rawZoom) ? Math.min(1.4, Math.max(1, rawZoom)) : 1;
+    const rawPosition = String(recipe?.image_position || "center").trim();
+    const position = /^[0-9.% a-zA-Z-]+$/.test(rawPosition) ? rawPosition : "center";
+    return `--recipe-image-zoom:${zoom};--recipe-image-position:${position}`;
 }
 function sizedRecipeImage(recipe, width) {
     let url = safeImageUrl(recipe?.image);
@@ -258,6 +265,7 @@ function renderRecipes() {
 
                 <img
                     src="${escapeHtml(sizedRecipeImage(recipe, 640))}"
+                    style="${escapeHtml(recipeImageStyle(recipe))}"
                     alt="${escapeHtml(recipeImageAlt(recipe))}"
                     loading="lazy"
                     decoding="async"
@@ -533,6 +541,7 @@ function openRecipe(id) {
         <img
             class="modal-image"
             src="${escapeHtml(sizedRecipeImage(recipe, 960))}"
+            style="${escapeHtml(recipeImageStyle(recipe))}"
             alt="${escapeHtml(recipeImageAlt(recipe))}"
             width="900"
             height="675"
