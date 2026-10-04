@@ -4,7 +4,7 @@
   "category": "Rice",
   "time": "65 min",
   "serves": 5,
-  "image": "assets/chicken-pulao.webp",
+  "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Yakhni_Pulao.jpg?width=1280",
   "description": "Fragrant Pakistani chicken pulao with bone-in chicken, basmati rice and aromatic yakhni-style stock, finished on low heat for separate, flavourful grains.",
   "ingredients": [
     "750 g bone-in chicken",
@@ -38,8 +38,8 @@
   "cook_time_iso": "PT45M",
   "total_time_iso": "PT1H5M",
   "date_modified": "2026-10-04",
-  "image_alt": "Pakistani chicken pulao with separate basmati rice, bone-in chicken and whole aromatic spices",
-  "image_caption": "Chicken pulao cooked in an aromatic yakhni-style stock with separate basmati grains.",
+  "image_alt": "Chicken yakhni pulao with separate basmati rice, bone-in chicken, fried onion and fresh coriander",
+  "image_caption": "Chicken yakhni pulao with separate basmati grains, bone-in chicken and aromatic fried onion.",
   "technique": "Pulao flavour is carried by the seasoned cooking liquid. Build a well-flavoured chicken and spice base first, then add rice with a measured amount of liquid and finish with controlled steam rather than repeatedly opening and stirring the pot.",
   "doneness_cues": [
     "The stock should taste pleasantly seasoned before the rice goes in; weak stock usually produces weak pulao.",
@@ -72,5 +72,9 @@
       "question": "Should pulao rice be soaked?",
       "answer": "A short soak can help many basmati varieties, but the ideal time depends on the rice. Follow the behaviour of your regular brand and drain it well."
     }
-  ]
+  ],
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Yakhni_Pulao.jpg",
+  "image_author": "Vilalali",
+  "image_license": "CC BY-SA 4.0",
+  "serving": "Serve hot with raita, green chutney or a simple onion-cucumber salad."
 }
