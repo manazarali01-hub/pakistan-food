@@ -145,11 +145,9 @@ def crop_4x3(im, zoom=1.0, focal_x=0.5, focal_y=0.5):
     top = max(0, min(h - crop_h, cy - crop_h // 2))
     out = im.crop((left, top, left + crop_w, top + crop_h))
 
-    target_w = min(1440, out.width)
-    target_h = int(round(target_w * 3 / 4))
-    if target_h > out.height:
-        target_h = out.height
-        target_w = int(round(target_h * 4 / 3))
+    max_w = min(1440, out.width, int(out.height * 4 / 3))
+    target_w = max(4, (max_w // 4) * 4)
+    target_h = (target_w // 4) * 3
     if out.size != (target_w, target_h):
         out = out.resize((target_w, target_h), Image.Resampling.LANCZOS)
     return out
