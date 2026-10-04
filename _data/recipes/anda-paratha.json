@@ -70,8 +70,10 @@
       "answer": "Some styles do, but this recipe cooks the egg separately for easier doneness control."
     }
   ],
-  "image_source": "https://commons.wikimedia.org/wiki/File:Anda_Paratha.jpg",
-  "image_author": "Vinodbarc",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Chotpot_mughlai_paratha.jpg",
+  "image_author": "Rajeeb Dutta",
   "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "image_creator": "Rajeeb Dutta",
+  "image_source_label": "Wikimedia Commons"
 }
