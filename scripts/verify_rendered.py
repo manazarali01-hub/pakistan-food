@@ -158,10 +158,25 @@ for url in urls:
 
         recipe_item = recipe_items[0]
         required_schema = ("name", "image", "description", "recipeCategory", "recipeCuisine",
-                           "recipeIngredient", "recipeInstructions", "totalTime", "recipeYield")
+                           "keywords", "recipeIngredient", "recipeInstructions", "totalTime", "recipeYield")
         missing = [field for field in required_schema if not recipe_item.get(field)]
         if missing:
             errors.append(f"recipe schema missing {', '.join(missing)}: {url}")
+
+        source_keywords = source_recipe.get("keywords")
+        if isinstance(source_keywords, list) and source_keywords:
+            expected_keywords = ", ".join(str(item).strip() for item in source_keywords if str(item).strip())
+        else:
+            recipe_name = str(source_recipe.get("name") or "").strip()
+            expected_keywords = (
+                f"authentic {recipe_name} recipe, traditional {recipe_name}, "
+                f"homemade {recipe_name}, easy {recipe_name}"
+            )
+        if recipe_item.get("keywords") != expected_keywords:
+            errors.append(
+                f"recipe schema keywords mismatch {url}: "
+                f"{recipe_item.get('keywords')!r} != {expected_keywords!r}"
+            )
 
         instructions = recipe_item.get("recipeInstructions") or []
         if len(instructions) < 5:
