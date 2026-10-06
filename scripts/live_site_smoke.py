@@ -182,6 +182,8 @@ if f"assets/recipe-images/halwa-puri-v2.webp?v={RECIPE_IMAGE_VERSION}" not in ha
     raise SystemExit("/recipes/halwa-puri.html: versioned local recipe image URL missing")
 if '"@type": "Recipe"' not in halwa and '"@type":"Recipe"' not in halwa:
     raise SystemExit("/recipes/halwa-puri.html: Recipe structured data marker missing")
+if not re.search(r'"keywords"\\s*:\\s*"[^"]+"', halwa):
+    raise SystemExit("/recipes/halwa-puri.html: Recipe structured data keywords missing")
 if "noindex" in re.search(r'<meta[^>]+name=["\']robots["\'][^>]*>', halwa, re.I).group(0).lower() if re.search(r'<meta[^>]+name=["\']robots["\'][^>]*>', halwa, re.I) else True:
     raise SystemExit("/recipes/halwa-puri.html: expected an indexable robots meta tag")
 
