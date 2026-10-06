@@ -41,6 +41,13 @@
   {% when 'Desserts' %}{% assign schema_recipe_category = 'Dessert' %}
   {% when 'Drinks' %}{% assign schema_recipe_category = 'Drink' %}
 {% endcase %}
+{% capture schema_keywords %}
+{% if recipe.keywords and recipe.keywords != empty %}
+{{ recipe.keywords | join: ', ' }}
+{% else %}
+authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ recipe.name }}, easy {{ recipe.name }}
+{% endif %}
+{% endcapture %}
 {% assign time_parts = recipe.time | split: ' ' %}
 {% if recipe.time contains 'hr' %}
   {% assign time_hours = time_parts[0] %}
@@ -141,6 +148,7 @@
         "author": {"@id": "https://pakistanfoodrecipes.top/#organization"},
         "recipeCuisine": "Pakistani",
         "recipeCategory": {{ schema_recipe_category | jsonify }},
+        "keywords": {{ schema_keywords | strip | jsonify }},
         {% if recipe.date_modified %}"dateModified": {{ recipe.date_modified | jsonify }},{% endif %}
         {% if recipe.prep_time_iso %}"prepTime": {{ recipe.prep_time_iso | jsonify }},{% endif %}
         {% if recipe.cook_time_iso %}"cookTime": {{ recipe.cook_time_iso | jsonify }},{% endif %}
