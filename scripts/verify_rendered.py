@@ -181,6 +181,15 @@ for url in urls:
         instructions = recipe_item.get("recipeInstructions") or []
         if len(instructions) < 5:
             errors.append(f"recipe schema has fewer than 5 detailed steps: {url}")
+        for index, instruction in enumerate(instructions, start=1):
+            if not isinstance(instruction, dict):
+                errors.append(f"recipe instruction {index} is not a structured HowToStep: {url}")
+                continue
+            if not instruction.get("image") and not instruction.get("video"):
+                errors.append(f"recipe instruction {index} has neither image nor video: {url}")
+            image_value = instruction.get("image")
+            if image_value and isinstance(image_value, str) and not image_value.startswith(("https://", "http://")):
+                errors.append(f"recipe instruction {index} image is not absolute: {url} -> {image_value}")
 
         duration = expected_duration(source_recipe)
         if duration and recipe_item.get("totalTime") != duration:
