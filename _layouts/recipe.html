@@ -165,8 +165,23 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
             "position": {{ forloop.index }},
             "name": {{ step | truncatewords: 6 | jsonify }},
             "text": {{ step | jsonify }},
-            "url": "{{ canonical_url }}#step-{{ forloop.index }}"{% if recipe.step_images %}{% assign step_index = forloop.index0 %}{% assign step_image = recipe.step_images[step_index] %}{% if step_image %},
-            "image": {{ step_image | jsonify }}{% endif %}{% endif %}
+            {% assign schema_step_image = seo_image %}
+            {% if recipe.step_images %}
+              {% assign step_index = forloop.index0 %}
+              {% assign step_image = recipe.step_images[step_index] %}
+              {% if step_image %}
+                {% if step_image contains 'http://' or step_image contains 'https://' %}
+                  {% assign schema_step_image = step_image %}
+                {% else %}
+                  {% assign step_image_local = step_image %}
+                  {% assign step_first_character = step_image | slice: 0, 1 %}
+                  {% if step_first_character == '/' %}{% assign step_image_local = step_image | remove_first: '/' %}{% endif %}
+                  {% assign schema_step_image = 'https://pakistanfoodrecipes.top/' | append: step_image_local %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+            "url": "{{ canonical_url }}#step-{{ forloop.index }}",
+            "image": {{ schema_step_image | jsonify }}
           }{% unless forloop.last %},{% endunless %}
           {% endfor %}
         ]
