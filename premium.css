@@ -2965,3 +2965,38 @@ body.dark .pf-category-icon .pf-picto{filter:drop-shadow(0 2px 2px rgba(0,0,0,.2
   body:not(.dark) :is(input[type="checkbox"],input[type="radio"])::before{transition:none!important;}
 }
 /* END PREMIUM DETAIL PASS */
+
+/* MOBILE PHOTO AND GLASS PERFORMANCE · 2026-10-08 */
+/* Same credited Pexels photography, but right-sized for 320–760px screens.
+   Reduces background transfer without changing recipe photos or content URLs. */
+@media (max-width:760px){
+  body:not(.dark){
+    --pf-forest-photo:url("https://images.pexels.com/photos/30744638/pexels-photo-30744638.jpeg?auto=compress&cs=tinysrgb&w=720&q=68");
+    --pf-sunleaf-photo:url("https://images.pexels.com/photos/35821614/pexels-photo-35821614.jpeg?auto=compress&cs=tinysrgb&w=720&q=68");
+    --pf-greenleaf-photo:url("https://images.pexels.com/photos/36728536/pexels-photo-36728536.jpeg?auto=compress&cs=tinysrgb&w=720&q=68");
+    --pf-canopy-photo:url("https://images.pexels.com/photos/33252555/pexels-photo-33252555.jpeg?auto=compress&cs=tinysrgb&w=720&q=68");
+    --pf-morning-photo:url("https://images.pexels.com/photos/5607884/pexels-photo-5607884.jpeg?auto=compress&cs=tinysrgb&w=720&q=68");
+  }
+  body:not(.dark) :is(.recipe-grid .recipe-card,.featured-card,.popular-recipe-card,.category-box,.contact-card){
+    -webkit-backdrop-filter:blur(4px) saturate(112%)!important;
+    backdrop-filter:blur(4px) saturate(112%)!important;
+  }
+  body:not(.dark) :is(.recipe-grid .recipe-card,.featured-card,.popular-recipe-card,.category-box,.contact-card){
+    transition-duration:.16s!important;
+  }
+  body:not(.dark) main>.section{
+    background-attachment:scroll!important;
+  }
+}
+@media (max-width:420px){
+  body:not(.dark) :is(.recipe-grid .recipe-card,.featured-card,.popular-recipe-card){
+    -webkit-backdrop-filter:blur(3px) saturate(106%)!important;
+    backdrop-filter:blur(3px) saturate(106%)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body:not(.dark) :is(.recipe-grid .recipe-card,.featured-card,.popular-recipe-card,.category-box,.contact-card){
+    transition:none!important;
+  }
+}
+/* END MOBILE PHOTO AND GLASS PERFORMANCE */
