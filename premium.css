@@ -2663,3 +2663,305 @@ body:not(.dark) :is(.filter-btn.active,.filter-btn:hover){
   }
 }
 /* END REAL PHOTO GLASS V2 · SEO and paths untouched */
+
+/* PREMIUM DETAIL PASS · ICONS / TYPOGRAPHY / CHOICES / BORDERS · 2026-10-08 */
+/* This pass is limited to presentation. All existing links, script selectors,
+   search/filter functions, favorites storage and SEO markup remain intact. */
+body:not(.dark){
+  --pf-border-fern:#78b797;
+  --pf-border-honey:#dfb979;
+  --pf-border-sky:#9ac5d8;
+  --pf-text-deep:#183f2d;
+  --pf-text-soft:#3f5e4a;
+}
+/* Premium hierarchy: serif editorial headlines, readable action/body text,
+   slightly calligraphic emphasis using installed system fonts only. */
+body:not(.dark){
+  font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  font-synthesis:weight;
+}
+body:not(.dark) :is(.hero h1,.section-heading h2,.about-content h2,.recipe-body h3,.featured-card-content strong,.seo-recipe h1,.seo-recipe h2,.cat h1,.cat h2,.hub h1,.hub h2,.guide h1,.policy-page h1){
+  font-family:Georgia,"Palatino Linotype","Book Antiqua",serif!important;
+  font-weight:750;
+  letter-spacing:-.018em;
+  text-wrap:balance;
+}
+body:not(.dark) .hero h1 span{
+  font-style:italic;
+  font-family:"Palatino Linotype","Book Antiqua",Georgia,serif!important;
+  letter-spacing:-.027em;
+  text-underline-offset:.13em;
+}
+body:not(.dark) :is(.section-heading h2,.seo-recipe h1,.cat h1,.hub h1){
+  text-shadow:0 1px 0 rgba(255,255,255,.64);
+}
+body:not(.dark) :is(.recipe-body h3,.recipe-title-link,.featured-card-content strong,.popular-recipe-card strong,.cat .card strong){
+  color:var(--pf-text-deep)!important;
+  line-height:1.23!important;
+}
+body:not(.dark) :is(.section-heading p,.featured-card-content>span:nth-of-type(2),.recipe-body>p,.cooking-help-card span,.recipe-detail-section p,.cat .card .card-description){
+  color:var(--pf-text-soft)!important;
+  font-weight:510;
+  line-height:1.7;
+}
+body:not(.dark) .section-heading>span,
+body:not(.dark) .section-label{
+  display:inline-flex;
+  align-items:center;
+  max-width:100%;
+  padding:7px 14px;
+  border:1px solid rgba(110,174,128,.42);
+  border-radius:999px;
+  background:rgba(236,249,239,.78);
+  color:#16633e!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.73);
+  letter-spacing:.105em;
+  font-size:clamp(.71rem,1.25vw,.8rem);
+}
+/* Original custom pictograms, not icon-font glyphs or AI-generated pictures. */
+.pf-picto{
+  display:block;
+  width:1.45em;
+  height:1.45em;
+  flex:none;
+  overflow:visible;
+  vertical-align:middle;
+  filter:drop-shadow(0 2px 2px rgba(10,75,49,.16));
+}
+body:not(.dark) .category-box .pf-category-icon{
+  display:grid;
+  place-items:center;
+  width:clamp(64px,6vw,79px);
+  height:clamp(64px,6vw,79px);
+  margin:0 auto 9px;
+  border:2px solid rgba(255,255,255,.86)!important;
+  border-radius:24px;
+  background:linear-gradient(142deg,rgba(255,255,255,.95),rgba(211,241,219,.74))!important;
+  box-shadow:0 11px 26px rgba(22,99,57,.19),inset 0 3px rgba(255,255,255,.97)!important;
+  transform:perspective(250px) rotateX(5deg);
+}
+body:not(.dark) .category-box .pf-category-icon .pf-picto{
+  width:67%;
+  height:67%;
+  transition:transform .24s ease;
+}
+body:not(.dark) .category-box:is(:hover,:focus-visible) .pf-category-icon .pf-picto{
+  transform:translateY(-3px) scale(1.06);
+}
+body:not(.dark) .category-box:nth-child(3n+2) .pf-category-icon{
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(255,223,174,.82))!important;
+}
+body:not(.dark) .category-box:nth-child(3n+3) .pf-category-icon{
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(211,236,250,.83))!important;
+}
+/* Menu and search pictograms have a consistent raised-glass footprint. */
+.pf-icon-link{
+  display:flex!important;
+  align-items:center;
+  gap:10px;
+}
+.pf-icon-link .pf-picto{width:27px;height:27px;}
+body:not(.dark) .dropdown-menu .pf-icon-link{
+  border-radius:12px;
+  padding:9px 12px;
+  min-height:45px;
+  font-weight:750;
+}
+body:not(.dark) .dropdown-menu .pf-icon-link:hover{
+  background:linear-gradient(125deg,#ebf7ec,#fff5e4)!important;
+  color:#145c3b!important;
+}
+body:not(.dark) .mobile-menu .pf-icon-link .pf-picto{width:28px;height:28px;}
+body:not(.dark) .mobile-menu .pf-icon-link{
+  min-height:48px;
+  border-radius:12px;
+}
+body:not(.dark) .search-box>.pf-search-icon{
+  display:grid;
+  place-items:center;
+  flex:none;
+  width:41px;
+  height:41px;
+  border-radius:13px;
+  background:linear-gradient(140deg,#f8feff,#d5f2ed);
+  border:1.5px solid #a0d6c1;
+  box-shadow:inset 0 1px #fff,0 4px 10px rgba(27,107,69,.11);
+}
+body:not(.dark) .search-box>.pf-search-icon .pf-picto{width:26px;height:26px;}
+body:not(.dark) .contact-icon.pf-contact-icon{
+  display:grid;
+  place-items:center;
+  width:62px;
+  height:62px;
+  background:linear-gradient(130deg,#fafffa,#c5ecdf)!important;
+  border:2px solid rgba(255,255,255,.92);
+  box-shadow:0 13px 23px rgba(22,81,56,.16),inset 0 3px rgba(255,255,255,.96);
+}
+body:not(.dark) .contact-icon.pf-contact-icon .pf-picto{width:37px;height:37px;}
+body:not(.dark) .contact-card:nth-child(2) .pf-contact-icon{background:linear-gradient(140deg,#fff,#d7ecfb)!important;}
+body:not(.dark) .contact-card:nth-child(3) .pf-contact-icon{background:linear-gradient(140deg,#fff,#ffe4c5)!important;}
+body:not(.dark) :is(.icon-btn,.menu-btn){
+  display:inline-grid;
+  place-items:center;
+  min-width:46px;
+  min-height:46px;
+  border:2px solid #a9ccb7!important;
+  border-radius:18px!important;
+  background:linear-gradient(135deg,rgba(254,255,250,.95),rgba(217,243,229,.90))!important;
+  color:#255840!important;
+  box-shadow:0 8px 20px rgba(17,80,46,.10),inset 0 2px rgba(255,255,255,.92)!important;
+  font-size:1.43rem;
+  line-height:1;
+}
+body:not(.dark) :is(.icon-btn,.menu-btn):hover{
+  border-color:#68ab85!important;
+  box-shadow:0 12px 25px rgba(18,80,48,.18)!important;
+}
+body:not(.dark) .icon-btn[aria-pressed="true"]{
+  border-color:#ddb47d!important;
+  background:linear-gradient(135deg,#fff6e4,#ffecd4)!important;
+}
+/* Borders: layered outer ring + internal reflection. Selected states visible
+   by color AND shape, not only a subtle tint. */
+body:not(.dark) :is(.category-box,.featured-card,.popular-recipe-card,.recipe-card,.contact-card,.hub-card,.cat .card,.trust-panel){
+  outline:1px solid rgba(56,126,82,.18);
+  outline-offset:1px;
+}
+body:not(.dark) :is(.category-box,.featured-card,.popular-recipe-card,.recipe-card,.contact-card,.hub-card,.cat .card):is(:hover,:focus-within){
+  outline:2px solid rgba(77,158,111,.48);
+  outline-offset:2px;
+}
+body:not(.dark) .category-box:nth-child(3n+2){outline-color:rgba(215,154,75,.32);}
+body:not(.dark) .category-box:nth-child(3n+3){outline-color:rgba(96,169,201,.35);}
+body:not(.dark) .recipe-step-list>li{
+  border-left:4px solid #65b288!important;
+  box-shadow:0 8px 22px rgba(23,84,51,.09),inset 0 1px #fff;
+}
+body:not(.dark) .recipe-step-list>li:nth-child(3n+2){border-left-color:#d6a65a!important;}
+body:not(.dark) .recipe-step-list>li:nth-child(3n+3){border-left-color:#89afce!important;}
+/* Premium CHECKBOX/RADIO controls, if present in forms now or later. */
+body:not(.dark) input[type="checkbox"],
+body:not(.dark) input[type="radio"]{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  display:inline-grid!important;
+  place-content:center;
+  width:22px!important;
+  height:22px!important;
+  min-width:22px;
+  margin:0 .45em 0 0;
+  padding:0!important;
+  vertical-align:middle;
+  border:2px solid #6ba98b!important;
+  background:linear-gradient(135deg,#fff,#e8f8ef)!important;
+  box-shadow:0 3px 8px rgba(33,91,55,.11),inset 0 1px #fff!important;
+  cursor:pointer;
+  flex:none;
+}
+body:not(.dark) input[type="checkbox"]{border-radius:7px!important;}
+body:not(.dark) input[type="radio"]{border-radius:50%!important;}
+body:not(.dark) input[type="checkbox"]::before{
+  content:"";
+  display:block;
+  width:6px;
+  height:11px;
+  border:solid #fff;
+  border-width:0 3px 3px 0;
+  transform:rotate(45deg) scale(0);
+  transition:transform .13s ease;
+  margin:-3px 0 1px 0;
+}
+body:not(.dark) input[type="checkbox"]:checked::before{transform:rotate(45deg) scale(1);}
+body:not(.dark) input[type="radio"]::before{
+  content:"";
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#fff;
+  transform:scale(0);
+  transition:transform .13s ease;
+}
+body:not(.dark) input[type="radio"]:checked::before{transform:scale(1);}
+body:not(.dark) :is(input[type="checkbox"],input[type="radio"]):checked{
+  background:linear-gradient(135deg,#136d46,#269567)!important;
+  border-color:#116c45!important;
+  box-shadow:0 4px 10px rgba(25,114,69,.2)!important;
+}
+body:not(.dark) :is(input[type="checkbox"],input[type="radio"]):focus-visible{
+  outline:3px solid #e5b765!important;
+  outline-offset:3px;
+}
+body:not(.dark) :is(input[type="checkbox"],input[type="radio"]):disabled{opacity:.47;cursor:not-allowed;}
+/* Favorites are *toggle buttons*, not HTML checkboxes. Preserve aria-pressed semantics. */
+body:not(.dark) .favorite-btn,
+body:not(.dark) .modal-favorite{
+  border:2px solid #a9d2b6!important;
+  background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(228,247,235,.91))!important;
+  color:#1b7450!important;
+  box-shadow:0 8px 17px rgba(11,62,34,.14),inset 0 1px #fff!important;
+  font-weight:900;
+}
+body:not(.dark) .favorite-btn[aria-pressed="true"],
+body:not(.dark) .modal-favorite[aria-pressed="true"]{
+  background:linear-gradient(135deg,#d9f5e1,#fff2ed)!important;
+  border-color:#d1a56b!important;
+  color:#ad3958!important;
+  box-shadow:0 7px 17px rgba(153,66,63,.14)!important;
+}
+body:not(.dark) .favorite-btn[aria-pressed="true"]::after{
+  content:"✓";
+  position:absolute;
+  right:-4px;
+  bottom:-4px;
+  display:grid;
+  place-items:center;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  background:#1c8b60;
+  color:#fff;
+  border:2px solid #fff;
+  font:800 11px/1 system-ui,sans-serif;
+}
+body:not(.dark) .filter-btn.active::before,
+body:not(.dark) .saved-filter[aria-pressed="true"]::before{
+  content:"✓";
+  font-weight:950;
+  font-size:.82em;
+  margin-inline-end:5px;
+  color:#fff;
+}
+body:not(.dark) .filter-btn[aria-pressed="true"],
+body:not(.dark) .filter-btn.active{border-width:2px!important;}
+/* Input elements use differentiated colored borders and visible focus rings. */
+body:not(.dark) .contact-form :is(input[type="text"],input[type="email"],textarea){
+  min-height:49px;
+  font-family:inherit;
+  font-size:1rem;
+  color:#1d4534!important;
+  border-width:2px!important;
+  font-weight:550;
+  letter-spacing:0;
+}
+body:not(.dark) .contact-form :is(input,textarea):focus{
+  outline:3px solid rgba(218,178,102,.55)!important;
+  outline-offset:2px;
+}
+/* The check styles remain usable when user switches into dark mode. */
+body.dark :is(input[type="checkbox"],input[type="radio"]){accent-color:#75d6a0;}
+body.dark .pf-icon-link .pf-picto,
+body.dark .pf-category-icon .pf-picto{filter:drop-shadow(0 2px 2px rgba(0,0,0,.22));}
+@media (max-width:760px){
+  body:not(.dark) .category-box .pf-category-icon{width:62px;height:62px;border-radius:19px;}
+  body:not(.dark) main>.section .section-heading{padding:18px 14px!important;}
+  body:not(.dark) main>.section .section-heading h2{font-size:clamp(1.85rem,7.2vw,2.55rem)!important;}
+  body:not(.dark) main>.section .section-heading p{font-size:clamp(.97rem,3.65vw,1.05rem)!important;line-height:1.6;}
+  body:not(.dark) .contact-icon.pf-contact-icon{width:55px;height:55px;}
+  body:not(.dark) .contact-icon.pf-contact-icon .pf-picto{width:33px;height:33px;}
+  body:not(.dark) :is(.category-box,.filter-btn,.saved-filter,.surprise-recipe,.menu-btn,.icon-btn){-webkit-tap-highlight-color:transparent;}
+}
+@media(prefers-reduced-motion:reduce){
+  body:not(.dark) .pf-category-icon .pf-picto,
+  body:not(.dark) :is(input[type="checkbox"],input[type="radio"])::before{transition:none!important;}
+}
+/* END PREMIUM DETAIL PASS */
