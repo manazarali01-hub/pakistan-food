@@ -2423,3 +2423,243 @@ body:not(.dark) main :is(.featured-card,.popular-recipe-card,.recipe-card,.regio
     font-size:.82rem!important;
   }
 }
+
+/* REAL PHOTO GLASS V2 — FOLIAGE, FROSTED PANELS & VISIBLE DEPTH · 2026-10-08 */
+/* Real, commercially reusable nature photography by Pexels contributors.
+   Source URLs/license are documented in image-credits.html.
+   All dish images remain the original, non-AI, licensed recipe photographs. */
+body:not(.dark){
+  --pf-forest-photo:url("https://images.pexels.com/photos/30744638/pexels-photo-30744638.jpeg?auto=compress&cs=tinysrgb&w=1200&q=76");
+  --pf-sunleaf-photo:url("https://images.pexels.com/photos/35821614/pexels-photo-35821614.jpeg?auto=compress&cs=tinysrgb&w=1200&q=76");
+  --pf-greenleaf-photo:url("https://images.pexels.com/photos/36728536/pexels-photo-36728536.jpeg?auto=compress&cs=tinysrgb&w=1200&q=76");
+  --pf-canopy-photo:url("https://images.pexels.com/photos/33252555/pexels-photo-33252555.jpeg?auto=compress&cs=tinysrgb&w=1200&q=76");
+  --pf-morning-photo:url("https://images.pexels.com/photos/5607884/pexels-photo-5607884.jpeg?auto=compress&cs=tinysrgb&w=1200&q=76");
+  --pf-frost:rgba(255,255,251,.76);
+  --pf-glass-border:rgba(255,255,255,.86);
+  --pf-deep-ink:#153d2c;
+  --pf-glass-shadow:0 18px 48px rgba(17,75,49,.16),inset 0 1px 0 rgba(255,255,255,.91);
+}
+/* A visibly photographic background, not a flat green color.
+   Each section has a DIFFERENT leaf/canopy image and a contrasting light wash. */
+body:not(.dark) main > .featured.section{
+  background-image:linear-gradient(125deg,rgba(236,251,237,.69),rgba(255,250,225,.61)),var(--pf-forest-photo)!important;
+  background-color:#e2f3dc!important;
+  background-size:cover!important;
+  background-position:center 51%!important;
+}
+body:not(.dark) main > .popular-recipes-premium.section{
+  background-image:linear-gradient(110deg,rgba(240,250,231,.70),rgba(236,248,243,.66)),var(--pf-canopy-photo)!important;
+  background-color:#edf7e6!important;
+  background-size:cover!important;
+  background-position:center 45%!important;
+}
+body:not(.dark) main > .categories.section{
+  background-image:linear-gradient(125deg,rgba(255,248,228,.69),rgba(230,249,240,.62)),var(--pf-sunleaf-photo)!important;
+  background-color:#f1f8e5!important;
+  background-size:cover!important;
+  background-position:center 35%!important;
+}
+body:not(.dark) main > .cooking-help.section{
+  background-image:linear-gradient(130deg,rgba(232,245,237,.72),rgba(246,250,226,.64)),var(--pf-greenleaf-photo)!important;
+  background-color:#e8f7eb!important;
+  background-size:cover!important;
+  background-position:center 50%!important;
+}
+body:not(.dark) main > .recipes.section{
+  background-image:linear-gradient(120deg,rgba(235,250,246,.76),rgba(248,250,229,.67)),var(--pf-morning-photo)!important;
+  background-color:#e6f6ee!important;
+  background-size:cover!important;
+  background-position:center 46%!important;
+}
+body:not(.dark) main > .regions.section{
+  background-image:linear-gradient(135deg,rgba(236,250,241,.70),rgba(255,246,227,.67)),var(--pf-forest-photo)!important;
+  background-color:#e5f4e9!important;
+  background-size:cover!important;
+  background-position:center 62%!important;
+}
+body:not(.dark) main > .about.section{
+  background-image:linear-gradient(112deg,rgba(240,249,244,.77),rgba(255,248,231,.66)),var(--pf-greenleaf-photo)!important;
+  background-color:#eaf8ed!important;
+  background-size:cover!important;
+  background-position:center 50%!important;
+}
+body:not(.dark) main > .editorial-trust.section{
+  background-image:linear-gradient(135deg,rgba(238,250,240,.73),rgba(247,247,235,.66)),var(--pf-canopy-photo)!important;
+  background-color:#ebf6e9!important;
+  background-size:cover!important;
+  background-position:center 50%!important;
+}
+body:not(.dark) main > .contact.section{
+  background-image:linear-gradient(120deg,rgba(235,250,243,.69),rgba(248,247,232,.65)),var(--pf-sunleaf-photo)!important;
+  background-color:#ebf6e9!important;
+  background-size:cover!important;
+  background-position:center 60%!important;
+}
+/* Heading plate shows the scene THROUGH glass; premium serif headings stay dark. */
+body:not(.dark) main > .section .section-heading{
+  position:relative;
+  width:min(92%,790px);
+  max-width:790px;
+  margin-inline:auto;
+  padding:clamp(17px,3.3vw,34px) clamp(16px,3.8vw,38px)!important;
+  border:2px solid var(--pf-glass-border);
+  border-radius:clamp(22px,3vw,34px);
+  background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(238,252,244,.60))!important;
+  -webkit-backdrop-filter:blur(15px) saturate(140%);
+  backdrop-filter:blur(15px) saturate(140%);
+  box-shadow:var(--pf-glass-shadow);
+}
+body:not(.dark) main > .section .section-heading::after{
+  content:"";
+  position:absolute;
+  inset:5px 6px auto 6px;
+  height:22%;
+  border-radius:25px 25px 60% 60%;
+  background:linear-gradient(180deg,rgba(255,255,255,.42),transparent);
+  pointer-events:none;
+}
+body:not(.dark) main > .section .section-heading h2{color:#193c2b!important;text-shadow:0 1px rgba(255,255,255,.78);}
+body:not(.dark) main > .section .section-heading p{color:#365547!important;font-weight:550;}
+/* HERO: glass must actually be transparent and refract/blur underlying biryani photo. */
+body:not(.dark) .hero{
+  background-image:linear-gradient(100deg,rgba(8,52,35,.29),rgba(3,55,38,.08)),url("/assets/recipe-images/chicken-biryani-v2.webp")!important;
+}
+body:not(.dark) .hero-content{
+  border:2px solid rgba(255,255,255,.87)!important;
+  background:linear-gradient(130deg,rgba(254,255,251,.78),rgba(230,251,238,.64))!important;
+  -webkit-backdrop-filter:blur(17px) saturate(145%)!important;
+  backdrop-filter:blur(17px) saturate(145%)!important;
+  box-shadow:0 25px 65px rgba(10,55,32,.31),inset 0 2px rgba(255,255,255,.82)!important;
+}
+body:not(.dark) .hero h1,
+body:not(.dark) .hero p{color:#153d2c!important;text-shadow:0 1px 1px rgba(255,255,255,.32)!important;}
+/* Glass on actual cards — translucent instead of the old opaque background: #fff! */
+body:not(.dark) :is(.featured-card,.popular-recipe-card,.recipe-card,.cooking-help-card,.contact-card,.contact-form,.trust-panel,.hub-card,.affiliate-pick,.related-recipe-card){
+  border:2px solid rgba(255,255,255,.85)!important;
+  background:linear-gradient(135deg,rgba(255,255,255,.85),rgba(236,250,242,.63))!important;
+  -webkit-backdrop-filter:blur(13px) saturate(130%);
+  backdrop-filter:blur(13px) saturate(130%);
+  box-shadow:0 19px 43px rgba(20,74,46,.15),inset 0 1px rgba(255,255,255,.84)!important;
+}
+body:not(.dark) :is(.featured-card,.popular-recipe-card,.recipe-card,.cooking-help-card,.contact-card,.hub-card):hover{
+  border-color:rgba(255,255,255,.98)!important;
+  box-shadow:0 24px 54px rgba(18,75,45,.23),0 0 0 2px rgba(130,198,154,.30)!important;
+}
+body:not(.dark) .featured-card-content,
+body:not(.dark) .recipe-card .recipe-body,
+body:not(.dark) .popular-recipe-card > span{
+  background:linear-gradient(145deg,rgba(255,255,253,.82),rgba(236,250,242,.64))!important;
+}
+body:not(.dark) .featured-card:nth-child(3n+2) .featured-card-content,
+body:not(.dark) .recipe-card:nth-child(4n+2) .recipe-body{
+  background:linear-gradient(140deg,rgba(255,249,231,.82),rgba(252,255,246,.72))!important;
+}
+body:not(.dark) .featured-card:nth-child(3n+3) .featured-card-content,
+body:not(.dark) .recipe-card:nth-child(4n+3) .recipe-body{
+  background:linear-gradient(145deg,rgba(237,249,255,.85),rgba(244,255,250,.68))!important;
+}
+body:not(.dark) .recipe-card:nth-child(4n+4) .recipe-body{
+  background:linear-gradient(140deg,rgba(245,240,255,.80),rgba(252,255,247,.72))!important;
+}
+/* Images in cards are still real food photographs at 100% original color. */
+body:not(.dark) :is(.featured-card,.popular-recipe-card,.recipe-card,.region-card) img{filter:none!important;}
+/* Nature in category/mini cards: a different visible bokeh/leaf background for each group. */
+body:not(.dark) .category-box{
+  border:2px solid rgba(255,255,255,.89)!important;
+  background-image:linear-gradient(140deg,rgba(251,255,248,.83),rgba(233,250,236,.71)),var(--pf-forest-photo)!important;
+  background-size:cover!important;
+  background-position:center!important;
+  -webkit-backdrop-filter:blur(11px) saturate(125%);
+  backdrop-filter:blur(11px) saturate(125%);
+  box-shadow:0 13px 30px rgba(25,86,48,.15),inset 0 1px rgba(255,255,255,.89)!important;
+}
+body:not(.dark) .category-box:nth-child(3n+2){
+  background-image:linear-gradient(140deg,rgba(255,249,235,.78),rgba(250,255,241,.72)),var(--pf-sunleaf-photo)!important;
+}
+body:not(.dark) .category-box:nth-child(3n+3){
+  background-image:linear-gradient(140deg,rgba(239,250,254,.84),rgba(235,252,248,.68)),var(--pf-greenleaf-photo)!important;
+}
+body:not(.dark) .category-box > div:first-child{
+  background:linear-gradient(135deg,rgba(255,255,255,.88),rgba(232,248,239,.70))!important;
+  border:2px solid rgba(255,255,255,.76)!important;
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+}
+/* Standalone recipe, category and directory pages are not left with plain flat surfaces. */
+body:not(.dark) :is(.seo-recipe,.cat,.hub){
+  background-image:linear-gradient(145deg,rgba(248,253,248,.96),rgba(236,250,241,.85)),var(--pf-greenleaf-photo)!important;
+  background-size:cover!important;
+  background-position:center top!important;
+  border:2px solid rgba(255,255,255,.84);
+  border-radius:clamp(20px,3vw,32px);
+  box-shadow:0 20px 52px rgba(27,80,49,.11);
+}
+body:not(.dark) :is(.recipe-facts > span,.recipe-detail-section,.recipe-guide,.cooking-tips,.recipe-faq,.recipe-step-list > li,.cat .card,.cat-guide,.hub-card){
+  background:linear-gradient(145deg,rgba(255,255,255,.86),rgba(237,251,244,.72))!important;
+  border:2px solid rgba(255,255,255,.89)!important;
+  -webkit-backdrop-filter:blur(9px);
+  backdrop-filter:blur(9px);
+  box-shadow:0 12px 26px rgba(23,78,51,.10),inset 0 1px rgba(255,255,255,.90)!important;
+}
+body:not(.dark) .cat .card:nth-child(3n+2),
+body:not(.dark) .recipe-facts>span:nth-child(4n+2){background:linear-gradient(145deg,rgba(255,246,225,.89),rgba(255,255,246,.78))!important;}
+body:not(.dark) .cat .card:nth-child(3n+3),
+body:not(.dark) .recipe-facts>span:nth-child(4n+3){background:linear-gradient(145deg,rgba(231,247,255,.92),rgba(247,255,252,.76))!important;}
+/* Visible forms: raised frosted borders, fully legible input text. */
+body:not(.dark) :is(.search-box,.contact-form input,.contact-form textarea){
+  background:linear-gradient(132deg,rgba(255,255,255,.92),rgba(232,252,240,.84))!important;
+  border:2px solid #76b794!important;
+  box-shadow:0 9px 22px rgba(21,83,49,.12),inset 0 2px rgba(255,255,255,.88)!important;
+}
+body:not(.dark) .search-box input{
+  background:transparent!important;
+  color:#153e2c!important;
+}
+body:not(.dark) :is(.contact-form input,.contact-form textarea):focus{
+  background:#fff!important;
+  color:#153e2c!important;
+  border-color:#1a9760!important;
+}
+body:not(.dark) .filter-btn{
+  background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(238,251,240,.78))!important;
+  border:2px solid rgba(130,187,152,.85)!important;
+  color:#215c3e!important;
+  box-shadow:0 7px 17px rgba(22,78,43,.09)!important;
+}
+body:not(.dark) :is(.filter-btn.active,.filter-btn:hover){
+  background:linear-gradient(135deg,#18794f,#279565)!important;
+  border-color:#0d7850!important;
+  color:#fff!important;
+}
+/* On narrow phones, make the background visible and the glass actually distinct. */
+@media(max-width:760px){
+  body:not(.dark) main > .section .section-heading{
+    width:100%;
+    padding:clamp(15px,4vw,23px) clamp(13px,4vw,23px)!important;
+    border-radius:23px;
+    margin-bottom:clamp(23px,5vw,33px)!important;
+    -webkit-backdrop-filter:blur(9px) saturate(128%);
+    backdrop-filter:blur(9px) saturate(128%);
+  }
+  body:not(.dark) main > .featured.section{padding-top:38px!important;}
+  body:not(.dark) .hero-content{
+    background:linear-gradient(145deg,rgba(253,255,250,.82),rgba(239,252,245,.72))!important;
+    -webkit-backdrop-filter:blur(9px)!important;
+    backdrop-filter:blur(9px)!important;
+  }
+  body:not(.dark) .hero h1{color:#15452f!important;}
+  body:not(.dark) :is(.featured-card,.popular-recipe-card,.recipe-card,.category-box){
+    -webkit-backdrop-filter:blur(7px);
+    backdrop-filter:blur(7px);
+  }
+  body:not(.dark) :is(.seo-recipe,.cat,.hub){border-radius:20px;padding-inline:clamp(10px,3vw,20px);}
+}
+@media(prefers-reduced-motion:reduce){
+  body:not(.dark) :is(.featured-card,.popular-recipe-card,.recipe-card,.category-box){transition:none!important;}
+}
+@media print{
+  body:not(.dark) :is(.seo-recipe,.recipe-detail-section,.recipe-guide,.recipe-faq,.recipe-step-list>li){
+    background:#fff!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+  }
+}
+/* END REAL PHOTO GLASS V2 · SEO and paths untouched */
