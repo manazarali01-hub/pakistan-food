@@ -2356,3 +2356,70 @@ body:not(.dark) main :is(.featured-card,.popular-recipe-card,.recipe-card,.regio
   body:not(.dark) :is(.recipe-guide,.recipe-detail-section,.recipe-faq,.recipe-step-list > li){background:#fff!important;box-shadow:none!important;border-color:#ccc!important;}
 }
 /* END FOOD APPEARANCE HARMONY · 2026-10-08 */
+
+
+/* MOBILE SCREENSHOT REFINEMENT · 2026-10-08 · no URL or content changes */
+@media (max-width:760px){
+  /* The first featured heading should appear naturally after the hero,
+     without a tall empty band or a postage-stamp image. */
+  body:not(.dark) main > .featured.section{
+    padding-top:clamp(35px,8vw,48px)!important;
+    padding-bottom:clamp(44px,10vw,65px)!important;
+  }
+  body:not(.dark) .featured .featured-heading{
+    margin-bottom:clamp(21px,5vw,29px)!important;
+  }
+  body:not(.dark) .featured .section-heading h2{
+    font-size:clamp(2rem,8vw,2.65rem)!important;
+    line-height:1.12;
+    margin:9px 0 12px;
+  }
+  body:not(.dark) .featured .section-heading p{
+    font-size:clamp(.99rem,3.7vw,1.08rem)!important;
+    line-height:1.65;
+  }
+  /* Old mobile CSS forced a single, scrollbar-free chip strip,
+     hiding filters such as BBQ and Vegetarian past the screen edge. */
+  body:not(.dark) .recipes .filter-buttons{
+    display:flex;
+    width:100%;
+    max-width:100%;
+    flex-flow:row wrap!important;
+    justify-content:center!important;
+    align-items:stretch;
+    gap:9px!important;
+    overflow:visible!important;
+    padding:4px 0 7px!important;
+  }
+  body:not(.dark) .recipes .filter-btn{
+    flex:0 1 auto!important;
+    min-width:clamp(76px,22vw,100px);
+    max-width:100%;
+    min-height:46px;
+    padding:10px 11px!important;
+    white-space:normal;
+    text-align:center;
+    font-size:clamp(.8rem,3.4vw,.9rem)!important;
+    line-height:1.2;
+    overflow-wrap:break-word;
+  }
+  body:not(.dark) .recipes .recipe-results-bar{
+    margin-top:15px;
+    gap:12px;
+  }
+  body:not(.dark) .recipes .search-box{
+    min-height:53px;
+  }
+  /* Keep all 10 category controls visible without changing filter JS. */
+  body:not(.dark) .recipes .recipe-tools{
+    min-width:0;
+    max-width:100%;
+  }
+}
+@media (max-width:380px){
+  body:not(.dark) .recipes .filter-btn{
+    min-width:calc(33.333% - 7px);
+    padding-inline:7px!important;
+    font-size:.82rem!important;
+  }
+}
