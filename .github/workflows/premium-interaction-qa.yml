@@ -1,0 +1,48 @@
+name: Premium Interaction QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'premium.css'
+      - 'premium-food-icons.js'
+      - 'assets/food-premium-icons.svg'
+      - 'script.js'
+      - 'scripts/premium_interaction_qa.mjs'
+      - '.github/workflows/premium-interaction-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: premium-interaction-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  premium-ui:
+    name: Verify mobile interactions and icon appearance
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Serve rendered site
+        run: |
+          python3 -m http.server 4173 --directory _site >/tmp/pakistan-food-premium.log 2>&1 &
+          for i in {1..20}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/pakistan-food-premium.log
+          exit 1
+      - name: Check original icons, search, favorites, filters, dark mode and mobile layout
+        run: node scripts/premium_interaction_qa.mjs
