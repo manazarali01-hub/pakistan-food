@@ -1,0 +1,36 @@
+name: SEO and Editorial Quality Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '_data/recipes/**'
+      - 'guides/**'
+      - '_layouts/recipe.html'
+      - 'sitemap.xml'
+      - 'sitemap-v2.xml'
+      - 'robots.txt'
+      - 'ads.txt'
+      - 'scripts/audit_content_quality.py'
+      - 'scripts/audit_recipe_quality.py'
+      - 'scripts/verify_site.py'
+      - '.github/workflows/seo-editorial-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  editorial-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - name: Verify 66 recipe sources, sitemaps, Urdu fields and basic attribution
+        run: python3 scripts/verify_site.py
+      - name: Measure recipe depth and exact duplicated content
+        run: python3 scripts/audit_recipe_quality.py
+      - name: Detect indexed thin/duplicated guides and sitemap-noindex conflicts
+        run: python3 scripts/audit_content_quality.py
+      - name: Enforce no duplicated indexed guides or indexing conflicts
+        run: python3 scripts/audit_content_quality.py --strict
