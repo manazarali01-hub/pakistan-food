@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
     <link rel="stylesheet" href="style.css?v=20261005-adsense1">
     <link rel="stylesheet" href="enhancements.css?v=20260924-premium1">
-    <link rel="stylesheet" href="premium.css?v=20261010-motion-toggle-v6">
+    <link rel="stylesheet" href="premium.css?v=20261010-natural1">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pakistanfoodrecipes.top/#organization","name":"Pakistan Food","url":"https://pakistanfoodrecipes.top/","logo":{"@type":"ImageObject","url":"https://pakistanfoodrecipes.top/assets/pakistan-food-logo.png","contentUrl":"https://pakistanfoodrecipes.top/assets/pakistan-food-logo.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://pakistanfoodrecipes.top/#website","name":"Pakistan Food","url":"https://pakistanfoodrecipes.top/","description":"Traditional Pakistani recipes with ingredients and step-by-step cooking methods","publisher":{"@id":"https://pakistanfoodrecipes.top/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://pakistanfoodrecipes.top/#webpage","url":"https://pakistanfoodrecipes.top/","name":"Pakistan Food | Traditional Pakistani Recipes","description":"Discover authentic Pakistani recipes including biryani, karahi, nihari, pulao, BBQ, snacks, desserts and drinks with easy cooking methods.","isPartOf":{"@id":"https://pakistanfoodrecipes.top/#website"},"about":{"@id":"https://pakistanfoodrecipes.top/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://pakistanfoodrecipes.top/assets/recipe-images/chicken-biryani-v2.webp"},"inLanguage":"en"}]}</script>
 </head>
 <body>
@@ -47,10 +47,9 @@
         <section class="featured section" id="featured" aria-labelledby="featured-title">
           <div class="container">
             <div class="section-heading featured-heading"><span>START COOKING</span><h2 id="featured-title">A good place to begin</h2><p>Three familiar dishes, from a weekend biryani to a refreshing glass of lassi.</p></div>
-            <div class="pf-motion-preview" id="pfMotionPreview" aria-label="Animation test">
-              <button type="button" id="pfMotionToggle" aria-pressed="false">▶ Play Motion</button>
-              <span class="pf-motion-track" aria-hidden="true"><span class="pf-motion-orb">✦</span></span>
-              <span class="pf-motion-diagnostic" id="pfMotionStatus" role="status" aria-live="polite">Tap Play Motion to test the movement.</span>
+            <div class="pf-motion-preview" hidden aria-label="Food atmosphere">
+              <button type="button" id="pfMotionToggle" aria-pressed="false">Play motion</button>
+              <span id="pfMotionStatus" role="status" aria-live="polite"></span>
             </div>
             <div class="featured-grid">
               {% assign featured_keys = 'chicken-biryani,chicken-karahi,mango-lassi' | split: ',' %}
@@ -155,43 +154,6 @@
     <script defer src="script.js?v=20260924-bilingual1"></script>
     <script defer src="enhancements.js?v=20260924-premium1"></script>
     <script defer src="premium-food-icons.js?v=20261008-premium-detail-v1"></script>
-    <script>
-    /* Pakistan Food motion preview: a transparent, independent test that
-       never affects links, search, recipe data, sitemap or canonical URLs. */
-    (() => {
-      const button = document.getElementById("pfMotionToggle");
-      const status = document.getElementById("pfMotionStatus");
-      if (!button || !status) return;
-      const media = typeof window.matchMedia === "function"
-        ? window.matchMedia("(prefers-reduced-motion: reduce)")
-        : null;
-      let active = false;
-      let pausedByUser = false;
-      const updateLabel = () => {
-        button.setAttribute("aria-pressed", String(active));
-        button.textContent = active ? "⏸ Pause Motion" : "▶ Play Motion";
-        if (active) {
-          status.textContent = "Motion playing: watch the star and Biryani badge.";
-        } else if (pausedByUser) {
-          status.textContent = "Animation test paused. Tap Play to resume.";
-        } else if (media && media.matches) {
-          status.textContent = "Phone prefers reduced motion. Tap Play to preview.";
-        } else {
-          status.textContent = "Tap Play to test the visible animation.";
-        }
-      };
-      button.addEventListener("click", () => {
-        active = !active;
-        pausedByUser = !active;
-        document.body.classList.toggle("pf-motion-force-on", active);
-        document.body.classList.toggle("pf-motion-paused", !active);
-        updateLabel();
-      });
-      if (media && typeof media.addEventListener === "function") {
-        media.addEventListener("change", updateLabel);
-      }
-      updateLabel();
-    })();
-    </script>
+    <script defer src="food-motion.js?v=20261010-natural1"></script>
 </body>
 </html>
