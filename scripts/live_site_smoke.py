@@ -165,27 +165,27 @@ wait_for_pages_deployment()
 
 home = require(
     "/", "Pakistan Food", "Flavours worth sharing.",
-    "food-atmosphere.css?v=20261010-soft-mist-v2",
-    "food-atmosphere.js?v=20261010-soft-mist-v2",
+    "food-atmosphere.css?v=20261010-soft-mist-v3",
+    "food-atmosphere.js?v=20261010-soft-mist-v3",
     'data-pf-dish="chicken-biryani"',
-    "premium.css?v=20261010-refined-v8",
+    "premium.css?v=20261010-refined-v9",
 )
 if any(marker in home for marker in (
     'id="pfMotionToggle"', 'id="pfMotionPreview"', "pf-featured-motion"
 )):
     raise SystemExit("/: old manual motion control or animated badge remains")
 require(
-    "/food-atmosphere.css?v=20261010-soft-mist-v2",
+    "/food-atmosphere.css?v=20261010-soft-mist-v3",
     "pf-mist-rises", "pf-food-atmosphere",
     "prefers-reduced-motion:reduce",
 )
 require(
-    "/food-atmosphere.js?v=20261010-soft-mist-v2",
+    "/food-atmosphere.js?v=20261010-soft-mist-v3",
     "chicken-biryani", "chicken-karahi", "beef-nihari",
     "haleem", "kashmiri-chai", "IntersectionObserver",
 )
 require(
-    "/premium.css?v=20261010-refined-v8",
+    "/premium.css?v=20261010-refined-v9",
     "BALANCED PREMIUM MOTION",
 )
 if f"?v={RECIPE_IMAGE_VERSION}" not in home:
@@ -196,15 +196,15 @@ if "{{ dish.name }}" in home:
 biryani = require(
     "/recipes/chicken-biryani.html",
     'data-pf-dish="chicken-biryani"',
-    "food-atmosphere.css?v=20261010-soft-mist-v2",
-    "food-atmosphere.js?v=20261010-soft-mist-v2",
+    "food-atmosphere.css?v=20261010-soft-mist-v3",
+    "food-atmosphere.js?v=20261010-soft-mist-v3",
     'rel="canonical"',
     '"@type": "Recipe"',
 )
 directory = require(
     "/recipes/",
     'data-pf-dish="chicken-biryani"',
-    "food-atmosphere.js?v=20261010-soft-mist-v2",
+    "food-atmosphere.js?v=20261010-soft-mist-v3",
 )
 halwa = require(
     "/recipes/halwa-puri.html",
