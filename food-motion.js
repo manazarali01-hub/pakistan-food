@@ -46,7 +46,7 @@
   function decorate(host, img, type) {
     if (!host || !img || !type) return;
     host.classList.add('pf-food-host');
-    const layer = document.createElement('span');
+    const layer = document.createElement('div');
     layer.className = 'pf-food-atmosphere pf-' + type;
     layer.setAttribute('aria-hidden', 'true');
     if (type === 'steam' || type === 'heat') {
@@ -56,7 +56,7 @@
         svg.setAttribute('focusable', 'false');
         svg.classList.add('pf-wisp');
         const path = document.createElementNS(ns, 'path');
-        path.setAttribute('d', 'M40 145 C8 113 72 95 39 66 C12 43 60 25 43 5');
+        path.setAttribute('d', ['M40 145 C8 113 72 95 39 66 C12 43 60 25 43 5', 'M42 145 C68 119 15 92 40 67 C62 46 26 24 45 5', 'M35 145 C14 119 66 104 42 77 C19 53 51 30 38 5'][i]);
         // Layered translucent strokes soften the edge without animated filters.
         [24, 17, 9].forEach((width, index) => {
           const mist = path.cloneNode();
@@ -66,7 +66,7 @@
         });
         layer.append(svg);
       }
-    } else layer.innerHTML = '<span class="pf-reflection"></span>';
+    } else layer.innerHTML = '<i class="pf-reflection"></i>';
     host.append(layer);
     const measure = () => {
       layer.style.top = img.offsetTop + 'px';
