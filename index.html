@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
     <link rel="stylesheet" href="style.css?v=20261005-adsense1">
     <link rel="stylesheet" href="enhancements.css?v=20260924-premium1">
-    <link rel="stylesheet" href="premium.css?v=20261010-mobile-control-v3">
+    <link rel="stylesheet" href="premium.css?v=20261010-featured-motion-v4">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pakistanfoodrecipes.top/#organization","name":"Pakistan Food","url":"https://pakistanfoodrecipes.top/","logo":{"@type":"ImageObject","url":"https://pakistanfoodrecipes.top/assets/pakistan-food-logo.png","contentUrl":"https://pakistanfoodrecipes.top/assets/pakistan-food-logo.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://pakistanfoodrecipes.top/#website","name":"Pakistan Food","url":"https://pakistanfoodrecipes.top/","description":"Traditional Pakistani recipes with ingredients and step-by-step cooking methods","publisher":{"@id":"https://pakistanfoodrecipes.top/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://pakistanfoodrecipes.top/#webpage","url":"https://pakistanfoodrecipes.top/","name":"Pakistan Food | Traditional Pakistani Recipes","description":"Discover authentic Pakistani recipes including biryani, karahi, nihari, pulao, BBQ, snacks, desserts and drinks with easy cooking methods.","isPartOf":{"@id":"https://pakistanfoodrecipes.top/#website"},"about":{"@id":"https://pakistanfoodrecipes.top/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://pakistanfoodrecipes.top/assets/recipe-images/chicken-biryani-v2.webp"},"inLanguage":"en"}]}</script>
 </head>
 <body>
@@ -52,6 +52,7 @@
               {% for key in featured_keys %}{% assign dish = site.data.recipes[key] %}
               {% assign card_image_small = dish.image | replace: 'width=1280', 'width=640' | replace: 'width=960', 'width=640' %}
               <a class="featured-card" href="recipes/{{ key }}.html">
+                {% if forloop.first %}<span class="pf-featured-motion" aria-label="Featured recipe"><span class="pf-motion-star" aria-hidden="true">✦</span> Featured</span>{% endif %}
                 {% if dish.image contains 'commons.wikimedia.org' %}
                 <img src="{{ dish.image }}" srcset="{{ card_image_small }} 640w, {{ dish.image }} 1280w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% else %}
