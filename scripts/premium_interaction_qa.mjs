@@ -85,6 +85,42 @@ for (const width of widths) {
   });
   if (width !== 390) continue;
 
+  await check("Featured badge visibly animates on a 390px mobile viewport", async () => {
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    const badge = page.locator(".featured-card:first-child .pf-featured-motion");
+    if (!(await badge.isVisible())) throw Error("Static featured badge absent");
+    const properties = await badge.evaluate(el => {
+      const style = getComputedStyle(el);
+      const shine = getComputedStyle(el.closest(".featured-card"), "::before");
+      return {
+        animationName: style.animationName,
+        display: style.display,
+        imageLightAnimation: shine.animationName,
+        pointerEvents: style.pointerEvents,
+      };
+    });
+    if (!properties.animationName.includes("pf-featured-badge-float")) {
+      throw Error("Badge animation not running: " + JSON.stringify(properties));
+    }
+    if (!properties.imageLightAnimation.includes("pf-featured-light-sweep")) {
+      throw Error("Photo light animation missing: " + JSON.stringify(properties));
+    }
+    if (properties.pointerEvents !== "none") throw Error("Badge may block recipe clicks");
+    const frames = [];
+    for (const delay of [0, 430, 650]) {
+      if (delay) await page.waitForTimeout(delay);
+      frames.push(await badge.evaluate(el => getComputedStyle(el).transform));
+    }
+    if (new Set(frames).size < 2) throw Error("Badge does not change position: " + frames.join(" / "));
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    const reduced = await badge.evaluate(el => getComputedStyle(el).animationName);
+    if (!(await badge.isVisible()) || reduced !== "none") {
+      throw Error("Reduced-motion presentation unsafe: " + reduced);
+    }
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    return true;
+  });
+
   await check("Live search finds biryani and handles empty results", async () => {
     await page.locator("#searchInput").fill("chicken biryani");
     const matched = await cards();
