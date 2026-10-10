@@ -104,7 +104,7 @@
       const y=height*p.emitter.y-phase*maxRise;
       const size=Math.min(width*.13,56)*(0.55+phase*.75)*(0.75+random*.40);
       // The photo beneath remains readable: overlapping fine vapor wisps.
-      ctx.globalAlpha=.22*lifeFade;
+      ctx.globalAlpha=.52*lifeFade;
       ctx.drawImage(sprite,x-size*.5,y-size*1.25,size,size*1.45);
     }
     ctx.globalAlpha=1;
