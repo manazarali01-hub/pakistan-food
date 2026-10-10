@@ -163,7 +163,15 @@ def require(path: str, *needles: str) -> str:
 
 wait_for_pages_deployment()
 
-home = require("/", "Pakistan Food", "Flavours worth sharing.")
+home = require("/", "Pakistan Food", "Flavours worth sharing.", "pf-featured-motion", "premium.css?v=20261010-featured-motion-v4")
+# Confirm animation CSS itself reaches the public domain, not only the HTML.
+require(
+    "/premium.css?v=20261010-featured-motion-v4",
+    "ALWAYS VISIBLE FEATURED MOTION",
+    "pf-featured-light-sweep",
+    "pf-featured-badge-float",
+    "prefers-reduced-motion:reduce",
+)
 if f"?v={RECIPE_IMAGE_VERSION}" not in home:
     raise SystemExit(f"/: recipe image cache-busting version {RECIPE_IMAGE_VERSION!r} missing")
 if "{{ dish.name }}" in home:
