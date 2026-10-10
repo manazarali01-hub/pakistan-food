@@ -37,6 +37,19 @@
     document.querySelectorAll(".pf-food-photo[data-pf-dish]").forEach(addMist);
   }
   function init() {
+    // Respect the OS by default, but honor a deliberate user opt-in (without
+    // reintroducing the unwanted Play/Pause widget). The preview URL sets
+    // this preference once, and later visits then run automatically.
+    let explicitlyEnabled = false;
+    try {
+      const requested = new URLSearchParams(window.location.search).get("food-motion");
+      if (requested === "on") localStorage.setItem("pfFoodMotionEnabled", "yes");
+      if (requested === "off") localStorage.setItem("pfFoodMotionEnabled", "no");
+      explicitlyEnabled = localStorage.getItem("pfFoodMotionEnabled") === "yes" ||
+        (localStorage.getItem("pfFoodMotionEnabled") !== "no" &&
+         localStorage.getItem("pfFoodMotionPreference") === "on");
+    } catch (_) {}
+    document.body.classList.toggle("pf-food-motion-opted-in", explicitlyEnabled);
     if ("IntersectionObserver" in window) {
       observer = new IntersectionObserver(entries => {
         entries.forEach(({target,isIntersecting}) => {
