@@ -1,0 +1,61 @@
+name: Food Motion Visual Review
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/food-motion-visual-review.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  visually-check-live-food-steam:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Install Chromium for live visual review
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Capture live photo at different animation moments
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          const browser=await chromium.launch({headless:true});
+          try{
+            const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,reducedMotion:'no-preference'});
+            const errors=[];
+            page.on('pageerror',e=>errors.push(e.message));
+            const response=await page.goto('https://pakistanfoodrecipes.top/?food-motion=on&v=visual-review-biryani-canvas-v5#featured',{waitUntil:'domcontentloaded',timeout:45000});
+            if(!response?.ok()) throw new Error('Live site HTTP status: '+response?.status());
+            const frame=page.locator('.featured-card:first-child .pf-food-photo');
+            await frame.scrollIntoViewIfNeeded();
+            await frame.locator('img').evaluate(async img=>{if(!img.complete)await img.decode();});
+            await page.waitForFunction(()=>{
+              const canvas=document.querySelector('.featured-card:first-child .pf-steam-canvas');
+              return !!canvas && canvas.width>100 && canvas.style.display==='block';
+            },{timeout:12000});
+            const getStats=()=>page.evaluate(()=>{
+              const c=document.querySelector('.featured-card:first-child .pf-steam-canvas');
+              const x=c.getContext('2d').getImageData(0,0,c.width,c.height);
+              let pix=0,bottom=0;
+              for(let y=0;y<c.height;y+=2)
+                for(let xx=0;xx<c.width;xx+=2){
+                  const alpha=x.data[(y*c.width+xx)*4+3];
+                  if(alpha>4){pix++;if(y>c.height*.56)bottom++;}
+                }
+              return {pixels:pix,bottomPixels:bottom,width:c.width,height:c.height};
+            });
+            console.log('FOOD-MOTION-REVIEW URL='+page.url());
+            for(let i=0;i<3;i++){
+              await page.waitForTimeout(i===0?650:2000);
+              const stats=await getStats();
+              const jpeg=await frame.screenshot({type:'jpeg',quality:48,animations:'allow'});
+              console.log('PHOTO_FRAME_'+i+'='+jpeg.toString('base64'));
+              console.log('PHOTO_STATS_'+i+'='+JSON.stringify(stats));
+            }
+            console.log('PAGE_ERRORS='+JSON.stringify(errors));
+            if(errors.length) throw Error('Browser errors '+errors.join(' | '));
+          }finally{await browser.close();}
+          NODE
