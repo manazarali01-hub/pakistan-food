@@ -1,6 +1,7 @@
 /* Premium appearance and functionality smoke test — run against Jekyll output.
    These checks guard live controls, icons and layout; they do not modify content. */
 import { chromium } from "playwright";
+import { PNG } from "pngjs";
 
 const base = process.env.QA_BASE_URL || "http://127.0.0.1:4173";
 const widths = [320, 360, 390, 430, 768, 1024, 1440];
@@ -120,6 +121,77 @@ for (const width of widths) {
     if (state.transform===await mist.evaluate(el=>getComputedStyle(el).transform)) {
       throw Error("Natural mist not rising on mobile");
     }
+    return true;
+  });
+
+  await check("Biryani steam is visibly different from unchanged food photo (PNG pixel contrast)", async () => {
+    // Existing CSS-only motion tests passed when vapor was imperceptibly faint.
+    // Compare the *same paused frame* with and without the decorative layer,
+    // and require nontrivial actual on-screen color difference.
+    await page.emulateMedia({reducedMotion:"no-preference"});
+    const frame=page.locator(".featured-card:first-child .pf-food-photo");
+    await frame.scrollIntoViewIfNeeded();
+    await page.waitForFunction(()=>document.querySelector(".featured-card:first-child .pf-food-photo")?.classList.contains("pf-atmosphere-visible"));
+    await frame.locator(".pf-mist").first().evaluate(el=>{
+      for(const cloud of el.parentElement.querySelectorAll(".pf-mist")){
+        for(const anim of cloud.getAnimations()){anim.currentTime=2700;anim.pause();}
+      }
+    });
+    await page.waitForTimeout(100);
+    const exposed=PNG.sync.read(await frame.screenshot({animations:"allow"}));
+    const layer=frame.locator(".pf-food-atmosphere");
+    await layer.evaluate(el=>el.style.visibility="hidden");
+    const plain=PNG.sync.read(await frame.screenshot({animations:"allow"}));
+    await layer.evaluate(el=>el.style.visibility="");
+    if(exposed.width!==plain.width||exposed.height!==plain.height) throw Error("Photo sizes differ");
+    let strong=0,maxDifference=0,all=0,regionPixels=0;
+    const w=exposed.width,h=exposed.height;
+    for(let y=0;y<Math.round(h*.58);y++){
+      for(let x=Math.round(w*.24);x<Math.round(w*.77);x++){
+        const i=(y*w+x)*4;
+        const v=(Math.abs(exposed.data[i]-plain.data[i])+
+          Math.abs(exposed.data[i+1]-plain.data[i+1])+
+          Math.abs(exposed.data[i+2]-plain.data[i+2]))/3;
+        if(v>=12) strong++;
+        if(v>maxDifference) maxDifference=v;
+        all+=v;
+        regionPixels++;
+      }
+    }
+    const share=strong/regionPixels;
+    const avg=all/regionPixels;
+    if(share<.008 || maxDifference<20 || avg<.65){
+      throw Error("Steam has insufficient visible contrast on biryani: "+
+        JSON.stringify({share:+share.toFixed(4),maxDifference,avg:+avg.toFixed(3)}));
+    }
+    return true;
+  });
+
+  await check("Explicit mobile opt-in enables automatic steam without any controls", async () => {
+    await page.emulateMedia({reducedMotion:"reduce"});
+    await page.goto(base+"/?food-motion=on#featured",{waitUntil:"domcontentloaded"});
+    const frame=page.locator(".featured-card:first-child .pf-food-photo");
+    await frame.scrollIntoViewIfNeeded();
+    await page.waitForFunction(()=>document.querySelector(".featured-card:first-child .pf-food-photo")?.classList.contains("pf-atmosphere-visible"));
+    const enabled=await page.evaluate(()=>{
+      const cloud=document.querySelector(".featured-card:first-child .pf-mist");
+      return {
+        optedIn:document.body.classList.contains("pf-food-motion-opted-in"),
+        display:getComputedStyle(cloud.closest(".pf-food-atmosphere")).display,
+        animation:getComputedStyle(cloud).animationName,
+        button:document.getElementById("pfMotionToggle")!==null,
+      };
+    });
+    if(!enabled.optedIn || enabled.display==="none" || !enabled.animation.includes("pf-mist-rises") || enabled.button){
+      throw Error("Explicit motion preference not respected: "+JSON.stringify(enabled));
+    }
+    await page.goto(base+"/",{waitUntil:"domcontentloaded"});
+    if(!(await page.evaluate(()=>document.body.classList.contains("pf-food-motion-opted-in")))){
+      throw Error("Automatic steam opt-in did not persist across page loads");
+    }
+    await page.evaluate(()=>localStorage.removeItem("pfFoodMotionEnabled"));
+    await page.emulateMedia({reducedMotion:"no-preference"});
+    await page.reload({waitUntil:"domcontentloaded"});
     return true;
   });
 
