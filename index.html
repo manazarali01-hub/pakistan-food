@@ -171,9 +171,13 @@
       const media = typeof window.matchMedia === "function"
         ? window.matchMedia("(prefers-reduced-motion: reduce)")
         : null;
-      // No tap is required for ordinary visitors; reduced motion stays static.
-      let active = !(media && media.matches);
-      let optedIn = false;
+      // Auto motion is the default for visitors without reduced-motion OS settings.
+      // A manual opt-in/out survives navigation and does not override accessibility by surprise.
+      const key = "pfFoodMotionPreference";
+      let saved = null;
+      try { saved = localStorage.getItem(key); } catch (_) {}
+      let active = saved === "on" || (saved !== "off" && !(media && media.matches));
+      let optedIn = saved === "on";
       const updateLabel = () => {
         const reduced = Boolean(media && media.matches);
         button.setAttribute("aria-pressed", String(active));
@@ -190,12 +194,16 @@
       };
       button.addEventListener("click", () => {
         active = !active;
-        if (active) optedIn = true;
+        optedIn = active;
+        try { localStorage.setItem(key, active ? "on" : "off"); } catch (_) {}
         updateLabel();
       });
       const onChange = () => {
-        optedIn = false;
-        active = !(media && media.matches);
+        // An explicit user preference has priority. Without one, follow the OS.
+        if (saved === null) {
+          active = !(media && media.matches);
+          optedIn = false;
+        }
         updateLabel();
       };
       if (media && typeof media.addEventListener === "function") {
