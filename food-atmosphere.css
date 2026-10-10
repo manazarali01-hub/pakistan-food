@@ -1,8 +1,7 @@
-/* Pakistan Food · natural food-atmosphere motion v1 · 2026-10-10
-   Original CSS/SVG effects only. Images, editorial content and licensing unchanged.
-   Effects are decorative: no images, interactions or structured data substituted. */
-
-/* Photo frame: image stays at the original 4:3 ratio. */
+/* Pakistan Food · restrained natural food atmosphere v2 · 2026-10-10
+   Soft translucent mist only; not line drawings, light beams, sparks or GIFs.
+   A visual suggestion of warmth, not an actual cooking recording.
+   Art direction is photo-specific and deliberately limited. */
 .pf-food-photo {
   position:relative;
   isolation:isolate;
@@ -19,203 +18,85 @@
   aspect-ratio:4/3;
   object-fit:cover;
 }
-.popular-recipe-card .pf-food-photo {
-  display:block;
-  padding:0;
-  gap:0;
-}
-/* Override the pre-existing broad `.popular-recipe-card span` rule:
-   decorative nested spans must not receive content-card grid padding. */
+.popular-recipe-card .pf-food-photo {display:block; padding:0; gap:0;}
 .popular-recipe-card .pf-food-photo .pf-food-atmosphere,
-.popular-recipe-card .pf-food-photo .pf-fresh-light,
-.popular-recipe-card .pf-food-photo .pf-dessert-light {
-  display:block;
-  padding:0;
-  gap:0;
-}
-.featured-card:last-child .pf-food-photo { height:100%; }
-.featured-card:last-child .pf-food-photo img { height:100%; }
-.seo-recipe .pf-recipe-photo { border-radius:18px; }
-.seo-recipe .pf-recipe-photo picture { display:block; }
-.seo-recipe .pf-recipe-photo img {display:block; width:100%; height:auto;}
-.recipe-image .pf-food-atmosphere {z-index:1;}
-.recipe-image .recipe-badge,
-.recipe-image .favorite-btn {z-index:3;}
-/* Motion isn't embedded in the photo, caption or recipe instructions. */
-.pf-food-atmosphere {
+.popular-recipe-card .pf-food-photo .pf-mist {display:block; padding:0; gap:0;}
+.featured-card:last-child .pf-food-photo {height:100%;}
+.featured-card:last-child .pf-food-photo img {height:100%;}
+.seo-recipe .pf-recipe-photo{border-radius:18px}
+.seo-recipe .pf-recipe-photo picture{display:block}
+.seo-recipe .pf-recipe-photo img{display:block;width:100%;height:auto}
+.pf-food-atmosphere{
   position:absolute;
-  display:block;
   inset:0;
-  z-index:2;
+  z-index:1;
+  display:block;
   overflow:hidden;
   border-radius:inherit;
   pointer-events:none!important;
   user-select:none;
-  touch-action:pan-y;
-  line-height:0;
   contain:paint;
 }
-.pf-food-atmosphere svg {
+.pf-mist{
   position:absolute;
-  display:block;
-  overflow:visible;
-  left:27%;
-  top:0;
-  width:46%;
-  height:68%;
-  max-width:none;
-  pointer-events:none;
-}
-.pf-food-atmosphere[data-pf-place="left"] svg {left:12%;}
-.pf-food-atmosphere[data-pf-place="right"] svg {left:45%;}
-.pf-food-atmosphere .pf-vapor-line {
-  fill:none;
-  stroke:rgba(255,253,240,.82);
-  stroke-width:5;
-  stroke-linecap:round;
-  stroke-linejoin:round;
+  left:var(--pf-steam-left,35%);
+  top:var(--pf-steam-top,8%);
+  width:var(--pf-steam-width,27%);
+  height:var(--pf-steam-height,44%);
+  padding:0!important;
   opacity:0;
-  transform-origin:50% 100%;
-  transform-box:fill-box;
+  pointer-events:none!important;
+  border-radius:50%;
+  background:
+    radial-gradient(ellipse 26% 26% at 50% 80%,rgba(244,247,240,.25),transparent 95%),
+    radial-gradient(ellipse 30% 22% at 40% 52%,rgba(226,230,222,.34),transparent 94%),
+    radial-gradient(ellipse 36% 29% at 60% 27%,rgba(253,250,239,.28),transparent 93%);
+  transform-origin:center 90%;
 }
-.pf-food-atmosphere .pf-vapor-line:nth-child(2){
-  stroke:rgba(248,250,238,.76);
-  stroke-width:4;
+.pf-mist:nth-child(2){
+  left:calc(var(--pf-steam-left,35%) + 8%);
+  top:calc(var(--pf-steam-top,8%) + 1%);
+  width:calc(var(--pf-steam-width,27%) * .82);
+  background:
+    radial-gradient(ellipse 29% 24% at 48% 73%,rgba(241,241,233,.27),transparent 92%),
+    radial-gradient(ellipse 36% 26% at 60% 46%,rgba(249,248,238,.32),transparent 96%),
+    radial-gradient(ellipse 23% 26% at 34% 22%,rgba(237,241,231,.24),transparent 94%);
 }
-.pf-food-atmosphere .pf-vapor-line:nth-child(3){
-  stroke:rgba(255,245,217,.62);
-  stroke-width:3.5;
+@keyframes pf-mist-rises {
+  0%,100%{opacity:0;transform:translate3d(5px,15px,0) scale(.76) rotate(-5deg);}
+  21%{opacity:.32;}
+  49%{opacity:.48;transform:translate3d(-4px,-5px,0) scale(.98) rotate(3deg);}
+  74%{opacity:.22;transform:translate3d(8px,-21px,0) scale(1.15) rotate(-3deg);}
+  95%{opacity:0;transform:translate3d(-5px,-35px,0) scale(1.25) rotate(4deg);}
 }
-/* Allow steam to be seen on pale rice without turning into opaque smoke. */
-.pf-effect-steam svg {filter:drop-shadow(0 1px 1px rgba(45,66,34,.2));}
-@keyframes pf-vapor-rise-one {
-  0% {opacity:0; transform:translate3d(4px,27px,0) scale(.84);}
-  18% {opacity:.55;}
-  58% {opacity:.48;}
-  100% {opacity:0; transform:translate3d(-10px,-26px,0) scale(1.11);}
+@keyframes pf-mist-rises-offset {
+  0%,100%{opacity:0;transform:translate3d(-4px,17px,0) scale(.7) rotate(3deg);}
+  27%{opacity:.31;}
+  53%{opacity:.42;transform:translate3d(6px,-7px,0) scale(1.03) rotate(-5deg);}
+  79%{opacity:.13;transform:translate3d(-5px,-26px,0) scale(1.2) rotate(3deg);}
+  95%{opacity:0;transform:translate3d(3px,-39px,0) scale(1.22) rotate(-2deg);}
 }
-@keyframes pf-vapor-rise-two {
-  0% {opacity:0; transform:translate3d(-5px,35px,0) scale(.78);}
-  29% {opacity:.54;}
-  68% {opacity:.3;}
-  100% {opacity:0; transform:translate3d(13px,-22px,0) scale(1.06);}
-}
-@keyframes pf-heat-breathe {
-  0%,100% {opacity:0;transform:translate3d(0,16px,0) scale(.92);}
-  42% {opacity:.45;transform:translate3d(5px,-3px,0) scale(1.05);}
-  72% {opacity:.18;transform:translate3d(-4px,-17px,0) scale(1.1);}
-}
-.pf-effect-heat .pf-vapor-line {stroke:rgba(255,229,180,.6);stroke-width:3.5;}
-.pf-effect-heat .pf-vapor-line:nth-child(2){stroke:rgba(255,239,211,.52);stroke-width:3;}
-.pf-effect-heat .pf-vapor-line:nth-child(3){stroke:rgba(243,199,129,.48);stroke-width:2.5;}
-.pf-effect-heat svg {width:48%;left:27%;height:54%;top:8%;}
-/* A small reflected glint is more believable on cold drinks than rising steam. */
-.pf-fresh-light {
-  position:absolute;
-  display:block;
-  left:50%;
-  top:10%;
-  width:38%;
-  height:67%;
-  border-radius:46%;
-  background:linear-gradient(112deg,transparent 31%,rgba(255,255,238,.24) 46%,rgba(255,255,255,.48) 50%,rgba(251,255,236,.16) 55%,transparent 68%);
-  opacity:0;
-  transform:translate3d(-10px,6px,0) rotate(-4deg);
-}
-@keyframes pf-fresh-reflection {
-  0%,13%,100%{opacity:0;transform:translate3d(-17px,9px,0) rotate(-5deg);}
-  45%{opacity:.55;transform:translate3d(2px,0,0) rotate(2deg);}
-  74%{opacity:.22;transform:translate3d(12px,-6px,0) rotate(5deg);}
-}
-.pf-dessert-light {
-  position:absolute;
-  top:18%;
-  left:23%;
-  width:45%;
-  height:54%;
-  background:radial-gradient(ellipse,rgba(255,241,193,.24),transparent 65%);
-  opacity:0;
-  transform:scale(.8) translate3d(0,4px,0);
-}
-@keyframes pf-dessert-shine {
-  0%,100%{opacity:0;transform:scale(.84) translate3d(0,4px,0);}
-  48%{opacity:.5;transform:scale(1.1) translate3d(5px,-3px,0);}
-}
-/* Auto motion only for on-screen photographs and users who allow motion.
-   Off-screen decorations have no active animations. */
-@media (prefers-reduced-motion:no-preference) {
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .pf-food-photo.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(1),
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .recipe-image.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(1) {
-    animation:pf-vapor-rise-one 4.3s ease-in-out infinite;
+/* The soft cloud is confined to the top portion of the FOOD, not the plate rim.
+   All offscreen elements stay still; no continuously animated blur or filters. */
+@media(prefers-reduced-motion:no-preference){
+  body:not(.pf-motion-page-hidden)
+  .pf-atmosphere-visible .pf-mist:first-child{
+    animation:pf-mist-rises 7.3s ease-in-out infinite;
   }
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .pf-food-photo.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(2),
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .recipe-image.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(2) {
-    animation:pf-vapor-rise-two 5.4s ease-in-out -1.7s infinite;
+  body:not(.pf-motion-page-hidden)
+  .pf-atmosphere-visible .pf-mist:nth-child(2){
+    animation:pf-mist-rises-offset 8.7s ease-in-out -3.6s infinite;
   }
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .pf-food-photo.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(3),
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .recipe-image.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(3) {
-    animation:pf-vapor-rise-one 5s ease-in-out -3.1s infinite;
-  }
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .pf-atmosphere-visible .pf-effect-heat .pf-vapor-line {
-    animation:pf-heat-breathe 5.2s ease-in-out infinite;
-  }
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .pf-atmosphere-visible .pf-effect-heat .pf-vapor-line:nth-child(2) {animation-delay:-1.8s}
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .pf-atmosphere-visible .pf-effect-heat .pf-vapor-line:nth-child(3) {animation-delay:-3.5s}
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .pf-atmosphere-visible .pf-fresh-light {animation:pf-fresh-reflection 5.8s ease-in-out infinite}
-  body:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-  .pf-atmosphere-visible .pf-dessert-light {animation:pf-dessert-shine 7.3s ease-in-out infinite}
 }
-/* Explicit opt-in: allow the user to preview despite OS reduce setting. */
-body.pf-motion-force-on:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(1) {
-  animation:pf-vapor-rise-one 4.3s ease-in-out infinite!important;
-}
-body.pf-motion-force-on:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(2) {
-  animation:pf-vapor-rise-two 5.4s ease-in-out -1.7s infinite!important;
-}
-body.pf-motion-force-on:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-.pf-atmosphere-visible .pf-effect-steam .pf-vapor-line:nth-child(3) {
-  animation:pf-vapor-rise-one 5s ease-in-out -3.1s infinite!important;
-}
-body.pf-motion-force-on:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-.pf-atmosphere-visible .pf-effect-heat .pf-vapor-line {
-  animation:pf-heat-breathe 5.2s ease-in-out infinite!important;
-}
-body.pf-motion-force-on:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-.pf-atmosphere-visible .pf-fresh-light {
-  animation:pf-fresh-reflection 5.8s ease-in-out infinite!important;
-}
-body.pf-motion-force-on:not(.pf-motion-paused):not(.pf-motion-page-hidden)
-.pf-atmosphere-visible .pf-dessert-light {
-  animation:pf-dessert-shine 7.3s ease-in-out infinite!important;
-}
-body.pf-motion-paused .pf-food-atmosphere *,
-body.pf-motion-page-hidden .pf-food-atmosphere * {
-  animation:none!important;
-}
-@media(max-width:760px){
-  .featured-card:last-child .pf-food-photo{height:auto;}
-  .featured-card:last-child .pf-food-photo img{height:auto;}
-  .pf-food-atmosphere svg{width:42%;left:28%;height:64%;}
-  .pf-food-atmosphere[data-pf-place="left"] svg{left:9%;}
-  .pf-food-atmosphere[data-pf-place="right"] svg{left:49%;}
-}
-@media(prefers-reduced-motion:reduce) {
-  body:not(.pf-motion-force-on) .pf-food-atmosphere {display:none!important;}
+@media(prefers-reduced-motion:reduce){
+  .pf-food-atmosphere{display:none!important;}
+  .pf-mist{animation:none!important;}
 }
 @media print{
   .pf-food-atmosphere{display:none!important;}
-  .pf-food-photo{overflow:visible;}
+  .pf-food-photo{overflow:visible}
 }
-/* END natural food atmosphere */
+@media(max-width:760px){
+  .featured-card:last-child .pf-food-photo{height:auto}
+  .featured-card:last-child .pf-food-photo img{height:auto}
+}
