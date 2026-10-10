@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="style.css?v=20261005-adsense1">
     <link rel="stylesheet" href="enhancements.css?v=20260924-premium1">
     <link rel="stylesheet" href="premium.css?v=20261010-motion-toggle-v6">
+    <link rel="stylesheet" href="food-atmosphere.css?v=20261010-natural-v1">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://pakistanfoodrecipes.top/#organization","name":"Pakistan Food","url":"https://pakistanfoodrecipes.top/","logo":{"@type":"ImageObject","url":"https://pakistanfoodrecipes.top/assets/pakistan-food-logo.png","contentUrl":"https://pakistanfoodrecipes.top/assets/pakistan-food-logo.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://pakistanfoodrecipes.top/#website","name":"Pakistan Food","url":"https://pakistanfoodrecipes.top/","description":"Traditional Pakistani recipes with ingredients and step-by-step cooking methods","publisher":{"@id":"https://pakistanfoodrecipes.top/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://pakistanfoodrecipes.top/#webpage","url":"https://pakistanfoodrecipes.top/","name":"Pakistan Food | Traditional Pakistani Recipes","description":"Discover authentic Pakistani recipes including biryani, karahi, nihari, pulao, BBQ, snacks, desserts and drinks with easy cooking methods.","isPartOf":{"@id":"https://pakistanfoodrecipes.top/#website"},"about":{"@id":"https://pakistanfoodrecipes.top/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://pakistanfoodrecipes.top/assets/recipe-images/chicken-biryani-v2.webp"},"inLanguage":"en"}]}</script>
 </head>
 <body>
@@ -47,10 +48,10 @@
         <section class="featured section" id="featured" aria-labelledby="featured-title">
           <div class="container">
             <div class="section-heading featured-heading"><span>START COOKING</span><h2 id="featured-title">A good place to begin</h2><p>Three familiar dishes, from a weekend biryani to a refreshing glass of lassi.</p></div>
-            <div class="pf-motion-preview" id="pfMotionPreview" aria-label="Animation test">
-              <button type="button" id="pfMotionToggle" aria-pressed="false">▶ Play Motion</button>
+            <div class="pf-motion-preview" id="pfMotionPreview" aria-label="Automatic food motion settings">
+              <button type="button" id="pfMotionToggle" aria-pressed="true">⏸ Pause Motion</button>
               <span class="pf-motion-track" aria-hidden="true"><span class="pf-motion-orb">✦</span></span>
-              <span class="pf-motion-diagnostic" id="pfMotionStatus" role="status" aria-live="polite">Tap Play Motion to test the movement.</span>
+              <span class="pf-motion-diagnostic" id="pfMotionStatus" role="status" aria-live="polite">Food motion runs automatically when enabled on this device.</span>
             </div>
             <div class="featured-grid">
               {% assign featured_keys = 'chicken-biryani,chicken-karahi,mango-lassi' | split: ',' %}
@@ -58,11 +59,13 @@
               {% assign card_image_small = dish.image | replace: 'width=1280', 'width=640' | replace: 'width=960', 'width=640' %}
               <a class="featured-card" href="recipes/{{ key }}.html">
                 {% if forloop.first %}<span class="pf-featured-motion" aria-label="Featured recipe"><span class="pf-motion-star" aria-hidden="true">✦</span> Featured</span>{% endif %}
+                <span class="pf-food-photo" data-pf-dish="{{ key }}">
                 {% if dish.image contains 'commons.wikimedia.org' %}
                 <img src="{{ dish.image }}" srcset="{{ card_image_small }} 640w, {{ dish.image }} 1280w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% else %}
                 <img src="{{ dish.image }}?v={{ site.recipe_image_version }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% endif %}
+                </span>
                 <span class="featured-card-content"><span class="featured-kicker">{{ dish.category }} · {{ dish.time }}</span><strong>{{ dish.name }}</strong><span>{{ dish.description }}</span><span class="featured-arrow" aria-hidden="true">View recipe →</span></span>
               </a>
               {% endfor %}
@@ -77,11 +80,13 @@
               {% for key in popular_keys %}{% assign dish = site.data.recipes[key] %}
               {% assign popular_image_small = dish.image | replace: 'width=1280', 'width=640' | replace: 'width=960', 'width=640' %}
               <a class="popular-recipe-card" href="recipes/{{ key }}.html">
+                <span class="pf-food-photo" data-pf-dish="{{ key }}">
                 {% if dish.image contains 'commons.wikimedia.org' %}
                 <img src="{{ dish.image }}" srcset="{{ popular_image_small }} 640w, {{ dish.image }} 1280w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% else %}
                 <img src="{{ dish.image }}?v={{ site.recipe_image_version }}" alt="{{ dish.image_alt | default: dish.name | escape }}" width="900" height="675" loading="lazy" decoding="async" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
                 {% endif %}
+                </span>
                 <span><small>{{ dish.category }} · {{ dish.time }}</small><strong>{{ dish.name }}</strong><small>{{ dish.description | truncate: 115 }}</small></span>
               </a>
               {% endfor %}
@@ -155,6 +160,7 @@
     <script defer src="script.js?v=20260924-bilingual1"></script>
     <script defer src="enhancements.js?v=20260924-premium1"></script>
     <script defer src="premium-food-icons.js?v=20261008-premium-detail-v1"></script>
+    <script defer src="food-atmosphere.js?v=20261010-natural-v1"></script>
     <script>
     /* Pakistan Food motion preview: a transparent, independent test that
        never affects links, search, recipe data, sitemap or canonical URLs. */
@@ -165,30 +171,37 @@
       const media = typeof window.matchMedia === "function"
         ? window.matchMedia("(prefers-reduced-motion: reduce)")
         : null;
-      let active = false;
-      let pausedByUser = false;
+      // No tap is required for ordinary visitors; reduced motion stays static.
+      let active = !(media && media.matches);
+      let optedIn = false;
       const updateLabel = () => {
+        const reduced = Boolean(media && media.matches);
         button.setAttribute("aria-pressed", String(active));
-        button.textContent = active ? "⏸ Pause Motion" : "▶ Play Motion";
+        button.textContent = active ? "⏸ Pause Motion" : reduced ? "▶ Preview Motion" : "▶ Play Motion";
+        document.body.classList.toggle("pf-motion-paused", !active);
+        document.body.classList.toggle("pf-motion-force-on", active && optedIn);
         if (active) {
-          status.textContent = "Motion playing: watch the star and Biryani badge.";
-        } else if (pausedByUser) {
-          status.textContent = "Animation test paused. Tap Play to resume.";
-        } else if (media && media.matches) {
-          status.textContent = "Phone prefers reduced motion. Tap Play to preview.";
+          status.textContent = "Automatic natural food motion is on. Watch the Biryani steam.";
+        } else if (reduced && !optedIn) {
+          status.textContent = "Phone prefers reduced motion. Tap Preview Motion to opt in.";
         } else {
-          status.textContent = "Tap Play to test the visible animation.";
+          status.textContent = "Food motion paused. Tap Play to resume.";
         }
       };
       button.addEventListener("click", () => {
         active = !active;
-        pausedByUser = !active;
-        document.body.classList.toggle("pf-motion-force-on", active);
-        document.body.classList.toggle("pf-motion-paused", !active);
+        if (active) optedIn = true;
         updateLabel();
       });
+      const onChange = () => {
+        optedIn = false;
+        active = !(media && media.matches);
+        updateLabel();
+      };
       if (media && typeof media.addEventListener === "function") {
-        media.addEventListener("change", updateLabel);
+        media.addEventListener("change", onChange);
+      } else if (media && typeof media.addListener === "function") {
+        media.addListener(onChange);
       }
       updateLabel();
     })();
