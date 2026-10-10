@@ -163,7 +163,26 @@ def require(path: str, *needles: str) -> str:
 
 wait_for_pages_deployment()
 
-home = require("/", "Pakistan Food", "Flavours worth sharing.", "pf-featured-motion", 'id="pfMotionToggle"', "Phone prefers reduced motion", "premium.css?v=20261010-motion-toggle-v6")
+home = require(
+    "/", "Pakistan Food", "Flavours worth sharing.", "pf-featured-motion",
+    'id="pfMotionToggle"', "Phone prefers reduced motion",
+    "food-atmosphere.css?v=20261010-natural-v1",
+    "food-atmosphere.js?v=20261010-natural-v1",
+    'data-pf-dish="chicken-biryani"',
+    "premium.css?v=20261010-motion-toggle-v6",
+)
+require(
+    "/food-atmosphere.css?v=20261010-natural-v1",
+    "pf-vapor-rise-one", "pf-heat-breathe", "pf-fresh-reflection",
+    "prefers-reduced-motion:no-preference",
+)
+require(
+    "/food-atmosphere.js?v=20261010-natural-v1",
+    "chicken-biryani", "chicken-karahi", "beef-nihari", "haleem",
+    "halwa-puri", "kashmiri-chai", "mango-lassi",
+    "IntersectionObserver", "pfFoodMotionPreference",
+)
+
 # Confirm animation CSS itself reaches the public domain, not only the HTML.
 require(
     "/premium.css?v=20261010-motion-toggle-v6",
@@ -179,6 +198,19 @@ if f"?v={RECIPE_IMAGE_VERSION}" not in home:
 if "{{ dish.name }}" in home:
     raise SystemExit("/: unresolved Liquid/template marker found in deployed homepage")
 
+biryani = require(
+    "/recipes/chicken-biryani.html",
+    'data-pf-dish="chicken-biryani"',
+    "food-atmosphere.css?v=20261010-natural-v1",
+    "food-atmosphere.js?v=20261010-natural-v1",
+    'rel="canonical"',
+    '"@type": "Recipe"',
+)
+directory = require(
+    "/recipes/",
+    'data-pf-dish="chicken-biryani"',
+    "food-atmosphere.js?v=20261010-natural-v1",
+)
 halwa = require(
     "/recipes/halwa-puri.html",
     "Halwa Puri Recipe",
