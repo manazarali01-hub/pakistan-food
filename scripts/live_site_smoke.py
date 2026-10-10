@@ -165,8 +165,8 @@ wait_for_pages_deployment()
 
 home = require(
     "/", "Pakistan Food", "Flavours worth sharing.",
-    "food-atmosphere.css?v=20261010-soft-mist-v3",
-    "food-atmosphere.js?v=20261010-soft-mist-v3",
+    "food-atmosphere.css?v=20261010-visible-mist-v4",
+    "food-atmosphere.js?v=20261010-visible-mist-v4",
     'data-pf-dish="chicken-biryani"',
     "premium.css?v=20261010-refined-v9",
 )
@@ -175,14 +175,15 @@ if any(marker in home for marker in (
 )):
     raise SystemExit("/: old manual motion control or animated badge remains")
 require(
-    "/food-atmosphere.css?v=20261010-soft-mist-v3",
+    "/food-atmosphere.css?v=20261010-visible-mist-v4",
     "pf-mist-rises", "pf-food-atmosphere",
     "prefers-reduced-motion:reduce",
 )
 require(
-    "/food-atmosphere.js?v=20261010-soft-mist-v3",
+    "/food-atmosphere.js?v=20261010-visible-mist-v4",
     "chicken-biryani", "chicken-karahi", "beef-nihari",
     "haleem", "kashmiri-chai", "IntersectionObserver",
+    "pf-food-motion-opted-in", "food-motion",
 )
 require(
     "/premium.css?v=20261010-refined-v9",
@@ -196,15 +197,15 @@ if "{{ dish.name }}" in home:
 biryani = require(
     "/recipes/chicken-biryani.html",
     'data-pf-dish="chicken-biryani"',
-    "food-atmosphere.css?v=20261010-soft-mist-v3",
-    "food-atmosphere.js?v=20261010-soft-mist-v3",
+    "food-atmosphere.css?v=20261010-visible-mist-v4",
+    "food-atmosphere.js?v=20261010-visible-mist-v4",
     'rel="canonical"',
     '"@type": "Recipe"',
 )
 directory = require(
     "/recipes/",
     'data-pf-dish="chicken-biryani"',
-    "food-atmosphere.js?v=20261010-soft-mist-v3",
+    "food-atmosphere.js?v=20261010-visible-mist-v4",
 )
 halwa = require(
     "/recipes/halwa-puri.html",
