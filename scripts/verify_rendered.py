@@ -185,11 +185,24 @@ for url in urls:
             if not isinstance(instruction, dict):
                 errors.append(f"recipe instruction {index} is not a structured HowToStep: {url}")
                 continue
-            if not instruction.get("image") and not instruction.get("video"):
-                errors.append(f"recipe instruction {index} has neither image nor video: {url}")
+            # Step photos are optional. A completed-dish hero must never be
+            # duplicated as if it documented every intermediate cooking step.
+            source_step_images = source_recipe.get("step_images") or []
+            source_step_image = (
+                source_step_images[index - 1]
+                if isinstance(source_step_images, list) and index <= len(source_step_images)
+                else None
+            )
             image_value = instruction.get("image")
-            if image_value and isinstance(image_value, str) and not image_value.startswith(("https://", "http://")):
-                errors.append(f"recipe instruction {index} image is not absolute: {url} -> {image_value}")
+            if bool(image_value) != bool(source_step_image):
+                errors.append(f"recipe step {index} image/source mismatch: {url}")
+            if image_value is not None and (
+                not isinstance(image_value, str)
+                or not image_value.startswith(("https://", "http://"))
+            ):
+                errors.append(f"recipe instruction {index} image is not an absolute URL: {url}")
+            if instruction.get("url") != f"{url}#step-{index}":
+                errors.append(f"recipe step {index} deep link mismatch: {url}")
 
         duration = expected_duration(source_recipe)
         if duration and recipe_item.get("totalTime") != duration:
