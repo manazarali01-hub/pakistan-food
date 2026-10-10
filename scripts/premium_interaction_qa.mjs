@@ -121,6 +121,60 @@ for (const width of widths) {
     return true;
   });
 
+  await check("Manual Play Motion works even with reduced-motion device settings", async () => {
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.reload({ waitUntil: "domcontentloaded" });
+    const button = page.locator("#pfMotionToggle");
+    const badge = page.locator(".featured-card:first-child .pf-featured-motion");
+    const orb = page.locator(".pf-motion-orb");
+    if (!(await button.isVisible())) throw Error("Play Motion button missing");
+    const warning = await page.locator("#pfMotionStatus").textContent();
+    if (!warning.includes("prefers reduced motion")) {
+      throw Error("Mobile reduced-motion diagnosis missing: " + warning);
+    }
+    if ((await badge.evaluate(el => getComputedStyle(el).animationName)) !== "none") {
+      throw Error("Reduced-motion preference was not respected initially");
+    }
+    await button.click();
+    if ((await button.getAttribute("aria-pressed")) !== "true") throw Error("Play button did not toggle on");
+    const playing = await page.evaluate(() => ({
+      badge: getComputedStyle(document.querySelector(".pf-featured-motion")).animationName,
+      badgeDuration: getComputedStyle(document.querySelector(".pf-featured-motion")).animationDuration,
+      orb: getComputedStyle(document.querySelector(".pf-motion-orb")).animationName,
+      shine: getComputedStyle(document.querySelector(".featured-card:first-child"), "::before").animationName,
+      bodyClass: document.body.className,
+    }));
+    if (!playing.badge.includes("pf-manual-demo-badge") || !playing.orb.includes("pf-manual-demo-orb")) {
+      throw Error("Opt-in mobile animations did not activate: " + JSON.stringify(playing));
+    }
+    if (!playing.shine.includes("pf-featured-light-sweep")) throw Error("Biryani light sweep remains off");
+    if (parseFloat(playing.badgeDuration) < 1) {
+      throw Error("Device CSS globally disabled animation: " + playing.badgeDuration);
+    }
+    const positions = [];
+    for (const delay of [0, 350, 400]) {
+      if (delay) await page.waitForTimeout(delay);
+      positions.push(await badge.evaluate(el => getComputedStyle(el).transform));
+    }
+    if (new Set(positions).size < 2) {
+      throw Error("Play Motion produced zero physical movement: " + JSON.stringify(positions));
+    }
+    const orbPositions = [];
+    for (const delay of [0, 300]) {
+      if (delay) await page.waitForTimeout(delay);
+      orbPositions.push(await orb.evaluate(el => getComputedStyle(el).transform));
+    }
+    if (new Set(orbPositions).size < 2) throw Error("Star demo remained stationary");
+    await button.click();
+    const paused = await badge.evaluate(el => getComputedStyle(el).animationName);
+    if (paused !== "none" || (await button.getAttribute("aria-pressed")) !== "false") {
+      throw Error("Pause Motion did not stop animation");
+    }
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.reload({ waitUntil: "domcontentloaded" });
+    return true;
+  });
+
   await check("Live search finds biryani and handles empty results", async () => {
     await page.locator("#searchInput").fill("chicken biryani");
     const matched = await cards();
