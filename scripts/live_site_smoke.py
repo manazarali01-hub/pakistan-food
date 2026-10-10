@@ -163,11 +163,13 @@ def require(path: str, *needles: str) -> str:
 
 wait_for_pages_deployment()
 
-home = require("/", "Pakistan Food", "Flavours worth sharing.", "pf-featured-motion", "premium.css?v=20261010-featured-motion-v4")
+home = require("/", "Pakistan Food", "Flavours worth sharing.", "pf-featured-motion", 'id="pfMotionToggle"', "Phone prefers reduced motion", "premium.css?v=20261010-motion-toggle-v5")
 # Confirm animation CSS itself reaches the public domain, not only the HTML.
 require(
-    "/premium.css?v=20261010-featured-motion-v4",
+    "/premium.css?v=20261010-motion-toggle-v5",
     "ALWAYS VISIBLE FEATURED MOTION",
+    "MANUAL MOTION PREVIEW AND DIAGNOSTIC CONTROL",
+    "pf-manual-demo-badge",
     "pf-featured-light-sweep",
     "pf-featured-badge-float",
     "prefers-reduced-motion:reduce",
