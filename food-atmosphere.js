@@ -74,6 +74,15 @@
     });
   }
   function init() {
+    // Apply one explicitly chosen preference to every recipe page.
+    let preference = null;
+    try { preference = localStorage.getItem("pfFoodMotionPreference"); } catch (_) {}
+    if (preference === "off") {
+      document.body.classList.add("pf-motion-paused");
+    } else if (preference === "on") {
+      document.body.classList.remove("pf-motion-paused");
+      document.body.classList.add("pf-motion-force-on");
+    }
     if ("IntersectionObserver" in window) {
       observer = new IntersectionObserver(entries => {
         for (const entry of entries) {
