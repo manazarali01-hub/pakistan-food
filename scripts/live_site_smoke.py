@@ -299,6 +299,93 @@ if any(not url.startswith(BASE + "/") for url in urls):
     raise SystemExit("/sitemap-v2.xml: one or more URLs are off the canonical domain")
 print(f"OK sitemap-v2 canonical URL set ({len(urls)} URLs)")
 
+# Confirm that every indexable recipe submitted in the sitemap actually
+# loads on the public custom domain with coherent SEO and recipe content.
+# This is a live HTTP and structured-data check, not Google index coverage.
+sitemap_url_set = set(urls)
+recipe_files = sorted(recipe_dir.glob("*.json"))
+if len(recipe_files) != 66:
+    raise SystemExit(f"Expected 66 recipe source files, found {len(recipe_files)}")
+
+if "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" not in home:
+    raise SystemExit("/: AdSense publisher loader is missing from the homepage")
+if "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" in directory:
+    raise SystemExit("/recipes/: AdSense loader unexpectedly on the directory")
+
+for recipe_file in recipe_files:
+    slug = recipe_file.stem
+    source_recipe = json.loads(recipe_file.read_text(encoding="utf-8"))
+    url = f"{BASE}/recipes/{slug}.html"
+    if url not in sitemap_url_set:
+        raise SystemExit(f"{slug}: public recipe URL missing from sitemap")
+
+    page = require(f"/recipes/{slug}.html")
+    if "{{" in page or "{%" in page:
+        raise SystemExit(f"{slug}: unresolved template syntax in live HTML")
+    if f'<h1>{source_recipe["name"]} Recipe</h1>' not in unescape(page):
+        raise SystemExit(f"{slug}: expected recipe heading not rendered")
+
+    canonical_tag = re.search(r'<link\b[^>]*rel=["\']canonical["\'][^>]*>', page, re.I)
+    canonical_href = (re.search(r'href=["\']([^"\']+)["\']', canonical_tag.group(0), re.I)
+                      if canonical_tag else None)
+    if not canonical_href or canonical_href.group(1) != url:
+        raise SystemExit(f"{slug}: live canonical is not {url}")
+
+    robots_tag = re.search(r'<meta\b[^>]*name=["\']robots["\'][^>]*>', page, re.I)
+    if not robots_tag or "noindex" in robots_tag.group(0).lower():
+        raise SystemExit(f"{slug}: live recipe has no indexable robots directive")
+    if "data-recipe-lang=\"ur\"" not in page or "data-recipe-panel=\"ur\"" not in page:
+        raise SystemExit(f"{slug}: English/Urdu recipe switch is missing")
+    if "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" not in page:
+        raise SystemExit(f"{slug}: AdSense publisher loader missing from recipe article")
+
+    scripts = re.findall(
+        r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        page, re.I | re.S,
+    )
+    recipe_nodes = []
+    for raw in scripts:
+        try:
+            graph = json.loads(raw)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"{slug}: invalid live JSON-LD: {exc}")
+        if isinstance(graph, dict):
+            nodes = graph.get("@graph", [graph])
+            if isinstance(nodes, list):
+                recipe_nodes.extend(
+                    item for item in nodes
+                    if isinstance(item, dict) and item.get("@type") == "Recipe"
+                )
+    if len(recipe_nodes) != 1:
+        raise SystemExit(f"{slug}: expected one live Recipe schema node, found {len(recipe_nodes)}")
+    node = recipe_nodes[0]
+    if node.get("name") != source_recipe["name"] or node.get("url") != url:
+        raise SystemExit(f"{slug}: live Recipe schema identity differs from source")
+    instructions = node.get("recipeInstructions", [])
+    if len(instructions) < 5 or len(instructions) != len(source_recipe["method"]):
+        raise SystemExit(f"{slug}: live Recipe schema instruction count mismatch")
+    for position, instruction in enumerate(instructions, 1):
+        if not isinstance(instruction, dict) or instruction.get("@type") != "HowToStep":
+            raise SystemExit(f"{slug}: malformed Recipe schema step {position}")
+        if instruction.get("url") != f"{url}#step-{position}":
+            raise SystemExit(f"{slug}: invalid live step anchor {position}")
+        step_photos = source_recipe.get("step_images") or []
+        has_source_photo = isinstance(step_photos, list) and (
+            position <= len(step_photos) and bool(step_photos[position - 1])
+        )
+        if bool(instruction.get("image")) != bool(has_source_photo):
+            raise SystemExit(f"{slug}: live step image has no matching source photo")
+
+print(f"OK all {len(recipe_files)} deployed recipe HTML pages: canonical, robots, bilingual UI and JSON-LD")
+
+guide_hub = require("/guides/", "Pakistani Cooking Guides")
+guide_urls = [url for url in urls if url.startswith(BASE + "/guides/") and url.endswith(".html")]
+for guide_url in guide_urls:
+    filename = guide_url.rsplit("/", 1)[-1]
+    if f'href="{filename}"' not in guide_hub:
+        raise SystemExit(f"/guides/: live directory is missing indexable guide {filename}")
+print(f"OK live guide directory links ({len(guide_urls)} indexable guides)")
+
 for path, marker in (
     ("/about.html", "About"),
     ("/contact.html", "Contact"),
