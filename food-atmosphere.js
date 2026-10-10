@@ -1,110 +1,55 @@
-/* Pakistan Food · original natural food atmosphere · 2026-10-10
-   No dependencies, data writes, redirects or changes to recipe photography. */
+/* Pakistan Food · restrained food-warmth illustration v2 · 2026-10-10
+   No persistent controls, photos replaced or external motion dependencies. */
 (() => {
   "use strict";
-  const effects = Object.freeze({
-    "chicken-biryani": ["steam", "center"],
-    "chicken-karahi": ["steam", "right"],
-    "beef-nihari": ["steam", "center"],
-    "haleem": ["steam", "center"],
-    "halwa-puri": ["steam", "left"],
-    "kashmiri-chai": ["steam", "center"],
-    "chicken-sajji": ["heat", "center"],
-    "seekh-kabab": ["heat", "center"],
-    "chapli-kabab": ["heat", "center"],
-    "reshmi-kabab": ["heat", "center"],
-    "lahori-chargha": ["heat", "center"],
-    "mango-lassi": ["fresh", "right"],
-    "lassi": ["fresh", "center"],
-    "jalebi": ["dessert", "center"],
-    "rice-kheer": ["dessert", "center"],
-    "ras-malai": ["dessert", "center"]
+  // Positions are deliberate FOOD-surface regions, not the plate/bowl edge.
+  // Reduce scope rather than applying an implausible overlay to all 66 recipes.
+  const positions = Object.freeze({
+    "chicken-biryani": {left:"34%", top:"3%", width:"32%", height:"46%"},
+    "chicken-karahi": {left:"38%", top:"7%", width:"29%", height:"45%"},
+    "beef-nihari": {left:"38%", top:"7%", width:"28%", height:"42%"},
+    "haleem": {left:"36%", top:"7%", width:"30%", height:"43%"},
+    "kashmiri-chai": {left:"44%", top:"10%", width:"24%", height:"37%"}
   });
-  const steamPaths = [
-    "M48 139 C22 110 86 90 56 63 C34 44 87 28 67 7",
-    "M91 143 C115 115 72 91 98 66 C124 44 78 30 104 5",
-    "M132 137 C110 112 155 86 131 62 C108 36 155 27 140 9"
-  ];
-  const watched = new WeakSet();
-  const observers = [];
   let observer;
-  const svgMarkup = () =>
-    '<svg viewBox="0 0 180 150" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">' +
-    steamPaths.map(path => '<path class="pf-vapor-line" d="' + path + '"></path>').join("") +
-    '</svg>';
-
-  function slugFromCard(card) {
-    const link = card.querySelector('a.full-recipe[href*="/recipes/"]') ||
-      card.querySelector('a[href*="/recipes/"]');
-    const href = link?.getAttribute("href") || "";
-    const match = href.match(/(?:^|\/)recipes\/([a-z0-9-]+)\.html(?:[?#]|$)/);
-    return match ? match[1] : "";
-  }
-  function attach(frame, slug) {
-    if (!frame || frame.hasAttribute("data-pf-atmosphere-ready")) return;
-    const config = effects[slug];
-    if (!config) return;
-    // Mark only after a matching food type is found, never add to unrelated food.
-    frame.setAttribute("data-pf-atmosphere-ready", config[0]);
-    if (getComputedStyle(frame).position === "static") {
-      frame.style.position = "relative";
+  function addMist(frame) {
+    if (frame.dataset.pfAtmosphereReady) return;
+    const coordinates = positions[frame.dataset.pfDish];
+    if (!coordinates) return;
+    frame.dataset.pfAtmosphereReady = "mist";
+    const overlay = document.createElement("span");
+    overlay.className = "pf-food-atmosphere";
+    overlay.setAttribute("aria-hidden", "true");
+    overlay.style.setProperty("--pf-steam-left", coordinates.left);
+    overlay.style.setProperty("--pf-steam-top", coordinates.top);
+    overlay.style.setProperty("--pf-steam-width", coordinates.width);
+    overlay.style.setProperty("--pf-steam-height", coordinates.height);
+    for (let i = 0; i < 2; i++) {
+      const cloud = document.createElement("span");
+      cloud.className = "pf-mist";
+      overlay.appendChild(cloud);
     }
-    const effect = document.createElement("span");
-    effect.className = "pf-food-atmosphere pf-effect-" + config[0];
-    effect.setAttribute("aria-hidden", "true");
-    effect.setAttribute("data-pf-place", config[1]);
-    if (config[0] === "steam" || config[0] === "heat") {
-      effect.innerHTML = svgMarkup();
-    } else {
-      const light = document.createElement("span");
-      light.className = config[0] === "fresh" ? "pf-fresh-light" : "pf-dessert-light";
-      effect.appendChild(light);
-    }
-    frame.appendChild(effect);
+    frame.appendChild(overlay);
     if (observer) observer.observe(frame);
     else frame.classList.add("pf-atmosphere-visible");
   }
-  function scan(root = document) {
-    root.querySelectorAll(".pf-food-photo[data-pf-dish]").forEach(frame => {
-      attach(frame, frame.dataset.pfDish);
-    });
-    root.querySelectorAll(".recipe-card .recipe-image").forEach(frame => {
-      const card = frame.closest(".recipe-card");
-      if (card) attach(frame, slugFromCard(card));
-    });
+  function scan() {
+    document.querySelectorAll(".pf-food-photo[data-pf-dish]").forEach(addMist);
   }
   function init() {
-    // Apply one explicitly chosen preference to every recipe page.
-    let preference = null;
-    try { preference = localStorage.getItem("pfFoodMotionPreference"); } catch (_) {}
-    if (preference === "off") {
-      document.body.classList.add("pf-motion-paused");
-    } else if (preference === "on") {
-      document.body.classList.remove("pf-motion-paused");
-      document.body.classList.add("pf-motion-force-on");
-    }
     if ("IntersectionObserver" in window) {
       observer = new IntersectionObserver(entries => {
-        for (const entry of entries) {
-          entry.target.classList.toggle("pf-atmosphere-visible", entry.isIntersecting);
-        }
-      }, {rootMargin:"50px 0px", threshold:0.05});
-    }
-    const grid = document.getElementById("recipeGrid");
-    if (grid && "MutationObserver" in window) {
-      const update = new MutationObserver(() => scan(grid));
-      update.observe(grid, {childList:true});
-      observers.push(update);
+        entries.forEach(({target,isIntersecting}) => {
+          target.classList.toggle("pf-atmosphere-visible", isIntersecting);
+        });
+      }, {rootMargin:"30px 0px", threshold:.05});
     }
     document.addEventListener("visibilitychange", () => {
-      document.body.classList.toggle("pf-motion-page-hidden", document.hidden);
-    }, {passive:true});
-    window.PakistanFoodAtmosphere = {refresh: scan};
+      document.body.classList.toggle("pf-motion-page-hidden",document.hidden);
+    },{passive:true});
     scan();
   }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init, {once:true});
-  } else {
-    init();
-  }
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded",init,{once:true});
+  else init();
 })();
