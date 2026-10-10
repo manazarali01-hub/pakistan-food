@@ -85,151 +85,83 @@ for (const width of widths) {
   });
   if (width !== 390) continue;
 
-  await check("Featured badge visibly animates on a 390px mobile viewport", async () => {
-    await page.emulateMedia({ reducedMotion: "no-preference" });
-    const badge = page.locator(".featured-card:first-child .pf-featured-motion");
-    if (!(await badge.isVisible())) throw Error("Static featured badge absent");
-    const properties = await badge.evaluate(el => {
-      const style = getComputedStyle(el);
-      const shine = getComputedStyle(el.closest(".featured-card"), "::before");
+  await check("Natural mist rises gently from the FOOD, without a manual button or animated badge", async () => {
+    await page.emulateMedia({reducedMotion:"no-preference"});
+    await page.reload({waitUntil:"domcontentloaded"});
+    const frame = page.locator(".featured-card:first-child .pf-food-photo");
+    await frame.scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => document.querySelector(".featured-card:first-child .pf-food-photo")?.classList.contains("pf-atmosphere-visible"));
+    if (await page.locator("#pfMotionToggle, .pf-motion-preview, .pf-featured-motion").count()) {
+      throw Error("Removed Play/Pause control or floating badge still exists");
+    }
+    const mist = frame.locator(".pf-mist").first();
+    if (!(await mist.count()) || await frame.locator(".pf-vapor-line, svg").count()) {
+      throw Error("Soft mist absent or old drawn SVG waves still present");
+    }
+    const state = await mist.evaluate(el => {
+      const box=el.getBoundingClientRect();
+      const photo=el.closest(".pf-food-photo").getBoundingClientRect();
+      const style=getComputedStyle(el);
       return {
-        animationName: style.animationName,
-        display: style.display,
-        imageLightAnimation: shine.animationName,
-        pointerEvents: style.pointerEvents,
+        start:Math.round((box.top-photo.top)/photo.height*100),
+        end:Math.round((box.bottom-photo.top)/photo.height*100),
+        animation:style.animationName,
+        transform:style.transform,
+        pointerEvents:getComputedStyle(el.closest(".pf-food-atmosphere")).pointerEvents,
       };
     });
-    if (!properties.animationName.includes("pf-featured-badge-float")) {
-      throw Error("Badge animation not running: " + JSON.stringify(properties));
+    if (state.start>15 || state.end>57 || state.pointerEvents!=="none") {
+      throw Error("Mist improperly placed near plate or intercepts taps: "+JSON.stringify(state));
     }
-    if (!properties.imageLightAnimation.includes("pf-featured-light-sweep")) {
-      throw Error("Photo light animation missing: " + JSON.stringify(properties));
+    if (!state.animation.includes("pf-mist-rises")) {
+      throw Error("Automatic soft mist failed to start: "+JSON.stringify(state));
     }
-    if (properties.pointerEvents !== "none") throw Error("Badge may block recipe clicks");
-    const frames = [];
-    for (const delay of [0, 430, 650]) {
-      if (delay) await page.waitForTimeout(delay);
-      frames.push(await badge.evaluate(el => getComputedStyle(el).transform));
+    await page.waitForTimeout(810);
+    if (state.transform===await mist.evaluate(el=>getComputedStyle(el).transform)) {
+      throw Error("Natural mist not rising on mobile");
     }
-    if (new Set(frames).size < 2) throw Error("Badge does not change position: " + frames.join(" / "));
-    await page.emulateMedia({ reducedMotion: "reduce" });
-    const reduced = await badge.evaluate(el => getComputedStyle(el).animationName);
-    if (!(await badge.isVisible()) || reduced !== "none") {
-      throw Error("Reduced-motion presentation unsafe: " + reduced);
-    }
-    await page.emulateMedia({ reducedMotion: "no-preference" });
     return true;
   });
 
-  await check("Natural biryani steam auto-rises and cold lassi gets reflection on mobile", async () => {
-    await page.emulateMedia({reducedMotion: "no-preference"});
-    await page.evaluate(() => localStorage.removeItem("pfFoodMotionPreference"));
-    await page.reload({waitUntil: "domcontentloaded"});
-    const photo = page.locator('.featured-card:first-child .pf-food-photo');
-    await photo.scrollIntoViewIfNeeded();
-    await page.waitForFunction(() => document.querySelector('.featured-card:first-child .pf-food-photo')?.classList.contains("pf-atmosphere-visible"));
-    const steam = photo.locator('.pf-effect-steam .pf-vapor-line').first();
-    if (!(await steam.count())) throw Error("Biryani steam overlay missing");
-    const before = await steam.evaluate(el => ({
-      animation: getComputedStyle(el).animationName,
-      transform: getComputedStyle(el).transform,
-      pointerEvents: getComputedStyle(el.closest(".pf-food-atmosphere")).pointerEvents,
-    }));
-    if (!before.animation.includes("pf-vapor-rise-one") || before.pointerEvents !== "none") {
-      throw Error("Auto steam is inactive or blocks taps: " + JSON.stringify(before));
+  await check("Selected hot dishes only: no fake BBQ heat or cold-drink shimmer", async () => {
+    if (!(await page.locator(".featured-card:nth-child(2) .pf-mist").count())) {
+      throw Error("Chicken karahi mist missing");
     }
-    await page.waitForTimeout(660);
-    const after = await steam.evaluate(el => getComputedStyle(el).transform);
-    if (before.transform === after) throw Error("Steam did not visibly rise: " + after);
-    if (!(await page.locator('.featured-card:nth-child(2) .pf-effect-steam').count())) {
-      throw Error("Chicken karahi steam missing");
+    if (await page.locator(".featured-card:nth-child(3) .pf-food-atmosphere").count()) {
+      throw Error("Cold mango lassi has unnecessary animation");
     }
-    if (!(await page.locator('.featured-card:nth-child(3) .pf-effect-fresh .pf-fresh-light').count())) {
-      throw Error("Mango lassi reflection missing");
+    if (await page.locator(".popular-recipe-card:nth-child(5) .pf-food-atmosphere").count()) {
+      throw Error("BBQ still has artificial heat motion");
     }
-    if (await page.locator('.featured-card:nth-child(3) .pf-effect-steam').count()) {
-      throw Error("Cold lassi mistakenly got hot-food steam");
-    }
-    await page.emulateMedia({reducedMotion: "reduce"});
-    const reduced = await steam.evaluate(el => ({
-      name: getComputedStyle(el).animationName,
-      container: getComputedStyle(el.closest(".pf-food-atmosphere")).display,
-    }));
-    if (reduced.container !== "none") throw Error("Reduced-motion smoke still shown: " + JSON.stringify(reduced));
-    await page.emulateMedia({reducedMotion: "no-preference"});
+    const photos=await page.locator(".featured-card .pf-food-photo img").count();
+    return photos===3;
+  });
+
+  await check("Reduced-motion users see a fully static unobstructed photo", async () => {
+    await page.emulateMedia({reducedMotion:"reduce"});
+    const mist=page.locator(".featured-card:first-child .pf-mist").first();
+    const visibility=await mist.evaluate(el=>getComputedStyle(el.closest(".pf-food-atmosphere")).display);
+    if(visibility!=="none") throw Error("Reduced-motion setting ignored");
+    if(await page.locator("#pfMotionToggle").count()) throw Error("Unwanted manual control exists");
+    await page.emulateMedia({reducedMotion:"no-preference"});
     return true;
   });
 
-  await check("Permanent recipe page has natural steam without SEO or print regression", async () => {
-    const resp = await page.goto(base + "/recipes/chicken-biryani.html", {waitUntil:"domcontentloaded"});
-    if (!resp?.ok()) return false;
-    const seo = await page.evaluate(() => ({
-      canonical: document.querySelector('link[rel="canonical"]')?.href,
-      description: document.querySelector('meta[name="description"]')?.content,
-      print: !!document.querySelector(".print-recipe"),
-      photo: !!document.querySelector('.pf-recipe-photo[data-pf-dish="chicken-biryani"] .pf-effect-steam'),
-      correctAlt: !!document.querySelector('.pf-recipe-photo img[alt]'),
-      jsErrors: !document.querySelector(".pf-food-atmosphere")?.getAttribute("aria-hidden"),
+  await check("Permanent recipe has food mist and intact canonical, description, print", async () => {
+    const response=await page.goto(base+"/recipes/chicken-biryani.html",{waitUntil:"domcontentloaded"});
+    if(!response?.ok()) throw Error("Recipe page HTTP error");
+    const report=await page.evaluate(()=>({
+      canonical:document.querySelector('link[rel="canonical"]')?.href,
+      description:document.querySelector('meta[name="description"]')?.content,
+      print:!!document.querySelector(".print-recipe"),
+      mist:!!document.querySelector('.pf-recipe-photo[data-pf-dish="chicken-biryani"] .pf-mist'),
+      alt:!!document.querySelector('.pf-recipe-photo img[alt]'),
+      urdu:!!document.querySelector('[data-recipe-lang="ur"]')
     }));
-    if (!seo.canonical?.endsWith("/recipes/chicken-biryani.html") || !seo.description || !seo.print || !seo.photo || !seo.correctAlt) {
-      throw Error("Permanent page content/atmosphere issue: "+JSON.stringify(seo));
+    if(!report.canonical?.endsWith("/recipes/chicken-biryani.html") || !report.description || !report.print || !report.mist || !report.alt || !report.urdu) {
+      throw Error("Recipe SEO, text, or steam regression: "+JSON.stringify(report));
     }
-    await page.goto(base + "/", {waitUntil:"domcontentloaded"});
-    return true;
-  });
-
-  await check("Manual Play Motion works even with reduced-motion device settings", async () => {
-    await page.emulateMedia({ reducedMotion: "reduce" });
-    await page.reload({ waitUntil: "domcontentloaded" });
-    const button = page.locator("#pfMotionToggle");
-    const badge = page.locator(".featured-card:first-child .pf-featured-motion");
-    const orb = page.locator(".pf-motion-orb");
-    if (!(await button.isVisible())) throw Error("Play Motion button missing");
-    const warning = await page.locator("#pfMotionStatus").textContent();
-    if (!warning.includes("prefers reduced motion")) {
-      throw Error("Mobile reduced-motion diagnosis missing: " + warning);
-    }
-    if ((await badge.evaluate(el => getComputedStyle(el).animationName)) !== "none") {
-      throw Error("Reduced-motion preference was not respected initially");
-    }
-    await button.click();
-    if ((await button.getAttribute("aria-pressed")) !== "true") throw Error("Play button did not toggle on");
-    const playing = await page.evaluate(() => ({
-      badge: getComputedStyle(document.querySelector(".pf-featured-motion")).animationName,
-      badgeDuration: getComputedStyle(document.querySelector(".pf-featured-motion")).animationDuration,
-      orb: getComputedStyle(document.querySelector(".pf-motion-orb")).animationName,
-      shine: getComputedStyle(document.querySelector(".featured-card:first-child"), "::before").animationName,
-      bodyClass: document.body.className,
-    }));
-    if (!playing.badge.includes("pf-manual-demo-badge") || !playing.orb.includes("pf-manual-demo-orb")) {
-      throw Error("Opt-in mobile animations did not activate: " + JSON.stringify(playing));
-    }
-    if (!playing.shine.includes("pf-featured-light-sweep")) throw Error("Biryani light sweep remains off");
-    if (parseFloat(playing.badgeDuration) < 1) {
-      throw Error("Device CSS globally disabled animation: " + playing.badgeDuration);
-    }
-    const positions = [];
-    for (const delay of [0, 350, 400]) {
-      if (delay) await page.waitForTimeout(delay);
-      positions.push(await badge.evaluate(el => getComputedStyle(el).transform));
-    }
-    if (new Set(positions).size < 2) {
-      throw Error("Play Motion produced zero physical movement: " + JSON.stringify(positions));
-    }
-    const orbPositions = [];
-    for (const delay of [0, 300]) {
-      if (delay) await page.waitForTimeout(delay);
-      orbPositions.push(await orb.evaluate(el => getComputedStyle(el).transform));
-    }
-    if (new Set(orbPositions).size < 2) throw Error("Star demo remained stationary");
-    await button.click();
-    const paused = await badge.evaluate(el => getComputedStyle(el).animationName);
-    if (paused !== "none" || (await button.getAttribute("aria-pressed")) !== "false") {
-      throw Error("Pause Motion did not stop animation");
-    }
-    await page.emulateMedia({ reducedMotion: "no-preference" });
-    await page.evaluate(() => localStorage.removeItem("pfFoodMotionPreference"));
-    await page.reload({ waitUntil: "domcontentloaded" });
+    await page.goto(base+"/",{waitUntil:"domcontentloaded"});
     return true;
   });
 
@@ -294,46 +226,33 @@ for (const width of widths) {
   });
 }
 // Real mobile touch environment, separate from CSS-only 390px responsive tests.
-await check("Android-style touch viewport auto-animates natural food steam", async () => {
-  const phone = await browser.newContext({
-    viewport: {width:390,height:844},
-    deviceScaleFactor:2,
-    isMobile:true,
-    hasTouch:true,
-    reducedMotion:"no-preference",
+await check("Android-style touchscreen runs automatic soft mist without Play/Pause", async () => {
+  const phone=await browser.newContext({
+    viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,
+    reducedMotion:"no-preference"
   });
   try {
-    const mobilePage = await phone.newPage();
-    mobilePage.on("pageerror", error => failures.push("Touch-browser exception: " + error.message));
-    const response = await mobilePage.goto(base + "/", {waitUntil:"domcontentloaded"});
-    if (!response?.ok()) throw Error("Mobile homepage failed");
-    const frame = mobilePage.locator('.featured-card:first-child .pf-food-photo');
+    const mobile=await phone.newPage();
+    mobile.on("pageerror",error=>failures.push("Touch-browser exception: "+error.message));
+    const response=await mobile.goto(base+"/",{waitUntil:"domcontentloaded"});
+    if(!response?.ok()) throw Error("Touch homepage request failed");
+    const frame=mobile.locator(".featured-card:first-child .pf-food-photo");
     await frame.scrollIntoViewIfNeeded();
-    await mobilePage.waitForFunction(() => document.querySelector('.featured-card:first-child .pf-food-photo')?.classList.contains("pf-atmosphere-visible"));
-    const steam = frame.locator(".pf-vapor-line").first();
-    if (!(await steam.count())) throw Error("Food atmosphere did not attach on touch browser");
-    const first = await steam.evaluate(el => ({
-      transform:getComputedStyle(el).transform,
+    await mobile.waitForFunction(()=>document.querySelector(".featured-card:first-child .pf-food-photo")?.classList.contains("pf-atmosphere-visible"));
+    const mist=frame.locator(".pf-mist").first();
+    if(!(await mist.count())) throw Error("Mist missing in touchscreen browser");
+    const before=await mist.evaluate(el=>({
       animation:getComputedStyle(el).animationName,
+      transform:getComputedStyle(el).transform
     }));
-    await mobilePage.waitForTimeout(620);
-    const last = await steam.evaluate(el => getComputedStyle(el).transform);
-    if (!first.animation.includes("pf-vapor-rise-one") || first.transform === last) {
-      throw Error("Mobile touch animation not moving: "+JSON.stringify({first,last}));
+    await mobile.waitForTimeout(730);
+    const after=await mist.evaluate(el=>getComputedStyle(el).transform);
+    if(!before.animation.includes("pf-mist-rises") || before.transform===after) {
+      throw Error("No actual automatic mist movement on touch device: "+JSON.stringify({before,after}));
     }
-    const button = mobilePage.locator("#pfMotionToggle");
-    await button.tap();
-    if ((await button.getAttribute("aria-pressed")) !== "false") {
-      throw Error("Tap could not pause autoplay");
-    }
-    await button.tap();
-    if ((await button.getAttribute("aria-pressed")) !== "true") {
-      throw Error("Tap could not resume autoplay");
-    }
+    if(await mobile.locator("#pfMotionToggle").count()) throw Error("Play/Pause control reappeared");
     return true;
-  } finally {
-    await phone.close();
-  }
+  } finally {await phone.close();}
 });
 
 await browser.close();
