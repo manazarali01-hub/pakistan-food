@@ -3000,3 +3000,134 @@ body.dark .pf-category-icon .pf-picto{filter:drop-shadow(0 2px 2px rgba(0,0,0,.2
   }
 }
 /* END MOBILE PHOTO AND GLASS PERFORMANCE */
+
+/* BALANCED PREMIUM MOTION — 2026-10-10 */
+/* Original, asset-free CSS motion. No third-party GIFs, fonts, scripts,
+   image replacements, new URLs, structured-data changes or overlays over links.
+   Keeps all content visible and all elements directly clickable. */
+@keyframes pf-motion-arrive {
+  from { transform: translate3d(0, 13px, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+@keyframes pf-motion-badge {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -3px, 0); }
+}
+@keyframes pf-motion-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -5px, 0); }
+}
+
+/* Give every major surface a coordinated motion speed without constantly
+   repainting photographic backgrounds or running heavy animated GIFs. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-content {
+    animation: pf-motion-arrive .8s cubic-bezier(.22,.68,.2,1) both;
+  }
+  .hero-small {
+    animation: pf-motion-badge 7s ease-in-out infinite;
+  }
+  .hero-stats > div {
+    transition: transform .28s ease;
+  }
+  .hero :is(.btn-primary,.btn-outline),
+  .recipe-tools :is(.filter-btn,.saved-filter,.surprise-recipe),
+  .recipe-quick-actions a,
+  .recipe-language-switch .recipe-lang-btn,
+  .recipe-facts .print-recipe,
+  .category-nav a,
+  .hub-categories a {
+    transition: transform .24s ease, box-shadow .28s ease, border-color .28s ease, background-color .28s ease;
+  }
+  :is(.featured-card,.popular-recipe-card,.recipe-card,.region-card,.related-recipe-card,.hub-card,.cat .card,.cooking-help-card) {
+    transition: transform .32s cubic-bezier(.2,.7,.2,1),box-shadow .32s ease,border-color .25s ease;
+  }
+  :is(.featured-card,.popular-recipe-card,.region-card) img,
+  .recipe-card .recipe-image img,
+  .related-recipe-card img {
+    transition: transform .55s cubic-bezier(.2,.7,.2,1);
+  }
+  .category-box .pf-category-icon,
+  .category-box > div:first-child,
+  .contact-icon.pf-contact-icon {
+    transition: transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease;
+  }
+  /* Only animate the interactive areas on devices capable of hover. */
+  @media (hover: hover) and (pointer: fine) {
+    .hero-stats > div:hover { transform: translate3d(0,-3px,0); }
+    .hero .btn:is(:hover,:focus-visible),
+    .recipe-tools :is(.filter-btn,.saved-filter,.surprise-recipe):hover,
+    .recipe-quick-actions a:hover,
+    .recipe-language-switch .recipe-lang-btn:hover,
+    .recipe-facts .print-recipe:hover,
+    .category-nav a:hover,
+    .hub-categories a:hover {
+      transform: translate3d(0,-3px,0);
+    }
+    :is(.featured-card,.popular-recipe-card,.recipe-card,.region-card,.related-recipe-card,.hub-card,.cat .card,.cooking-help-card):is(:hover,:focus-visible) {
+      transform: translate3d(0,-4px,0);
+    }
+    :is(.featured-card,.popular-recipe-card,.region-card):is(:hover,:focus-visible) img,
+    .recipe-card:is(:hover,:focus-within) .recipe-image img,
+    .related-recipe-card:is(:hover,:focus-visible) img {
+      transform: scale(1.04);
+    }
+    .category-box:is(:hover,:focus-visible) .pf-category-icon,
+    .category-box:is(:hover,:focus-visible) > div:first-child {
+      transform: translate3d(0,-4px,0);
+    }
+    .contact-card:hover .pf-contact-icon { transform: translate3d(0,-3px,0); }
+  }
+  /* Lightweight non-blocking highlight on the top recipe action.
+     The pseudo-element can never intercept taps or obscure the label. */
+  .hero .btn-primary { position: relative; isolation: isolate; }
+  .hero .btn-primary::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(105deg, transparent 15%, rgba(255,255,255,.21) 45%, transparent 75%);
+    background-size: 230% 100%;
+    background-position: 110% 50%;
+    transition: background-position .65s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hero .btn-primary:hover::before { background-position: -125% 50%; }
+  }
+}
+
+/* Phone/tablet: static photography and gentle tap response only.
+   This avoids long-running animation and backdrop compositing overhead. */
+@media (max-width: 760px), (hover: none), (pointer: coarse) {
+  .hero-small { animation: none !important; }
+  .hero-content { animation-duration: .45s; }
+  :is(.featured-card,.popular-recipe-card,.recipe-card,.category-box,.region-card) {
+    transition-duration: .16s;
+  }
+  .hero .btn:active,
+  .category-box:active,
+  .recipe-tools :is(.filter-btn,.saved-filter,.surprise-recipe):active {
+    transform: scale(.985);
+  }
+}
+
+/* Respect operating-system accessibility settings, no forced entrance or
+   perpetual motion. CSS is decorative only: content never starts hidden. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content, .hero-small, .hero-stats > div {
+    animation: none !important;
+    transform: none !important;
+  }
+  :is(.featured-card,.popular-recipe-card,.recipe-card,.region-card,.related-recipe-card,.hub-card,.cat .card,.cooking-help-card) img {
+    animation: none !important;
+    transition: none !important;
+  }
+  .hero .btn-primary::before { display: none !important; }
+}
+@media print {
+  .hero-content, .hero-small { animation: none !important; transform: none !important; }
+  :is(.featured-card,.popular-recipe-card,.recipe-card,.region-card,.related-recipe-card) { transform: none !important; }
+}
+/* END BALANCED PREMIUM MOTION */
