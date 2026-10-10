@@ -22,3 +22,20 @@ jobs:
           GITHUB_SHA: ${{ github.sha }}
           GITHUB_RUN_ID: ${{ github.run_id }}
         run: python3 scripts/live_site_smoke.py
+      - name: Install browser for production motion verification
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Verify production food motion and interactions
+        env:
+          QA_BASE_URL: https://pakistanfoodrecipes.top
+        run: |
+          node scripts/food_motion_qa.mjs
+          node scripts/premium_interaction_qa.mjs
+      - name: Upload live browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pakistan-food-live-motion
+          path: qa-screenshots/
+          retention-days: 7

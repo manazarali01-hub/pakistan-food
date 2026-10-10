@@ -57,7 +57,14 @@
         svg.classList.add('pf-wisp');
         const path = document.createElementNS(ns, 'path');
         path.setAttribute('d', 'M40 145 C8 113 72 95 39 66 C12 43 60 25 43 5');
-        svg.append(path); layer.append(svg);
+        // Layered translucent strokes soften the edge without animated filters.
+        [24, 17, 9].forEach((width, index) => {
+          const mist = path.cloneNode();
+          mist.style.strokeWidth = width;
+          mist.style.strokeOpacity = [.045, .075, .13][index];
+          svg.append(mist);
+        });
+        layer.append(svg);
       }
     } else layer.innerHTML = '<span class="pf-reflection"></span>';
     host.append(layer);
