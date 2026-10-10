@@ -10,6 +10,8 @@ on:
       - 'guides/**'
       - 'style.css'
       - 'premium.css'
+      - 'food-motion.js'
+      - 'scripts/food_motion_qa.mjs'
       - 'enhancements.css'
       - 'script.js'
       - 'recipes-data.js'
@@ -46,6 +48,8 @@ jobs:
           exit 1
       - name: Test 320-768px layouts and interactions
         run: node scripts/mobile_browser_qa.mjs
+      - name: Verify automatic food motion in touch browser
+        run: node scripts/food_motion_qa.mjs
       - name: Upload QA screenshots
         if: always()
         uses: actions/upload-artifact@v4
