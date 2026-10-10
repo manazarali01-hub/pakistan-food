@@ -3289,3 +3289,114 @@ body.dark .pf-category-icon .pf-picto{filter:drop-shadow(0 2px 2px rgba(0,0,0,.2
   .back-top {transition:none!important;}
 }
 /* END MOBILE FLOATING CONTROL SAFE AREA */
+
+/* ALWAYS VISIBLE FEATURED MOTION — 2026-10-10 */
+/* Real static label in page markup proves the new homepage was loaded.
+   Animation is CSS-only, uses no external asset and never receives pointer
+   events. Even reduced-motion users can see the featured label. */
+body .featured-card:first-child {
+  position:relative;
+  isolation:isolate;
+}
+body .featured-card:first-child .pf-featured-motion {
+  position:absolute;
+  top:clamp(12px,2.3vw,20px);
+  right:clamp(12px,2.3vw,20px);
+  z-index:6;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  white-space:nowrap;
+  width:auto;
+  max-width:calc(100% - 24px);
+  padding:10px 16px;
+  border-radius:100px;
+  border:2px solid rgba(255,255,255,.98);
+  background:rgba(250,255,246,.96);
+  color:#145737;
+  box-shadow:0 6px 22px rgba(10,61,34,.23);
+  font:800 .82rem/1.15 system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:.03em;
+  pointer-events:none;
+}
+body .featured-card:first-child .pf-featured-motion .pf-motion-star {
+  display:inline-block;
+  font-size:1.3em;
+  color:#a87920;
+  line-height:1;
+}
+body .featured-card:first-child::after {
+  content:none!important; /* Retire old CSS-only label, prevent duplicates. */
+}
+/* The light sweep covers the food image portion and stays behind the badge.
+   It never changes the actual recipe image or its SEO description. */
+body .featured-card:first-child::before {
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:3;
+  width:100%;
+  height:57%;
+  pointer-events:none;
+  background:linear-gradient(
+    107deg,
+    transparent 0%,
+    transparent 36%,
+    rgba(255,255,255,.02) 39%,
+    rgba(255,250,204,.33) 50%,
+    rgba(255,255,255,.03) 61%,
+    transparent 64%,
+    transparent 100%
+  );
+  transform:translate3d(-135%,0,0);
+}
+/* Green editorial underline is present even if motion is reduced. */
+body:not(.dark) .featured.section .section-heading::before {
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:8px;
+  width:70px;
+  height:4px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#82b998,#168351,#82b998);
+  transform:translateX(-50%);
+  pointer-events:none;
+}
+@keyframes pf-featured-light-sweep {
+  0%,12% { transform:translate3d(-135%,0,0); }
+  49%,100% { transform:translate3d(135%,0,0); }
+}
+@keyframes pf-featured-badge-float {
+  0%,100% { transform:translate3d(0,0,0); }
+  50% { transform:translate3d(0,-8px,0); }
+}
+@keyframes pf-featured-star-turn {
+  0%,100% { transform:rotate(-14deg) scale(.94); }
+  50% { transform:rotate(18deg) scale(1.14); }
+}
+@media (prefers-reduced-motion:no-preference) {
+  body .featured-card:first-child::before {
+    animation:pf-featured-light-sweep 5s ease-in-out infinite;
+  }
+  body .featured-card:first-child .pf-featured-motion {
+    animation:pf-featured-badge-float 2.8s ease-in-out infinite;
+  }
+  body .featured-card:first-child .pf-featured-motion .pf-motion-star {
+    animation:pf-featured-star-turn 2.8s ease-in-out infinite;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  body .featured-card:first-child::before {animation:none!important;display:none!important}
+  body .featured-card:first-child .pf-featured-motion,
+  body .featured-card:first-child .pf-featured-motion .pf-motion-star {
+    animation:none!important;transform:none!important;
+  }
+}
+@media print {
+  body .featured-card:first-child::before {display:none!important}
+  body .featured-card:first-child .pf-featured-motion {animation:none!important}
+}
+/* END ALWAYS VISIBLE FEATURED MOTION */
