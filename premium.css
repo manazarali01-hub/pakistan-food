@@ -3021,12 +3021,7 @@ body.dark .pf-category-icon .pf-picto{filter:drop-shadow(0 2px 2px rgba(0,0,0,.2
 /* Give every major surface a coordinated motion speed without constantly
    repainting photographic backgrounds or running heavy animated GIFs. */
 @media (prefers-reduced-motion: no-preference) {
-  .hero-content {
-    animation: pf-motion-arrive .8s cubic-bezier(.22,.68,.2,1) both;
-  }
-  .hero-small {
-    animation: pf-motion-badge 7s ease-in-out infinite;
-  }
+  /* No automatic movement of headings or labels; food photography stays central. */
   .hero-stats > div {
     transition: transform .28s ease;
   }
