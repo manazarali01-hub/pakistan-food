@@ -3,7 +3,7 @@
 import { chromium } from "playwright";
 
 const base = process.env.QA_BASE_URL || "http://127.0.0.1:4173";
-const widths = [320, 390, 768];
+const widths = [320, 360, 390, 430, 768, 1024, 1440];
 const failures = [];
 const passed = [];
 
@@ -293,6 +293,49 @@ for (const width of widths) {
       await page.locator("body").evaluate(el => !el.classList.contains("no-scroll"));
   });
 }
+// Real mobile touch environment, separate from CSS-only 390px responsive tests.
+await check("Android-style touch viewport auto-animates natural food steam", async () => {
+  const phone = await browser.newContext({
+    viewport: {width:390,height:844},
+    deviceScaleFactor:2,
+    isMobile:true,
+    hasTouch:true,
+    reducedMotion:"no-preference",
+  });
+  try {
+    const mobilePage = await phone.newPage();
+    mobilePage.on("pageerror", error => failures.push("Touch-browser exception: " + error.message));
+    const response = await mobilePage.goto(base + "/", {waitUntil:"domcontentloaded"});
+    if (!response?.ok()) throw Error("Mobile homepage failed");
+    const frame = mobilePage.locator('.featured-card:first-child .pf-food-photo');
+    await frame.scrollIntoViewIfNeeded();
+    await mobilePage.waitForFunction(() => document.querySelector('.featured-card:first-child .pf-food-photo')?.classList.contains("pf-atmosphere-visible"));
+    const steam = frame.locator(".pf-vapor-line").first();
+    if (!(await steam.count())) throw Error("Food atmosphere did not attach on touch browser");
+    const first = await steam.evaluate(el => ({
+      transform:getComputedStyle(el).transform,
+      animation:getComputedStyle(el).animationName,
+    }));
+    await mobilePage.waitForTimeout(620);
+    const last = await steam.evaluate(el => getComputedStyle(el).transform);
+    if (!first.animation.includes("pf-vapor-rise-one") || first.transform === last) {
+      throw Error("Mobile touch animation not moving: "+JSON.stringify({first,last}));
+    }
+    const button = mobilePage.locator("#pfMotionToggle");
+    await button.tap();
+    if ((await button.getAttribute("aria-pressed")) !== "false") {
+      throw Error("Tap could not pause autoplay");
+    }
+    await button.tap();
+    if ((await button.getAttribute("aria-pressed")) !== "true") {
+      throw Error("Tap could not resume autoplay");
+    }
+    return true;
+  } finally {
+    await phone.close();
+  }
+});
+
 await browser.close();
 
 for (const description of passed) console.log("PASS " + description);
