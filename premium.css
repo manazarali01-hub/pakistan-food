@@ -3400,3 +3400,114 @@ body:not(.dark) .featured.section .section-heading::before {
   body .featured-card:first-child .pf-featured-motion {animation:none!important}
 }
 /* END ALWAYS VISIBLE FEATURED MOTION */
+
+/* MANUAL MOTION PREVIEW AND DIAGNOSTIC CONTROL — 2026-10-10 */
+/* One compact opt-in preview for phones with reduced-motion preferences.
+   Native button is outside all recipe links. No added media assets or scripts. */
+.pf-motion-preview {
+  width:fit-content;
+  max-width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:9px 12px;
+  margin:12px auto 22px;
+  padding:10px 13px;
+  border-radius:18px;
+  border:1px solid rgba(85,156,109,.4);
+  background:rgba(246,255,245,.93);
+  box-shadow:0 7px 22px rgba(20,80,42,.12);
+  color:#234c33;
+  font:600 .84rem/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+.pf-motion-preview button {
+  min-width:135px;
+  min-height:45px;
+  border:2px solid #278556;
+  border-radius:14px;
+  background:linear-gradient(135deg,#176942,#318c5e);
+  color:#fff;
+  padding:9px 14px;
+  font:800 .86rem/1.25 system-ui,-apple-system,"Segoe UI",sans-serif;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+.pf-motion-preview button:focus-visible {
+  outline:3px solid #d8a348;
+  outline-offset:3px;
+}
+.pf-motion-preview .pf-motion-diagnostic {
+  display:block;
+  max-width:265px;
+  color:#28573d;
+  font-weight:650;
+}
+.pf-motion-preview .pf-motion-track {
+  width:70px;
+  height:25px;
+  display:flex;
+  align-items:center;
+  padding:2px 4px;
+  border-radius:999px;
+  border:1px solid #a1caae;
+  background:#e0f5e7;
+  overflow:hidden;
+}
+.pf-motion-preview .pf-motion-orb {
+  display:grid;
+  place-items:center;
+  width:20px;
+  height:20px;
+  flex:none;
+  border-radius:50%;
+  color:#fff;
+  background:#23794d;
+  font-size:13px;
+  line-height:1;
+}
+@keyframes pf-manual-demo-orb {
+  0%,100% { transform:translate3d(0,0,0) rotate(-20deg); }
+  50% { transform:translate3d(40px,0,0) rotate(120deg); }
+}
+@keyframes pf-manual-demo-badge {
+  0%,100% { transform:translate3d(0,0,0) rotate(-2deg); }
+  50% { transform:translate3d(0,-16px,0) rotate(2deg); }
+}
+/* User has explicitly asked to play a preview: this opt-in overrides the
+   reduced-motion media rule only for these two decorative elements. */
+body.pf-motion-force-on .pf-motion-preview .pf-motion-orb {
+  animation:pf-manual-demo-orb 1.5s ease-in-out infinite!important;
+}
+body.pf-motion-force-on .featured-card:first-child .pf-featured-motion {
+  animation:pf-manual-demo-badge 1.6s ease-in-out infinite!important;
+}
+body.pf-motion-force-on .featured-card:first-child .pf-motion-star {
+  animation:pf-featured-star-turn 1.6s ease-in-out infinite!important;
+}
+body.pf-motion-force-on .featured-card:first-child::before {
+  display:block!important;
+  animation:pf-featured-light-sweep 3.4s ease-in-out infinite!important;
+}
+body.pf-motion-force-on .featured.section .section-heading::before {
+  animation:pf-heading-glow 2s ease-in-out infinite!important;
+}
+body.pf-motion-paused .featured-card:first-child .pf-featured-motion,
+body.pf-motion-paused .featured-card:first-child .pf-motion-star,
+body.pf-motion-paused .featured-card:first-child::before,
+body.pf-motion-paused .pf-motion-preview .pf-motion-orb,
+body.pf-motion-paused .featured.section .section-heading::before {
+  animation:none!important;
+}
+@media(max-width:760px){
+  .pf-motion-preview {
+    width:min(94%,450px);
+    padding:9px 11px;
+    border-radius:17px;
+    gap:7px 10px;
+  }
+  .pf-motion-preview .pf-motion-diagnostic { flex:1 1 140px; font-size:.76rem; }
+  .pf-motion-preview button { min-height:46px; }
+}
+@media print {.pf-motion-preview{display:none!important}}
+/* END MANUAL MOTION PREVIEW AND DIAGNOSTIC CONTROL */
