@@ -138,6 +138,20 @@ for trust_page in ("about.html", "contact.html", "privacy-policy.html", "editori
     if f"/{trust_page}" not in paths:
         errors.append(f"{trust_page}: missing from sitemap-v2.xml")
 
+# Every guide deliberately submitted to Google should be reachable from the
+# main Cooking Guides directory, not only through its sitemap URL.
+guide_hub_path = ROOT / "guides/index.html"
+if guide_hub_path.is_file():
+    guide_hub = guide_hub_path.read_text(encoding="utf-8")
+    for guide_url in urls:
+        guide_path = urlparse(guide_url or "").path
+        if guide_path.startswith("/guides/") and guide_path.endswith(".html"):
+            guide_filename = guide_path.rsplit("/", 1)[-1]
+            if f'href="{guide_filename}"' not in guide_hub:
+                errors.append(f"indexable guide missing from directory: {guide_filename}")
+else:
+    errors.append("guides/index.html: directory is missing")
+
 if DOMAIN + "/sitemap.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
     errors.append("robots.txt does not point to the canonical sitemap")
 
