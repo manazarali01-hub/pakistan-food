@@ -118,6 +118,16 @@ for url in urls:
         errors.append(f"noindex URL must not be in sitemap: {url}")
     if parser.adsense_scripts > 1:
         errors.append(f"duplicate AdSense loader on {url}: {parser.adsense_scripts}")
+
+    # Auto Ads should not target informational, policy, or directory pages.
+    # Real recipe articles and the homepage retain the publisher verification tag.
+    no_auto_ad_pages = {
+        "/about.html", "/contact.html", "/privacy-policy.html",
+        "/disclaimer.html", "/editorial-policy.html", "/terms.html",
+        "/image-credits.html", "/sitemap.html", "/recipes/", "/guides/",
+    }
+    if urlparse(url).path in no_auto_ad_pages and parser.adsense_scripts:
+        errors.append(f"AdSense loader on a non-editorial page: {url}")
     if re.search(r'<ins\b[^>]*class=["\'][^"\']*\badsbygoogle\b', rendered_html, flags=re.I):
         errors.append(f"ad unit present before readiness review: {url}")
 
