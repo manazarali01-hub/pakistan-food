@@ -121,6 +121,63 @@ for (const width of widths) {
     return true;
   });
 
+  await check("Natural biryani steam auto-rises and cold lassi gets reflection on mobile", async () => {
+    await page.emulateMedia({reducedMotion: "no-preference"});
+    await page.evaluate(() => localStorage.removeItem("pfFoodMotionPreference"));
+    await page.reload({waitUntil: "domcontentloaded"});
+    const photo = page.locator('.featured-card:first-child .pf-food-photo');
+    await photo.scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => document.querySelector('.featured-card:first-child .pf-food-photo')?.classList.contains("pf-atmosphere-visible"));
+    const steam = photo.locator('.pf-effect-steam .pf-vapor-line').first();
+    if (!(await steam.count())) throw Error("Biryani steam overlay missing");
+    const before = await steam.evaluate(el => ({
+      animation: getComputedStyle(el).animationName,
+      transform: getComputedStyle(el).transform,
+      pointerEvents: getComputedStyle(el.closest(".pf-food-atmosphere")).pointerEvents,
+    }));
+    if (!before.animation.includes("pf-vapor-rise-one") || before.pointerEvents !== "none") {
+      throw Error("Auto steam is inactive or blocks taps: " + JSON.stringify(before));
+    }
+    await page.waitForTimeout(660);
+    const after = await steam.evaluate(el => getComputedStyle(el).transform);
+    if (before.transform === after) throw Error("Steam did not visibly rise: " + after);
+    if (!(await page.locator('.featured-card:nth-child(2) .pf-effect-steam').count())) {
+      throw Error("Chicken karahi steam missing");
+    }
+    if (!(await page.locator('.featured-card:nth-child(3) .pf-effect-fresh .pf-fresh-light').count())) {
+      throw Error("Mango lassi reflection missing");
+    }
+    if (await page.locator('.featured-card:nth-child(3) .pf-effect-steam').count()) {
+      throw Error("Cold lassi mistakenly got hot-food steam");
+    }
+    await page.emulateMedia({reducedMotion: "reduce"});
+    const reduced = await steam.evaluate(el => ({
+      name: getComputedStyle(el).animationName,
+      container: getComputedStyle(el.closest(".pf-food-atmosphere")).display,
+    }));
+    if (reduced.container !== "none") throw Error("Reduced-motion smoke still shown: " + JSON.stringify(reduced));
+    await page.emulateMedia({reducedMotion: "no-preference"});
+    return true;
+  });
+
+  await check("Permanent recipe page has natural steam without SEO or print regression", async () => {
+    const resp = await page.goto(base + "/recipes/chicken-biryani.html", {waitUntil:"domcontentloaded"});
+    if (!resp?.ok()) return false;
+    const seo = await page.evaluate(() => ({
+      canonical: document.querySelector('link[rel="canonical"]')?.href,
+      description: document.querySelector('meta[name="description"]')?.content,
+      print: !!document.querySelector(".print-recipe"),
+      photo: !!document.querySelector('.pf-recipe-photo[data-pf-dish="chicken-biryani"] .pf-effect-steam'),
+      correctAlt: !!document.querySelector('.pf-recipe-photo img[alt]'),
+      jsErrors: !document.querySelector(".pf-food-atmosphere")?.getAttribute("aria-hidden"),
+    }));
+    if (!seo.canonical?.endsWith("/recipes/chicken-biryani.html") || !seo.description || !seo.print || !seo.photo || !seo.correctAlt) {
+      throw Error("Permanent page content/atmosphere issue: "+JSON.stringify(seo));
+    }
+    await page.goto(base + "/", {waitUntil:"domcontentloaded"});
+    return true;
+  });
+
   await check("Manual Play Motion works even with reduced-motion device settings", async () => {
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.reload({ waitUntil: "domcontentloaded" });
@@ -171,6 +228,7 @@ for (const width of widths) {
       throw Error("Pause Motion did not stop animation");
     }
     await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.evaluate(() => localStorage.removeItem("pfFoodMotionPreference"));
     await page.reload({ waitUntil: "domcontentloaded" });
     return true;
   });
