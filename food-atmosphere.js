@@ -5,11 +5,11 @@
   // Positions are deliberate FOOD-surface regions, not the plate/bowl edge.
   // Reduce scope rather than applying an implausible overlay to all 66 recipes.
   const positions = Object.freeze({
-    "chicken-biryani": {left:"34%", top:"3%", width:"32%", height:"46%"},
-    "chicken-karahi": {left:"38%", top:"7%", width:"29%", height:"45%"},
-    "beef-nihari": {left:"38%", top:"7%", width:"28%", height:"42%"},
-    "haleem": {left:"36%", top:"7%", width:"30%", height:"43%"},
-    "kashmiri-chai": {left:"44%", top:"10%", width:"24%", height:"37%"}
+    "chicken-biryani": {left:"34%", top:"3%", width:"32%", height:"39%"},
+    "chicken-karahi": {left:"38%", top:"7%", width:"29%", height:"40%"},
+    "beef-nihari": {left:"38%", top:"7%", width:"28%", height:"39%"},
+    "haleem": {left:"36%", top:"7%", width:"30%", height:"39%"},
+    "kashmiri-chai": {left:"44%", top:"10%", width:"24%", height:"32%"}
   });
   let observer;
   function addMist(frame) {
