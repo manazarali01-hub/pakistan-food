@@ -3268,3 +3268,24 @@ body.dark .pf-category-icon .pf-picto{filter:drop-shadow(0 2px 2px rgba(0,0,0,.2
   body:not(.dark) .featured-card:first-child::after {animation:none!important;}
 }
 /* END VISIBLE BALANCED MOTION REFINEMENT */
+
+/* MOBILE FLOATING CONTROL SAFE AREA — 2026-10-10 */
+/* Keep back-to-top reachable with a full tap target but dock it at the
+   viewport edge, instead of covering the recipe description (mobile QA).
+   Does not change its existing JavaScript scroll behaviour. */
+@media(max-width:760px) {
+  .back-top {
+    right:0!important;
+    bottom:calc(20px + env(safe-area-inset-bottom,0px))!important;
+    width:44px!important;
+    height:48px!important;
+    border-radius:15px 0 0 15px!important;
+    font-size:18px!important;
+    box-shadow:0 5px 13px rgba(15,68,43,.16)!important;
+  }
+  .back-top.show {opacity:.86!important;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .back-top {transition:none!important;}
+}
+/* END MOBILE FLOATING CONTROL SAFE AREA */
