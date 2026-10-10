@@ -24,6 +24,15 @@
   padding:0;
   gap:0;
 }
+/* Override the pre-existing broad `.popular-recipe-card span` rule:
+   decorative nested spans must not receive content-card grid padding. */
+.popular-recipe-card .pf-food-photo .pf-food-atmosphere,
+.popular-recipe-card .pf-food-photo .pf-fresh-light,
+.popular-recipe-card .pf-food-photo .pf-dessert-light {
+  display:block;
+  padding:0;
+  gap:0;
+}
 .featured-card:last-child .pf-food-photo { height:100%; }
 .featured-card:last-child .pf-food-photo img { height:100%; }
 .seo-recipe .pf-recipe-photo { border-radius:18px; }
