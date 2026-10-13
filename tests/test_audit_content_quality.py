@@ -129,5 +129,18 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
         self.assertIn("sample-guide.html", result.stdout)
 
 
+    def test_same_filename_outside_guides_directory_does_not_satisfy_sitemap_check(self):
+        self.write_sitemap([
+            "https://example.test/",
+            "https://example.test/archive/sample-guide.html",
+        ])
+
+        result = self.run_audit()
+
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("INDEXED GUIDES MISSING FROM SITEMAP", result.stdout)
+        self.assertIn("sample-guide.html", result.stdout)
+
+
 if __name__ == "__main__":
     unittest.main()
