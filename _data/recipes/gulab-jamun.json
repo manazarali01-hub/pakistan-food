@@ -37,7 +37,7 @@
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT30M",
   "total_time_iso": "PT50M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-13",
   "image_alt": "Soft Pakistani gulab jamun in cardamom sugar syrup with an even deep golden surface",
   "image_caption": "Soft gulab jamun fried slowly for an even golden centre-to-edge cook and soaked in warm cardamom syrup.",
   "technique": "A tender dough and slow fry matter more than speed. Mix only until the milk-powder dough comes together, smooth surface cracks gently, then fry over controlled low-to-medium heat so the centres cook before the outside becomes dark.",
@@ -75,5 +75,6 @@
   ],
   "image_source": "https://commons.wikimedia.org/wiki/File:Hot_Gulab_jamun.jpg",
   "image_author": "YKanchan07",
-  "image_license": "CC BY-SA 4.0"
+  "image_license": "CC BY-SA 4.0",
+  "serving": "Serve gulab jamun warm or at room temperature with a little of its cardamom syrup spooned over each portion. Garnish lightly with chopped pistachios or almonds if desired; avoid draining the syrup completely, as it keeps the centres moist."
 }
