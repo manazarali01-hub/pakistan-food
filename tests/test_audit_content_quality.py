@@ -101,6 +101,33 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
         self.assertIn("sample-guide.html", result.stdout)
         self.assertIn("second-guide.html", result.stdout)
 
+    def test_noindex_guide_missing_from_sitemap_is_not_reported_as_indexable_missing(self):
+        self.write_guide("sample-guide.html", "noindex,follow", "Sample guide", "Useful consolidated guidance.")
+
+        result = self.run_audit()
+
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertNotIn("INDEXED GUIDES MISSING FROM SITEMAP", result.stdout)
+        self.assertNotIn("NOINDEX URLS PRESENT IN SITEMAP", result.stdout)
+
+    def test_strict_audit_fails_when_indexable_guide_contains_generic_template_phrase(self):
+        self.write_guide(
+            "sample-guide.html",
+            "index,follow",
+            "Sample guide",
+            "This step has the strongest effect on the final result.",
+        )
+        self.write_sitemap([
+            "https://example.test/",
+            "https://example.test/guides/sample-guide.html",
+        ])
+
+        result = self.run_audit()
+
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("GENERIC TEMPLATE PHRASE HITS", result.stdout)
+        self.assertIn("sample-guide.html", result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()
