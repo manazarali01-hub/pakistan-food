@@ -12,6 +12,7 @@ from pathlib import Path
 import re
 import sys
 import xml.etree.ElementTree as ET
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 GUIDES = ROOT / "guides"
@@ -88,14 +89,22 @@ try:
 except (OSError, ET.ParseError) as exc:
     raise SystemExit(f"Cannot parse sitemap: {exc}")
 
+# Compare the full guide path: a matching filename elsewhere must not count.
 sitemap_guides = {
-    url.rsplit("/", 1)[-1]
+    urlparse(url).path
     for url in sitemap_urls
-    if "/guides/" in url and url.endswith(".html")
+    if urlparse(url).path.startswith("/guides/")
+    and urlparse(url).path.endswith(".html")
 }
 
-noindex_in_sitemap = sorted(name for name, _, indexed, _ in guide_rows if not indexed and name in sitemap_guides)
-indexed_missing_sitemap = sorted(name for name, _, indexed, _ in guide_rows if indexed and name not in sitemap_guides)
+noindex_in_sitemap = sorted(
+    name for name, _, indexed, _ in guide_rows
+    if not indexed and "/guides/" + name in sitemap_guides
+)
+indexed_missing_sitemap = sorted(
+    name for name, _, indexed, _ in guide_rows
+    if indexed and "/guides/" + name not in sitemap_guides
+)
 thin_indexed = sorted((name, words) for name, words, indexed, _ in guide_rows if indexed and words < 220)
 generic_indexed = sorted((name, hits) for name, _, indexed, hits in guide_rows if indexed and hits)
 
