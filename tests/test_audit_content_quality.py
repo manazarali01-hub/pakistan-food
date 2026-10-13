@@ -23,7 +23,7 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
             "<html><body>Guide index</body></html>", encoding="utf-8"
         )
         self.write_guide("sample-guide.html", "index,follow", "Sample guide", "Original useful guidance.")
-        self.write_sitemap(["https://example.test/"])
+        self.write_sitemap(["https://pakistanfoodrecipes.top/"])
 
     def tearDown(self):
         self.temp.cleanup()
@@ -59,8 +59,8 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
 
     def test_strict_audit_passes_when_indexable_guide_is_in_sitemap(self):
         self.write_sitemap([
-            "https://example.test/",
-            "https://example.test/guides/sample-guide.html",
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html",
         ])
 
         result = self.run_audit()
@@ -77,8 +77,8 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
     def test_strict_audit_fails_when_noindex_guide_is_in_sitemap(self):
         self.write_guide("sample-guide.html", "noindex,follow", "Sample guide", "Original useful guidance.")
         self.write_sitemap([
-            "https://example.test/",
-            "https://example.test/guides/sample-guide.html",
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html",
         ])
 
         result = self.run_audit()
@@ -89,9 +89,9 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
     def test_strict_audit_fails_on_duplicate_visible_guide_bodies(self):
         self.write_guide("second-guide.html", "index,follow", "Sample guide", "Original useful guidance.")
         self.write_sitemap([
-            "https://example.test/",
-            "https://example.test/guides/sample-guide.html",
-            "https://example.test/guides/second-guide.html",
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html",
+            "https://pakistanfoodrecipes.top/guides/second-guide.html",
         ])
 
         result = self.run_audit()
@@ -118,8 +118,8 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
             "This step has the strongest effect on the final result.",
         )
         self.write_sitemap([
-            "https://example.test/",
-            "https://example.test/guides/sample-guide.html",
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html",
         ])
 
         result = self.run_audit()
@@ -131,8 +131,8 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
 
     def test_same_filename_outside_guides_directory_does_not_satisfy_sitemap_check(self):
         self.write_sitemap([
-            "https://example.test/",
-            "https://example.test/archive/sample-guide.html",
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/archive/sample-guide.html",
         ])
 
         result = self.run_audit()
@@ -144,7 +144,7 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
 
     def test_foreign_host_guide_url_does_not_satisfy_sitemap_check(self):
         self.write_sitemap([
-            "https://example.test/",
+            "https://pakistanfoodrecipes.top/",
             "https://other.example/guides/sample-guide.html",
         ])
 
@@ -156,8 +156,8 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
 
     def test_query_string_guide_url_does_not_satisfy_canonical_sitemap_check(self):
         self.write_sitemap([
-            "https://example.test/",
-            "https://example.test/guides/sample-guide.html?ref=home",
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html?ref=home",
         ])
 
         result = self.run_audit()
