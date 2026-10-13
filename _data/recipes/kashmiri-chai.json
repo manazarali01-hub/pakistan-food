@@ -34,7 +34,7 @@
   "prep_time_iso": "PT5M",
   "cook_time_iso": "PT40M",
   "total_time_iso": "PT45M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-13",
   "image_alt": "Pakistani pink Kashmiri chai with milk, cardamom and chopped nuts",
   "image_caption": "Pink Kashmiri chai brewed from green tea, aerated and finished with milk, cardamom and nuts.",
   "technique": "The pink colour comes from the tea brew chemistry and aeration before milk is added, not from simply boiling milk longer. Build a strong reddish-brown tea concentrate with the measured baking soda, aerate it, then add milk and judge the final shade.",
@@ -75,5 +75,6 @@
   "image_license": "CC0 1.0",
   "image_creator": "Miansari66",
   "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "serving": "Pour the chai hot into cups and top with chopped pistachios and almonds. Serve with a lightly sweet biscuit or a small bakery snack; offer sugar or salt separately when serving guests because preferences vary."
 }
