@@ -89,20 +89,13 @@ try:
 except (OSError, ET.ParseError) as exc:
     raise SystemExit(f"Cannot parse sitemap: {exc}")
 
-# Compare canonical URL identity, not only filenames or paths. A URL on a
-# different host, or a similarly named page outside /guides/, must not count.
-sitemap_origin = next(
-    (
-        (urlparse(url).scheme, urlparse(url).netloc)
-        for url in sitemap_urls
-        if urlparse(url).scheme and urlparse(url).netloc
-    ),
-    ("https", ""),
-)
+# Match the site's known canonical origin. Do not trust the first sitemap URL
+# to define the expected host, because a malformed sitemap could start elsewhere.
+CANONICAL_ORIGIN = ("https", "pakistanfoodrecipes.top")
 sitemap_guides = {
     urlparse(url).path
     for url in sitemap_urls
-    if (urlparse(url).scheme, urlparse(url).netloc) == sitemap_origin
+    if (urlparse(url).scheme, urlparse(url).netloc) == CANONICAL_ORIGIN
     and not urlparse(url).query
     and not urlparse(url).fragment
     and urlparse(url).path.startswith("/guides/")
