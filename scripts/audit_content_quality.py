@@ -162,7 +162,7 @@ if noindex_in_sitemap:
         print(f"- {name}")
 
 if indexed_missing_sitemap:
-    print("\nNOTE: INDEXED GUIDES MISSING FROM SITEMAP")
+    print("\nINDEXED GUIDES MISSING FROM SITEMAP")
     for name in indexed_missing_sitemap:
         print(f"- {name}")
 
@@ -172,7 +172,7 @@ if stale_user_links:
         print(f"- {source} -> {target}")
 
 strict = "--strict" in sys.argv
-if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or stale_user_links):
+if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or indexed_missing_sitemap or stale_user_links):
     raise SystemExit("Strict content-quality audit failed.")
 
 print("\nAudit complete.")
