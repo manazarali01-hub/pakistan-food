@@ -172,7 +172,7 @@ if stale_user_links:
         print(f"- {source} -> {target}")
 
 strict = "--strict" in sys.argv
-if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or stale_user_links):
-    raise SystemExit("Strict content-quality audit failed.")
+if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or indexed_missing_sitemap or stale_user_links):
+    raise SystemExit("Strict content-quality audit failed: review duplicate/generic content, sitemap coverage, noindex conflicts, and public links.")
 
 print("\nAudit complete.")
