@@ -89,11 +89,23 @@ try:
 except (OSError, ET.ParseError) as exc:
     raise SystemExit(f"Cannot parse sitemap: {exc}")
 
-# Compare the full guide path: a matching filename elsewhere must not count.
+# Compare canonical URL identity, not only filenames or paths. A URL on a
+# different host, or a similarly named page outside /guides/, must not count.
+sitemap_origin = next(
+    (
+        (urlparse(url).scheme, urlparse(url).netloc)
+        for url in sitemap_urls
+        if urlparse(url).scheme and urlparse(url).netloc
+    ),
+    ("https", ""),
+)
 sitemap_guides = {
     urlparse(url).path
     for url in sitemap_urls
-    if urlparse(url).path.startswith("/guides/")
+    if (urlparse(url).scheme, urlparse(url).netloc) == sitemap_origin
+    and not urlparse(url).query
+    and not urlparse(url).fragment
+    and urlparse(url).path.startswith("/guides/")
     and urlparse(url).path.endswith(".html")
 }
 
