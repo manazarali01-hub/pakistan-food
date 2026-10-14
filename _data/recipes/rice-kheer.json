@@ -24,8 +24,12 @@
     "Turn off the heat and add rose water if using. Serve warm, or cool promptly and refrigerate before serving chilled, garnished with the remaining nuts."
   ],
   "tips": [
-    "Use a heavy pot and stir frequently, especially near the end, because milk can scorch easily.",
-    "Kheer thickens further as it cools, so stop cooking while it is slightly looser than your final desired consistency."
+    "Rinse and soak the rice as described, then cook it until completely tender before judging thickness; firm grains will not soften quickly once the milk has reduced.",
+    "Use a heavy-bottomed pot and stir along the base and corners, especially as the milk thickens, to prevent a scorched layer from forming.",
+    "Keep the simmer gentle rather than boiling hard. If milk rises quickly or the bottom starts catching, lower the heat and stir before continuing.",
+    "If the kheer is still thin after the rice is soft, continue a gentle uncovered simmer and stir regularly; do not rush it with high heat.",
+    "If it looks too thick while hot, stop reducing and loosen it with a little warm milk. It will thicken further as it cools.",
+    "Add sugar after the rice is tender and the milk has reduced somewhat, then taste and adjust gradually; nuts and rose water are optional finishing ingredients."
   ],
   "storage": "Cool leftover kheer promptly, keep it covered and refrigerated, and discard it if it has been left unrefrigerated for an unsafe length of time.",
   "prep_time": "10 min",
@@ -33,7 +37,7 @@
   "prep_time_iso": "PT10M",
   "cook_time_iso": "PT1H5M",
   "total_time_iso": "PT1H15M",
-  "date_modified": "2026-10-13",
+  "date_modified": "2026-10-14",
   "image_alt": "Creamy rice kheer garnished with nuts and saffron in a serving bowl",
   "image_caption": "Rice kheer with creamy milk, rice and nut garnish; served as a South Asian pudding.",
   "technique": "Kheer thickens from both milk reduction and rice starch. Keep the simmer gentle, stir more often as it thickens, and stop while it is slightly looser than your final serving texture because cooling makes it firmer.",
