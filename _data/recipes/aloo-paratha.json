@@ -28,7 +28,11 @@
   ],
   "tips": [
     "Cool the potatoes before filling; hot or wet filling makes the dough difficult to roll.",
-    "Add water to the dough gradually so it stays soft without becoming sticky."
+    "Add water to the dough gradually so it stays soft without becoming sticky.",
+    "If the filling feels damp, spread it on a plate for a few minutes and let excess steam escape before stuffing.",
+    "Seal the stuffed dough ball fully, then dust off excess flour before rolling so the paratha does not develop dry patches.",
+    "If a small tear appears, stop rolling, patch it with a pinch of dough and use lighter pressure rather than forcing the filling through.",
+    "Start on a properly heated tawa; if the surface browns before the centre heats through, lower the heat slightly and turn the paratha more often."
   ],
   "storage": "Aloo paratha is best fresh. Cool leftovers promptly, refrigerate covered and reheat thoroughly on a tawa or other hot dry surface.",
   "prep_time": "20 min",
@@ -36,7 +40,7 @@
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT20M",
   "total_time_iso": "PT40M",
-  "date_modified": "2026-10-13",
+  "date_modified": "2026-10-14",
   "image_alt": "Golden Punjabi-style aloo parathas with butter, green chilli and lassi",
   "image_caption": "Golden aloo parathas served with butter, green chilli and traditional lassi.",
   "technique": "The filling should be cool, dry and mashed without hard lumps, while the dough should be soft enough to seal without tearing. Roll from the centre with light, even pressure so the potato spreads with the dough rather than collecting in one spot.",
