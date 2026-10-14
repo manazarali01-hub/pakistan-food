@@ -38,7 +38,7 @@
   "prep_time_iso": "PT25M",
   "cook_time_iso": "PT35M",
   "total_time_iso": "PT1H",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-13",
   "image_alt": "Pakistani halwa puri breakfast with fried puris, chickpea curry and semolina halwa served together",
   "image_caption": "A complete halwa puri breakfast showing fried puris with sweet semolina halwa and chickpea curry.",
   "technique": "Treat the three components separately so none waits too long. Roast semolina until fragrant before adding liquid, keep chana thick enough to sit beside the halwa, and fry puris last so they arrive puffed and crisp.",
@@ -79,5 +79,6 @@
   "image_license": "CC BY-SA 4.0",
   "image_source_label": "Wikimedia Commons",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "image_creator": "Robin Crusoe"
+  "image_creator": "Robin Crusoe",
+  "serving": "Serve the puris immediately while warm with semolina halwa and the spiced chickpeas. Add achar or sliced onion on the side if desired, and keep the halwa and chickpeas warm while frying the final puris."
 }

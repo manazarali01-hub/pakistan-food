@@ -36,7 +36,7 @@
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT20M",
   "total_time_iso": "PT40M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-13",
   "image_alt": "Golden Punjabi-style aloo parathas with butter, green chilli and lassi",
   "image_caption": "Golden aloo parathas served with butter, green chilli and traditional lassi.",
   "technique": "The filling should be cool, dry and mashed without hard lumps, while the dough should be soft enough to seal without tearing. Roll from the centre with light, even pressure so the potato spreads with the dough rather than collecting in one spot.",
@@ -77,5 +77,6 @@
   "image_license": "CC BY-SA 4.0",
   "image_creator": "Mahi Tatavarty",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "serving": "Serve hot from the tawa with plain yogurt, achar or mint chutney. A little butter or ghee on top is optional; pair with chai for breakfast or a cucumber-onion raita for a fuller meal."
 }

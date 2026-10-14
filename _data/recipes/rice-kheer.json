@@ -33,7 +33,7 @@
   "prep_time_iso": "PT10M",
   "cook_time_iso": "PT1H5M",
   "total_time_iso": "PT1H15M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-13",
   "image_alt": "Creamy rice kheer garnished with nuts and saffron in a serving bowl",
   "image_caption": "Rice kheer with creamy milk, rice and nut garnish; served as a South Asian pudding.",
   "technique": "Kheer thickens from both milk reduction and rice starch. Keep the simmer gentle, stir more often as it thickens, and stop while it is slightly looser than your final serving texture because cooling makes it firmer.",
@@ -71,5 +71,6 @@
   ],
   "image_source": "https://commons.wikimedia.org/wiki/File:Shahi_Rice_Kheer.jpg",
   "image_author": "Teena Sometimes",
-  "image_license": "CC BY-SA 4.0"
+  "image_license": "CC BY-SA 4.0",
+  "serving": "Serve kheer warm for a softer, milkier texture or chilled for a firmer pudding. Garnish with the reserved almonds and pistachios and, if desired, a few strands of saffron; use small bowls because the full-fat dessert is rich."
 }
