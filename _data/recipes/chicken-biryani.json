@@ -30,9 +30,12 @@
     "Cover tightly and cook over very low heat until the rice is fully tender and aromatic. Rest covered off the heat for about 10 minutes, then gently lift from the sides to combine without crushing the rice."
   ],
   "tips": [
-    "Do not fully cook the rice before layering; overcooked rice can turn soft during dum.",
-    "Keep the chicken masala fairly thick before layering so excess liquid does not make the biryani soggy.",
-    "Use very low heat for dum; place a heat diffuser or flat tawa under a thin pot if needed to prevent scorching."
+    "Drain the rice as soon as it is mostly cooked but the centre is still slightly firm; it will finish steaming during dum.",
+    "Reduce the chicken masala until it clings to the chicken instead of leaving watery gravy at the bottom of the pot.",
+    "Taste the masala before layering and adjust salt then; seasoning is harder to distribute evenly once the rice is on top.",
+    "Spread the rice and masala in even layers so one section does not become wet while another stays dry.",
+    "Keep dum heat very low and use a flat tawa under a thin pot if the base tends to scorch.",
+    "Let the biryani rest briefly after dum, then lift portions gently from the side of the pot to keep the grains intact."
   ],
   "storage": "Cool leftover biryani promptly, refrigerate covered and reheat only the portion needed until the chicken and rice are thoroughly hot.",
   "serving": "Serve hot with raita, salad and lemon wedges.",
@@ -41,7 +44,7 @@
   "prep_time_iso": "PT30M",
   "cook_time_iso": "PT60M",
   "total_time_iso": "PT1H30M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-14",
   "image_alt": "Pakistani chicken biryani with long basmati rice, spiced chicken and fried onion",
   "image_caption": "Chicken biryani with long basmati rice and spiced chicken in a tighter food-first crop.",
   "technique": "The two stages that decide the texture are the rice parboil and the moisture level of the chicken masala. Drain the rice while the centre is still firm enough to finish on dum, and reduce the masala until it coats the chicken instead of leaving a pool of thin gravy.",
