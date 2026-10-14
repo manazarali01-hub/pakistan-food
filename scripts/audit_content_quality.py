@@ -12,6 +12,7 @@ from pathlib import Path
 import re
 import sys
 import xml.etree.ElementTree as ET
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 GUIDES = ROOT / "guides"
@@ -88,14 +89,27 @@ try:
 except (OSError, ET.ParseError) as exc:
     raise SystemExit(f"Cannot parse sitemap: {exc}")
 
+# Match the site's known canonical origin. Do not trust the first sitemap URL
+# to define the expected host, because a malformed sitemap could start elsewhere.
+CANONICAL_ORIGIN = ("https", "pakistanfoodrecipes.top")
 sitemap_guides = {
-    url.rsplit("/", 1)[-1]
+    urlparse(url).path
     for url in sitemap_urls
-    if "/guides/" in url and url.endswith(".html")
+    if (urlparse(url).scheme, urlparse(url).netloc) == CANONICAL_ORIGIN
+    and not urlparse(url).query
+    and not urlparse(url).fragment
+    and urlparse(url).path.startswith("/guides/")
+    and urlparse(url).path.endswith(".html")
 }
 
-noindex_in_sitemap = sorted(name for name, _, indexed, _ in guide_rows if not indexed and name in sitemap_guides)
-indexed_missing_sitemap = sorted(name for name, _, indexed, _ in guide_rows if indexed and name not in sitemap_guides)
+noindex_in_sitemap = sorted(
+    name for name, _, indexed, _ in guide_rows
+    if not indexed and "/guides/" + name in sitemap_guides
+)
+indexed_missing_sitemap = sorted(
+    name for name, _, indexed, _ in guide_rows
+    if indexed and "/guides/" + name not in sitemap_guides
+)
 thin_indexed = sorted((name, words) for name, words, indexed, _ in guide_rows if indexed and words < 220)
 generic_indexed = sorted((name, hits) for name, _, indexed, hits in guide_rows if indexed and hits)
 
@@ -162,7 +176,7 @@ if noindex_in_sitemap:
         print(f"- {name}")
 
 if indexed_missing_sitemap:
-    print("\nNOTE: INDEXED GUIDES MISSING FROM SITEMAP")
+    print("\nINDEXED GUIDES MISSING FROM SITEMAP")
     for name in indexed_missing_sitemap:
         print(f"- {name}")
 
@@ -172,7 +186,7 @@ if stale_user_links:
         print(f"- {source} -> {target}")
 
 strict = "--strict" in sys.argv
-if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or stale_user_links):
+if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or indexed_missing_sitemap or stale_user_links):
     raise SystemExit("Strict content-quality audit failed.")
 
 print("\nAudit complete.")
