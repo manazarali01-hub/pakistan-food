@@ -32,9 +32,12 @@
     "Continue until evenly deep golden and crisp, then drain on a rack or absorbent paper without piling them tightly while hot. Serve warm with mint or tamarind chutney."
   ],
   "tips": [
-    "A firm, rested dough makes a crisper wrapper than a soft, sticky dough.",
-    "Cool the potato filling before shaping, and seal every edge well to prevent leaks.",
-    "Fry gently in small batches; rapidly bubbling oil is too hot for raw samosa dough."
+    "Rub the fat into the flour thoroughly before adding water; this helps the pastry develop a crisp, layered bite.",
+    "Add water gradually and keep the dough firm rather than soft or sticky, then cover and rest it so it is easier to roll.",
+    "Cook the potato filling until excess moisture evaporates and cool it completely before shaping to reduce soggy pastry and leaks.",
+    "Seal the edges with a little flour paste and press out trapped air so the samosas do not open during frying.",
+    "Start frying at moderate-low heat so the pastry cooks through and becomes crisp before browning too quickly; avoid overcrowding the pan.",
+    "Let fried samosas drain on a rack rather than stacking them while hot, which can trap steam and soften the crust."
   ],
   "storage": "Samosas are best fresh. Cool leftovers promptly, refrigerate covered and reheat with dry heat until thoroughly hot and crisp.",
   "serving": "Pair with green mint chutney or sweet tamarind chutney and a cup of chai.",
@@ -43,7 +46,7 @@
   "prep_time_iso": "PT35M",
   "cook_time_iso": "PT40M",
   "total_time_iso": "PT1H15M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-14",
   "image_alt": "Golden Pakistani samosas with fresh greens and sliced red onion",
   "image_caption": "Golden Pakistani samosas served with fresh greens and sliced red onion.",
   "technique": "Crisp samosa pastry starts with a firm, rested dough and a completely cool, fairly dry filling. Fry from moderately hot rather than aggressively hot oil so the wrapper has time to blister and crisp before it becomes dark.",

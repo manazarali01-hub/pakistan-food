@@ -34,7 +34,7 @@
   "prep_time_iso": "PT30M",
   "cook_time_iso": "PT1H10M",
   "total_time_iso": "PT1H40M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-14",
   "image_alt": "Pakistani mutton biryani with tender bone-in mutton, separate basmati rice, fried onions and herbs",
   "image_caption": "Mutton biryani with tender meat masala layered with partly cooked basmati, fried onions, mint and coriander.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Mutton_Biryani.jpg",
@@ -60,9 +60,12 @@
   "reheating": "Sprinkle a little water over a portion, cover and reheat gently until meat and rice are steaming hot; avoid repeated reheating of the full pot.",
   "serving": "Serve with raita, salad and lemon wedges without stirring the biryani into a uniform mixture.",
   "tips": [
-    "Tenderise the mutton fully before layering.",
-    "Reduce the meat gravy before adding rice.",
-    "Rest after dum before lifting portions gently."
+    "Simmer the mutton until it yields easily to a fork before layering; the final dum is not a substitute for tenderising tough meat.",
+    "Reduce the meat masala until it coats the pieces instead of leaving a pool of thin gravy that can make the rice soggy.",
+    "Parboil basmati rice only until the grains are elongated but still firm in the centre, since they will finish cooking on dum.",
+    "Taste and correct the salt in the meat masala and rice water before layering; it is difficult to season the centre evenly afterwards.",
+    "Seal the pot well and keep dum heat low; place a tawa under a thin pot if the base scorches easily.",
+    "Rest the biryani covered after dum, then lift from the sides with a flat spoon to keep the rice grains intact."
   ],
   "faqs": [
     {
