@@ -35,7 +35,7 @@
   "prep_time_iso": "PT30M",
   "cook_time_iso": "PT3H30M",
   "total_time_iso": "PT4H",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-13",
   "image_alt": "Pakistani haleem in a serving bowl with fried onions, lemon, ginger and fresh green garnish",
   "image_caption": "Slow-cooked Pakistani haleem finished with classic fried onion, lemon, ginger and fresh herb garnishes.",
   "technique": "Haleem needs two textures at once: the grains and lentils must soften enough to blend into the base, while the beef should be tender enough to shred through it. Blend or mash in stages and adjust hot water gradually so the mixture stays thick but spoonable.",
@@ -74,5 +74,13 @@
   "image_source": "https://commons.wikimedia.org/wiki/File:Pakistani_Haleem_served_with_garnish.jpg",
   "image_author": "Halt123halt",
   "image_license": "CC BY-SA 3.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "tips": [
+    "Cook the grains and lentils until they mash easily before blending; extra simmering here prevents a gritty finish.",
+    "Once the meat and grain mixture is combined, keep the heat low and stir from the bottom often because thick haleem can catch quickly.",
+    "Add hot water a little at a time near the end. Haleem firms as it cools, so keep it slightly looser than the final serving texture.",
+    "Keep fried onions, ginger, coriander and lemon separate until serving so the garnishes stay fresh and distinct."
+  ],
+  "storage": "Divide leftover haleem into shallow containers and refrigerate promptly, covered. Use within 3–4 days. Reheat only the portion needed until steaming hot throughout, stirring well and adding a little hot water to restore its consistency. Freeze in portions for longer storage and thaw in the refrigerator before reheating.",
+  "serving": "Serve hot in bowls with fried onions, julienned fresh ginger, chopped coriander and lemon wedges. Offer naan or another flatbread on the side; add garnishes at the table so each person can adjust the freshness and acidity."
 }
