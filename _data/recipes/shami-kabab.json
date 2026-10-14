@@ -33,8 +33,12 @@
     "Drain briefly and serve with chutney, onion and lemon."
   ],
   "tips": [
-    "The cooked beef-and-dal mixture must be quite dry before grinding.",
-    "Add egg gradually; too much liquid can make shami kababs fragile."
+    "Cook the beef and chana dal until both are completely tender before drying the mixture; firm lentils can make the kabab coarse and fragile.",
+    "Drain excess liquid, then cook the mixture uncovered until it is dry enough to hold together when pressed.",
+    "Cool the cooked mixture before grinding so steam does not add moisture and the paste is easier to handle.",
+    "Grind to a cohesive texture while retaining a little body; a wet or overly smooth paste can make shaping difficult.",
+    "Add beaten egg a little at a time only if needed, then chill the mixture briefly if the kababs feel too soft to shape.",
+    "Fry one test kabab first; if it breaks, mix in a little more binder or chill the remaining mixture before cooking the batch."
   ],
   "storage": "Cool cooked kababs promptly and refrigerate covered. For longer storage, shaped uncooked kababs can be frozen separately until firm and then packed together.",
   "prep_time": "30 min",
@@ -42,7 +46,7 @@
   "prep_time_iso": "PT30M",
   "cook_time_iso": "PT1H",
   "total_time_iso": "PT1H30M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-14",
   "image_alt": "Pakistani shami kabab patties made with beef, chana dal, herbs and warm spices",
   "image_caption": "Shami kababs shaped from a dry, cohesive beef-and-chana-dal mixture and shallow-fried until golden.",
   "technique": "Moisture control happens before grinding. Beef and chana dal must be completely tender, then the cooking liquid must evaporate until the mixture is dry enough to grind into a cohesive paste. Egg is a final binder added only as needed.",
