@@ -27,9 +27,12 @@
     "Rest the cooked tikka for a few minutes, then serve hot with mint chutney, sliced onion and lemon."
   ],
   "tips": [
-    "Keep the chicken pieces similar in size so they finish cooking together.",
-    "Do not reuse marinade that has contacted raw chicken as a serving sauce unless it has been thoroughly cooked first.",
-    "Avoid repeatedly cutting every piece open during grilling, which releases juices and makes consistent cooking harder."
+    "Cut the chicken into similar-sized pieces so smaller pieces do not dry out while larger ones finish cooking.",
+    "Use thick yogurt and a marinade that coats the chicken rather than pooling at the bottom of the bowl.",
+    "Marinate covered in the refrigerator, not on the counter, and keep raw chicken and its marinade separate from ready-to-eat chutneys.",
+    "Shake or scrape off heavy excess marinade before grilling so it chars less quickly on the outside.",
+    "Leave space between pieces on skewers so heat can reach the sides; turn when the first side has begun to colour and release easily.",
+    "Cook chicken fully through; never serve leftover raw-chicken marinade as a sauce unless it has been thoroughly cooked."
   ],
   "storage": "Cool leftovers promptly, refrigerate covered, and reheat only the portion you plan to serve until thoroughly hot.",
   "prep_time": "30 min plus 2 hr marinating",
@@ -37,7 +40,7 @@
   "prep_time_iso": "PT2H30M",
   "cook_time_iso": "PT15M",
   "total_time_iso": "PT2H45M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-14",
   "image_alt": "Pakistani chicken tikka with charred spiced chicken pieces served hot on a platter",
   "image_caption": "Charred Pakistani chicken tikka photographed as the main dish rather than as part of a mixed grill.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Chicken-Tikka.jpg",
