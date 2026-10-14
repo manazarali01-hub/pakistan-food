@@ -27,9 +27,12 @@
     "Leave the gulab jamun in the syrup until noticeably softer and well soaked before serving. Keep them in enough syrup that exposed surfaces do not dry out."
   ],
   "tips": [
-    "High frying heat can brown the outside before the centre cooks.",
-    "Add milk gradually because milk-powder mixtures can become sticky quickly.",
-    "Smooth, crack-free balls are less likely to split while frying."
+    "Add milk a teaspoon or small splash at a time and stop as soon as the dough holds together; milk powders vary in how much liquid they absorb.",
+    "Roll gently between your palms and smooth every visible crack. If the dough starts cracking, lightly moisten your fingers instead of adding lots of extra milk at once.",
+    "Fry one test ball first. If it darkens quickly, lower the heat; if it barely colours and absorbs too much oil, allow the oil to warm slightly before continuing.",
+    "Keep the balls moving gently in the oil for even colour, but avoid crowding the pan because a large batch can lower the oil temperature.",
+    "Keep the syrup warm and pourable, not rapidly boiling or candy-thick. Let the fried balls enter gently and give them time to absorb syrup.",
+    "If a ball is browned outside but still dense inside, reduce the frying heat for the next batch and allow more time for the centre to cook before removing it."
   ],
   "storage": "Cool leftovers appropriately and refrigerate them covered in their syrup. Warm gently for serving if desired rather than repeatedly heating the whole batch.",
   "prep_time": "20 min",
@@ -37,7 +40,7 @@
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT30M",
   "total_time_iso": "PT50M",
-  "date_modified": "2026-10-13",
+  "date_modified": "2026-10-14",
   "image_alt": "Soft Pakistani gulab jamun in cardamom sugar syrup with an even deep golden surface",
   "image_caption": "Soft gulab jamun fried slowly for an even golden centre-to-edge cook and soaked in warm cardamom syrup.",
   "technique": "A tender dough and slow fry matter more than speed. Mix only until the milk-powder dough comes together, smooth surface cracks gently, then fry over controlled low-to-medium heat so the centres cook before the outside becomes dark.",
