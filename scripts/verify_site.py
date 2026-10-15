@@ -101,7 +101,12 @@ for slug in pages - recipes.keys():
 all_paths = []
 try:
     tree = ET.parse(ROOT / "sitemap-v2.xml")
+    url_entries = tree.findall(".//{*}url")
     urls = [node.text for node in tree.findall(".//{*}loc")]
+    sitemap_lastmod = {
+        node.findtext("{*}loc"): node.findtext("{*}lastmod")
+        for node in url_entries
+    }
 except (OSError, ET.ParseError) as exc:
     errors.append(f"sitemap-v2.xml: {exc}")
     urls = []
@@ -119,9 +124,19 @@ for url in urls:
 for path, count in Counter(paths).items():
     if count > 1:
         errors.append(f"sitemap-v2.xml: duplicate URL {path}")
-for slug in recipes:
-    if f"/recipes/{slug}.html" not in paths:
+for slug, recipe in recipes.items():
+    recipe_path = f"/recipes/{slug}.html"
+    if recipe_path not in paths:
         errors.append(f"sitemap-v2.xml: recipe {slug} missing")
+    source_date = recipe.get("date_modified")
+    if source_date:
+        recipe_url = DOMAIN + recipe_path
+        sitemap_date = sitemap_lastmod.get(recipe_url)
+        if sitemap_date != source_date:
+            errors.append(
+                f"sitemap-v2.xml: lastmod mismatch for {slug}: "
+                f"{sitemap_date!r} != {source_date!r}"
+            )
 all_paths.append(paths)
 
 try:
