@@ -55,6 +55,17 @@ client = (ROOT / "recipes-data.js").read_text(encoding="utf-8")
 main_js = (ROOT / "script.js").read_text(encoding="utf-8")
 
 errors = []
+# Keep recipe hero assets reasonably light for mobile users. This is a guardrail,
+# not a claim about Core Web Vitals; 500 KiB leaves room for high-quality food photos.
+oversized_local = []
+for row in local:
+    image_path = ROOT / row["image"].lstrip("/")
+    if image_path.is_file() and image_path.stat().st_size > 500 * 1024:
+        oversized_local.append((row["slug"], row["image"], image_path.stat().st_size))
+print(f"Local recipe images over 500 KiB: {len(oversized_local)}")
+for slug, image, size in oversized_local:
+    errors.append(f"{slug}: local image exceeds 500 KiB ({size // 1024} KiB): {image}")
+
 if "images.weserv.nl" in client or "images.weserv.nl" in main_js:
     errors.append("third-party weserv image proxy remains in homepage client code")
 if "const localFallbacks" in client or "const jpgFallbacks" in client:
