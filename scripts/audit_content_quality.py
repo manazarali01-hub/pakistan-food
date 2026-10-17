@@ -84,11 +84,20 @@ def robots_value(html: str) -> str:
 guide_rows = []
 groups: dict[str, list[str]] = defaultdict(list)
 bad_meta_descriptions: list[tuple[str, str]] = []
+chrome_issues: list[tuple[str, str]] = []
 
 for file in sorted(GUIDES.glob("*.html")):
     if file.name == "index.html":
         continue
     html = file.read_text(encoding="utf-8")
+    guide_nav_count = len(re.findall(r'<header\b[^>]*class=["\'][^"\']*\bguide-site-header\b', html, flags=re.I))
+    policy_nav_count = len(re.findall(r'<header\b[^>]*class=["\'][^"\']*\bpolicy-header\b', html, flags=re.I))
+    guide_footer_count = len(re.findall(r'<footer\b[^>]*class=["\'][^"\']*\bguide-site-footer\b', html, flags=re.I))
+    policy_footer_count = len(re.findall(r'<footer\b[^>]*class=["\'][^"\']*\bpolicy-footer\b', html, flags=re.I))
+    if guide_nav_count > 1 or (guide_nav_count and policy_nav_count):
+        chrome_issues.append((file.name, "duplicate or conflicting page headers"))
+    if guide_footer_count > 1 or (guide_footer_count and policy_footer_count):
+        chrome_issues.append((file.name, "duplicate or conflicting page footers"))
     visible = strip_visible(html)
     body = normalized_guide_body(visible)
     words = len(re.findall(r"\b[\w’'-]+\b", visible))
@@ -188,11 +197,17 @@ print(f"Indexed guides with generic-template phrase hits: {len(generic_indexed)}
 print(f"Exact duplicate visible-body groups: {len(duplicate_groups)}")
 print(f"Public/hub links to noindex guides: {len(stale_user_links)}")
 print(f"Guides with missing or truncated meta descriptions: {len(bad_meta_descriptions)}")
+print(f"Guides with duplicate/conflicting headers or footers: {len(chrome_issues)}")
 
 if duplicate_groups:
     print("\nEXACT DUPLICATE BODY GROUPS")
     for files in duplicate_groups:
         print(f"- {len(files)} pages: " + ", ".join(files))
+
+if chrome_issues:
+    print("\nDUPLICATE/CONFLICTING GUIDE CHROME")
+    for name, issue in chrome_issues:
+        print(f"- {name}: {issue}")
 
 if generic_indexed:
     print("\nGENERIC TEMPLATE PHRASE HITS")
@@ -225,7 +240,7 @@ if bad_meta_descriptions:
     for name, issue in bad_meta_descriptions:
         print(f"- {name}: {issue}")
 
-if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or indexed_missing_sitemap or stale_user_links or bad_meta_descriptions):
+if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or indexed_missing_sitemap or stale_user_links or bad_meta_descriptions or chrome_issues):
     raise SystemExit("Strict content-quality audit failed.")
 
 print("\nAudit complete.")
