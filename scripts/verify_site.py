@@ -12,6 +12,23 @@ ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://pakistanfoodrecipes.top"
 REQUIRED = ("name", "category", "time", "serves", "image", "description", "ingredients", "method")
 ISO_DURATION = re.compile(r"^P(?=\d|T\d)(?:\d+D)?(?:T(?=\d)(?:\d+H)?(?:\d+M)?(?:\d+(?:\.\d+)?S)?)?$")
+DURATION_PARTS = re.compile(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?")
+
+
+def duration_seconds(value):
+    """Convert a validated ISO 8601 duration to seconds for consistency checks."""
+    match = DURATION_PARTS.fullmatch(value)
+    if not match:
+        return None
+    days, hours, minutes, seconds = match.groups()
+    return (
+        int(days or 0) * 86400
+        + int(hours or 0) * 3600
+        + int(minutes or 0) * 60
+        + float(seconds or 0)
+    )
+
+
 errors = []
 
 try:
@@ -60,6 +77,17 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
         duration_value = recipe.get(duration_field)
         if duration_value and (not isinstance(duration_value, str) or not ISO_DURATION.fullmatch(duration_value)):
             errors.append(f"{slug}: {duration_field} must be a valid ISO 8601 duration")
+    if prep_duration and cook_duration and recipe.get("total_time_iso"):
+        prep_seconds = duration_seconds(prep_duration)
+        cook_seconds = duration_seconds(cook_duration)
+        total_seconds = duration_seconds(recipe["total_time_iso"])
+        if (
+            prep_seconds is not None
+            and cook_seconds is not None
+            and total_seconds is not None
+            and total_seconds < prep_seconds + cook_seconds
+        ):
+            errors.append(f"{slug}: total_time_iso is shorter than prep_time_iso plus cook_time_iso")
     if not (recipe.get("name_urdu") or urdu_names.get(slug)):
         errors.append(f"{slug}: Urdu recipe name is missing")
     bilingual = bilingual_by_slug.get(slug, {})
