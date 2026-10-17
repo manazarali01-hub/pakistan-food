@@ -26,8 +26,12 @@ USER_AGENT = "PakistanFoodLiveSmoke/1.0 (+https://pakistanfoodrecipes.top/)"
 ATTEMPTS = 8
 DELAY_SECONDS = 10
 
-EXPECTED_ADS = "google.com, pub-4531216214099892, DIRECT, f08c47fec0942fa0"
 _config_text = Path("_config.yml").read_text(encoding="utf-8")
+_client_match = re.search(r'^adsense_client:\s*["\']?(ca-pub-\d+)["\']?\s*$', _config_text, re.M)
+if not _client_match:
+    raise SystemExit("_config.yml: adsense_client is missing or malformed")
+ADSENSE_CLIENT = _client_match.group(1)
+EXPECTED_ADS = f"google.com, {ADSENSE_CLIENT.replace('ca-', '')}, DIRECT, f08c47fec0942fa0"
 _version_match = re.search(r'^recipe_image_version:\s*["\']?([^"\'\s]+)', _config_text, re.M)
 RECIPE_IMAGE_VERSION = _version_match.group(1) if _version_match else "20261004-photo3"
 
@@ -261,7 +265,7 @@ for slug, image_path in recipe_images:
 
 print(f"OK live recipe image assets ({len(recipe_images)} local images, 0 external URLs)")
 
-ads = require("/ads.txt", "pub-4531216214099892")
+ads = require("/ads.txt", ADSENSE_CLIENT.replace("ca-", ""))
 ads_lines = [line.strip() for line in ads.splitlines() if line.strip()]
 if ads_lines != [EXPECTED_ADS]:
     raise SystemExit(f"/ads.txt: expected exactly {EXPECTED_ADS!r}, got {ads_lines!r}")
