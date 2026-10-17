@@ -13,3 +13,6 @@ adsense_client: "ca-pub-4531216214099892"
 recipe_image_version: "20261017-responsive1"
 exclude:
   - README.md
+  - docs/
+  - scripts/
+  - tests/

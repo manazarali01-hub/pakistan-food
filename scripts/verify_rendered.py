@@ -87,6 +87,11 @@ def output_path(path):
 
 errors = []
 
+# Repository-only audit reports and scripts must never become public website pages.
+for private_directory in ("docs", "scripts", "tests"):
+    if (SITE / private_directory).exists():
+        errors.append(f"internal repository directory leaked into rendered site: {private_directory}/")
+
 # ads.txt must render from the same configured publisher ID used by page scripts.
 config_text = (ROOT / "_config.yml").read_text(encoding="utf-8")
 client_match = re.search(r'^adsense_client:\s*["\']?(ca-pub-\d+)["\']?\s*$', config_text, flags=re.M)
