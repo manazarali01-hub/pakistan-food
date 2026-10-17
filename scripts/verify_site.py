@@ -1,6 +1,7 @@
 """Check the source files that GitHub Pages publishes for Pakistan Food."""
 
 from collections import Counter
+from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urlparse
 import json
@@ -107,6 +108,22 @@ try:
         node.findtext("{*}loc"): node.findtext("{*}lastmod")
         for node in url_entries
     }
+    # A missing lastmod is valid; a supplied one must be a real W3C/ISO date
+    # or datetime. Invalid dates can make sitemap freshness signals unreliable.
+    for node in url_entries:
+        loc = node.findtext("{*}loc")
+        lastmod = node.findtext("{*}lastmod")
+        if not loc:
+            errors.append("sitemap-v2.xml: URL entry is missing loc")
+            continue
+        if lastmod:
+            try:
+                if len(lastmod) == 10:
+                    date.fromisoformat(lastmod)
+                else:
+                    datetime.fromisoformat(lastmod.replace("Z", "+00:00"))
+            except ValueError:
+                errors.append(f"sitemap-v2.xml: invalid lastmod {lastmod!r} for {loc}")
 except (OSError, ET.ParseError) as exc:
     errors.append(f"sitemap-v2.xml: {exc}")
     urls = []
