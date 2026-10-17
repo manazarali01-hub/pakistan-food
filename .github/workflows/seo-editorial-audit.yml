@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/audit_content_quality.py'
       - 'tests/test_audit_content_quality.py'
+      - 'tests/test_audit_content_quality.py'
       - '.github/workflows/seo-editorial-audit.yml'
   push:
     branches: [main]

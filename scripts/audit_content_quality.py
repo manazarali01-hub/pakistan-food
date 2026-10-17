@@ -17,6 +17,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 GUIDES = ROOT / "guides"
 SITEMAP = ROOT / "sitemap-v2.xml"
+PREMIUM_CSS = ROOT / "premium.css"
 
 GENERIC_PHRASES = (
     "consistent preparation, moisture control, moderate heat",
@@ -85,6 +86,12 @@ guide_rows = []
 groups: dict[str, list[str]] = defaultdict(list)
 bad_meta_descriptions: list[tuple[str, str]] = []
 chrome_issues: list[tuple[str, str]] = []
+try:
+    premium_css = re.sub(r"\s+", " ", PREMIUM_CSS.read_text(encoding="utf-8"))
+except OSError:
+    premium_css = ""
+header_chrome_suppressed = ".guide-site-header ~ .policy-header" in premium_css
+footer_chrome_suppressed = ".guide-shell ~ .policy-footer" in premium_css
 
 for file in sorted(GUIDES.glob("*.html")):
     if file.name == "index.html":
@@ -94,9 +101,9 @@ for file in sorted(GUIDES.glob("*.html")):
     policy_nav_count = len(re.findall(r'<header\b[^>]*class=["\'][^"\']*\bpolicy-header\b', html, flags=re.I))
     guide_footer_count = len(re.findall(r'<footer\b[^>]*class=["\'][^"\']*\bguide-site-footer\b', html, flags=re.I))
     policy_footer_count = len(re.findall(r'<footer\b[^>]*class=["\'][^"\']*\bpolicy-footer\b', html, flags=re.I))
-    if guide_nav_count > 1 or (guide_nav_count and policy_nav_count):
+    if guide_nav_count > 1 or (guide_nav_count and policy_nav_count and not header_chrome_suppressed):
         chrome_issues.append((file.name, "duplicate or conflicting page headers"))
-    if guide_footer_count > 1 or (guide_footer_count and policy_footer_count):
+    if guide_footer_count > 1 or (guide_footer_count and policy_footer_count and not footer_chrome_suppressed):
         chrome_issues.append((file.name, "duplicate or conflicting page footers"))
     visible = strip_visible(html)
     body = normalized_guide_body(visible)

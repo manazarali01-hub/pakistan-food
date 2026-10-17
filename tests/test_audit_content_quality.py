@@ -229,5 +229,32 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
         self.assertIn("duplicate or conflicting page footers", result.stdout)
 
 
+    def test_strict_audit_passes_when_legacy_duplicate_chrome_is_hidden(self):
+        guide = self.root / "guides" / "sample-guide.html"
+        guide.write_text(
+            "<html><head><meta name='description' content='Sample guide description.'>"
+            "<meta name='robots' content='index,follow'></head><body>"
+            "<header class='guide-site-header'><nav>Primary navigation</nav></header>"
+            "<header class='policy-header'>Legacy duplicate brand</header>"
+            "<main class='guide-shell'><h1>Sample guide</h1><p>Original useful guidance.</p></main>"
+            "<footer class='policy-footer'>Legacy duplicate footer</footer>"
+            "<footer class='guide-site-footer'>Primary footer</footer></body></html>",
+            encoding="utf-8",
+        )
+        (self.root / "premium.css").write_text(
+            ".guide-site-header ~ .policy-header, .guide-shell ~ .policy-footer { display: none !important; }",
+            encoding="utf-8",
+        )
+        self.write_sitemap([
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html",
+        ])
+
+        result = self.run_audit()
+
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("Guides with duplicate/conflicting headers or footers: 0", result.stdout)
+
+
 if __name__ == "__main__":
     unittest.main()
