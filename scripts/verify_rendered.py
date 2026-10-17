@@ -240,6 +240,19 @@ for url in urls:
         if missing:
             errors.append(f"recipe schema missing {', '.join(missing)}: {url}")
 
+        # Recipe yield is structured data, not display copy: keep it numeric and
+        # identical to the source serving count so template changes cannot drift.
+        source_serves = source_recipe.get("serves")
+        schema_yield = recipe_item.get("recipeYield")
+        if type(source_serves) is not int or source_serves <= 0:
+            errors.append(f"source serving count must be a positive integer: {url}")
+        if type(schema_yield) is not int or schema_yield <= 0:
+            errors.append(f"recipeYield must render as a positive integer: {url}")
+        elif schema_yield != source_serves:
+            errors.append(
+                f"recipeYield mismatch {url}: {schema_yield!r} != {source_serves!r}"
+            )
+
         # Optional per-recipe search snippet overrides must render consistently.
         seo_title = source_recipe.get("seo_title")
         if seo_title:
