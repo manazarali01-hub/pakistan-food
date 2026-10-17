@@ -180,71 +180,76 @@ pages = {p.stem for p in (ROOT / "recipes").glob("*.html") if p.name != "index.h
 for slug in pages - recipes.keys():
     errors.append(f"{slug}: recipe page has no matching data")
 
-# sitemap.xml is a Jekyll/Liquid template, so validate its generation rules
-# and source-page coverage instead of parsing unrendered Liquid as XML.
-sitemap_path = ROOT / "sitemap.xml"
+all_paths = []
 try:
-    sitemap_template = sitemap_path.read_text(encoding="utf-8")
-except OSError as exc:
-    sitemap_template = ""
-    errors.append(f"sitemap.xml: {exc}")
+    tree = ET.parse(ROOT / "sitemap-v2.xml")
+    url_entries = tree.findall(".//{*}url")
+    urls = [node.text for node in tree.findall(".//{*}loc")]
+    sitemap_lastmod = {
+        node.findtext("{*}loc"): node.findtext("{*}lastmod")
+        for node in url_entries
+    }
+    # A missing lastmod is valid; a supplied one must be a real W3C/ISO date or datetime.
+    for node in url_entries:
+        loc = node.findtext("{*}loc")
+        lastmod = node.findtext("{*}lastmod")
+        if not loc:
+            errors.append("sitemap-v2.xml: URL entry is missing loc")
+            continue
+        if lastmod:
+            try:
+                if len(lastmod) == 10:
+                    date.fromisoformat(lastmod)
+                else:
+                    datetime.fromisoformat(lastmod.replace("Z", "+00:00"))
+            except ValueError:
+                errors.append(f"sitemap-v2.xml: invalid lastmod {lastmod!r} for {loc}")
+except (OSError, ET.ParseError) as exc:
+    errors.append(f"sitemap-v2.xml: {exc}")
+    urls = []
+    sitemap_lastmod = {}
 
-for required_fragment in (
-    "layout: null",
-    "site.pages | sort: 'url'",
-    "{% for page in sitemap_pages %}",
-    "page.url | absolute_url | xml_escape",
-    "site.data.recipes[page.recipe_key]",
-    "recipe.date_modified",
-    "page.noindex == true",
-    "page.path == '404.html'",
-    "page.url contains 'sitemap'",
-    "page_ext != 'html'",
-):
-    if required_fragment not in sitemap_template:
-        errors.append(f"sitemap.xml: missing sitemap generation rule {required_fragment!r}")
-
-source_urls = set()
-for source_page in ROOT.rglob("*.html"):
-    relative = source_page.relative_to(ROOT)
-    if "admin" in relative.parts or "assets" in relative.parts or relative.as_posix() == "404.html":
-        continue
-    try:
-        source_text = source_page.read_text(encoding="utf-8")
-    except OSError as exc:
-        errors.append(f"{relative.as_posix()}: {exc}")
-        continue
-    if re.search(r"(?im)^noindex:\s*true\s*$", source_text):
-        continue
-    if re.search(r'<meta\s+name=["\']robots["\'][^>]*content=["\'][^"\']*noindex', source_text, re.I):
-        continue
-    if relative.name == "index.html":
-        page_path = "/" if relative.parent == Path(".") else "/" + relative.parent.as_posix().rstrip("/") + "/"
-    else:
-        page_path = "/" + relative.as_posix()
-    source_urls.add(DOMAIN + page_path)
-
-urls = sorted(source_urls)
-paths = [urlparse(url).path for url in urls]
-
+paths = []
+for url in urls:
+    parsed = urlparse(url or "")
+    if f"{parsed.scheme}://{parsed.netloc}" != DOMAIN or parsed.query or parsed.fragment:
+        errors.append(f"sitemap-v2.xml: incorrect canonical URL {url}")
+    path = parsed.path
+    paths.append(path)
+    source = ROOT / (path.lstrip("/") + "index.html" if path.endswith("/") else path.lstrip("/"))
+    if not source.is_file():
+        errors.append(f"sitemap-v2.xml: {path} has no source page")
+for path, count in Counter(paths).items():
+    if count > 1:
+        errors.append(f"sitemap-v2.xml: duplicate URL {path}")
 for slug, recipe in recipes.items():
-    recipe_url = DOMAIN + f"/recipes/{slug}.html"
-    if recipe_url not in source_urls:
-        errors.append(f"sitemap.xml: recipe {slug} has no discoverable source page")
+    recipe_path = f"/recipes/{slug}.html"
+    if recipe_path not in paths:
+        errors.append(f"sitemap-v2.xml: recipe {slug} missing")
     source_date = recipe.get("date_modified")
     if source_date:
-        try:
-            date.fromisoformat(source_date)
-        except (TypeError, ValueError):
-            errors.append(f"{slug}: date_modified must be an ISO date")
-if "https://pakistanfoodrecipes.top/sitemap.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
-    errors.append("robots.txt does not point to the canonical sitemap")
+        recipe_url = DOMAIN + recipe_path
+        sitemap_date = sitemap_lastmod.get(recipe_url)
+        if sitemap_date != source_date:
+            errors.append(
+                f"sitemap-v2.xml: lastmod mismatch for {slug}: "
+                f"{sitemap_date!r} != {source_date!r}"
+            )
+all_paths.append(paths)
+
+try:
+    index_tree = ET.parse(ROOT / "sitemap.xml")
+    sitemap_locs = [node.text for node in index_tree.findall(".//{*}loc")]
+    if sitemap_locs != [DOMAIN + "/sitemap-v2.xml"]:
+        errors.append("sitemap.xml must point only to sitemap-v2.xml")
+except (OSError, ET.ParseError) as exc:
+    errors.append(f"sitemap.xml: {exc}")
 
 for trust_page in ("about.html", "contact.html", "privacy-policy.html", "editorial-policy.html", "disclaimer.html", "terms.html", "image-credits.html"):
     if not (ROOT / trust_page).is_file():
         errors.append(f"{trust_page}: trust page is missing")
-    if DOMAIN + f"/{trust_page}" not in source_urls:
-        errors.append(f"{trust_page}: missing from indexable sitemap source coverage")
+    if f"/{trust_page}" not in paths:
+        errors.append(f"{trust_page}: missing from sitemap-v2.xml")
 
 # Every guide deliberately submitted to Google should be reachable from the
 # main Cooking Guides directory, not only through its sitemap URL.
@@ -260,16 +265,16 @@ if guide_hub_path.is_file():
                 errors.append(f"indexable guide missing from directory: {guide_filename}")
 
     # Reverse-check local guide links in the hub so the directory cannot point
-    # to a missing page or to a page omitted from sitemap source coverage.
-    for guide_filename in sorted(set(re.findall(r'href="([^"/?#]+\.html)"', guide_hub))):
+    # to a missing page or to a page omitted from the canonical sitemap.
+    for guide_filename in sorted(set(re.findall(r'href="([^"/?#]+\\.html)"', guide_hub))):
         if guide_filename == "index.html":
             continue
         guide_file = ROOT / "guides" / guide_filename
         guide_url = f"{DOMAIN}/guides/{guide_filename}"
         if not guide_file.is_file():
             errors.append(f"guides/index.html: linked guide file is missing: {guide_filename}")
-        if guide_url not in source_urls:
-            errors.append(f"guides/index.html: linked guide missing from sitemap source coverage: {guide_filename}")
+        if guide_url not in urls:
+            errors.append(f"guides/index.html: linked guide missing from sitemap-v2.xml: {guide_filename}")
 else:
     errors.append("guides/index.html: directory is missing")
 
@@ -282,14 +287,15 @@ except OSError as exc:
     category_template = ""
     errors.append(f"_layouts/category.html: {exc}")
 
-for guide_filename in sorted(set(re.findall(r'href="\.\./\.\./guides/([^"]+\.html)"', category_template))):
+for guide_filename in sorted(set(re.findall(r'href="\\.\\./\\.\\./guides/([^"]+\\.html)"', category_template))):
     guide_url = f"{DOMAIN}/guides/{guide_filename}"
-    if guide_url not in source_urls:
-        errors.append(f"_layouts/category.html: guide link missing from sitemap source coverage: {guide_filename}")
+    if guide_url not in urls:
+        errors.append(f"_layouts/category.html: guide link missing from sitemap-v2.xml: {guide_filename}")
     if f'href="{guide_filename}"' not in guide_hub:
         errors.append(f"_layouts/category.html: guide link missing from directory: {guide_filename}")
 
-all_paths = [paths]
+if DOMAIN + "/sitemap.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
+    errors.append("robots.txt does not point to the canonical sitemap")
 
 # Keep recipe search snippets concise, non-boilerplate, and within the common
 # 155-character search-snippet target. This mirrors Liquid's truncate filter.
