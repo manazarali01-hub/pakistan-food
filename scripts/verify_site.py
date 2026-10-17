@@ -199,6 +199,7 @@ for required_fragment in (
     "page.noindex == true",
     "page.path == '404.html'",
     "page.url contains 'sitemap'",
+    "page_ext != 'html'",
 ):
     if required_fragment not in sitemap_template:
         errors.append(f"sitemap.xml: missing sitemap generation rule {required_fragment!r}")
