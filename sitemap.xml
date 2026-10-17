@@ -1,19 +1,6 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% assign sitemap_pages = site.pages | sort: 'url' %}
-{% for page in sitemap_pages %}
-  {% assign recipe = site.data.recipes[page.recipe_key] %}
-  {% assign page_ext = page.path | split: '.' | last | downcase %}
-  {% unless page.url contains 'sitemap' or page.path == '404.html' or page.url contains '/assets/' or page.url contains '/admin/' or page_ext != 'html' %}
-    {% unless page.noindex == true %}
-      <url>
-        <loc>{{ page.url | absolute_url | xml_escape }}</loc>
-        {% if recipe.date_modified %}<lastmod>{{ recipe.date_modified | date: '%Y-%m-%d' }}</lastmod>{% elsif page.last_modified_at %}<lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>{% elsif page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>{% endif %}
-      </url>
-    {% endunless %}
-  {% endunless %}
-{% endfor %}
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://pakistanfoodrecipes.top/sitemap-v2.xml</loc>
+  </sitemap>
+</sitemapindex>
