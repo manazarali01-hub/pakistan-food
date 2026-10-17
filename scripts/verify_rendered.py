@@ -307,8 +307,8 @@ for url in urls:
                         f"{schema_duration!r} != {source_duration!r}"
                     )
                 if not re.fullmatch(
-                    r"P(?=\\d|T\\d)(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?"
-                    r"(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+(?:\\.\\d+)?S)?)?",
+                    r"P(?=[0-9]|T[0-9])(?:[0-9]+Y)?(?:[0-9]+M)?(?:[0-9]+W)?(?:[0-9]+D)?"
+                    r"(?:T(?:[0-9]+H)?(?:[0-9]+M)?(?:[0-9]+(?:[.][0-9]+)?S)?",
                     source_duration,
                 ):
                     errors.append(f"invalid ISO 8601 {schema_field} in source data {url}: {source_duration!r}")
