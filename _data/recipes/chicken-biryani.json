@@ -5,7 +5,7 @@
   "time": "90 min",
   "serves": 6,
   "image": "assets/recipe-images/chicken-biryani-v2.webp",
-  "description": "Pakistani chicken biryani with spiced chicken masala, fragrant basmati rice, fried onions and fresh herbs layered and finished gently on dum.",
+  "description": "Pakistani chicken biryani layers fragrant basmati rice, spiced chicken, fried onions and herbs, then finishes on dum.",
   "ingredients": [
     "750 g bone-in chicken",
     "3 cups basmati rice",
@@ -44,7 +44,7 @@
   "prep_time_iso": "PT30M",
   "cook_time_iso": "PT60M",
   "total_time_iso": "PT1H30M",
-  "date_modified": "2026-10-14",
+  "date_modified": "2026-10-17",
   "image_alt": "Pakistani chicken biryani with long basmati rice, spiced chicken and fried onion",
   "image_caption": "Chicken biryani with long basmati rice and spiced chicken in a tighter food-first crop.",
   "technique": "The two stages that decide the texture are the rice parboil and the moisture level of the chicken masala. Drain the rice while the centre is still firm enough to finish on dum, and reduce the masala until it coats the chicken instead of leaving a pool of thin gravy.",
