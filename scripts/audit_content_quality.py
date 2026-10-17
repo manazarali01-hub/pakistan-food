@@ -99,7 +99,7 @@ for file in sorted(GUIDES.glob("*.html")):
         flags=re.I,
     )
     description_match = (
-        re.search(r""" \bcontent=["']([^"']*)["'] """, description_tag.group(0), flags=re.I)
+        re.search(r"""\bcontent=["']([^"']*)["']""", description_tag.group(0), flags=re.I)
         if description_tag else None
     )
     if not description_match or not description_match.group(1).strip():
