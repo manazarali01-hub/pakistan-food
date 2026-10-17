@@ -204,5 +204,30 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
         self.assertIn("ends with an ellipsis", result.stdout)
 
 
+    def test_strict_audit_fails_when_guide_has_duplicate_navigation_and_footer(self):
+        guide = self.root / "guides" / "sample-guide.html"
+        guide.write_text(
+            "<html><head><meta name='description' content='Sample guide description.'>"
+            "<meta name='robots' content='index,follow'></head><body>"
+            "<header class='guide-site-header'><nav>Primary navigation</nav></header>"
+            "<header class='policy-header'>Duplicate brand header</header>"
+            "<main><h1>Sample guide</h1><p>Original useful guidance.</p></main>"
+            "<footer class='guide-site-footer'>Primary footer</footer>"
+            "<footer class='policy-footer'>Duplicate footer</footer></body></html>",
+            encoding="utf-8",
+        )
+        self.write_sitemap([
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html",
+        ])
+
+        result = self.run_audit()
+
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("DUPLICATE/CONFLICTING GUIDE CHROME", result.stdout)
+        self.assertIn("duplicate or conflicting page headers", result.stdout)
+        self.assertIn("duplicate or conflicting page footers", result.stdout)
+
+
 if __name__ == "__main__":
     unittest.main()
