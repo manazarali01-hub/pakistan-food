@@ -33,6 +33,17 @@
   {% when 'drinks' %}{% assign category_focus = 'Pakistani drinks include cooling lassi and sharbat as well as warming chai. Use fresh ingredients, adjust sweetness gradually, and blend, whisk or brew shortly before serving for the best flavour and texture.' %}
   {% when 'vegetarian' %}{% assign category_focus = 'Pakistani vegetarian cooking builds flavour with onions, tomatoes, herbs and toasted spices. Prepare vegetables before heating the pan and avoid overcooking delicate ingredients so their colour and texture remain appealing.' %}
 {% endcase %}
+{% case category_slug %}
+  {% when 'rice' %}{% assign category_method_note = 'For biryani, keep the chicken masala concentrated before layering and drain the rice while its centre is still firm. For pulao, let the stock flavour the rice evenly and keep the pot covered during the final steam. Rest either dish briefly before serving so the grains settle.' %}
+  {% when 'chicken' %}{% assign category_method_note = 'Cut chicken into similar-sized pieces so they cook evenly. For karahi, let excess tomato moisture cook away before finishing with ginger and green chilli; for slow-cooked gravies, keep the heat gentle and check the thickest pieces for doneness.' %}
+  {% when 'beef' %}{% assign category_method_note = 'Choose the cut for the dish: shank suits slow-cooked nihari, while smaller stewing pieces work for everyday curries. Keep tough cuts at a gentle simmer until fork-tender, and adjust gravy thickness near the end rather than at the start.' %}
+  {% when 'bbq' %}{% assign category_method_note = 'Cut meat into even pieces and give the marinade time to coat every surface. Shake or scrape off excess wet marinade before grilling, turn as needed for even browning, and rest cooked meat briefly so the juices redistribute.' %}
+  {% when 'snacks' %}{% assign category_method_note = 'Prepare and cool fillings before folding samosas or assembling chaat. Fry in batches without crowding the pan; if the oil temperature drops too far, pastry and pakoras can absorb more oil instead of crisping.' %}
+  {% when 'breakfast' %}{% assign category_method_note = 'For parathas, keep the filling manageable and seal the dough without trapped air, then cook over medium heat so the centre warms before the outside gets too dark. Prepare chai and accompaniments while the bread rests between batches.' %}
+  {% when 'desserts' %}{% assign category_method_note = 'Use a heavy-based pan and steady, moderate heat for milk sweets and halwa. Stir more frequently as mixtures thicken, add delicate aromatics near the end, and allow syrup-soaked desserts to rest long enough to absorb flavour.' %}
+  {% when 'drinks' %}{% assign category_method_note = 'Chill ingredients before blending lassi, and add sugar a little at a time so you can balance sweetness after tasting. For tea, simmer long enough to develop the desired strength but avoid reducing it so far that the flavour turns harsh.' %}
+  {% when 'vegetarian' %}{% assign category_method_note = 'Cook onions and whole spices until fragrant before adding vegetables or lentils. Add water in stages, check texture as the dish cooks, and finish with fresh herbs or lemon only after tasting the salt and acidity.' %}
+{% endcase %}
 {% capture canonical_url %}https://pakistanfoodrecipes.top/recipes/{{ category_slug }}/{% endcapture %}
 <!doctype html>
 <html lang="en">
@@ -183,7 +194,7 @@
       <h2>Cooking Pakistani {{ category_name }} Recipes</h2>
       <p>These recipes are designed for home cooking with familiar ingredients and straightforward methods. Read the complete recipe before starting, prepare ingredients in advance, and adjust chilli, salt and cooking time according to your taste and equipment.</p>
       <p>{{ category_focus }}</p>
-      <p>Every recipe page includes measured ingredients, preparation and cooking times, serving information, practical tips and a clear step-by-step method. Compare the dishes above, choose one that suits the time and ingredients you have, and read its notes before you begin. For the most authentic result, taste as you cook, make small seasoning adjustments, and serve the finished dish with the suggested bread, rice, chutney, salad or drink.</p>
+      <p>{{ category_method_note }}</p>
       <ul>
         <li>Choose a recipe above to see the full ingredients and method.</li>
         <li>Use fresh ingredients and measure spices before cooking.</li>
