@@ -1,7 +1,7 @@
 # Pakistan Food — AdSense Low-Value Content Recovery Audit
 
 **Content audit date:** 2026-10-04  
-**Technical verification refreshed:** 2026-10-17. Main commit `bd75d3ff190f3171dd01841eaa9efac2659e11c8` passed Verify Pakistan Food (run `39048651704`), SEO and Editorial Quality Audit (`39048651580`), Pages Refresh (`39048651560`), GitHub Pages deployment (`39048651652`), and Live Site Smoke (`39048651659`). The latest source sitemap contains 217 unique URLs; these checks verify repository/build/deployment health, not Google indexing or AdSense approval.  
+**Technical verification refreshed:** 2026-10-17. Latest commit `58049956cece0ce06ab7cb69edd8d9729082b6de` passed Verify Pakistan Food (run `39056648347`), SEO and Editorial Quality Audit (`39056648236`), Pages Refresh (`39056648198`), GitHub Pages deployment (`39056648144`), and Live Site Smoke (`39056648111`). The source sitemap contains 217 unique URLs; these checks verify repository/build/deployment health, not Google indexing or AdSense approval.  
 **Main site:** https://pakistanfoodrecipes.top/  
 **Reason for recovery work:** Google AdSense — Low value content
 
