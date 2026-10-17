@@ -292,6 +292,31 @@ for url in urls:
         if duration and recipe_item.get("totalTime") != duration:
             errors.append(f"wrong totalTime {url}: {recipe_item.get('totalTime')} != {duration}")
 
+        # Keep optional preparation/cooking durations truthful and synchronized
+        # with the recipe source instead of allowing stale or invented schema values.
+        for source_field, schema_field in (
+            ("prep_time_iso", "prepTime"),
+            ("cook_time_iso", "cookTime"),
+        ):
+            source_duration = source_recipe.get(source_field)
+            schema_duration = recipe_item.get(schema_field)
+            if source_duration:
+                if schema_duration != source_duration:
+                    errors.append(
+                        f"{schema_field} mismatch {url}: "
+                        f"{schema_duration!r} != {source_duration!r}"
+                    )
+                if not re.fullmatch(
+                    r"P(?=\\d|T\\d)(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?"
+                    r"(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+(?:\\.\\d+)?S)?)?",
+                    source_duration,
+                ):
+                    errors.append(f"invalid ISO 8601 {schema_field} in source data {url}: {source_duration!r}")
+            elif schema_duration:
+                errors.append(
+                    f"{schema_field} rendered without source duration data: {url}"
+                )
+
         source_modified = source_recipe.get("date_modified")
         schema_modified = recipe_item.get("dateModified")
         if source_modified and schema_modified != source_modified:
