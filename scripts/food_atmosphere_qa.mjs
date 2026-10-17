@@ -43,6 +43,13 @@ async function openHome(context,width){
       };
     });
     console.log('LAB PERFORMANCE (390px mobile viewport; CI browser, not Google field data): ' + JSON.stringify(metrics));
+    if (metrics.heroImageTransferBytes > 300000) {
+      throw new Error('Homepage hero image exceeded 300 KB transfer budget: ' + metrics.heroImageTransferBytes + ' bytes');
+    }
+    if (metrics.documentTransferBytes > 100000) {
+      throw new Error('Homepage HTML exceeded 100 KB transfer budget: ' + metrics.documentTransferBytes + ' bytes');
+    }
+    console.log('PASS homepage transfer budgets: hero image <= 300 KB and HTML <= 100 KB when transfer sizes are available');
   }
   const photo=page.locator('.featured-card:first-child .pf-food-photo[data-pf-dish="chicken-biryani"]');
   await photo.scrollIntoViewIfNeeded();
