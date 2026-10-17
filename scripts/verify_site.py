@@ -183,6 +183,7 @@ for trust_page in ("about.html", "contact.html", "privacy-policy.html", "editori
 # Every guide deliberately submitted to Google should be reachable from the
 # main Cooking Guides directory, not only through its sitemap URL.
 guide_hub_path = ROOT / "guides/index.html"
+guide_hub = ""
 if guide_hub_path.is_file():
     guide_hub = guide_hub_path.read_text(encoding="utf-8")
     for guide_url in urls:
