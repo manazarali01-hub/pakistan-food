@@ -27,7 +27,13 @@ ATTEMPTS = 8
 DELAY_SECONDS = 10
 
 _config_text = Path("_config.yml").read_text(encoding="utf-8")
-_client_match = re.search(r'^adsense_client:\s*["\']?(ca-pub-\d+)["\']?\s*
+_client_match = re.search(r'^adsense_client:\s*["\']?(ca-pub-\d+)["\']?\s*$', _config_text, re.M)
+if not _client_match:
+    raise SystemExit("_config.yml: adsense_client is missing or malformed")
+ADSENSE_CLIENT = _client_match.group(1)
+EXPECTED_ADS = f"google.com, {ADSENSE_CLIENT.replace('ca-', '')}, DIRECT, f08c47fec0942fa0"
+_version_match = re.search(r'^recipe_image_version:\s*["\']?([^"\'\s]+)', _config_text, re.M)
+RECIPE_IMAGE_VERSION = _version_match.group(1) if _version_match else "20261004-photo3"
 
 
 def wait_for_pages_deployment() -> None:
