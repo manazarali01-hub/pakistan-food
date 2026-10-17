@@ -167,5 +167,42 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
         self.assertIn("sample-guide.html", result.stdout)
 
 
+    def test_strict_audit_fails_when_guide_meta_description_is_missing(self):
+        guide = self.root / "guides" / "sample-guide.html"
+        html = guide.read_text(encoding="utf-8")
+        html = html.replace(
+            "<meta name='description' content='Sample guide description.'>", ""
+        )
+        guide.write_text(html, encoding="utf-8")
+        self.write_sitemap([
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html",
+        ])
+
+        result = self.run_audit()
+
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("META DESCRIPTION ISSUES", result.stdout)
+        self.assertIn("missing or empty meta description", result.stdout)
+
+    def test_strict_audit_fails_when_guide_meta_description_ends_in_ellipsis(self):
+        guide = self.root / "guides" / "sample-guide.html"
+        html = guide.read_text(encoding="utf-8")
+        html = html.replace(
+            "Sample guide description.", "Sample guide description..."
+        )
+        guide.write_text(html, encoding="utf-8")
+        self.write_sitemap([
+            "https://pakistanfoodrecipes.top/",
+            "https://pakistanfoodrecipes.top/guides/sample-guide.html",
+        ])
+
+        result = self.run_audit()
+
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("META DESCRIPTION ISSUES", result.stdout)
+        self.assertIn("ends with an ellipsis", result.stdout)
+
+
 if __name__ == "__main__":
     unittest.main()
