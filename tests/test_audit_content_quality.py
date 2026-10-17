@@ -30,7 +30,7 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
 
     def write_guide(self, filename, robots, heading, body):
         (self.root / "guides" / filename).write_text(
-            f"<html><head><meta name='robots' content='{robots}'></head>"
+            f"<html><head><meta name='description' content='Sample guide description.'><meta name='robots' content='{robots}'></head>"
             f"<body><h1>{heading}</h1><p>{body}</p></body></html>",
             encoding="utf-8",
         )
