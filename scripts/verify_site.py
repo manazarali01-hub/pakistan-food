@@ -188,13 +188,17 @@ if "See ingredients and the easy step-by-step method." in recipe_template:
     errors.append("_layouts/recipe.html: generic recipe meta-description boilerplate should be removed")
 
 for slug, recipe in recipes.items():
-    description = str(recipe.get("description", "")).strip()
-    if len(description) > 115:
-        description = description[:112] + "..."
     suffix = f" Ready in {recipe.get('time', '')}"
     if recipe.get("serves"):
         suffix += f"; serves {recipe['serves']}"
     suffix += "."
+    description_budget = 155 - len(suffix)
+    if description_budget < 4:
+        errors.append(f"{slug}: search-description suffix leaves no useful description space")
+        continue
+    description = str(recipe.get("description", "")).strip()
+    if len(description) > description_budget:
+        description = description[:description_budget - 3] + "..."
     if len(description + suffix) > 155:
         errors.append(
             f"{slug}: generated search description exceeds 155 characters "
