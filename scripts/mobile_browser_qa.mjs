@@ -5,6 +5,9 @@ const base = process.env.QA_BASE_URL || "http://127.0.0.1:4173";
 const widths = [320, 360, 375, 390, 412, 430, 768];
 const pages = [
   ["home", "/"],
+  ["recipe-directory", "/recipes/"],
+  ["rice-category", "/recipes/rice/"],
+  ["beef-category", "/recipes/beef/"],
   ["chicken-biryani", "/recipes/chicken-biryani.html"],
   ["chicken-karahi", "/recipes/chicken-karahi.html"],
   ["halwa-puri", "/recipes/halwa-puri.html"],
