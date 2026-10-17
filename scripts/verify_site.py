@@ -13,7 +13,8 @@ DOMAIN = "https://pakistanfoodrecipes.top"
 REQUIRED = ("name", "category", "time", "serves", "image", "description", "ingredients", "method")
 ISO_DURATION = re.compile(r"^P(?=\d|T\d)(?:\d+D)?(?:T(?=\d)(?:\d+H)?(?:\d+M)?(?:\d+(?:\.\d+)?S)?)?$")
 DISPLAY_TIME = re.compile(
-    r"^(?:(\d+)\s+(?:hr|hrs)(?:\s+(\d+)\s+(?:min|mins))?|(\d+)\s+(?:min|mins))$"
+    r"^(?:(\d+)\s+(?:hr|hrs)(?:\s+(\d+)\s+(?:min|mins))?(?:\s+including\s+(?:marinating|chilling))?|"
+    r"(\d+)\s+(?:min|mins)(?:\s+plus\s+(\d+)\s+(?:hr|hrs)\s+marinating)?)$"
 )
 DURATION_PARTS = re.compile(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?")
 
@@ -23,8 +24,13 @@ def display_time_seconds(value):
     match = DISPLAY_TIME.fullmatch(value.strip()) if isinstance(value, str) else None
     if not match:
         return None
-    hours, extra_minutes, minutes = match.groups()
-    return int(hours or 0) * 3600 + int(extra_minutes or 0) * 60 + int(minutes or 0) * 60
+    hours, extra_minutes, minutes, marinating_hours = match.groups()
+    return (
+        int(hours or 0) * 3600
+        + int(extra_minutes or 0) * 60
+        + int(minutes or 0) * 60
+        + int(marinating_hours or 0) * 3600
+    )
 
 
 def duration_seconds(value):
