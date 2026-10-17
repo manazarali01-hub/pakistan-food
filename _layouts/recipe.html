@@ -69,7 +69,11 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
 {% endif %}
 {% endcapture %}
 {% assign time_parts = recipe.time | split: ' ' %}
-{% if recipe.time contains 'hr' %}
+{% if recipe.time contains 'plus' and recipe.time contains 'hr' %}
+  {% assign time_hours = time_parts[3] %}
+  {% assign time_minutes = time_parts[0] %}
+  {% capture total_duration %}PT{{ time_hours }}H{{ time_minutes }}M{% endcapture %}
+{% elsif recipe.time contains 'hr' %}
   {% assign time_hours = time_parts[0] %}
   {% assign time_minutes = time_parts[2] %}
   {% if recipe.time contains 'min' and time_minutes %}
