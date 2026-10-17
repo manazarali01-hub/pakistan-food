@@ -29,7 +29,7 @@ def display_time_seconds(value):
 
 def duration_seconds(value):
     """Convert a validated ISO 8601 duration to seconds for consistency checks."""
-    if not isinstance(value, str):
+    if not isinstance(value, str) or not ISO_DURATION.fullmatch(value):
         return None
     match = DURATION_PARTS.fullmatch(value)
     if not match:
