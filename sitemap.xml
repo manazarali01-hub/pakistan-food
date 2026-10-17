@@ -1,6 +1,18 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://pakistanfoodrecipes.top/sitemap-v2.xml</loc>
-  </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% assign sitemap_pages = site.pages | sort: 'url' %}
+{% for page in sitemap_pages %}
+  {% assign page_ext = page.path | split: '.' | last | downcase %}
+  {% unless page.url contains 'sitemap' or page.url contains '/assets/' or page.url contains '/admin/' or page_ext == 'xml' or page_ext == 'yml' or page_ext == 'json' %}
+    {% unless page.noindex == true %}
+      <url>
+        <loc>{{ page.url | absolute_url | xml_escape }}</loc>
+        {% if page.last_modified_at %}<lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>{% elsif page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>{% endif %}
+      </url>
+    {% endunless %}
+  {% endunless %}
+{% endfor %}
+</urlset>
