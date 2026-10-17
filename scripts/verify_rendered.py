@@ -36,6 +36,7 @@ class PageParser(HTMLParser):
         super().__init__()
         self.links = []
         self.images = []
+        self.srcsets = []
         self.canonicals = []
         self.headings = []
         self.jsonld = []
@@ -49,6 +50,11 @@ class PageParser(HTMLParser):
             self.links.append(attrs["href"])
         if tag == "img" and attrs.get("src"):
             self.images.append(attrs["src"])
+        if tag in ("img", "source") and attrs.get("srcset"):
+            for candidate in attrs["srcset"].split(","):
+                parts = candidate.strip().split()
+                if parts:
+                    self.srcsets.append(parts[0])
         if tag == "link" and attrs.get("rel") == "canonical":
             self.canonicals.append(attrs.get("href"))
         if tag == "meta" and str(attrs.get("name", "")).lower() == "robots":
@@ -131,7 +137,7 @@ for url in urls:
     if re.search(r'<ins\b[^>]*class=["\'][^"\']*\badsbygoogle\b', rendered_html, flags=re.I):
         errors.append(f"ad unit present before readiness review: {url}")
 
-    for link in parser.links + parser.images:
+    for link in parser.links + parser.images + parser.srcsets:
         if link.startswith(("mailto:", "tel:", "javascript:", "data:")):
             continue
         target = urlparse(urljoin(url, link))
