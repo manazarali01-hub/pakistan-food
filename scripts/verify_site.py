@@ -232,7 +232,8 @@ for slug, recipe in recipes.items():
     if description_budget < 4:
         errors.append(f"{slug}: search-description suffix leaves no useful description space")
         continue
-    source_description = str(recipe.get("description", "")).strip()
+    # Match _layouts/recipe.html: seo_description takes precedence over description.
+    source_description = str(recipe.get("seo_description") or recipe.get("description", "")).strip()
     description = source_description
     if len(source_description) > description_budget:
         prefix = source_description[:description_budget - 3]
