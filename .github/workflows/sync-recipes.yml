@@ -17,14 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Create missing recipe pages and sitemap entries
+      - name: Create missing recipe pages and verify sitemap template
         run: |
           python3 scripts/sync_recipes.py
           python3 scripts/verify_site.py
       - name: Save new recipe pages
         id: save
         run: |
-          git add recipes/ sitemap-v2.xml
+          git add recipes/ sitemap.xml
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
           else
