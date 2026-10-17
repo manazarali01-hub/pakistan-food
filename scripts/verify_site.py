@@ -106,23 +106,28 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
         errors.append(f"{slug}: rating requires a real review source")
     prep_duration = recipe.get("prep_time_iso")
     cook_duration = recipe.get("cook_time_iso")
-    if bool(prep_duration) != bool(cook_duration):
-        errors.append(f"{slug}: prep_time_iso and cook_time_iso must be supplied together")
+    # Prep and cook durations are independently optional: no-cook drinks,
+    # fruit chaat and chilled desserts may legitimately have prep time only.
     for duration_field in ("prep_time_iso", "cook_time_iso", "total_time_iso"):
         duration_value = recipe.get(duration_field)
         if duration_value and (not isinstance(duration_value, str) or not ISO_DURATION.fullmatch(duration_value)):
             errors.append(f"{slug}: {duration_field} must be a valid ISO 8601 duration")
-    if prep_duration and cook_duration and recipe.get("total_time_iso"):
-        prep_seconds = duration_seconds(prep_duration)
-        cook_seconds = duration_seconds(cook_duration)
+    if (prep_duration or cook_duration) and recipe.get("total_time_iso"):
+        component_durations = [
+            duration_seconds(value)
+            for value in (prep_duration, cook_duration)
+            if value
+        ]
         total_seconds = duration_seconds(recipe["total_time_iso"])
         if (
-            prep_seconds is not None
-            and cook_seconds is not None
+            component_durations
+            and all(value is not None for value in component_durations)
             and total_seconds is not None
-            and total_seconds < prep_seconds + cook_seconds
+            and total_seconds < sum(component_durations)
         ):
-            errors.append(f"{slug}: total_time_iso is shorter than prep_time_iso plus cook_time_iso")
+            errors.append(
+                f"{slug}: total_time_iso is shorter than the supplied prep/cook durations"
+            )
     if not (recipe.get("name_urdu") or urdu_names.get(slug)):
         errors.append(f"{slug}: Urdu recipe name is missing")
     bilingual = bilingual_by_slug.get(slug, {})
