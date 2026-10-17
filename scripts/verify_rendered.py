@@ -1,5 +1,6 @@
 """Validate the rendered Pakistan Food site: URLs, schema, ads and internal links."""
 
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, unquote
@@ -209,6 +210,42 @@ for url in urls:
         missing = [field for field in required_schema if not recipe_item.get(field)]
         if missing:
             errors.append(f"recipe schema missing {', '.join(missing)}: {url}")
+
+        # Optional per-recipe search snippet overrides must render consistently.
+        seo_title = source_recipe.get("seo_title")
+        if seo_title:
+            title_checks = (
+                ("HTML title", r"<title>(.*?)</title>"),
+                ("Open Graph title", r'<meta property="og:title" content="([^"]*)">'),
+                ("Twitter title", r'<meta name="twitter:title" content="([^"]*)">'),
+            )
+            for label, pattern in title_checks:
+                match = re.search(pattern, rendered_html, flags=re.I | re.S)
+                if not match or unescape(match.group(1)) != seo_title:
+                    errors.append(f"{label} mismatch for SEO title override {url}")
+            webpage_items = []
+            for graph in parsed_jsonld:
+                if isinstance(graph, dict):
+                    items = graph.get("@graph", [])
+                    if isinstance(items, list):
+                        webpage_items.extend(
+                            item for item in items
+                            if isinstance(item, dict) and item.get("@type") == "WebPage"
+                        )
+                    elif graph.get("@type") == "WebPage":
+                        webpage_items.append(graph)
+            if len(webpage_items) != 1 or webpage_items[0].get("name") != seo_title:
+                errors.append(f"WebPage schema name mismatch for SEO title override {url}")
+
+        seo_description = source_recipe.get("seo_description")
+        if seo_description:
+            meta_match = re.search(
+                r'<meta name="description" content="([^"]*)">',
+                rendered_html,
+                flags=re.I,
+            )
+            if not meta_match or seo_description not in unescape(meta_match.group(1)):
+                errors.append(f"meta description mismatch for SEO description override {url}")
 
         source_keywords = source_recipe.get("keywords")
         if isinstance(source_keywords, list) and source_keywords:
