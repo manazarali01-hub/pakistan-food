@@ -7,7 +7,7 @@ layout: null
 {% for page in sitemap_pages %}
   {% assign recipe = site.data.recipes[page.recipe_key] %}
   {% assign page_ext = page.path | split: '.' | last | downcase %}
-  {% unless page.url contains 'sitemap' or page.path == '404.html' or page.url contains '/assets/' or page.url contains '/admin/' or page_ext == 'xml' or page_ext == 'yml' or page_ext == 'json' %}
+  {% unless page.url contains 'sitemap' or page.path == '404.html' or page.url contains '/assets/' or page.url contains '/admin/' or page_ext != 'html' %}
     {% unless page.noindex == true %}
       <url>
         <loc>{{ page.url | absolute_url | xml_escape }}</loc>
