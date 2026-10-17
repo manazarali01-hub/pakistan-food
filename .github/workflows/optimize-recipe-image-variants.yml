@@ -3,8 +3,9 @@ name: Generate mobile recipe image variants
 on:
   push:
     branches:
-      - images/optimize-recipe-webp-variants
+      - 'images/**'
     paths:
+      - '_data/recipes/*.json'
       - 'scripts/generate_recipe_image_variants.py'
       - '.github/workflows/optimize-recipe-image-variants.yml'
 
