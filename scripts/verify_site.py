@@ -194,7 +194,7 @@ except OSError as exc:
     category_template = ""
     errors.append(f"_layouts/category.html: {exc}")
 
-for guide_filename in sorted(set(re.findall(r'href="\\.\\./\\.\\./guides/([^"]+\\.html)"', category_template))):
+for guide_filename in sorted(set(re.findall(r'href="\.\./\.\./guides/([^"]+\.html)"', category_template))):
     guide_url = f"{DOMAIN}/guides/{guide_filename}"
     if guide_url not in urls:
         errors.append(f"_layouts/category.html: guide link missing from sitemap: {guide_filename}")
