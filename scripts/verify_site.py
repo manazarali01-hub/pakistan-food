@@ -223,6 +223,11 @@ if "See ingredients and the easy step-by-step method." in recipe_template:
 if "search_description_source | split: ' '" not in recipe_template or "search_description_word_budget" not in recipe_template:
     errors.append("_layouts/recipe.html: long search descriptions must truncate at word boundaries")
 
+if '"recipeYield": {{ recipe.serves | append: \' servings\' | jsonify }}' not in recipe_template:
+    errors.append("_layouts/recipe.html: recipeYield must be serialized as serving text")
+if '"recipeYield": {{ recipe.serves | jsonify }}' in recipe_template:
+    errors.append("_layouts/recipe.html: numeric recipeYield is not valid serving text")
+
 for slug, recipe in recipes.items():
     suffix = f" Ready in {recipe.get('time', '')}"
     if recipe.get("serves"):
