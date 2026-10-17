@@ -220,7 +220,7 @@ if stale_user_links:
 
 strict = "--strict" in sys.argv
 if bad_meta_descriptions:
-    print("\\nMETA DESCRIPTION ISSUES")
+    print("\nMETA DESCRIPTION ISSUES")
     for name, issue in bad_meta_descriptions:
         print(f"- {name}: {issue}")
 
