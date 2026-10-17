@@ -58,6 +58,8 @@ on:
       - 'enhancements.css'
       - 'enhancements.js'
       - 'scripts/**'
+      - 'food-atmosphere.js'
+      - 'food-atmosphere.css'
       - '.github/workflows/pages-refresh.yml'
 
 permissions:
