@@ -28,9 +28,14 @@
     "Turn off the heat and rest covered for about 10 minutes. Fluff gently from the sides and serve while the rice is hot and aromatic."
   ],
   "tips": [
-    "Use strained beef yakhni rather than plain water for the characteristic pulao flavour.",
-    "Basmati varieties absorb different amounts of liquid, so add stock according to the rice rather than automatically using all of it.",
-    "Avoid repeated stirring after adding rice so the grains stay intact."
+    "Cook the beef until it yields easily to a fork before adding rice; the rice stage is too short to tenderise tough meat.",
+    "Strain and measure the yakhni after simmering because evaporation changes how much liquid remains.",
+    "Taste the hot yakhni before adding rice. It should be pleasantly seasoned because the rice absorbs its salt and spice.",
+    "Drain soaked basmati thoroughly so surface water does not upset the stock-to-rice balance.",
+    "Add hot stock gradually according to your basmati variety; the full amount of starting water is not automatically the correct amount for rice.",
+    "Once steam holes appear and most liquid has been absorbed, cover tightly and use very low heat for dum.",
+    "Rest the pulao covered for about 10 minutes after switching off the heat, then fluff gently from the sides rather than stirring hard.",
+    "If the rice is still firm but the pot is dry, sprinkle a little hot water around the edges, cover again and steam briefly on low heat."
   ],
   "storage": "Cool leftover beef pulao promptly, refrigerate covered and reheat the portion being served until thoroughly hot.",
   "prep_time": "25 min",
@@ -38,7 +43,7 @@
   "prep_time_iso": "PT25M",
   "cook_time_iso": "PT1H15M",
   "total_time_iso": "PT1H40M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-17",
   "image_alt": "Pakistani beef pulao with tender bone-in beef and separate basmati rice cooked in yakhni",
   "image_caption": "Beef pulao cooked with measured yakhni, browned onions and whole spices, then rested for separate aromatic grains.",
   "technique": "Build the pulao from a finished yakhni, not guessed starting water. Tenderise beef, strain and measure the stock, then season that liquid before rice. The final dum should finish absorption without repeated stirring.",
@@ -60,5 +65,19 @@
     "Different basmati brands need slightly different stock amounts."
   ],
   "reheating": "Reheat covered with a splash of water until rice and beef are steaming hot.",
-  "serving": "Serve with raita, onion salad or chutney."
+  "serving": "Serve with raita, onion salad or chutney.",
+  "faqs": [
+    {
+      "question": "How much yakhni should I add to beef pulao?",
+      "answer": "Measure the strained stock after the beef cooks, then use an amount suited to your soaked basmati. Rice brands and evaporation differ, so check the grain and avoid automatically adding all the original water."
+    },
+    {
+      "question": "Why is my beef pulao rice sticky or mushy?",
+      "answer": "Common causes are excess stock, rice that was not drained well after soaking, or frequent stirring while it cooks. Measure the yakhni, let most liquid absorb before dum, and handle the grains gently."
+    },
+    {
+      "question": "Can I prepare the beef before cooking the rice?",
+      "answer": "Yes. Cook the beef until tender and strain the yakhni first. Keep both warm, then build the onion and spice base and cook the rice in measured stock so the rice stage is easier to control."
+    }
+  ]
 }
