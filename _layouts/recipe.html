@@ -6,7 +6,21 @@
 {% capture meta_description %}{{ recipe.description | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %}; serves {{ recipe.serves }}{% endif %}.{% endcapture %}
 {% capture search_suffix %} Ready in {{ recipe.time }}{% if recipe.serves %}; serves {{ recipe.serves }}{% endif %}.{% endcapture %}
 {% assign search_description_length = 155 | minus: search_suffix.size %}
-{% capture search_description %}{{ recipe.description | strip_html | strip | truncate: search_description_length }}{{ search_suffix }}{% endcapture %}
+{% assign search_description_source = recipe.description | strip_html | strip %}
+{% if search_description_source.size > search_description_length %}
+  {% assign search_description_word_budget = search_description_length | minus: 3 %}
+  {% assign search_description_words = search_description_source | split: ' ' %}
+  {% assign search_description_text = '' %}
+  {% for word in search_description_words %}
+    {% assign candidate_description = search_description_text | append: ' ' | append: word | strip %}
+    {% if candidate_description.size > search_description_word_budget %}{% break %}{% endif %}
+    {% assign search_description_text = candidate_description %}
+  {% endfor %}
+  {% assign search_description_text = search_description_text | append: '...' %}
+{% else %}
+  {% assign search_description_text = search_description_source %}
+{% endif %}
+{% capture search_description %}{{ search_description_text }}{{ search_suffix }}{% endcapture %}
 {% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
   {% assign display_image = recipe.image %}
   {% assign seo_image = recipe.image | replace: 'Special:Redirect/file/', 'Special:FilePath/' %}
