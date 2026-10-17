@@ -40,6 +40,7 @@ class PageParser(HTMLParser):
         self.srcsets = []
         self.canonicals = []
         self.sitemap_links = []
+        self.preloaded_images = []
         self.headings = []
         self.jsonld = []
         self.robots = []
@@ -61,6 +62,15 @@ class PageParser(HTMLParser):
             self.canonicals.append(attrs.get("href"))
         if tag == "link" and attrs.get("rel") == "sitemap":
             self.sitemap_links.append(attrs.get("href"))
+        if (
+            tag == "link"
+            and str(attrs.get("rel", "")).lower() == "preload"
+            and str(attrs.get("as", "")).lower() == "image"
+        ):
+            self.preloaded_images.append({
+                "href": attrs.get("href", ""),
+                "fetchpriority": str(attrs.get("fetchpriority", "")).lower(),
+            })
         if tag == "meta" and str(attrs.get("name", "")).lower() == "robots":
             self.robots.append(str(attrs.get("content", "")).lower())
         if tag == "h1":
@@ -129,6 +139,20 @@ for url in urls:
     rendered_html = path.read_text(encoding="utf-8")
     parser = PageParser()
     parser.feed(rendered_html)
+
+    if urlparse(url).path == "/":
+        hero_preloads = [
+            item for item in parser.preloaded_images
+            if urlparse(item["href"]).path.endswith(
+                "/assets/recipe-images/chicken-biryani-v2.webp"
+            )
+        ]
+        if len(hero_preloads) != 1:
+            errors.append(
+                f"homepage must preload the chicken biryani hero image exactly once: {hero_preloads}"
+            )
+        elif hero_preloads[0]["fetchpriority"] != "high":
+            errors.append("homepage hero image preload must use fetchpriority=high")
 
     if parser.canonicals != [url]:
         errors.append(f"bad canonical {url}: {parser.canonicals}")
