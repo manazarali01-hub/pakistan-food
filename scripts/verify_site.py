@@ -182,6 +182,18 @@ if guide_hub_path.is_file():
             guide_filename = guide_path.rsplit("/", 1)[-1]
             if f'href="{guide_filename}"' not in guide_hub:
                 errors.append(f"indexable guide missing from directory: {guide_filename}")
+
+    # Reverse-check local guide links in the hub so the directory cannot point
+    # to a missing page or to a page omitted from the canonical sitemap.
+    for guide_filename in sorted(set(re.findall(r'href="([^"/?#]+\.html)"', guide_hub))):
+        if guide_filename == "index.html":
+            continue
+        guide_file = ROOT / "guides" / guide_filename
+        guide_url = f"{DOMAIN}/guides/{guide_filename}"
+        if not guide_file.is_file():
+            errors.append(f"guides/index.html: linked guide file is missing: {guide_filename}")
+        if guide_url not in urls:
+            errors.append(f"guides/index.html: linked guide missing from sitemap: {guide_filename}")
 else:
     errors.append("guides/index.html: directory is missing")
 
