@@ -109,7 +109,12 @@ else:
             errors.append(f"rendered ads.txt mismatch: {rendered_ads!r}")
 
 sitemap = ET.parse(ROOT / "sitemap-v2.xml")
+sitemap_entries = sitemap.findall(".//{*}url")
 urls = [node.text for node in sitemap.findall(".//{*}loc")]
+sitemap_lastmods = {
+    node.findtext("{*}loc"): node.findtext("{*}lastmod")
+    for node in sitemap_entries
+}
 
 for url in urls:
     path = output_path(urlparse(url).path)
@@ -157,6 +162,27 @@ for url in urls:
             errors.append(f"invalid JSON-LD {url}: {exc}")
 
     url_path = urlparse(url).path
+    if url_path == "/recipes/":
+        collection_pages = []
+        for graph in parsed_jsonld:
+            if isinstance(graph, dict):
+                items = graph.get("@graph", [])
+                if isinstance(items, list):
+                    collection_pages.extend(
+                        item for item in items
+                        if isinstance(item, dict) and item.get("@type") == "CollectionPage"
+                    )
+                elif graph.get("@type") == "CollectionPage":
+                    collection_pages.append(graph)
+        expected_modified = sitemap_lastmods.get(url)
+        if len(collection_pages) != 1:
+            errors.append(f"expected exactly one CollectionPage structured-data item: {url}")
+        elif collection_pages[0].get("dateModified") != expected_modified:
+            errors.append(
+                f"CollectionPage dateModified must match sitemap lastmod for {url}: "
+                f"{collection_pages[0].get('dateModified')!r} != {expected_modified!r}"
+            )
+
     if url_path.startswith("/recipes/") and url.endswith(".html"):
         slug = Path(url_path).stem
         source_recipe = RECIPES.get(slug)
