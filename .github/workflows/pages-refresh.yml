@@ -30,6 +30,8 @@ on:
       - 'premium.css'
       - 'sitemap-v2.xml'
       - 'scripts/**'
+      - 'food-atmosphere.js'
+      - 'food-atmosphere.css'
       - '.github/workflows/pages-refresh.yml'
   pull_request:
     paths:
