@@ -258,7 +258,11 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
         <div class="pf-food-photo pf-recipe-photo" data-pf-dish="{{ page.recipe_key }}">
         <picture>
           {% if recipe.image contains 'commons.wikimedia.org' %}<source media="(max-width: 640px)" srcset="{{ display_image_mobile }}">{% endif %}
+          {% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
           <img src="{{ display_image }}" alt="{{ image_alt | escape }}" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+          {% else %}
+          <img src="{{ display_image }}" srcset="{{ display_image | replace: '.webp', '-640.webp' }} 640w, {{ display_image }} 1200w" sizes="(max-width: 640px) 100vw, 900px" alt="{{ image_alt | escape }}" width="900" height="675" loading="eager" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+          {% endif %}
         </picture>
         </div>
         <figcaption>
@@ -423,7 +427,11 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
             {% endif %}
             <li>
               <a class="related-recipe-card" href="{{ recipe_pair[0] }}.html">
+                {% if related.image contains 'http://' or related.image contains 'https://' %}
                 <img src="{{ related_display_image }}" alt="{{ related.image_alt | default: related.name | escape }}" width="360" height="270" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+                {% else %}
+                <img src="{{ related_display_image }}" srcset="{{ related_display_image | replace: '.webp', '-640.webp' }} 640w, {{ related_display_image }} 1200w" sizes="(max-width: 620px) 80vw, 360px" alt="{{ related.image_alt | default: related.name | escape }}" width="360" height="270" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='../assets/recipe-image-unavailable.svg';this.alt='Recipe image unavailable';">
+                {% endif %}
                 <span><strong>{{ related.name }} Recipe</strong><small>{{ related.category }} · {{ related.time }}</small></span>
               </a>
             </li>
