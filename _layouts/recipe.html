@@ -3,10 +3,13 @@
 {% assign affiliate_items = site.data.affiliate[page.recipe_key] %}
 {% unless urdu_name %}{% assign urdu_name = site.data.urdu_names[page.recipe_key] %}{% endunless %}
 {% capture canonical_url %}https://pakistanfoodrecipes.top/recipes/{{ page.recipe_key }}.html{% endcapture %}
-{% capture meta_description %}{{ recipe.description | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %}; serves {{ recipe.serves }}{% endif %}.{% endcapture %}
+{% capture default_search_title %}{{ recipe.name }} Recipe | Authentic Pakistani Food{% endcapture %}
+{% assign search_title = recipe.seo_title | default: default_search_title | strip %}
+{% assign description_source = recipe.seo_description | default: recipe.description %}
+{% capture meta_description %}{{ description_source | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %}; serves {{ recipe.serves }}{% endif %}.{% endcapture %}
 {% capture search_suffix %} Ready in {{ recipe.time }}{% if recipe.serves %}; serves {{ recipe.serves }}{% endif %}.{% endcapture %}
 {% assign search_description_length = 155 | minus: search_suffix.size %}
-{% assign search_description_source = recipe.description | strip_html | strip %}
+{% assign search_description_source = description_source | strip_html | strip %}
 {% if search_description_source.size > search_description_length %}
   {% assign search_description_word_budget = search_description_length | minus: 3 %}
   {% assign search_description_words = search_description_source | split: ' ' %}
@@ -89,7 +92,7 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
   {% if site.adsense_client and site.adsense_client != "" %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
   {% endif %}
-  <title>{{ recipe.name }} Recipe | Authentic Pakistani Food</title>
+  <title>{{ search_title | escape }}</title>
   <meta name="description" content="{{ search_description | strip_html | strip | escape }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#f8f1df">
@@ -98,14 +101,14 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
   <link rel="icon" href="../assets/pakistan-food-logo.png" type="image/png">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="en_PK">
-  <meta property="og:title" content="{{ recipe.name }} Recipe | Pakistan Food">
+  <meta property="og:title" content="{{ search_title | escape }}">
   <meta property="og:description" content="{{ meta_description | escape }}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:image" content="{{ seo_image }}">
   <meta property="og:image:alt" content="{{ image_alt | escape }}">
   <meta property="og:site_name" content="Pakistan Food">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ recipe.name }} Recipe | Pakistan Food">
+  <meta name="twitter:title" content="{{ search_title | escape }}">
   <meta name="twitter:description" content="{{ meta_description | escape }}">
   <meta name="twitter:image" content="{{ seo_image }}">
   <meta name="twitter:image:alt" content="{{ image_alt | escape }}">
@@ -140,7 +143,7 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
         "@type": "WebPage",
         "@id": "{{ canonical_url }}#webpage",
         "url": "{{ canonical_url }}",
-        "name": {{ recipe.name | append: ' Recipe | Authentic Pakistani Food' | jsonify }},
+        "name": {{ search_title | jsonify }},
         "description": {{ meta_description | strip | jsonify }},
         "isPartOf": {"@id": "https://pakistanfoodrecipes.top/#website"},
         "primaryImageOfPage": {
