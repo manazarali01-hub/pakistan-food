@@ -3151,6 +3151,7 @@ body.dark .pf-category-icon .pf-picto{filter:drop-shadow(0 2px 2px rgba(0,0,0,.2
 
 /* Legacy guide pages keep the newer single-navigation layout visually clean. */
 .guide-site-header ~ .policy-header,
-.guide-shell ~ .policy-footer {
+.guide-shell ~ .policy-footer,
+.policy-page ~ .policy-footer {
   display: none !important;
 }

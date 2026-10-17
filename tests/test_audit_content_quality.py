@@ -236,13 +236,13 @@ class IndexedGuideSitemapRegressionTests(unittest.TestCase):
             "<meta name='robots' content='index,follow'></head><body>"
             "<header class='guide-site-header'><nav>Primary navigation</nav></header>"
             "<header class='policy-header'>Legacy duplicate brand</header>"
-            "<main class='guide-shell'><h1>Sample guide</h1><p>Original useful guidance.</p></main>"
+            "<main class='policy-page'><h1>Sample guide</h1><p>Original useful guidance.</p></main>"
             "<footer class='policy-footer'>Legacy duplicate footer</footer>"
             "<footer class='guide-site-footer'>Primary footer</footer></body></html>",
             encoding="utf-8",
         )
         (self.root / "premium.css").write_text(
-            ".guide-site-header ~ .policy-header, .guide-shell ~ .policy-footer { display: none !important; }",
+            ".guide-site-header ~ .policy-header, .guide-shell ~ .policy-footer, .policy-page ~ .policy-footer { display: none !important; }",
             encoding="utf-8",
         )
         self.write_sitemap([

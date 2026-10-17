@@ -91,7 +91,7 @@ try:
 except OSError:
     premium_css = ""
 header_chrome_suppressed = ".guide-site-header ~ .policy-header" in premium_css
-footer_chrome_suppressed = ".guide-shell ~ .policy-footer" in premium_css
+footer_chrome_suppressed = all(selector in premium_css for selector in (".guide-shell ~ .policy-footer", ".policy-page ~ .policy-footer"))
 
 for file in sorted(GUIDES.glob("*.html")):
     if file.name == "index.html":
