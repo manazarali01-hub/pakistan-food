@@ -11,6 +11,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://pakistanfoodrecipes.top"
 REQUIRED = ("name", "category", "time", "serves", "image", "description", "ingredients", "method")
+ISO_DURATION = re.compile(r"^P(?=\\d|T\\d)(?:\\d+D)?(?:T(?=\\d)(?:\\d+H)?(?:\\d+M)?(?:\\d+(?:\\.\\d+)?S)?)?$")
 errors = []
 
 try:
@@ -48,6 +49,14 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
         errors.append(f"{slug}: missing {', '.join(missing)}")
     if "rating" in recipe:
         errors.append(f"{slug}: rating requires a real review source")
+    prep_duration = recipe.get("prep_time_iso")
+    cook_duration = recipe.get("cook_time_iso")
+    if bool(prep_duration) != bool(cook_duration):
+        errors.append(f"{slug}: prep_time_iso and cook_time_iso must be supplied together")
+    for duration_field in ("prep_time_iso", "cook_time_iso", "total_time_iso"):
+        duration_value = recipe.get(duration_field)
+        if duration_value and (not isinstance(duration_value, str) or not ISO_DURATION.fullmatch(duration_value)):
+            errors.append(f"{slug}: {duration_field} must be a valid ISO 8601 duration")
     if not (recipe.get("name_urdu") or urdu_names.get(slug)):
         errors.append(f"{slug}: Urdu recipe name is missing")
     bilingual = bilingual_by_slug.get(slug, {})
