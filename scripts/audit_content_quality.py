@@ -94,12 +94,12 @@ for file in sorted(GUIDES.glob("*.html")):
     words = len(re.findall(r"\b[\w’'-]+\b", visible))
     robots = robots_value(html)
     description_tag = re.search(
-        r'<meta\\b(?=[^>]*\\bname=["\\']description["\\'])[^>]*>',
+        r"""<meta\b(?=[^>]*\bname=["']description["'])[^>]*>""",
         html,
         flags=re.I,
     )
     description_match = (
-        re.search(r'\\bcontent=["\\']([^"\\']*)["\\']', description_tag.group(0), flags=re.I)
+        re.search(r""" \bcontent=["']([^"']*)["'] """, description_tag.group(0), flags=re.I)
         if description_tag else None
     )
     if not description_match or not description_match.group(1).strip():
