@@ -1,7 +1,7 @@
 # Pakistan Food — AdSense Low-Value Content Recovery Audit
 
-**Audit date:** 2026-10-04  
-**Current verified state:** latest visual-quality recovery is merged through PR #32 on main commit `40d6e5fa250dd80617c6da062277b190cfb14dfb`; GitHub Pages deployment run `37221130690`, Pages Refresh run `37221130805`, and Live Site Smoke run `37221130803` all completed successfully.  
+**Content audit date:** 2026-10-04  
+**Technical verification refreshed:** 2026-10-17. Main commit `bd75d3ff190f3171dd01841eaa9efac2659e11c8` passed Verify Pakistan Food (run `39048651704`), SEO and Editorial Quality Audit (`39048651580`), Pages Refresh (`39048651560`), GitHub Pages deployment (`39048651652`), and Live Site Smoke (`39048651659`). The latest source sitemap contains 217 unique URLs; these checks verify repository/build/deployment health, not Google indexing or AdSense approval.  
 **Main site:** https://pakistanfoodrecipes.top/  
 **Reason for recovery work:** Google AdSense — Low value content
 
@@ -20,7 +20,7 @@ No fake reviews, ratings, nutrition, video, qualifications or engagement signals
 | Guides kept indexable | 132 | Must pass strict duplicate/template-content gate and click-intent overlap review |
 | Guides consolidated + `noindex,follow` | 83 | Retained for existing links; removed from XML sitemap; point to fuller resources |
 | Guides removed/deleted | 0 | Destructive removal deferred without Search Console traffic evidence |
-| Current XML sitemap URLs | 218 | Canonical, indexable URLs only |
+| Current XML sitemap URLs | 217 | Canonical, indexable URLs only; verified 2026-10-17 |
 | Recipe URLs in sitemap | 66 | All permanent recipe pages |
 | Guide article URLs in sitemap | 132 | Excludes the 83 noindexed guide URLs |
 | Guide directory URL | 1 | Curated guide hub |
