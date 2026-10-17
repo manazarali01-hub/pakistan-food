@@ -161,19 +161,20 @@ for source in [
     ROOT / "sitemap.html",
     GUIDES / "index.html",
     ROOT / "_layouts" / "recipe.html",
+    ROOT / "_layouts" / "category.html",
 ]:
     if not source.is_file():
         continue
     html = source.read_text(encoding="utf-8")
     if source == GUIDES / "index.html":
         record_links(source, html, r'href=["\'](?:\.\/)?([^"\'#?]+\.html)')
-    record_links(source, html, r'href=["\'](?:\.\.\/)?guides\/([^"\'#?]+\.html)')
+    record_links(source, html, r'href=["\'](?:\.\.\/)*guides\/([^"\'#?]+\.html)')
 
 recipes_dir = ROOT / "recipes"
 if recipes_dir.is_dir():
     for source in recipes_dir.rglob("*.html"):
         html = source.read_text(encoding="utf-8")
-        record_links(source, html, r'href=["\'](?:\.\.\/)?guides\/([^"\'#?]+\.html)')
+        record_links(source, html, r'href=["\'](?:\.\.\/)*guides\/([^"\'#?]+\.html)')
 
 stale_user_links = sorted(set(stale_user_links))
 
