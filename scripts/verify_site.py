@@ -5,6 +5,7 @@ from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urlparse
 import json
+import re
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -183,6 +184,22 @@ if guide_hub_path.is_file():
                 errors.append(f"indexable guide missing from directory: {guide_filename}")
 else:
     errors.append("guides/index.html: directory is missing")
+
+# Category hubs must link only to guides that are both in the canonical sitemap
+# and discoverable from the main Cooking Guides directory.
+category_template_path = ROOT / "_layouts/category.html"
+try:
+    category_template = category_template_path.read_text(encoding="utf-8")
+except OSError as exc:
+    category_template = ""
+    errors.append(f"_layouts/category.html: {exc}")
+
+for guide_filename in sorted(set(re.findall(r'href="\\.\\./\\.\\./guides/([^"]+\\.html)"', category_template))):
+    guide_url = f"{DOMAIN}/guides/{guide_filename}"
+    if guide_url not in urls:
+        errors.append(f"_layouts/category.html: guide link missing from sitemap: {guide_filename}")
+    if f'href="{guide_filename}"' not in guide_hub:
+        errors.append(f"_layouts/category.html: guide link missing from directory: {guide_filename}")
 
 if DOMAIN + "/sitemap.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
     errors.append("robots.txt does not point to the canonical sitemap")
