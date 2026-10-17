@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://pakistanfoodrecipes.top"
 REQUIRED = ("name", "category", "time", "serves", "image", "description", "ingredients", "method")
 ISO_DURATION = re.compile(r"^P(?=\d|T\d)(?:\d+D)?(?:T(?=\d)(?:\d+H)?(?:\d+M)?(?:\d+(?:\.\d+)?S)?)?$")
+DISPLAY_TIME = re.compile(r"^\d+\s+(?:min|mins|hr|hrs)(?:\s+\d+\s+(?:min|mins))?$")
 DURATION_PARTS = re.compile(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?")
 
 
@@ -67,6 +68,9 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     servings = recipe.get("serves")
     if isinstance(servings, bool) or not isinstance(servings, int) or servings < 1:
         errors.append(f"{slug}: serves must be a positive integer for Recipe structured data")
+    display_time = recipe.get("time")
+    if not isinstance(display_time, str) or not DISPLAY_TIME.fullmatch(display_time.strip()):
+        errors.append(f"{slug}: time must use a supported format such as '45 min', '4 hrs', or '1 hr 30 min'")
     if "rating" in recipe:
         errors.append(f"{slug}: rating requires a real review source")
     prep_duration = recipe.get("prep_time_iso")
