@@ -22,3 +22,18 @@ jobs:
           GITHUB_SHA: ${{ github.sha }}
           GITHUB_RUN_ID: ${{ github.run_id }}
         run: python3 scripts/live_site_smoke.py
+      - name: Install Playwright for production atmosphere QA
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Verify calibrated steam on the deployed custom domain
+        env:
+          QA_BASE_URL: https://pakistanfoodrecipes.top
+        run: node scripts/food_atmosphere_qa.mjs
+      - name: Upload production atmosphere evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pakistan-food-food-atmosphere-qa
+          path: qa-screenshots/
+          retention-days: 7
