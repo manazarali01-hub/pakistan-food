@@ -213,9 +213,9 @@ for source_page in ROOT.rglob("*.html"):
     except OSError as exc:
         errors.append(f"{relative.as_posix()}: {exc}")
         continue
-    if re.search(r"(?im)^noindex:\\s*true\\s*$", source_text):
+    if re.search(r"(?im)^noindex:\s*true\s*$", source_text):
         continue
-    if re.search(r"<meta\\s+name=[\\"']robots[\\"'][^>]*content=[\\"'][^\\"']*noindex", source_text, re.I):
+    if re.search(r'<meta\s+name=["\']robots["\'][^>]*content=["\'][^"\']*noindex', source_text, re.I):
         continue
     if relative.name == "index.html":
         page_path = "/" if relative.parent == Path(".") else "/" + relative.parent.as_posix().rstrip("/") + "/"
