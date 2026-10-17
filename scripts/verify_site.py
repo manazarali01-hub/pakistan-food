@@ -266,7 +266,7 @@ if guide_hub_path.is_file():
 
     # Reverse-check local guide links in the hub so the directory cannot point
     # to a missing page or to a page omitted from the canonical sitemap.
-    for guide_filename in sorted(set(re.findall(r'href="([^"/?#]+\\.html)"', guide_hub))):
+    for guide_filename in sorted(set(re.findall(r'href="([^"/?#]+\.html)"', guide_hub))):
         if guide_filename == "index.html":
             continue
         guide_file = ROOT / "guides" / guide_filename
@@ -287,7 +287,7 @@ except OSError as exc:
     category_template = ""
     errors.append(f"_layouts/category.html: {exc}")
 
-for guide_filename in sorted(set(re.findall(r'href="\\.\\./\\.\\./guides/([^"]+\\.html)"', category_template))):
+for guide_filename in sorted(set(re.findall(r'href="\.\./\.\./guides/([^"]+\.html)"', category_template))):
     guide_url = f"{DOMAIN}/guides/{guide_filename}"
     if guide_url not in urls:
         errors.append(f"_layouts/category.html: guide link missing from sitemap-v2.xml: {guide_filename}")
