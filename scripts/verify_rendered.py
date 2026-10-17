@@ -39,6 +39,7 @@ class PageParser(HTMLParser):
         self.images = []
         self.srcsets = []
         self.canonicals = []
+        self.sitemap_links = []
         self.headings = []
         self.jsonld = []
         self.robots = []
@@ -58,6 +59,8 @@ class PageParser(HTMLParser):
                     self.srcsets.append(parts[0])
         if tag == "link" and attrs.get("rel") == "canonical":
             self.canonicals.append(attrs.get("href"))
+        if tag == "link" and attrs.get("rel") == "sitemap":
+            self.sitemap_links.append(attrs.get("href"))
         if tag == "meta" and str(attrs.get("name", "")).lower() == "robots":
             self.robots.append(str(attrs.get("content", "")).lower())
         if tag == "h1":
@@ -129,6 +132,8 @@ for url in urls:
 
     if parser.canonicals != [url]:
         errors.append(f"bad canonical {url}: {parser.canonicals}")
+    if parser.sitemap_links and parser.sitemap_links != [f"{BASE}/sitemap.xml"]:
+        errors.append(f"rel=sitemap must point to the canonical sitemap index on {url}: {parser.sitemap_links}")
     if len(parser.headings) != 1:
         errors.append(f"expected one h1: {url}")
     if any("noindex" in value for value in parser.robots):
