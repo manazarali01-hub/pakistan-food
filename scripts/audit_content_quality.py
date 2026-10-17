@@ -83,6 +83,7 @@ def robots_value(html: str) -> str:
 
 guide_rows = []
 groups: dict[str, list[str]] = defaultdict(list)
+bad_meta_descriptions: list[tuple[str, str]] = []
 
 for file in sorted(GUIDES.glob("*.html")):
     if file.name == "index.html":
@@ -92,6 +93,19 @@ for file in sorted(GUIDES.glob("*.html")):
     body = normalized_guide_body(visible)
     words = len(re.findall(r"\b[\w’'-]+\b", visible))
     robots = robots_value(html)
+    description_tag = re.search(
+        r'<meta\\b(?=[^>]*\\bname=["\\']description["\\'])[^>]*>',
+        html,
+        flags=re.I,
+    )
+    description_match = (
+        re.search(r'\\bcontent=["\\']([^"\\']*)["\\']', description_tag.group(0), flags=re.I)
+        if description_tag else None
+    )
+    if not description_match or not description_match.group(1).strip():
+        bad_meta_descriptions.append((file.name, "missing or empty meta description"))
+    elif description_match.group(1).rstrip().endswith(("...", "…")):
+        bad_meta_descriptions.append((file.name, "meta description ends with an ellipsis (possible accidental truncation)"))
     generic_hits = [phrase for phrase in GENERIC_PHRASES if phrase in visible.lower()]
     indexed = "noindex" not in robots
     guide_rows.append((file.name, words, indexed, generic_hits))
@@ -172,6 +186,7 @@ print(f"Indexed guides under 220 visible words: {len(thin_indexed)}")
 print(f"Indexed guides with generic-template phrase hits: {len(generic_indexed)}")
 print(f"Exact duplicate visible-body groups: {len(duplicate_groups)}")
 print(f"Public/hub links to noindex guides: {len(stale_user_links)}")
+print(f"Guides with missing or truncated meta descriptions: {len(bad_meta_descriptions)}")
 
 if duplicate_groups:
     print("\nEXACT DUPLICATE BODY GROUPS")
@@ -204,7 +219,12 @@ if stale_user_links:
         print(f"- {source} -> {target}")
 
 strict = "--strict" in sys.argv
-if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or indexed_missing_sitemap or stale_user_links):
+if bad_meta_descriptions:
+    print("\\nMETA DESCRIPTION ISSUES")
+    for name, issue in bad_meta_descriptions:
+        print(f"- {name}: {issue}")
+
+if strict and (duplicate_groups or generic_indexed or noindex_in_sitemap or indexed_missing_sitemap or stale_user_links or bad_meta_descriptions):
     raise SystemExit("Strict content-quality audit failed.")
 
 print("\nAudit complete.")
