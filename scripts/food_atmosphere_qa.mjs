@@ -12,7 +12,38 @@ async function openHome(context,width){
   const page=await context.newPage();
   page.on('pageerror',error=>errors.push(error.message));
   await page.setViewportSize({width,height:844});
-  await page.goto(base+'/',{waitUntil:'domcontentloaded'});
+  await page.addInitScript(() => {
+    window.__pfPerf = { lcp: 0, cls: 0 };
+    try {
+      new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) window.__pfPerf.cls += entry.value;
+        }
+      }).observe({ type: 'layout-shift', buffered: true });
+      new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) window.__pfPerf.lcp = entry.startTime;
+      }).observe({ type: 'largest-contentful-paint', buffered: true });
+    } catch (_) {}
+  });
+  const navigation = await page.goto(base+'/',{waitUntil:'domcontentloaded'});
+  if (width === 390) {
+    await page.waitForTimeout(1200);
+    const metrics = await page.evaluate(() => {
+      const nav = performance.getEntriesByType('navigation')[0];
+      const fcp = performance.getEntriesByName('first-contentful-paint')[0];
+      const resourceEntries = performance.getEntriesByType('resource');
+      const hero = resourceEntries.find(entry => entry.name.includes('/assets/recipe-images/chicken-biryani-v2.webp'));
+      return {
+        ttfbMs: nav ? Math.round(nav.responseStart - nav.requestStart) : null,
+        fcpMs: fcp ? Math.round(fcp.startTime) : null,
+        lcpMs: window.__pfPerf?.lcp ? Math.round(window.__pfPerf.lcp) : null,
+        cls: window.__pfPerf ? Number(window.__pfPerf.cls.toFixed(3)) : null,
+        heroImageTransferBytes: hero && hero.transferSize ? hero.transferSize : null,
+        documentTransferBytes: nav && nav.transferSize ? nav.transferSize : null,
+      };
+    });
+    console.log('LAB PERFORMANCE (390px mobile viewport; CI browser, not Google field data): ' + JSON.stringify(metrics));
+  }
   const photo=page.locator('.featured-card:first-child .pf-food-photo[data-pf-dish="chicken-biryani"]');
   await photo.scrollIntoViewIfNeeded();
   const canvas=photo.locator('canvas.pf-steam-canvas');
