@@ -47,6 +47,9 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     missing = [field for field in REQUIRED if not recipe.get(field)]
     if missing:
         errors.append(f"{slug}: missing {', '.join(missing)}")
+    servings = recipe.get("serves")
+    if isinstance(servings, bool) or not isinstance(servings, int) or servings < 1:
+        errors.append(f"{slug}: serves must be a positive integer for Recipe structured data")
     if "rating" in recipe:
         errors.append(f"{slug}: rating requires a real review source")
     prep_duration = recipe.get("prep_time_iso")
