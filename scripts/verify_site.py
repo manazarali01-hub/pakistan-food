@@ -12,8 +12,19 @@ ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://pakistanfoodrecipes.top"
 REQUIRED = ("name", "category", "time", "serves", "image", "description", "ingredients", "method")
 ISO_DURATION = re.compile(r"^P(?=\d|T\d)(?:\d+D)?(?:T(?=\d)(?:\d+H)?(?:\d+M)?(?:\d+(?:\.\d+)?S)?)?$")
-DISPLAY_TIME = re.compile(r"^\d+\s+(?:min|mins|hr|hrs)(?:\s+\d+\s+(?:min|mins))?$")
+DISPLAY_TIME = re.compile(
+    r"^(?:(\d+)\s+(?:hr|hrs)(?:\s+(\d+)\s+(?:min|mins))?|(\d+)\s+(?:min|mins))$"
+)
 DURATION_PARTS = re.compile(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?")
+
+
+def display_time_seconds(value):
+    """Convert the recipe's human-readable time to seconds using template rules."""
+    match = DISPLAY_TIME.fullmatch(value.strip()) if isinstance(value, str) else None
+    if not match:
+        return None
+    hours, extra_minutes, minutes = match.groups()
+    return int(hours or 0) * 3600 + int(extra_minutes or 0) * 60 + int(minutes or 0) * 60
 
 
 def duration_seconds(value):
@@ -69,8 +80,20 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     if isinstance(servings, bool) or not isinstance(servings, int) or servings < 1:
         errors.append(f"{slug}: serves must be a positive integer for Recipe structured data")
     display_time = recipe.get("time")
-    if not isinstance(display_time, str) or not DISPLAY_TIME.fullmatch(display_time.strip()):
-        errors.append(f"{slug}: time must use a supported format such as '45 min', '4 hrs', or '1 hr 30 min'")
+    display_seconds = display_time_seconds(display_time)
+    if display_seconds is None or display_seconds <= 0:
+        errors.append(f"{slug}: time must be a positive supported duration such as '45 min', '4 hrs', or '1 hr 30 min'")
+    if recipe.get("total_time_iso"):
+        total_seconds_for_display = duration_seconds(recipe["total_time_iso"])
+        if (
+            display_seconds is not None
+            and total_seconds_for_display is not None
+            and display_seconds != total_seconds_for_display
+        ):
+            errors.append(
+                f"{slug}: time ({display_time}) does not match total_time_iso "
+                f"({recipe['total_time_iso']})"
+            )
     if "rating" in recipe:
         errors.append(f"{slug}: rating requires a real review source")
     prep_duration = recipe.get("prep_time_iso")
