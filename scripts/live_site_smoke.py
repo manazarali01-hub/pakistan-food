@@ -174,6 +174,20 @@ home = require(
     'data-pf-dish="chicken-biryani"',
     "premium.css?v=20261010-refined-v9",
 )
+# Verify the deployed homepage retains its LCP image hint, not just the source
+# template. This catches stale CDN output or a future preload regression.
+hero_preloads = re.findall(
+    r'<link\\b(?=[^>]*\\brel=["\\']preload["\\'])'
+    r'(?=[^>]*\\bas=["\\']image["\\'])'
+    r'(?=[^>]*\\bhref=["\\']https://pakistanfoodrecipes\\.top/assets/recipe-images/chicken-biryani-v2\\.webp["\\'])'
+    r'[^>]*>',
+    home,
+    flags=re.I,
+)
+if len(hero_preloads) != 1:
+    raise SystemExit(f"/: expected exactly one deployed chicken biryani hero preload, found {len(hero_preloads)}")
+if not re.search(r'\\bfetchpriority=["\\']high["\\']', hero_preloads[0], flags=re.I):
+    raise SystemExit("/: deployed chicken biryani hero preload must use fetchpriority=high")
 if any(marker in home for marker in (
     'id="pfMotionToggle"', 'id="pfMotionPreview"', "pf-featured-motion"
 )):
