@@ -12,7 +12,6 @@ layout: null
       <url>
         <loc>{{ page.url | absolute_url | xml_escape }}</loc>
         {% if recipe.date_modified %}<lastmod>{{ recipe.date_modified | date: '%Y-%m-%d' }}</lastmod>{% elsif page.last_modified_at %}<lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>{% elsif page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>{% endif %}
-        {% if page.last_modified_at %}<lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>{% elsif page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>{% endif %}
       </url>
     {% endunless %}
   {% endunless %}
