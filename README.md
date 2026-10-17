@@ -12,7 +12,7 @@ The existing Pages CMS configuration is in `.pages.yml`. The optional Decap conf
 
 Create one JSON recipe in `_data/recipes/` with a lowercase, hyphenated filename. Include `name`, `category`, `time`, `serves`, `image`, `description`, `ingredients` and `method`. Use a fitting image you have permission to publish, and update `image-credits.html` when an external source requires credit. Do not enter a rating unless it comes from real reviews; the site currently does not display ratings.
 
-The **Sync new CMS recipes** workflow creates `recipes/<slug>.html` and adds its URL to both XML sitemaps. It requests a new GitHub Pages build after saving the generated pages. The existing URLs and modification dates are preserved. If the workflow reports an error, inspect its run in GitHub Actions before treating the new page as published.
+The **Sync new CMS recipes** workflow creates `recipes/<slug>.html` for new recipe JSON files and requests a GitHub Pages build after saving generated pages. The canonical `sitemap.xml` is a Jekyll-generated URL set, so it includes eligible pages automatically and uses each recipe's `date_modified` value for its `<lastmod>`. Existing recipe URLs stay unchanged. If the workflow reports an error, inspect its run in GitHub Actions before treating the new page as published.
 
 For a local check, run `python3 scripts/sync_recipes.py` followed by `python3 scripts/verify_site.py`. Existing recipe pages and the main sitemap URL remain unchanged.
 
