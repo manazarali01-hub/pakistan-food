@@ -170,6 +170,48 @@ else:
 if DOMAIN + "/sitemap.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
     errors.append("robots.txt does not point to the canonical sitemap")
 
+
+# Keep recipe search snippets concise, non-boilerplate, and within the common
+# 155-character search-snippet target. This mirrors Liquid's truncate filter.
+recipe_template_path = ROOT / "_layouts/recipe.html"
+try:
+    recipe_template = recipe_template_path.read_text(encoding="utf-8")
+except OSError as exc:
+    recipe_template = ""
+    errors.append(f"_layouts/recipe.html: {exc}")
+
+if "{% capture search_description %}" not in recipe_template:
+    errors.append("_layouts/recipe.html: dedicated search_description capture is missing")
+if '<meta name="description" content="{{ search_description | strip_html | strip | escape }}">' not in recipe_template:
+    errors.append("_layouts/recipe.html: meta description must use the dedicated search_description")
+if "See ingredients and the easy step-by-step method." in recipe_template:
+    errors.append("_layouts/recipe.html: generic recipe meta-description boilerplate should be removed")
+if "search_description_source | split: ' '" not in recipe_template or "search_description_word_budget" not in recipe_template:
+    errors.append("_layouts/recipe.html: long search descriptions must truncate at word boundaries")
+
+for slug, recipe in recipes.items():
+    suffix = f" Ready in {recipe.get('time', '')}"
+    if recipe.get("serves"):
+        suffix += f"; serves {recipe['serves']}"
+    suffix += "."
+    description_budget = 155 - len(suffix)
+    if description_budget < 4:
+        errors.append(f"{slug}: search-description suffix leaves no useful description space")
+        continue
+    source_description = str(recipe.get("description", "")).strip()
+    description = source_description
+    if len(source_description) > description_budget:
+        prefix = source_description[:description_budget - 3]
+        prefix = prefix.rsplit(" ", 1)[0] if " " in prefix else ""
+        description = prefix + "..."
+        if len(prefix) < len(source_description) and source_description[len(prefix)] != " ":
+            errors.append(f"{slug}: generated search description truncates inside a word")
+    if len(description + suffix) > 155:
+        errors.append(
+            f"{slug}: generated search description exceeds 155 characters "
+            f"({len(description + suffix)})"
+        )
+
 if errors:
     raise SystemExit("\n".join(errors))
 print(f"Verified {len(recipes)} recipes and {len(all_paths[0]) if all_paths else 0} sitemap URLs.")

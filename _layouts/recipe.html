@@ -3,7 +3,24 @@
 {% assign affiliate_items = site.data.affiliate[page.recipe_key] %}
 {% unless urdu_name %}{% assign urdu_name = site.data.urdu_names[page.recipe_key] %}{% endunless %}
 {% capture canonical_url %}https://pakistanfoodrecipes.top/recipes/{{ page.recipe_key }}.html{% endcapture %}
-{% capture meta_description %}{{ recipe.description | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %} and serves {{ recipe.serves }}{% endif %}. See ingredients and the easy step-by-step method.{% endcapture %}
+{% capture meta_description %}{{ recipe.description | strip_html | strip }} Ready in {{ recipe.time }}{% if recipe.serves %}; serves {{ recipe.serves }}{% endif %}.{% endcapture %}
+{% capture search_suffix %} Ready in {{ recipe.time }}{% if recipe.serves %}; serves {{ recipe.serves }}{% endif %}.{% endcapture %}
+{% assign search_description_length = 155 | minus: search_suffix.size %}
+{% assign search_description_source = recipe.description | strip_html | strip %}
+{% if search_description_source.size > search_description_length %}
+  {% assign search_description_word_budget = search_description_length | minus: 3 %}
+  {% assign search_description_words = search_description_source | split: ' ' %}
+  {% assign search_description_text = '' %}
+  {% for word in search_description_words %}
+    {% assign candidate_description = search_description_text | append: ' ' | append: word | strip %}
+    {% if candidate_description.size > search_description_word_budget %}{% break %}{% endif %}
+    {% assign search_description_text = candidate_description %}
+  {% endfor %}
+  {% assign search_description_text = search_description_text | append: '...' %}
+{% else %}
+  {% assign search_description_text = search_description_source %}
+{% endif %}
+{% capture search_description %}{{ search_description_text }}{{ search_suffix }}{% endcapture %}
 {% if recipe.image contains 'http://' or recipe.image contains 'https://' %}
   {% assign display_image = recipe.image %}
   {% assign seo_image = recipe.image | replace: 'Special:Redirect/file/', 'Special:FilePath/' %}
@@ -73,7 +90,7 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
   {% endif %}
   <title>{{ recipe.name }} Recipe | Authentic Pakistani Food</title>
-  <meta name="description" content="{{ meta_description | strip_html | truncate: 155 | escape }}">
+  <meta name="description" content="{{ search_description | strip_html | strip | escape }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#f8f1df">
   <link rel="canonical" href="{{ canonical_url }}">
