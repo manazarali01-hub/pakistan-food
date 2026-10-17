@@ -308,7 +308,7 @@ for url in urls:
                     )
                 if not re.fullmatch(
                     r"P(?=[0-9]|T[0-9])(?:[0-9]+Y)?(?:[0-9]+M)?(?:[0-9]+W)?(?:[0-9]+D)?"
-                    r"(?:T(?:[0-9]+H)?(?:[0-9]+M)?(?:[0-9]+(?:[.][0-9]+)?S)?",
+                    r"(?:T(?:[0-9]+H)?(?:[0-9]+M)?(?:[0-9]+(?:[.][0-9]+)?S)?)?",
                     source_duration,
                 ):
                     errors.append(f"invalid ISO 8601 {schema_field} in source data {url}: {source_duration!r}")
