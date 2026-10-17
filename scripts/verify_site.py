@@ -186,6 +186,8 @@ if '<meta name="description" content="{{ search_description | strip_html | strip
     errors.append("_layouts/recipe.html: meta description must use the dedicated search_description")
 if "See ingredients and the easy step-by-step method." in recipe_template:
     errors.append("_layouts/recipe.html: generic recipe meta-description boilerplate should be removed")
+if "search_description_source | split: ' '" not in recipe_template or "search_description_word_budget" not in recipe_template:
+    errors.append("_layouts/recipe.html: long search descriptions must truncate at word boundaries")
 
 for slug, recipe in recipes.items():
     suffix = f" Ready in {recipe.get('time', '')}"
@@ -196,9 +198,14 @@ for slug, recipe in recipes.items():
     if description_budget < 4:
         errors.append(f"{slug}: search-description suffix leaves no useful description space")
         continue
-    description = str(recipe.get("description", "")).strip()
-    if len(description) > description_budget:
-        description = description[:description_budget - 3] + "..."
+    source_description = str(recipe.get("description", "")).strip()
+    description = source_description
+    if len(source_description) > description_budget:
+        prefix = source_description[:description_budget - 3]
+        prefix = prefix.rsplit(" ", 1)[0] if " " in prefix else ""
+        description = prefix + "..."
+        if len(prefix) < len(source_description) and source_description[len(prefix)] != " ":
+            errors.append(f"{slug}: generated search description truncates inside a word")
     if len(description + suffix) > 155:
         errors.append(
             f"{slug}: generated search description exceeds 155 characters "
