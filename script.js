@@ -168,6 +168,11 @@ function sizedRecipeImage(recipe, width) {
         if (/([?&]width=)\d+/.test(url)) return url.replace(/([?&]width=)\d+/, `$1${width}`);
         return `${url}${url.includes("?") ? "&" : "?"}width=${width}`;
     }
+    // Local recipe cards use a dedicated 640px WebP instead of downloading
+    // the full-resolution original. Detail modals keep the larger source.
+    if (width <= 640 && /^assets\/.+\.webp(?:\?.*)?$/i.test(url)) {
+        return url.replace(/\.webp(?=\?|$)/i, "-640.webp");
+    }
     return url;
 }
 function useImageFallback(image) {
