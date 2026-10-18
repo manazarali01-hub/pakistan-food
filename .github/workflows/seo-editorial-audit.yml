@@ -4,8 +4,22 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
+      - '_data/recipes/**'
+      - 'guides/**'
+      - '_layouts/recipe.html'
+      - '_layouts/category.html'
+      - '_config.yml'
+      - 'index.html'
+      - 'recipes/**'
+      - 'sitemap.html'
+      - 'sitemap.xml'
+      - 'sitemap-v2.xml'
       - 'scripts/audit_content_quality.py'
-      - 'tests/test_audit_content_quality.py'
+      - 'scripts/audit_internal_links.py'
+      - 'scripts/audit_recipe_quality.py'
+      - 'scripts/audit_image_quality.py'
+      - 'scripts/verify_site.py'
+      - 'scripts/verify_rendered.py'
       - 'tests/test_audit_content_quality.py'
       - '.github/workflows/seo-editorial-audit.yml'
   push:
