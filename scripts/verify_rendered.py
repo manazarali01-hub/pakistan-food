@@ -3,6 +3,7 @@
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
+from datetime import date
 from urllib.parse import urljoin, urlparse, unquote
 import json
 import re
