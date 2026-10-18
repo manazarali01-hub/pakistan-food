@@ -225,6 +225,14 @@ directory = require(
     'data-pf-dish="chicken-biryani"',
     "food-atmosphere.js?v=20261010-biryani-canvas-v5",
 )
+rice_category = require(
+    "/recipes/rice/",
+    "<title>Pakistani Rice Recipes: Biryani, Pulao &amp; More</title>",
+    "<h1>Pakistani Rice Recipes: Biryani, Pulao &amp; More</h1>",
+    '<link rel="canonical" href="https://pakistanfoodrecipes.top/recipes/rice/">',
+)
+if "Pakistani Rice Recipes: Biryani, Pulao & More" not in unescape(rice_category):
+    raise SystemExit("/recipes/rice/: search-focused title is missing from deployed page")
 halwa = require(
     "/recipes/halwa-puri.html",
     "Halwa Puri Recipe",
