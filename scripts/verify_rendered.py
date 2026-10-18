@@ -191,6 +191,28 @@ for url in urls:
         except json.JSONDecodeError as exc:
             errors.append(f"invalid JSON-LD {url}: {exc}")
 
+    # Article structured data should describe the same content revision as the sitemap.
+    # This catches stale guide dates that can mislead crawlers after editorial updates.
+    expected_modified = sitemap_lastmods.get(url)
+    article_items = []
+    for graph in parsed_jsonld:
+        if isinstance(graph, dict):
+            items = graph.get("@graph", [])
+            if isinstance(items, list):
+                article_items.extend(
+                    item for item in items
+                    if isinstance(item, dict) and item.get("@type") == "Article"
+                )
+            elif graph.get("@type") == "Article":
+                article_items.append(graph)
+    for article_item in article_items:
+        article_modified = article_item.get("dateModified")
+        if article_modified and expected_modified and article_modified != expected_modified:
+            errors.append(
+                f"Article dateModified must match sitemap lastmod for {url}: "
+                f"{article_modified!r} != {expected_modified!r}"
+            )
+
     url_path = urlparse(url).path
     if url_path == "/recipes/":
         collection_pages = []
