@@ -333,6 +333,20 @@ recipe_files = sorted(recipe_dir.glob("*.json"))
 if len(recipe_files) != 66:
     raise SystemExit(f"Expected 66 recipe source files, found {len(recipe_files)}")
 
+# Protect representative recipe-to-guide links at the deployed domain, not only
+# in the rendered build. These cover distinct cooking clusters and catch a stale
+# or accidentally stripped shared-layout section after deployment.
+EXPECTED_CONTEXTUAL_GUIDE_LINKS = {
+    "chicken-biryani": "../guides/what-is-dum-cooking.html",
+    "chicken-karahi": "../guides/why-karahi-tastes-like-tomato.html",
+    "chicken-tikka": "../guides/why-use-yogurt-in-marinade.html",
+    "pakistani-samosa": "../guides/why-samosas-burst-while-frying.html",
+    "aloo-paratha": "../guides/why-paratha-does-not-layer.html",
+    "daal-chawal": "../guides/how-to-balance-daal-tadka.html",
+    "rice-kheer": "../guides/why-kheer-burns-at-bottom.html",
+    "kashmiri-chai": "../guides/how-to-balance-kashmiri-chai.html",
+}
+
 if "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" not in home:
     raise SystemExit("/: AdSense publisher loader is missing from the homepage")
 if "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" in directory:
@@ -350,6 +364,12 @@ for recipe_file in recipe_files:
         raise SystemExit(f"{slug}: unresolved template syntax in live HTML")
     if f'<h1>{source_recipe["name"]} Recipe</h1>' not in unescape(page):
         raise SystemExit(f"{slug}: expected recipe heading not rendered")
+
+    expected_guide_link = EXPECTED_CONTEXTUAL_GUIDE_LINKS.get(slug)
+    if expected_guide_link and f'href="{expected_guide_link}"' not in page:
+        raise SystemExit(
+            f"{slug}: expected deployed contextual guide link {expected_guide_link!r} is missing"
+        )
 
     canonical_tag = re.search(r'<link\b[^>]*rel=["\']canonical["\'][^>]*>', page, re.I)
     canonical_href = (re.search(r'href=["\']([^"\']+)["\']', canonical_tag.group(0), re.I)
@@ -403,6 +423,7 @@ for recipe_file in recipe_files:
             raise SystemExit(f"{slug}: live step image has no matching source photo")
 
 print(f"OK all {len(recipe_files)} deployed recipe HTML pages: canonical, robots, bilingual UI and JSON-LD")
+print(f"OK live contextual recipe-to-guide links ({len(EXPECTED_CONTEXTUAL_GUIDE_LINKS)} representative links)")
 
 guide_hub = require("/guides/", "Pakistani Cooking Guides")
 guide_urls = [url for url in urls if url.startswith(BASE + "/guides/") and url.endswith(".html")]
