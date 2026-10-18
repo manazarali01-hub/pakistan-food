@@ -18,6 +18,8 @@ on:
       - 'scripts/audit_internal_links.py'
       - 'scripts/audit_recipe_quality.py'
       - 'scripts/audit_image_quality.py'
+      - 'scripts/audit_rendered_snippets.py'
+      - 'scripts/audit_rendered_snippets.py'
       - 'scripts/verify_site.py'
       - 'scripts/verify_rendered.py'
       - 'tests/test_audit_content_quality.py'
@@ -47,6 +49,7 @@ on:
       - 'scripts/audit_content_quality.py'
       - 'scripts/audit_recipe_quality.py'
       - 'scripts/audit_image_quality.py'
+      - 'scripts/audit_rendered_snippets.py'
       - 'scripts/verify_site.py'
       - 'scripts/verify_rendered.py'
       - '.github/workflows/seo-editorial-audit.yml'
@@ -79,5 +82,7 @@ jobs:
           destination: ./_site
       - name: Verify published page canonicals, schema, ads.txt, links and assets
         run: python3 scripts/verify_rendered.py
+      - name: Report rendered SEO title, description and canonical coverage
+        run: python3 scripts/audit_rendered_snippets.py
       - name: Report internal followed-link coverage for indexable sitemap pages
         run: python3 scripts/audit_internal_links.py
