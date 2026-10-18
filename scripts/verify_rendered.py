@@ -3,6 +3,7 @@
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
+from datetime import date
 from urllib.parse import urljoin, urlparse, unquote
 import json
 import re
@@ -207,6 +208,19 @@ for url in urls:
                 article_items.append(graph)
     for article_item in article_items:
         article_modified = article_item.get("dateModified")
+        if article_modified:
+            try:
+                parsed_article_date = date.fromisoformat(article_modified)
+                if parsed_article_date.isoformat() != article_modified:
+                    errors.append(
+                        f"Article dateModified must use YYYY-MM-DD format for {url}: "
+                        f"{article_modified!r}"
+                    )
+            except (TypeError, ValueError):
+                errors.append(
+                    f"Article dateModified must be a valid YYYY-MM-DD date for {url}: "
+                    f"{article_modified!r}"
+                )
         if article_modified and expected_modified and article_modified != expected_modified:
             errors.append(
                 f"Article dateModified must match sitemap lastmod for {url}: "
