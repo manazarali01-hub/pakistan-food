@@ -106,14 +106,14 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
   <meta property="og:type" content="article">
   <meta property="og:locale" content="en_PK">
   <meta property="og:title" content="{{ search_title | escape }}">
-  <meta property="og:description" content="{{ meta_description | escape }}">
+  <meta property="og:description" content="{{ search_description | strip_html | strip | escape }}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:image" content="{{ seo_image }}">
   <meta property="og:image:alt" content="{{ image_alt | escape }}">
   <meta property="og:site_name" content="Pakistan Food">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ search_title | escape }}">
-  <meta name="twitter:description" content="{{ meta_description | escape }}">
+  <meta name="twitter:description" content="{{ search_description | strip_html | strip | escape }}">
   <meta name="twitter:image" content="{{ seo_image }}">
   <meta name="twitter:image:alt" content="{{ image_alt | escape }}">
   <link rel="stylesheet" href="../style.css?v=20261005-adsense1">
