@@ -228,6 +228,17 @@ for slug, recipe in recipes.items():
         errors.append(f"sitemap-v2.xml: recipe {slug} missing")
     source_date = recipe.get("date_modified")
     if source_date:
+        # Recipe editorial dates must be real calendar dates, not merely strings
+        # that happen to match the sitemap value.
+        if not isinstance(source_date, str):
+            errors.append(f"{slug}: date_modified must be an ISO 8601 date (YYYY-MM-DD)")
+        else:
+            try:
+                parsed_source_date = date.fromisoformat(source_date)
+                if parsed_source_date.isoformat() != source_date:
+                    errors.append(f"{slug}: date_modified must use canonical YYYY-MM-DD format")
+            except ValueError:
+                errors.append(f"{slug}: date_modified must be a valid YYYY-MM-DD date: {source_date!r}")
         recipe_url = DOMAIN + recipe_path
         sitemap_date = sitemap_lastmod.get(recipe_url)
         if sitemap_date != source_date:
