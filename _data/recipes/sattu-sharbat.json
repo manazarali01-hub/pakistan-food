@@ -24,7 +24,7 @@
   "prep_time": "8 min",
   "prep_time_iso": "PT8M",
   "total_time_iso": "PT8M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Cold sattu sharbat with roasted gram flour, lemon and black salt",
   "image_caption": "Sattu sharbat whisked smooth with chilled water, lemon and a balanced sweet-savoury finish.",
   "technique": "Make a lump-free slurry with a small amount of water before adding the rest. Sattu settles naturally because it is suspended roasted gram flour, so a final stir before each pour is part of the drink rather than a sign of failure.",
@@ -67,5 +67,7 @@
   "image_source": "https://commons.wikimedia.org/wiki/File:Sattu.jpg",
   "image_author": "Gaurav Dhwaj Khadka",
   "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "cook_time_iso": "PT0M",
+  "reheating": "Do not reheat sattu sharbat. Keep it covered and refrigerated if prepared ahead, then whisk thoroughly before pouring because the sattu naturally settles."
 }

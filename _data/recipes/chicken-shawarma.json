@@ -39,7 +39,7 @@
   "prep_time_iso": "PT1H20M",
   "cook_time_iso": "PT40M",
   "total_time_iso": "PT2H",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Chicken shawarma with browned spiced chicken, flatbread, vegetables and sauce",
   "image_caption": "Chicken shawarma with browned spiced chicken, flatbread, crisp vegetables and sauce.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Shawarma.jpg",
@@ -67,5 +67,19 @@
   "image_license": "CC BY-SA 4.0",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "image_creator": "Zebaarts",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How long should chicken shawarma be marinated?",
+      "answer": "A few hours in the refrigerator gives the spices time to flavour the meat; an overnight marinade can work well too. Keep the chicken covered and chilled throughout."
+    },
+    {
+      "question": "How do I get browned edges without drying the chicken?",
+      "answer": "Use evenly sized strips, avoid overcrowding the pan, and cook in batches if needed. Let moisture evaporate so the chicken can brown, then stop cooking once the centre is safely done."
+    },
+    {
+      "question": "What can I use instead of a vertical shawarma spit?",
+      "answer": "A heavy skillet, grill pan or hot oven can produce a good home version. Spread the chicken in a single layer where possible and turn it so the pieces brown evenly."
+    }
+  ]
 }

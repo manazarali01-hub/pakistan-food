@@ -31,7 +31,7 @@
   "prep_time_iso": "PT15M",
   "cook_time_iso": "PT30M",
   "total_time_iso": "PT45M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Pakistani keema matar with browned beef mince, green peas and concentrated tomato masala",
   "image_caption": "Beef mince cooked until separated and moist, then finished with peas in a reduced onion-tomato masala.",
   "technique": "Brown the mince before the tomato stage and let released beef moisture evaporate instead of trapping it under a lid. Add peas only after the masala is cohesive so they stay green and tender rather than overcooking while the mince dries out.",
@@ -54,5 +54,19 @@
   ],
   "storage": "Cool promptly and refrigerate covered. Keema thickens slightly as it chills.",
   "reheating": "Reheat gently with a spoonful of water if needed, just until piping hot.",
-  "serving": "Serve with roti, naan or plain rice and fresh coriander."
+  "serving": "Serve with roti, naan or plain rice and fresh coriander.",
+  "faqs": [
+    {
+      "question": "Should I use fresh or frozen peas in keema matar?",
+      "answer": "Both work. Fresh peas may need more simmering time; frozen peas usually need only a short time near the end. Add them according to tenderness so they keep their shape."
+    },
+    {
+      "question": "How do I keep the mince tender?",
+      "answer": "Break the mince into small pieces as it browns, then simmer with a little liquid until cooked through. Avoid prolonged high heat after the mince has already become tender."
+    },
+    {
+      "question": "What should I do if the keema matar gravy is too thin?",
+      "answer": "Simmer uncovered for a few minutes after the peas are tender, stirring occasionally. Reduce slowly so the mince does not dry out or stick to the pan."
+    }
+  ]
 }

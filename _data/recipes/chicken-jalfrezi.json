@@ -39,7 +39,7 @@
   "prep_time_iso": "PT15M",
   "cook_time_iso": "PT25M",
   "total_time_iso": "PT40M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Pakistani chicken jalfrezi with browned chicken, thick tomato masala, onion and colourful bell peppers",
   "image_caption": "Chicken jalfrezi finished with quickly stir-fried onion and peppers so they keep colour and a light bite.",
   "technique": "Cook the chicken-tomato masala and vegetables on separate timelines. Brown chicken in batches, reduce tomatoes until thick, then stir-fry onion and peppers quickly and fold them in only at the end.",
@@ -66,5 +66,19 @@
   "image_creator": "David Pursehouse",
   "image_license": "CC BY 2.0",
   "image_license_url": "https://creativecommons.org/licenses/by/2.0/",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How do I keep the vegetables crisp in chicken jalfrezi?",
+      "answer": "Cut the peppers and onions into similar-sized pieces and add them after the chicken is nearly cooked. Use moderately high heat and stop when the vegetables are tender-crisp."
+    },
+    {
+      "question": "Why is my chicken jalfrezi watery?",
+      "answer": "Crowding the pan or adding watery tomatoes can prevent the sauce from reducing. Cook in batches if needed and simmer uncovered until the masala coats the chicken and vegetables."
+    },
+    {
+      "question": "Can I use leftover cooked chicken?",
+      "answer": "Yes, but add it after the masala and vegetables have cooked, then heat it thoroughly without simmering for too long or the chicken may dry out."
+    }
+  ]
 }

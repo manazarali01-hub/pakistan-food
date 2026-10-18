@@ -38,7 +38,7 @@
   "prep_time_iso": "PT50M",
   "cook_time_iso": "PT20M",
   "total_time_iso": "PT1H10M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Chicken reshmi kababs grilled until lightly browned and served hot",
   "image_caption": "Reshmi kababs grilled until lightly browned with a soft juicy centre.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_reshmi_kebabs.jpg",
@@ -66,5 +66,19 @@
   "image_license": "CC BY-SA 4.0",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "image_creator": "Prianxi",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "Why do reshmi kababs fall apart on the grill?",
+      "answer": "The mixture may be too wet or insufficiently chilled. Drain excess moisture, mix until it holds together, chill before shaping, and handle the kababs gently when turning."
+    },
+    {
+      "question": "How do I keep reshmi kababs soft and juicy?",
+      "answer": "Use the recipe's measured dairy and fat, avoid overcooking, and check that the centre is safely cooked. Let the kababs rest briefly before serving."
+    },
+    {
+      "question": "Can reshmi kababs be cooked in a pan instead of on skewers?",
+      "answer": "Yes. Shape them into compact patties and cook in a lightly oiled heavy pan over medium heat, turning carefully once the first side has set."
+    }
+  ]
 }
