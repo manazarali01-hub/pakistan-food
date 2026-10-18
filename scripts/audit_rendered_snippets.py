@@ -16,8 +16,6 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "_site"
 SITEMAP = ROOT / "sitemap-v2.xml"
-BASE = "https://pakistanfoodrecipes.top"
-
 
 class MetadataParser(HTMLParser):
     def __init__(self):
@@ -63,7 +61,7 @@ def group_duplicates(rows, field):
     return [(key, urls) for key, urls in groups.items() if len(urls) > 1]
 
 def show_rows(label, rows, field, limit=20):
-    print(f"\\n{label}: {len(rows)}")
+    print(f"\n{label}: {len(rows)}")
     for row in rows[:limit]:
         print(f"- {row['url']} ({len(row[field])} chars): {row[field]}")
     if len(rows) > limit:
@@ -136,12 +134,12 @@ for label, rows_to_show, field in (
     show_rows(label, rows_to_show, field)
 
 if missing_files:
-    print("\\nMISSING RENDERED FILES:")
+    print("\nMISSING RENDERED FILES:")
     for url in missing_files[:20]:
         print(f"- {url}")
 if parse_issues:
-    print("\\nPARSE/READ ISSUES:")
+    print("\nPARSE/READ ISSUES:")
     for url, issue in parse_issues[:20]:
         print(f"- {url}: {issue}")
 
-print("\\nAudit is report-only; no metadata or pages were changed.")
+print("\nAudit is report-only; no metadata or pages were changed.")
