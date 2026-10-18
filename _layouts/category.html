@@ -1,5 +1,10 @@
 {% assign category_name = page.category_name %}
 {% assign category_slug = page.category_slug %}
+{% if category_slug == 'rice' %}
+  {% assign category_seo_title = 'Pakistani Rice Recipes: Biryani, Pulao & More' %}
+{% else %}
+  {% assign category_seo_title = 'Pakistani ' | append: category_name | append: ' Recipes | Authentic Pakistani Food' %}
+{% endif %}
 {% assign category_count = 0 %}
 {% for recipe_pair in site.data.recipes %}
   {% assign r = recipe_pair[1] %}
@@ -53,7 +58,7 @@
   {% if site.adsense_client and site.adsense_client != "" %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
   {% endif %}
-  <title>Pakistani {{ category_name }} Recipes | Authentic Pakistani Food</title>
+  <title>{{ category_seo_title | escape }}</title>
   <meta name="description" content="{{ meta_description | escape }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="theme-color" content="#f8f1df">
@@ -62,14 +67,14 @@
   <link rel="icon" href="../../assets/pakistan-food-logo.png" type="image/png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_PK">
-  <meta property="og:title" content="Pakistani {{ category_name }} Recipes | Pakistan Food">
+  <meta property="og:title" content="{{ category_seo_title | escape }}">
   <meta property="og:description" content="{{ meta_description | escape }}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:image" content="{{ category_seo_image }}">
   <meta property="og:image:alt" content="Pakistani {{ category_name | downcase }} recipes">
   <meta property="og:site_name" content="Pakistan Food">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pakistani {{ category_name }} Recipes | Pakistan Food">
+  <meta name="twitter:title" content="{{ category_seo_title | escape }}">
   <meta name="twitter:description" content="{{ meta_description | escape }}">
   <meta name="twitter:image" content="{{ category_seo_image }}">
   <meta name="twitter:image:alt" content="Pakistani {{ category_name | downcase }} recipes">
@@ -125,7 +130,7 @@
       {
         "@type": "CollectionPage",
         "@id": "{{ canonical_url }}#webpage",
-        "name": "Pakistani {{ category_name }} Recipes",
+        "name": {{ category_seo_title | jsonify }},
         "url": "{{ canonical_url }}",
         "description": {{ meta_description | jsonify }},
         "isPartOf": {"@id":"https://pakistanfoodrecipes.top/#website"},
@@ -173,7 +178,11 @@
   </header>
   <main class="cat" id="category-content">
     <nav aria-label="Breadcrumb"><a href="../../index.html">Home</a> › <a href="../index.html">Recipes</a> › {{ category_name }} Recipes</nav>
-    <h1>Pakistani {{ category_name }} Recipes</h1>
+    {% if category_slug == 'rice' %}
+      <h1>Pakistani Rice Recipes: Biryani, Pulao &amp; More</h1>
+    {% else %}
+      <h1>Pakistani {{ category_name }} Recipes</h1>
+    {% endif %}
     <p>{{ intro }}</p>
     <p><strong>{{ category_count }} recipes</strong> are currently available in this category. Open any recipe for its ingredient list, cooking time and step-by-step method.</p>
     <div class="grid">
