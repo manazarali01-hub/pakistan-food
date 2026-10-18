@@ -26,7 +26,7 @@
   "prep_time": "20 min",
   "prep_time_iso": "PT20M",
   "total_time_iso": "PT20M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Pakistani chana chaat with chickpeas, tomato, onion, coriander and tangy seasoning",
   "image_caption": "Chana chaat with boiled chickpeas, tomato, onion and coriander in a tangy masala.",
   "technique": "The chickpeas must be tender and well drained before assembly, while the potatoes must be cool enough to hold their shape. Add chutney gradually because its concentration varies and excess liquid quickly makes the chaat soupy.",
@@ -72,5 +72,7 @@
   "image_license": "CC BY-SA 4.0",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "image_creator": "ThamsSelvi",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "cook_time_iso": "PT0M",
+  "reheating": "Do not reheat assembled chaat. Refrigerate cooked chickpeas and potatoes promptly, keep chopped vegetables and chutney chilled, and combine close to serving."
 }

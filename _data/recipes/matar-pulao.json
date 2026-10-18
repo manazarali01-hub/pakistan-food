@@ -30,7 +30,7 @@
   "prep_time_iso": "PT15M",
   "cook_time_iso": "PT25M",
   "total_time_iso": "PT40M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Pakistani matar pulao with separate basmati rice, green peas, browned onion and whole spices",
   "image_caption": "Basmati rice and peas cooked in seasoned liquid, then finished on low dum for separate grains.",
   "technique": "Liquid control matters more than extra spice. Brown the onion, bloom whole spices, season the liquid before rice, and stop the uncovered stage when most liquid is absorbed. The final covered steam should finish the grains without repeated stirring.",
@@ -53,5 +53,19 @@
   ],
   "storage": "Cool rice promptly and refrigerate covered.",
   "reheating": "Sprinkle a little water, cover and reheat until steaming hot without repeated stirring.",
-  "serving": "Serve with raita, salad or a simple curry."
+  "serving": "Serve with raita, salad or a simple curry.",
+  "faqs": [
+    {
+      "question": "How do I keep matar pulao rice fluffy rather than sticky?",
+      "answer": "Rinse the rice until the water is clearer, soak if suitable for your rice, drain well, and avoid stirring repeatedly after adding the cooking liquid."
+    },
+    {
+      "question": "Can frozen peas be used in matar pulao?",
+      "answer": "Yes. Frozen peas can be added with the rice or toward the end according to the recipe method; avoid overcooking them so they keep their colour and shape."
+    },
+    {
+      "question": "Can stock replace water in matar pulao?",
+      "answer": "Yes, use a lightly seasoned stock and adjust salt carefully. Strong or salty stock can overwhelm the delicate flavour of the rice and peas."
+    }
+  ]
 }

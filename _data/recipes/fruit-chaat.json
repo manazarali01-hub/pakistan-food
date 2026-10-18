@@ -27,7 +27,7 @@
   "prep_time": "15 min",
   "prep_time_iso": "PT15M",
   "total_time_iso": "PT15M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Fresh mixed fruit chaat with colorful fruit pieces and crunchy dry fruits",
   "image_caption": "Fresh mixed fruit chaat with colorful fruit pieces and a crunchy dry-fruit topping.",
   "technique": "Cut firmer fruits first and banana last, then add citrus promptly to exposed apple and banana surfaces. Season gently: ripe fruit should still taste like fruit rather than a bowl dominated by chaat masala.",
@@ -72,5 +72,7 @@
   "image_license": "CC BY-SA 4.0",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "image_creator": "Nami Verma",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "cook_time_iso": "PT0M",
+  "reheating": "Do not reheat fruit chaat. Refrigerate leftovers promptly in a covered container, though the fruit will soften and release juice as it sits."
 }

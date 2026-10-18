@@ -23,7 +23,7 @@
   "prep_time": "5 min",
   "prep_time_iso": "PT5M",
   "total_time_iso": "PT5M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Chilled Pakistani Rooh Afza milk with an even pink colour and optional almond garnish",
   "image_caption": "Cold milk mixed with rose sharbat syrup until evenly pink, served over ice.",
   "technique": "Keep the milk very cold and taste after the syrup is fully mixed. Rose sharbat is already sweet and strongly flavoured, so extra sugar should be a final adjustment rather than an automatic ingredient.",
@@ -66,5 +66,7 @@
   "image_source": "https://commons.wikimedia.org/wiki/File:Milk_Roohafza.jpg",
   "image_author": "Jitesh Saini",
   "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "cook_time_iso": "PT0M",
+  "reheating": "Do not reheat this milk drink. Keep covered and refrigerated if made ahead briefly, and do not leave it at room temperature for an extended period."
 }

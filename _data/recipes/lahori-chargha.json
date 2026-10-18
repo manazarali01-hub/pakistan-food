@@ -39,7 +39,7 @@
   "prep_time_iso": "PT4H20M",
   "cook_time_iso": "PT1H10M",
   "total_time_iso": "PT5H30M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Lahori chargha whole chicken with bold yogurt spice marinade and deep browned finish",
   "image_caption": "Whole Lahori chargha marinated, steamed until nearly tender and finished until richly browned.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Lahori_Charga.JPG",
@@ -67,5 +67,19 @@
   "image_license": "CC0 1.0",
   "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
   "image_creator": "Miansari66",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How long should Lahori chargha be marinated?",
+      "answer": "A few hours in the refrigerator allows the seasoning to penetrate, while an overnight marinade can give fuller flavour. Keep the chicken covered and chilled during marination."
+    },
+    {
+      "question": "How can I tell when a whole chargha is safely cooked?",
+      "answer": "Check the thickest part of the breast and the innermost thigh with a food thermometer; chicken should reach 74°C (165°F). Colour alone is not a reliable safety check."
+    },
+    {
+      "question": "How do I get a crisp exterior without drying the chicken?",
+      "answer": "Let excess marinade drip off and dry the surface before frying or roasting. Use steady, appropriate heat and allow the cooked chicken a short rest before serving."
+    }
+  ]
 }

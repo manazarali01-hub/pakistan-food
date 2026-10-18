@@ -84,6 +84,26 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
     missing = [field for field in REQUIRED if not recipe.get(field)]
     if missing:
         errors.append(f"{slug}: missing {', '.join(missing)}")
+    # Every published recipe should answer practical reader questions with
+    # useful, recipe-specific content; empty or repeated placeholders are not enough.
+    faqs = recipe.get("faqs")
+    if not isinstance(faqs, list) or len(faqs) < 3:
+        errors.append(f"{slug}: at least 3 recipe FAQs are required")
+    else:
+        seen_faq_questions = set()
+        for faq_index, faq in enumerate(faqs, start=1):
+            if not isinstance(faq, dict):
+                errors.append(f"{slug}: FAQ {faq_index} must contain a question and answer")
+                continue
+            question = " ".join(str(faq.get("question", "")).split())
+            answer = " ".join(str(faq.get("answer", "")).split())
+            if not question or not answer:
+                errors.append(f"{slug}: FAQ {faq_index} has an empty question or answer")
+            normalized_question = question.casefold()
+            if normalized_question and normalized_question in seen_faq_questions:
+                errors.append(f"{slug}: duplicate FAQ question: {question}")
+            seen_faq_questions.add(normalized_question)
+
     servings = recipe.get("serves")
     if isinstance(servings, bool) or not isinstance(servings, int) or servings < 1:
         errors.append(f"{slug}: serves must be a positive integer for Recipe structured data")

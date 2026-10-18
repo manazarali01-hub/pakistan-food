@@ -39,7 +39,7 @@
   "prep_time_iso": "PT25M",
   "cook_time_iso": "PT30M",
   "total_time_iso": "PT55M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Crispy chicken zinger-style burger with craggy seasoned coating, lettuce and mayonnaise",
   "image_caption": "Evenly flattened chicken fillets coated in seasoned flour, fried crisp and assembled in toasted buns.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Crispy_chicken_burger.jpg",
@@ -65,5 +65,19 @@
   "serving": "Toast buns lightly and assemble only when the chicken is ready to serve.",
   "image_author": "சௌந்தர்யா சுந்தரம்",
   "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "faqs": [
+    {
+      "question": "How do I keep the zinger burger coating crispy?",
+      "answer": "Press the coating firmly onto the chicken, fry in small batches, and place cooked pieces on a rack rather than stacking them. Assemble the burger just before eating so the sauce does not soften the crust."
+    },
+    {
+      "question": "What temperature should the chicken reach?",
+      "answer": "The thickest part of the chicken should reach 74°C (165°F) on a food thermometer. Do not rely on the crust colour alone to judge doneness."
+    },
+    {
+      "question": "Can I cook the coated chicken in an air fryer?",
+      "answer": "You can, although the crust may differ from deep-fried chicken. Lightly coat the surface with oil, leave space for airflow, turn as needed, and verify the centre reaches 74°C (165°F)."
+    }
+  ]
 }

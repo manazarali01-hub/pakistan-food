@@ -24,7 +24,7 @@
   "prep_time": "7 min",
   "prep_time_iso": "PT7M",
   "total_time_iso": "PT7M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-18",
   "image_alt": "Pakistani namkeen lassi with yogurt, roasted cumin and black salt served cold",
   "image_caption": "Savoury namkeen lassi blended until light and smooth, with roasted cumin and black salt.",
   "technique": "Season only after most of the water has been blended into the yogurt. Salt intensity changes with dilution, and black salt is especially assertive, so final adjustment should happen in the finished drink.",
@@ -67,5 +67,7 @@
   "image_source": "https://commons.wikimedia.org/wiki/File:Salt_lassi.jpg",
   "image_author": "Raksanand",
   "image_license": "CC BY-SA 4.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "cook_time_iso": "PT0M",
+  "reheating": "Do not reheat lassi. Keep it covered and chilled, stir before serving if it separates, and discard it if it has been left warm for an extended period."
 }
