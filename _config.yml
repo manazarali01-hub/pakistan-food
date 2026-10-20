@@ -10,6 +10,8 @@ markdown: kramdown
 # Google AdSense client ID. Example: ca-pub-1234567890123456
 # Leave blank until the account-specific ID is available.
 adsense_client: "ca-pub-4531216214099892"
+# Ahrefs Web Analytics data key copied from the user's project snippet.
+ahrefs_analytics_key: "Bws/LYoeLJeoYmFoa0KM1Q"
 recipe_image_version: "20261017-responsive1"
 exclude:
   - README.md
