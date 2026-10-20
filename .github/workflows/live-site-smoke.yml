@@ -22,6 +22,8 @@ jobs:
           GITHUB_SHA: ${{ github.sha }}
           GITHUB_RUN_ID: ${{ github.run_id }}
         run: python3 scripts/live_site_smoke.py
+      - name: Verify Ahrefs analytics script on live pages (key redacted)
+        run: python3 scripts/verify_ahrefs_live.py
       - name: Install Playwright for production atmosphere QA
         run: |
           npm install --no-save playwright@1.55.0
