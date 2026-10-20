@@ -1,2 +1,4 @@
-<!-- Ahrefs Web Analytics: free tier (up to 1M events/month) -->
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="Bws/LYoeLJeoYmFoaoOKM1Q" async></script>
+<!-- Ahrefs Web Analytics is enabled only after the project data key is verified in _config.yml. -->
+{% if site.ahrefs_analytics_key and site.ahrefs_analytics_key != "" %}
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="{{ site.ahrefs_analytics_key | escape }}" async></script>
+{% endif %}
