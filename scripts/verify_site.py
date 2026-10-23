@@ -226,7 +226,7 @@ for url in urls:
         # meta tag is actually present in the page file.
         source_html = source.read_text(encoding="utf-8")
         robots_tag = re.search(
-            r'<meta\\b(?=[^>]*\\bname=["\\']robots["\\'])(?=[^>]*\\bcontent=["\\'][^"\\']*\\bnoindex\\b)[^>]*>',
+            r'<meta\b(?=[^>]*\bname=["\']robots["\'])(?=[^>]*\bcontent=["\'][^"\']*\bnoindex\b)[^>]*>',
             source_html,
             re.IGNORECASE,
         )
