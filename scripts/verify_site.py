@@ -219,6 +219,19 @@ for url in urls:
     source = ROOT / (path.lstrip("/") + "index.html" if path.endswith("/") else path.lstrip("/"))
     if not source.is_file():
         errors.append(f"sitemap-v2.xml: {path} has no source page")
+    elif source.suffix.lower() == ".html":
+        # Static HTML pages in the sitemap must not explicitly block indexing.
+        # Recipe source files use Jekyll front matter and inherit metadata from
+        # their layout, so this source-level check only triggers when a robots
+        # meta tag is actually present in the page file.
+        source_html = source.read_text(encoding="utf-8")
+        robots_tag = re.search(
+            r'<meta\\b(?=[^>]*\\bname=["\\']robots["\\'])(?=[^>]*\\bcontent=["\\'][^"\\']*\\bnoindex\\b)[^>]*>',
+            source_html,
+            re.IGNORECASE,
+        )
+        if robots_tag:
+            errors.append(f"sitemap-v2.xml: indexable URL has a noindex robots tag: {url}")
 for path, count in Counter(paths).items():
     if count > 1:
         errors.append(f"sitemap-v2.xml: duplicate URL {path}")
