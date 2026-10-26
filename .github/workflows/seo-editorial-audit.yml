@@ -52,6 +52,7 @@ on:
       - 'robots.txt'
       - 'ads.txt'
       - 'scripts/audit_content_quality.py'
+      - 'tests/test_audit_content_quality.py'
       - 'scripts/audit_recipe_quality.py'
       - 'scripts/audit_image_quality.py'
       - 'scripts/audit_internal_links.py'
