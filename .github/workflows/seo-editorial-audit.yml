@@ -5,6 +5,9 @@ on:
   pull_request:
     paths:
       - '_data/recipes/**'
+      - '_data/bilingual/**'
+      - '_data/urdu_names.json'
+      - 'assets/recipe-images/**'
       - 'guides/**'
       - '_layouts/recipe.html'
       - '_layouts/category.html'
@@ -27,6 +30,9 @@ on:
     branches: [main]
     paths:
       - '_data/recipes/**'
+      - '_data/bilingual/**'
+      - '_data/urdu_names.json'
+      - 'assets/recipe-images/**'
       - 'guides/**'
       - '_layouts/recipe.html'
       - '_layouts/category.html'
