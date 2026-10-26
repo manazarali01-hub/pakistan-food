@@ -29,7 +29,10 @@
   ],
   "tips": [
     "Fry the onions evenly golden rather than dark brown, as burnt onions can make qorma bitter.",
-    "Add yogurt gradually over lower heat and cook the masala well for a smooth, rich gravy."
+    "Add yogurt gradually over lower heat and cook the masala well for a smooth, rich gravy.",
+    "To help prevent yogurt from splitting, whisk it completely smooth, bring it closer to room temperature if practical, lower the pot heat, and stir it in gradually; if the gravy looks grainy, keep the heat gentle and stir rather than adding more yogurt at once.",
+    "If the qorma gravy is thin after the chicken is tender, uncover and simmer gently to reduce it, stirring the base often; add hot water only a little at a time if the gravy becomes too thick.",
+    "Let fried onions cool before crushing them, and stop at deep golden rather than mahogany: their colour darkens a little after leaving the oil, and burnt edges can make the whole gravy bitter."
   ],
   "storage": "Cool leftover qorma promptly and refrigerate covered. Reheat gently but thoroughly before serving.",
   "prep_time": "15 min",
@@ -37,7 +40,7 @@
   "prep_time_iso": "PT15M",
   "cook_time_iso": "PT45M",
   "total_time_iso": "PT1H",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani chicken qorma with chicken pieces in a rich red-brown gravy",
   "image_caption": "Chicken qorma with tender chicken pieces in a rich reduced gravy.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_Korma.JPG",
