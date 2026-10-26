@@ -34,7 +34,7 @@
   "prep_time_iso": "PT15M",
   "cook_time_iso": "PT35M",
   "total_time_iso": "PT50M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani aloo keema with minced meat, potatoes and green chilli in a reduced masala",
   "image_caption": "Aloo keema with minced meat and potatoes cooked in a concentrated masala.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Aaloo_Keema.JPG",
@@ -63,5 +63,19 @@
   "image_license": "CC0 1.0",
   "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
   "image_creator": "Miansari66",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How do I stop keema from forming large lumps?",
+      "answer": "Add the mince to the hot onion mixture in small portions and break it apart with a wooden spoon while it changes colour. Keep stirring until the mince is evenly separated."
+    },
+    {
+      "question": "Can I use frozen peas in aloo keema?",
+      "answer": "Yes. Add frozen peas near the end so they heat through without becoming soft. Fresh peas may need a little longer, depending on their size."
+    },
+    {
+      "question": "Why has my aloo keema become dry?",
+      "answer": "The pan may have been too hot or the mince cooked uncovered for too long. Add a small splash of water, cover briefly, and keep the final gravy moist rather than watery."
+    }
+  ]
 }

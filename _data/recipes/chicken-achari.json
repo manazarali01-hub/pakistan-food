@@ -36,7 +36,7 @@
   "prep_time_iso": "PT15M",
   "cook_time_iso": "PT30M",
   "total_time_iso": "PT45M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani chicken achari with tomato yogurt masala, green chillies and pickling spices",
   "image_caption": "Chicken achari finished with fennel, nigella, mustard and fenugreek in a tangy reduced masala.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Achari_Chicken.jpg",
@@ -65,5 +65,19 @@
   "image_license": "CC BY-SA 4.0",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "image_creator": "Monali.mishra",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "What gives chicken achari its pickle-like flavour?",
+      "answer": "The distinctive taste comes from the recipe's pickling spices, such as fennel, nigella or mustard where included, balanced with tangy ingredients. Toast whole spices gently so they become aromatic without burning."
+    },
+    {
+      "question": "Can I adjust the heat in chicken achari?",
+      "answer": "Yes. Reduce the fresh chillies or chilli powder while keeping the main aromatic spices. Add heat gradually near the end rather than trying to correct an overly spicy curry all at once."
+    },
+    {
+      "question": "How do I stop the masala from tasting raw?",
+      "answer": "Cook the spice mixture until its aroma deepens and the moisture reduces, stirring to prevent scorching. Add small splashes of water if the masala catches before the chicken is cooked."
+    }
+  ]
 }

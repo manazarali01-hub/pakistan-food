@@ -35,7 +35,7 @@
   "prep_time_iso": "PT1H",
   "cook_time_iso": "PT1H",
   "total_time_iso": "PT2H",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Plated whole chicken sajji with lemon, tomato and green chillies",
   "image_caption": "Whole chicken sajji plated with lemon, tomato and green chillies after slow roasting.",
   "technique": "Sajji benefits from restrained seasoning and even roasting. Dry the bird, season lightly, marinate chilled, then use steady rather than extreme heat so the thick thigh cooks through before the skin burns.",
@@ -63,5 +63,19 @@
   "image_creator": "Miansari66",
   "image_license": "CC0 1.0",
   "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How do I get flavour through a whole chicken sajji?",
+      "answer": "Make shallow, even slits in the thicker parts and rub the seasoning into them. Allow enough refrigerated marination time and avoid making the slits so deep that the meat dries out during roasting."
+    },
+    {
+      "question": "How do I know when sajji chicken is safely cooked?",
+      "answer": "Use a food thermometer in the thickest breast and innermost thigh, avoiding bone. Chicken should reach 74°C (165°F); a browned skin alone does not confirm the centre is cooked."
+    },
+    {
+      "question": "How can I keep sajji chicken moist?",
+      "answer": "Choose a suitable roasting temperature, avoid excessive cooking after the centre is done, and let the chicken rest briefly before carving. Smaller birds cook faster, so check them early."
+    }
+  ]
 }

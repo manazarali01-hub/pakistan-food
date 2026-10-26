@@ -37,7 +37,7 @@
   "prep_time_iso": "PT15M",
   "cook_time_iso": "PT35M",
   "total_time_iso": "PT50M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Dal chawal plate with yellow lentils, white rice, green chilli and fresh salad",
   "image_caption": "Dal chawal served as a full plate with yellow lentils, white rice, green chilli and fresh salad.",
   "technique": "Cook rice and daal as separate texture projects. Keep lentils pourable because they thicken while resting, and let drained basmati steam off briefly before fluffing. Add tarka at the end so garlic and cumin stay aromatic.",
@@ -65,5 +65,19 @@
   "image_creator": "Nirmal Deb",
   "image_license": "CC BY-SA 4.0",
   "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How do I stop daal from becoming too thick?",
+      "answer": "Lentils continue to absorb liquid as they stand. Keep some hot water or stock ready and stir in a little at a time until the daal reaches a pourable consistency."
+    },
+    {
+      "question": "How can I make the daal flavour deeper?",
+      "answer": "Cook the lentils until fully tender, season in stages, and finish with the recipe's hot spice tempering. Let the tempering become aromatic without burning the garlic or spices."
+    },
+    {
+      "question": "Can daal and rice be prepared ahead?",
+      "answer": "Yes. Cool and refrigerate them promptly in separate covered containers. Reheat until steaming hot, adding a splash of water to the daal if it thickens; store cooked rice safely and avoid leaving it at room temperature."
+    }
+  ]
 }

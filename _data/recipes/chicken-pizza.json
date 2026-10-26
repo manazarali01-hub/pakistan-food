@@ -32,7 +32,7 @@
   "prep_time_iso": "PT50M",
   "cook_time_iso": "PT25M",
   "total_time_iso": "PT1H15M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Homemade chicken pizza with golden yeast crust, seasoned chicken, capsicum, onion and melted mozzarella",
   "image_caption": "Chicken pizza baked on a risen yeast crust with cooked chicken, vegetables and bubbling mozzarella.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_pizza.jpg",
@@ -59,5 +59,19 @@
   "serving": "Rest 3 to 5 minutes after baking, then slice and serve.",
   "image_author": "Jon Sullivan",
   "image_license": "Public domain",
-  "image_license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain"
+  "image_license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+  "faqs": [
+    {
+      "question": "How do I stop homemade chicken pizza from becoming soggy?",
+      "answer": "Cook off excess moisture from the chicken topping, use a moderate amount of sauce, and avoid piling on watery vegetables. Preheat the oven and baking tray or stone if your equipment allows."
+    },
+    {
+      "question": "How can I tell when the pizza base is baked?",
+      "answer": "The edge should be browned and set, and the underside should be firm rather than pale or doughy. If the topping browns too quickly, lower the rack or adjust the oven heat."
+    },
+    {
+      "question": "Can I prepare the chicken topping ahead?",
+      "answer": "Yes. Cook the chicken topping fully, cool it promptly and refrigerate it covered. Use it cold or warm when assembling, and bake the pizza until the crust is done and the topping is hot."
+    }
+  ]
 }
