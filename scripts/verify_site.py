@@ -104,6 +104,31 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
             )
     if "rating" in recipe:
         errors.append(f"{slug}: rating requires a real review source")
+    # Validate FAQ data when present without blocking legacy recipes that
+    # still need editorial FAQ work. Do not accept empty or repeated questions.
+    faqs = recipe.get("faqs")
+    if faqs is not None:
+        if not isinstance(faqs, list) or len(faqs) < 3:
+            errors.append(f"{slug}: faqs must contain at least 3 recipe-specific entries")
+        else:
+            seen_faq_questions = set()
+            for faq_index, faq in enumerate(faqs, start=1):
+                if not isinstance(faq, dict):
+                    errors.append(f"{slug}: FAQ {faq_index} must be an object")
+                    continue
+                raw_question = faq.get("question")
+                raw_answer = faq.get("answer")
+                if not isinstance(raw_question, str) or not isinstance(raw_answer, str):
+                    errors.append(f"{slug}: FAQ {faq_index} question and answer must be strings")
+                    continue
+                question = " ".join(raw_question.split())
+                answer = " ".join(raw_answer.split())
+                if not question or not answer:
+                    errors.append(f"{slug}: FAQ {faq_index} has an empty question or answer")
+                normalized_question = question.casefold()
+                if normalized_question and normalized_question in seen_faq_questions:
+                    errors.append(f"{slug}: duplicate FAQ question: {question}")
+                seen_faq_questions.add(normalized_question)
     prep_duration = recipe.get("prep_time_iso")
     cook_duration = recipe.get("cook_time_iso")
     # Prep and cook durations are independently optional: no-cook drinks,
@@ -366,6 +391,13 @@ for slug, recipe in recipes.items():
             f"({len(description + suffix)})"
         )
 
+faq_coverage = {slug: recipe.get("faqs") for slug, recipe in recipes.items()}
+recipes_with_faqs = sum(isinstance(items, list) and len(items) > 0 for items in faq_coverage.values())
+recipes_without_faqs = sorted(slug for slug, items in faq_coverage.items() if not isinstance(items, list) or not items)
+
 if errors:
     raise SystemExit("\n".join(errors))
 print(f"Verified {len(recipes)} recipes and {len(all_paths[0]) if all_paths else 0} sitemap URLs.")
+print(f"FAQ coverage: {recipes_with_faqs}/{len(recipes)} recipes have an FAQ array.")
+if recipes_without_faqs:
+    print("Recipes missing FAQ arrays: " + ", ".join(recipes_without_faqs))
