@@ -386,6 +386,13 @@ for slug, recipe in recipes.items():
             f"({len(description + suffix)})"
         )
 
+faq_coverage = {slug: recipe.get("faqs") for slug, recipe in recipes.items()}
+recipes_with_faqs = sum(isinstance(items, list) and len(items) > 0 for items in faq_coverage.values())
+recipes_without_faqs = sorted(slug for slug, items in faq_coverage.items() if not isinstance(items, list) or not items)
+
 if errors:
     raise SystemExit("\n".join(errors))
 print(f"Verified {len(recipes)} recipes and {len(all_paths[0]) if all_paths else 0} sitemap URLs.")
+print(f"FAQ coverage: {recipes_with_faqs}/{len(recipes)} recipes have an FAQ array.")
+if recipes_without_faqs:
+    print("Recipes missing FAQ arrays: " + ", ".join(recipes_without_faqs))
