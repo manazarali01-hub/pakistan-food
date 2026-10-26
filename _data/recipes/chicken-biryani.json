@@ -37,7 +37,8 @@
     "Taste the masala before layering and adjust salt then; seasoning is harder to distribute evenly once the rice is on top.",
     "Spread the rice and masala in even layers so one section does not become wet while another stays dry.",
     "Keep dum heat very low and use a flat tawa under a thin pot if the base tends to scorch.",
-    "Let the biryani rest briefly after dum, then lift portions gently from the side of the pot to keep the grains intact."
+    "Let the biryani rest briefly after dum, then lift portions gently from the side of the pot to keep the grains intact.",
+    "For the rice parboil, use a large pot of rapidly boiling water so the grains can move freely. Salt the water until it tastes pleasantly seasoned, drain as soon as the grain bends but still has a firm centre, and do not leave the drained rice sitting in hot water."
   ],
   "storage": "Cool leftover biryani promptly, refrigerate covered and reheat only the portion needed until the chicken and rice are thoroughly hot.",
   "serving": "Serve hot with raita, salad and lemon wedges.",
@@ -46,7 +47,7 @@
   "prep_time_iso": "PT30M",
   "cook_time_iso": "PT60M",
   "total_time_iso": "PT1H30M",
-  "date_modified": "2026-10-17",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani chicken biryani with long basmati rice, spiced chicken and fried onion",
   "image_caption": "Chicken biryani with long basmati rice and spiced chicken in a tighter food-first crop.",
   "technique": "The two stages that decide the texture are the rice parboil and the moisture level of the chicken masala. Drain the rice while the centre is still firm enough to finish on dum, and reduce the masala until it coats the chicken instead of leaving a pool of thin gravy.",
@@ -80,6 +81,10 @@
     {
       "question": "Should biryani be mixed after dum?",
       "answer": "Rest it briefly first, then lift portions gently from the side so the masala and rice combine without crushing the grains."
+    },
+    {
+      "question": "How can I stop the top rice drying out during dum?",
+      "answer": "Make sure the masala is not dry before layering, distribute the rice evenly, seal the lid well and keep the heat very low. If your pot has a thin base, place it on a tawa to soften direct heat; avoid repeatedly opening the lid because that releases steam."
     }
   ],
   "image_source": "https://commons.wikimedia.org/wiki/File:Lahori_Biryani.jpg",
