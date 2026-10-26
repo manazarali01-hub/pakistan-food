@@ -39,7 +39,7 @@
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT1H10M",
   "total_time_iso": "PT1H30M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani aloo gosht with tender meat and potatoes in rich red-brown curry",
   "image_caption": "Aloo gosht with tender meat and potatoes in a rich Pakistani curry.",
   "technique": "Meat determines the schedule. Simmer it until nearly tender before adding potatoes; otherwise potatoes break down while the beef or mutton is still firm. Use hot water in stages so gravy remains controlled.",
@@ -67,5 +67,19 @@
   "image_creator": "Miansari66",
   "image_license": "CC0 1.0",
   "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How can I keep the potatoes from breaking in aloo gosht?",
+      "answer": "Cut the potatoes into large, even pieces and add them after the meat has started becoming tender. Simmer gently and stop cooking as soon as a knife passes through the potatoes."
+    },
+    {
+      "question": "Can I make aloo gosht with boneless meat?",
+      "answer": "Yes. Boneless pieces usually cook faster than bone-in meat, so begin checking tenderness earlier and reduce the simmering time as needed."
+    },
+    {
+      "question": "How do I thicken the gravy without adding flour?",
+      "answer": "Simmer uncovered after the meat and potatoes are cooked, stirring carefully. A few softened potato edges can be mashed into the gravy, but avoid crushing all the pieces."
+    }
+  ]
 }
