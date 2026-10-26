@@ -34,7 +34,7 @@
   "prep_time_iso": "PT15M",
   "cook_time_iso": "PT35M",
   "total_time_iso": "PT50M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani chana masala with tender chickpeas in thick onion tomato masala, green chilli and coriander",
   "image_caption": "Tender chickpeas simmered in a cooked onion-tomato masala and lightly mashed for natural gravy body.",
   "technique": "The chickpeas must already be tender before they meet the masala. Build a thick onion-tomato base first, then simmer the cooked chickpeas in it and mash only a small portion for body so the final dish still contains whole chickpeas.",
@@ -71,5 +71,11 @@
       "question": "Can I use canned chickpeas?",
       "answer": "Yes. Rinse and drain them well, then simmer in the finished masala long enough to absorb flavour."
     }
+  ],
+  "tips": [
+    "If the gravy is thin, simmer uncovered before mashing a small scoop of chickpeas back into it; this thickens the sauce without adding flour.",
+    "If the masala catches on the pot before the tomatoes soften, lower the heat and add a tablespoon or two of water, then continue cooking until the raw tomato smell fades.",
+    "For canned chickpeas, rinse and drain them, then simmer gently in the finished masala for about 10–15 minutes; add reserved liquid or hot water a little at a time so the gravy does not become soupy.",
+    "Refrigerate leftovers within 2 hours in a shallow covered container and use within 3–4 days; the gravy will thicken as it chills, so loosen it with a little hot water while reheating."
   ]
 }
