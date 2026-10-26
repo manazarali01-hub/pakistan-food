@@ -32,7 +32,7 @@
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT40M",
   "total_time_iso": "PT1H",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani bhindi gosht with tender meat and okra in a rich reduced masala",
   "image_caption": "Bhindi gosht with tender meat and okra in a concentrated onion-tomato masala.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Bhindi_Gosht.JPG",
@@ -61,5 +61,19 @@
   "image_license": "Public domain",
   "image_license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
   "image_creator": "Miansari66",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How can I reduce the slimy texture of bhindi?",
+      "answer": "Wash the okra ahead of time and dry it completely before cutting. Fry it separately until its surface moisture reduces, then add it when the meat and gravy are nearly ready."
+    },
+    {
+      "question": "When should bhindi be added to the meat?",
+      "answer": "Add the okra after the meat is tender and the gravy has reduced. Finish with gentle cooking so the okra softens without breaking apart."
+    },
+    {
+      "question": "Can frozen okra be used for bhindi gosht?",
+      "answer": "It can work, but thaw it and remove excess moisture first. Frozen okra may soften more quickly, so add it late and stir gently."
+    }
+  ]
 }
