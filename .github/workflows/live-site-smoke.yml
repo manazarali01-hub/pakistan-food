@@ -12,7 +12,7 @@ permissions:
 jobs:
   verify-live:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
       - name: Wait for Pages deployment and verify deployed custom domain
@@ -24,10 +24,12 @@ jobs:
         run: python3 scripts/live_site_smoke.py
       - name: Verify Ahrefs analytics script on live pages (key redacted)
         run: python3 scripts/verify_ahrefs_live.py
-      - name: Install Playwright for production atmosphere QA
-        run: |
-          npm install --no-save playwright@1.55.0
-          npx playwright install --with-deps chromium
+      - name: Install Playwright package
+        run: npm install --no-save playwright@1.55.0
+      - name: Install Chromium system dependencies
+        run: npx playwright install-deps chromium
+      - name: Install Chromium browser
+        run: npx playwright install chromium
       - name: Verify calibrated steam on the deployed custom domain
         env:
           QA_BASE_URL: https://pakistanfoodrecipes.top
