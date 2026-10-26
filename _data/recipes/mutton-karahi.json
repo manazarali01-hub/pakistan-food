@@ -36,7 +36,7 @@
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT1H20M",
   "total_time_iso": "PT1H40M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani mutton karahi with tender bone-in meat, tomato masala, ginger and green chilli",
   "image_caption": "Mutton karahi with bone-in meat in concentrated tomato masala, ginger and green chilli.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Mutton_Karahi_2.JPG",
@@ -64,5 +64,19 @@
   "image_license": "CC0 1.0",
   "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
   "image_creator": "Miansari66",
-  "image_source_label": "Wikimedia Commons"
+  "image_source_label": "Wikimedia Commons",
+  "faqs": [
+    {
+      "question": "How can I make mutton tender without losing the karahi texture?",
+      "answer": "Use evenly sized pieces and cook until tender before the final reduction if your cut needs a longer simmer. Finish uncovered so the tomato masala clings to the meat instead of remaining watery."
+    },
+    {
+      "question": "Why is my mutton karahi gravy watery?",
+      "answer": "The tomatoes may still contain too much moisture or the pan may be crowded. Simmer uncovered and stir periodically until the sauce reduces and the oil begins to separate lightly."
+    },
+    {
+      "question": "Can I prepare mutton karahi ahead of time?",
+      "answer": "You can cook it ahead and refrigerate it promptly in a covered container. Reheat thoroughly until steaming hot, adding a small splash of water only if the masala has become too thick."
+    }
+  ]
 }
