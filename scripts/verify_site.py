@@ -116,8 +116,13 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
                 if not isinstance(faq, dict):
                     errors.append(f"{slug}: FAQ {faq_index} must be an object")
                     continue
-                question = " ".join(str(faq.get("question", "")).split())
-                answer = " ".join(str(faq.get("answer", "")).split())
+                raw_question = faq.get("question")
+                raw_answer = faq.get("answer")
+                if not isinstance(raw_question, str) or not isinstance(raw_answer, str):
+                    errors.append(f"{slug}: FAQ {faq_index} question and answer must be strings")
+                    continue
+                question = " ".join(raw_question.split())
+                answer = " ".join(raw_answer.split())
                 if not question or not answer:
                     errors.append(f"{slug}: FAQ {faq_index} has an empty question or answer")
                 normalized_question = question.casefold()
