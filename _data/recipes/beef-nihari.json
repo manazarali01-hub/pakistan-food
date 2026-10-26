@@ -43,7 +43,7 @@
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT3H40M",
   "total_time_iso": "PT4H",
-  "date_modified": "2026-10-18",
+  "date_modified": "2026-10-26",
   "image_alt": "Pakistani beef nihari with rich gravy, tender beef, ginger, coriander and green chilli garnish",
   "image_caption": "Beef nihari finished with julienne ginger, coriander and green chilli.",
   "technique": "Nihari improves with patient, gentle cooking. Tenderise the shank before thickening, then whisk atta into slightly cooled nihari liquid until completely smooth and add the slurry gradually so the gravy stays silky rather than lumpy.",
@@ -77,6 +77,10 @@
     {
       "question": "How thick should nihari gravy be?",
       "answer": "It should feel rich and lightly coat a spoon but still pour around the meat. If it becomes heavy, loosen it gradually with hot water."
+    },
+    {
+      "question": "Which cut of beef is best for nihari?",
+      "answer": "Beef shank (bong), including a little connective tissue, is a strong choice because long, gentle cooking helps it become tender and gives the gravy body. Beef chuck can also work, though the final texture may be less gelatinous."
     }
   ],
   "image_source": "https://commons.wikimedia.org/wiki/File:Beef_Nihari.JPG",
