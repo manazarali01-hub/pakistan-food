@@ -325,6 +325,31 @@ for url in urls:
             if not meta_match or seo_description not in unescape(meta_match.group(1)):
                 errors.append(f"meta description mismatch for SEO description override {url}")
 
+        # WebPage JSON-LD description should exactly match the rendered search snippet.
+        # This guards against template changes reintroducing a separate, stale description.
+        meta_description_match = re.search(
+            r'<meta name="description" content="([^"]*)">',
+            rendered_html,
+            flags=re.I,
+        )
+        webpage_items_for_description = []
+        for graph in parsed_jsonld:
+            if isinstance(graph, dict):
+                items = graph.get("@graph", [])
+                if isinstance(items, list):
+                    webpage_items_for_description.extend(
+                        item for item in items
+                        if isinstance(item, dict) and item.get("@type") == "WebPage"
+                    )
+                elif graph.get("@type") == "WebPage":
+                    webpage_items_for_description.append(graph)
+        if not meta_description_match:
+            errors.append(f"missing rendered meta description for WebPage schema comparison: {url}")
+        elif len(webpage_items_for_description) != 1:
+            errors.append(f"expected exactly one WebPage item for description comparison: {url}")
+        elif webpage_items_for_description[0].get("description") != unescape(meta_description_match.group(1)):
+            errors.append(f"WebPage schema description differs from meta description: {url}")
+
         source_keywords = source_recipe.get("keywords")
         if isinstance(source_keywords, list) and source_keywords:
             expected_keywords = ", ".join(str(item).strip() for item in source_keywords if str(item).strip())
