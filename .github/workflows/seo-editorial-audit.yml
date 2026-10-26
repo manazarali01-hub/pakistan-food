@@ -20,7 +20,6 @@ on:
       - 'scripts/audit_image_quality.py'
       - 'scripts/audit_internal_links.py'
       - 'scripts/audit_rendered_snippets.py'
-      - 'scripts/audit_rendered_snippets.py'
       - 'scripts/verify_site.py'
       - 'scripts/verify_rendered.py'
       - 'tests/test_audit_content_quality.py'
