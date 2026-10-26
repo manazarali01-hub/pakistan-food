@@ -276,6 +276,35 @@ for url in urls:
         if missing:
             errors.append(f"recipe schema missing {', '.join(missing)}: {url}")
 
+        # Structured data must stay faithful to the source recipe, not merely
+        # contain non-empty fields. This prevents schema drift from publishing
+        # ingredients, descriptions, durations or steps that differ from the page data.
+        if recipe_item.get("name") != source_recipe.get("name"):
+            errors.append(f"Recipe schema name mismatch for {url}")
+        if recipe_item.get("description") != source_recipe.get("description"):
+            errors.append(f"Recipe schema description mismatch for source recipe: {url}")
+        if recipe_item.get("recipeIngredient") != source_recipe.get("ingredients"):
+            errors.append(f"Recipe schema ingredients mismatch for source recipe: {url}")
+        schema_steps = recipe_item.get("recipeInstructions")
+        if isinstance(schema_steps, list):
+            schema_step_texts = [
+                step.get("text") for step in schema_steps
+                if isinstance(step, dict) and step.get("@type") == "HowToStep"
+            ]
+            source_steps = source_recipe.get("method", [])
+            if schema_step_texts != source_steps:
+                errors.append(f"Recipe schema instructions mismatch for source method: {url}")
+        else:
+            errors.append(f"Recipe schema instructions must be a list of HowToStep items: {url}")
+
+        expected_total_time = expected_duration(source_recipe)
+        schema_total_time = recipe_item.get("totalTime")
+        if expected_total_time and schema_total_time != expected_total_time:
+            errors.append(
+                f"Recipe schema totalTime mismatch for {url}: "
+                f"{schema_total_time!r} != {expected_total_time!r}"
+            )
+
         # Recipe yield is structured data, not display copy: keep it numeric and
         # identical to the source serving count so template changes cannot drift.
         source_serves = source_recipe.get("serves")
