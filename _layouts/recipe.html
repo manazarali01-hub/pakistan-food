@@ -148,7 +148,7 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
         "@id": "{{ canonical_url }}#webpage",
         "url": "{{ canonical_url }}",
         "name": {{ search_title | jsonify }},
-        "description": {{ meta_description | strip | jsonify }},
+        "description": {{ search_description | strip_html | strip | jsonify }},
         "isPartOf": {"@id": "https://pakistanfoodrecipes.top/#website"},
         "primaryImageOfPage": {
           "@type": "ImageObject",
