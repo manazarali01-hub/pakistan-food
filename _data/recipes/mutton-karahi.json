@@ -28,15 +28,18 @@
   ],
   "tips": [
     "Mutton may need longer than 70 minutes depending on the cut and age of the meat; tenderness is more important than a fixed clock time.",
-    "Avoid adding a large amount of water at once because karahi should finish with a concentrated tomato masala rather than a thin gravy."
+    "Avoid adding a large amount of water at once because karahi should finish with a concentrated tomato masala rather than a thin gravy.",
+    "If the mutton is still firm while the tomatoes are already sticking, lower the heat and add a small splash of hot water, cover, and continue cooking until tender; reduce the masala only after the meat softens.",
+    "If the tomato masala tastes sharp, cook it a little longer until the raw tomato smell fades before adding the finishing cumin, black pepper and green chillies.",
+    "If the pan looks dry during the final reduction, lower the heat and stir more often rather than adding a lot of water; a tablespoon or two of hot water is enough to loosen the masala temporarily."
   ],
-  "storage": "Cool leftovers promptly and refrigerate covered. Reheat the portion being served until thoroughly hot.",
+  "storage": "Transfer leftover mutton karahi to a shallow covered container and refrigerate within 2 hours of cooking. Use within 3–4 days, or freeze for longer storage. Reheat the portion needed until steaming hot throughout; add a spoonful of water if the masala has tightened.",
   "prep_time": "20 min",
   "cook_time": "80 min",
   "prep_time_iso": "PT20M",
   "cook_time_iso": "PT1H20M",
   "total_time_iso": "PT1H40M",
-  "date_modified": "2026-10-26",
+  "date_modified": "2026-10-27",
   "image_alt": "Pakistani mutton karahi with tender bone-in meat, tomato masala, ginger and green chilli",
   "image_caption": "Mutton karahi with bone-in meat in concentrated tomato masala, ginger and green chilli.",
   "image_source": "https://commons.wikimedia.org/wiki/File:Mutton_Karahi_2.JPG",
