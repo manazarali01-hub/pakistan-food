@@ -27,10 +27,13 @@ jobs:
       - name: Install Playwright package
         run: npm install --no-save playwright@1.55.0
       - name: Install Chromium system dependencies
+        timeout-minutes: 8
         run: npx playwright install-deps chromium
       - name: Install Chromium browser
+        timeout-minutes: 5
         run: npx playwright install chromium
       - name: Verify calibrated steam on the deployed custom domain
+        timeout-minutes: 5
         env:
           QA_BASE_URL: https://pakistanfoodrecipes.top
         run: node scripts/food_atmosphere_qa.mjs
