@@ -177,7 +177,7 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
         {% if recipe.prep_time_iso %}"prepTime": {{ recipe.prep_time_iso | jsonify }},{% endif %}
         {% if recipe.cook_time_iso %}"cookTime": {{ recipe.cook_time_iso | jsonify }},{% endif %}
         "totalTime": {{ schema_total_duration | jsonify }},
-        {% if recipe.serves %}"recipeYield": {{ recipe.serves | jsonify }},{% endif %}
+        {% if recipe.serves %}"recipeYield": {{ recipe.serves | append: ' servings' | jsonify }},{% endif %}
         {% if recipe.calories and recipe.serves %}"nutrition": {"@type":"NutritionInformation","calories":{{ recipe.calories | jsonify }}},{% endif %}
         {% if recipe.rating_value and recipe.rating_count %}"aggregateRating": {"@type":"AggregateRating","ratingValue":{{ recipe.rating_value | jsonify }},"ratingCount":{{ recipe.rating_count | jsonify }}},{% endif %}
         {% if recipe.video_url and recipe.video_thumbnail and recipe.video_upload_date %}"video": {"@type":"VideoObject","name":{{ recipe.name | append: " cooking video" | jsonify }},"description":{{ recipe.description | jsonify }},"thumbnailUrl":{{ recipe.video_thumbnail | jsonify }},"uploadDate":{{ recipe.video_upload_date | jsonify }},"contentUrl":{{ recipe.video_url | jsonify }}{% if recipe.video_duration %},"duration":{{ recipe.video_duration | jsonify }}{% endif %}},{% endif %}
