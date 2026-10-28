@@ -22,10 +22,10 @@
     "Top each glass with a scoop of vanilla ice cream and garnish with chopped nuts.",
     "Serve immediately with a spoon and straw; stir while drinking if you prefer the syrup fully mixed through the milk."
   ],
-  "prep_time": "20 min",
-  "prep_time_iso": "PT20M",
+  "prep_time": "15 min",
+  "prep_time_iso": "PT15M",
   "total_time_iso": "PT20M",
-  "date_modified": "2026-10-04",
+  "date_modified": "2026-10-28",
   "image_alt": "Pakistani falooda layered with rose syrup, basil seeds, vermicelli, cold milk and vanilla ice cream",
   "image_caption": "Chilled falooda with rose syrup, swollen basil seeds, cooled vermicelli, milk and vanilla ice cream.",
   "technique": "Every component should be cold before assembly. Warm vermicelli melts ice cream and warms milk, while poorly soaked basil seeds remain hard. Assemble only after both are prepared, cooled and drained.",
@@ -69,5 +69,8 @@
   "image_source": "https://commons.wikimedia.org/wiki/File:Falooda.jpg",
   "image_author": "Ashwin Kumar",
   "image_license": "CC BY-SA 2.0",
-  "image_license_url": "https://creativecommons.org/licenses/by-sa/2.0/"
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "cook_time": "5 min",
+  "cook_time_iso": "PT5M",
+  "reheating": "Do not reheat assembled falooda. Keep the milk, cooked vermicelli and soaked basil seeds chilled, then assemble just before serving."
 }
