@@ -467,10 +467,10 @@ for recipe_file in recipe_files:
 print(f"OK all {len(recipe_files)} deployed recipe HTML pages: canonical, robots, bilingual UI and JSON-LD")
 print(f"OK live contextual recipe-to-guide links ({len(EXPECTED_CONTEXTUAL_GUIDE_LINKS)} representative links)")
 
-# The Search Console export reports two sitemap URLs with redirects. Recipe
-# pages above already receive full canonical/robots/schema checks; inspect every
-# other submitted URL here so a redirected category, guide, or trust URL cannot
-# silently remain in the XML sitemap.
+# The Search Console export reports two pages with redirects but does not
+# include their URLs. Recipe pages above already receive full canonical/robots/
+# schema checks; inspect every other submitted URL so a redirected category,
+# guide, or trust URL cannot silently remain in the XML sitemap.
 checked_sitemap_pages = 0
 for submitted_url in urls:
     submitted_path = submitted_url.removeprefix(BASE)
