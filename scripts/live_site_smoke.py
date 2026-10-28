@@ -251,6 +251,48 @@ if not re.search(r'"keywords"\s*:\s*"[^"]+"', halwa):
 if "noindex" in re.search(r'<meta[^>]+name=["\']robots["\'][^>]*>', halwa, re.I).group(0).lower() if re.search(r'<meta[^>]+name=["\']robots["\'][^>]*>', halwa, re.I) else True:
     raise SystemExit("/recipes/halwa-puri.html: expected an indexable robots meta tag")
 
+# A no-cook drink must not inherit a fabricated cooking duration in deployed Recipe JSON-LD.
+lemon_mint = require(
+    "/recipes/lemon-mint-sharbat.html",
+    "Lemon Mint Sharbat",
+    '"@type": "Recipe"',
+)
+jsonld_blocks = re.findall(
+    r'<script\\b[^>]*type=["\\']application/ld\\+json["\\'][^>]*>(.*?)</script>',
+    lemon_mint,
+    flags=re.I | re.S,
+)
+recipe_objects = []
+for block in jsonld_blocks:
+    try:
+        payload = json.loads(unescape(block))
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"/recipes/lemon-mint-sharbat.html: invalid JSON-LD: {exc}") from exc
+    if isinstance(payload, list):
+        recipe_objects.extend(payload)
+    elif isinstance(payload, dict):
+        graph = payload.get("@graph")
+        recipe_objects.extend(graph if isinstance(graph, list) else [payload])
+lemon_mint_schema = next(
+    (
+        item for item in recipe_objects
+        if isinstance(item, dict) and item.get("@type") == "Recipe"
+    ),
+    None,
+)
+if lemon_mint_schema is None:
+    raise SystemExit("/recipes/lemon-mint-sharbat.html: Recipe JSON-LD object missing")
+for field, expected in (
+    ("prepTime", "PT10M"),
+    ("cookTime", "PT0M"),
+    ("totalTime", "PT10M"),
+):
+    if lemon_mint_schema.get(field) != expected:
+        raise SystemExit(
+            f"/recipes/lemon-mint-sharbat.html: expected {field}={expected!r}, "
+            f"got {lemon_mint_schema.get(field)!r}"
+        )
+print("OK live Lemon Mint Sharbat no-cook Recipe JSON-LD durations")
 
 recipe_dir = Path("_data/recipes")
 recipe_images = []
