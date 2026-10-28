@@ -258,7 +258,7 @@ lemon_mint = require(
     '"@type": "Recipe"',
 )
 jsonld_blocks = re.findall(
-    r'<script\\b[^>]*type=["\\']application/ld\\+json["\\'][^>]*>(.*?)</script>',
+    r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
     lemon_mint,
     flags=re.I | re.S,
 )
