@@ -1,7 +1,10 @@
 """Regression tests for recipe FAQ validation."""
 
+import sys
 import unittest
+from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from faq_validation import validate_faqs
 
 
