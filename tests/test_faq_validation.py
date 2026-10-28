@@ -69,7 +69,7 @@ class ValidateFaqsTests(unittest.TestCase):
 
     def test_whitespace_normalized_duplicate_answers_are_rejected(self):
         errors = validate_faqs("test-recipe", [
-            faq("Question one?", "Cook   until\\n tender."),
+            faq("Question one?", "Cook   until\n tender."),
             faq("Question two?", "Cook until tender."),
             faq("Question three?", "Season to taste."),
         ])
