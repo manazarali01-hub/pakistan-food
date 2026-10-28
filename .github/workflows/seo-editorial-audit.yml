@@ -24,8 +24,10 @@ on:
       - 'scripts/audit_image_quality.py'
       - 'scripts/audit_rendered_snippets.py'
       - 'scripts/verify_site.py'
+      - 'scripts/faq_validation.py'
       - 'scripts/verify_rendered.py'
       - 'tests/test_audit_content_quality.py'
+      - 'tests/test_faq_validation.py'
       - '.github/workflows/seo-editorial-audit.yml'
   push:
     branches: [main]
