@@ -7,6 +7,7 @@ from urllib.parse import urlparse
 import json
 import re
 import xml.etree.ElementTree as ET
+from faq_validation import validate_faqs
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://pakistanfoodrecipes.top"
@@ -104,36 +105,7 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
             )
     if "rating" in recipe:
         errors.append(f"{slug}: rating requires a real review source")
-    # Validate FAQ data when present without blocking legacy recipes that
-    # still need editorial FAQ work. Do not accept empty or repeated questions.
-    faqs = recipe.get("faqs")
-    if faqs is not None:
-        if not isinstance(faqs, list) or len(faqs) < 3:
-            errors.append(f"{slug}: faqs must contain at least 3 recipe-specific entries")
-        else:
-            seen_faq_questions = set()
-            seen_faq_answers = set()
-            for faq_index, faq in enumerate(faqs, start=1):
-                if not isinstance(faq, dict):
-                    errors.append(f"{slug}: FAQ {faq_index} must be an object")
-                    continue
-                raw_question = faq.get("question")
-                raw_answer = faq.get("answer")
-                if not isinstance(raw_question, str) or not isinstance(raw_answer, str):
-                    errors.append(f"{slug}: FAQ {faq_index} question and answer must be strings")
-                    continue
-                question = " ".join(raw_question.split())
-                answer = " ".join(raw_answer.split())
-                if not question or not answer:
-                    errors.append(f"{slug}: FAQ {faq_index} has an empty question or answer")
-                normalized_question = question.casefold()
-                normalized_answer = answer.casefold()
-                if normalized_question and normalized_question in seen_faq_questions:
-                    errors.append(f"{slug}: duplicate FAQ question: {question}")
-                if normalized_answer and normalized_answer in seen_faq_answers:
-                    errors.append(f"{slug}: duplicate FAQ answer: {answer}")
-                seen_faq_questions.add(normalized_question)
-                seen_faq_answers.add(normalized_answer)
+    errors.extend(validate_faqs(slug, recipe.get("faqs")))
     prep_duration = recipe.get("prep_time_iso")
     cook_duration = recipe.get("cook_time_iso")
     # Prep and cook durations are independently optional: no-cook drinks,
