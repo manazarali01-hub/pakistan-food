@@ -316,7 +316,7 @@ if guide_hub_path.is_file():
     # Each guide card should appear only once in the main directory. Repeated
     # cards make the hub noisier without adding another useful destination.
     guide_cards = re.findall(
-        r'<a class="card" href="([^"]+)"><strong>[\\s\\S]*?</strong><span>[\\s\\S]*?</span></a>',
+        r'<a class="card" href="([^"]+)"><strong>[\s\S]*?</strong><span>[\s\S]*?</span></a>',
         guide_hub,
     )
     for guide_filename, count in sorted(Counter(guide_cards).items()):
