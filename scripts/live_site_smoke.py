@@ -467,6 +467,26 @@ for recipe_file in recipe_files:
 print(f"OK all {len(recipe_files)} deployed recipe HTML pages: canonical, robots, bilingual UI and JSON-LD")
 print(f"OK live contextual recipe-to-guide links ({len(EXPECTED_CONTEXTUAL_GUIDE_LINKS)} representative links)")
 
+# The Search Console export reports two sitemap URLs with redirects. Recipe
+# pages above already receive full canonical/robots/schema checks; inspect every
+# other submitted URL here so a redirected category, guide, or trust URL cannot
+# silently remain in the XML sitemap.
+checked_sitemap_pages = 0
+for submitted_url in urls:
+    submitted_path = submitted_url.removeprefix(BASE)
+    if submitted_path.startswith("/recipes/") and submitted_path.endswith(".html"):
+        continue  # All 66 recipe URLs are checked in the recipe loop above.
+    status, final_url, _body = fetch(submitted_path)
+    if status != 200:
+        raise SystemExit(f"sitemap URL did not return HTTP 200: {submitted_url} ({status})")
+    if final_url != submitted_url:
+        raise SystemExit(
+            f"sitemap URL redirects instead of resolving directly: "
+            f"{submitted_url} -> {final_url}"
+        )
+    checked_sitemap_pages += 1
+print(f"OK {checked_sitemap_pages} non-recipe sitemap URLs return HTTP 200 without redirects")
+
 guide_hub = require("/guides/", "Pakistani Cooking Guides")
 guide_urls = [url for url in urls if url.startswith(BASE + "/guides/") and url.endswith(".html")]
 for guide_url in guide_urls:
