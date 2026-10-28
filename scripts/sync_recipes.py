@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://pakistanfoodrecipes.top/recipes/"
 NEW_URLS = []
 ALL_URLS = []
+latest_category_dates = {}
 sitemap = ROOT / "sitemap-v2.xml"
 xml = sitemap.read_text(encoding="utf-8")
 
@@ -42,6 +43,13 @@ for data in sorted((ROOT / "_data/recipes").glob("*.json")):
                 f"{data.relative_to(ROOT)}: invalid date_modified {source_date!r}"
             )
 
+        category = recipe.get("category")
+        if category:
+            category_slug = re.sub(r"[^a-z0-9]+", "-", category.lower()).strip("-")
+            latest_category_dates[category_slug] = max(
+                source_date, latest_category_dates.get(category_slug, source_date)
+            )
+
         entry_pattern = re.compile(
             r"(<url>\s*<loc>" + re.escape(url) +
             r"</loc>\s*<lastmod>)([^<]*)(</lastmod>\s*</url>)"
@@ -61,6 +69,28 @@ for data in sorted((ROOT / "_data/recipes").glob("*.json")):
             f"    <lastmod>{source_date}</lastmod>\n  </url>\n"
         )
         xml = xml.replace("</urlset>", entry + "</urlset>")
+
+# Category pages list recipe names, timings and descriptions, so their sitemap
+# dates must not be older than the latest modified recipe they contain.
+for category_slug, latest_date in latest_category_dates.items():
+    category_url = f"https://pakistanfoodrecipes.top/recipes/{category_slug}/"
+    category_pattern = re.compile(
+        r"(<url>\s*<loc>" + re.escape(category_url) +
+        r"</loc>\s*<lastmod>)([^<]*)(</lastmod>\s*</url>)"
+    )
+
+    def update_category_lastmod(match, latest_date=latest_date):
+        try:
+            current_date = date.fromisoformat(match.group(2))
+        except ValueError:
+            current_date = date.min
+        return (
+            match.group(1)
+            + max(current_date, date.fromisoformat(latest_date)).isoformat()
+            + match.group(3)
+        )
+
+    xml, _ = category_pattern.subn(update_category_lastmod, xml, count=1)
 
 sitemap.write_text(xml, encoding="utf-8")
 print(
