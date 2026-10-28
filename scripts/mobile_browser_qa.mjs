@@ -10,6 +10,8 @@ const pages = [
   ["beef-category", "/recipes/beef/"],
   ["chicken-biryani", "/recipes/chicken-biryani.html"],
   ["chicken-karahi", "/recipes/chicken-karahi.html"],
+  ["chana-chaat", "/recipes/chana-chaat.html"],
+  ["fruit-chaat", "/recipes/fruit-chaat.html"],
   ["halwa-puri", "/recipes/halwa-puri.html"],
   ["rice-kheer", "/recipes/rice-kheer.html"],
   ["cooking-guides", "/guides/"],
