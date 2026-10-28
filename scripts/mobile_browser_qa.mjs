@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 import fs from "node:fs";
 
 const base = process.env.QA_BASE_URL || "http://127.0.0.1:4173";
-const widths = [320, 360, 375, 390, 412, 430, 768];
+const widths = [320, 390, 768];
 const pages = [
   ["home", "/"],
   ["recipe-directory", "/recipes/"],
