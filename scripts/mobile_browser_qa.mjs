@@ -267,6 +267,37 @@ for (const width of widths) {
       await testHomeInteractions(width);
     }
 
+    if (label === "chana-chaat" || label === "fruit-chaat") {
+      const noCookState = await page.evaluate(() => {
+        const facts = document.querySelector(".recipe-facts")?.innerText || "";
+        const recipeNodes = [];
+        const visit = value => {
+          if (!value || typeof value !== "object") return;
+          if (Array.isArray(value)) {
+            value.forEach(visit);
+            return;
+          }
+          const type = value["@type"];
+          if (type === "Recipe" || (Array.isArray(type) && type.includes("Recipe"))) recipeNodes.push(value);
+          Object.values(value).forEach(visit);
+        };
+        for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
+          try { visit(JSON.parse(script.textContent || "")); } catch (_) {}
+        }
+        return {
+          facts,
+          cookTime: recipeNodes.find(recipe => recipe.cookTime)?.cookTime || null,
+          recipeSchemaCount: recipeNodes.length,
+        };
+      });
+      if (!/Cook\s*\n\s*No cooking required/i.test(noCookState.facts)) {
+        failures.push(label + " @ " + width + "px: visible cook guidance missing: " + JSON.stringify(noCookState.facts));
+      }
+      if (noCookState.cookTime !== "PT0M") {
+        failures.push(label + " @ " + width + "px: Recipe JSON-LD cookTime expected PT0M, got " + JSON.stringify(noCookState.cookTime) + "; Recipe nodes=" + noCookState.recipeSchemaCount);
+      }
+    }
+
     await scrollThrough();
     await settleImages();
     const report = await inspectLayout(label, width);
