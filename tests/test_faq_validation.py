@@ -13,6 +13,44 @@ def faq(question, answer):
 
 
 class ValidateFaqsTests(unittest.TestCase):
+    def test_missing_optional_faqs_are_accepted(self):
+        self.assertEqual(validate_faqs("test-recipe", None), [])
+
+    def test_fewer_than_three_faqs_are_rejected(self):
+        errors = validate_faqs("test-recipe", [
+            faq("Question one?", "Answer one."),
+            faq("Question two?", "Answer two."),
+        ])
+        self.assertTrue(any("at least 3" in error for error in errors), errors)
+
+    def test_non_list_faqs_are_rejected(self):
+        errors = validate_faqs("test-recipe", "not a list")
+        self.assertTrue(any("at least 3" in error for error in errors), errors)
+
+    def test_non_object_faq_entry_is_rejected(self):
+        errors = validate_faqs("test-recipe", [
+            faq("Question one?", "Answer one."),
+            "not an object",
+            faq("Question three?", "Answer three."),
+        ])
+        self.assertTrue(any("FAQ 2 must be an object" in error for error in errors), errors)
+
+    def test_non_string_question_or_answer_is_rejected(self):
+        errors = validate_faqs("test-recipe", [
+            faq("Question one?", "Answer one."),
+            faq(None, "Answer two."),
+            faq("Question three?", "Answer three."),
+        ])
+        self.assertTrue(any("question and answer must be strings" in error for error in errors), errors)
+
+    def test_empty_question_or_answer_is_rejected(self):
+        errors = validate_faqs("test-recipe", [
+            faq("Question one?", "Answer one."),
+            faq("   ", "Answer two."),
+            faq("Question three?", ""),
+        ])
+        self.assertTrue(any("empty question or answer" in error for error in errors), errors)
+
     def test_exact_duplicate_answers_are_rejected(self):
         errors = validate_faqs("test-recipe", [
             faq("Question one?", "Boil until tender."),
@@ -31,7 +69,7 @@ class ValidateFaqsTests(unittest.TestCase):
 
     def test_whitespace_normalized_duplicate_answers_are_rejected(self):
         errors = validate_faqs("test-recipe", [
-            faq("Question one?", "Cook   until\n tender."),
+            faq("Question one?", "Cook   until\\n tender."),
             faq("Question two?", "Cook until tender."),
             faq("Question three?", "Season to taste."),
         ])
