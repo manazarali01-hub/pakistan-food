@@ -112,6 +112,7 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
             errors.append(f"{slug}: faqs must contain at least 3 recipe-specific entries")
         else:
             seen_faq_questions = set()
+            seen_faq_answers = set()
             for faq_index, faq in enumerate(faqs, start=1):
                 if not isinstance(faq, dict):
                     errors.append(f"{slug}: FAQ {faq_index} must be an object")
@@ -126,9 +127,13 @@ for path in sorted((ROOT / "_data/recipes").glob("*.json")):
                 if not question or not answer:
                     errors.append(f"{slug}: FAQ {faq_index} has an empty question or answer")
                 normalized_question = question.casefold()
+                normalized_answer = answer.casefold()
                 if normalized_question and normalized_question in seen_faq_questions:
                     errors.append(f"{slug}: duplicate FAQ question: {question}")
+                if normalized_answer and normalized_answer in seen_faq_answers:
+                    errors.append(f"{slug}: duplicate FAQ answer: {answer}")
                 seen_faq_questions.add(normalized_question)
+                seen_faq_answers.add(normalized_answer)
     prep_duration = recipe.get("prep_time_iso")
     cook_duration = recipe.get("cook_time_iso")
     # Prep and cook durations are independently optional: no-cook drinks,
