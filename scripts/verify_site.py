@@ -313,6 +313,18 @@ if guide_hub_path.is_file():
             if f'href="{guide_filename}"' not in guide_hub:
                 errors.append(f"indexable guide missing from directory: {guide_filename}")
 
+    # Each guide card should appear only once in the main directory. Repeated
+    # cards make the hub noisier without adding another useful destination.
+    guide_cards = re.findall(
+        r'<a class="card" href="([^"]+)"><strong>[\\s\\S]*?</strong><span>[\\s\\S]*?</span></a>',
+        guide_hub,
+    )
+    for guide_filename, count in sorted(Counter(guide_cards).items()):
+        if count > 1:
+            errors.append(
+                f"guides/index.html: duplicate directory card for {guide_filename} ({count} copies)"
+            )
+
     # Reverse-check local guide links in the hub so the directory cannot point
     # to a missing page or to a page omitted from the canonical sitemap.
     for guide_filename in sorted(set(re.findall(r'href="([^"/?#]+\.html)"', guide_hub))):
