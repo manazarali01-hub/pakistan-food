@@ -282,7 +282,7 @@ authentic {{ recipe.name }} recipe, traditional {{ recipe.name }}, homemade {{ r
       </figure>
       <div class="seo-meta recipe-facts" aria-label="Recipe facts">
         {% if recipe.prep_time %}<span><small>Prep</small><strong>{{ recipe.prep_time }}</strong></span>{% endif %}
-        {% if recipe.cook_time %}<span><small>Cook</small><strong>{{ recipe.cook_time }}</strong></span>{% endif %}
+        {% if recipe.cook_time %}<span><small>Cook</small><strong>{{ recipe.cook_time }}</strong></span>{% elsif recipe.cook_time_iso == "PT0M" %}<span><small>Cook</small><strong>No cooking required</strong></span>{% endif %}
         <span><small>Total</small><strong><time datetime="{{ schema_total_duration }}">{{ recipe.time }}</time></strong></span>
         {% if recipe.serves %}<span><small>Serves</small><strong>{{ recipe.serves }}</strong></span>{% endif %}
         <span><small>Category</small><strong><a href="{{ category_slug }}/">{{ recipe.category }}</a></strong></span>

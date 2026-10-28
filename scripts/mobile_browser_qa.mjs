@@ -10,6 +10,8 @@ const pages = [
   ["beef-category", "/recipes/beef/"],
   ["chicken-biryani", "/recipes/chicken-biryani.html"],
   ["chicken-karahi", "/recipes/chicken-karahi.html"],
+  ["chana-chaat", "/recipes/chana-chaat.html"],
+  ["fruit-chaat", "/recipes/fruit-chaat.html"],
   ["halwa-puri", "/recipes/halwa-puri.html"],
   ["rice-kheer", "/recipes/rice-kheer.html"],
   ["cooking-guides", "/guides/"],
@@ -263,6 +265,37 @@ for (const width of widths) {
     if (label === "home") {
       await page.waitForFunction(() => document.querySelectorAll(".recipe-card").length >= 60, null, { timeout: 15000 });
       await testHomeInteractions(width);
+    }
+
+    if (label === "chana-chaat" || label === "fruit-chaat") {
+      const noCookState = await page.evaluate(() => {
+        const facts = document.querySelector(".recipe-facts")?.innerText || "";
+        const recipeNodes = [];
+        const visit = value => {
+          if (!value || typeof value !== "object") return;
+          if (Array.isArray(value)) {
+            value.forEach(visit);
+            return;
+          }
+          const type = value["@type"];
+          if (type === "Recipe" || (Array.isArray(type) && type.includes("Recipe"))) recipeNodes.push(value);
+          Object.values(value).forEach(visit);
+        };
+        for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
+          try { visit(JSON.parse(script.textContent || "")); } catch (_) {}
+        }
+        return {
+          facts,
+          cookTime: recipeNodes.find(recipe => recipe.cookTime)?.cookTime || null,
+          recipeSchemaCount: recipeNodes.length,
+        };
+      });
+      if (!/Cook\s*\n\s*No cooking required/i.test(noCookState.facts)) {
+        failures.push(label + " @ " + width + "px: visible cook guidance missing: " + JSON.stringify(noCookState.facts));
+      }
+      if (noCookState.cookTime !== "PT0M") {
+        failures.push(label + " @ " + width + "px: Recipe JSON-LD cookTime expected PT0M, got " + JSON.stringify(noCookState.cookTime) + "; Recipe nodes=" + noCookState.recipeSchemaCount);
+      }
     }
 
     await scrollThrough();
