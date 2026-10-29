@@ -529,28 +529,28 @@ for guide_path in GSC_CRAWLED_NOT_INDEXED_GUIDES:
     expected_url = BASE + guide_path
     page = require(guide_path, "<h1")
     canonical_tag = re.search(
-        r'<link\\b[^>]*rel=["\\']canonical["\\'][^>]*>', page, re.I
+        r'<link\b[^>]*rel=["\']canonical["\'][^>]*>', page, re.I
     )
     canonical_href = (
-        re.search(r'href=["\\']([^"\\']+)["\\']', canonical_tag.group(0), re.I)
+        re.search(r'href=["\']([^"\']+)["\']', canonical_tag.group(0), re.I)
         if canonical_tag else None
     )
     if not canonical_href or canonical_href.group(1) != expected_url:
         raise SystemExit(f"{guide_path}: canonical is not {expected_url}")
 
     robots_tag = re.search(
-        r'<meta\\b[^>]*name=["\\']robots["\\'][^>]*>', page, re.I
+        r'<meta\b[^>]*name=["\']robots["\'][^>]*>', page, re.I
     )
     if not robots_tag or "noindex" in robots_tag.group(0).lower():
         raise SystemExit(f"{guide_path}: missing indexable robots directive")
 
-    h1_tags = re.findall(r"<h1\\b[^>]*>", page, re.I)
+    h1_tags = re.findall(r"<h1\b[^>]*>", page, re.I)
     if len(h1_tags) != 1:
         raise SystemExit(f"{guide_path}: expected exactly one H1, found {len(h1_tags)}")
 
     article_matches = []
     for script in re.finditer(
-        r'<script\\b[^>]*type=["\\']application/ld\\+json["\\'][^>]*>([\\s\\S]*?)</script>',
+        r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>([\s\S]*?)</script>',
         page,
         re.I,
     ):
