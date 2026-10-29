@@ -558,7 +558,13 @@ for guide_path in GSC_CRAWLED_NOT_INDEXED_GUIDES:
             structured_data = json.loads(unescape(script.group(1)))
         except json.JSONDecodeError:
             continue
-        nodes = structured_data if isinstance(structured_data, list) else [structured_data]
+        if isinstance(structured_data, list):
+            nodes = structured_data
+        elif isinstance(structured_data, dict):
+            graph = structured_data.get("@graph")
+            nodes = graph if isinstance(graph, list) else [structured_data]
+        else:
+            nodes = []
         for node in nodes:
             if not isinstance(node, dict):
                 continue
