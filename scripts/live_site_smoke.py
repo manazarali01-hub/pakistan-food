@@ -207,6 +207,21 @@ require(
     "/premium.css?v=20261010-refined-v9",
     "BALANCED PREMIUM MOTION",
 )
+# Google has reported a small number of impressions for /index.html.
+# Keep the homepage alias canonicalized to the root URL so it is not treated
+# as a separate preferred page if the alias remains directly accessible.
+home_alias = require("/index.html", "Pakistan Food")
+alias_canonical = re.search(
+    r'<link\\b[^>]*rel=["\\']canonical["\\'][^>]*>', home_alias, re.I
+)
+alias_href = (
+    re.search(r'href=["\\']([^"\\']+)["\\']', alias_canonical.group(0), re.I)
+    if alias_canonical else None
+)
+if not alias_href or alias_href.group(1) != BASE + "/":
+    raise SystemExit("/index.html: homepage alias must canonicalize to the root URL")
+print("OK /index.html canonicalizes to the homepage root")
+
 if f"?v={RECIPE_IMAGE_VERSION}" not in home:
     raise SystemExit(f"/: recipe image cache-busting version {RECIPE_IMAGE_VERSION!r} missing")
 if "{{ dish.name }}" in home:
