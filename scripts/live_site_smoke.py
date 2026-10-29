@@ -510,6 +510,78 @@ for guide_url in guide_urls:
         raise SystemExit(f"/guides/: live directory is missing indexable guide {filename}")
 print(f"OK live guide directory links ({len(guide_urls)} indexable guides)")
 
+# Track the exact guides reported by Search Console as "Crawled - currently not
+# indexed". These checks cannot force indexing; they guard against technical
+# regressions in canonical, robots, Article identity, or the page's main heading.
+GSC_CRAWLED_NOT_INDEXED_GUIDES = (
+    "/guides/why-biryani-has-no-flavor.html",
+    "/guides/how-to-keep-ras-malai-soft.html",
+    "/guides/why-kheer-burns-at-bottom.html",
+    "/guides/why-rest-rice-after-cooking.html",
+    "/guides/why-curry-gets-too-oily.html",
+    "/guides/chargha-vs-sajji.html",
+    "/guides/how-to-bloom-spices-in-oil.html",
+    "/guides/why-chicken-tikka-turns-dry.html",
+    "/guides/best-rice-for-biryani.html",
+    "/guides/why-biryani-gets-mushy.html",
+)
+for guide_path in GSC_CRAWLED_NOT_INDEXED_GUIDES:
+    expected_url = BASE + guide_path
+    page = require(guide_path, "<h1")
+    canonical_tag = re.search(
+        r'<link\\b[^>]*rel=["\\']canonical["\\'][^>]*>', page, re.I
+    )
+    canonical_href = (
+        re.search(r'href=["\\']([^"\\']+)["\\']', canonical_tag.group(0), re.I)
+        if canonical_tag else None
+    )
+    if not canonical_href or canonical_href.group(1) != expected_url:
+        raise SystemExit(f"{guide_path}: canonical is not {expected_url}")
+
+    robots_tag = re.search(
+        r'<meta\\b[^>]*name=["\\']robots["\\'][^>]*>', page, re.I
+    )
+    if not robots_tag or "noindex" in robots_tag.group(0).lower():
+        raise SystemExit(f"{guide_path}: missing indexable robots directive")
+
+    h1_tags = re.findall(r"<h1\\b[^>]*>", page, re.I)
+    if len(h1_tags) != 1:
+        raise SystemExit(f"{guide_path}: expected exactly one H1, found {len(h1_tags)}")
+
+    article_matches = []
+    for script in re.finditer(
+        r'<script\\b[^>]*type=["\\']application/ld\\+json["\\'][^>]*>([\\s\\S]*?)</script>',
+        page,
+        re.I,
+    ):
+        try:
+            structured_data = json.loads(unescape(script.group(1)))
+        except json.JSONDecodeError:
+            continue
+        nodes = structured_data if isinstance(structured_data, list) else [structured_data]
+        for node in nodes:
+            if not isinstance(node, dict):
+                continue
+            schema_type = node.get("@type")
+            if isinstance(schema_type, list):
+                is_article = any(item in ("Article", "BlogPosting") for item in schema_type)
+            else:
+                is_article = schema_type in ("Article", "BlogPosting")
+            entity_page = node.get("mainEntityOfPage")
+            if isinstance(entity_page, dict):
+                entity_page = entity_page.get("@id") or entity_page.get("url")
+            if is_article and entity_page == expected_url:
+                article_matches.append(node)
+    if not article_matches:
+        raise SystemExit(
+            f"{guide_path}: missing Article/BlogPosting JSON-LD for its canonical URL"
+        )
+
+print(
+    "OK GSC-affected guides: canonical, indexable robots, one H1, "
+    "and matching Article JSON-LD"
+)
+
 for path, marker in (
     ("/about.html", "About"),
     ("/contact.html", "Contact"),
