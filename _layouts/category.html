@@ -2,6 +2,8 @@
 {% assign category_slug = page.category_slug %}
 {% if category_slug == 'rice' %}
   {% assign category_seo_title = 'Pakistani Rice Recipes: Biryani, Pulao & More' %}
+{% elsif category_slug == 'breakfast' %}
+  {% assign category_seo_title = 'Pakistani Breakfast Recipes: Paratha, Halwa Puri & Chai' %}
 {% else %}
   {% assign category_seo_title = 'Pakistani ' | append: category_name | append: ' Recipes | Authentic Pakistani Food' %}
 {% endif %}
@@ -181,6 +183,8 @@
     <nav aria-label="Breadcrumb"><a href="../../index.html">Home</a> › <a href="../index.html">Recipes</a> › {{ category_name }} Recipes</nav>
     {% if category_slug == 'rice' %}
       <h1>Pakistani Rice Recipes: Biryani, Pulao &amp; More</h1>
+    {% elsif category_slug == 'breakfast' %}
+      <h1>Pakistani Breakfast Recipes: Paratha, Halwa Puri &amp; Chai</h1>
     {% else %}
       <h1>Pakistani {{ category_name }} Recipes</h1>
     {% endif %}
