@@ -212,10 +212,10 @@ require(
 # as a separate preferred page if the alias remains directly accessible.
 home_alias = require("/index.html", "Pakistan Food")
 alias_canonical = re.search(
-    r'<link\\b[^>]*rel=["\\']canonical["\\'][^>]*>', home_alias, re.I
+    r'<link\b[^>]*rel="canonical"[^>]*>', home_alias, re.I
 )
 alias_href = (
-    re.search(r'href=["\\']([^"\\']+)["\\']', alias_canonical.group(0), re.I)
+    re.search(r'href="([^"]+)"', alias_canonical.group(0), re.I)
     if alias_canonical else None
 )
 if not alias_href or alias_href.group(1) != BASE + "/":
